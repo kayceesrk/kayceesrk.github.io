@@ -95,11 +95,12 @@
   \end{tabular*}
 } {}
 
-\newenvironment{talk}[3]
+\newenvironment{talk}[4]
 { \item
-  \begin{tabular*}{7.5in}{l@{\hspace*{2ex}}l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textit{#2} & #3
-  \end{tabular*}
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+		\hspace{1ex} #3 & \small{#4}
+\end{tabular*}
 } {}
 
 \newcommand{\reference}[8]{%
@@ -170,7 +171,7 @@ static analysis, schedulers, threading systems, and memory management.}
     \vspace{-3ex}
 		\item
 			\begin{itemize}
-			\item Thesis Title: \textbf{Functional Programming Abstractions for Weakly Consistent Systems}
+			\item Thesis Title: \href{http://kcsrk.info/papers/dissertation_dec14.pdf}{\textbf{Functional Programming Abstractions for Weakly Consistent Systems}}
 				\vspace{-0.5ex}
 			\item Advisor: Suresh Jagannathan
 			\end{itemize}
@@ -349,6 +350,43 @@ static analysis, schedulers, threading systems, and memory management.}
 	\end{publication}
 
 \end{region}
+
+
+\begin{nonumregion}{\lbar{blue}Talks}
+	\begin{talk} {Functional Programming Abstractions for Weakly Consistent Systems}
+	   {Dec 2014}{PhD Defense}{Purdue University}
+	\end{talk}
+
+	\begin{talk} {Functional Abstractions for Practical and Scalable Concurrent Programming}
+		 {Mar 2014}{Invited Lecture}{Microsoft Research, Cambridge, UK}
+	\end{talk}
+
+	\begin{talk}{Rx-CML: A Prescription for Safely Relaxing Synchrony}
+		{Jan 2014}{PADL 2014}{San Diego, CA}
+	\end{talk}
+
+	\begin{talk}{Migrating MultiMLton to the Cloud}
+		{Sep 2013}{ML Workshop 2013}{Boston, MA}
+	\end{talk}
+
+	\begin{talk}{A Coherent and Managed Runtime for ML on the SCC}
+		{Nov 2012}{MARC 2012}{RWTH Aachen}
+	\end{talk}
+
+	\item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+					\textbf{Eliminating Read Barriers through Procrastination and Cleanliness} \\
+					\hspace{1ex} ISMM 2012, Beijing 					 	& \textit{Jun 2012} \\
+					\hspace{1ex} Wrestling Wednesdays, Microsoft Research, Cambridge 	& \textit{May 2012}
+				\end{tabular*}
+
+	\begin{talk}{Lightweight Concurrency in GHC}
+		{May 2012}{Wrestling Wednesdays}{Microsoft Research, Cambridge}
+	\end{talk}
+
+	\begin{talk}{Efficient Session Type guided Distributed Interaction}
+		{Jun 2012}{COORDINATION 2012}{CWI Amsterdam}
+	\end{talk}
+\end{nonumregion}
 
 \end{document}
 
