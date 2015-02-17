@@ -9,6 +9,7 @@
 \usepackage{tikz}
 \usepackage{pifont}
 \pagestyle{empty}
+\usepackage{mdwlist}
 
 \usepackage[left=.5cm,top=2cm,right=.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 
@@ -50,7 +51,7 @@
 \newenvironment{benumerate}[2]{
     \let\oldItem\item
     \def\item{\addtocounter{enumi}{-2}\oldItem}
-    \begin{enumerate}[#2]
+    \begin{enumerate}[#2] \itemsep3pt
     \setcounter{enumi}{#1}
     \addtocounter{enumi}{1}}
   {\end{enumerate}}
@@ -67,6 +68,7 @@
   { % \end{itemize}
 }
 
+\newcommand{\service}[1]{\item $\bullet$ \hspace{1ex}\parbox{7.2in}{#1}}
 
 \newenvironment{position}[5]
 {%\filbreak
@@ -124,11 +126,17 @@
   \vspace*{0.5ex}
   {\scalebox{1.4}{\textbf{#1}}}
   \begin{benumerate}{#3}{\color{RoyalBlue}#2}}
-  {\end{benumerate}\vspace{1ex}}
+  {\end{benumerate}\vspace{0.8ex}}
 
 \newenvironment{nonumregion}[1]{%
 \begin{region}{#1}{}{1}}
 {\end{region}}
+
+\newenvironment{itemregion}[1]{
+	\vspace*{0.5ex}
+	{\scalebox{1.4}{\textbf{#1}}}
+	\begin{itemize}\itemsep1pt}
+	{\end{itemize}\vspace{0.8ex}}
 
 \newcommand{\oral}{{\color{PineGreen}\textsc{oral}}}
 \newcommand{\poster}{{\color{BurntOrange}\textsc{poster}}}
@@ -352,7 +360,7 @@ static analysis, schedulers, threading systems, and memory management.}
 \end{region}
 
 
-\begin{nonumregion}{\lbar{blue}Talks}
+\begin{itemregion}{\lbar{blue}Talks}
 	\begin{talk} {Functional Programming Abstractions for Weakly Consistent Systems}
 	   {Dec 2014}{PhD Defense}{Purdue University}
 	\end{talk}
@@ -386,7 +394,23 @@ static analysis, schedulers, threading systems, and memory management.}
 	\begin{talk}{Efficient Session Type guided Distributed Interaction}
 		{Jun 2012}{COORDINATION 2012}{CWI Amsterdam}
 	\end{talk}
-\end{nonumregion}
+\end{itemregion}
+
+\begin{itemregion} {\lbar{blue}Professional Service}
+	\service{Program Committee member: SPLASH-MARC symposium, 2013.}
+	\service{Artifact Evaluation Committee member: PLDI 2015.} \vspace{0.5ex}
+	\service{Reviewer: POPL, ICFP, ASPLOS, TLDI, Concurrency and Computation:
+	Practice and Experience, Software: Practice and Experience.}
+\end{itemregion}
+
+\begin{itemregion} {\lbar{blue}Awards and Recognitions}
+	\service{Maurice H. Halstead Memorial Award for outstanding research in Software Engineering, Purdue University, 2014.}
+	\service{Best paper award at Many-core Architecture Research Symposium at RWTH-Aachen, 2012.}
+	\service{Invited paper in Science of Computer Programming, Vol. 78, Iss. 2 (Feb 2013).}
+	\service{Glasgow Haskell Compiler (GHC) Committer.}
+	\service{SIGPLAN PAC travel grant for PLDI 2012 and POPL 2014.}
+	\service{NSF travel grant for ICFP 2013.}
+\end{itemregion}
 
 \end{document}
 
