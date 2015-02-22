@@ -3,28 +3,23 @@ layout: default
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+<img src="assets/profile.jpeg" alt="ProfileImage" style="width: 220px; float: left; padding-right: 1rem; padding-left: 0.5rem; padding-top: 0.4rem;"/>
+I am a post-doctoral research associate under the [OCaml
+Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the
+[University of Cambridge](http://www.cam.ac.uk/) [Computer
+Lab](http://www.cl.cam.ac.uk/). I am also a member of the [Network and
+Operating Systems](http://www.cl.cam.ac.uk/research/srg/netos/) group.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I am interested in the design and implementation of concurrent functional
+programming languages targeting scalable platforms such as many-core processors
+and compute clouds. My research spans programming models, compilers, static
+analysis, schedulers, threading systems, and memory management.
 
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Before coming to Cambridge, I was a graduate student at [Purdue
+University](http://www.purdue.edu/) where I obtained an MS and PhD degrees in
+Computer Science under the supervision of the wonderful [Prof. Suresh
+Jagannathan](https://www.cs.purdue.edu/homes/suresh/). At Purdue, I led the
+[MultiMLton](http://multimlton.cs.purdue.edu/) and
+[Quelea](http://kcsrk.info/Quelea/) projects. Before that, I obtained my BEng
+degree in Computer Science and Engineering from [Anna University,
+India](https://www.annauniv.edu/).
