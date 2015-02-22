@@ -15,7 +15,8 @@ programming languages targeting scalable platforms such as many-core processors
 and compute clouds. My research spans programming models, compilers, static
 analysis, schedulers, threading systems, and memory management.
 
-Before coming to Cambridge, I was a graduate student at [Purdue
+Before coming to Cambridge, I was a [graduate
+student](https://www.cs.purdue.edu/homes/chandras/) at [Purdue
 University](http://www.purdue.edu/) where I obtained an MS and PhD degrees in
 Computer Science under the supervision of the wonderful [Prof. Suresh
 Jagannathan](https://www.cs.purdue.edu/homes/suresh/). At Purdue, I led the
