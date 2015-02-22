@@ -17,7 +17,7 @@ analysis, schedulers, threading systems, and memory management.
 
 Before coming to Cambridge, I was a [graduate
 student](https://www.cs.purdue.edu/homes/chandras/) at [Purdue
-University](http://www.purdue.edu/) where I obtained an MS and PhD degrees in
+University](http://www.purdue.edu/) where I obtained an MS and a PhD degree in
 Computer Science under the supervision of the wonderful [Prof. Suresh
 Jagannathan](https://www.cs.purdue.edu/homes/suresh/). At Purdue, I led the
 [MultiMLton](http://multimlton.cs.purdue.edu/) and
