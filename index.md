@@ -23,3 +23,18 @@ Jagannathan](https://www.cs.purdue.edu/homes/suresh/). At Purdue, I led the
 [Quelea](http://kcsrk.info/Quelea/) projects. Before that, I obtained my BEng
 degree in Computer Science and Engineering from [Anna University,
 India](https://www.annauniv.edu/).
+
+# Contact
+
+ * Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: `(\i -> i ++ "@cl.cam.ac.uk") "sk826"`
+ * IRL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 15 JJ Thomson Ave, Cambridge CB3 0FD
+ * Twitter&nbsp;&nbsp;: <a href="https://twitter.com/kc_srk"> @kc_srk </a>
+ * Github&nbsp;&nbsp;&nbsp;: <a href="https://github.com/kayceesrk"> kayceesrk </a>
+
+# Timeline
+<!--
+<script type="text/javascript" src="scripts/d3.min.js"></script>
+<script type="text/javascript" src="scripts/gantt-chart-d3.js"></script>
+<script type="text/javascript" src="scripts/gantt.js"></script>
+-->
+<img src="assets/timeline.png" alt="Timeline" style="width: 38rem;"/>
