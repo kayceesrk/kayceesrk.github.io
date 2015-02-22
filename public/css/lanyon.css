@@ -75,14 +75,14 @@ h1, h2, h3, h4, h5, h6 {
 .container {
   max-width: 28rem;
 }
-@media (min-width: 38em) {
-  .container {
-    max-width: 32rem;
-  }
-}
-@media (min-width: 56em) {
+@media (min-width: 48em) {
   .container {
     max-width: 38rem;
+  }
+}
+@media (min-width: 68em) {
+  .container {
+    max-width: 58rem;
   }
 }
 
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem; /* 15px */
+  font-size: 1rem;
   color: rgba(255,255,255,.6);
   background-color: #202020;
   -webkit-transition: all .3s ease-in-out;
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 30em) {
   .sidebar {
-    font-size: .75rem; /* 14px */
+    font-size: 0.9rem;
   }
 }
 
@@ -244,7 +244,7 @@ a.sidebar-nav-item:focus {
     width: 2.25rem;
   }
   .sidebar-toggle:before {
-    padding-bottom: .15rem;
+    padding-bottom: .2rem;
     border-top-width: .45rem;
     border-bottom-width: .15rem;
   }
