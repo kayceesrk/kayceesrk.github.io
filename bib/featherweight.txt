@@ -1,0 +1,6 @@
+@techreport{KC_FWT11,
+  author = {Sivaramakrishnan, KC and Ziarek, Lukasz and Jagannathan, Suresh},
+  title = {{Featherweight Threads for Communication}},
+  institution = {{Purdue University}},
+  year = 2011,
+}

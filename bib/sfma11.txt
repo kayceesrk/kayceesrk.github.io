@@ -1,0 +1,7 @@
+@inproceedings{Waddington_SFMA11,
+  author = {Waddington, Daniel G. and Tian, Chen and Sivaramakrishnan, KC},
+  title = {{Scalable Lightweight Task Management Schemes for MIMD Processors}},
+  month = apr,
+  year = {2011},
+  booktitle = {{Proceedings of the Workshop on Systems for Future Multi-Core Architectures}},
+ }

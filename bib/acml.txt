@@ -1,0 +1,6 @@
+@techreport{Ziarek_ACML10,
+  author = {Ziarek, Lukasz and Sivaramakrishnan, KC and Jagannathan, Suresh},
+  title = {{Composable Asynchronous Events}},
+  institution = {{Purdue University}},
+  year = 2010,
+}

@@ -1,0 +1,10 @@
+@inproceedings{KC_MARC12,
+  author = {Sivaramakrishnan, KC and Ziarek, Lukasz and Jagannathan, Suresh},
+  title = {{A Coherent and Managed Runtime for ML on the SCC}},
+  month = nov,
+  year = {2012},
+  pages = {20--25},
+  booktitle = {{Proceedings of the Many-core Applications Research Community
+  (MARC) Symposium at RWTH Aachen University}},
+  isbn = {978-3-00-039545-1},
+ }

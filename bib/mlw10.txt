@@ -1,0 +1,8 @@
+@inproceedings{Jagannathan_MLW10,
+  author = {Jagannathan, Suresh and Navabi, Armand and Sivaramakrishnan, KC and
+  Ziarek, Lukasz}
+  title = {{The Design Rationale for Multi-MLton}},
+  month = sep,
+  year = {2010},
+  booktitle = {{Proceedings of the Workshop on ML}},
+}

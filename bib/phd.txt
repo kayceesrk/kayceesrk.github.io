@@ -1,0 +1,7 @@
+@phdthesis{KC_PhD,
+  title={{Functional Programming Abstractions for Weakly Consistent Systems}},
+	author={Sivaramakrishnan, KC},
+	school={{Purdue University}},
+	year=2014,
+	month=nov
+}

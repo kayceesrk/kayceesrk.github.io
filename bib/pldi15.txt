@@ -1,0 +1,8 @@
+@inproceedings{quelea,
+ author = {Sivaramakrishnan, KC and Kaki, Gowtham and Jagannathan, Suresh},
+ title = {{Declarative Programming Over Eventually Consistent Data Stores}},
+ booktitle = {Proceedings of the 36th ACM SIGPLAN conference on Programming language design and implementation},
+ series = {PLDI '15},
+ year = {2015},
+ location = {Portland, Oregon, USA},
+}
