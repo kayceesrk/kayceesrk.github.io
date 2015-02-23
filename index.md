@@ -132,7 +132,7 @@ India](https://www.annauniv.edu/).
 <div> *Under consideration for Journal of Functional Programming (JFP)* </div>
 <div style="font-size: 80%"> [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2) </div>
 <div style="line-height: 50%"> </br> </div>
- 2. <div id="jfp15"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
+ 2. <div id="tr11"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [Featherweight Threads for Communication](papers/parasites_tech11.pdf) </a> </div>
 <div> *Purdue University Computer Science Technical Report – TR-11-018, 2011* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/featherweight.txt) </div>
