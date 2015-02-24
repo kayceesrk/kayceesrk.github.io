@@ -115,7 +115,7 @@ India](https://www.annauniv.edu/).
 <div> *Workshop on Systems for Future Multi-Core Architectures (SFMA), 2011* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/sfma11.txt) </div>
 <div style="line-height: 50%"> </br> </div>
- 3. <div id="ml10"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan
+ 3. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek
 <div> [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf) </a> </div>
 <div> *ML Workshop, 2010* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/mlw10.txt) </div>
