@@ -66,7 +66,7 @@ $ eval `opam config env`
 The multicore compiler is now installed and has been made the current compiler:
 
 {% highlight bash %}
-opam switch
+$ opam switch
 system                      I system                      System compiler (4.02.1)
 4.02.1+local-git-multicore  C 4.02.1+local-git-multicore  Local checkout of 4.02.1 at /Users/kc/ocaml-multicore
 4.02.1                      I 4.02.1                      Official 4.02.1 release
