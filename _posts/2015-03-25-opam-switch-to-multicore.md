@@ -79,6 +79,15 @@ system                      I system                      System compiler (4.02.
 # 66 more patched or experimental compilers, use '--all' to show
 {% endhighlight %}
 
+This can be confirmed by:
+
+{% highlight bash %}
+$ ocamlc -version
+4.02.1+multicore-dev0
+{% endhighlight %}
+
+which shows the current OCaml bytecode compiler version.
+
 ## Working with the local switch
 
 Every time you change the compiler source, you need to rebuild the compiler and
