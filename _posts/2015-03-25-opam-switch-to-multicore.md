@@ -2,7 +2,7 @@
 layout: post
 title: "Opam Switch to Multicore OCaml"
 date: 2014-06-03 17:15:00
-categories: multicore
+categories: multicore opam ocaml
 ---
 
 OPAM has a great [compiler
