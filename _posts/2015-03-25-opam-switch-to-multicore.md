@@ -12,7 +12,7 @@ version and a set of installed packages. I wanted to use the power of `opam
 switch` for working with the experimental [multicore
 OCaml](https://github.com/kayceesrk/ocaml-multicore) compiler. The key
 advantage of doing this is that it lets you easily install packages from the
-[OPAM repository](http://opam.ocaml.org/), and sandbox it from other OCaml
+[OPAM repository](http://opam.ocaml.org/), while sandboxing it from other OCaml
 installations on your system. The post will show how to create OPAM compiler
 switch for multicore OCaml.
 
