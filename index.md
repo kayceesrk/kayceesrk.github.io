@@ -73,7 +73,7 @@ India](https://www.annauniv.edu/).
  1. <div id="pldi15"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan
 <div> [Declarative Programming over Eventually Consistent Data Stores](papers/quelea_pldi15.pdf) </div>
 <div> *International Conference on Programming Language Design and Implementation (PLDI), 2015* </div>
-<div style="font-size: 80%"> [\[code\]](http://kcsrk.info/Quelea) [\[bib\]](bib/pldi15.txt) </div>
+<div style="font-size: 80%"> [\[code\]](http://kcsrk.info/Quelea) [\[techrep\]](papers/quelea-long.pdf) [\[bib\]](bib/pldi15.txt) </div>
 <div style="line-height: 50%"> </br> </div>
  2. <div id="padl14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [Rx-CML: A Prescription for Safely Relaxing Synchrony](papers/rxcml_padl14.pdf) </a> </div>
