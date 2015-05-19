@@ -1,0 +1,473 @@
+\documentclass[10pt]{article}
+\usepackage{charter}
+% \usepackage{sourcecodepro-type1-autoinst}
+% \usepackage{MinionPro}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[flushleft,neverdecrease,neveradjust]{paralist}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{pifont}
+\pagestyle{empty}
+\usepackage{mdwlist}
+
+\usepackage[left=.5cm,top=2cm,right=.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+
+\definecolor{darkgrey}{HTML}{333333}
+\definecolor{grey}{HTML}{4D4D4D}
+\definecolor{lightgrey}{HTML}{999999}
+\definecolor{green}{HTML}{C2E15F}
+\definecolor{orange}{HTML}{FDA333}
+% \definecolor{purple}{HTML}{D3A4F9}
+\definecolor{purple}{HTML}{9B59B6}
+\definecolor{red}{HTML}{FB4485}
+\definecolor{blue}{HTML}{6CE0F1}
+\definecolor{zest}{HTML}{E67E22}
+\linespread{1}
+\renewcommand{\labelitemi}{}
+\renewcommand{\labelitemii}{}
+
+\newcommand{\lbar}[1]{{\color{#1}\ding{118}}\hspace*{2pt}}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=Sepia,
+  linkcolor=RoyalBlue,
+  pdfborder= 0 0 0,
+  bookmarks=false,
+  pdftitle={KC Sivaramakrishnan - CV},
+  pdfauthor={KC Sivaramakrishnan},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={KC Sivaramakrishnan, resume, cv, mathematics, cs,
+		computer science, phd, programming languages, concurrency, eventual
+		consistency, parallelism, multicore, distributed systems,
+		non-cache-coherence, cache coherence, NUMA, language runtimes, functional
+		programming, Haskell, OCaml, Standard ML, MLton, MultiMLton, PLDI, ICFP,
+		ISMM, JFP, weak consistency, relaxed memory, axiomatic semantics,
+		operational semantics, cassandra, NoSQL, ZeroMQ, Garbage Collection
+}}
+
+% http://tex.stackexchange.com/questions/110236/is-there-a-way-to-get-reverse-numbering-on-the-enumerate-environment
+\newenvironment{benumerate}[2]{
+    \let\oldItem\item
+    \def\item{\addtocounter{enumi}{-2}\oldItem}
+    \begin{enumerate}[#2] \itemsep3pt
+    \setcounter{enumi}{#1}
+    \addtocounter{enumi}{1}}
+  {\end{enumerate}}
+
+\newenvironment{education}[4]
+{%\filbreak
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+		#3 & \small{#4} \\
+  \end{tabular*}
+  % \begin{itemize} \setlength{\parskip}{-1pt}\item
+  }
+  { % \end{itemize}
+}
+
+\newcommand{\service}[1]{\item $\bullet$ \hspace{1ex}\parbox{7.2in}{#1}}
+
+\newenvironment{position}[5]
+{%\filbreak
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+		\hspace{1ex} #3 & \small{#4} \\
+  \end{tabular*}
+\item \hspace{1ex} \parbox{7.3in}{\hspace{4ex}#5}
+  % \begin{itemize} \setlength{\parskip}{-1pt}\item
+  }
+  { % \end{itemize}
+}
+
+\newenvironment{publication}[5]
+{ \item
+  \begin{tabular*}{7.5in}{p{6.3in}@{\extracolsep{\fill}}r}
+    \href{#1}{\textbf{#2}} & \textit{#3}\\ #4 &\\ \textit{#5}&\\
+  \end{tabular*}
+} {}
+
+\newenvironment{publicationNote}[6]
+{ \item
+  \begin{tabular*}{7.5in}{p{6.3in}@{\extracolsep{\fill}}r}
+    \href{#1}{\textbf{#2}} & \textit{#3}\\ #4 &\\ \textit{#5}\\ \textbf{#6} \\
+  \end{tabular*}
+} {}
+
+\newenvironment{talk}[4]
+{ \item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2} \\
+		\hspace{1ex} #3 & \small{#4}
+\end{tabular*}
+} {}
+
+\newcommand{\reference}[7]{%
+  \begin{tabular}{@{}l@{}}%
+    \textbf{#1}\\%
+    #2\\%
+    #3\\%
+    #4\\%
+    #5\\%
+    #6\\%
+    \href{mailto:#7}{#7}%
+  \end{tabular}%
+}
+
+\newcommand{\referencesmall}[6]{%
+  \begin{tabular}{@{}l@{}}%
+    \textbf{#1}\\%
+    #2\\%
+    #3\\%
+    #4\\%
+    #5\\%
+    \href{mailto:#6}{#6}%
+  \end{tabular}%
+}
+
+
+\newcommand{\refrow}[2]{%
+\item \begin{tabular*}{0.9\textwidth}{@{}p{3.0in}@{\hspace*{0.3in}}p{3.0in}@{}} #1 & #2 \end{tabular*}
+\vspace*{1ex}}
+
+\newenvironment{region}[3]{%
+  \vspace*{0.5ex}
+  {\scalebox{1.4}{\textbf{#1}}}
+  \begin{benumerate}{#3}{\color{RoyalBlue}#2}}
+  {\end{benumerate}\vspace{0.8ex}}
+
+\newenvironment{nonumregion}[1]{%
+\begin{region}{#1}{}{1}}
+{\end{region}}
+
+\newenvironment{itemregion}[1]{
+	\vspace*{0.5ex}
+	{\scalebox{1.4}{\textbf{#1}}}
+	\begin{itemize}\itemsep1pt}
+	{\end{itemize}\vspace{0.8ex}}
+
+\newcommand{\oral}{{\color{PineGreen}\textsc{oral}}}
+\newcommand{\poster}{{\color{BurntOrange}\textsc{poster}}}
+
+\color{darkgrey}
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \hypersetup{urlcolor=zest}
+  \node [rectangle, fill=grey, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+  \node [anchor=center] (name) at (box) {%
+    \color{white}%
+    \begin{tabular*}{7.5in}{@{\extracolsep{\fill}}lr}
+      \\
+      \textbf{\huge{Curriculum Vitae}} & \today\\*[2ex]
+      \textbf{\large{KC Sivaramakrishnan}} & {\url{http://kcsrk.info}}\\[0.5ex]
+      Computer Laboratory &  15 JJ Thomson Avenue\\
+      University of Cambridge & Cambridge CB3 0FD \\
+      \href{mailto:sk826@cl.cam.ac.uk}{sk826@cl.cam.ac.uk}
+      & \emph{Tel}: \textrm{+44 79828 42499}\\
+    \end{tabular*}
+  };
+\end{tikzpicture}
+\vspace{0.9in}
+
+\hypersetup{urlcolor=cyan}
+
+\begin{nonumregion}{\lbar{Mahogany}Summary}
+\item \hspace{1ex} \parbox{7.3in}{I am interested in the design and implementation of
+concurrent programming languages targeting scalable platforms such as many-core
+processors and compute clouds. My research spans programming models, compilers,
+static analysis, schedulers, threading systems, and memory management.}
+\end{nonumregion}
+
+\begin{nonumregion}{\lbar{red}Education}
+  \begin{education}{PhD --- Computer Science}
+    {May 2011 -- Dec 2014}
+    {}
+    {Purdue University, USA}
+    \vspace{-3ex}
+		\item
+			\begin{itemize}
+			\item Thesis Title: \href{http://kcsrk.info/papers/dissertation_dec14.pdf}{\textbf{Functional Programming Abstractions for Weakly Consistent Systems}}
+				\vspace{-0.5ex}
+			\item Advisor: Suresh Jagannathan
+			\end{itemize}
+  \end{education}
+  \begin{education} {Master of Science --- Computer Science}
+    {Aug 2008 -- May 2011}
+    {}
+    {Purdue University, USA}
+		\vspace*{-3ex}
+		\item \qquad GPA: 3.94/4
+  \end{education}
+
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{Bachelor of Engineering --- Computer Science and Engineering} & \textit{Aug 2004 -- May 2008} \\
+		 & \small{PSG College of Technology} \\
+		& \small{Anna University, India} \\
+  \end{tabular*}
+		\vspace*{-5.5ex}
+		\item \qquad GPA: 9.55/10
+
+\end{nonumregion}
+
+\begin{nonumregion} {\lbar{orange}Experience}
+	\begin{position}{Research Associate, University of Cambridge}{Dec 2014 -- present}{Advisor: Anil Madhavapeddy}{Cambridge, UK}
+		 {Developing \href{https://github.com/ocamllabs/ocaml-multicore}{Multicore OCaml} under the OCaml Labs initiative in the Computer Laboratory.}
+	\end{position}
+
+	\begin{position}{Research Assistant, Purdue University}{Aug 2008 -- Dec 2014}{Advisor: Suresh Jagannathan}{West Lafayette, IN, USA}
+		 {My research focused on discovering new language abstractions and
+		 developing runtime system techniques to ease programming weakly consistent
+		 systems. To this end, I have built
+		 \href{http://multimlton.cs.purdue.edu}{MultiMLton}, a parallel and
+		 distributed extension of MLton Standard ML compiler and runtime and
+		 \href{http://kcsrk.info/Quelea}{Quelea}, a shallow extension of Haskell
+		 for declarative programming over eventually consistent data stores.}
+	\end{position}
+
+	\item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{Teaching Assistant, Purdue University} & \small{West Lafayette, IN, USA}\\
+		\hspace{1ex} Undergraduate C Programming (CS180) & \textit{Aug 2012 -- Dec 2012} \\
+		\hspace{1ex} Graduate Programming Languages (CS565) & \textit{Aug 2011 -- Dec 2011} \\
+		\end{tabular*}
+	\item \hspace{1ex} \parbox{7.3in}{\hspace{4ex}My tasks included designing and
+	evaluating weekly projects, office hours for one-on-one instruction, and
+	grading.}
+
+	\begin{position}{Research Intern, Microsoft Research, Cambridge}{Feb 2012 -- May 2012}
+		{Advisors: Tim Harris, Simon Marlow, and Simon Peyton Jones}{Cambridge, UK}
+		{I developed a concurrency substrate for Glasgow Haskell Compiler (GHC) to
+		allow programmers to modularly implement user-level schedulers and
+		concurrency libraries for Haskell threads in Haskell, without having to
+		re-engineer critical runtime system components. The concurrency substrate
+		is built around one-shot continuations and uses transactional memory for
+		coordination.}
+	\end{position}
+
+	\begin{position}{Research Intern, Samsung Information Systems America (R\&D)}{May 2010 -- Aug 2010}
+		{Advisor: Daniel Waddington}{San Jose, CA, USA}
+		{I was part of the core team that developed SNAPPLE programming language --
+		a safe and concurrent extension of C++ targeted at many-core processors.
+		The task involved designing language extensions for concurrency, compiler
+		extensions for safety, and a runtime for executing large number of
+		lightweight threads. SNAPPLE was implemented as a veneer on top of C++
+		using LLNL Rose source-to-source compiler.}
+	\end{position}
+
+	\begin{position}{Intern, Advanced Numerical Research and Analysis Group}{Dec 2007 -- Apr 2008}
+		{Advisor: Sankar Chnab}{Hyderabad, India}
+		{As a part of the Compiler Engineering group, I ported Kaffe, an open
+		source Java VM to an embedded microprocessor ANUPAMA and a desktop
+		processor ABACUS. Developed a lightweight threading subsystem, and
+		implemented a JIT backed for ABACUS.}
+	\end{position}
+\end{nonumregion}
+
+\begin{region} {\lbar{purple}Journal Publications}{{J}1}{2}
+	\begin{publication} {http://kcsrk.info/papers/multimlton_jfp14.pdf}
+		{MultiMLton: A Multicore-aware Runtime for Standard ML}
+		{Nov 2014} {KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan}
+		{Journal of Functional Programming (JFP), 24(6): 613 -- 674}
+	\end{publication}
+
+	\begin{publicationNote}{http://kcsrk.info/papers/sting_scp13.pdf}{Efficient Sessions}
+		{Feb 2013}{KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster}
+		{Science of Computer Programming (SCP), 78(2): 147 -- 167}
+		{Invited paper}
+	\end{publicationNote}
+\end{region}
+
+\begin{region} {\lbar{purple}Conference Publications}{{C}1}{7}
+	\begin{publication} {http://kcsrk.info/papers/quelea_pldi15.pdf}
+		{Declarative Programming over Eventually Consistent Data Stores}
+		{Jun 2015} {KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan}
+		{International Conference on Programming Language Design and Implementation (PLDI)}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/rxcml_padl14.pdf}
+		{Rx-CML: A Prescription for Safely Relaxing Synchrony}
+		{Jan 2014}{KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan}
+		{Symposium on Practical Aspects of Declarative Languages (PADL)}
+	\end{publication}
+
+	\begin{publicationNote}{http://kcsrk.info/papers/mmscc_marc12.pdf}
+		{A Coherent and Managed Runtime for ML on the SCC}
+		{Nov 2012}{KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan}
+		{Many-core Architecture Research Community Symposium (MARC)}
+		{Best paper award}
+	\end{publicationNote}
+
+	\begin{publication}{http://kcsrk.info/papers/mmgc_ismm12.pdf}
+		{Eliminating Read Barriers through Procrastination and Cleanliness}
+		{Jun 2012}{KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan}
+		{International Symposium on Memory Management (ISMM)}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/acml_pldi11.pdf}
+		{Composable Asynchronous Events}
+		{Jun 2011}{Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan}
+		{International Conference on Programming Language Design and Implementation (PLDI)}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/sting_coordination10.pdf}
+		{Efficient Session Type Guided Distributed Interaction}
+		{June 2010}{KC Sivaramakrishnan, Karthik Nagaraj, Lukasz Ziarek, Patrick Eugster}
+		{International Conference on Coordination Models and Languages (COORDINATION)}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/memo_icfp09.pdf}
+		{Partial Memoization of Concurrency and Communication}
+		{Sep 2009}{Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan}
+		{International Conference on Functional Programming (ICFP)}
+	\end{publication}
+\end{region}
+
+
+\begin{region} {\lbar{purple}Workshop Publications}{{W}1}{4}
+
+	\begin{publication}{http://kcsrk.info/papers/mmcloud_mlw13.pdf}
+		{Migrating MultiMLton to the Cloud}
+		{Sep 2013}{KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan}
+		{ML Workshop}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/snapple_sfma11.pdf}
+		{Scalable Lightweight Task Management Schemes for MIMD Processors}
+		{Apr 2011}{Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan}
+		{Workshop on Systems for Future Multi-Core Architectures (SFMA)}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/multimlton_mlw10.pdf}
+		{The Design Rationale for MultiMLton}
+		{Sep 2010}{Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek}
+		{ML Workshop}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/parasites_damp10.pdf}
+		{Lightweight Asynchrony using Parasitic Threads}
+		{Jan 2010}{KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan}
+		{Workshop on Declarative Aspects of Multicore Programming (DAMP)}
+	\end{publication}
+\end{region}
+
+\begin{region} {\lbar{purple}Technical Reports and Drafts}{{T}1}{2}
+
+	\begin{publication}{http://kcsrk.info/papers/schedact_jfp15.pdf}
+		{Composable Scheduler Activations for Haskell}
+		{Dec 2014}{KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones}
+		{Under consideration for Journal of Functional Programming (JFP)}
+	\end{publication}
+
+	\begin{publication}{http://kcsrk.info/papers/parasites_tech11.pdf}
+		{Featherweight Threads for Communication}
+		{Nov 2011}{KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan}
+		{Purdue University Computer Science Technical Report -- TR-11-018}
+	\end{publication}
+
+\end{region}
+
+
+\begin{itemregion}{\lbar{blue}Talks}
+	\begin{talk} {Functional Programming Abstractions for Weakly Consistent Systems}
+	   {Dec 2014}{PhD Defense}{Purdue University}
+	\end{talk}
+
+	\begin{talk} {Functional Abstractions for Practical and Scalable Concurrent Programming}
+		 {Mar 2014}{Invited Lecture}{Microsoft Research, Cambridge, UK}
+	\end{talk}
+
+	\begin{talk}{Rx-CML: A Prescription for Safely Relaxing Synchrony}
+		{Jan 2014}{PADL 2014}{San Diego, CA}
+	\end{talk}
+
+	\begin{talk}{Migrating MultiMLton to the Cloud}
+		{Sep 2013}{ML Workshop 2013}{Boston, MA}
+	\end{talk}
+
+	\begin{talk}{A Coherent and Managed Runtime for ML on the SCC}
+		{Nov 2012}{MARC 2012}{RWTH Aachen}
+	\end{talk}
+
+	\item \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+					\textbf{Eliminating Read Barriers through Procrastination and Cleanliness} \\
+					\hspace{1ex} ISMM 2012, Beijing 					 	& \textit{Jun 2012} \\
+					\hspace{1ex} Wrestling Wednesdays, Microsoft Research, Cambridge 	& \textit{May 2012}
+				\end{tabular*}
+
+	\begin{talk}{Lightweight Concurrency in GHC}
+		{May 2012}{Wrestling Wednesdays}{Microsoft Research, Cambridge}
+	\end{talk}
+
+	\begin{talk}{Efficient Session Type guided Distributed Interaction}
+		{Jun 2012}{COORDINATION 2012}{CWI Amsterdam}
+	\end{talk}
+\end{itemregion}
+
+\begin{itemregion} {\lbar{blue}Professional Service}
+	\service{Program Committee member: SPLASH-MARC symposium, 2013.}
+	\service{Artifact Evaluation Committee member: PLDI 2015.} \vspace{0.5ex}
+	\service{Reviewer: POPL, ICFP, ASPLOS, TLDI, Concurrency and Computation:
+	Practice and Experience, Software: Practice and Experience.}
+\end{itemregion}
+
+\begin{itemregion} {\lbar{blue}Awards and Recognitions}
+  \service{Research Fellow, Darwin College, Cambridge, 2015--2018.}
+	\service{Maurice H. Halstead Memorial Award for outstanding research in Software Engineering, Purdue University, 2014, \$4,000.}
+	\service{Best paper award at Many-core Architecture Research Symposium at RWTH-Aachen, 2012, \$1,000.}
+	\service{Invited paper in Science of Computer Programming, Vol. 78, Iss. 2 (Feb 2013).}
+	\service{Glasgow Haskell Compiler (GHC) Committer.}
+	\service{SIGPLAN PAC travel grant for PLDI 2012 and POPL 2014, ~\$1,500 each.}
+	\service{NSF travel grant for ICFP 2013, ~\$2,000.}
+\end{itemregion}
+
+
+\begin{nonumregion}{\lbar{green}References}
+  \refrow{
+    \reference{Suresh Jagannathan}
+    {Professor}
+    {Department of Computer Science}
+    {Purdue University}
+    {305 N University St}
+    {West Lafayette, IN 47906, USA}
+    {suresh@cs.purdue.edu}
+  }{
+    \reference{Anil Madhavapeddy}
+    {University Lecturer}
+    {Computer Laboratory}
+    {University of Cambridge}
+    {15 JJ Thomson Av}
+    {Cambridge, CB3 0FD, UK}
+    {anil.madhavapeddy@cl.cam.ac.uk}
+  }
+  \refrow{
+    \reference{Jan Vitek}
+    {Professor of Computer Science}
+    {College of Computer \& Information Science}
+    {Northeastern University}
+    {440 Huntinton Av}
+    {Boston, MA 02115, USA}
+    {j.vitek@neu.edu}
+  }{
+    \reference{Simon Peyton Jones}
+    {Principal Researcher}
+		{Programming Principles and Tools}
+    {Microsoft Research Ltd}
+    {21 Station Rd}
+    {Cambridge CB1 2FB, UK}
+    {simonpj@microsoft.com}
+  }
+\end{nonumregion}
+
+\end{document}
+
+%  LocalWords:  lr Siddharth Narayanaswamy Compositionality Advisor Siskind Yu
+%  LocalWords:  Muniyandi Manivannan IIT Manya Sep Unseeability Unseeable ACS
+%  LocalWords:  Barbu Michaux Compositional JAIR IEEE PAMI Cao CVPR RoyalBlue
+%  LocalWords:  Burchill Coroian Fidler Mussman Salvi Shangguan Waggoner Zhang
+%  LocalWords:  Uncertainity UAI ICRA VR Laparoscopic Devasahayam MMVR Xiong
+%  LocalWords:  Corso Fellbaum elie Malaia Pearlmutter Talavage IPAB JT
+%  LocalWords:  Colloquia AAAI ICDL PRL InnerVision Cohn Jos RUBIC Heavilon
