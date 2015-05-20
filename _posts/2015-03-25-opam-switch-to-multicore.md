@@ -10,7 +10,7 @@ switch](https://opam.ocaml.org/doc/Usage.html#opamswitch) feature that lets you
 simultaneously host several OCaml installations, each with its own compiler
 version and a set of installed packages. I wanted to use the power of `opam
 switch` for working with the experimental [multicore
-OCaml](https://github.com/kayceesrk/ocaml-multicore) compiler. The key
+OCaml](https://github.com/ocamllabs/ocaml-multicore) compiler. The key
 advantage of doing this is that it lets you easily install packages from the
 [OPAM repository](http://opam.ocaml.org/), while sandboxing it from other OCaml
 installations on your system. The post will show how to create OPAM compiler
@@ -52,10 +52,10 @@ system  C system  System compiler (4.02.1)
 {% endhighlight %}
 
 You can easily switch between the installations using `opam switch
-<system-name>`. Let us now install multicore OCaml as a new switch:
+[system-name]`. Let us now install multicore OCaml as a new switch:
 
 {% highlight bash %}
-$ git clone https://github.com/kayceesrk/ocaml-multicore
+$ git clone https://github.com/ocamllabs/ocaml-multicore
 $ cd ocaml-multicore
 $ opam compiler-conf configure
 $ make world
