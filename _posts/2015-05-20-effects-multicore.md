@@ -166,11 +166,9 @@ below:
 
 The program forks new tasks in a depth-first fashion and yields when it reaches
 maximum depth, logging the actions along the way. To run the program, first
-install multicore OCaml compiler. My [previous blog
-post](http://kcsrk.info/multicore/opam/ocaml/2015/03/25/opam-switch-to-multicore/)
-explains how to set up multicore OCaml using OPAM compiler switch mechanism.
-Once the compiler is installed, the above test program can be compiled and run
-as follows:
+install multicore OCaml compiler, available from the [OCaml Labs dev
+repo](https://github.com/ocamllabs/opam-repo-dev). Once the compiler is
+installed, the above test program can be compiled and run as follows:
 
 {% highlight bash %}
 $ git clone https://github.com/kayceesrk/ocaml-eff-example
