@@ -258,5 +258,3 @@ domain local heaps. However, the programmer utilising the effect library to
 write schedulers need not be aware of this restriction as fibers are
 transparently promoted from local to shared heap on demand. We will have to
 save multicore-capable schedulers for another post.
-
-## References
