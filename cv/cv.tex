@@ -105,7 +105,7 @@
 \end{tabular*}
 } {}
 
-\newcommand{\reference}[8]{%
+\newcommand{\reference}[7]{%
   \begin{tabular}{@{}l@{}}%
     \textbf{#1}\\%
     #2\\%
@@ -113,10 +113,21 @@
     #4\\%
     #5\\%
     #6\\%
-    #7\\%
-    \href{mailto:#8}{#8}%
+    \href{mailto:#7}{#7}%
   \end{tabular}%
 }
+
+\newcommand{\referencesmall}[6]{%
+  \begin{tabular}{@{}l@{}}%
+    \textbf{#1}\\%
+    #2\\%
+    #3\\%
+    #4\\%
+    #5\\%
+    \href{mailto:#6}{#6}%
+  \end{tabular}%
+}
+
 
 \newcommand{\refrow}[2]{%
 \item \begin{tabular*}{0.9\textwidth}{@{}p{3.0in}@{\hspace*{0.3in}}p{3.0in}@{}} #1 & #2 \end{tabular*}
@@ -404,14 +415,56 @@ static analysis, schedulers, threading systems, and memory management.}
 \end{itemregion}
 
 \begin{itemregion} {\lbar{blue}Awards and Recognitions}
-  \service{Research Fellow, Darwin College, Cambridge, 2015--2018.}
-	\service{Maurice H. Halstead Memorial Award for outstanding research in Software Engineering, Purdue University, 2014.}
-	\service{Best paper award at Many-core Architecture Research Symposium at RWTH-Aachen, 2012.}
+  \service{Research Fellowship, Royal Commission for the Exhibition of 1851, 2015--2018, \pounds102,000.}
+  \service{Research Fellowship, Darwin College, Cambridge, 2015--2018, \pounds900.}
+	\service{Maurice H. Halstead Memorial Award for outstanding research in Software Engineering, Purdue University, 2014, \$4,000.}
+	\service{Best paper award at Many-core Architecture Research Symposium at RWTH-Aachen, 2012, \$1,000.}
 	\service{Invited paper in Science of Computer Programming, Vol. 78, Iss. 2 (Feb 2013).}
 	\service{Glasgow Haskell Compiler (GHC) Committer.}
-	\service{SIGPLAN PAC travel grant for PLDI 2012 and POPL 2014.}
-	\service{NSF travel grant for ICFP 2013.}
+	\service{SIGPLAN PAC travel grant for PLDI 2012 and POPL 2014, ~\$1,500 each.}
+	\service{NSF travel grant for ICFP 2013, ~\$2,000.}
 \end{itemregion}
+
+\ifdefined\genrefs
+
+\begin{nonumregion}{\lbar{green}References}
+  \refrow{
+    \reference{Suresh Jagannathan}
+    {Professor}
+    {Department of Computer Science}
+    {Purdue University}
+    {305 N University St}
+    {West Lafayette, IN 47906, USA}
+    {suresh@cs.purdue.edu}
+  }{
+    \reference{Anil Madhavapeddy}
+    {University Lecturer}
+    {Computer Laboratory}
+    {University of Cambridge}
+    {15 JJ Thomson Av}
+    {Cambridge, CB3 0FD, UK}
+    {anil.madhavapeddy@cl.cam.ac.uk}
+  }
+  \refrow{
+    \reference{Jan Vitek}
+    {Professor of Computer Science}
+    {College of Computer \& Information Science}
+    {Northeastern University}
+    {440 Huntinton Av}
+    {Boston, MA 02115, USA}
+    {j.vitek@neu.edu}
+  }{
+    \reference{Simon Peyton Jones}
+    {Principal Researcher}
+		{Programming Principles and Tools}
+    {Microsoft Research Ltd}
+    {21 Station Rd}
+    {Cambridge CB1 2FB, UK}
+    {simonpj@microsoft.com}
+  }
+\end{nonumregion}
+
+\fi
 
 \end{document}
 
