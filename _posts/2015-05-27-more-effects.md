@@ -347,8 +347,8 @@ let send fd bus pos len mode =
 The scheduler works by running all of the available threads until there are no
 more threads to run, but there are threads that are waiting for IO to complete.
 At this point, the scheduler invokes `select()` call and blocks until one of
-the IO actions becomes available. The scheduler resumes those threads whose IO
-actions are now available:
+the IO actions becomes available. The scheduler then resumes those threads
+whose IO actions are now available:
 
 {% highlight ocaml %}
 (* When there are no threads to run, perform blocking io. *)
