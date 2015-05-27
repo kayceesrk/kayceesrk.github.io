@@ -98,6 +98,16 @@ let foo () : unit =
 let _ = IS.run (fun () -> SS.run foo "") 0
 {% endhighlight %}
 
+which prints:
+
+{% highlight bash %}
+0
+42
+21
+hello
+world
+{% endhighlight %}
+
 ## References
 
 We can expand upon our state example, to model [ML style
