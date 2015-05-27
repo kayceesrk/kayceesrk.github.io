@@ -154,9 +154,10 @@ end
 {% endhighlight %}
 
 The idea is to represent the state as a list of universal typed values,
-references as a record with inject and project functions, assign as appending a
-new value to the head of the state list, and dereference as linear search
-through the list for a matching assignment. The [universal type
+references as a record with inject and project functions to and from universal
+type values, assign as appending a new value to the head of the state list, and
+dereference as linear search through the list for a matching assignment. The
+[universal type
 implementation](https://blogs.janestreet.com/a-universal-type/#comment-163) is
 due to Alan Frisch.
 
@@ -345,10 +346,10 @@ let send fd bus pos len mode =
 {% endhighlight %}
 
 The scheduler works by running all of the available threads until there are no
-more threads to run, but there are threads that are waiting for IO to complete.
-At this point, the scheduler invokes `select()` call and blocks until one of
-the IO actions becomes available. The scheduler then resumes those threads
-whose IO actions are now available:
+more threads to run. At this point, if there are threads that are waiting to
+complete an IO operation, the scheduler invokes `select()` call and blocks
+until one of the IO actions becomes available. The scheduler then resumes those
+threads whose IO actions are now available:
 
 {% highlight ocaml %}
 (* When there are no threads to run, perform blocking io. *)
