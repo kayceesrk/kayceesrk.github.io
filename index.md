@@ -47,7 +47,7 @@ India](https://www.annauniv.edu/).
 ## Overview
 
  * Distributed Programming : [PLDI15](#pldi15) | [PADL14](#padl14) | [ML13](#ml13)
- * Concurrent Programming : [PLDI11](#pldi11) | [ICFP09](#icfp09) | [JFP15](#jfp15) | [ML10](#ml10) | [TR11](#tr11) | [DAMP10](#damp10)
+ * Concurrent Programming : [OCaml15](#ocaml15) | [PLDI11](#pldi11) | [ICFP09](#icfp09) | [JFP15](#jfp15) | [ML10](#ml10) | [TR11](#tr11) | [DAMP10](#damp10)
  * Multicore Runtime : [JFP14](#jfp14) | [MARC12](#marc12) | [ISMM12](#ismm12) | [SFMA11](#sfma11)
  * Session Types : [SCP13](#scp13) | [COORDINATION10](#coordination10)
 
@@ -109,21 +109,25 @@ India](https://www.annauniv.edu/).
 
 ## Workshop publications
 
- 1. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
+ 1. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy
+<div> [Effective Concurrency with Algebraic Effects](papers/effects_ocaml15.pdf) </a> </div>
+<div> *OCaml Worshop, 2015* </div>
+<div style="line-height: 50%"> </br> </div>
+ 2. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [Migrating MultiMLton to the Cloud](papers/mmcloud_mlw13.pdf) </a> </div>
 <div> *ML Worshop, 2013* </div>
 <div style="line-height: 50%"> </br> </div>
- 2. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan
+ 3. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan
 <div> [Scalable Lightweight Task Management Schemes for MIMD Processors](papers/snapple_sfma11.pdf) </a> </div>
 <div> *Workshop on Systems for Future Multi-Core Architectures (SFMA), 2011* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/sfma11.txt) </div>
 <div style="line-height: 50%"> </br> </div>
- 3. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek
+ 4. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek
 <div> [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf) </a> </div>
 <div> *ML Workshop, 2010* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/mlw10.txt) </div>
 <div style="line-height: 50%"> </br> </div>
- 4. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan
+ 5. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan
 <div> [Lightweight Asynchrony using Parasitic Threads](papers/parasites_damp10.pdf) </a> </div>
 <div> *Workshop on Declarative Aspects of Multicore Programming (DAMP), 2010* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/damp10.txt) </div>
