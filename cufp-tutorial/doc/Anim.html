@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Render.html">
+<link rel="next" href="Useri.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="G2048" rel="Chapter" href="G2048.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Test" rel="Chapter" href="Test.html">
+<link title="Render" rel="Chapter" href="Render.html">
+<link title="Anim" rel="Chapter" href="Anim.html">
+<link title="Useri" rel="Chapter" href="Useri.html">
+<link title="Useri_jsoo" rel="Chapter" href="Useri_jsoo.html"><title>Anim</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Render.html" title="Render">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Useri.html" title="Useri">Next</a>
+</div>
+<h1>Module <a href="type_Anim.html">Anim</a></h1>
+
+<pre><span class="keyword">module</span> Anim: <code class="code"><span class="keyword">sig</span></code> <a href="Anim.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Animation curves.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALease_in_out"><span class="keyword">val</span> ease_in_out</span> : <code class="type">?a:float -> float -> float</code></pre><div class="info ">
+<code class="code">ease_in_out ~a t</code> is the value of an ease in and out curve at
+    time <code class="code">t</code>. Maps unit intervals to unit intervals. <code class="code">a</code> can be used
+    to control the stiffness of the curve.<br>
+</div>
+
+<pre><span id="VALtri"><span class="keyword">val</span> tri</span> : <code class="type">float -> float</code></pre><div class="info ">
+<code class="code">tri t</code> is a triangle (tent) curve at time <code class="code">t</code>. Maps the unit interval
+    to a triangle whose maximum is at <code class="code">0.5</code>. The height of the triangle
+    is <code class="code">1.</code>, the base at <code class="code">0.</code>.<br>
+</div>
+</body></html>

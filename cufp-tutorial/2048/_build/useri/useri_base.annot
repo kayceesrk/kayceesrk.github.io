@@ -1,0 +1,4672 @@
+"useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+type(
+  Format.formatter -> ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  def pp "useri/useri_base.ml" 14 431 431 "useri/useri_base.ml" 1 0 -1
+)
+"useri/useri_base.ml" 10 348 357 "useri/useri_base.ml" 10 348 371
+type(
+  Format.formatter -> ('a, Format.formatter, unit) format -> 'a
+)
+ident(
+  ext_ref Format.fprintf
+)
+"useri/useri_base.ml" 19 538 544 "useri/useri_base.ml" 19 538 550
+type(
+  unit -> ('a -> exn) * (exn -> 'a option)
+)
+ident(
+  def create "useri/useri_base.ml" 21 622 684 "useri/useri_base.ml" 22 685 688
+)
+"useri/useri_base.ml" 19 538 560 "useri/useri_base.ml" 19 538 562
+type(
+  unit
+)
+"useri/useri_base.ml" 21 622 631 "useri/useri_base.ml" 21 622 632
+type(
+  s
+)
+ident(
+  def x "useri/useri_base.ml" 21 622 636 "useri/useri_base.ml" 21 622 648
+)
+"useri/useri_base.ml" 21 622 646 "useri/useri_base.ml" 21 622 647
+type(
+  s
+)
+ident(
+  int_ref x "useri/useri_base.ml" 21 622 631 "useri/useri_base.ml" 21 622 632
+)
+"useri/useri_base.ml" 21 622 640 "useri/useri_base.ml" 21 622 648
+type(
+  s option
+)
+"useri/useri_base.ml" 21 622 636 "useri/useri_base.ml" 21 622 648
+type(
+  exn
+)
+"useri/useri_base.ml" 21 622 626 "useri/useri_base.ml" 21 622 649
+type(
+  s -> exn
+)
+"useri/useri_base.ml" 21 622 665 "useri/useri_base.ml" 21 622 666
+type(
+  s option
+)
+ident(
+  def x "useri/useri_base.ml" 21 622 670 "useri/useri_base.ml" 21 622 671
+)
+"useri/useri_base.ml" 21 622 661 "useri/useri_base.ml" 21 622 666
+type(
+  exn
+)
+"useri/useri_base.ml" 21 622 670 "useri/useri_base.ml" 21 622 671
+type(
+  s option
+)
+ident(
+  int_ref x "useri/useri_base.ml" 21 622 665 "useri/useri_base.ml" 21 622 666
+)
+"useri/useri_base.ml" 21 622 674 "useri/useri_base.ml" 21 622 675
+type(
+  exn
+)
+"useri/useri_base.ml" 21 622 679 "useri/useri_base.ml" 21 622 683
+type(
+  s option
+)
+"useri/useri_base.ml" 21 622 651 "useri/useri_base.ml" 21 622 684
+type(
+  exn -> s option
+)
+"useri/useri_base.ml" 21 622 626 "useri/useri_base.ml" 21 622 684
+type(
+  (s -> exn) * (exn -> s option)
+)
+"useri/useri_base.ml" 20 565 569 "useri/useri_base.ml" 21 622 684
+type(
+  (s -> exn) * (exn -> s option)
+)
+"useri/useri_base.ml" 19 538 551 "useri/useri_base.ml" 21 622 684
+type(
+  unit -> ('a -> exn) * (exn -> 'a option)
+)
+"useri/useri_base.ml" 28 743 749 "useri/useri_base.ml" 28 743 753
+type(
+  Format.formatter -> float -> unit
+)
+ident(
+  def pp_s "useri/useri_base.ml" 29 777 779 "useri/useri_base.ml" 31 869 872
+)
+"useri/useri_base.ml" 28 743 754 "useri/useri_base.ml" 28 743 757
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 28 743 758 "useri/useri_base.ml" 28 743 776
+)
+"useri/useri_base.ml" 28 743 758 "useri/useri_base.ml" 28 743 759
+type(
+  float
+)
+ident(
+  def s "useri/useri_base.ml" 28 743 762 "useri/useri_base.ml" 28 743 776
+)
+"useri/useri_base.ml" 28 743 762 "useri/useri_base.ml" 28 743 764
+type(
+  Format.formatter ->
+  (float -> unit, Format.formatter, unit) format -> float -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 28 743 765 "useri/useri_base.ml" 28 743 768
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 28 743 754 "useri/useri_base.ml" 28 743 757
+)
+"useri/useri_base.ml" 28 743 769 "useri/useri_base.ml" 28 743 774
+type(
+  (float -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 28 743 775 "useri/useri_base.ml" 28 743 776
+type(
+  float
+)
+ident(
+  int_ref s "useri/useri_base.ml" 28 743 758 "useri/useri_base.ml" 28 743 759
+)
+"useri/useri_base.ml" 28 743 762 "useri/useri_base.ml" 28 743 776
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 29 777 783 "useri/useri_base.ml" 29 777 788
+type(
+  Format.formatter -> float -> unit
+)
+ident(
+  def pp_ms "useri/useri_base.ml" 30 822 824 "useri/useri_base.ml" 31 869 872
+)
+"useri/useri_base.ml" 29 777 789 "useri/useri_base.ml" 29 777 792
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 29 777 793 "useri/useri_base.ml" 29 777 821
+)
+"useri/useri_base.ml" 29 777 793 "useri/useri_base.ml" 29 777 794
+type(
+  float
+)
+ident(
+  def s "useri/useri_base.ml" 29 777 797 "useri/useri_base.ml" 29 777 821
+)
+"useri/useri_base.ml" 29 777 797 "useri/useri_base.ml" 29 777 799
+type(
+  Format.formatter ->
+  (float -> unit, Format.formatter, unit) format -> float -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 29 777 800 "useri/useri_base.ml" 29 777 803
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 29 777 789 "useri/useri_base.ml" 29 777 792
+)
+"useri/useri_base.ml" 29 777 804 "useri/useri_base.ml" 29 777 810
+type(
+  (float -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 29 777 812 "useri/useri_base.ml" 29 777 813
+type(
+  float
+)
+ident(
+  int_ref s "useri/useri_base.ml" 29 777 793 "useri/useri_base.ml" 29 777 794
+)
+"useri/useri_base.ml" 29 777 814 "useri/useri_base.ml" 29 777 816
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"useri/useri_base.ml" 29 777 817 "useri/useri_base.ml" 29 777 820
+type(
+  float
+)
+"useri/useri_base.ml" 29 777 811 "useri/useri_base.ml" 29 777 821
+type(
+  float
+)
+"useri/useri_base.ml" 29 777 797 "useri/useri_base.ml" 29 777 821
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 30 822 828 "useri/useri_base.ml" 30 822 834
+type(
+  Format.formatter -> float -> unit
+)
+ident(
+  def pp_mus "useri/useri_base.ml" 30 822 868 "useri/useri_base.ml" 31 869 872
+)
+"useri/useri_base.ml" 30 822 835 "useri/useri_base.ml" 30 822 838
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 30 822 839 "useri/useri_base.ml" 30 822 868
+)
+"useri/useri_base.ml" 30 822 839 "useri/useri_base.ml" 30 822 840
+type(
+  float
+)
+ident(
+  def s "useri/useri_base.ml" 30 822 843 "useri/useri_base.ml" 30 822 868
+)
+"useri/useri_base.ml" 30 822 843 "useri/useri_base.ml" 30 822 845
+type(
+  Format.formatter ->
+  (float -> unit, Format.formatter, unit) format -> float -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 30 822 846 "useri/useri_base.ml" 30 822 849
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 30 822 835 "useri/useri_base.ml" 30 822 838
+)
+"useri/useri_base.ml" 30 822 850 "useri/useri_base.ml" 30 822 857
+type(
+  (float -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 30 822 859 "useri/useri_base.ml" 30 822 860
+type(
+  float
+)
+ident(
+  int_ref s "useri/useri_base.ml" 30 822 839 "useri/useri_base.ml" 30 822 840
+)
+"useri/useri_base.ml" 30 822 861 "useri/useri_base.ml" 30 822 863
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"useri/useri_base.ml" 30 822 864 "useri/useri_base.ml" 30 822 867
+type(
+  float
+)
+"useri/useri_base.ml" 30 822 858 "useri/useri_base.ml" 30 822 868
+type(
+  float
+)
+"useri/useri_base.ml" 30 822 843 "useri/useri_base.ml" 30 822 868
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 38 956 962 "useri/useri_base.ml" 38 956 971
+type(
+  [< `Fullscreen | `Windowed ] -> [> `Fullscreen | `Windowed ]
+)
+ident(
+  def mode_flip "useri/useri_base.ml" 39 1035 1037 "useri/useri_base.ml" 81 2013 2016
+)
+"useri/useri_base.ml" 38 956 983 "useri/useri_base.ml" 38 956 992
+type(
+  [< `Fullscreen | `Windowed ] as 'a
+)
+"useri/useri_base.ml" 38 956 996 "useri/useri_base.ml" 38 956 1007
+type(
+  [> `Fullscreen | `Windowed ] as 'b
+)
+"useri/useri_base.ml" 38 956 1010 "useri/useri_base.ml" 38 956 1021
+type(
+  'a
+)
+"useri/useri_base.ml" 38 956 1025 "useri/useri_base.ml" 38 956 1034
+type(
+  'b
+)
+"useri/useri_base.ml" 38 956 974 "useri/useri_base.ml" 38 956 1034
+type(
+  'a -> 'b
+)
+"useri/useri_base.ml" 39 1035 1041 "useri/useri_base.ml" 39 1035 1048
+type(
+  Format.formatter -> [< `Fullscreen | `Windowed ] -> unit
+)
+ident(
+  def pp_mode "useri/useri_base.ml" 44 1161 1163 "useri/useri_base.ml" 81 2013 2016
+)
+"useri/useri_base.ml" 39 1035 1049 "useri/useri_base.ml" 39 1035 1052
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 39 1035 1053 "useri/useri_base.ml" 42 1152 1159
+)
+"useri/useri_base.ml" 39 1035 1053 "useri/useri_base.ml" 39 1035 1054
+type(
+  [< `Fullscreen | `Windowed ] as 'c
+)
+ident(
+  def m "useri/useri_base.ml" 39 1035 1057 "useri/useri_base.ml" 42 1152 1159
+)
+"useri/useri_base.ml" 39 1035 1057 "useri/useri_base.ml" 39 1035 1059
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 39 1035 1060 "useri/useri_base.ml" 39 1035 1063
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 39 1035 1049 "useri/useri_base.ml" 39 1035 1052
+)
+"useri/useri_base.ml" 39 1035 1064 "useri/useri_base.ml" 39 1035 1068
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 39 1035 1081 "useri/useri_base.ml" 39 1035 1082
+type(
+  'c
+)
+ident(
+  int_ref m "useri/useri_base.ml" 39 1035 1053 "useri/useri_base.ml" 39 1035 1054
+)
+"useri/useri_base.ml" 40 1088 1094 "useri/useri_base.ml" 40 1088 1103
+type(
+  'c
+)
+"useri/useri_base.ml" 40 1088 1107 "useri/useri_base.ml" 40 1088 1117
+type(
+  string
+)
+"useri/useri_base.ml" 41 1118 1124 "useri/useri_base.ml" 41 1118 1135
+type(
+  'c
+)
+"useri/useri_base.ml" 41 1118 1139 "useri/useri_base.ml" 41 1118 1151
+type(
+  string
+)
+"useri/useri_base.ml" 39 1035 1069 "useri/useri_base.ml" 42 1152 1159
+type(
+  string
+)
+"useri/useri_base.ml" 39 1035 1057 "useri/useri_base.ml" 42 1152 1159
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 46 1206 1214 "useri/useri_base.ml" 46 1206 1220
+type(
+  unit -> ('d -> Univ.t) * (Univ.t -> 'd option)
+)
+ident(
+  def create "useri/useri_base.ml" 46 1206 1234 "useri/useri_base.ml" 47 1235 1240
+)
+"useri/useri_base.ml" 46 1206 1223 "useri/useri_base.ml" 46 1206 1234
+type(
+  unit -> ('d -> Univ.t) * (Univ.t -> 'd option)
+)
+ident(
+  int_ref Univ.create "useri/useri_base.ml" 16 458 460 "useri/useri_base.ml" 16 458 509
+)
+"useri/useri_base.ml" 66 1672 1680 "useri/useri_base.ml" 66 1672 1687
+type(
+  t
+)
+ident(
+  def default "useri/useri_base.ml" 75 1903 1929 "useri/useri_base.ml" 76 1930 1935
+)
+"useri/useri_base.ml" 67 1690 1712 "useri/useri_base.ml" 67 1690 1716
+type(
+  bool option
+)
+"useri/useri_base.ml" 68 1718 1745 "useri/useri_base.ml" 68 1718 1746
+type(
+  int
+)
+"useri/useri_base.ml" 68 1718 1740 "useri/useri_base.ml" 68 1718 1746
+type(
+  int option
+)
+"useri/useri_base.ml" 69 1748 1771 "useri/useri_base.ml" 69 1748 1775
+type(
+  bool
+)
+"useri/useri_base.ml" 70 1777 1794 "useri/useri_base.ml" 70 1777 1799
+type(
+  bool
+)
+"useri/useri_base.ml" 71 1801 1816 "useri/useri_base.ml" 71 1801 1820
+type(
+  bool
+)
+"useri/useri_base.ml" 72 1822 1839 "useri/useri_base.ml" 72 1822 1849
+type(
+  colors
+)
+"useri/useri_base.ml" 73 1851 1872 "useri/useri_base.ml" 73 1851 1877
+type(
+  depth
+)
+"useri/useri_base.ml" 73 1851 1867 "useri/useri_base.ml" 73 1851 1877
+type(
+  depth option
+)
+"useri/useri_base.ml" 74 1879 1897 "useri/useri_base.ml" 74 1879 1901
+type(
+  stencil option
+)
+"useri/useri_base.ml" 75 1903 1922 "useri/useri_base.ml" 75 1903 1923
+type(
+  int
+)
+"useri/useri_base.ml" 75 1903 1924 "useri/useri_base.ml" 75 1903 1925
+type(
+  int
+)
+"useri/useri_base.ml" 75 1903 1921 "useri/useri_base.ml" 75 1903 1926
+type(
+  int * int
+)
+"useri/useri_base.ml" 67 1690 1696 "useri/useri_base.ml" 75 1903 1929
+type(
+  t
+)
+"useri/useri_base.ml" 80 1977 1983 "useri/useri_base.ml" 80 1977 1995
+type(
+  Gg.v2
+)
+ident(
+  def default_size "useri/useri_base.ml" 80 1977 2012 "useri/useri_base.ml" 81 2013 2016
+)
+"useri/useri_base.ml" 80 1977 1998 "useri/useri_base.ml" 80 1977 2002
+type(
+  float -> float -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.v
+)
+"useri/useri_base.ml" 80 1977 2003 "useri/useri_base.ml" 80 1977 2007
+type(
+  float
+)
+"useri/useri_base.ml" 80 1977 2008 "useri/useri_base.ml" 80 1977 2012
+type(
+  float
+)
+"useri/useri_base.ml" 80 1977 1998 "useri/useri_base.ml" 80 1977 2012
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"useri/useri_base.ml" 109 2501 2507 "useri/useri_base.ml" 109 2501 2512
+type(
+  char -> [> `Uchar of int ]
+)
+ident(
+  def uchar "useri/useri_base.ml" 111 2539 2541 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 109 2501 2513 "useri/useri_base.ml" 109 2501 2514
+type(
+  char
+)
+ident(
+  def u "useri/useri_base.ml" 109 2501 2517 "useri/useri_base.ml" 109 2501 2537
+)
+"useri/useri_base.ml" 109 2501 2525 "useri/useri_base.ml" 109 2501 2534
+type(
+  char -> int
+)
+ident(
+  ext_ref Char.code
+)
+"useri/useri_base.ml" 109 2501 2535 "useri/useri_base.ml" 109 2501 2536
+type(
+  char
+)
+ident(
+  int_ref u "useri/useri_base.ml" 109 2501 2513 "useri/useri_base.ml" 109 2501 2514
+)
+"useri/useri_base.ml" 109 2501 2524 "useri/useri_base.ml" 109 2501 2537
+type(
+  int
+)
+"useri/useri_base.ml" 109 2501 2517 "useri/useri_base.ml" 109 2501 2537
+type(
+  [> `Uchar of int ] as 'a
+)
+"useri/useri_base.ml" 111 2539 2545 "useri/useri_base.ml" 111 2539 2550
+type(
+  Format.formatter ->
+  [< `Alt of [< `Down | `Left | `Right | `Up ]
+   | `Arrow of [< `Down | `Left | `Right | `Up ]
+   | `Backspace
+   | `Ctrl of [< `Down | `Left | `Right | `Up ]
+   | `Digit of int
+   | `End
+   | `Enter
+   | `Escape
+   | `Function of int
+   | `Home
+   | `Meta of [< `Down | `Left | `Right | `Up ]
+   | `Page of [< `Down | `Left | `Right | `Up ]
+   | `Return
+   | `Shift of [< `Down | `Left | `Right | `Up ]
+   | `Space
+   | `Tab
+   | `Uchar of int
+   | `Unknown of int ] ->
+  unit
+)
+ident(
+  def pp_id "useri/useri_base.ml" 138 3469 3471 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 111 2539 2555 "useri/useri_base.ml" 134 3440 3447
+)
+"useri/useri_base.ml" 111 2539 2555 "useri/useri_base.ml" 111 2539 2557
+type(
+  [< `Alt of [< `Down | `Left | `Right | `Up ]
+   | `Arrow of [< `Down | `Left | `Right | `Up ]
+   | `Backspace
+   | `Ctrl of [< `Down | `Left | `Right | `Up ]
+   | `Digit of int
+   | `End
+   | `Enter
+   | `Escape
+   | `Function of int
+   | `Home
+   | `Meta of [< `Down | `Left | `Right | `Up ]
+   | `Page of [< `Down | `Left | `Right | `Up ]
+   | `Return
+   | `Shift of [< `Down | `Left | `Right | `Up ]
+   | `Space
+   | `Tab
+   | `Uchar of int
+   | `Unknown of int ]
+  as 'b
+)
+ident(
+  def id "useri/useri_base.ml" 112 2560 2564 "useri/useri_base.ml" 134 3440 3447
+)
+"useri/useri_base.ml" 112 2560 2568 "useri/useri_base.ml" 112 2560 2581
+type(
+  [< `Down | `Left | `Right | `Up ] -> string
+)
+ident(
+  def dir_to_string "useri/useri_base.ml" 115 2674 2678 "useri/useri_base.ml" 134 3440 3447
+)
+"useri/useri_base.ml" 113 2593 2599 "useri/useri_base.ml" 113 2593 2604
+type(
+  [< `Down | `Left | `Right | `Up ] as 'c
+)
+"useri/useri_base.ml" 113 2593 2608 "useri/useri_base.ml" 113 2593 2614
+type(
+  string
+)
+"useri/useri_base.ml" 113 2593 2617 "useri/useri_base.ml" 113 2593 2623
+type(
+  'c
+)
+"useri/useri_base.ml" 113 2593 2627 "useri/useri_base.ml" 113 2593 2634
+type(
+  string
+)
+"useri/useri_base.ml" 113 2593 2637 "useri/useri_base.ml" 113 2593 2640
+type(
+  'c
+)
+"useri/useri_base.ml" 113 2593 2644 "useri/useri_base.ml" 113 2593 2648
+type(
+  string
+)
+"useri/useri_base.ml" 113 2593 2651 "useri/useri_base.ml" 113 2593 2656
+type(
+  'c
+)
+"useri/useri_base.ml" 113 2593 2660 "useri/useri_base.ml" 113 2593 2666
+type(
+  string
+)
+"useri/useri_base.ml" 112 2560 2584 "useri/useri_base.ml" 113 2593 2666
+type(
+  'c -> string
+)
+"useri/useri_base.ml" 115 2674 2690 "useri/useri_base.ml" 115 2674 2692
+type(
+  'b
+)
+ident(
+  int_ref id "useri/useri_base.ml" 111 2539 2555 "useri/useri_base.ml" 111 2539 2557
+)
+"useri/useri_base.ml" 116 2698 2709 "useri/useri_base.ml" 116 2698 2712
+type(
+  [< `Down | `Left | `Right | `Up ] as 'd
+)
+ident(
+  def dir "useri/useri_base.ml" 116 2698 2716 "useri/useri_base.ml" 116 2698 2751
+)
+"useri/useri_base.ml" 116 2698 2704 "useri/useri_base.ml" 116 2698 2712
+type(
+  'b
+)
+"useri/useri_base.ml" 116 2698 2716 "useri/useri_base.ml" 116 2698 2718
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 116 2698 2719 "useri/useri_base.ml" 116 2698 2722
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 116 2698 2723 "useri/useri_base.ml" 116 2698 2731
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 116 2698 2733 "useri/useri_base.ml" 116 2698 2746
+type(
+  'd -> string
+)
+ident(
+  int_ref dir_to_string "useri/useri_base.ml" 112 2560 2568 "useri/useri_base.ml" 112 2560 2581
+)
+"useri/useri_base.ml" 116 2698 2747 "useri/useri_base.ml" 116 2698 2750
+type(
+  'd
+)
+ident(
+  int_ref dir "useri/useri_base.ml" 116 2698 2709 "useri/useri_base.ml" 116 2698 2712
+)
+"useri/useri_base.ml" 116 2698 2732 "useri/useri_base.ml" 116 2698 2751
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 116 2698 2716 "useri/useri_base.ml" 116 2698 2751
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 117 2752 2765 "useri/useri_base.ml" 117 2752 2768
+type(
+  [< `Down | `Left | `Right | `Up ] as 'e
+)
+ident(
+  def dir "useri/useri_base.ml" 117 2752 2772 "useri/useri_base.ml" 117 2752 2809
+)
+"useri/useri_base.ml" 117 2752 2758 "useri/useri_base.ml" 117 2752 2768
+type(
+  'b
+)
+"useri/useri_base.ml" 117 2752 2772 "useri/useri_base.ml" 117 2752 2774
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 117 2752 2775 "useri/useri_base.ml" 117 2752 2778
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 117 2752 2779 "useri/useri_base.ml" 117 2752 2789
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 117 2752 2791 "useri/useri_base.ml" 117 2752 2804
+type(
+  'e -> string
+)
+ident(
+  int_ref dir_to_string "useri/useri_base.ml" 112 2560 2568 "useri/useri_base.ml" 112 2560 2581
+)
+"useri/useri_base.ml" 117 2752 2805 "useri/useri_base.ml" 117 2752 2808
+type(
+  'e
+)
+ident(
+  int_ref dir "useri/useri_base.ml" 117 2752 2765 "useri/useri_base.ml" 117 2752 2768
+)
+"useri/useri_base.ml" 117 2752 2790 "useri/useri_base.ml" 117 2752 2809
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 117 2752 2772 "useri/useri_base.ml" 117 2752 2809
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 118 2810 2816 "useri/useri_base.ml" 118 2810 2826
+type(
+  'b
+)
+"useri/useri_base.ml" 118 2810 2830 "useri/useri_base.ml" 118 2810 2832
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 118 2810 2833 "useri/useri_base.ml" 118 2810 2836
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 118 2810 2837 "useri/useri_base.ml" 118 2810 2848
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 118 2810 2830 "useri/useri_base.ml" 118 2810 2848
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 119 2849 2861 "useri/useri_base.ml" 119 2849 2864
+type(
+  [< `Down | `Left | `Right | `Up ] as 'f
+)
+ident(
+  def dir "useri/useri_base.ml" 119 2849 2868 "useri/useri_base.ml" 119 2849 2904
+)
+"useri/useri_base.ml" 119 2849 2855 "useri/useri_base.ml" 119 2849 2864
+type(
+  'b
+)
+"useri/useri_base.ml" 119 2849 2868 "useri/useri_base.ml" 119 2849 2870
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 119 2849 2871 "useri/useri_base.ml" 119 2849 2874
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 119 2849 2875 "useri/useri_base.ml" 119 2849 2884
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 119 2849 2886 "useri/useri_base.ml" 119 2849 2899
+type(
+  'f -> string
+)
+ident(
+  int_ref dir_to_string "useri/useri_base.ml" 112 2560 2568 "useri/useri_base.ml" 112 2560 2581
+)
+"useri/useri_base.ml" 119 2849 2900 "useri/useri_base.ml" 119 2849 2903
+type(
+  'f
+)
+ident(
+  int_ref dir "useri/useri_base.ml" 119 2849 2861 "useri/useri_base.ml" 119 2849 2864
+)
+"useri/useri_base.ml" 119 2849 2885 "useri/useri_base.ml" 119 2849 2904
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 119 2849 2868 "useri/useri_base.ml" 119 2849 2904
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 120 2905 2918 "useri/useri_base.ml" 120 2905 2919
+type(
+  int
+)
+ident(
+  def d "useri/useri_base.ml" 120 2905 2923 "useri/useri_base.ml" 120 2905 2942
+)
+"useri/useri_base.ml" 120 2905 2911 "useri/useri_base.ml" 120 2905 2919
+type(
+  'b
+)
+"useri/useri_base.ml" 120 2905 2923 "useri/useri_base.ml" 120 2905 2925
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 120 2905 2926 "useri/useri_base.ml" 120 2905 2929
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 120 2905 2930 "useri/useri_base.ml" 120 2905 2940
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 120 2905 2941 "useri/useri_base.ml" 120 2905 2942
+type(
+  int
+)
+ident(
+  int_ref d "useri/useri_base.ml" 120 2905 2918 "useri/useri_base.ml" 120 2905 2919
+)
+"useri/useri_base.ml" 120 2905 2923 "useri/useri_base.ml" 120 2905 2942
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 121 2943 2949 "useri/useri_base.ml" 121 2943 2953
+type(
+  'b
+)
+"useri/useri_base.ml" 121 2943 2957 "useri/useri_base.ml" 121 2943 2959
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 121 2943 2960 "useri/useri_base.ml" 121 2943 2963
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 121 2943 2964 "useri/useri_base.ml" 121 2943 2969
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 121 2943 2957 "useri/useri_base.ml" 121 2943 2969
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 122 2970 2976 "useri/useri_base.ml" 122 2970 2982
+type(
+  'b
+)
+"useri/useri_base.ml" 122 2970 2986 "useri/useri_base.ml" 122 2970 2988
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 122 2970 2989 "useri/useri_base.ml" 122 2970 2992
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 122 2970 2993 "useri/useri_base.ml" 122 2970 3000
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 122 2970 2986 "useri/useri_base.ml" 122 2970 3000
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 123 3001 3007 "useri/useri_base.ml" 123 3001 3014
+type(
+  'b
+)
+"useri/useri_base.ml" 123 3001 3018 "useri/useri_base.ml" 123 3001 3020
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 123 3001 3021 "useri/useri_base.ml" 123 3001 3024
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 123 3001 3025 "useri/useri_base.ml" 123 3001 3033
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 123 3001 3018 "useri/useri_base.ml" 123 3001 3033
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 124 3034 3050 "useri/useri_base.ml" 124 3034 3051
+type(
+  int
+)
+ident(
+  def n "useri/useri_base.ml" 124 3034 3055 "useri/useri_base.ml" 124 3034 3069
+)
+"useri/useri_base.ml" 124 3034 3040 "useri/useri_base.ml" 124 3034 3051
+type(
+  'b
+)
+"useri/useri_base.ml" 124 3034 3055 "useri/useri_base.ml" 124 3034 3057
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 124 3034 3058 "useri/useri_base.ml" 124 3034 3061
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 124 3034 3062 "useri/useri_base.ml" 124 3034 3067
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 124 3034 3068 "useri/useri_base.ml" 124 3034 3069
+type(
+  int
+)
+ident(
+  int_ref n "useri/useri_base.ml" 124 3034 3050 "useri/useri_base.ml" 124 3034 3051
+)
+"useri/useri_base.ml" 124 3034 3055 "useri/useri_base.ml" 124 3034 3069
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 125 3070 3076 "useri/useri_base.ml" 125 3070 3081
+type(
+  'b
+)
+"useri/useri_base.ml" 125 3070 3085 "useri/useri_base.ml" 125 3070 3087
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 125 3070 3088 "useri/useri_base.ml" 125 3070 3091
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 125 3070 3092 "useri/useri_base.ml" 125 3070 3098
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 125 3070 3085 "useri/useri_base.ml" 125 3070 3098
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 126 3099 3111 "useri/useri_base.ml" 126 3099 3114
+type(
+  [< `Down | `Left | `Right | `Up ] as 'g
+)
+ident(
+  def dir "useri/useri_base.ml" 126 3099 3118 "useri/useri_base.ml" 126 3099 3154
+)
+"useri/useri_base.ml" 126 3099 3105 "useri/useri_base.ml" 126 3099 3114
+type(
+  'b
+)
+"useri/useri_base.ml" 126 3099 3118 "useri/useri_base.ml" 126 3099 3120
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 126 3099 3121 "useri/useri_base.ml" 126 3099 3124
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 126 3099 3125 "useri/useri_base.ml" 126 3099 3134
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 126 3099 3136 "useri/useri_base.ml" 126 3099 3149
+type(
+  'g -> string
+)
+ident(
+  int_ref dir_to_string "useri/useri_base.ml" 112 2560 2568 "useri/useri_base.ml" 112 2560 2581
+)
+"useri/useri_base.ml" 126 3099 3150 "useri/useri_base.ml" 126 3099 3153
+type(
+  'g
+)
+ident(
+  int_ref dir "useri/useri_base.ml" 126 3099 3111 "useri/useri_base.ml" 126 3099 3114
+)
+"useri/useri_base.ml" 126 3099 3135 "useri/useri_base.ml" 126 3099 3154
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 126 3099 3118 "useri/useri_base.ml" 126 3099 3154
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 127 3155 3167 "useri/useri_base.ml" 127 3155 3170
+type(
+  [< `Down | `Left | `Right | `Up ] as 'h
+)
+ident(
+  def dir "useri/useri_base.ml" 127 3155 3174 "useri/useri_base.ml" 127 3155 3210
+)
+"useri/useri_base.ml" 127 3155 3161 "useri/useri_base.ml" 127 3155 3170
+type(
+  'b
+)
+"useri/useri_base.ml" 127 3155 3174 "useri/useri_base.ml" 127 3155 3176
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 127 3155 3177 "useri/useri_base.ml" 127 3155 3180
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 127 3155 3181 "useri/useri_base.ml" 127 3155 3190
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 127 3155 3192 "useri/useri_base.ml" 127 3155 3205
+type(
+  'h -> string
+)
+ident(
+  int_ref dir_to_string "useri/useri_base.ml" 112 2560 2568 "useri/useri_base.ml" 112 2560 2581
+)
+"useri/useri_base.ml" 127 3155 3206 "useri/useri_base.ml" 127 3155 3209
+type(
+  'h
+)
+ident(
+  int_ref dir "useri/useri_base.ml" 127 3155 3167 "useri/useri_base.ml" 127 3155 3170
+)
+"useri/useri_base.ml" 127 3155 3191 "useri/useri_base.ml" 127 3155 3210
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 127 3155 3174 "useri/useri_base.ml" 127 3155 3210
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 128 3211 3217 "useri/useri_base.ml" 128 3211 3224
+type(
+  'b
+)
+"useri/useri_base.ml" 128 3211 3228 "useri/useri_base.ml" 128 3211 3230
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 128 3211 3231 "useri/useri_base.ml" 128 3211 3234
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 128 3211 3235 "useri/useri_base.ml" 128 3211 3243
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 128 3211 3228 "useri/useri_base.ml" 128 3211 3243
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 129 3244 3257 "useri/useri_base.ml" 129 3244 3260
+type(
+  [< `Down | `Left | `Right | `Up ] as 'i
+)
+ident(
+  def dir "useri/useri_base.ml" 129 3244 3264 "useri/useri_base.ml" 129 3244 3301
+)
+"useri/useri_base.ml" 129 3244 3250 "useri/useri_base.ml" 129 3244 3260
+type(
+  'b
+)
+"useri/useri_base.ml" 129 3244 3264 "useri/useri_base.ml" 129 3244 3266
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 129 3244 3267 "useri/useri_base.ml" 129 3244 3270
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 129 3244 3271 "useri/useri_base.ml" 129 3244 3281
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 129 3244 3283 "useri/useri_base.ml" 129 3244 3296
+type(
+  'i -> string
+)
+ident(
+  int_ref dir_to_string "useri/useri_base.ml" 112 2560 2568 "useri/useri_base.ml" 112 2560 2581
+)
+"useri/useri_base.ml" 129 3244 3297 "useri/useri_base.ml" 129 3244 3300
+type(
+  'i
+)
+ident(
+  int_ref dir "useri/useri_base.ml" 129 3244 3257 "useri/useri_base.ml" 129 3244 3260
+)
+"useri/useri_base.ml" 129 3244 3282 "useri/useri_base.ml" 129 3244 3301
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 129 3244 3264 "useri/useri_base.ml" 129 3244 3301
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 130 3302 3308 "useri/useri_base.ml" 130 3302 3314
+type(
+  'b
+)
+"useri/useri_base.ml" 130 3302 3318 "useri/useri_base.ml" 130 3302 3320
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 130 3302 3321 "useri/useri_base.ml" 130 3302 3324
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 130 3302 3325 "useri/useri_base.ml" 130 3302 3332
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 130 3302 3318 "useri/useri_base.ml" 130 3302 3332
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 131 3333 3339 "useri/useri_base.ml" 131 3333 3343
+type(
+  'b
+)
+"useri/useri_base.ml" 131 3333 3347 "useri/useri_base.ml" 131 3333 3349
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 131 3333 3350 "useri/useri_base.ml" 131 3333 3353
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 131 3333 3354 "useri/useri_base.ml" 131 3333 3359
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 131 3333 3347 "useri/useri_base.ml" 131 3333 3359
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 132 3360 3373 "useri/useri_base.ml" 132 3360 3374
+type(
+  int
+)
+ident(
+  def u "useri/useri_base.ml" 132 3360 3378 "useri/useri_base.ml" 132 3360 3395
+)
+"useri/useri_base.ml" 132 3360 3366 "useri/useri_base.ml" 132 3360 3374
+type(
+  'b
+)
+"useri/useri_base.ml" 132 3360 3378 "useri/useri_base.ml" 132 3360 3380
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 132 3360 3381 "useri/useri_base.ml" 132 3360 3384
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 132 3360 3385 "useri/useri_base.ml" 132 3360 3393
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 132 3360 3394 "useri/useri_base.ml" 132 3360 3395
+type(
+  int
+)
+ident(
+  int_ref u "useri/useri_base.ml" 132 3360 3373 "useri/useri_base.ml" 132 3360 3374
+)
+"useri/useri_base.ml" 132 3360 3378 "useri/useri_base.ml" 132 3360 3395
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 133 3396 3411 "useri/useri_base.ml" 133 3396 3412
+type(
+  int
+)
+ident(
+  def u "useri/useri_base.ml" 133 3396 3416 "useri/useri_base.ml" 133 3396 3439
+)
+"useri/useri_base.ml" 133 3396 3402 "useri/useri_base.ml" 133 3396 3412
+type(
+  'b
+)
+"useri/useri_base.ml" 133 3396 3416 "useri/useri_base.ml" 133 3396 3418
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 133 3396 3419 "useri/useri_base.ml" 133 3396 3422
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 111 2539 2551 "useri/useri_base.ml" 111 2539 2554
+)
+"useri/useri_base.ml" 133 3396 3423 "useri/useri_base.ml" 133 3396 3437
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 133 3396 3438 "useri/useri_base.ml" 133 3396 3439
+type(
+  int
+)
+ident(
+  int_ref u "useri/useri_base.ml" 133 3396 3411 "useri/useri_base.ml" 133 3396 3412
+)
+"useri/useri_base.ml" 133 3396 3416 "useri/useri_base.ml" 133 3396 3439
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 115 2674 2678 "useri/useri_base.ml" 134 3440 3447
+type(
+  unit
+)
+"useri/useri_base.ml" 112 2560 2564 "useri/useri_base.ml" 134 3440 3447
+type(
+  unit
+)
+"useri/useri_base.ml" 138 3469 3475 "useri/useri_base.ml" 138 3469 3483
+type(
+  id React.event
+)
+ident(
+  def any_down "useri/useri_base.ml" 139 3513 3515 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 138 3469 3485 "useri/useri_base.ml" 138 3469 3498
+type(
+  ?step:React.step -> id -> unit
+)
+ident(
+  def send_any_down "useri/useri_base.ml" 139 3513 3515 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 138 3469 3475 "useri/useri_base.ml" 138 3469 3498
+type(
+  id React.event * (?step:React.step -> id -> unit)
+)
+"useri/useri_base.ml" 138 3469 3501 "useri/useri_base.ml" 138 3469 3509
+type(
+  unit -> id React.event * (?step:React.step -> id -> unit)
+)
+ident(
+  ext_ref React.E.create
+)
+"useri/useri_base.ml" 138 3469 3510 "useri/useri_base.ml" 138 3469 3512
+type(
+  unit
+)
+"useri/useri_base.ml" 138 3469 3501 "useri/useri_base.ml" 138 3469 3512
+call(
+  stack
+)
+type(
+  id React.event * (?step:React.step -> id -> unit)
+)
+"useri/useri_base.ml" 139 3513 3519 "useri/useri_base.ml" 139 3513 3525
+type(
+  id React.event
+)
+ident(
+  def any_up "useri/useri_base.ml" 140 3553 3555 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 139 3513 3527 "useri/useri_base.ml" 139 3513 3538
+type(
+  ?step:React.step -> id -> unit
+)
+ident(
+  def send_any_up "useri/useri_base.ml" 140 3553 3555 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 139 3513 3519 "useri/useri_base.ml" 139 3513 3538
+type(
+  id React.event * (?step:React.step -> id -> unit)
+)
+"useri/useri_base.ml" 139 3513 3541 "useri/useri_base.ml" 139 3513 3549
+type(
+  unit -> id React.event * (?step:React.step -> id -> unit)
+)
+ident(
+  ext_ref React.E.create
+)
+"useri/useri_base.ml" 139 3513 3550 "useri/useri_base.ml" 139 3513 3552
+type(
+  unit
+)
+"useri/useri_base.ml" 139 3513 3541 "useri/useri_base.ml" 139 3513 3552
+call(
+  stack
+)
+type(
+  id React.event * (?step:React.step -> id -> unit)
+)
+"useri/useri_base.ml" 140 3553 3559 "useri/useri_base.ml" 140 3553 3569
+type(
+  int ref
+)
+ident(
+  def down_count "useri/useri_base.ml" 141 3578 3580 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 140 3553 3572 "useri/useri_base.ml" 140 3553 3575
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"useri/useri_base.ml" 140 3553 3576 "useri/useri_base.ml" 140 3553 3577
+type(
+  int
+)
+"useri/useri_base.ml" 140 3553 3572 "useri/useri_base.ml" 140 3553 3577
+type(
+  int ref
+)
+"useri/useri_base.ml" 141 3578 3584 "useri/useri_base.ml" 141 3578 3593
+type(
+  bool React.signal
+)
+ident(
+  def any_holds "useri/useri_base.ml" 143 3627 3629 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 141 3578 3595 "useri/useri_base.ml" 141 3578 3608
+type(
+  ?step:React.step -> bool -> unit
+)
+ident(
+  def set_any_holds "useri/useri_base.ml" 143 3627 3629 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 141 3578 3584 "useri/useri_base.ml" 141 3578 3608
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 141 3578 3611 "useri/useri_base.ml" 141 3578 3619
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 141 3578 3620 "useri/useri_base.ml" 141 3578 3625
+type(
+  bool
+)
+"useri/useri_base.ml" 141 3578 3611 "useri/useri_base.ml" 141 3578 3625
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 143 3627 3633 "useri/useri_base.ml" 143 3627 3643
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  def down_event "useri/useri_base.ml" 144 3664 3666 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 143 3627 3646 "useri/useri_base.ml" 143 3627 3660
+type(
+  ?random:bool ->
+  int ->
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"useri/useri_base.ml" 143 3627 3661 "useri/useri_base.ml" 143 3627 3663
+type(
+  int
+)
+"useri/useri_base.ml" 143 3627 3646 "useri/useri_base.ml" 143 3627 3663
+call(
+  stack
+)
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+"useri/useri_base.ml" 144 3664 3670 "useri/useri_base.ml" 144 3664 3678
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  def up_event "useri/useri_base.ml" 146 3700 3702 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 144 3664 3681 "useri/useri_base.ml" 144 3664 3695
+type(
+  ?random:bool ->
+  int ->
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"useri/useri_base.ml" 144 3664 3696 "useri/useri_base.ml" 144 3664 3698
+type(
+  int
+)
+"useri/useri_base.ml" 144 3664 3681 "useri/useri_base.ml" 144 3664 3698
+call(
+  stack
+)
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+"useri/useri_base.ml" 146 3700 3706 "useri/useri_base.ml" 146 3700 3715
+type(
+  ('j, 'k React.event * (?step:React.step -> 'k -> unit)) Hashtbl.t ->
+  'j -> 'k React.event
+)
+ident(
+  def def_event "useri/useri_base.ml" 152 3859 3861 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 146 3700 3716 "useri/useri_base.ml" 146 3700 3721
+type(
+  ('j, 'k React.event * (?step:React.step -> 'k -> unit)) Hashtbl.t
+)
+ident(
+  def event "useri/useri_base.ml" 146 3700 3722 "useri/useri_base.ml" 150 3844 3857
+)
+"useri/useri_base.ml" 146 3700 3722 "useri/useri_base.ml" 146 3700 3724
+type(
+  'j
+)
+ident(
+  def id "useri/useri_base.ml" 146 3700 3727 "useri/useri_base.ml" 150 3844 3857
+)
+"useri/useri_base.ml" 146 3700 3731 "useri/useri_base.ml" 146 3700 3734
+type(
+  'k React.event * (?step:React.step -> 'k -> unit) -> 'k React.event
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 146 3700 3736 "useri/useri_base.ml" 146 3700 3748
+type(
+  ('j, 'k React.event * (?step:React.step -> 'k -> unit)) Hashtbl.t ->
+  'j -> 'k React.event * (?step:React.step -> 'k -> unit)
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"useri/useri_base.ml" 146 3700 3749 "useri/useri_base.ml" 146 3700 3754
+type(
+  ('j, 'k React.event * (?step:React.step -> 'k -> unit)) Hashtbl.t
+)
+ident(
+  int_ref event "useri/useri_base.ml" 146 3700 3716 "useri/useri_base.ml" 146 3700 3721
+)
+"useri/useri_base.ml" 146 3700 3755 "useri/useri_base.ml" 146 3700 3757
+type(
+  'j
+)
+ident(
+  int_ref id "useri/useri_base.ml" 146 3700 3722 "useri/useri_base.ml" 146 3700 3724
+)
+"useri/useri_base.ml" 146 3700 3735 "useri/useri_base.ml" 146 3700 3758
+call(
+  stack
+)
+type(
+  'k React.event * (?step:React.step -> 'k -> unit)
+)
+"useri/useri_base.ml" 146 3700 3731 "useri/useri_base.ml" 146 3700 3758
+type(
+  'k React.event
+)
+"useri/useri_base.ml" 147 3764 3768 "useri/useri_base.ml" 147 3764 3777
+type(
+  exn
+)
+"useri/useri_base.ml" 148 3781 3791 "useri/useri_base.ml" 148 3781 3794
+type(
+  'k React.event * (?step:React.step -> 'k -> unit)
+)
+ident(
+  def def "useri/useri_base.ml" 149 3812 3818 "useri/useri_base.ml" 150 3844 3857
+)
+"useri/useri_base.ml" 148 3781 3797 "useri/useri_base.ml" 148 3781 3805
+type(
+  unit -> 'k React.event * (?step:React.step -> 'k -> unit)
+)
+ident(
+  ext_ref React.E.create
+)
+"useri/useri_base.ml" 148 3781 3806 "useri/useri_base.ml" 148 3781 3808
+type(
+  unit
+)
+"useri/useri_base.ml" 148 3781 3797 "useri/useri_base.ml" 148 3781 3808
+call(
+  stack
+)
+type(
+  'k React.event * (?step:React.step -> 'k -> unit)
+)
+"useri/useri_base.ml" 149 3812 3818 "useri/useri_base.ml" 149 3812 3829
+type(
+  ('j, 'k React.event * (?step:React.step -> 'k -> unit)) Hashtbl.t ->
+  'j -> 'k React.event * (?step:React.step -> 'k -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 149 3812 3830 "useri/useri_base.ml" 149 3812 3835
+type(
+  ('j, 'k React.event * (?step:React.step -> 'k -> unit)) Hashtbl.t
+)
+ident(
+  int_ref event "useri/useri_base.ml" 146 3700 3716 "useri/useri_base.ml" 146 3700 3721
+)
+"useri/useri_base.ml" 149 3812 3836 "useri/useri_base.ml" 149 3812 3838
+type(
+  'j
+)
+ident(
+  int_ref id "useri/useri_base.ml" 146 3700 3722 "useri/useri_base.ml" 146 3700 3724
+)
+"useri/useri_base.ml" 149 3812 3839 "useri/useri_base.ml" 149 3812 3842
+type(
+  'k React.event * (?step:React.step -> 'k -> unit)
+)
+ident(
+  int_ref def "useri/useri_base.ml" 148 3781 3791 "useri/useri_base.ml" 148 3781 3794
+)
+"useri/useri_base.ml" 149 3812 3818 "useri/useri_base.ml" 149 3812 3842
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 150 3844 3850 "useri/useri_base.ml" 150 3844 3853
+type(
+  'k React.event * (?step:React.step -> 'k -> unit) -> 'k React.event
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 150 3844 3854 "useri/useri_base.ml" 150 3844 3857
+type(
+  'k React.event * (?step:React.step -> 'k -> unit)
+)
+ident(
+  int_ref def "useri/useri_base.ml" 148 3781 3791 "useri/useri_base.ml" 148 3781 3794
+)
+"useri/useri_base.ml" 150 3844 3850 "useri/useri_base.ml" 150 3844 3857
+type(
+  'k React.event
+)
+"useri/useri_base.ml" 149 3812 3818 "useri/useri_base.ml" 150 3844 3857
+type(
+  'k React.event
+)
+"useri/useri_base.ml" 148 3781 3787 "useri/useri_base.ml" 150 3844 3857
+type(
+  'k React.event
+)
+"useri/useri_base.ml" 146 3700 3727 "useri/useri_base.ml" 150 3844 3857
+type(
+  'k React.event
+)
+"useri/useri_base.ml" 152 3859 3865 "useri/useri_base.ml" 152 3859 3875
+type(
+  ?step:'l -> ('m, 'n * (?step:'l -> unit -> unit)) Hashtbl.t -> 'm -> unit
+)
+ident(
+  def send_event "useri/useri_base.ml" 155 3958 3960 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 152 3859 3877 "useri/useri_base.ml" 152 3859 3881
+type(
+  'l option
+)
+ident(
+  def step "useri/useri_base.ml" 152 3859 3882 "useri/useri_base.ml" 153 3934 3956
+)
+"useri/useri_base.ml" 152 3859 3882 "useri/useri_base.ml" 152 3859 3887
+type(
+  ('m, 'n * (?step:'l -> unit -> unit)) Hashtbl.t
+)
+ident(
+  def event "useri/useri_base.ml" 152 3859 3888 "useri/useri_base.ml" 153 3934 3956
+)
+"useri/useri_base.ml" 152 3859 3888 "useri/useri_base.ml" 152 3859 3890
+type(
+  'm
+)
+ident(
+  def id "useri/useri_base.ml" 152 3859 3893 "useri/useri_base.ml" 153 3934 3956
+)
+"useri/useri_base.ml" 152 3859 3897 "useri/useri_base.ml" 152 3859 3900
+type(
+  'n * (?step:'l -> unit -> unit) -> ?step:'l -> unit -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 152 3859 3902 "useri/useri_base.ml" 152 3859 3914
+type(
+  ('m, 'n * (?step:'l -> unit -> unit)) Hashtbl.t ->
+  'm -> 'n * (?step:'l -> unit -> unit)
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"useri/useri_base.ml" 152 3859 3915 "useri/useri_base.ml" 152 3859 3920
+type(
+  ('m, 'n * (?step:'l -> unit -> unit)) Hashtbl.t
+)
+ident(
+  int_ref event "useri/useri_base.ml" 152 3859 3882 "useri/useri_base.ml" 152 3859 3887
+)
+"useri/useri_base.ml" 152 3859 3921 "useri/useri_base.ml" 152 3859 3923
+type(
+  'm
+)
+ident(
+  int_ref id "useri/useri_base.ml" 152 3859 3888 "useri/useri_base.ml" 152 3859 3890
+)
+"useri/useri_base.ml" 152 3859 3901 "useri/useri_base.ml" 152 3859 3924
+type(
+  'n * (?step:'l -> unit -> unit)
+)
+"useri/useri_base.ml" 152 3859 3926 "useri/useri_base.ml" 152 3859 3930
+type(
+  'l option
+)
+ident(
+  int_ref step "useri/useri_base.ml" 152 3859 3877 "useri/useri_base.ml" 152 3859 3881
+)
+"useri/useri_base.ml" 152 3859 3931 "useri/useri_base.ml" 152 3859 3933
+type(
+  unit
+)
+"useri/useri_base.ml" 152 3859 3897 "useri/useri_base.ml" 152 3859 3933
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 153 3934 3941 "useri/useri_base.ml" 153 3934 3950
+type(
+  exn
+)
+"useri/useri_base.ml" 153 3934 3954 "useri/useri_base.ml" 153 3934 3956
+type(
+  unit
+)
+"useri/useri_base.ml" 152 3859 3893 "useri/useri_base.ml" 153 3934 3956
+type(
+  unit
+)
+"useri/useri_base.ml" 155 3958 3964 "useri/useri_base.ml" 155 3958 3966
+type(
+  id -> unit React.event
+)
+ident(
+  def up "useri/useri_base.ml" 156 3994 3996 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 155 3958 3967 "useri/useri_base.ml" 155 3958 3969
+type(
+  id
+)
+ident(
+  def id "useri/useri_base.ml" 155 3958 3972 "useri/useri_base.ml" 155 3958 3993
+)
+"useri/useri_base.ml" 155 3958 3972 "useri/useri_base.ml" 155 3958 3981
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t ->
+  id -> unit React.event
+)
+ident(
+  int_ref def_event "useri/useri_base.ml" 146 3700 3706 "useri/useri_base.ml" 146 3700 3715
+)
+"useri/useri_base.ml" 155 3958 3982 "useri/useri_base.ml" 155 3958 3990
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  int_ref up_event "useri/useri_base.ml" 144 3664 3670 "useri/useri_base.ml" 144 3664 3678
+)
+"useri/useri_base.ml" 155 3958 3991 "useri/useri_base.ml" 155 3958 3993
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 155 3958 3967 "useri/useri_base.ml" 155 3958 3969
+)
+"useri/useri_base.ml" 155 3958 3972 "useri/useri_base.ml" 155 3958 3993
+call(
+  tail
+)
+type(
+  unit React.event
+)
+"useri/useri_base.ml" 156 3994 4000 "useri/useri_base.ml" 156 3994 4004
+type(
+  id -> unit React.event
+)
+ident(
+  def down "useri/useri_base.ml" 160 4056 4058 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 156 3994 4005 "useri/useri_base.ml" 156 3994 4007
+type(
+  id
+)
+ident(
+  def id "useri/useri_base.ml" 156 3994 4010 "useri/useri_base.ml" 156 3994 4033
+)
+"useri/useri_base.ml" 156 3994 4010 "useri/useri_base.ml" 156 3994 4019
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t ->
+  id -> unit React.event
+)
+ident(
+  int_ref def_event "useri/useri_base.ml" 146 3700 3706 "useri/useri_base.ml" 146 3700 3715
+)
+"useri/useri_base.ml" 156 3994 4020 "useri/useri_base.ml" 156 3994 4030
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  int_ref down_event "useri/useri_base.ml" 143 3627 3633 "useri/useri_base.ml" 143 3627 3643
+)
+"useri/useri_base.ml" 156 3994 4031 "useri/useri_base.ml" 156 3994 4033
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 156 3994 4005 "useri/useri_base.ml" 156 3994 4007
+)
+"useri/useri_base.ml" 156 3994 4010 "useri/useri_base.ml" 156 3994 4033
+call(
+  tail
+)
+type(
+  unit React.event
+)
+"useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  def state_signal "useri/useri_base.ml" 161 4095 4097 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 160 4056 4077 "useri/useri_base.ml" 160 4056 4091
+type(
+  ?random:bool ->
+  int ->
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  ext_ref Hashtbl.create
+)
+"useri/useri_base.ml" 160 4056 4092 "useri/useri_base.ml" 160 4056 4094
+type(
+  int
+)
+"useri/useri_base.ml" 160 4056 4077 "useri/useri_base.ml" 160 4056 4094
+call(
+  stack
+)
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+"useri/useri_base.ml" 161 4095 4101 "useri/useri_base.ml" 161 4095 4111
+type(
+  ?step:React.step -> id -> bool -> unit
+)
+ident(
+  def set_signal "useri/useri_base.ml" 164 4196 4198 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 161 4095 4113 "useri/useri_base.ml" 161 4095 4117
+type(
+  React.step option
+)
+ident(
+  def step "useri/useri_base.ml" 161 4095 4118 "useri/useri_base.ml" 162 4172 4194
+)
+"useri/useri_base.ml" 161 4095 4118 "useri/useri_base.ml" 161 4095 4120
+type(
+  id
+)
+ident(
+  def id "useri/useri_base.ml" 161 4095 4121 "useri/useri_base.ml" 162 4172 4194
+)
+"useri/useri_base.ml" 161 4095 4121 "useri/useri_base.ml" 161 4095 4122
+type(
+  bool
+)
+ident(
+  def v "useri/useri_base.ml" 161 4095 4125 "useri/useri_base.ml" 162 4172 4194
+)
+"useri/useri_base.ml" 161 4095 4129 "useri/useri_base.ml" 161 4095 4132
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 161 4095 4134 "useri/useri_base.ml" 161 4095 4146
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"useri/useri_base.ml" 161 4095 4147 "useri/useri_base.ml" 161 4095 4159
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 161 4095 4160 "useri/useri_base.ml" 161 4095 4162
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 161 4095 4118 "useri/useri_base.ml" 161 4095 4120
+)
+"useri/useri_base.ml" 161 4095 4133 "useri/useri_base.ml" 161 4095 4163
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 161 4095 4165 "useri/useri_base.ml" 161 4095 4169
+type(
+  React.step option
+)
+ident(
+  int_ref step "useri/useri_base.ml" 161 4095 4113 "useri/useri_base.ml" 161 4095 4117
+)
+"useri/useri_base.ml" 161 4095 4170 "useri/useri_base.ml" 161 4095 4171
+type(
+  bool
+)
+ident(
+  int_ref v "useri/useri_base.ml" 161 4095 4121 "useri/useri_base.ml" 161 4095 4122
+)
+"useri/useri_base.ml" 161 4095 4129 "useri/useri_base.ml" 161 4095 4171
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 162 4172 4179 "useri/useri_base.ml" 162 4172 4188
+type(
+  exn
+)
+"useri/useri_base.ml" 162 4172 4192 "useri/useri_base.ml" 162 4172 4194
+type(
+  unit
+)
+"useri/useri_base.ml" 161 4095 4125 "useri/useri_base.ml" 162 4172 4194
+type(
+  unit
+)
+"useri/useri_base.ml" 164 4196 4202 "useri/useri_base.ml" 164 4196 4207
+type(
+  id -> bool React.signal
+)
+ident(
+  def holds "useri/useri_base.ml" 172 4381 4383 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 164 4196 4208 "useri/useri_base.ml" 164 4196 4210
+type(
+  id
+)
+ident(
+  def id "useri/useri_base.ml" 164 4196 4213 "useri/useri_base.ml" 168 4347 4360
+)
+"useri/useri_base.ml" 164 4196 4217 "useri/useri_base.ml" 164 4196 4220
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 164 4196 4222 "useri/useri_base.ml" 164 4196 4234
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref Hashtbl.find
+)
+"useri/useri_base.ml" 164 4196 4235 "useri/useri_base.ml" 164 4196 4247
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 164 4196 4248 "useri/useri_base.ml" 164 4196 4250
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 164 4196 4208 "useri/useri_base.ml" 164 4196 4210
+)
+"useri/useri_base.ml" 164 4196 4221 "useri/useri_base.ml" 164 4196 4251
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 164 4196 4217 "useri/useri_base.ml" 164 4196 4251
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 165 4257 4261 "useri/useri_base.ml" 165 4257 4270
+type(
+  exn
+)
+"useri/useri_base.ml" 166 4274 4284 "useri/useri_base.ml" 166 4274 4287
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def def "useri/useri_base.ml" 167 4308 4314 "useri/useri_base.ml" 168 4347 4360
+)
+"useri/useri_base.ml" 166 4274 4290 "useri/useri_base.ml" 166 4274 4298
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 166 4274 4299 "useri/useri_base.ml" 166 4274 4304
+type(
+  bool
+)
+"useri/useri_base.ml" 166 4274 4290 "useri/useri_base.ml" 166 4274 4304
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 167 4308 4314 "useri/useri_base.ml" 167 4308 4325
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 167 4308 4326 "useri/useri_base.ml" 167 4308 4338
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 167 4308 4339 "useri/useri_base.ml" 167 4308 4341
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 164 4196 4208 "useri/useri_base.ml" 164 4196 4210
+)
+"useri/useri_base.ml" 167 4308 4342 "useri/useri_base.ml" 167 4308 4345
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref def "useri/useri_base.ml" 166 4274 4284 "useri/useri_base.ml" 166 4274 4287
+)
+"useri/useri_base.ml" 167 4308 4314 "useri/useri_base.ml" 167 4308 4345
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 168 4347 4353 "useri/useri_base.ml" 168 4347 4356
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 168 4347 4357 "useri/useri_base.ml" 168 4347 4360
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref def "useri/useri_base.ml" 166 4274 4284 "useri/useri_base.ml" 166 4274 4287
+)
+"useri/useri_base.ml" 168 4347 4353 "useri/useri_base.ml" 168 4347 4360
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 167 4308 4314 "useri/useri_base.ml" 168 4347 4360
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 166 4274 4280 "useri/useri_base.ml" 168 4347 4360
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 164 4196 4213 "useri/useri_base.ml" 168 4347 4360
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 172 4381 4387 "useri/useri_base.ml" 172 4381 4391
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def lalt "useri/useri_base.ml" 173 4409 4411 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 172 4381 4394 "useri/useri_base.ml" 172 4381 4402
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 172 4381 4403 "useri/useri_base.ml" 172 4381 4408
+type(
+  bool
+)
+"useri/useri_base.ml" 172 4381 4394 "useri/useri_base.ml" 172 4381 4408
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 173 4409 4415 "useri/useri_base.ml" 173 4409 4419
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def ralt "useri/useri_base.ml" 174 4437 4439 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 173 4409 4422 "useri/useri_base.ml" 173 4409 4430
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 173 4409 4431 "useri/useri_base.ml" 173 4409 4436
+type(
+  bool
+)
+"useri/useri_base.ml" 173 4409 4422 "useri/useri_base.ml" 173 4409 4436
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 174 4437 4443 "useri/useri_base.ml" 174 4437 4446
+type(
+  bool React.signal
+)
+ident(
+  def alt "useri/useri_base.ml" 176 4480 4482 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 174 4437 4457 "useri/useri_base.ml" 174 4437 4460
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 174 4437 4461 "useri/useri_base.ml" 174 4437 4465
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lalt "useri/useri_base.ml" 172 4381 4387 "useri/useri_base.ml" 172 4381 4391
+)
+"useri/useri_base.ml" 174 4437 4457 "useri/useri_base.ml" 174 4437 4465
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 174 4437 4466 "useri/useri_base.ml" 174 4437 4468
+type(
+  bool React.signal -> bool React.signal -> bool React.signal
+)
+ident(
+  ext_ref React.S.Bool.( || )
+)
+"useri/useri_base.ml" 174 4437 4469 "useri/useri_base.ml" 174 4437 4472
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 174 4437 4473 "useri/useri_base.ml" 174 4437 4477
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref ralt "useri/useri_base.ml" 173 4409 4415 "useri/useri_base.ml" 173 4409 4419
+)
+"useri/useri_base.ml" 174 4437 4469 "useri/useri_base.ml" 174 4437 4477
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 174 4437 4457 "useri/useri_base.ml" 174 4437 4477
+call(
+  stack
+)
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 176 4480 4486 "useri/useri_base.ml" 176 4480 4491
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def lctrl "useri/useri_base.ml" 177 4509 4511 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 176 4480 4494 "useri/useri_base.ml" 176 4480 4502
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 176 4480 4503 "useri/useri_base.ml" 176 4480 4508
+type(
+  bool
+)
+"useri/useri_base.ml" 176 4480 4494 "useri/useri_base.ml" 176 4480 4508
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 177 4509 4515 "useri/useri_base.ml" 177 4509 4520
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def rctrl "useri/useri_base.ml" 178 4538 4540 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 177 4509 4523 "useri/useri_base.ml" 177 4509 4531
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 177 4509 4532 "useri/useri_base.ml" 177 4509 4537
+type(
+  bool
+)
+"useri/useri_base.ml" 177 4509 4523 "useri/useri_base.ml" 177 4509 4537
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 178 4538 4544 "useri/useri_base.ml" 178 4538 4548
+type(
+  bool React.signal
+)
+ident(
+  def ctrl "useri/useri_base.ml" 180 4584 4586 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 178 4538 4559 "useri/useri_base.ml" 178 4538 4562
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 178 4538 4563 "useri/useri_base.ml" 178 4538 4568
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lctrl "useri/useri_base.ml" 176 4480 4486 "useri/useri_base.ml" 176 4480 4491
+)
+"useri/useri_base.ml" 178 4538 4559 "useri/useri_base.ml" 178 4538 4568
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 178 4538 4569 "useri/useri_base.ml" 178 4538 4571
+type(
+  bool React.signal -> bool React.signal -> bool React.signal
+)
+ident(
+  ext_ref React.S.Bool.( || )
+)
+"useri/useri_base.ml" 178 4538 4572 "useri/useri_base.ml" 178 4538 4575
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 178 4538 4576 "useri/useri_base.ml" 178 4538 4581
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rctrl "useri/useri_base.ml" 177 4509 4515 "useri/useri_base.ml" 177 4509 4520
+)
+"useri/useri_base.ml" 178 4538 4572 "useri/useri_base.ml" 178 4538 4581
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 178 4538 4559 "useri/useri_base.ml" 178 4538 4581
+call(
+  stack
+)
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 180 4584 4590 "useri/useri_base.ml" 180 4584 4595
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def lmeta "useri/useri_base.ml" 181 4613 4615 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 180 4584 4598 "useri/useri_base.ml" 180 4584 4606
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 180 4584 4607 "useri/useri_base.ml" 180 4584 4612
+type(
+  bool
+)
+"useri/useri_base.ml" 180 4584 4598 "useri/useri_base.ml" 180 4584 4612
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 181 4613 4619 "useri/useri_base.ml" 181 4613 4624
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def rmeta "useri/useri_base.ml" 182 4642 4644 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 181 4613 4627 "useri/useri_base.ml" 181 4613 4635
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 181 4613 4636 "useri/useri_base.ml" 181 4613 4641
+type(
+  bool
+)
+"useri/useri_base.ml" 181 4613 4627 "useri/useri_base.ml" 181 4613 4641
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 182 4642 4648 "useri/useri_base.ml" 182 4642 4652
+type(
+  bool React.signal
+)
+ident(
+  def meta "useri/useri_base.ml" 184 4688 4690 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 182 4642 4663 "useri/useri_base.ml" 182 4642 4666
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 182 4642 4667 "useri/useri_base.ml" 182 4642 4672
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lmeta "useri/useri_base.ml" 180 4584 4590 "useri/useri_base.ml" 180 4584 4595
+)
+"useri/useri_base.ml" 182 4642 4663 "useri/useri_base.ml" 182 4642 4672
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 182 4642 4673 "useri/useri_base.ml" 182 4642 4675
+type(
+  bool React.signal -> bool React.signal -> bool React.signal
+)
+ident(
+  ext_ref React.S.Bool.( || )
+)
+"useri/useri_base.ml" 182 4642 4676 "useri/useri_base.ml" 182 4642 4679
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 182 4642 4680 "useri/useri_base.ml" 182 4642 4685
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rmeta "useri/useri_base.ml" 181 4613 4619 "useri/useri_base.ml" 181 4613 4624
+)
+"useri/useri_base.ml" 182 4642 4676 "useri/useri_base.ml" 182 4642 4685
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 182 4642 4663 "useri/useri_base.ml" 182 4642 4685
+call(
+  stack
+)
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 184 4688 4694 "useri/useri_base.ml" 184 4688 4700
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def lshift "useri/useri_base.ml" 185 4718 4720 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 184 4688 4703 "useri/useri_base.ml" 184 4688 4711
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 184 4688 4712 "useri/useri_base.ml" 184 4688 4717
+type(
+  bool
+)
+"useri/useri_base.ml" 184 4688 4703 "useri/useri_base.ml" 184 4688 4717
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 185 4718 4724 "useri/useri_base.ml" 185 4718 4730
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  def rshift "useri/useri_base.ml" 186 4748 4750 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 185 4718 4733 "useri/useri_base.ml" 185 4718 4741
+type(
+  ?eq:(bool -> bool -> bool) ->
+  bool -> bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  ext_ref React.S.create
+)
+"useri/useri_base.ml" 185 4718 4742 "useri/useri_base.ml" 185 4718 4747
+type(
+  bool
+)
+"useri/useri_base.ml" 185 4718 4733 "useri/useri_base.ml" 185 4718 4747
+call(
+  stack
+)
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+"useri/useri_base.ml" 186 4748 4754 "useri/useri_base.ml" 186 4748 4759
+type(
+  bool React.signal
+)
+ident(
+  def shift "useri/useri_base.ml" 188 4797 4799 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 186 4748 4770 "useri/useri_base.ml" 186 4748 4773
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 186 4748 4774 "useri/useri_base.ml" 186 4748 4780
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lshift "useri/useri_base.ml" 184 4688 4694 "useri/useri_base.ml" 184 4688 4700
+)
+"useri/useri_base.ml" 186 4748 4770 "useri/useri_base.ml" 186 4748 4780
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 186 4748 4781 "useri/useri_base.ml" 186 4748 4783
+type(
+  bool React.signal -> bool React.signal -> bool React.signal
+)
+ident(
+  ext_ref React.S.Bool.( || )
+)
+"useri/useri_base.ml" 186 4748 4784 "useri/useri_base.ml" 186 4748 4787
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) -> bool React.signal
+)
+ident(
+  ext_ref Pervasives.fst
+)
+"useri/useri_base.ml" 186 4748 4788 "useri/useri_base.ml" 186 4748 4794
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rshift "useri/useri_base.ml" 185 4718 4724 "useri/useri_base.ml" 185 4718 4730
+)
+"useri/useri_base.ml" 186 4748 4784 "useri/useri_base.ml" 186 4748 4794
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 186 4748 4770 "useri/useri_base.ml" 186 4748 4794
+call(
+  stack
+)
+type(
+  bool React.signal
+)
+"useri/useri_base.ml" 188 4797 4803 "useri/useri_base.ml" 188 4797 4816
+type(
+  unit -> unit
+)
+ident(
+  def add_modifiers "useri/useri_base.ml" 201 5268 5270 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 188 4797 4817 "useri/useri_base.ml" 188 4797 4819
+type(
+  unit
+)
+"useri/useri_base.ml" 189 4822 4826 "useri/useri_base.ml" 189 4822 4837
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 189 4822 4838 "useri/useri_base.ml" 189 4822 4850
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 189 4822 4857 "useri/useri_base.ml" 189 4822 4862
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 189 4822 4851 "useri/useri_base.ml" 189 4822 4863
+type(
+  id
+)
+"useri/useri_base.ml" 189 4822 4864 "useri/useri_base.ml" 189 4822 4868
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lalt "useri/useri_base.ml" 172 4381 4387 "useri/useri_base.ml" 172 4381 4391
+)
+"useri/useri_base.ml" 189 4822 4826 "useri/useri_base.ml" 189 4822 4868
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 190 4870 4874 "useri/useri_base.ml" 190 4870 4885
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 190 4870 4886 "useri/useri_base.ml" 190 4870 4898
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 190 4870 4905 "useri/useri_base.ml" 190 4870 4911
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 190 4870 4899 "useri/useri_base.ml" 190 4870 4912
+type(
+  id
+)
+"useri/useri_base.ml" 190 4870 4913 "useri/useri_base.ml" 190 4870 4917
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref ralt "useri/useri_base.ml" 173 4409 4415 "useri/useri_base.ml" 173 4409 4419
+)
+"useri/useri_base.ml" 190 4870 4874 "useri/useri_base.ml" 190 4870 4917
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 191 4919 4923 "useri/useri_base.ml" 191 4919 4934
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 191 4919 4935 "useri/useri_base.ml" 191 4919 4947
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 191 4919 4955 "useri/useri_base.ml" 191 4919 4960
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 191 4919 4948 "useri/useri_base.ml" 191 4919 4961
+type(
+  id
+)
+"useri/useri_base.ml" 191 4919 4962 "useri/useri_base.ml" 191 4919 4967
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lctrl "useri/useri_base.ml" 176 4480 4486 "useri/useri_base.ml" 176 4480 4491
+)
+"useri/useri_base.ml" 191 4919 4923 "useri/useri_base.ml" 191 4919 4967
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 192 4969 4973 "useri/useri_base.ml" 192 4969 4984
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 192 4969 4985 "useri/useri_base.ml" 192 4969 4997
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 192 4969 5005 "useri/useri_base.ml" 192 4969 5011
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 192 4969 4998 "useri/useri_base.ml" 192 4969 5012
+type(
+  id
+)
+"useri/useri_base.ml" 192 4969 5013 "useri/useri_base.ml" 192 4969 5018
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rctrl "useri/useri_base.ml" 177 4509 4515 "useri/useri_base.ml" 177 4509 4520
+)
+"useri/useri_base.ml" 192 4969 4973 "useri/useri_base.ml" 192 4969 5018
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 193 5020 5024 "useri/useri_base.ml" 193 5020 5035
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 193 5020 5036 "useri/useri_base.ml" 193 5020 5048
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 193 5020 5056 "useri/useri_base.ml" 193 5020 5061
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 193 5020 5049 "useri/useri_base.ml" 193 5020 5062
+type(
+  id
+)
+"useri/useri_base.ml" 193 5020 5063 "useri/useri_base.ml" 193 5020 5068
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lmeta "useri/useri_base.ml" 180 4584 4590 "useri/useri_base.ml" 180 4584 4595
+)
+"useri/useri_base.ml" 193 5020 5024 "useri/useri_base.ml" 193 5020 5068
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 194 5070 5074 "useri/useri_base.ml" 194 5070 5085
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 194 5070 5086 "useri/useri_base.ml" 194 5070 5098
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 194 5070 5106 "useri/useri_base.ml" 194 5070 5112
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 194 5070 5099 "useri/useri_base.ml" 194 5070 5113
+type(
+  id
+)
+"useri/useri_base.ml" 194 5070 5114 "useri/useri_base.ml" 194 5070 5119
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rmeta "useri/useri_base.ml" 181 4613 4619 "useri/useri_base.ml" 181 4613 4624
+)
+"useri/useri_base.ml" 194 5070 5074 "useri/useri_base.ml" 194 5070 5119
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 195 5121 5125 "useri/useri_base.ml" 195 5121 5136
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 195 5121 5137 "useri/useri_base.ml" 195 5121 5149
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 195 5121 5158 "useri/useri_base.ml" 195 5121 5163
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 195 5121 5150 "useri/useri_base.ml" 195 5121 5164
+type(
+  id
+)
+"useri/useri_base.ml" 195 5121 5165 "useri/useri_base.ml" 195 5121 5171
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lshift "useri/useri_base.ml" 184 4688 4694 "useri/useri_base.ml" 184 4688 4700
+)
+"useri/useri_base.ml" 195 5121 5125 "useri/useri_base.ml" 195 5121 5171
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 196 5173 5177 "useri/useri_base.ml" 196 5173 5188
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  id -> bool React.signal * (?step:React.step -> bool -> unit) -> unit
+)
+ident(
+  ext_ref Hashtbl.add
+)
+"useri/useri_base.ml" 196 5173 5189 "useri/useri_base.ml" 196 5173 5201
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 196 5173 5210 "useri/useri_base.ml" 196 5173 5216
+type(
+  [ `Left | `Right ]
+)
+"useri/useri_base.ml" 196 5173 5202 "useri/useri_base.ml" 196 5173 5217
+type(
+  id
+)
+"useri/useri_base.ml" 196 5173 5218 "useri/useri_base.ml" 196 5173 5224
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rshift "useri/useri_base.ml" 185 4718 4724 "useri/useri_base.ml" 185 4718 4730
+)
+"useri/useri_base.ml" 196 5173 5177 "useri/useri_base.ml" 196 5173 5224
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 197 5226 5230 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 196 5173 5177 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 195 5121 5125 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 194 5070 5074 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 193 5020 5024 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 192 4969 4973 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 191 4919 4923 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 190 4870 4874 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 189 4822 4826 "useri/useri_base.ml" 197 5226 5232
+type(
+  unit
+)
+"useri/useri_base.ml" 201 5268 5274 "useri/useri_base.ml" 201 5268 5278
+type(
+  step:'o -> unit
+)
+ident(
+  def init "useri/useri_base.ml" 202 5304 5306 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 201 5268 5280 "useri/useri_base.ml" 201 5268 5284
+type(
+  'o
+)
+ident(
+  def step "useri/useri_base.ml" 201 5268 5287 "useri/useri_base.ml" 201 5268 5303
+)
+"useri/useri_base.ml" 201 5268 5287 "useri/useri_base.ml" 201 5268 5300
+type(
+  unit -> unit
+)
+ident(
+  int_ref add_modifiers "useri/useri_base.ml" 188 4797 4803 "useri/useri_base.ml" 188 4797 4816
+)
+"useri/useri_base.ml" 201 5268 5301 "useri/useri_base.ml" 201 5268 5303
+type(
+  unit
+)
+"useri/useri_base.ml" 201 5268 5287 "useri/useri_base.ml" 201 5268 5303
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 202 5304 5310 "useri/useri_base.ml" 202 5304 5317
+type(
+  step:React.step -> unit
+)
+ident(
+  def release "useri/useri_base.ml" 218 5708 5710 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+type(
+  React.step
+)
+ident(
+  def step "useri/useri_base.ml" 203 5326 5330 "useri/useri_base.ml" 216 5700 5706
+)
+"useri/useri_base.ml" 203 5326 5330 "useri/useri_base.ml" 203 5326 5340
+type(
+  int ref
+)
+ident(
+  int_ref down_count "useri/useri_base.ml" 140 3553 3559 "useri/useri_base.ml" 140 3553 3569
+)
+"useri/useri_base.ml" 203 5326 5341 "useri/useri_base.ml" 203 5326 5343
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"useri/useri_base.ml" 203 5326 5344 "useri/useri_base.ml" 203 5326 5345
+type(
+  int
+)
+"useri/useri_base.ml" 203 5326 5330 "useri/useri_base.ml" 203 5326 5345
+type(
+  unit
+)
+"useri/useri_base.ml" 204 5347 5351 "useri/useri_base.ml" 204 5347 5364
+type(
+  ?step:React.step -> bool -> unit
+)
+ident(
+  int_ref set_any_holds "useri/useri_base.ml" 141 3578 3595 "useri/useri_base.ml" 141 3578 3608
+)
+"useri/useri_base.ml" 204 5347 5366 "useri/useri_base.ml" 204 5347 5370
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 204 5347 5371 "useri/useri_base.ml" 204 5347 5376
+type(
+  bool
+)
+"useri/useri_base.ml" 204 5347 5351 "useri/useri_base.ml" 204 5347 5376
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 205 5378 5383 "useri/useri_base.ml" 205 5378 5386
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 205 5378 5387 "useri/useri_base.ml" 205 5378 5391
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lalt "useri/useri_base.ml" 172 4381 4387 "useri/useri_base.ml" 172 4381 4391
+)
+"useri/useri_base.ml" 205 5378 5382 "useri/useri_base.ml" 205 5378 5392
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 205 5378 5394 "useri/useri_base.ml" 205 5378 5398
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 205 5378 5399 "useri/useri_base.ml" 205 5378 5404
+type(
+  bool
+)
+"useri/useri_base.ml" 205 5378 5382 "useri/useri_base.ml" 205 5378 5404
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 206 5406 5411 "useri/useri_base.ml" 206 5406 5414
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 206 5406 5415 "useri/useri_base.ml" 206 5406 5420
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lctrl "useri/useri_base.ml" 176 4480 4486 "useri/useri_base.ml" 176 4480 4491
+)
+"useri/useri_base.ml" 206 5406 5410 "useri/useri_base.ml" 206 5406 5421
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 206 5406 5423 "useri/useri_base.ml" 206 5406 5427
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 206 5406 5428 "useri/useri_base.ml" 206 5406 5433
+type(
+  bool
+)
+"useri/useri_base.ml" 206 5406 5410 "useri/useri_base.ml" 206 5406 5433
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 207 5435 5440 "useri/useri_base.ml" 207 5435 5443
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 207 5435 5444 "useri/useri_base.ml" 207 5435 5449
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lmeta "useri/useri_base.ml" 180 4584 4590 "useri/useri_base.ml" 180 4584 4595
+)
+"useri/useri_base.ml" 207 5435 5439 "useri/useri_base.ml" 207 5435 5450
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 207 5435 5452 "useri/useri_base.ml" 207 5435 5456
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 207 5435 5457 "useri/useri_base.ml" 207 5435 5462
+type(
+  bool
+)
+"useri/useri_base.ml" 207 5435 5439 "useri/useri_base.ml" 207 5435 5462
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 208 5464 5469 "useri/useri_base.ml" 208 5464 5472
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 208 5464 5473 "useri/useri_base.ml" 208 5464 5477
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref ralt "useri/useri_base.ml" 173 4409 4415 "useri/useri_base.ml" 173 4409 4419
+)
+"useri/useri_base.ml" 208 5464 5468 "useri/useri_base.ml" 208 5464 5478
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 208 5464 5480 "useri/useri_base.ml" 208 5464 5484
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 208 5464 5485 "useri/useri_base.ml" 208 5464 5490
+type(
+  bool
+)
+"useri/useri_base.ml" 208 5464 5468 "useri/useri_base.ml" 208 5464 5490
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 209 5492 5497 "useri/useri_base.ml" 209 5492 5500
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 209 5492 5501 "useri/useri_base.ml" 209 5492 5506
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rctrl "useri/useri_base.ml" 177 4509 4515 "useri/useri_base.ml" 177 4509 4520
+)
+"useri/useri_base.ml" 209 5492 5496 "useri/useri_base.ml" 209 5492 5507
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 209 5492 5509 "useri/useri_base.ml" 209 5492 5513
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 209 5492 5514 "useri/useri_base.ml" 209 5492 5519
+type(
+  bool
+)
+"useri/useri_base.ml" 209 5492 5496 "useri/useri_base.ml" 209 5492 5519
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 210 5521 5526 "useri/useri_base.ml" 210 5521 5529
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 210 5521 5530 "useri/useri_base.ml" 210 5521 5535
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rmeta "useri/useri_base.ml" 181 4613 4619 "useri/useri_base.ml" 181 4613 4624
+)
+"useri/useri_base.ml" 210 5521 5525 "useri/useri_base.ml" 210 5521 5536
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 210 5521 5538 "useri/useri_base.ml" 210 5521 5542
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 210 5521 5543 "useri/useri_base.ml" 210 5521 5548
+type(
+  bool
+)
+"useri/useri_base.ml" 210 5521 5525 "useri/useri_base.ml" 210 5521 5548
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 211 5550 5555 "useri/useri_base.ml" 211 5550 5558
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 211 5550 5559 "useri/useri_base.ml" 211 5550 5565
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref lshift "useri/useri_base.ml" 184 4688 4694 "useri/useri_base.ml" 184 4688 4700
+)
+"useri/useri_base.ml" 211 5550 5554 "useri/useri_base.ml" 211 5550 5566
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 211 5550 5568 "useri/useri_base.ml" 211 5550 5572
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 211 5550 5573 "useri/useri_base.ml" 211 5550 5578
+type(
+  bool
+)
+"useri/useri_base.ml" 211 5550 5554 "useri/useri_base.ml" 211 5550 5578
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 212 5580 5585 "useri/useri_base.ml" 212 5580 5588
+type(
+  bool React.signal * (?step:React.step -> bool -> unit) ->
+  ?step:React.step -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.snd
+)
+"useri/useri_base.ml" 212 5580 5589 "useri/useri_base.ml" 212 5580 5595
+type(
+  bool React.signal * (?step:React.step -> bool -> unit)
+)
+ident(
+  int_ref rshift "useri/useri_base.ml" 185 4718 4724 "useri/useri_base.ml" 185 4718 4730
+)
+"useri/useri_base.ml" 212 5580 5584 "useri/useri_base.ml" 212 5580 5596
+type(
+  ?step:React.step -> bool -> unit
+)
+"useri/useri_base.ml" 212 5580 5598 "useri/useri_base.ml" 212 5580 5602
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 202 5304 5319 "useri/useri_base.ml" 202 5304 5323
+)
+"useri/useri_base.ml" 212 5580 5603 "useri/useri_base.ml" 212 5580 5608
+type(
+  bool
+)
+"useri/useri_base.ml" 212 5580 5584 "useri/useri_base.ml" 212 5580 5608
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 213 5610 5614 "useri/useri_base.ml" 213 5610 5627
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t ->
+  unit
+)
+ident(
+  ext_ref Hashtbl.reset
+)
+"useri/useri_base.ml" 213 5610 5628 "useri/useri_base.ml" 213 5610 5638
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  int_ref down_event "useri/useri_base.ml" 143 3627 3633 "useri/useri_base.ml" 143 3627 3643
+)
+"useri/useri_base.ml" 213 5610 5614 "useri/useri_base.ml" 213 5610 5638
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 214 5640 5644 "useri/useri_base.ml" 214 5640 5657
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t ->
+  unit
+)
+ident(
+  ext_ref Hashtbl.reset
+)
+"useri/useri_base.ml" 214 5640 5658 "useri/useri_base.ml" 214 5640 5666
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  int_ref up_event "useri/useri_base.ml" 144 3664 3670 "useri/useri_base.ml" 144 3664 3678
+)
+"useri/useri_base.ml" 214 5640 5644 "useri/useri_base.ml" 214 5640 5666
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 215 5668 5672 "useri/useri_base.ml" 215 5668 5685
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t ->
+  unit
+)
+ident(
+  ext_ref Hashtbl.reset
+)
+"useri/useri_base.ml" 215 5668 5686 "useri/useri_base.ml" 215 5668 5698
+type(
+  (id, bool React.signal * (?step:React.step -> bool -> unit)) Hashtbl.t
+)
+ident(
+  int_ref state_signal "useri/useri_base.ml" 160 4056 4062 "useri/useri_base.ml" 160 4056 4074
+)
+"useri/useri_base.ml" 215 5668 5672 "useri/useri_base.ml" 215 5668 5698
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 216 5700 5704 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 215 5668 5672 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 214 5640 5644 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 213 5610 5614 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 212 5580 5584 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 211 5550 5554 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 210 5521 5525 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 209 5492 5496 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 208 5464 5468 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 207 5435 5439 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 206 5406 5410 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 205 5378 5382 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 204 5347 5351 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 203 5326 5330 "useri/useri_base.ml" 216 5700 5706
+type(
+  unit
+)
+"useri/useri_base.ml" 218 5708 5714 "useri/useri_base.ml" 218 5708 5725
+type(
+  step:React.step -> id -> unit
+)
+ident(
+  def handle_down "useri/useri_base.ml" 226 5890 5892 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 218 5708 5727 "useri/useri_base.ml" 218 5708 5731
+type(
+  React.step
+)
+ident(
+  def step "useri/useri_base.ml" 218 5708 5732 "useri/useri_base.ml" 224 5882 5888
+)
+"useri/useri_base.ml" 218 5708 5732 "useri/useri_base.ml" 218 5708 5734
+type(
+  id
+)
+ident(
+  def id "useri/useri_base.ml" 219 5737 5741 "useri/useri_base.ml" 224 5882 5888
+)
+"useri/useri_base.ml" 219 5737 5741 "useri/useri_base.ml" 219 5737 5745
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"useri/useri_base.ml" 219 5737 5746 "useri/useri_base.ml" 219 5737 5756
+type(
+  int ref
+)
+ident(
+  int_ref down_count "useri/useri_base.ml" 140 3553 3559 "useri/useri_base.ml" 140 3553 3569
+)
+"useri/useri_base.ml" 219 5737 5741 "useri/useri_base.ml" 219 5737 5756
+type(
+  unit
+)
+"useri/useri_base.ml" 220 5758 5762 "useri/useri_base.ml" 220 5758 5775
+type(
+  ?step:React.step -> id -> unit
+)
+ident(
+  int_ref send_any_down "useri/useri_base.ml" 138 3469 3485 "useri/useri_base.ml" 138 3469 3498
+)
+"useri/useri_base.ml" 220 5758 5777 "useri/useri_base.ml" 220 5758 5781
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 218 5708 5727 "useri/useri_base.ml" 218 5708 5731
+)
+"useri/useri_base.ml" 220 5758 5782 "useri/useri_base.ml" 220 5758 5784
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 218 5708 5732 "useri/useri_base.ml" 218 5708 5734
+)
+"useri/useri_base.ml" 220 5758 5762 "useri/useri_base.ml" 220 5758 5784
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 221 5786 5790 "useri/useri_base.ml" 221 5786 5803
+type(
+  ?step:React.step -> bool -> unit
+)
+ident(
+  int_ref set_any_holds "useri/useri_base.ml" 141 3578 3595 "useri/useri_base.ml" 141 3578 3608
+)
+"useri/useri_base.ml" 221 5786 5805 "useri/useri_base.ml" 221 5786 5809
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 218 5708 5727 "useri/useri_base.ml" 218 5708 5731
+)
+"useri/useri_base.ml" 221 5786 5810 "useri/useri_base.ml" 221 5786 5814
+type(
+  bool
+)
+"useri/useri_base.ml" 221 5786 5790 "useri/useri_base.ml" 221 5786 5814
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 222 5816 5820 "useri/useri_base.ml" 222 5816 5830
+type(
+  ?step:React.step ->
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t ->
+  id -> unit
+)
+ident(
+  int_ref send_event "useri/useri_base.ml" 152 3859 3865 "useri/useri_base.ml" 152 3859 3875
+)
+"useri/useri_base.ml" 222 5816 5832 "useri/useri_base.ml" 222 5816 5836
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 218 5708 5727 "useri/useri_base.ml" 218 5708 5731
+)
+"useri/useri_base.ml" 222 5816 5837 "useri/useri_base.ml" 222 5816 5847
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  int_ref down_event "useri/useri_base.ml" 143 3627 3633 "useri/useri_base.ml" 143 3627 3643
+)
+"useri/useri_base.ml" 222 5816 5848 "useri/useri_base.ml" 222 5816 5850
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 218 5708 5732 "useri/useri_base.ml" 218 5708 5734
+)
+"useri/useri_base.ml" 222 5816 5820 "useri/useri_base.ml" 222 5816 5850
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 223 5852 5856 "useri/useri_base.ml" 223 5852 5866
+type(
+  ?step:React.step -> id -> bool -> unit
+)
+ident(
+  int_ref set_signal "useri/useri_base.ml" 161 4095 4101 "useri/useri_base.ml" 161 4095 4111
+)
+"useri/useri_base.ml" 223 5852 5868 "useri/useri_base.ml" 223 5852 5872
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 218 5708 5727 "useri/useri_base.ml" 218 5708 5731
+)
+"useri/useri_base.ml" 223 5852 5873 "useri/useri_base.ml" 223 5852 5875
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 218 5708 5732 "useri/useri_base.ml" 218 5708 5734
+)
+"useri/useri_base.ml" 223 5852 5876 "useri/useri_base.ml" 223 5852 5880
+type(
+  bool
+)
+"useri/useri_base.ml" 223 5852 5856 "useri/useri_base.ml" 223 5852 5880
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 224 5882 5886 "useri/useri_base.ml" 224 5882 5888
+type(
+  unit
+)
+"useri/useri_base.ml" 223 5852 5856 "useri/useri_base.ml" 224 5882 5888
+type(
+  unit
+)
+"useri/useri_base.ml" 222 5816 5820 "useri/useri_base.ml" 224 5882 5888
+type(
+  unit
+)
+"useri/useri_base.ml" 221 5786 5790 "useri/useri_base.ml" 224 5882 5888
+type(
+  unit
+)
+"useri/useri_base.ml" 220 5758 5762 "useri/useri_base.ml" 224 5882 5888
+type(
+  unit
+)
+"useri/useri_base.ml" 219 5737 5741 "useri/useri_base.ml" 224 5882 5888
+type(
+  unit
+)
+"useri/useri_base.ml" 226 5890 5896 "useri/useri_base.ml" 226 5890 5905
+type(
+  step:React.step -> id -> unit
+)
+ident(
+  def handle_up "useri/useri_base.ml" 232 6104 6110 "useri/useri_base.ml" 233 6111 6114
+)
+"useri/useri_base.ml" 226 5890 5907 "useri/useri_base.ml" 226 5890 5911
+type(
+  React.step
+)
+ident(
+  def step "useri/useri_base.ml" 226 5890 5912 "useri/useri_base.ml" 232 6104 6110
+)
+"useri/useri_base.ml" 226 5890 5912 "useri/useri_base.ml" 226 5890 5914
+type(
+  id
+)
+ident(
+  def id "useri/useri_base.ml" 227 5917 5921 "useri/useri_base.ml" 232 6104 6110
+)
+"useri/useri_base.ml" 227 5917 5921 "useri/useri_base.ml" 227 5917 5925
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.decr
+)
+"useri/useri_base.ml" 227 5917 5926 "useri/useri_base.ml" 227 5917 5936
+type(
+  int ref
+)
+ident(
+  int_ref down_count "useri/useri_base.ml" 140 3553 3559 "useri/useri_base.ml" 140 3553 3569
+)
+"useri/useri_base.ml" 227 5917 5921 "useri/useri_base.ml" 227 5917 5936
+type(
+  unit
+)
+"useri/useri_base.ml" 228 5938 5942 "useri/useri_base.ml" 228 5938 5953
+type(
+  ?step:React.step -> id -> unit
+)
+ident(
+  int_ref send_any_up "useri/useri_base.ml" 139 3513 3527 "useri/useri_base.ml" 139 3513 3538
+)
+"useri/useri_base.ml" 228 5938 5955 "useri/useri_base.ml" 228 5938 5959
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 226 5890 5907 "useri/useri_base.ml" 226 5890 5911
+)
+"useri/useri_base.ml" 228 5938 5960 "useri/useri_base.ml" 228 5938 5962
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 226 5890 5912 "useri/useri_base.ml" 226 5890 5914
+)
+"useri/useri_base.ml" 228 5938 5942 "useri/useri_base.ml" 228 5938 5962
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 229 5964 5971 "useri/useri_base.ml" 229 5964 5972
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"useri/useri_base.ml" 229 5964 5972 "useri/useri_base.ml" 229 5964 5982
+type(
+  int ref
+)
+ident(
+  int_ref down_count "useri/useri_base.ml" 140 3553 3559 "useri/useri_base.ml" 140 3553 3569
+)
+"useri/useri_base.ml" 229 5964 5971 "useri/useri_base.ml" 229 5964 5982
+type(
+  int
+)
+"useri/useri_base.ml" 229 5964 5983 "useri/useri_base.ml" 229 5964 5985
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( <= )
+)
+"useri/useri_base.ml" 229 5964 5986 "useri/useri_base.ml" 229 5964 5987
+type(
+  int
+)
+"useri/useri_base.ml" 229 5964 5971 "useri/useri_base.ml" 229 5964 5987
+type(
+  bool
+)
+"useri/useri_base.ml" 229 5964 5994 "useri/useri_base.ml" 229 5964 6004
+type(
+  int ref
+)
+ident(
+  int_ref down_count "useri/useri_base.ml" 140 3553 3559 "useri/useri_base.ml" 140 3553 3569
+)
+"useri/useri_base.ml" 229 5964 6005 "useri/useri_base.ml" 229 5964 6007
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"useri/useri_base.ml" 229 5964 6008 "useri/useri_base.ml" 229 5964 6009
+type(
+  int
+)
+"useri/useri_base.ml" 229 5964 5994 "useri/useri_base.ml" 229 5964 6009
+type(
+  unit
+)
+"useri/useri_base.ml" 229 5964 6011 "useri/useri_base.ml" 229 5964 6024
+type(
+  ?step:React.step -> bool -> unit
+)
+ident(
+  int_ref set_any_holds "useri/useri_base.ml" 141 3578 3595 "useri/useri_base.ml" 141 3578 3608
+)
+"useri/useri_base.ml" 229 5964 6026 "useri/useri_base.ml" 229 5964 6030
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 226 5890 5907 "useri/useri_base.ml" 226 5890 5911
+)
+"useri/useri_base.ml" 229 5964 6031 "useri/useri_base.ml" 229 5964 6036
+type(
+  bool
+)
+"useri/useri_base.ml" 229 5964 6011 "useri/useri_base.ml" 229 5964 6036
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 229 5964 5993 "useri/useri_base.ml" 229 5964 6037
+type(
+  unit
+)
+"useri/useri_base.ml" 229 5964 5968 "useri/useri_base.ml" 229 5964 6037
+type(
+  unit
+)
+"useri/useri_base.ml" 230 6039 6043 "useri/useri_base.ml" 230 6039 6053
+type(
+  ?step:React.step ->
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t ->
+  id -> unit
+)
+ident(
+  int_ref send_event "useri/useri_base.ml" 152 3859 3865 "useri/useri_base.ml" 152 3859 3875
+)
+"useri/useri_base.ml" 230 6039 6055 "useri/useri_base.ml" 230 6039 6059
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 226 5890 5907 "useri/useri_base.ml" 226 5890 5911
+)
+"useri/useri_base.ml" 230 6039 6060 "useri/useri_base.ml" 230 6039 6068
+type(
+  (id, unit React.event * (?step:React.step -> unit -> unit)) Hashtbl.t
+)
+ident(
+  int_ref up_event "useri/useri_base.ml" 144 3664 3670 "useri/useri_base.ml" 144 3664 3678
+)
+"useri/useri_base.ml" 230 6039 6069 "useri/useri_base.ml" 230 6039 6071
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 226 5890 5912 "useri/useri_base.ml" 226 5890 5914
+)
+"useri/useri_base.ml" 230 6039 6043 "useri/useri_base.ml" 230 6039 6071
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 231 6073 6077 "useri/useri_base.ml" 231 6073 6087
+type(
+  ?step:React.step -> id -> bool -> unit
+)
+ident(
+  int_ref set_signal "useri/useri_base.ml" 161 4095 4101 "useri/useri_base.ml" 161 4095 4111
+)
+"useri/useri_base.ml" 231 6073 6089 "useri/useri_base.ml" 231 6073 6093
+type(
+  React.step
+)
+ident(
+  int_ref step "useri/useri_base.ml" 226 5890 5907 "useri/useri_base.ml" 226 5890 5911
+)
+"useri/useri_base.ml" 231 6073 6094 "useri/useri_base.ml" 231 6073 6096
+type(
+  id
+)
+ident(
+  int_ref id "useri/useri_base.ml" 226 5890 5912 "useri/useri_base.ml" 226 5890 5914
+)
+"useri/useri_base.ml" 231 6073 6097 "useri/useri_base.ml" 231 6073 6102
+type(
+  bool
+)
+"useri/useri_base.ml" 231 6073 6077 "useri/useri_base.ml" 231 6073 6102
+call(
+  stack
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 232 6104 6108 "useri/useri_base.ml" 232 6104 6110
+type(
+  unit
+)
+"useri/useri_base.ml" 231 6073 6077 "useri/useri_base.ml" 232 6104 6110
+type(
+  unit
+)
+"useri/useri_base.ml" 230 6039 6043 "useri/useri_base.ml" 232 6104 6110
+type(
+  unit
+)
+"useri/useri_base.ml" 229 5964 5968 "useri/useri_base.ml" 232 6104 6110
+type(
+  unit
+)
+"useri/useri_base.ml" 228 5938 5942 "useri/useri_base.ml" 232 6104 6110
+type(
+  unit
+)
+"useri/useri_base.ml" 227 5917 5921 "useri/useri_base.ml" 232 6104 6110
+type(
+  unit
+)
+"useri/useri_base.ml" 240 6192 6200 "useri/useri_base.ml" 240 6192 6206
+type(
+  unit -> ('a -> Univ.t) * (Univ.t -> 'a option)
+)
+ident(
+  def create "useri/useri_base.ml" 240 6192 6220 "useri/useri_base.ml" 241 6221 6226
+)
+"useri/useri_base.ml" 240 6192 6209 "useri/useri_base.ml" 240 6192 6220
+type(
+  unit -> ('a -> Univ.t) * (Univ.t -> 'a option)
+)
+ident(
+  int_ref Univ.create "useri/useri_base.ml" 16 458 460 "useri/useri_base.ml" 16 458 509
+)
+"useri/useri_base.ml" 249 6289 6295 "useri/useri_base.ml" 249 6289 6302
+type(
+  float
+)
+ident(
+  def noticed "useri/useri_base.ml" 250 6309 6311 "useri/useri_base.ml" 258 6494 6497
+)
+"useri/useri_base.ml" 249 6289 6305 "useri/useri_base.ml" 249 6289 6308
+type(
+  float
+)
+"useri/useri_base.ml" 250 6309 6315 "useri/useri_base.ml" 250 6309 6326
+type(
+  float
+)
+ident(
+  def interrupted "useri/useri_base.ml" 251 6332 6334 "useri/useri_base.ml" 258 6494 6497
+)
+"useri/useri_base.ml" 250 6309 6329 "useri/useri_base.ml" 250 6309 6331
+type(
+  float
+)
+"useri/useri_base.ml" 251 6332 6338 "useri/useri_base.ml" 251 6332 6342
+type(
+  float
+)
+ident(
+  def left "useri/useri_base.ml" 254 6371 6373 "useri/useri_base.ml" 258 6494 6497
+)
+"useri/useri_base.ml" 251 6332 6345 "useri/useri_base.ml" 251 6332 6348
+type(
+  float
+)
+"useri/useri_base.ml" 254 6371 6377 "useri/useri_base.ml" 254 6371 6394
+type(
+  float
+)
+ident(
+  def touch_target_size "useri/useri_base.ml" 255 6400 6402 "useri/useri_base.ml" 258 6494 6497
+)
+"useri/useri_base.ml" 254 6371 6397 "useri/useri_base.ml" 254 6371 6399
+type(
+  float
+)
+"useri/useri_base.ml" 255 6400 6406 "useri/useri_base.ml" 255 6400 6427
+type(
+  float
+)
+ident(
+  def touch_target_size_min "useri/useri_base.ml" 256 6433 6435 "useri/useri_base.ml" 258 6494 6497
+)
+"useri/useri_base.ml" 255 6400 6430 "useri/useri_base.ml" 255 6400 6432
+type(
+  float
+)
+"useri/useri_base.ml" 256 6433 6439 "useri/useri_base.ml" 256 6433 6455
+type(
+  float
+)
+ident(
+  def touch_target_pad "useri/useri_base.ml" 257 6461 6463 "useri/useri_base.ml" 258 6494 6497
+)
+"useri/useri_base.ml" 256 6433 6458 "useri/useri_base.ml" 256 6433 6460
+type(
+  float
+)
+"useri/useri_base.ml" 257 6461 6467 "useri/useri_base.ml" 257 6461 6487
+type(
+  float
+)
+ident(
+  def average_finger_width "useri/useri_base.ml" 257 6461 6493 "useri/useri_base.ml" 258 6494 6497
+)
+"useri/useri_base.ml" 257 6461 6490 "useri/useri_base.ml" 257 6461 6493
+type(
+  float
+)
+"useri/useri_base.ml" 264 6539 6545 "useri/useri_base.ml" 264 6539 6557
+type(
+  string
+)
+ident(
+  def default_name "useri/useri_base.ml" 274 6789 6791 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 265 6560 6568 "useri/useri_base.ml" 265 6560 6572
+type(
+  string
+)
+ident(
+  def base "useri/useri_base.ml" 266 6609 6613 "useri/useri_base.ml" 270 6737 6763
+)
+"useri/useri_base.ml" 265 6560 6575 "useri/useri_base.ml" 265 6560 6592
+type(
+  string -> string
+)
+ident(
+  ext_ref Filename.basename
+)
+"useri/useri_base.ml" 265 6560 6593 "useri/useri_base.ml" 265 6560 6601
+type(
+  string array
+)
+ident(
+  ext_ref Sys.argv
+)
+"useri/useri_base.ml" 265 6560 6603 "useri/useri_base.ml" 265 6560 6604
+type(
+  int
+)
+"useri/useri_base.ml" 265 6560 6593 "useri/useri_base.ml" 265 6560 6605
+type(
+  string
+)
+"useri/useri_base.ml" 265 6560 6575 "useri/useri_base.ml" 265 6560 6605
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 266 6609 6617 "useri/useri_base.ml" 266 6609 6621
+type(
+  string
+)
+ident(
+  def name "useri/useri_base.ml" 270 6737 6741 "useri/useri_base.ml" 270 6737 6763
+)
+"useri/useri_base.ml" 267 6624 6634 "useri/useri_base.ml" 267 6624 6657
+type(
+  string -> string
+)
+ident(
+  ext_ref Filename.chop_extension
+)
+"useri/useri_base.ml" 267 6624 6658 "useri/useri_base.ml" 267 6624 6662
+type(
+  string
+)
+ident(
+  int_ref base "useri/useri_base.ml" 265 6560 6568 "useri/useri_base.ml" 265 6560 6572
+)
+"useri/useri_base.ml" 267 6624 6634 "useri/useri_base.ml" 267 6624 6662
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 268 6668 6693 "useri/useri_base.ml" 268 6668 6694
+type(
+  string
+)
+"useri/useri_base.ml" 268 6668 6676 "useri/useri_base.ml" 268 6668 6694
+type(
+  exn
+)
+"useri/useri_base.ml" 268 6668 6725 "useri/useri_base.ml" 268 6668 6729
+type(
+  string
+)
+ident(
+  int_ref base "useri/useri_base.ml" 265 6560 6568 "useri/useri_base.ml" 265 6560 6572
+)
+"useri/useri_base.ml" 267 6624 6630 "useri/useri_base.ml" 268 6668 6729
+type(
+  string
+)
+"useri/useri_base.ml" 270 6737 6741 "useri/useri_base.ml" 270 6737 6758
+type(
+  string -> string
+)
+ident(
+  ext_ref String.capitalize
+)
+"useri/useri_base.ml" 270 6737 6759 "useri/useri_base.ml" 270 6737 6763
+type(
+  string
+)
+ident(
+  int_ref name "useri/useri_base.ml" 266 6609 6617 "useri/useri_base.ml" 266 6609 6621
+)
+"useri/useri_base.ml" 270 6737 6741 "useri/useri_base.ml" 270 6737 6763
+call(
+  stack
+)
+type(
+  string
+)
+"useri/useri_base.ml" 266 6609 6613 "useri/useri_base.ml" 270 6737 6763
+type(
+  string
+)
+"useri/useri_base.ml" 265 6560 6564 "useri/useri_base.ml" 270 6737 6763
+type(
+  string
+)
+"useri/useri_base.ml" 275 6845 6851 "useri/useri_base.ml" 275 6845 6868
+type(
+  Format.formatter -> [< `Browser | `Gui | `Terminal ] -> unit
+)
+ident(
+  def pp_launch_context "useri/useri_base.ml" 283 7009 7011 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 275 6845 6869 "useri/useri_base.ml" 275 6845 6872
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 275 6845 6873 "useri/useri_base.ml" 279 6983 6990
+)
+"useri/useri_base.ml" 275 6845 6873 "useri/useri_base.ml" 275 6845 6875
+type(
+  [< `Browser | `Gui | `Terminal ] as 'a
+)
+ident(
+  def lc "useri/useri_base.ml" 275 6845 6878 "useri/useri_base.ml" 279 6983 6990
+)
+"useri/useri_base.ml" 275 6845 6878 "useri/useri_base.ml" 275 6845 6880
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 275 6845 6881 "useri/useri_base.ml" 275 6845 6884
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 275 6845 6869 "useri/useri_base.ml" 275 6845 6872
+)
+"useri/useri_base.ml" 275 6845 6897 "useri/useri_base.ml" 275 6845 6899
+type(
+  'a
+)
+ident(
+  int_ref lc "useri/useri_base.ml" 275 6845 6873 "useri/useri_base.ml" 275 6845 6875
+)
+"useri/useri_base.ml" 276 6905 6911 "useri/useri_base.ml" 276 6905 6919
+type(
+  'a
+)
+"useri/useri_base.ml" 276 6905 6923 "useri/useri_base.ml" 276 6905 6932
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 277 6933 6939 "useri/useri_base.ml" 277 6933 6943
+type(
+  'a
+)
+"useri/useri_base.ml" 277 6933 6947 "useri/useri_base.ml" 277 6933 6952
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 278 6953 6959 "useri/useri_base.ml" 278 6953 6968
+type(
+  'a
+)
+"useri/useri_base.ml" 278 6953 6972 "useri/useri_base.ml" 278 6953 6982
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 275 6845 6885 "useri/useri_base.ml" 279 6983 6990
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 275 6845 6878 "useri/useri_base.ml" 279 6983 6990
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 284 7063 7069 "useri/useri_base.ml" 284 7063 7079
+type(
+  Format.formatter -> [< `Jsoo | `Other of string | `Tsdl ] -> unit
+)
+ident(
+  def pp_backend "useri/useri_base.ml" 290 7192 7194 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 284 7063 7080 "useri/useri_base.ml" 284 7063 7083
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 284 7063 7084 "useri/useri_base.ml" 288 7183 7190
+)
+"useri/useri_base.ml" 284 7063 7084 "useri/useri_base.ml" 284 7063 7085
+type(
+  [< `Jsoo | `Other of string | `Tsdl ] as 'b
+)
+ident(
+  def b "useri/useri_base.ml" 284 7063 7088 "useri/useri_base.ml" 288 7183 7190
+)
+"useri/useri_base.ml" 284 7063 7088 "useri/useri_base.ml" 284 7063 7090
+type(
+  Format.formatter ->
+  (string -> unit, Format.formatter, unit) format -> string -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 284 7063 7091 "useri/useri_base.ml" 284 7063 7094
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 284 7063 7080 "useri/useri_base.ml" 284 7063 7083
+)
+"useri/useri_base.ml" 284 7063 7095 "useri/useri_base.ml" 284 7063 7099
+type(
+  (string -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 284 7063 7112 "useri/useri_base.ml" 284 7063 7113
+type(
+  'b
+)
+ident(
+  int_ref b "useri/useri_base.ml" 284 7063 7084 "useri/useri_base.ml" 284 7063 7085
+)
+"useri/useri_base.ml" 285 7119 7125 "useri/useri_base.ml" 285 7119 7130
+type(
+  'b
+)
+"useri/useri_base.ml" 285 7119 7134 "useri/useri_base.ml" 285 7119 7140
+type(
+  string
+)
+"useri/useri_base.ml" 286 7141 7147 "useri/useri_base.ml" 286 7141 7152
+type(
+  'b
+)
+"useri/useri_base.ml" 286 7141 7156 "useri/useri_base.ml" 286 7141 7162
+type(
+  string
+)
+"useri/useri_base.ml" 287 7163 7176 "useri/useri_base.ml" 287 7163 7177
+type(
+  string
+)
+ident(
+  def b "useri/useri_base.ml" 287 7163 7181 "useri/useri_base.ml" 287 7163 7182
+)
+"useri/useri_base.ml" 287 7163 7169 "useri/useri_base.ml" 287 7163 7177
+type(
+  'b
+)
+"useri/useri_base.ml" 287 7163 7181 "useri/useri_base.ml" 287 7163 7182
+type(
+  string
+)
+ident(
+  int_ref b "useri/useri_base.ml" 287 7163 7176 "useri/useri_base.ml" 287 7163 7177
+)
+"useri/useri_base.ml" 284 7063 7100 "useri/useri_base.ml" 288 7183 7190
+type(
+  string
+)
+"useri/useri_base.ml" 284 7063 7088 "useri/useri_base.ml" 288 7183 7190
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 291 7235 7241 "useri/useri_base.ml" 291 7235 7258
+type(
+  Format.formatter -> [< `Async | `Sync ] -> unit
+)
+ident(
+  def pp_backend_scheme "useri/useri_base.ml" 296 7348 7350 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 291 7235 7259 "useri/useri_base.ml" 291 7235 7262
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 291 7235 7263 "useri/useri_base.ml" 294 7339 7346
+)
+"useri/useri_base.ml" 291 7235 7263 "useri/useri_base.ml" 291 7235 7264
+type(
+  [< `Async | `Sync ] as 'c
+)
+ident(
+  def b "useri/useri_base.ml" 291 7235 7267 "useri/useri_base.ml" 294 7339 7346
+)
+"useri/useri_base.ml" 291 7235 7267 "useri/useri_base.ml" 291 7235 7269
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 291 7235 7270 "useri/useri_base.ml" 291 7235 7273
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 291 7235 7259 "useri/useri_base.ml" 291 7235 7262
+)
+"useri/useri_base.ml" 291 7235 7286 "useri/useri_base.ml" 291 7235 7287
+type(
+  'c
+)
+ident(
+  int_ref b "useri/useri_base.ml" 291 7235 7263 "useri/useri_base.ml" 291 7235 7264
+)
+"useri/useri_base.ml" 292 7293 7299 "useri/useri_base.ml" 292 7293 7304
+type(
+  'c
+)
+"useri/useri_base.ml" 292 7293 7308 "useri/useri_base.ml" 292 7293 7314
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 293 7315 7321 "useri/useri_base.ml" 293 7315 7327
+type(
+  'c
+)
+"useri/useri_base.ml" 293 7315 7331 "useri/useri_base.ml" 293 7315 7338
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 291 7235 7274 "useri/useri_base.ml" 294 7339 7346
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 291 7235 7267 "useri/useri_base.ml" 294 7339 7346
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 296 7348 7354 "useri/useri_base.ml" 296 7348 7376
+type(
+  [< `Error | `Warning ] -> string -> unit
+)
+ident(
+  def default_backend_logger "useri/useri_base.ml" 300 7502 7504 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 296 7348 7377 "useri/useri_base.ml" 296 7348 7381
+type(
+  [< `Error | `Warning ] as 'd
+)
+ident(
+  def kind "useri/useri_base.ml" 296 7348 7382 "useri/useri_base.ml" 298 7454 7500
+)
+"useri/useri_base.ml" 296 7348 7382 "useri/useri_base.ml" 296 7348 7385
+type(
+  string
+)
+ident(
+  def msg "useri/useri_base.ml" 297 7388 7392 "useri/useri_base.ml" 298 7454 7500
+)
+"useri/useri_base.ml" 297 7388 7396 "useri/useri_base.ml" 297 7388 7400
+type(
+  string
+)
+ident(
+  def kind "useri/useri_base.ml" 298 7454 7458 "useri/useri_base.ml" 298 7454 7500
+)
+"useri/useri_base.ml" 297 7388 7409 "useri/useri_base.ml" 297 7388 7413
+type(
+  'd
+)
+ident(
+  int_ref kind "useri/useri_base.ml" 296 7348 7377 "useri/useri_base.ml" 296 7348 7381
+)
+"useri/useri_base.ml" 297 7388 7419 "useri/useri_base.ml" 297 7388 7425
+type(
+  'd
+)
+"useri/useri_base.ml" 297 7388 7429 "useri/useri_base.ml" 297 7388 7432
+type(
+  string
+)
+"useri/useri_base.ml" 297 7388 7435 "useri/useri_base.ml" 297 7388 7443
+type(
+  'd
+)
+"useri/useri_base.ml" 297 7388 7447 "useri/useri_base.ml" 297 7388 7450
+type(
+  string
+)
+"useri/useri_base.ml" 297 7388 7403 "useri/useri_base.ml" 297 7388 7450
+type(
+  string
+)
+"useri/useri_base.ml" 298 7454 7458 "useri/useri_base.ml" 298 7454 7472
+type(
+  (string -> string -> unit, out_channel, unit) format ->
+  string -> string -> unit
+)
+ident(
+  ext_ref Printf.eprintf
+)
+"useri/useri_base.ml" 298 7454 7473 "useri/useri_base.ml" 298 7454 7491
+type(
+  (string -> string -> unit, out_channel, unit) format
+)
+"useri/useri_base.ml" 298 7454 7492 "useri/useri_base.ml" 298 7454 7496
+type(
+  string
+)
+ident(
+  int_ref kind "useri/useri_base.ml" 297 7388 7396 "useri/useri_base.ml" 297 7388 7400
+)
+"useri/useri_base.ml" 298 7454 7497 "useri/useri_base.ml" 298 7454 7500
+type(
+  string
+)
+ident(
+  int_ref msg "useri/useri_base.ml" 296 7348 7382 "useri/useri_base.ml" 296 7348 7385
+)
+"useri/useri_base.ml" 298 7454 7458 "useri/useri_base.ml" 298 7454 7500
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 297 7388 7392 "useri/useri_base.ml" 298 7454 7500
+type(
+  unit
+)
+"useri/useri_base.ml" 300 7502 7508 "useri/useri_base.ml" 300 7502 7522
+type(
+  ([ `Error | `Warning ] -> string -> unit) ref
+)
+ident(
+  def backend_logger "useri/useri_base.ml" 301 7552 7554 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 300 7502 7525 "useri/useri_base.ml" 300 7502 7528
+type(
+  ([ `Error | `Warning ] -> string -> unit) ->
+  ([ `Error | `Warning ] -> string -> unit) ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"useri/useri_base.ml" 300 7502 7529 "useri/useri_base.ml" 300 7502 7551
+type(
+  [ `Error | `Warning ] -> string -> unit
+)
+ident(
+  int_ref default_backend_logger "useri/useri_base.ml" 296 7348 7354 "useri/useri_base.ml" 296 7348 7376
+)
+"useri/useri_base.ml" 300 7502 7525 "useri/useri_base.ml" 300 7502 7551
+type(
+  ([ `Error | `Warning ] -> string -> unit) ref
+)
+"useri/useri_base.ml" 301 7552 7558 "useri/useri_base.ml" 301 7552 7569
+type(
+  [ `Error | `Warning ] -> string -> unit
+)
+ident(
+  def backend_log "useri/useri_base.ml" 302 7606 7608 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 301 7552 7570 "useri/useri_base.ml" 301 7552 7574
+type(
+  [ `Error | `Warning ]
+)
+ident(
+  def kind "useri/useri_base.ml" 301 7552 7575 "useri/useri_base.ml" 301 7552 7605
+)
+"useri/useri_base.ml" 301 7552 7575 "useri/useri_base.ml" 301 7552 7578
+type(
+  string
+)
+ident(
+  def msg "useri/useri_base.ml" 301 7552 7581 "useri/useri_base.ml" 301 7552 7605
+)
+"useri/useri_base.ml" 301 7552 7581 "useri/useri_base.ml" 301 7552 7582
+type(
+  ([ `Error | `Warning ] -> string -> unit) ref ->
+  [ `Error | `Warning ] -> string -> unit
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"useri/useri_base.ml" 301 7552 7582 "useri/useri_base.ml" 301 7552 7596
+type(
+  ([ `Error | `Warning ] -> string -> unit) ref
+)
+ident(
+  int_ref backend_logger "useri/useri_base.ml" 300 7502 7508 "useri/useri_base.ml" 300 7502 7522
+)
+"useri/useri_base.ml" 301 7552 7581 "useri/useri_base.ml" 301 7552 7596
+type(
+  [ `Error | `Warning ] -> string -> unit
+)
+"useri/useri_base.ml" 301 7552 7597 "useri/useri_base.ml" 301 7552 7601
+type(
+  [ `Error | `Warning ]
+)
+ident(
+  int_ref kind "useri/useri_base.ml" 301 7552 7570 "useri/useri_base.ml" 301 7552 7574
+)
+"useri/useri_base.ml" 301 7552 7602 "useri/useri_base.ml" 301 7552 7605
+type(
+  string
+)
+ident(
+  int_ref msg "useri/useri_base.ml" 301 7552 7575 "useri/useri_base.ml" 301 7552 7578
+)
+"useri/useri_base.ml" 301 7552 7581 "useri/useri_base.ml" 301 7552 7605
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 302 7606 7612 "useri/useri_base.ml" 302 7606 7630
+type(
+  ([ `Error | `Warning ] -> string -> unit) -> unit
+)
+ident(
+  def set_backend_logger "useri/useri_base.ml" 306 7675 7677 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 302 7606 7631 "useri/useri_base.ml" 302 7606 7632
+type(
+  [ `Error | `Warning ] -> string -> unit
+)
+ident(
+  def l "useri/useri_base.ml" 302 7606 7635 "useri/useri_base.ml" 302 7606 7654
+)
+"useri/useri_base.ml" 302 7606 7635 "useri/useri_base.ml" 302 7606 7649
+type(
+  ([ `Error | `Warning ] -> string -> unit) ref
+)
+ident(
+  int_ref backend_logger "useri/useri_base.ml" 300 7502 7508 "useri/useri_base.ml" 300 7502 7522
+)
+"useri/useri_base.ml" 302 7606 7650 "useri/useri_base.ml" 302 7606 7652
+type(
+  ([ `Error | `Warning ] -> string -> unit) ref ->
+  ([ `Error | `Warning ] -> string -> unit) -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"useri/useri_base.ml" 302 7606 7653 "useri/useri_base.ml" 302 7606 7654
+type(
+  [ `Error | `Warning ] -> string -> unit
+)
+ident(
+  int_ref l "useri/useri_base.ml" 302 7606 7631 "useri/useri_base.ml" 302 7606 7632
+)
+"useri/useri_base.ml" 302 7606 7635 "useri/useri_base.ml" 302 7606 7654
+type(
+  unit
+)
+"useri/useri_base.ml" 307 7723 7729 "useri/useri_base.ml" 307 7723 7741
+type(
+  Format.formatter -> [< `Known of int | `Unknown ] -> unit
+)
+ident(
+  def pp_cpu_count "useri/useri_base.ml" 309 7790 7819 "useri/useri_base.ml" 310 7820 7823
+)
+"useri/useri_base.ml" 307 7723 7742 "useri/useri_base.ml" 307 7723 7745
+type(
+  Format.formatter
+)
+ident(
+  def ppf "useri/useri_base.ml" 307 7723 7748 "useri/useri_base.ml" 309 7790 7819
+)
+"useri/useri_base.ml" 308 7757 7761 "useri/useri_base.ml" 308 7757 7769
+type(
+  [< `Known of int | `Unknown ] as 'e
+)
+"useri/useri_base.ml" 308 7757 7773 "useri/useri_base.ml" 308 7757 7775
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 308 7757 7776 "useri/useri_base.ml" 308 7757 7779
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 307 7723 7742 "useri/useri_base.ml" 307 7723 7745
+)
+"useri/useri_base.ml" 308 7757 7780 "useri/useri_base.ml" 308 7757 7789
+type(
+  (unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 308 7757 7773 "useri/useri_base.ml" 308 7757 7789
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 309 7790 7801 "useri/useri_base.ml" 309 7790 7802
+type(
+  int
+)
+ident(
+  def c "useri/useri_base.ml" 309 7790 7806 "useri/useri_base.ml" 309 7790 7819
+)
+"useri/useri_base.ml" 309 7790 7794 "useri/useri_base.ml" 309 7790 7802
+type(
+  'e
+)
+"useri/useri_base.ml" 309 7790 7806 "useri/useri_base.ml" 309 7790 7808
+type(
+  Format.formatter ->
+  (int -> unit, Format.formatter, unit) format -> int -> unit
+)
+ident(
+  int_ref pp "useri/useri_base.ml" 10 348 352 "useri/useri_base.ml" 10 348 354
+)
+"useri/useri_base.ml" 309 7790 7809 "useri/useri_base.ml" 309 7790 7812
+type(
+  Format.formatter
+)
+ident(
+  int_ref ppf "useri/useri_base.ml" 307 7723 7742 "useri/useri_base.ml" 307 7723 7745
+)
+"useri/useri_base.ml" 309 7790 7813 "useri/useri_base.ml" 309 7790 7817
+type(
+  (int -> unit, Format.formatter, unit) format
+)
+"useri/useri_base.ml" 309 7790 7818 "useri/useri_base.ml" 309 7790 7819
+type(
+  int
+)
+ident(
+  int_ref c "useri/useri_base.ml" 309 7790 7801 "useri/useri_base.ml" 309 7790 7802
+)
+"useri/useri_base.ml" 309 7790 7806 "useri/useri_base.ml" 309 7790 7819
+call(
+  tail
+)
+type(
+  unit
+)
+"useri/useri_base.ml" 307 7723 7748 "useri/useri_base.ml" 309 7790 7819
+type(
+  'e -> unit
+)

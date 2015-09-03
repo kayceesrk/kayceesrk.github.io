@@ -1,0 +1,42 @@
+### Starting build.
+# Target: tests/test.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:tests/test.mli, ocaml, ocamldep, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamldep -package oUnit -package qcheck -modules tests/test.mli > tests/test.mli.depends # cached
+# Target: src/g2048.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:src/g2048.mli, ocaml, ocamldep, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamldep -package js_of_ocaml -package react -package vg -package vg.htmlc -modules src/g2048.mli > src/g2048.mli.depends # cached
+# Target: src/g2048.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:src/g2048.mli, interf, ocaml, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamlc -c -g -annot -bin-annot -package js_of_ocaml -package react -package vg -package vg.htmlc -I src -I useri -I tests -o src/g2048.cmi src/g2048.mli # cached
+# Target: tests/test.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:tests/test.mli, interf, ocaml, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamlc -c -g -annot -bin-annot -package oUnit -package qcheck -I tests -I src -I useri -o tests/test.cmi tests/test.mli # cached
+# Target: tests/test.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:tests/test.ml, ocaml, ocamldep, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamldep -package oUnit -package qcheck -modules tests/test.ml > tests/test.ml.depends # cached
+# Target: tests/board_utils.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:tests/board_utils.ml, ocaml, ocamldep, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamldep -package oUnit -package qcheck -modules tests/board_utils.ml > tests/board_utils.ml.depends # cached
+# Target: tests/board_utils.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:tests/board_utils.cmo, file:tests/board_utils.ml, implem, ocaml, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamlc -c -g -annot -bin-annot -package oUnit -package qcheck -I tests -I src -I useri -o tests/board_utils.cmo tests/board_utils.ml # cached
+# Target: tests/test.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:tests/test.cmo, file:tests/test.ml, implem, ocaml, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamlc -c -g -annot -bin-annot -package oUnit -package qcheck -I tests -I src -I useri -o tests/test.cmo tests/test.ml # cached
+# Target: tests/test_local.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:tests/test_local.ml, ocaml, ocamldep, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamldep -package oUnit -package qcheck -modules tests/test_local.ml > tests/test_local.ml.depends
+# Target: tests/test_local.cmo, tags: { annot, bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:tests/test_local.cmo, file:tests/test_local.ml, implem, ocaml, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamlc -c -g -annot -bin-annot -package oUnit -package qcheck -I tests -I src -I useri -o tests/test_local.cmo tests/test_local.ml
+# Target: src/g2048.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:src/g2048.ml, ocaml, ocamldep, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamldep -package js_of_ocaml -package react -package vg -package vg.htmlc -modules src/g2048.ml > src/g2048.ml.depends
+# Target: src/utils.ml.depends, tags: { annot, bin_annot, debug, extension:ml, file:src/utils.ml, ocaml, ocamldep, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamldep -package js_of_ocaml -package react -package vg -package vg.htmlc -modules src/utils.ml > src/utils.ml.depends
+# Target: src/utils.mli.depends, tags: { annot, bin_annot, debug, extension:mli, file:src/utils.mli, ocaml, ocamldep, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamldep -package js_of_ocaml -package react -package vg -package vg.htmlc -modules src/utils.mli > src/utils.mli.depends
+# Target: src/utils.cmi, tags: { annot, bin_annot, byte, compile, debug, extension:mli, file:src/utils.mli, interf, ocaml, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamlc -c -g -annot -bin-annot -package js_of_ocaml -package react -package vg -package vg.htmlc -I src -I useri -I tests -o src/utils.cmi src/utils.mli
+# Target: src/utils.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:src/utils.cmx, file:src/utils.ml, implem, native, ocaml, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamlopt -c -g -annot -bin-annot -package js_of_ocaml -package react -package vg -package vg.htmlc -I src -I useri -I tests -o src/utils.cmx src/utils.ml
+# Target: src/g2048.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:src/g2048.cmx, file:src/g2048.ml, implem, native, ocaml, package(js_of_ocaml), package(react), package(vg), package(vg.htmlc), quiet, traverse }
+ocamlfind ocamlopt -c -g -annot -bin-annot -package js_of_ocaml -package react -package vg -package vg.htmlc -I src -I useri -I tests -o src/g2048.cmx src/g2048.ml
+# Target: tests/board_utils.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:tests/board_utils.cmx, file:tests/board_utils.ml, implem, native, ocaml, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamlopt -c -g -annot -bin-annot -package oUnit -package qcheck -I tests -I src -I useri -o tests/board_utils.cmx tests/board_utils.ml
+# Target: tests/test.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:tests/test.cmx, file:tests/test.ml, implem, native, ocaml, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamlopt -c -g -annot -bin-annot -package oUnit -package qcheck -I tests -I src -I useri -o tests/test.cmx tests/test.ml
+# Target: tests/test_local.cmx, tags: { annot, bin_annot, compile, debug, extension:cmx, extension:ml, file:tests/test_local.cmx, file:tests/test_local.ml, implem, native, ocaml, package(oUnit), package(qcheck), quiet, traverse }
+ocamlfind ocamlopt -c -g -annot -bin-annot -package oUnit -package qcheck -I tests -I src -I useri -o tests/test_local.cmx tests/test_local.ml
+# Target: tests/test_local.native, tags: { dont_link_with, extension:native, file:tests/test_local.native, link, native, ocaml, package(oUnit), package(qcheck), program, quiet, traverse }
+ocamlfind ocamlopt -linkpkg -package oUnit -package qcheck src/utils.cmx src/g2048.cmx tests/board_utils.cmx tests/test.cmx tests/test_local.cmx -o tests/test_local.native
+# Compilation successful.

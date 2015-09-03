@@ -1,0 +1,856 @@
+"src/g2048.ml" 8 150 154 "src/g2048.ml" 8 150 156
+type(
+  unit
+)
+"src/g2048.ml" 8 150 159 "src/g2048.ml" 8 150 175
+type(
+  unit -> unit
+)
+ident(
+  ext_ref Random.self_init
+)
+"src/g2048.ml" 8 150 176 "src/g2048.ml" 8 150 178
+type(
+  unit
+)
+"src/g2048.ml" 8 150 159 "src/g2048.ml" 8 150 178
+call(
+  stack
+)
+type(
+  unit
+)
+"src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+type(
+  'a option
+)
+ident(
+  def empty "src/g2048.ml" 54 1443 1443 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 53 1426 1438 "src/g2048.ml" 53 1426 1442
+type(
+  'a option
+)
+"src/g2048.ml" 54 1443 1447 "src/g2048.ml" 54 1443 1449
+type(
+  int option
+)
+ident(
+  def t2 "src/g2048.ml" 55 1459 1459 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 54 1443 1457 "src/g2048.ml" 54 1443 1458
+type(
+  int
+)
+"src/g2048.ml" 54 1443 1452 "src/g2048.ml" 54 1443 1458
+type(
+  int option
+)
+"src/g2048.ml" 55 1459 1463 "src/g2048.ml" 55 1459 1465
+type(
+  int option
+)
+ident(
+  def t4 "src/g2048.ml" 56 1475 1475 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 55 1459 1473 "src/g2048.ml" 55 1459 1474
+type(
+  int
+)
+"src/g2048.ml" 55 1459 1468 "src/g2048.ml" 55 1459 1474
+type(
+  int option
+)
+"src/g2048.ml" 56 1475 1479 "src/g2048.ml" 56 1475 1481
+type(
+  int option
+)
+ident(
+  def t8 "src/g2048.ml" 57 1491 1491 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 56 1475 1489 "src/g2048.ml" 56 1475 1490
+type(
+  int
+)
+"src/g2048.ml" 56 1475 1484 "src/g2048.ml" 56 1475 1490
+type(
+  int option
+)
+"src/g2048.ml" 57 1491 1495 "src/g2048.ml" 57 1491 1498
+type(
+  int option
+)
+ident(
+  def t16 "src/g2048.ml" 58 1509 1509 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 57 1491 1506 "src/g2048.ml" 57 1491 1508
+type(
+  int
+)
+"src/g2048.ml" 57 1491 1501 "src/g2048.ml" 57 1491 1508
+type(
+  int option
+)
+"src/g2048.ml" 58 1509 1513 "src/g2048.ml" 58 1509 1516
+type(
+  int option
+)
+ident(
+  def t32 "src/g2048.ml" 59 1527 1527 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 58 1509 1524 "src/g2048.ml" 58 1509 1526
+type(
+  int
+)
+"src/g2048.ml" 58 1509 1519 "src/g2048.ml" 58 1509 1526
+type(
+  int option
+)
+"src/g2048.ml" 59 1527 1531 "src/g2048.ml" 59 1527 1534
+type(
+  int option
+)
+ident(
+  def t64 "src/g2048.ml" 60 1545 1545 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 59 1527 1542 "src/g2048.ml" 59 1527 1544
+type(
+  int
+)
+"src/g2048.ml" 59 1527 1537 "src/g2048.ml" 59 1527 1544
+type(
+  int option
+)
+"src/g2048.ml" 60 1545 1549 "src/g2048.ml" 60 1545 1553
+type(
+  int option
+)
+ident(
+  def t128 "src/g2048.ml" 61 1565 1565 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 60 1545 1561 "src/g2048.ml" 60 1545 1564
+type(
+  int
+)
+"src/g2048.ml" 60 1545 1556 "src/g2048.ml" 60 1545 1564
+type(
+  int option
+)
+"src/g2048.ml" 61 1565 1569 "src/g2048.ml" 61 1565 1573
+type(
+  int option
+)
+ident(
+  def t256 "src/g2048.ml" 62 1585 1585 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 61 1565 1581 "src/g2048.ml" 61 1565 1584
+type(
+  int
+)
+"src/g2048.ml" 61 1565 1576 "src/g2048.ml" 61 1565 1584
+type(
+  int option
+)
+"src/g2048.ml" 62 1585 1589 "src/g2048.ml" 62 1585 1593
+type(
+  int option
+)
+ident(
+  def t512 "src/g2048.ml" 63 1605 1605 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 62 1585 1601 "src/g2048.ml" 62 1585 1604
+type(
+  int
+)
+"src/g2048.ml" 62 1585 1596 "src/g2048.ml" 62 1585 1604
+type(
+  int option
+)
+"src/g2048.ml" 63 1605 1609 "src/g2048.ml" 63 1605 1614
+type(
+  int option
+)
+ident(
+  def t1024 "src/g2048.ml" 64 1627 1627 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 63 1605 1622 "src/g2048.ml" 63 1605 1626
+type(
+  int
+)
+"src/g2048.ml" 63 1605 1617 "src/g2048.ml" 63 1605 1626
+type(
+  int option
+)
+"src/g2048.ml" 64 1627 1631 "src/g2048.ml" 64 1627 1636
+type(
+  int option
+)
+ident(
+  def t2048 "src/g2048.ml" 67 1722 1722 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 64 1627 1644 "src/g2048.ml" 64 1627 1648
+type(
+  int
+)
+"src/g2048.ml" 64 1627 1639 "src/g2048.ml" 64 1627 1648
+type(
+  int option
+)
+"src/g2048.ml" 67 1722 1726 "src/g2048.ml" 67 1722 1738
+type(
+  square -> square
+)
+ident(
+  def square_value "src/g2048.ml" 69 1759 1759 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 67 1722 1740 "src/g2048.ml" 67 1722 1742
+type(
+  square
+)
+ident(
+  def sq "src/g2048.ml" 67 1722 1755 "src/g2048.ml" 67 1722 1757
+)
+"src/g2048.ml" 67 1722 1755 "src/g2048.ml" 67 1722 1757
+type(
+  square
+)
+ident(
+  int_ref sq "src/g2048.ml" 67 1722 1740 "src/g2048.ml" 67 1722 1742
+)
+"src/g2048.ml" 69 1759 1763 "src/g2048.ml" 69 1759 1779
+type(
+  int option -> string
+)
+ident(
+  def string_of_square "src/g2048.ml" 74 1917 1917 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 70 1791 1798 "src/g2048.ml" 70 1791 1799
+type(
+  int
+)
+ident(
+  def s "src/g2048.ml" 70 1791 1803 "src/g2048.ml" 70 1791 1818
+)
+"src/g2048.ml" 70 1791 1793 "src/g2048.ml" 70 1791 1799
+type(
+  int option
+)
+"src/g2048.ml" 70 1791 1803 "src/g2048.ml" 70 1791 1816
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"src/g2048.ml" 70 1791 1817 "src/g2048.ml" 70 1791 1818
+type(
+  int
+)
+ident(
+  int_ref s "src/g2048.ml" 70 1791 1798 "src/g2048.ml" 70 1791 1799
+)
+"src/g2048.ml" 70 1791 1803 "src/g2048.ml" 70 1791 1818
+call(
+  tail
+)
+type(
+  string
+)
+"src/g2048.ml" 71 1819 1821 "src/g2048.ml" 71 1819 1825
+type(
+  int option
+)
+"src/g2048.ml" 71 1819 1829 "src/g2048.ml" 71 1819 1832
+type(
+  string
+)
+"src/g2048.ml" 69 1759 1782 "src/g2048.ml" 71 1819 1832
+type(
+  int option -> string
+)
+"src/g2048.ml" 74 1917 1921 "src/g2048.ml" 74 1917 1931
+type(
+  unit -> square
+)
+ident(
+  def new_square "src/g2048.ml" 79 1998 1998 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 74 1917 1932 "src/g2048.ml" 74 1917 1934
+type(
+  unit
+)
+"src/g2048.ml" 75 1946 1954 "src/g2048.ml" 75 1946 1964
+type(
+  int -> int
+)
+ident(
+  ext_ref Random.int
+)
+"src/g2048.ml" 75 1946 1965 "src/g2048.ml" 75 1946 1967
+type(
+  int
+)
+"src/g2048.ml" 75 1946 1954 "src/g2048.ml" 75 1946 1967
+call(
+  stack
+)
+type(
+  int
+)
+"src/g2048.ml" 76 1973 1977 "src/g2048.ml" 76 1973 1978
+type(
+  int
+)
+"src/g2048.ml" 76 1973 1982 "src/g2048.ml" 76 1973 1984
+type(
+  square
+)
+ident(
+  int_ref t4 "src/g2048.ml" 55 1459 1463 "src/g2048.ml" 55 1459 1465
+)
+"src/g2048.ml" 77 1985 1989 "src/g2048.ml" 77 1985 1990
+type(
+  int
+)
+"src/g2048.ml" 77 1985 1994 "src/g2048.ml" 77 1985 1996
+type(
+  square
+)
+ident(
+  int_ref t2 "src/g2048.ml" 54 1443 1447 "src/g2048.ml" 54 1443 1449
+)
+"src/g2048.ml" 75 1946 1948 "src/g2048.ml" 77 1985 1996
+type(
+  square
+)
+type(
+  square
+)
+"src/g2048.ml" 81 2013 2017 "src/g2048.ml" 81 2013 2029
+type(
+  unit -> int option list list
+)
+ident(
+  def create_board "src/g2048.ml" 87 2174 2174 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 81 2013 2030 "src/g2048.ml" 81 2013 2032
+type(
+  unit
+)
+"src/g2048.ml" 82 2035 2040 "src/g2048.ml" 82 2035 2045
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 82 2035 2047 "src/g2048.ml" 82 2035 2049
+type(
+  int option
+)
+ident(
+  int_ref t2 "src/g2048.ml" 54 1443 1447 "src/g2048.ml" 54 1443 1449
+)
+"src/g2048.ml" 82 2035 2054 "src/g2048.ml" 82 2035 2059
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 82 2035 2061 "src/g2048.ml" 82 2035 2066
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 82 2035 2039 "src/g2048.ml" 82 2035 2067
+type(
+  int option list
+)
+"src/g2048.ml" 83 2069 2074 "src/g2048.ml" 83 2069 2079
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 83 2069 2081 "src/g2048.ml" 83 2069 2086
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 83 2069 2088 "src/g2048.ml" 83 2069 2093
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 83 2069 2095 "src/g2048.ml" 83 2069 2100
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 83 2069 2073 "src/g2048.ml" 83 2069 2101
+type(
+  int option list
+)
+"src/g2048.ml" 84 2103 2108 "src/g2048.ml" 84 2103 2113
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 84 2103 2115 "src/g2048.ml" 84 2103 2120
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 84 2103 2122 "src/g2048.ml" 84 2103 2127
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 84 2103 2129 "src/g2048.ml" 84 2103 2134
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 84 2103 2107 "src/g2048.ml" 84 2103 2135
+type(
+  int option list
+)
+"src/g2048.ml" 85 2137 2142 "src/g2048.ml" 85 2137 2147
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 85 2137 2149 "src/g2048.ml" 85 2137 2154
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 85 2137 2156 "src/g2048.ml" 85 2137 2161
+type(
+  int option
+)
+ident(
+  int_ref empty "src/g2048.ml" 53 1426 1430 "src/g2048.ml" 53 1426 1435
+)
+"src/g2048.ml" 85 2137 2163 "src/g2048.ml" 85 2137 2165
+type(
+  int option
+)
+ident(
+  int_ref t2 "src/g2048.ml" 54 1443 1447 "src/g2048.ml" 54 1443 1449
+)
+"src/g2048.ml" 85 2137 2141 "src/g2048.ml" 85 2137 2169
+type(
+  int option list
+)
+"src/g2048.ml" 82 2035 2037 "src/g2048.ml" 85 2137 2172
+type(
+  int option list list
+)
+"src/g2048.ml" 87 2174 2178 "src/g2048.ml" 87 2174 2188
+type(
+  'a list list -> int * int
+)
+ident(
+  def board_size "src/g2048.ml" 88 2211 2211 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 87 2174 2191 "src/g2048.ml" 87 2174 2210
+type(
+  'a list list -> int * int
+)
+ident(
+  ext_ref Utils.listlist_dims
+)
+"src/g2048.ml" 88 2211 2215 "src/g2048.ml" 88 2211 2225
+type(
+  ('a -> int * int -> 'b -> 'a) -> 'a -> 'b list list -> 'a
+)
+ident(
+  def fold_board "src/g2048.ml" 90 2250 2250 "src/g2048.ml" 1 0 -1
+)
+"src/g2048.ml" 88 2211 2228 "src/g2048.ml" 88 2211 2248
+type(
+  ('a -> int * int -> 'b -> 'a) -> 'a -> 'b list list -> 'a
+)
+ident(
+  ext_ref Utils.fold_listlisti
+)
+"src/g2048.ml" 97 2344 2350 "src/g2048.ml" 97 2344 2359
+type(
+  move -> board -> board
+)
+ident(
+  def game_move "src/g2048.ml" 101 2496 2517 "src/g2048.ml" 103 2519 2522
+)
+"src/g2048.ml" 97 2344 2361 "src/g2048.ml" 97 2344 2363
+type(
+  move
+)
+ident(
+  def mv "src/g2048.ml" 97 2344 2372 "src/g2048.ml" 101 2496 2517
+)
+"src/g2048.ml" 97 2344 2373 "src/g2048.ml" 97 2344 2374
+type(
+  board
+)
+ident(
+  def b "src/g2048.ml" 97 2344 2384 "src/g2048.ml" 101 2496 2517
+)
+"src/g2048.ml" 98 2394 2402 "src/g2048.ml" 98 2394 2404
+type(
+  board
+)
+ident(
+  def b' "src/g2048.ml" 99 2429 2433 "src/g2048.ml" 101 2496 2517
+)
+"src/g2048.ml" 98 2394 2407 "src/g2048.ml" 98 2394 2420
+type(
+  move -> board -> board
+)
+ident(
+  int_ref S.shift_board "src/g2048.ml" 48 1291 1293 "src/g2048.ml" 48 1291 1333
+)
+"src/g2048.ml" 98 2394 2421 "src/g2048.ml" 98 2394 2423
+type(
+  move
+)
+ident(
+  int_ref mv "src/g2048.ml" 97 2344 2361 "src/g2048.ml" 97 2344 2363
+)
+"src/g2048.ml" 98 2394 2424 "src/g2048.ml" 98 2394 2425
+type(
+  board
+)
+ident(
+  int_ref b "src/g2048.ml" 97 2344 2373 "src/g2048.ml" 97 2344 2374
+)
+"src/g2048.ml" 98 2394 2407 "src/g2048.ml" 98 2394 2425
+call(
+  stack
+)
+type(
+  board
+)
+"src/g2048.ml" 99 2429 2439 "src/g2048.ml" 99 2429 2454
+type(
+  square -> board -> board option
+)
+ident(
+  int_ref S.insert_square "src/g2048.ml" 46 1194 1196 "src/g2048.ml" 46 1194 1247
+)
+"src/g2048.ml" 99 2429 2456 "src/g2048.ml" 99 2429 2466
+type(
+  unit -> square
+)
+ident(
+  int_ref new_square "src/g2048.ml" 74 1917 1921 "src/g2048.ml" 74 1917 1931
+)
+"src/g2048.ml" 99 2429 2467 "src/g2048.ml" 99 2429 2469
+type(
+  unit
+)
+"src/g2048.ml" 99 2429 2455 "src/g2048.ml" 99 2429 2470
+call(
+  stack
+)
+type(
+  square
+)
+"src/g2048.ml" 99 2429 2471 "src/g2048.ml" 99 2429 2473
+type(
+  board
+)
+ident(
+  int_ref b' "src/g2048.ml" 98 2394 2402 "src/g2048.ml" 98 2394 2404
+)
+"src/g2048.ml" 99 2429 2439 "src/g2048.ml" 99 2429 2473
+call(
+  stack
+)
+type(
+  board option
+)
+"src/g2048.ml" 100 2479 2485 "src/g2048.ml" 100 2479 2489
+type(
+  board option
+)
+"src/g2048.ml" 100 2479 2493 "src/g2048.ml" 100 2479 2495
+type(
+  board
+)
+ident(
+  int_ref b' "src/g2048.ml" 98 2394 2402 "src/g2048.ml" 98 2394 2404
+)
+"src/g2048.ml" 101 2496 2507 "src/g2048.ml" 101 2496 2510
+type(
+  board
+)
+ident(
+  def b'' "src/g2048.ml" 101 2496 2514 "src/g2048.ml" 101 2496 2517
+)
+"src/g2048.ml" 101 2496 2502 "src/g2048.ml" 101 2496 2510
+type(
+  board option
+)
+"src/g2048.ml" 101 2496 2514 "src/g2048.ml" 101 2496 2517
+type(
+  board
+)
+ident(
+  int_ref b'' "src/g2048.ml" 101 2496 2507 "src/g2048.ml" 101 2496 2510
+)
+"src/g2048.ml" 99 2429 2433 "src/g2048.ml" 101 2496 2517
+type(
+  board
+)
+"src/g2048.ml" 98 2394 2398 "src/g2048.ml" 101 2496 2517
+type(
+  board
+)
+type(
+  board
+)
+"src/g2048.ml" 116 2822 2828 "src/g2048.ml" 116 2822 2842
+type(
+  square -> bool
+)
+ident(
+  def is_square_2048 "src/g2048.ml" 121 3012 3014 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 116 2822 2844 "src/g2048.ml" 116 2822 2846
+type(
+  square
+)
+ident(
+  def sq "src/g2048.ml" 116 2822 2859 "src/g2048.ml" 116 2822 2864
+)
+"src/g2048.ml" 116 2822 2859 "src/g2048.ml" 116 2822 2864
+type(
+  bool
+)
+"src/g2048.ml" 121 3012 3018 "src/g2048.ml" 121 3012 3034
+type(
+  board -> bool
+)
+ident(
+  def is_board_winning "src/g2048.ml" 152 4150 4152 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 121 3012 3036 "src/g2048.ml" 121 3012 3037
+type(
+  board
+)
+ident(
+  def b "src/g2048.ml" 121 3012 3049 "src/g2048.ml" 121 3012 3054
+)
+"src/g2048.ml" 121 3012 3049 "src/g2048.ml" 121 3012 3054
+type(
+  bool
+)
+"src/g2048.ml" 152 4150 4160 "src/g2048.ml" 152 4150 4177
+type(
+  row -> row -> row
+)
+ident(
+  def shift_left_helper "src/g2048.ml" 152 4150 4152 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 152 4150 4179 "src/g2048.ml" 152 4150 4180
+type(
+  row
+)
+ident(
+  def r "src/g2048.ml" 152 4150 4188 "src/g2048.ml" 152 4150 4213
+)
+"src/g2048.ml" 152 4150 4189 "src/g2048.ml" 152 4150 4196
+type(
+  row
+)
+ident(
+  def empties "src/g2048.ml" 152 4150 4204 "src/g2048.ml" 152 4150 4213
+)
+"src/g2048.ml" 152 4150 4212 "src/g2048.ml" 152 4150 4213
+type(
+  row
+)
+type(
+  row
+)
+ident(
+  int_ref r "src/g2048.ml" 152 4150 4179 "src/g2048.ml" 152 4150 4180
+)
+"src/g2048.ml" 154 4215 4221 "src/g2048.ml" 154 4215 4231
+type(
+  row -> row
+)
+ident(
+  def shift_left "src/g2048.ml" 161 4574 4576 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 154 4215 4233 "src/g2048.ml" 154 4215 4234
+type(
+  row
+)
+ident(
+  def r "src/g2048.ml" 154 4215 4244 "src/g2048.ml" 154 4215 4266
+)
+"src/g2048.ml" 154 4215 4244 "src/g2048.ml" 154 4215 4261
+type(
+  row -> row -> row
+)
+ident(
+  int_ref shift_left_helper "src/g2048.ml" 152 4150 4160 "src/g2048.ml" 152 4150 4177
+)
+"src/g2048.ml" 154 4215 4262 "src/g2048.ml" 154 4215 4263
+type(
+  row
+)
+ident(
+  int_ref r "src/g2048.ml" 154 4215 4233 "src/g2048.ml" 154 4215 4234
+)
+"src/g2048.ml" 154 4215 4264 "src/g2048.ml" 154 4215 4266
+type(
+  row
+)
+"src/g2048.ml" 154 4215 4244 "src/g2048.ml" 154 4215 4266
+call(
+  tail
+)
+type(
+  row
+)
+"src/g2048.ml" 161 4574 4584 "src/g2048.ml" 161 4574 4595
+type(
+  move -> board -> board
+)
+ident(
+  def shift_board "src/g2048.ml" 161 4574 4576 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 161 4574 4597 "src/g2048.ml" 161 4574 4599
+type(
+  move
+)
+ident(
+  def mv "src/g2048.ml" 161 4574 4608 "src/g2048.ml" 161 4574 4631
+)
+"src/g2048.ml" 161 4574 4609 "src/g2048.ml" 161 4574 4610
+type(
+  board
+)
+ident(
+  def b "src/g2048.ml" 161 4574 4620 "src/g2048.ml" 161 4574 4631
+)
+"src/g2048.ml" 161 4574 4630 "src/g2048.ml" 161 4574 4631
+type(
+  board
+)
+type(
+  board
+)
+ident(
+  int_ref b "src/g2048.ml" 161 4574 4609 "src/g2048.ml" 161 4574 4610
+)
+"src/g2048.ml" 175 5198 5204 "src/g2048.ml" 175 5198 5217
+type(
+  square -> board -> board option
+)
+ident(
+  def insert_square "src/g2048.ml" 191 5930 5932 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 175 5198 5219 "src/g2048.ml" 175 5198 5221
+type(
+  square
+)
+ident(
+  def sq "src/g2048.ml" 175 5198 5232 "src/g2048.ml" 175 5198 5265
+)
+"src/g2048.ml" 175 5198 5233 "src/g2048.ml" 175 5198 5234
+type(
+  board
+)
+ident(
+  def b "src/g2048.ml" 175 5198 5244 "src/g2048.ml" 175 5198 5265
+)
+"src/g2048.ml" 175 5198 5261 "src/g2048.ml" 175 5198 5265
+type(
+  board option
+)
+type(
+  board option
+)
+"src/g2048.ml" 191 5930 5940 "src/g2048.ml" 191 5930 5955
+type(
+  row -> bool
+)
+ident(
+  def is_complete_row "src/g2048.ml" 191 5930 5932 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 191 5930 5957 "src/g2048.ml" 191 5930 5958
+type(
+  row
+)
+ident(
+  def r "src/g2048.ml" 191 5930 5966 "src/g2048.ml" 191 5930 5979
+)
+"src/g2048.ml" 191 5930 5975 "src/g2048.ml" 191 5930 5979
+type(
+  bool
+)
+type(
+  bool
+)
+"src/g2048.ml" 195 6089 6095 "src/g2048.ml" 195 6089 6107
+type(
+  board -> bool
+)
+ident(
+  def is_game_over "src/g2048.ml" 209 6640 6642 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 195 6089 6109 "src/g2048.ml" 195 6089 6110
+type(
+  board
+)
+ident(
+  def b "src/g2048.ml" 195 6089 6122 "src/g2048.ml" 195 6089 6127
+)
+"src/g2048.ml" 195 6089 6122 "src/g2048.ml" 195 6089 6127
+type(
+  bool
+)
+"src/g2048.ml" 209 6640 6646 "src/g2048.ml" 209 6640 6664
+type(
+  square -> 'a list
+)
+ident(
+  def square_provenances "src/g2048.ml" 209 6640 6683 "src/g2048.ml" 231 7489 7492
+)
+"src/g2048.ml" 209 6640 6666 "src/g2048.ml" 209 6640 6668
+type(
+  square
+)
+ident(
+  def sq "src/g2048.ml" 209 6640 6681 "src/g2048.ml" 209 6640 6683
+)
+"src/g2048.ml" 209 6640 6681 "src/g2048.ml" 209 6640 6683
+type(
+  'a list
+)

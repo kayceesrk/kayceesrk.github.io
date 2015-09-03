@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Useri.Mouse.html">
+<link rel="next" href="Useri.Key.html">
+<link rel="Up" href="Useri.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="G2048" rel="Chapter" href="G2048.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Test" rel="Chapter" href="Test.html">
+<link title="Render" rel="Chapter" href="Render.html">
+<link title="Anim" rel="Chapter" href="Anim.html">
+<link title="Useri" rel="Chapter" href="Useri.html">
+<link title="Useri_jsoo" rel="Chapter" href="Useri_jsoo.html"><link title="Touch" rel="Section" href="#1_Touch">
+<title>Useri.Touch</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Useri.Mouse.html" title="Useri.Mouse">Previous</a>
+&nbsp;<a class="up" href="Useri.html" title="Useri">Up</a>
+&nbsp;<a class="post" href="Useri.Key.html" title="Useri.Key">Next</a>
+</div>
+<h1>Module <a href="type_Useri.Touch.html">Useri.Touch</a></h1>
+
+<pre><span class="keyword">module</span> Touch: <code class="code"><span class="keyword">sig</span></code> <a href="Useri.Touch.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+User touches.
+<p>
+
+    Touch events are only reported whenever they occur
+    in the application surface (FIXME is that true ?).
+    Coordinates are in surface normalized
+    coordinates with <code class="code">(0,0)</code> corresponding to the bottom left corner
+    and <code class="code">(1,1)</code> to the top right corner.<br>
+</div>
+<hr width="100%">
+<br>
+<h1 id="1_Touch">Touch</h1><br>
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+<div class="info ">
+The type for user touches.<br>
+</div>
+
+
+<pre><span id="VALid"><span class="keyword">val</span> id</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<code class="code">id t</code> is a unique identifier for the touch
+      (FIXME across device identifiers ?)<br>
+</div>
+
+<pre><span id="VALstart_pos"><span class="keyword">val</span> start_pos</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> -> Gg.p2</code></pre><div class="info ">
+<code class="code">start_pos t</code> is the initial touch position of <code class="code">t</code>.<br>
+</div>
+
+<pre><span id="VALdid"><span class="keyword">val</span> did</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<code class="code">did t</code> is a device identifier for the touch.<br>
+</div>
+
+<pre><span id="VALpos"><span class="keyword">val</span> pos</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> -> Gg.p2 React.signal</code></pre><div class="info ">
+<code class="code">pos t</code> is the current touch position of <code class="code">t</code>.<br>
+</div>
+
+<pre><span id="VALdpos"><span class="keyword">val</span> dpos</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> -> Gg.v2 React.event</code></pre><div class="info ">
+<code class="code">dpos t</code> occurs when the touch moves with the current touch position
+      minus the previous one.<br>
+</div>
+
+<pre><span id="VALpressure"><span class="keyword">val</span> pressure</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> -> float React.signal</code></pre><div class="info ">
+<code class="code">pressure t</code> is the pressure normalized from <code class="code">0.</code> to <code class="code">1.</code> (if
+      available).<br>
+</div>
+
+<pre><span id="VALover"><span class="keyword">val</span> over</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> -> [ `Cancel | `Up ] React.event</code></pre><div class="info ">
+<code class="code">over t</code> occurs once whenever the touch ends either because
+      the pressure stops (<code class="code"><span class="keywordsign">`</span><span class="constructor">Up</span></code>) or because the touch is canceled (<code class="code"><span class="keywordsign">`</span><span class="constructor">Cancel</span></code>,
+      for example if the touch is captured by something else).<br>
+</div>
+
+<pre><span id="VALstart"><span class="keyword">val</span> start</span> : <code class="type"><a href="Useri.Touch.html#TYPEt">t</a> list React.event</code></pre><div class="info ">
+<code class="code">start</code> occurs whenever touches do.<br>
+</div>
+</body></html>

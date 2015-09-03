@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Useri_jsoo.Drop.html">
+<link rel="Up" href="Useri_jsoo.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="G2048" rel="Chapter" href="G2048.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Test" rel="Chapter" href="Test.html">
+<link title="Render" rel="Chapter" href="Render.html">
+<link title="Anim" rel="Chapter" href="Anim.html">
+<link title="Useri" rel="Chapter" href="Useri.html">
+<link title="Useri_jsoo" rel="Chapter" href="Useri_jsoo.html"><link title="Surface mode" rel="Section" href="#smode">
+<link title="Surface specification" rel="Section" href="#sspec">
+<link title="Surface properties updates" rel="Section" href="#propsupdate">
+<link title="Handle" rel="Section" href="#handles">
+<title>Useri_jsoo.Surface</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Useri_jsoo.Drop.html" title="Useri_jsoo.Drop">Previous</a>
+&nbsp;<a class="up" href="Useri_jsoo.html" title="Useri_jsoo">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Useri_jsoo.Surface.html">Useri_jsoo.Surface</a></h1>
+
+<pre><span class="keyword">module</span> Surface: <code class="code"><span class="keyword">sig</span></code> <a href="Useri_jsoo.Surface.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Surface.<br>
+</div>
+<hr width="100%">
+<br>
+<h1 id="smode">Surface mode</h1>
+<p>
+
+      <code class="code"><span class="keywordsign">`</span><span class="constructor">Fullscreen</span></code> mode uses JavaScript's
+      <a href="http://www.w3.org/TR/fullscreen/">Fullscreen API</a> and applies
+      it to the document element rather than the surface itself. This
+      is the most flexible as it allows you to keep surrounding
+      elements around the surface or hide them using the CSS
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen">
+      fullscreen</a> pseudo-class.<br>
+<br>
+<h1 id="sspec">Surface specification</h1>
+<p>
+
+      Take into account the following points:
+      <ul>
+<li>The <code class="code">pos</code> argument of <a href="Useri.Surface.html#VALcreate"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.create</code></a> is ignored.</li>
+<li>If the <code class="code">size</code> argument is unspecified. The surface's size
+         is not set explicitely but inherited
+         from the document itself (e.g. through CSS).</li>
+</ul>
+<br>
+<br>
+<h1 id="propsupdate">Surface properties updates</h1>
+<p>
+
+      Browser lack the ability to detect element bounding box
+      changes as such <a href="Useri.Surface.html#VALpos"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.pos</code></a>, <a href="Useri.Surface.html#VALraster_size"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.raster_size</code></a> and
+      <a href="Useri.Surface.html#VALsize"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.size</code></a> only get updated, if needed, on
+      <a href="Useri.Surface.html#VALmode"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.mode</code></a> changes and window resizes. If that
+      doesn't handle all your needs you can call <a href="Useri_jsoo.Surface.html#VALrequest_sync_props"><code class="code"><span class="constructor">Useri_jsoo</span>.<span class="constructor">Surface</span>.request_sync_props</code></a>
+      to request the surface properties to be synchronized.<br>
+
+<pre><span id="VALrequest_sync_props"><span class="keyword">val</span> request_sync_props</span> : <code class="type">unit -> unit</code></pre><div class="info ">
+<code class="code">request_sync_props ()</code> asks to make sure that the application's
+      surface <a href="Useri.Surface.html#VALpos"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.pos</code></a>, <a href="Useri.Surface.html#VALraster_size"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.raster_size</code></a> and
+      <a href="Useri.Surface.html#VALsize"><code class="code"><span class="constructor">Useri</span>.<span class="constructor">Surface</span>.size</code></a> properties are in sync with the surface's
+      element bounding box some time after it was called (can be
+      called in a React step).<br>
+</div>
+
+<pre><span id="VALsize_mm"><span class="keyword">val</span> size_mm</span> : <code class="type">Gg.size2 React.signal</code></pre><div class="info ">
+<code class="code">size_mm</code> is the application's surface size in millimeters.<br>
+</div>
+<br>
+<h1 id="handles">Handle</h1><br>
+
+<pre><span class="keyword">module</span> <a href="Useri_jsoo.Surface.Handle.html">Handle</a>: <code class="code"><span class="keyword">sig</span></code> <a href="Useri_jsoo.Surface.Handle.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info">
+Surface handles.
+</div>
+</body></html>

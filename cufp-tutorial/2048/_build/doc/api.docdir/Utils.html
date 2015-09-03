@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="G2048.html">
+<link rel="next" href="Test.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="G2048" rel="Chapter" href="G2048.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Test" rel="Chapter" href="Test.html">
+<link title="Render" rel="Chapter" href="Render.html">
+<link title="Anim" rel="Chapter" href="Anim.html">
+<link title="Useri" rel="Chapter" href="Useri.html">
+<link title="Useri_jsoo" rel="Chapter" href="Useri_jsoo.html"><title>Utils</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="G2048.html" title="G2048">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Test.html" title="Test">Next</a>
+</div>
+<h1>Module <a href="type_Utils.html">Utils</a></h1>
+
+<pre><span class="keyword">module</span> Utils: <code class="code"><span class="keyword">sig</span></code> <a href="Utils.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+Utility functions.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALtranspose"><span class="keyword">val</span> transpose</span> : <code class="type">'a list list -> 'a list list</code></pre><div class="info ">
+Transpose a matrix. For instance:
+<p>
+
+  <pre class="codepre"><code class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;[&nbsp;1;&nbsp;2];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;3;&nbsp;4];&nbsp;]<br>
+&nbsp;&nbsp;</code></pre>
+<p>
+
+  becomes:
+<p>
+
+  <pre class="codepre"><code class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;[&nbsp;1;&nbsp;3];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;2;&nbsp;4];&nbsp;]<br>
+&nbsp;&nbsp;</code></pre><br>
+</div>
+
+<pre><span id="VALreplace_one"><span class="keyword">val</span> replace_one</span> : <code class="type">('a -> 'a option) -> 'a list -> 'a list option</code></pre><div class="info ">
+<code class="code">replace_one f l</code> replace the first element <code class="code">e</code> in <code class="code">l</code> such that
+    <code class="code">f e</code> is not <code class="code"><span class="constructor">None</span></code>. The new value is <code class="code">y</code> if <code class="code">f x = <span class="constructor">Some</span> y</code>.<br>
+</div>
+<br>
+/ *<br>
+
+<pre><span id="VALfold_listlisti"><span class="keyword">val</span> fold_listlisti</span> : <code class="type">('a -> int * int -> 'b -> 'a) -> 'a -> 'b list list -> 'a</code></pre>
+<pre><span id="VALlistlist_dims"><span class="keyword">val</span> listlist_dims</span> : <code class="type">'a list list -> int * int</code></pre>
+<pre><span id="VALreplace_at"><span class="keyword">val</span> replace_at</span> : <code class="type">int -> ('a -> 'a) -> 'a list -> 'a list</code></pre></body></html>

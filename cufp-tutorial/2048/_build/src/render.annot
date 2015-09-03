@@ -1,0 +1,4809 @@
+"src/render.ml" 13 213 219 "src/render.ml" 13 213 228
+type(
+  Vg.Font.t
+)
+ident(
+  def base_font "src/render.ml" 18 333 335 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 14 231 249 "src/render.ml" 14 231 256
+type(
+  string
+)
+"src/render.ml" 14 231 266 "src/render.ml" 14 231 273
+type(
+  Vg.Font.slant
+)
+"src/render.ml" 14 231 284 "src/render.ml" 14 231 289
+type(
+  Vg.Font.weight
+)
+"src/render.ml" 14 231 298 "src/render.ml" 14 231 301
+type(
+  float
+)
+"src/render.ml" 14 231 235 "src/render.ml" 14 231 304
+type(
+  Vg.Font.t
+)
+"src/render.ml" 18 333 339 "src/render.ml" 18 333 351
+type(
+  Gg.color
+)
+ident(
+  def square_color "src/render.ml" 19 388 390 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 18 333 354 "src/render.ml" 18 333 367
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 18 333 371 "src/render.ml" 18 333 375
+type(
+  float
+)
+"src/render.ml" 18 333 376 "src/render.ml" 18 333 379
+type(
+  int
+)
+"src/render.ml" 18 333 380 "src/render.ml" 18 333 383
+type(
+  int
+)
+"src/render.ml" 18 333 384 "src/render.ml" 18 333 387
+type(
+  int
+)
+"src/render.ml" 18 333 354 "src/render.ml" 18 333 387
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 19 388 394 "src/render.ml" 19 388 404
+type(
+  Gg.size2 -> Vg.image
+)
+ident(
+  def square_img "src/render.ml" 25 559 561 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 19 388 405 "src/render.ml" 19 388 416
+type(
+  Gg.size2
+)
+ident(
+  def square_size "src/render.ml" 20 419 423 "src/render.ml" 21 471 532
+)
+"src/render.ml" 20 419 427 "src/render.ml" 20 419 437
+type(
+  Gg.Box2.t
+)
+ident(
+  def square_box "src/render.ml" 21 471 475 "src/render.ml" 21 471 532
+)
+"src/render.ml" 20 419 440 "src/render.ml" 20 419 450
+type(
+  Gg.p2 -> Gg.size2 -> Gg.Box2.t
+)
+ident(
+  ext_ref Gg.Box2.v_mid
+)
+"src/render.ml" 20 419 451 "src/render.ml" 20 419 455
+type(
+  Gg.p2
+)
+ident(
+  ext_ref Gg.P2.o
+)
+"src/render.ml" 20 419 456 "src/render.ml" 20 419 467
+type(
+  Gg.size2
+)
+ident(
+  int_ref square_size "src/render.ml" 19 388 405 "src/render.ml" 19 388 416
+)
+"src/render.ml" 20 419 440 "src/render.ml" 20 419 467
+call(
+  stack
+)
+type(
+  Gg.Box2.t
+)
+"src/render.ml" 21 471 475 "src/render.ml" 21 471 480
+type(
+  ?area:Vg.P.area -> Vg.path -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.cut
+)
+"src/render.ml" 21 471 484 "src/render.ml" 21 471 489
+type(
+  Vg.path
+)
+ident(
+  ext_ref Vg.P.empty
+)
+"src/render.ml" 21 471 490 "src/render.ml" 21 471 492
+type(
+  Vg.path -> (Vg.path -> Vg.path) -> Vg.path
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 21 471 493 "src/render.ml" 21 471 497
+type(
+  ?rel:bool -> Gg.Box2.t -> Vg.path -> Vg.path
+)
+ident(
+  ext_ref Vg.P.rect
+)
+"src/render.ml" 21 471 498 "src/render.ml" 21 471 508
+type(
+  Gg.Box2.t
+)
+ident(
+  int_ref square_box "src/render.ml" 20 419 427 "src/render.ml" 20 419 437
+)
+"src/render.ml" 21 471 493 "src/render.ml" 21 471 508
+call(
+  stack
+)
+type(
+  Vg.path -> Vg.path
+)
+"src/render.ml" 21 471 484 "src/render.ml" 21 471 508
+call(
+  stack
+)
+type(
+  Vg.path
+)
+"src/render.ml" 21 471 511 "src/render.ml" 21 471 518
+type(
+  Gg.color -> Vg.image
+)
+ident(
+  ext_ref Vg.I.const
+)
+"src/render.ml" 21 471 519 "src/render.ml" 21 471 531
+type(
+  Gg.color
+)
+ident(
+  int_ref square_color "src/render.ml" 18 333 339 "src/render.ml" 18 333 351
+)
+"src/render.ml" 21 471 510 "src/render.ml" 21 471 532
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 21 471 475 "src/render.ml" 21 471 532
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 20 419 423 "src/render.ml" 21 471 532
+type(
+  Vg.image
+)
+"src/render.ml" 25 559 565 "src/render.ml" 25 559 576
+type(
+  int -> Gg.color * Gg.color
+)
+ident(
+  def tile_colors "src/render.ml" 43 1451 1453 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 25 559 577 "src/render.ml" 25 559 580
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 27 657 661 "src/render.ml" 41 1426 1449
+)
+"src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+type(
+  Gg.color
+)
+ident(
+  def whiteish_text "src/render.ml" 28 713 717 "src/render.ml" 41 1426 1449
+)
+"src/render.ml" 27 657 681 "src/render.ml" 27 657 694
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 27 657 695 "src/render.ml" 27 657 699
+type(
+  int
+)
+"src/render.ml" 27 657 700 "src/render.ml" 27 657 704
+type(
+  int
+)
+"src/render.ml" 27 657 705 "src/render.ml" 27 657 709
+type(
+  int
+)
+"src/render.ml" 27 657 681 "src/render.ml" 27 657 709
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 28 713 721 "src/render.ml" 28 713 734
+type(
+  Gg.color
+)
+ident(
+  def brownish_text "src/render.ml" 29 769 773 "src/render.ml" 41 1426 1449
+)
+"src/render.ml" 28 713 737 "src/render.ml" 28 713 750
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 28 713 751 "src/render.ml" 28 713 755
+type(
+  int
+)
+"src/render.ml" 28 713 756 "src/render.ml" 28 713 760
+type(
+  int
+)
+"src/render.ml" 28 713 761 "src/render.ml" 28 713 765
+type(
+  int
+)
+"src/render.ml" 28 713 737 "src/render.ml" 28 713 765
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 29 769 779 "src/render.ml" 29 769 782
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 25 559 577 "src/render.ml" 25 559 580
+)
+"src/render.ml" 30 788 794 "src/render.ml" 30 788 795
+type(
+  int
+)
+"src/render.ml" 30 788 802 "src/render.ml" 30 788 815
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 30 788 816 "src/render.ml" 30 788 820
+type(
+  int
+)
+"src/render.ml" 30 788 821 "src/render.ml" 30 788 825
+type(
+  int
+)
+"src/render.ml" 30 788 826 "src/render.ml" 30 788 830
+type(
+  int
+)
+"src/render.ml" 30 788 802 "src/render.ml" 30 788 830
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 30 788 832 "src/render.ml" 30 788 845
+type(
+  Gg.color
+)
+ident(
+  int_ref brownish_text "src/render.ml" 28 713 721 "src/render.ml" 28 713 734
+)
+"src/render.ml" 30 788 802 "src/render.ml" 30 788 845
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 31 846 852 "src/render.ml" 31 846 853
+type(
+  int
+)
+"src/render.ml" 31 846 860 "src/render.ml" 31 846 873
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 31 846 874 "src/render.ml" 31 846 878
+type(
+  int
+)
+"src/render.ml" 31 846 879 "src/render.ml" 31 846 883
+type(
+  int
+)
+"src/render.ml" 31 846 884 "src/render.ml" 31 846 888
+type(
+  int
+)
+"src/render.ml" 31 846 860 "src/render.ml" 31 846 888
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 31 846 890 "src/render.ml" 31 846 903
+type(
+  Gg.color
+)
+ident(
+  int_ref brownish_text "src/render.ml" 28 713 721 "src/render.ml" 28 713 734
+)
+"src/render.ml" 31 846 860 "src/render.ml" 31 846 903
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 32 904 910 "src/render.ml" 32 904 911
+type(
+  int
+)
+"src/render.ml" 32 904 918 "src/render.ml" 32 904 931
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 32 904 932 "src/render.ml" 32 904 936
+type(
+  int
+)
+"src/render.ml" 32 904 937 "src/render.ml" 32 904 941
+type(
+  int
+)
+"src/render.ml" 32 904 942 "src/render.ml" 32 904 946
+type(
+  int
+)
+"src/render.ml" 32 904 918 "src/render.ml" 32 904 946
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 32 904 948 "src/render.ml" 32 904 961
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 32 904 918 "src/render.ml" 32 904 961
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 33 962 968 "src/render.ml" 33 962 970
+type(
+  int
+)
+"src/render.ml" 33 962 976 "src/render.ml" 33 962 989
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 33 962 990 "src/render.ml" 33 962 994
+type(
+  int
+)
+"src/render.ml" 33 962 995 "src/render.ml" 33 962 999
+type(
+  int
+)
+"src/render.ml" 33 962 1000 "src/render.ml" 33 962 1004
+type(
+  int
+)
+"src/render.ml" 33 962 976 "src/render.ml" 33 962 1004
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 33 962 1006 "src/render.ml" 33 962 1019
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 33 962 976 "src/render.ml" 33 962 1019
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 34 1020 1026 "src/render.ml" 34 1020 1028
+type(
+  int
+)
+"src/render.ml" 34 1020 1034 "src/render.ml" 34 1020 1047
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 34 1020 1048 "src/render.ml" 34 1020 1052
+type(
+  int
+)
+"src/render.ml" 34 1020 1053 "src/render.ml" 34 1020 1057
+type(
+  int
+)
+"src/render.ml" 34 1020 1058 "src/render.ml" 34 1020 1062
+type(
+  int
+)
+"src/render.ml" 34 1020 1034 "src/render.ml" 34 1020 1062
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 34 1020 1064 "src/render.ml" 34 1020 1077
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 34 1020 1034 "src/render.ml" 34 1020 1077
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 35 1078 1084 "src/render.ml" 35 1078 1086
+type(
+  int
+)
+"src/render.ml" 35 1078 1092 "src/render.ml" 35 1078 1105
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 35 1078 1106 "src/render.ml" 35 1078 1110
+type(
+  int
+)
+"src/render.ml" 35 1078 1111 "src/render.ml" 35 1078 1115
+type(
+  int
+)
+"src/render.ml" 35 1078 1116 "src/render.ml" 35 1078 1120
+type(
+  int
+)
+"src/render.ml" 35 1078 1092 "src/render.ml" 35 1078 1120
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 35 1078 1122 "src/render.ml" 35 1078 1135
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 35 1078 1092 "src/render.ml" 35 1078 1135
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 36 1136 1142 "src/render.ml" 36 1136 1145
+type(
+  int
+)
+"src/render.ml" 36 1136 1150 "src/render.ml" 36 1136 1163
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 36 1136 1164 "src/render.ml" 36 1136 1168
+type(
+  int
+)
+"src/render.ml" 36 1136 1169 "src/render.ml" 36 1136 1173
+type(
+  int
+)
+"src/render.ml" 36 1136 1174 "src/render.ml" 36 1136 1178
+type(
+  int
+)
+"src/render.ml" 36 1136 1150 "src/render.ml" 36 1136 1178
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 36 1136 1180 "src/render.ml" 36 1136 1193
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 36 1136 1150 "src/render.ml" 36 1136 1193
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 37 1194 1200 "src/render.ml" 37 1194 1203
+type(
+  int
+)
+"src/render.ml" 37 1194 1208 "src/render.ml" 37 1194 1221
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 37 1194 1222 "src/render.ml" 37 1194 1226
+type(
+  int
+)
+"src/render.ml" 37 1194 1227 "src/render.ml" 37 1194 1231
+type(
+  int
+)
+"src/render.ml" 37 1194 1232 "src/render.ml" 37 1194 1236
+type(
+  int
+)
+"src/render.ml" 37 1194 1208 "src/render.ml" 37 1194 1236
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 37 1194 1238 "src/render.ml" 37 1194 1251
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 37 1194 1208 "src/render.ml" 37 1194 1251
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 38 1252 1258 "src/render.ml" 38 1252 1261
+type(
+  int
+)
+"src/render.ml" 38 1252 1266 "src/render.ml" 38 1252 1279
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 38 1252 1280 "src/render.ml" 38 1252 1284
+type(
+  int
+)
+"src/render.ml" 38 1252 1285 "src/render.ml" 38 1252 1289
+type(
+  int
+)
+"src/render.ml" 38 1252 1290 "src/render.ml" 38 1252 1294
+type(
+  int
+)
+"src/render.ml" 38 1252 1266 "src/render.ml" 38 1252 1294
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 38 1252 1296 "src/render.ml" 38 1252 1309
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 38 1252 1266 "src/render.ml" 38 1252 1309
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 39 1310 1316 "src/render.ml" 39 1310 1320
+type(
+  int
+)
+"src/render.ml" 39 1310 1324 "src/render.ml" 39 1310 1337
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 39 1310 1338 "src/render.ml" 39 1310 1342
+type(
+  int
+)
+"src/render.ml" 39 1310 1343 "src/render.ml" 39 1310 1347
+type(
+  int
+)
+"src/render.ml" 39 1310 1348 "src/render.ml" 39 1310 1352
+type(
+  int
+)
+"src/render.ml" 39 1310 1324 "src/render.ml" 39 1310 1352
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 39 1310 1354 "src/render.ml" 39 1310 1367
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 39 1310 1324 "src/render.ml" 39 1310 1367
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 40 1368 1374 "src/render.ml" 40 1368 1378
+type(
+  int
+)
+"src/render.ml" 40 1368 1382 "src/render.ml" 40 1368 1395
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 40 1368 1396 "src/render.ml" 40 1368 1400
+type(
+  int
+)
+"src/render.ml" 40 1368 1401 "src/render.ml" 40 1368 1405
+type(
+  int
+)
+"src/render.ml" 40 1368 1406 "src/render.ml" 40 1368 1410
+type(
+  int
+)
+"src/render.ml" 40 1368 1382 "src/render.ml" 40 1368 1410
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 40 1368 1412 "src/render.ml" 40 1368 1425
+type(
+  Gg.color
+)
+ident(
+  int_ref whiteish_text "src/render.ml" 27 657 665 "src/render.ml" 27 657 678
+)
+"src/render.ml" 40 1368 1382 "src/render.ml" 40 1368 1425
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 41 1426 1432 "src/render.ml" 41 1426 1433
+type(
+  int
+)
+"src/render.ml" 41 1426 1444 "src/render.ml" 41 1426 1449
+type(
+  bool
+)
+"src/render.ml" 41 1426 1437 "src/render.ml" 41 1426 1449
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 29 769 773 "src/render.ml" 41 1426 1449
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 28 713 717 "src/render.ml" 41 1426 1449
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 27 657 661 "src/render.ml" 41 1426 1449
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 43 1451 1457 "src/render.ml" 43 1451 1466
+type(
+  Gg.size2 -> int -> Vg.Font.t * Gg.v2
+)
+ident(
+  def tile_font "src/render.ml" 54 1977 1979 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 43 1451 1467 "src/render.ml" 43 1451 1476
+type(
+  Gg.size2
+)
+ident(
+  def tile_size "src/render.ml" 43 1451 1477 "src/render.ml" 52 1928 1975
+)
+"src/render.ml" 43 1451 1477 "src/render.ml" 43 1451 1480
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 44 1483 1487 "src/render.ml" 52 1928 1975
+)
+"src/render.ml" 44 1483 1491 "src/render.ml" 44 1483 1503
+type(
+  int -> int
+)
+ident(
+  def count_digits "src/render.ml" 48 1691 1695 "src/render.ml" 52 1928 1975
+)
+"src/render.ml" 44 1483 1504 "src/render.ml" 44 1483 1505
+type(
+  int
+)
+ident(
+  def n "src/render.ml" 45 1565 1571 "src/render.ml" 46 1648 1683
+)
+"src/render.ml" 45 1565 1579 "src/render.ml" 45 1565 1583
+type(
+  int -> int -> int
+)
+ident(
+  def loop "src/render.ml" 45 1565 1571 "src/render.ml" 46 1648 1683
+)
+"src/render.ml" 45 1565 1584 "src/render.ml" 45 1565 1589
+type(
+  int
+)
+ident(
+  def count "src/render.ml" 45 1565 1590 "src/render.ml" 45 1565 1644
+)
+"src/render.ml" 45 1565 1590 "src/render.ml" 45 1565 1591
+type(
+  int
+)
+ident(
+  def n "src/render.ml" 45 1565 1594 "src/render.ml" 45 1565 1644
+)
+"src/render.ml" 45 1565 1597 "src/render.ml" 45 1565 1598
+type(
+  int
+)
+ident(
+  int_ref n "src/render.ml" 45 1565 1590 "src/render.ml" 45 1565 1591
+)
+"src/render.ml" 45 1565 1599 "src/render.ml" 45 1565 1600
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"src/render.ml" 45 1565 1601 "src/render.ml" 45 1565 1602
+type(
+  int
+)
+"src/render.ml" 45 1565 1597 "src/render.ml" 45 1565 1602
+type(
+  bool
+)
+"src/render.ml" 45 1565 1608 "src/render.ml" 45 1565 1613
+type(
+  int
+)
+ident(
+  int_ref count "src/render.ml" 45 1565 1584 "src/render.ml" 45 1565 1589
+)
+"src/render.ml" 45 1565 1619 "src/render.ml" 45 1565 1623
+type(
+  int -> int -> int
+)
+ident(
+  int_ref loop "src/render.ml" 45 1565 1579 "src/render.ml" 45 1565 1583
+)
+"src/render.ml" 45 1565 1625 "src/render.ml" 45 1565 1630
+type(
+  int
+)
+ident(
+  int_ref count "src/render.ml" 45 1565 1584 "src/render.ml" 45 1565 1589
+)
+"src/render.ml" 45 1565 1631 "src/render.ml" 45 1565 1632
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"src/render.ml" 45 1565 1633 "src/render.ml" 45 1565 1634
+type(
+  int
+)
+"src/render.ml" 45 1565 1624 "src/render.ml" 45 1565 1635
+type(
+  int
+)
+"src/render.ml" 45 1565 1637 "src/render.ml" 45 1565 1638
+type(
+  int
+)
+ident(
+  int_ref n "src/render.ml" 45 1565 1590 "src/render.ml" 45 1565 1591
+)
+"src/render.ml" 45 1565 1639 "src/render.ml" 45 1565 1640
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( / )
+)
+"src/render.ml" 45 1565 1641 "src/render.ml" 45 1565 1643
+type(
+  int
+)
+"src/render.ml" 45 1565 1636 "src/render.ml" 45 1565 1644
+type(
+  int
+)
+"src/render.ml" 45 1565 1619 "src/render.ml" 45 1565 1644
+call(
+  tail
+)
+type(
+  int
+)
+"src/render.ml" 45 1565 1594 "src/render.ml" 45 1565 1644
+type(
+  int
+)
+"src/render.ml" 46 1648 1657 "src/render.ml" 46 1648 1658
+type(
+  int
+)
+ident(
+  int_ref n "src/render.ml" 44 1483 1504 "src/render.ml" 44 1483 1505
+)
+"src/render.ml" 46 1648 1659 "src/render.ml" 46 1648 1660
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"src/render.ml" 46 1648 1661 "src/render.ml" 46 1648 1662
+type(
+  int
+)
+"src/render.ml" 46 1648 1657 "src/render.ml" 46 1648 1662
+type(
+  bool
+)
+"src/render.ml" 46 1648 1668 "src/render.ml" 46 1648 1669
+type(
+  int
+)
+"src/render.ml" 46 1648 1675 "src/render.ml" 46 1648 1679
+type(
+  int -> int -> int
+)
+ident(
+  int_ref loop "src/render.ml" 45 1565 1579 "src/render.ml" 45 1565 1583
+)
+"src/render.ml" 46 1648 1680 "src/render.ml" 46 1648 1681
+type(
+  int
+)
+"src/render.ml" 46 1648 1682 "src/render.ml" 46 1648 1683
+type(
+  int
+)
+ident(
+  int_ref n "src/render.ml" 44 1483 1504 "src/render.ml" 44 1483 1505
+)
+"src/render.ml" 46 1648 1675 "src/render.ml" 46 1648 1683
+call(
+  tail
+)
+type(
+  int
+)
+"src/render.ml" 46 1648 1654 "src/render.ml" 46 1648 1683
+type(
+  int
+)
+"src/render.ml" 45 1565 1571 "src/render.ml" 46 1648 1683
+type(
+  int
+)
+"src/render.ml" 48 1691 1699 "src/render.ml" 48 1691 1705
+type(
+  float
+)
+ident(
+  def digits "src/render.ml" 49 1736 1740 "src/render.ml" 52 1928 1975
+)
+"src/render.ml" 48 1691 1708 "src/render.ml" 48 1691 1713
+type(
+  int -> float
+)
+ident(
+  ext_ref Pervasives.float
+)
+"src/render.ml" 48 1691 1715 "src/render.ml" 48 1691 1727
+type(
+  int -> int
+)
+ident(
+  int_ref count_digits "src/render.ml" 44 1483 1491 "src/render.ml" 44 1483 1503
+)
+"src/render.ml" 48 1691 1728 "src/render.ml" 48 1691 1731
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 43 1451 1477 "src/render.ml" 43 1451 1480
+)
+"src/render.ml" 48 1691 1714 "src/render.ml" 48 1691 1732
+call(
+  stack
+)
+type(
+  int
+)
+"src/render.ml" 48 1691 1708 "src/render.ml" 48 1691 1732
+type(
+  float
+)
+"src/render.ml" 49 1736 1744 "src/render.ml" 49 1736 1750
+type(
+  float
+)
+ident(
+  def adjust "src/render.ml" 50 1806 1810 "src/render.ml" 52 1928 1975
+)
+"src/render.ml" 49 1736 1756 "src/render.ml" 49 1736 1762
+type(
+  float
+)
+ident(
+  int_ref digits "src/render.ml" 48 1691 1699 "src/render.ml" 48 1691 1705
+)
+"src/render.ml" 49 1736 1763 "src/render.ml" 49 1736 1764
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"src/render.ml" 49 1736 1765 "src/render.ml" 49 1736 1767
+type(
+  float
+)
+"src/render.ml" 49 1736 1756 "src/render.ml" 49 1736 1767
+type(
+  bool
+)
+"src/render.ml" 49 1736 1773 "src/render.ml" 49 1736 1775
+type(
+  float
+)
+"src/render.ml" 49 1736 1776 "src/render.ml" 49 1736 1778
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( /. )
+)
+"src/render.ml" 49 1736 1780 "src/render.ml" 49 1736 1783
+type(
+  float
+)
+"src/render.ml" 49 1736 1784 "src/render.ml" 49 1736 1786
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"src/render.ml" 49 1736 1787 "src/render.ml" 49 1736 1793
+type(
+  float
+)
+ident(
+  int_ref digits "src/render.ml" 48 1691 1699 "src/render.ml" 48 1691 1705
+)
+"src/render.ml" 49 1736 1779 "src/render.ml" 49 1736 1794
+type(
+  float
+)
+"src/render.ml" 49 1736 1773 "src/render.ml" 49 1736 1794
+type(
+  float
+)
+"src/render.ml" 49 1736 1800 "src/render.ml" 49 1736 1802
+type(
+  float
+)
+"src/render.ml" 49 1736 1753 "src/render.ml" 49 1736 1802
+type(
+  float
+)
+"src/render.ml" 50 1806 1814 "src/render.ml" 50 1806 1818
+type(
+  float
+)
+ident(
+  def size "src/render.ml" 51 1859 1863 "src/render.ml" 52 1928 1975
+)
+"src/render.ml" 50 1806 1821 "src/render.ml" 50 1806 1824
+type(
+  float
+)
+"src/render.ml" 50 1806 1825 "src/render.ml" 50 1806 1827
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"src/render.ml" 50 1806 1828 "src/render.ml" 50 1806 1834
+type(
+  float
+)
+ident(
+  int_ref adjust "src/render.ml" 49 1736 1744 "src/render.ml" 49 1736 1750
+)
+"src/render.ml" 50 1806 1821 "src/render.ml" 50 1806 1834
+type(
+  float
+)
+"src/render.ml" 50 1806 1835 "src/render.ml" 50 1806 1837
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"src/render.ml" 50 1806 1838 "src/render.ml" 50 1806 1845
+type(
+  Gg.size2 -> float
+)
+ident(
+  ext_ref Gg.Size2.h
+)
+"src/render.ml" 50 1806 1846 "src/render.ml" 50 1806 1855
+type(
+  Gg.size2
+)
+ident(
+  int_ref tile_size "src/render.ml" 43 1451 1467 "src/render.ml" 43 1451 1476
+)
+"src/render.ml" 50 1806 1838 "src/render.ml" 50 1806 1855
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 50 1806 1821 "src/render.ml" 50 1806 1855
+type(
+  float
+)
+"src/render.ml" 51 1859 1867 "src/render.ml" 51 1859 1873
+type(
+  Gg.v2
+)
+ident(
+  def offset "src/render.ml" 52 1928 1932 "src/render.ml" 52 1928 1975
+)
+"src/render.ml" 51 1859 1876 "src/render.ml" 51 1859 1880
+type(
+  float -> float -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.v
+)
+"src/render.ml" 51 1859 1882 "src/render.ml" 51 1859 1887
+type(
+  float
+)
+"src/render.ml" 51 1859 1888 "src/render.ml" 51 1859 1890
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"src/render.ml" 51 1859 1891 "src/render.ml" 51 1859 1895
+type(
+  float
+)
+ident(
+  int_ref size "src/render.ml" 50 1806 1814 "src/render.ml" 50 1806 1818
+)
+"src/render.ml" 51 1859 1882 "src/render.ml" 51 1859 1895
+type(
+  float
+)
+"src/render.ml" 51 1859 1896 "src/render.ml" 51 1859 1898
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"src/render.ml" 51 1859 1899 "src/render.ml" 51 1859 1905
+type(
+  float
+)
+ident(
+  int_ref digits "src/render.ml" 48 1691 1699 "src/render.ml" 48 1691 1705
+)
+"src/render.ml" 51 1859 1881 "src/render.ml" 51 1859 1906
+type(
+  float
+)
+"src/render.ml" 51 1859 1908 "src/render.ml" 51 1859 1915
+type(
+  float
+)
+"src/render.ml" 51 1859 1916 "src/render.ml" 51 1859 1918
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"src/render.ml" 51 1859 1919 "src/render.ml" 51 1859 1923
+type(
+  float
+)
+ident(
+  int_ref size "src/render.ml" 50 1806 1814 "src/render.ml" 50 1806 1818
+)
+"src/render.ml" 51 1859 1907 "src/render.ml" 51 1859 1924
+type(
+  float
+)
+"src/render.ml" 51 1859 1876 "src/render.ml" 51 1859 1924
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 52 1928 1934 "src/render.ml" 52 1928 1943
+type(
+  Vg.Font.t
+)
+ident(
+  int_ref base_font "src/render.ml" 13 213 219 "src/render.ml" 13 213 228
+)
+"src/render.ml" 52 1928 1961 "src/render.ml" 52 1928 1965
+type(
+  float
+)
+ident(
+  int_ref size "src/render.ml" 50 1806 1814 "src/render.ml" 50 1806 1818
+)
+"src/render.ml" 52 1928 1932 "src/render.ml" 52 1928 1967
+type(
+  Vg.Font.t
+)
+"src/render.ml" 52 1928 1969 "src/render.ml" 52 1928 1975
+type(
+  Gg.v2
+)
+ident(
+  int_ref offset "src/render.ml" 51 1859 1867 "src/render.ml" 51 1859 1873
+)
+"src/render.ml" 52 1928 1932 "src/render.ml" 52 1928 1975
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 51 1859 1863 "src/render.ml" 52 1928 1975
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 50 1806 1810 "src/render.ml" 52 1928 1975
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 49 1736 1740 "src/render.ml" 52 1928 1975
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 48 1691 1695 "src/render.ml" 52 1928 1975
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 44 1483 1487 "src/render.ml" 52 1928 1975
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 54 1977 1983 "src/render.ml" 54 1977 1996
+type(
+  scale:float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  def base_tile_img "src/render.ml" 64 2390 2392 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 54 1977 1998 "src/render.ml" 54 1977 2003
+type(
+  float
+)
+ident(
+  def scale "src/render.ml" 54 1977 2004 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 54 1977 2004 "src/render.ml" 54 1977 2013
+type(
+  Gg.v2
+)
+ident(
+  def tile_size "src/render.ml" 54 1977 2014 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 54 1977 2014 "src/render.ml" 54 1977 2017
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 55 2020 2024 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 55 2020 2028 "src/render.ml" 55 2020 2032
+type(
+  Gg.v2
+)
+ident(
+  def size "src/render.ml" 56 2061 2065 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 55 2020 2039 "src/render.ml" 55 2020 2044
+type(
+  float
+)
+ident(
+  int_ref scale "src/render.ml" 54 1977 1998 "src/render.ml" 54 1977 2003
+)
+"src/render.ml" 55 2020 2045 "src/render.ml" 55 2020 2046
+type(
+  float -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( * )
+)
+"src/render.ml" 55 2020 2047 "src/render.ml" 55 2020 2056
+type(
+  Gg.v2
+)
+ident(
+  int_ref tile_size "src/render.ml" 54 1977 2004 "src/render.ml" 54 1977 2013
+)
+"src/render.ml" 55 2020 2039 "src/render.ml" 55 2020 2056
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 56 2061 2069 "src/render.ml" 56 2061 2072
+type(
+  Gg.Box2.t
+)
+ident(
+  def box "src/render.ml" 57 2099 2103 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 56 2061 2075 "src/render.ml" 56 2061 2085
+type(
+  Gg.p2 -> Gg.size2 -> Gg.Box2.t
+)
+ident(
+  ext_ref Gg.Box2.v_mid
+)
+"src/render.ml" 56 2061 2086 "src/render.ml" 56 2061 2090
+type(
+  Gg.p2
+)
+ident(
+  ext_ref Gg.P2.o
+)
+"src/render.ml" 56 2061 2091 "src/render.ml" 56 2061 2095
+type(
+  Gg.size2
+)
+ident(
+  int_ref size "src/render.ml" 55 2020 2028 "src/render.ml" 55 2020 2032
+)
+"src/render.ml" 56 2061 2075 "src/render.ml" 56 2061 2095
+call(
+  stack
+)
+type(
+  Gg.Box2.t
+)
+"src/render.ml" 57 2099 2107 "src/render.ml" 57 2099 2112
+type(
+  Gg.color
+)
+ident(
+  def color "src/render.ml" 58 2146 2150 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 57 2099 2114 "src/render.ml" 57 2099 2124
+type(
+  Gg.color
+)
+ident(
+  def text_color "src/render.ml" 58 2146 2150 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 57 2099 2107 "src/render.ml" 57 2099 2124
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 57 2099 2127 "src/render.ml" 57 2099 2138
+type(
+  int -> Gg.color * Gg.color
+)
+ident(
+  int_ref tile_colors "src/render.ml" 25 559 565 "src/render.ml" 25 559 576
+)
+"src/render.ml" 57 2099 2139 "src/render.ml" 57 2099 2142
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 54 1977 2014 "src/render.ml" 54 1977 2017
+)
+"src/render.ml" 57 2099 2127 "src/render.ml" 57 2099 2142
+call(
+  stack
+)
+type(
+  Gg.color * Gg.color
+)
+"src/render.ml" 58 2146 2154 "src/render.ml" 58 2146 2158
+type(
+  Vg.Font.t
+)
+ident(
+  def font "src/render.ml" 59 2191 2195 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 58 2146 2160 "src/render.ml" 58 2146 2166
+type(
+  Gg.v2
+)
+ident(
+  def offset "src/render.ml" 59 2191 2195 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 58 2146 2154 "src/render.ml" 58 2146 2166
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 58 2146 2169 "src/render.ml" 58 2146 2178
+type(
+  Gg.size2 -> int -> Vg.Font.t * Gg.v2
+)
+ident(
+  int_ref tile_font "src/render.ml" 43 1451 1457 "src/render.ml" 43 1451 1466
+)
+"src/render.ml" 58 2146 2179 "src/render.ml" 58 2146 2183
+type(
+  Gg.size2
+)
+ident(
+  int_ref size "src/render.ml" 55 2020 2028 "src/render.ml" 55 2020 2032
+)
+"src/render.ml" 58 2146 2184 "src/render.ml" 58 2146 2187
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 54 1977 2014 "src/render.ml" 54 1977 2017
+)
+"src/render.ml" 58 2146 2169 "src/render.ml" 58 2146 2187
+call(
+  stack
+)
+type(
+  Vg.Font.t * Gg.v2
+)
+"src/render.ml" 59 2191 2199 "src/render.ml" 59 2191 2204
+type(
+  string
+)
+ident(
+  def label "src/render.ml" 60 2228 2232 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 59 2191 2207 "src/render.ml" 59 2191 2220
+type(
+  int -> string
+)
+ident(
+  ext_ref Pervasives.string_of_int
+)
+"src/render.ml" 59 2191 2221 "src/render.ml" 59 2191 2224
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 54 1977 2014 "src/render.ml" 54 1977 2017
+)
+"src/render.ml" 59 2191 2207 "src/render.ml" 59 2191 2224
+call(
+  stack
+)
+type(
+  string
+)
+"src/render.ml" 60 2228 2236 "src/render.ml" 60 2228 2241
+type(
+  Vg.image
+)
+ident(
+  def label "src/render.ml" 61 2301 2305 "src/render.ml" 62 2352 2388
+)
+"src/render.ml" 60 2228 2244 "src/render.ml" 60 2228 2256
+type(
+  ?area:[ `O of Vg.P.outline ] ->
+  ?text:string ->
+  ?blocks:bool * (int * int) list ->
+  ?advances:Gg.v2 list -> Vg.font -> Vg.glyph list -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.cut_glyphs
+)
+"src/render.ml" 60 2228 2263 "src/render.ml" 60 2228 2268
+type(
+  string
+)
+ident(
+  int_ref label "src/render.ml" 59 2191 2199 "src/render.ml" 59 2191 2204
+)
+"src/render.ml" 60 2228 2269 "src/render.ml" 60 2228 2273
+type(
+  Vg.font
+)
+ident(
+  int_ref font "src/render.ml" 58 2146 2154 "src/render.ml" 58 2146 2158
+)
+"src/render.ml" 60 2228 2274 "src/render.ml" 60 2228 2276
+type(
+  Vg.glyph list
+)
+"src/render.ml" 60 2228 2278 "src/render.ml" 60 2228 2285
+type(
+  Gg.color -> Vg.image
+)
+ident(
+  ext_ref Vg.I.const
+)
+"src/render.ml" 60 2228 2286 "src/render.ml" 60 2228 2296
+type(
+  Gg.color
+)
+ident(
+  int_ref text_color "src/render.ml" 57 2099 2114 "src/render.ml" 57 2099 2124
+)
+"src/render.ml" 60 2228 2277 "src/render.ml" 60 2228 2297
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 60 2228 2244 "src/render.ml" 60 2228 2297
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 61 2301 2305 "src/render.ml" 61 2301 2310
+type(
+  ?area:Vg.P.area -> Vg.path -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.cut
+)
+"src/render.ml" 61 2301 2314 "src/render.ml" 61 2301 2319
+type(
+  Vg.path
+)
+ident(
+  ext_ref Vg.P.empty
+)
+"src/render.ml" 61 2301 2320 "src/render.ml" 61 2301 2322
+type(
+  Vg.path -> (Vg.path -> Vg.path) -> Vg.path
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 61 2301 2323 "src/render.ml" 61 2301 2327
+type(
+  ?rel:bool -> Gg.Box2.t -> Vg.path -> Vg.path
+)
+ident(
+  ext_ref Vg.P.rect
+)
+"src/render.ml" 61 2301 2328 "src/render.ml" 61 2301 2331
+type(
+  Gg.Box2.t
+)
+ident(
+  int_ref box "src/render.ml" 56 2061 2069 "src/render.ml" 56 2061 2072
+)
+"src/render.ml" 61 2301 2323 "src/render.ml" 61 2301 2331
+call(
+  stack
+)
+type(
+  Vg.path -> Vg.path
+)
+"src/render.ml" 61 2301 2314 "src/render.ml" 61 2301 2331
+call(
+  stack
+)
+type(
+  Vg.path
+)
+"src/render.ml" 61 2301 2334 "src/render.ml" 61 2301 2341
+type(
+  Gg.color -> Vg.image
+)
+ident(
+  ext_ref Vg.I.const
+)
+"src/render.ml" 61 2301 2342 "src/render.ml" 61 2301 2347
+type(
+  Gg.color
+)
+ident(
+  int_ref color "src/render.ml" 57 2099 2107 "src/render.ml" 57 2099 2112
+)
+"src/render.ml" 61 2301 2333 "src/render.ml" 61 2301 2348
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 61 2301 2305 "src/render.ml" 61 2301 2348
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 61 2301 2349 "src/render.ml" 61 2301 2351
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 62 2352 2356 "src/render.ml" 62 2352 2363
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 62 2352 2365 "src/render.ml" 62 2352 2370
+type(
+  Vg.image
+)
+ident(
+  int_ref label "src/render.ml" 60 2228 2236 "src/render.ml" 60 2228 2241
+)
+"src/render.ml" 62 2352 2371 "src/render.ml" 62 2352 2373
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 62 2352 2374 "src/render.ml" 62 2352 2380
+type(
+  Gg.v2 -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.move
+)
+"src/render.ml" 62 2352 2381 "src/render.ml" 62 2352 2387
+type(
+  Gg.v2
+)
+ident(
+  int_ref offset "src/render.ml" 58 2146 2160 "src/render.ml" 58 2146 2166
+)
+"src/render.ml" 62 2352 2374 "src/render.ml" 62 2352 2387
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 62 2352 2364 "src/render.ml" 62 2352 2388
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 62 2352 2356 "src/render.ml" 62 2352 2388
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 61 2301 2305 "src/render.ml" 62 2352 2388
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 60 2228 2232 "src/render.ml" 62 2352 2388
+type(
+  Vg.image
+)
+"src/render.ml" 59 2191 2195 "src/render.ml" 62 2352 2388
+type(
+  Vg.image
+)
+"src/render.ml" 58 2146 2150 "src/render.ml" 62 2352 2388
+type(
+  Vg.image
+)
+"src/render.ml" 57 2099 2103 "src/render.ml" 62 2352 2388
+type(
+  Vg.image
+)
+"src/render.ml" 56 2061 2065 "src/render.ml" 62 2352 2388
+type(
+  Vg.image
+)
+"src/render.ml" 55 2020 2024 "src/render.ml" 62 2352 2388
+type(
+  Vg.image
+)
+"src/render.ml" 64 2390 2396 "src/render.ml" 64 2390 2409
+type(
+  float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  def drop_tile_img "src/render.ml" 65 2469 2471 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 64 2390 2410 "src/render.ml" 64 2390 2411
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 64 2390 2412 "src/render.ml" 64 2390 2468
+)
+"src/render.ml" 64 2390 2412 "src/render.ml" 64 2390 2423
+type(
+  Gg.v2
+)
+ident(
+  def square_size "src/render.ml" 64 2390 2424 "src/render.ml" 64 2390 2468
+)
+"src/render.ml" 64 2390 2424 "src/render.ml" 64 2390 2427
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 64 2390 2430 "src/render.ml" 64 2390 2468
+)
+"src/render.ml" 64 2390 2430 "src/render.ml" 64 2390 2443
+type(
+  scale:float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref base_tile_img "src/render.ml" 54 1977 1983 "src/render.ml" 54 1977 1996
+)
+"src/render.ml" 64 2390 2451 "src/render.ml" 64 2390 2452
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 64 2390 2410 "src/render.ml" 64 2390 2411
+)
+"src/render.ml" 64 2390 2453 "src/render.ml" 64 2390 2464
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 64 2390 2412 "src/render.ml" 64 2390 2423
+)
+"src/render.ml" 64 2390 2465 "src/render.ml" 64 2390 2468
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 64 2390 2424 "src/render.ml" 64 2390 2427
+)
+"src/render.ml" 64 2390 2430 "src/render.ml" 64 2390 2468
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 65 2469 2475 "src/render.ml" 65 2469 2487
+type(
+  float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  def pop_tile_img "src/render.ml" 69 2624 2626 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 65 2469 2488 "src/render.ml" 65 2469 2489
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 65 2469 2490 "src/render.ml" 67 2582 2622
+)
+"src/render.ml" 65 2469 2490 "src/render.ml" 65 2469 2501
+type(
+  Gg.v2
+)
+ident(
+  def square_size "src/render.ml" 65 2469 2502 "src/render.ml" 67 2582 2622
+)
+"src/render.ml" 65 2469 2502 "src/render.ml" 65 2469 2505
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 66 2508 2512 "src/render.ml" 67 2582 2622
+)
+"src/render.ml" 66 2508 2516 "src/render.ml" 66 2508 2521
+type(
+  float
+)
+ident(
+  def scale "src/render.ml" 67 2582 2586 "src/render.ml" 67 2582 2622
+)
+"src/render.ml" 66 2508 2524 "src/render.ml" 66 2508 2535
+type(
+  x0:float -> x1:float -> y0:float -> y1:float -> float -> float
+)
+ident(
+  ext_ref Gg.Float.remap
+)
+"src/render.ml" 66 2508 2540 "src/render.ml" 66 2508 2542
+type(
+  float
+)
+"src/render.ml" 66 2508 2547 "src/render.ml" 66 2508 2549
+type(
+  float
+)
+"src/render.ml" 66 2508 2554 "src/render.ml" 66 2508 2556
+type(
+  float
+)
+"src/render.ml" 66 2508 2561 "src/render.ml" 66 2508 2565
+type(
+  float
+)
+"src/render.ml" 66 2508 2567 "src/render.ml" 66 2508 2575
+type(
+  float -> float
+)
+ident(
+  ext_ref Anim.tri
+)
+"src/render.ml" 66 2508 2576 "src/render.ml" 66 2508 2577
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 65 2469 2488 "src/render.ml" 65 2469 2489
+)
+"src/render.ml" 66 2508 2566 "src/render.ml" 66 2508 2578
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 66 2508 2524 "src/render.ml" 66 2508 2578
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 67 2582 2586 "src/render.ml" 67 2582 2599
+type(
+  scale:float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref base_tile_img "src/render.ml" 54 1977 1983 "src/render.ml" 54 1977 1996
+)
+"src/render.ml" 67 2582 2601 "src/render.ml" 67 2582 2606
+type(
+  float
+)
+ident(
+  int_ref scale "src/render.ml" 66 2508 2516 "src/render.ml" 66 2508 2521
+)
+"src/render.ml" 67 2582 2607 "src/render.ml" 67 2582 2618
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 65 2469 2490 "src/render.ml" 65 2469 2501
+)
+"src/render.ml" 67 2582 2619 "src/render.ml" 67 2582 2622
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 65 2469 2502 "src/render.ml" 65 2469 2505
+)
+"src/render.ml" 67 2582 2586 "src/render.ml" 67 2582 2622
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 66 2508 2512 "src/render.ml" 67 2582 2622
+type(
+  Vg.image
+)
+"src/render.ml" 69 2624 2630 "src/render.ml" 69 2624 2645
+type(
+  float -> Gg.v2 -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  def moving_tile_img "src/render.ml" 72 2748 2750 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 69 2624 2646 "src/render.ml" 69 2624 2647
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 69 2624 2648 "src/render.ml" 70 2671 2746
+)
+"src/render.ml" 69 2624 2648 "src/render.ml" 69 2624 2652
+type(
+  Gg.v2
+)
+ident(
+  def dpos "src/render.ml" 69 2624 2653 "src/render.ml" 70 2671 2746
+)
+"src/render.ml" 69 2624 2653 "src/render.ml" 69 2624 2664
+type(
+  Gg.v2
+)
+ident(
+  def square_size "src/render.ml" 69 2624 2665 "src/render.ml" 70 2671 2746
+)
+"src/render.ml" 69 2624 2665 "src/render.ml" 69 2624 2668
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 70 2671 2675 "src/render.ml" 70 2671 2746
+)
+"src/render.ml" 70 2671 2675 "src/render.ml" 70 2671 2688
+type(
+  scale:float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref base_tile_img "src/render.ml" 54 1977 1983 "src/render.ml" 54 1977 1996
+)
+"src/render.ml" 70 2671 2696 "src/render.ml" 70 2671 2698
+type(
+  float
+)
+"src/render.ml" 70 2671 2699 "src/render.ml" 70 2671 2710
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 69 2624 2653 "src/render.ml" 69 2624 2664
+)
+"src/render.ml" 70 2671 2711 "src/render.ml" 70 2671 2714
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 69 2624 2665 "src/render.ml" 69 2624 2668
+)
+"src/render.ml" 70 2671 2675 "src/render.ml" 70 2671 2714
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 70 2671 2715 "src/render.ml" 70 2671 2717
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 70 2671 2718 "src/render.ml" 70 2671 2724
+type(
+  Gg.v2 -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.move
+)
+"src/render.ml" 70 2671 2730 "src/render.ml" 70 2671 2732
+type(
+  float
+)
+"src/render.ml" 70 2671 2733 "src/render.ml" 70 2671 2735
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( -. )
+)
+"src/render.ml" 70 2671 2736 "src/render.ml" 70 2671 2737
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 69 2624 2646 "src/render.ml" 69 2624 2647
+)
+"src/render.ml" 70 2671 2729 "src/render.ml" 70 2671 2738
+type(
+  float
+)
+"src/render.ml" 70 2671 2739 "src/render.ml" 70 2671 2740
+type(
+  float -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( * )
+)
+"src/render.ml" 70 2671 2741 "src/render.ml" 70 2671 2745
+type(
+  Gg.v2
+)
+ident(
+  int_ref dpos "src/render.ml" 69 2624 2648 "src/render.ml" 69 2624 2652
+)
+"src/render.ml" 70 2671 2729 "src/render.ml" 70 2671 2745
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 70 2671 2718 "src/render.ml" 70 2671 2746
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 70 2671 2675 "src/render.ml" 70 2671 2746
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 72 2748 2754 "src/render.ml" 72 2748 2766
+type(
+  float -> Gg.v2 -> Gg.v2 -> G2048.square -> int -> Vg.image
+)
+ident(
+  def moving_tiles "src/render.ml" 89 3407 3409 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 72 2748 2767 "src/render.ml" 72 2748 2768
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 72 2748 2769 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 72 2748 2769 "src/render.ml" 72 2748 2772
+type(
+  Gg.v2
+)
+ident(
+  def dir "src/render.ml" 72 2748 2773 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 72 2748 2773 "src/render.ml" 72 2748 2784
+type(
+  Gg.v2
+)
+ident(
+  def square_size "src/render.ml" 72 2748 2785 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 72 2748 2785 "src/render.ml" 72 2748 2791
+type(
+  G2048.square
+)
+ident(
+  def square "src/render.ml" 72 2748 2792 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 72 2748 2792 "src/render.ml" 72 2748 2795
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 73 2798 2802 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 73 2798 2806 "src/render.ml" 73 2798 2815
+type(
+  float
+)
+ident(
+  def move_time "src/render.ml" 74 2848 2852 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 73 2798 2818 "src/render.ml" 73 2798 2834
+type(
+  ?a:float -> float -> float
+)
+ident(
+  ext_ref Anim.ease_in_out
+)
+"src/render.ml" 73 2798 2836 "src/render.ml" 73 2798 2838
+type(
+  float
+)
+"src/render.ml" 73 2798 2839 "src/render.ml" 73 2798 2841
+type(
+  float -> float -> float
+)
+ident(
+  ext_ref Pervasives.( *. )
+)
+"src/render.ml" 73 2798 2842 "src/render.ml" 73 2798 2843
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 72 2748 2767 "src/render.ml" 72 2748 2768
+)
+"src/render.ml" 73 2798 2835 "src/render.ml" 73 2798 2844
+type(
+  float
+)
+"src/render.ml" 73 2798 2818 "src/render.ml" 73 2798 2844
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 74 2848 2856 "src/render.ml" 74 2848 2867
+type(
+  G2048.provenance list
+)
+ident(
+  def provenances "src/render.ml" 75 2901 2905 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 74 2848 2870 "src/render.ml" 74 2848 2890
+type(
+  G2048.square -> G2048.provenance list
+)
+ident(
+  ext_ref G.square_provenances
+)
+"src/render.ml" 74 2848 2891 "src/render.ml" 74 2848 2897
+type(
+  G2048.square
+)
+ident(
+  int_ref square "src/render.ml" 72 2748 2785 "src/render.ml" 72 2748 2791
+)
+"src/render.ml" 74 2848 2870 "src/render.ml" 74 2848 2897
+call(
+  stack
+)
+type(
+  G2048.provenance list
+)
+"src/render.ml" 75 2901 2909 "src/render.ml" 75 2901 2917
+type(
+  bool
+)
+ident(
+  def is_merge "src/render.ml" 76 2951 2955 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 75 2901 2920 "src/render.ml" 75 2901 2931
+type(
+  G2048.provenance list -> int
+)
+ident(
+  ext_ref List.length
+)
+"src/render.ml" 75 2901 2932 "src/render.ml" 75 2901 2943
+type(
+  G2048.provenance list
+)
+ident(
+  int_ref provenances "src/render.ml" 74 2848 2856 "src/render.ml" 74 2848 2867
+)
+"src/render.ml" 75 2901 2920 "src/render.ml" 75 2901 2943
+call(
+  stack
+)
+type(
+  int
+)
+"src/render.ml" 75 2901 2944 "src/render.ml" 75 2901 2945
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"src/render.ml" 75 2901 2946 "src/render.ml" 75 2901 2947
+type(
+  int
+)
+"src/render.ml" 75 2901 2920 "src/render.ml" 75 2901 2947
+type(
+  bool
+)
+"src/render.ml" 76 2951 2959 "src/render.ml" 76 2951 2967
+type(
+  Vg.image -> G2048.provenance -> Vg.image
+)
+ident(
+  def add_tile "src/render.ml" 80 3117 3121 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 76 2951 2968 "src/render.ml" 76 2951 2971
+type(
+  Vg.image
+)
+ident(
+  def acc "src/render.ml" 76 2951 2972 "src/render.ml" 78 3030 3109
+)
+"src/render.ml" 76 2951 2972 "src/render.ml" 76 2951 2973
+type(
+  G2048.provenance
+)
+ident(
+  def p "src/render.ml" 77 2976 2982 "src/render.ml" 78 3030 3109
+)
+"src/render.ml" 77 2976 2986 "src/render.ml" 77 2976 2990
+type(
+  Gg.v2
+)
+ident(
+  def dpos "src/render.ml" 78 3030 3036 "src/render.ml" 78 3030 3109
+)
+"src/render.ml" 77 2976 2997 "src/render.ml" 77 2976 3002
+type(
+  int -> float
+)
+ident(
+  ext_ref Pervasives.float
+)
+"src/render.ml" 77 2976 3004 "src/render.ml" 77 2976 3005
+type(
+  int -> int
+)
+ident(
+  ext_ref Pervasives.( ~- )
+)
+"src/render.ml" 77 2976 3005 "src/render.ml" 77 2976 3006
+type(
+  G2048.provenance
+)
+ident(
+  int_ref p "src/render.ml" 76 2951 2972 "src/render.ml" 76 2951 2973
+)
+"src/render.ml" 77 2976 3005 "src/render.ml" 77 2976 3018
+type(
+  int
+)
+"src/render.ml" 77 2976 3003 "src/render.ml" 77 2976 3019
+type(
+  int
+)
+"src/render.ml" 77 2976 2997 "src/render.ml" 77 2976 3019
+type(
+  float
+)
+"src/render.ml" 77 2976 3020 "src/render.ml" 77 2976 3021
+type(
+  float -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( * )
+)
+"src/render.ml" 77 2976 3022 "src/render.ml" 77 2976 3025
+type(
+  Gg.v2
+)
+ident(
+  int_ref dir "src/render.ml" 72 2748 2769 "src/render.ml" 72 2748 2772
+)
+"src/render.ml" 77 2976 2997 "src/render.ml" 77 2976 3025
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 78 3030 3036 "src/render.ml" 78 3030 3039
+type(
+  Vg.image
+)
+ident(
+  int_ref acc "src/render.ml" 76 2951 2968 "src/render.ml" 76 2951 2971
+)
+"src/render.ml" 78 3030 3040 "src/render.ml" 78 3030 3042
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 78 3030 3043 "src/render.ml" 78 3030 3050
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 78 3030 3052 "src/render.ml" 78 3030 3067
+type(
+  float -> Gg.v2 -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref moving_tile_img "src/render.ml" 69 2624 2630 "src/render.ml" 69 2624 2645
+)
+"src/render.ml" 78 3030 3068 "src/render.ml" 78 3030 3077
+type(
+  float
+)
+ident(
+  int_ref move_time "src/render.ml" 73 2798 2806 "src/render.ml" 73 2798 2815
+)
+"src/render.ml" 78 3030 3078 "src/render.ml" 78 3030 3082
+type(
+  Gg.v2
+)
+ident(
+  int_ref dpos "src/render.ml" 77 2976 2986 "src/render.ml" 77 2976 2990
+)
+"src/render.ml" 78 3030 3083 "src/render.ml" 78 3030 3094
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 72 2748 2773 "src/render.ml" 72 2748 2784
+)
+"src/render.ml" 78 3030 3095 "src/render.ml" 78 3030 3096
+type(
+  G2048.provenance
+)
+ident(
+  int_ref p "src/render.ml" 76 2951 2972 "src/render.ml" 76 2951 2973
+)
+"src/render.ml" 78 3030 3095 "src/render.ml" 78 3030 3108
+type(
+  int
+)
+"src/render.ml" 78 3030 3051 "src/render.ml" 78 3030 3109
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 78 3030 3043 "src/render.ml" 78 3030 3109
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 78 3030 3036 "src/render.ml" 78 3030 3109
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 77 2976 2982 "src/render.ml" 78 3030 3109
+type(
+  Vg.image
+)
+"src/render.ml" 80 3117 3125 "src/render.ml" 80 3117 3133
+type(
+  Vg.image
+)
+ident(
+  def pop_tile "src/render.ml" 86 3335 3339 "src/render.ml" 87 3385 3405
+)
+"src/render.ml" 81 3136 3145 "src/render.ml" 81 3136 3148
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"src/render.ml" 81 3136 3149 "src/render.ml" 81 3136 3157
+type(
+  bool
+)
+ident(
+  int_ref is_merge "src/render.ml" 75 2901 2909 "src/render.ml" 75 2901 2917
+)
+"src/render.ml" 81 3136 3145 "src/render.ml" 81 3136 3157
+type(
+  bool
+)
+"src/render.ml" 81 3136 3163 "src/render.ml" 81 3136 3169
+type(
+  Vg.image
+)
+ident(
+  ext_ref Vg.I.void
+)
+"src/render.ml" 82 3175 3184 "src/render.ml" 82 3175 3185
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 72 2748 2767 "src/render.ml" 72 2748 2768
+)
+"src/render.ml" 82 3175 3186 "src/render.ml" 82 3175 3187
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"src/render.ml" 82 3175 3188 "src/render.ml" 82 3175 3191
+type(
+  float
+)
+"src/render.ml" 82 3175 3184 "src/render.ml" 82 3175 3191
+type(
+  bool
+)
+"src/render.ml" 82 3175 3197 "src/render.ml" 82 3175 3203
+type(
+  Vg.image
+)
+ident(
+  ext_ref Vg.I.void
+)
+"src/render.ml" 83 3209 3219 "src/render.ml" 83 3209 3220
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 84 3272 3278 "src/render.ml" 84 3272 3327
+)
+"src/render.ml" 83 3209 3223 "src/render.ml" 83 3209 3234
+type(
+  x0:float -> x1:float -> y0:float -> y1:float -> float -> float
+)
+ident(
+  ext_ref Gg.Float.remap
+)
+"src/render.ml" 83 3209 3239 "src/render.ml" 83 3209 3242
+type(
+  float
+)
+"src/render.ml" 83 3209 3247 "src/render.ml" 83 3209 3250
+type(
+  float
+)
+"src/render.ml" 83 3209 3255 "src/render.ml" 83 3209 3258
+type(
+  float
+)
+"src/render.ml" 83 3209 3263 "src/render.ml" 83 3209 3266
+type(
+  float
+)
+"src/render.ml" 83 3209 3267 "src/render.ml" 83 3209 3268
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 72 2748 2767 "src/render.ml" 72 2748 2768
+)
+"src/render.ml" 83 3209 3223 "src/render.ml" 83 3209 3268
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 84 3272 3278 "src/render.ml" 84 3272 3290
+type(
+  float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref pop_tile_img "src/render.ml" 65 2469 2475 "src/render.ml" 65 2469 2487
+)
+"src/render.ml" 84 3272 3292 "src/render.ml" 84 3272 3308
+type(
+  ?a:float -> float -> float
+)
+ident(
+  ext_ref Anim.ease_in_out
+)
+"src/render.ml" 84 3272 3309 "src/render.ml" 84 3272 3310
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 83 3209 3219 "src/render.ml" 83 3209 3220
+)
+"src/render.ml" 84 3272 3291 "src/render.ml" 84 3272 3311
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 84 3272 3312 "src/render.ml" 84 3272 3323
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 72 2748 2773 "src/render.ml" 72 2748 2784
+)
+"src/render.ml" 84 3272 3324 "src/render.ml" 84 3272 3327
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 72 2748 2792 "src/render.ml" 72 2748 2795
+)
+"src/render.ml" 84 3272 3278 "src/render.ml" 84 3272 3327
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 83 3209 3215 "src/render.ml" 84 3272 3327
+type(
+  Vg.image
+)
+"src/render.ml" 82 3175 3181 "src/render.ml" 84 3272 3327
+type(
+  Vg.image
+)
+"src/render.ml" 81 3136 3142 "src/render.ml" 84 3272 3327
+type(
+  Vg.image
+)
+"src/render.ml" 86 3335 3339 "src/render.ml" 86 3335 3353
+type(
+  (Vg.image -> G2048.provenance -> Vg.image) ->
+  Vg.image -> G2048.provenance list -> Vg.image
+)
+ident(
+  ext_ref List.fold_left
+)
+"src/render.ml" 86 3335 3354 "src/render.ml" 86 3335 3362
+type(
+  Vg.image -> G2048.provenance -> Vg.image
+)
+ident(
+  int_ref add_tile "src/render.ml" 76 2951 2959 "src/render.ml" 76 2951 2967
+)
+"src/render.ml" 86 3335 3363 "src/render.ml" 86 3335 3369
+type(
+  Vg.image
+)
+ident(
+  ext_ref Vg.I.void
+)
+"src/render.ml" 86 3335 3370 "src/render.ml" 86 3335 3381
+type(
+  G2048.provenance list
+)
+ident(
+  int_ref provenances "src/render.ml" 74 2848 2856 "src/render.ml" 74 2848 2867
+)
+"src/render.ml" 86 3335 3339 "src/render.ml" 86 3335 3381
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 86 3335 3382 "src/render.ml" 86 3335 3384
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 87 3385 3389 "src/render.ml" 87 3385 3396
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 87 3385 3397 "src/render.ml" 87 3385 3405
+type(
+  Vg.image
+)
+ident(
+  int_ref pop_tile "src/render.ml" 80 3117 3125 "src/render.ml" 80 3117 3133
+)
+"src/render.ml" 87 3385 3389 "src/render.ml" 87 3385 3405
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 86 3335 3339 "src/render.ml" 87 3385 3405
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 80 3117 3121 "src/render.ml" 87 3385 3405
+type(
+  Vg.image
+)
+"src/render.ml" 76 2951 2955 "src/render.ml" 87 3385 3405
+type(
+  Vg.image
+)
+"src/render.ml" 75 2901 2905 "src/render.ml" 87 3385 3405
+type(
+  Vg.image
+)
+"src/render.ml" 74 2848 2852 "src/render.ml" 87 3385 3405
+type(
+  Vg.image
+)
+"src/render.ml" 73 2798 2802 "src/render.ml" 87 3385 3405
+type(
+  Vg.image
+)
+"src/render.ml" 89 3407 3413 "src/render.ml" 89 3407 3421
+type(
+  float -> Gg.v2 -> Gg.v2 -> G2048.square -> Vg.image
+)
+ident(
+  def tile_img "src/render.ml" 101 3879 3881 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 89 3407 3422 "src/render.ml" 89 3407 3423
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 89 3407 3424 "src/render.ml" 97 3800 3851
+)
+"src/render.ml" 89 3407 3424 "src/render.ml" 89 3407 3427
+type(
+  Gg.v2
+)
+ident(
+  def dir "src/render.ml" 89 3407 3428 "src/render.ml" 97 3800 3851
+)
+"src/render.ml" 89 3407 3428 "src/render.ml" 89 3407 3439
+type(
+  Gg.v2
+)
+ident(
+  def square_size "src/render.ml" 89 3407 3440 "src/render.ml" 97 3800 3851
+)
+"src/render.ml" 89 3407 3440 "src/render.ml" 89 3407 3446
+type(
+  G2048.square
+)
+ident(
+  def square "src/render.ml" 89 3407 3449 "src/render.ml" 97 3800 3851
+)
+"src/render.ml" 89 3407 3455 "src/render.ml" 89 3407 3473
+type(
+  G2048.square -> int option
+)
+ident(
+  ext_ref G2048.square_value
+)
+"src/render.ml" 89 3407 3474 "src/render.ml" 89 3407 3480
+type(
+  G2048.square
+)
+ident(
+  int_ref square "src/render.ml" 89 3407 3440 "src/render.ml" 89 3407 3446
+)
+"src/render.ml" 89 3407 3455 "src/render.ml" 89 3407 3480
+call(
+  stack
+)
+type(
+  int option
+)
+"src/render.ml" 90 3486 3490 "src/render.ml" 90 3486 3494
+type(
+  int option
+)
+"src/render.ml" 90 3486 3498 "src/render.ml" 90 3486 3504
+type(
+  Vg.image
+)
+ident(
+  ext_ref Vg.I.void
+)
+"src/render.ml" 91 3505 3514 "src/render.ml" 91 3505 3517
+type(
+  int
+)
+ident(
+  def num "src/render.ml" 92 3521 3527 "src/render.ml" 97 3800 3851
+)
+"src/render.ml" 91 3505 3509 "src/render.ml" 91 3505 3517
+type(
+  int option
+)
+"src/render.ml" 92 3521 3533 "src/render.ml" 92 3521 3553
+type(
+  G2048.square -> G2048.provenance list
+)
+ident(
+  ext_ref G.square_provenances
+)
+"src/render.ml" 92 3521 3554 "src/render.ml" 92 3521 3560
+type(
+  G2048.square
+)
+ident(
+  int_ref square "src/render.ml" 89 3407 3440 "src/render.ml" 89 3407 3446
+)
+"src/render.ml" 92 3521 3533 "src/render.ml" 92 3521 3560
+call(
+  stack
+)
+type(
+  G2048.provenance list
+)
+"src/render.ml" 93 3566 3574 "src/render.ml" 93 3566 3576
+type(
+  G2048.provenance list
+)
+"src/render.ml" 93 3566 3580 "src/render.ml" 93 3566 3593
+type(
+  float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref drop_tile_img "src/render.ml" 64 2390 2396 "src/render.ml" 64 2390 2409
+)
+"src/render.ml" 93 3566 3595 "src/render.ml" 93 3566 3611
+type(
+  ?a:float -> float -> float
+)
+ident(
+  ext_ref Anim.ease_in_out
+)
+"src/render.ml" 93 3566 3612 "src/render.ml" 93 3566 3613
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 89 3407 3422 "src/render.ml" 89 3407 3423
+)
+"src/render.ml" 93 3566 3594 "src/render.ml" 93 3566 3614
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 93 3566 3615 "src/render.ml" 93 3566 3626
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 89 3407 3428 "src/render.ml" 89 3407 3439
+)
+"src/render.ml" 93 3566 3627 "src/render.ml" 93 3566 3630
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 91 3505 3514 "src/render.ml" 91 3505 3517
+)
+"src/render.ml" 93 3566 3580 "src/render.ml" 93 3566 3630
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 94 3631 3639 "src/render.ml" 94 3631 3640
+type(
+  G2048.provenance
+)
+ident(
+  def t "src/render.ml" 94 3631 3652 "src/render.ml" 94 3631 3712
+)
+"src/render.ml" 94 3631 3644 "src/render.ml" 94 3631 3646
+type(
+  G2048.provenance list
+)
+"src/render.ml" 94 3631 3639 "src/render.ml" 94 3631 3646
+type(
+  G2048.provenance list
+)
+"src/render.ml" 94 3631 3652 "src/render.ml" 94 3631 3653
+type(
+  G2048.provenance
+)
+ident(
+  int_ref t "src/render.ml" 94 3631 3639 "src/render.ml" 94 3631 3640
+)
+"src/render.ml" 94 3631 3652 "src/render.ml" 94 3631 3665
+type(
+  int
+)
+"src/render.ml" 94 3631 3666 "src/render.ml" 94 3631 3667
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"src/render.ml" 94 3631 3668 "src/render.ml" 94 3631 3669
+type(
+  int
+)
+"src/render.ml" 94 3631 3652 "src/render.ml" 94 3631 3669
+type(
+  bool
+)
+"src/render.ml" 94 3631 3673 "src/render.ml" 94 3631 3686
+type(
+  scale:float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref base_tile_img "src/render.ml" 54 1977 1983 "src/render.ml" 54 1977 1996
+)
+"src/render.ml" 94 3631 3694 "src/render.ml" 94 3631 3696
+type(
+  float
+)
+"src/render.ml" 94 3631 3697 "src/render.ml" 94 3631 3708
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 89 3407 3428 "src/render.ml" 89 3407 3439
+)
+"src/render.ml" 94 3631 3709 "src/render.ml" 94 3631 3712
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 91 3505 3514 "src/render.ml" 91 3505 3517
+)
+"src/render.ml" 94 3631 3673 "src/render.ml" 94 3631 3712
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 95 3713 3721 "src/render.ml" 95 3713 3726
+type(
+  G2048.provenance list
+)
+ident(
+  def tiles "src/render.ml" 96 3730 3740 "src/render.ml" 97 3800 3851
+)
+"src/render.ml" 96 3730 3743 "src/render.ml" 96 3730 3744
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 89 3407 3422 "src/render.ml" 89 3407 3423
+)
+"src/render.ml" 96 3730 3745 "src/render.ml" 96 3730 3746
+type(
+  float -> float -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"src/render.ml" 96 3730 3747 "src/render.ml" 96 3730 3749
+type(
+  float
+)
+"src/render.ml" 96 3730 3743 "src/render.ml" 96 3730 3749
+type(
+  bool
+)
+"src/render.ml" 96 3730 3755 "src/render.ml" 96 3730 3768
+type(
+  scale:float -> Gg.v2 -> int -> Vg.image
+)
+ident(
+  int_ref base_tile_img "src/render.ml" 54 1977 1983 "src/render.ml" 54 1977 1996
+)
+"src/render.ml" 96 3730 3776 "src/render.ml" 96 3730 3778
+type(
+  float
+)
+"src/render.ml" 96 3730 3779 "src/render.ml" 96 3730 3790
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 89 3407 3428 "src/render.ml" 89 3407 3439
+)
+"src/render.ml" 96 3730 3791 "src/render.ml" 96 3730 3794
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 91 3505 3514 "src/render.ml" 91 3505 3517
+)
+"src/render.ml" 96 3730 3755 "src/render.ml" 96 3730 3794
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 97 3800 3810 "src/render.ml" 97 3800 3822
+type(
+  float -> Gg.v2 -> Gg.v2 -> G2048.square -> int -> Vg.image
+)
+ident(
+  int_ref moving_tiles "src/render.ml" 72 2748 2754 "src/render.ml" 72 2748 2766
+)
+"src/render.ml" 97 3800 3823 "src/render.ml" 97 3800 3824
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 89 3407 3422 "src/render.ml" 89 3407 3423
+)
+"src/render.ml" 97 3800 3825 "src/render.ml" 97 3800 3828
+type(
+  Gg.v2
+)
+ident(
+  int_ref dir "src/render.ml" 89 3407 3424 "src/render.ml" 89 3407 3427
+)
+"src/render.ml" 97 3800 3829 "src/render.ml" 97 3800 3840
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 89 3407 3428 "src/render.ml" 89 3407 3439
+)
+"src/render.ml" 97 3800 3841 "src/render.ml" 97 3800 3847
+type(
+  G2048.square
+)
+ident(
+  int_ref square "src/render.ml" 89 3407 3440 "src/render.ml" 89 3407 3446
+)
+"src/render.ml" 97 3800 3848 "src/render.ml" 97 3800 3851
+type(
+  int
+)
+ident(
+  int_ref num "src/render.ml" 91 3505 3514 "src/render.ml" 91 3505 3517
+)
+"src/render.ml" 97 3800 3810 "src/render.ml" 97 3800 3851
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 96 3730 3740 "src/render.ml" 97 3800 3851
+type(
+  Vg.image
+)
+"src/render.ml" 92 3521 3527 "src/render.ml" 97 3800 3851
+type(
+  Vg.image
+)
+"src/render.ml" 89 3407 3449 "src/render.ml" 97 3800 3851
+type(
+  Vg.image
+)
+"src/render.ml" 101 3879 3885 "src/render.ml" 101 3879 3901
+type(
+  Gg.color
+)
+ident(
+  def board_background "src/render.ml" 103 3934 3936 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 101 3879 3904 "src/render.ml" 101 3879 3917
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 101 3879 3918 "src/render.ml" 101 3879 3922
+type(
+  int
+)
+"src/render.ml" 101 3879 3923 "src/render.ml" 101 3879 3927
+type(
+  int
+)
+"src/render.ml" 101 3879 3928 "src/render.ml" 101 3879 3932
+type(
+  int
+)
+"src/render.ml" 101 3879 3904 "src/render.ml" 101 3879 3932
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 103 3934 3940 "src/render.ml" 103 3934 3954
+type(
+  G2048.move option -> Gg.v2
+)
+ident(
+  def move_direction "src/render.ml" 112 4138 4140 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 104 3966 3970 "src/render.ml" 104 3966 3974
+type(
+  G2048.move option
+)
+"src/render.ml" 104 3966 3978 "src/render.ml" 104 3966 3985
+type(
+  Gg.v2
+)
+ident(
+  ext_ref Gg.V2.zero
+)
+"src/render.ml" 105 3986 3995 "src/render.ml" 105 3986 3999
+type(
+  G2048.move
+)
+ident(
+  def move "src/render.ml" 106 4003 4009 "src/render.ml" 110 4106 4136
+)
+"src/render.ml" 105 3986 3990 "src/render.ml" 105 3986 3999
+type(
+  G2048.move option
+)
+"src/render.ml" 106 4003 4015 "src/render.ml" 106 4003 4019
+type(
+  G2048.move
+)
+ident(
+  int_ref move "src/render.ml" 105 3986 3995 "src/render.ml" 105 3986 3999
+)
+"src/render.ml" 107 4025 4033 "src/render.ml" 107 4025 4040
+type(
+  G2048.move
+)
+"src/render.ml" 107 4025 4044 "src/render.ml" 107 4025 4049
+type(
+  Gg.v2
+)
+ident(
+  ext_ref Gg.V2.ox
+)
+"src/render.ml" 108 4050 4058 "src/render.ml" 108 4050 4065
+type(
+  G2048.move
+)
+"src/render.ml" 108 4050 4073 "src/render.ml" 108 4050 4076
+type(
+  Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.neg
+)
+"src/render.ml" 108 4050 4077 "src/render.ml" 108 4050 4079
+type(
+  Gg.v2
+)
+ident(
+  ext_ref Gg.V2.ox
+)
+"src/render.ml" 108 4050 4073 "src/render.ml" 108 4050 4079
+call(
+  tail
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 109 4081 4089 "src/render.ml" 109 4081 4096
+type(
+  G2048.move
+)
+"src/render.ml" 109 4081 4100 "src/render.ml" 109 4081 4105
+type(
+  Gg.v2
+)
+ident(
+  ext_ref Gg.V2.oy
+)
+"src/render.ml" 110 4106 4114 "src/render.ml" 110 4106 4121
+type(
+  G2048.move
+)
+"src/render.ml" 110 4106 4129 "src/render.ml" 110 4106 4132
+type(
+  Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.neg
+)
+"src/render.ml" 110 4106 4133 "src/render.ml" 110 4106 4135
+type(
+  Gg.v2
+)
+ident(
+  ext_ref Gg.V2.oy
+)
+"src/render.ml" 110 4106 4129 "src/render.ml" 110 4106 4135
+call(
+  tail
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 106 4003 4009 "src/render.ml" 110 4106 4136
+type(
+  Gg.v2
+)
+"src/render.ml" 103 3934 3957 "src/render.ml" 110 4106 4136
+type(
+  G2048.move option -> Gg.v2
+)
+"src/render.ml" 112 4138 4144 "src/render.ml" 112 4138 4153
+type(
+  int * int -> float -> G2048.move option -> G2048.board -> Vg.image
+)
+ident(
+  def board_img "src/render.ml" 132 5119 5121 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 112 4138 4155 "src/render.ml" 112 4138 4156
+type(
+  int
+)
+ident(
+  def w "src/render.ml" 112 4138 4161 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 112 4138 4158 "src/render.ml" 112 4138 4159
+type(
+  int
+)
+ident(
+  def h "src/render.ml" 112 4138 4161 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 112 4138 4154 "src/render.ml" 112 4138 4160
+type(
+  int * int
+)
+"src/render.ml" 112 4138 4161 "src/render.ml" 112 4138 4162
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 112 4138 4163 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 112 4138 4163 "src/render.ml" 112 4138 4167
+type(
+  G2048.move option
+)
+ident(
+  def move "src/render.ml" 112 4138 4168 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 112 4138 4168 "src/render.ml" 112 4138 4173
+type(
+  G2048.board
+)
+ident(
+  def board "src/render.ml" 113 4176 4180 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 113 4176 4184 "src/render.ml" 113 4176 4194
+type(
+  Gg.size2
+)
+ident(
+  def board_size "src/render.ml" 114 4228 4232 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 113 4176 4197 "src/render.ml" 113 4176 4204
+type(
+  float -> float -> Gg.size2
+)
+ident(
+  ext_ref Gg.Size2.v
+)
+"src/render.ml" 113 4176 4206 "src/render.ml" 113 4176 4211
+type(
+  int -> float
+)
+ident(
+  ext_ref Pervasives.float
+)
+"src/render.ml" 113 4176 4212 "src/render.ml" 113 4176 4213
+type(
+  int
+)
+ident(
+  int_ref w "src/render.ml" 112 4138 4155 "src/render.ml" 112 4138 4156
+)
+"src/render.ml" 113 4176 4205 "src/render.ml" 113 4176 4214
+type(
+  float
+)
+"src/render.ml" 113 4176 4216 "src/render.ml" 113 4176 4221
+type(
+  int -> float
+)
+ident(
+  ext_ref Pervasives.float
+)
+"src/render.ml" 113 4176 4222 "src/render.ml" 113 4176 4223
+type(
+  int
+)
+ident(
+  int_ref h "src/render.ml" 112 4138 4158 "src/render.ml" 112 4138 4159
+)
+"src/render.ml" 113 4176 4215 "src/render.ml" 113 4176 4224
+type(
+  float
+)
+"src/render.ml" 113 4176 4197 "src/render.ml" 113 4176 4224
+call(
+  stack
+)
+type(
+  Gg.size2
+)
+"src/render.ml" 114 4228 4236 "src/render.ml" 114 4228 4244
+type(
+  Gg.v2
+)
+ident(
+  def pad_size "src/render.ml" 115 4295 4299 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 114 4228 4251 "src/render.ml" 114 4228 4255
+type(
+  float
+)
+"src/render.ml" 114 4228 4256 "src/render.ml" 114 4228 4257
+type(
+  float -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( * )
+)
+"src/render.ml" 114 4228 4259 "src/render.ml" 114 4228 4260
+type(
+  float -> float -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.v
+)
+"src/render.ml" 114 4228 4262 "src/render.ml" 114 4228 4274
+type(
+  Gg.size2 -> float
+)
+ident(
+  ext_ref Gg.Size2.aspect
+)
+"src/render.ml" 114 4228 4275 "src/render.ml" 114 4228 4285
+type(
+  Gg.size2
+)
+ident(
+  int_ref board_size "src/render.ml" 113 4176 4184 "src/render.ml" 113 4176 4194
+)
+"src/render.ml" 114 4228 4261 "src/render.ml" 114 4228 4286
+call(
+  stack
+)
+type(
+  float
+)
+"src/render.ml" 114 4228 4287 "src/render.ml" 114 4228 4289
+type(
+  float
+)
+"src/render.ml" 114 4228 4258 "src/render.ml" 114 4228 4290
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 114 4228 4251 "src/render.ml" 114 4228 4290
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 115 4295 4303 "src/render.ml" 115 4295 4321
+type(
+  Gg.v2
+)
+ident(
+  def pad_cumulated_size "src/render.ml" 116 4371 4375 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 115 4295 4328 "src/render.ml" 115 4295 4331
+type(
+  Gg.v2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.mul
+)
+"src/render.ml" 115 4295 4333 "src/render.ml" 115 4295 4343
+type(
+  Gg.size2
+)
+ident(
+  ext_ref Gg.Size2.unit
+)
+"src/render.ml" 115 4295 4344 "src/render.ml" 115 4295 4345
+type(
+  Gg.size2 -> Gg.size2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( + )
+)
+"src/render.ml" 115 4295 4346 "src/render.ml" 115 4295 4356
+type(
+  Gg.size2
+)
+ident(
+  int_ref board_size "src/render.ml" 113 4176 4184 "src/render.ml" 113 4176 4194
+)
+"src/render.ml" 115 4295 4332 "src/render.ml" 115 4295 4357
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 115 4295 4358 "src/render.ml" 115 4295 4366
+type(
+  Gg.v2
+)
+ident(
+  int_ref pad_size "src/render.ml" 114 4228 4236 "src/render.ml" 114 4228 4244
+)
+"src/render.ml" 115 4295 4328 "src/render.ml" 115 4295 4366
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 116 4371 4379 "src/render.ml" 116 4371 4390
+type(
+  Gg.v2
+)
+ident(
+  def square_size "src/render.ml" 117 4450 4454 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 116 4371 4397 "src/render.ml" 116 4371 4400
+type(
+  Gg.v2 -> Gg.size2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.div
+)
+"src/render.ml" 116 4371 4402 "src/render.ml" 116 4371 4412
+type(
+  Gg.size2
+)
+ident(
+  ext_ref Gg.Size2.unit
+)
+"src/render.ml" 116 4371 4413 "src/render.ml" 116 4371 4414
+type(
+  Gg.size2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( - )
+)
+"src/render.ml" 116 4371 4415 "src/render.ml" 116 4371 4433
+type(
+  Gg.v2
+)
+ident(
+  int_ref pad_cumulated_size "src/render.ml" 115 4295 4303 "src/render.ml" 115 4295 4321
+)
+"src/render.ml" 116 4371 4401 "src/render.ml" 116 4371 4434
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 116 4371 4435 "src/render.ml" 116 4371 4445
+type(
+  Gg.size2
+)
+ident(
+  int_ref board_size "src/render.ml" 113 4176 4184 "src/render.ml" 113 4176 4194
+)
+"src/render.ml" 116 4371 4397 "src/render.ml" 116 4371 4445
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 117 4450 4458 "src/render.ml" 117 4450 4464
+type(
+  Gg.v2
+)
+ident(
+  def origin "src/render.ml" 118 4504 4508 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 117 4450 4471 "src/render.ml" 117 4450 4479
+type(
+  Gg.v2
+)
+ident(
+  int_ref pad_size "src/render.ml" 114 4228 4236 "src/render.ml" 114 4228 4244
+)
+"src/render.ml" 117 4450 4480 "src/render.ml" 117 4450 4481
+type(
+  Gg.v2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( + )
+)
+"src/render.ml" 117 4450 4482 "src/render.ml" 117 4450 4485
+type(
+  float
+)
+"src/render.ml" 117 4450 4486 "src/render.ml" 117 4450 4487
+type(
+  float -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( * )
+)
+"src/render.ml" 117 4450 4488 "src/render.ml" 117 4450 4499
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 116 4371 4379 "src/render.ml" 116 4371 4390
+)
+"src/render.ml" 117 4450 4482 "src/render.ml" 117 4450 4499
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 117 4450 4471 "src/render.ml" 117 4450 4499
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 118 4504 4512 "src/render.ml" 118 4504 4515
+type(
+  Gg.v2
+)
+ident(
+  def dir "src/render.ml" 119 4577 4581 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 118 4504 4522 "src/render.ml" 118 4504 4525
+type(
+  Gg.v2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.mul
+)
+"src/render.ml" 118 4504 4527 "src/render.ml" 118 4504 4541
+type(
+  G2048.move option -> Gg.v2
+)
+ident(
+  int_ref move_direction "src/render.ml" 103 3934 3940 "src/render.ml" 103 3934 3954
+)
+"src/render.ml" 118 4504 4542 "src/render.ml" 118 4504 4546
+type(
+  G2048.move option
+)
+ident(
+  int_ref move "src/render.ml" 112 4138 4163 "src/render.ml" 112 4138 4167
+)
+"src/render.ml" 118 4504 4526 "src/render.ml" 118 4504 4547
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 118 4504 4549 "src/render.ml" 118 4504 4557
+type(
+  Gg.v2
+)
+ident(
+  int_ref pad_size "src/render.ml" 114 4228 4236 "src/render.ml" 114 4228 4244
+)
+"src/render.ml" 118 4504 4558 "src/render.ml" 118 4504 4559
+type(
+  Gg.v2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( + )
+)
+"src/render.ml" 118 4504 4560 "src/render.ml" 118 4504 4571
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 116 4371 4379 "src/render.ml" 116 4371 4390
+)
+"src/render.ml" 118 4504 4548 "src/render.ml" 118 4504 4572
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 118 4504 4522 "src/render.ml" 118 4504 4572
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 119 4577 4585 "src/render.ml" 119 4577 4595
+type(
+  Vg.image * Vg.image -> int * int -> G2048.square -> Vg.image * Vg.image
+)
+ident(
+  def add_square "src/render.ml" 127 4956 4960 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 119 4577 4597 "src/render.ml" 119 4577 4604
+type(
+  Vg.image
+)
+ident(
+  def squares "src/render.ml" 119 4577 4613 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 119 4577 4606 "src/render.ml" 119 4577 4611
+type(
+  Vg.image
+)
+ident(
+  def tiles "src/render.ml" 119 4577 4613 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 119 4577 4596 "src/render.ml" 119 4577 4612
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 119 4577 4614 "src/render.ml" 119 4577 4615
+type(
+  int
+)
+ident(
+  def x "src/render.ml" 119 4577 4620 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 119 4577 4617 "src/render.ml" 119 4577 4618
+type(
+  int
+)
+ident(
+  def y "src/render.ml" 119 4577 4620 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 119 4577 4613 "src/render.ml" 119 4577 4619
+type(
+  int * int
+)
+"src/render.ml" 119 4577 4620 "src/render.ml" 119 4577 4626
+type(
+  G2048.square
+)
+ident(
+  def square "src/render.ml" 120 4629 4635 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 120 4629 4639 "src/render.ml" 120 4629 4643
+type(
+  Gg.p2
+)
+ident(
+  def ipos "src/render.ml" 121 4674 4680 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 120 4629 4646 "src/render.ml" 120 4629 4650
+type(
+  float -> float -> Gg.p2
+)
+ident(
+  ext_ref Gg.P2.v
+)
+"src/render.ml" 120 4629 4652 "src/render.ml" 120 4629 4657
+type(
+  int -> float
+)
+ident(
+  ext_ref Pervasives.float
+)
+"src/render.ml" 120 4629 4658 "src/render.ml" 120 4629 4659
+type(
+  int
+)
+ident(
+  int_ref x "src/render.ml" 119 4577 4614 "src/render.ml" 119 4577 4615
+)
+"src/render.ml" 120 4629 4651 "src/render.ml" 120 4629 4660
+type(
+  float
+)
+"src/render.ml" 120 4629 4662 "src/render.ml" 120 4629 4667
+type(
+  int -> float
+)
+ident(
+  ext_ref Pervasives.float
+)
+"src/render.ml" 120 4629 4668 "src/render.ml" 120 4629 4669
+type(
+  int
+)
+ident(
+  int_ref y "src/render.ml" 119 4577 4617 "src/render.ml" 119 4577 4618
+)
+"src/render.ml" 120 4629 4661 "src/render.ml" 120 4629 4670
+type(
+  float
+)
+"src/render.ml" 120 4629 4646 "src/render.ml" 120 4629 4670
+call(
+  stack
+)
+type(
+  Gg.p2
+)
+"src/render.ml" 121 4674 4684 "src/render.ml" 121 4674 4687
+type(
+  Gg.v2
+)
+ident(
+  def pos "src/render.ml" 122 4741 4747 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 121 4674 4694 "src/render.ml" 121 4674 4700
+type(
+  Gg.v2
+)
+ident(
+  int_ref origin "src/render.ml" 117 4450 4458 "src/render.ml" 117 4450 4464
+)
+"src/render.ml" 121 4674 4701 "src/render.ml" 121 4674 4702
+type(
+  Gg.v2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( + )
+)
+"src/render.ml" 121 4674 4703 "src/render.ml" 121 4674 4706
+type(
+  Gg.p2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.mul
+)
+"src/render.ml" 121 4674 4707 "src/render.ml" 121 4674 4711
+type(
+  Gg.p2
+)
+ident(
+  int_ref ipos "src/render.ml" 120 4629 4639 "src/render.ml" 120 4629 4643
+)
+"src/render.ml" 121 4674 4713 "src/render.ml" 121 4674 4721
+type(
+  Gg.v2
+)
+ident(
+  int_ref pad_size "src/render.ml" 114 4228 4236 "src/render.ml" 114 4228 4244
+)
+"src/render.ml" 121 4674 4722 "src/render.ml" 121 4674 4723
+type(
+  Gg.v2 -> Gg.v2 -> Gg.v2
+)
+ident(
+  ext_ref Gg.V2.( + )
+)
+"src/render.ml" 121 4674 4724 "src/render.ml" 121 4674 4735
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 116 4371 4379 "src/render.ml" 116 4371 4390
+)
+"src/render.ml" 121 4674 4712 "src/render.ml" 121 4674 4736
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 121 4674 4703 "src/render.ml" 121 4674 4736
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 121 4674 4694 "src/render.ml" 121 4674 4736
+call(
+  stack
+)
+type(
+  Gg.v2
+)
+"src/render.ml" 122 4741 4751 "src/render.ml" 122 4741 4761
+type(
+  Vg.image
+)
+ident(
+  def square_img "src/render.ml" 123 4790 4796 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 122 4741 4764 "src/render.ml" 122 4741 4774
+type(
+  Gg.size2 -> Vg.image
+)
+ident(
+  int_ref square_img "src/render.ml" 19 388 394 "src/render.ml" 19 388 404
+)
+"src/render.ml" 122 4741 4775 "src/render.ml" 122 4741 4786
+type(
+  Gg.size2
+)
+ident(
+  int_ref square_size "src/render.ml" 116 4371 4379 "src/render.ml" 116 4371 4390
+)
+"src/render.ml" 122 4741 4764 "src/render.ml" 122 4741 4786
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 123 4790 4800 "src/render.ml" 123 4790 4808
+type(
+  Vg.image
+)
+ident(
+  def tile_img "src/render.ml" 124 4848 4854 "src/render.ml" 125 4901 4948
+)
+"src/render.ml" 123 4790 4811 "src/render.ml" 123 4790 4819
+type(
+  float -> Gg.v2 -> Gg.v2 -> G2048.square -> Vg.image
+)
+ident(
+  int_ref tile_img "src/render.ml" 89 3407 3413 "src/render.ml" 89 3407 3421
+)
+"src/render.ml" 123 4790 4820 "src/render.ml" 123 4790 4821
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 112 4138 4161 "src/render.ml" 112 4138 4162
+)
+"src/render.ml" 123 4790 4822 "src/render.ml" 123 4790 4825
+type(
+  Gg.v2
+)
+ident(
+  int_ref dir "src/render.ml" 118 4504 4512 "src/render.ml" 118 4504 4515
+)
+"src/render.ml" 123 4790 4826 "src/render.ml" 123 4790 4837
+type(
+  Gg.v2
+)
+ident(
+  int_ref square_size "src/render.ml" 116 4371 4379 "src/render.ml" 116 4371 4390
+)
+"src/render.ml" 123 4790 4838 "src/render.ml" 123 4790 4844
+type(
+  G2048.square
+)
+ident(
+  int_ref square "src/render.ml" 119 4577 4620 "src/render.ml" 119 4577 4626
+)
+"src/render.ml" 123 4790 4811 "src/render.ml" 123 4790 4844
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 124 4848 4854 "src/render.ml" 124 4848 4861
+type(
+  Vg.image
+)
+ident(
+  int_ref squares "src/render.ml" 119 4577 4597 "src/render.ml" 119 4577 4604
+)
+"src/render.ml" 124 4848 4862 "src/render.ml" 124 4848 4864
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 124 4848 4865 "src/render.ml" 124 4848 4872
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 124 4848 4874 "src/render.ml" 124 4848 4884
+type(
+  Vg.image
+)
+ident(
+  int_ref square_img "src/render.ml" 122 4741 4751 "src/render.ml" 122 4741 4761
+)
+"src/render.ml" 124 4848 4885 "src/render.ml" 124 4848 4887
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 124 4848 4888 "src/render.ml" 124 4848 4894
+type(
+  Gg.v2 -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.move
+)
+"src/render.ml" 124 4848 4895 "src/render.ml" 124 4848 4898
+type(
+  Gg.v2
+)
+ident(
+  int_ref pos "src/render.ml" 121 4674 4684 "src/render.ml" 121 4674 4687
+)
+"src/render.ml" 124 4848 4888 "src/render.ml" 124 4848 4898
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 124 4848 4873 "src/render.ml" 124 4848 4899
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 124 4848 4865 "src/render.ml" 124 4848 4899
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 124 4848 4854 "src/render.ml" 124 4848 4899
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 125 4901 4907 "src/render.ml" 125 4901 4912
+type(
+  Vg.image
+)
+ident(
+  int_ref tiles "src/render.ml" 119 4577 4606 "src/render.ml" 119 4577 4611
+)
+"src/render.ml" 125 4901 4913 "src/render.ml" 125 4901 4915
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 125 4901 4916 "src/render.ml" 125 4901 4923
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 125 4901 4925 "src/render.ml" 125 4901 4933
+type(
+  Vg.image
+)
+ident(
+  int_ref tile_img "src/render.ml" 123 4790 4800 "src/render.ml" 123 4790 4808
+)
+"src/render.ml" 125 4901 4934 "src/render.ml" 125 4901 4936
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 125 4901 4937 "src/render.ml" 125 4901 4943
+type(
+  Gg.v2 -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.move
+)
+"src/render.ml" 125 4901 4944 "src/render.ml" 125 4901 4947
+type(
+  Gg.v2
+)
+ident(
+  int_ref pos "src/render.ml" 121 4674 4684 "src/render.ml" 121 4674 4687
+)
+"src/render.ml" 125 4901 4937 "src/render.ml" 125 4901 4947
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 125 4901 4924 "src/render.ml" 125 4901 4948
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 125 4901 4916 "src/render.ml" 125 4901 4948
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 125 4901 4907 "src/render.ml" 125 4901 4948
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 124 4848 4854 "src/render.ml" 125 4901 4948
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 123 4790 4796 "src/render.ml" 125 4901 4948
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 122 4741 4747 "src/render.ml" 125 4901 4948
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 121 4674 4680 "src/render.ml" 125 4901 4948
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 120 4629 4635 "src/render.ml" 125 4901 4948
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 127 4956 4964 "src/render.ml" 127 4956 4971
+type(
+  Vg.image
+)
+ident(
+  def squares "src/render.ml" 128 5035 5039 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 127 4956 4973 "src/render.ml" 127 4956 4978
+type(
+  Vg.image
+)
+ident(
+  def tiles "src/render.ml" 128 5035 5039 "src/render.ml" 128 5035 5099
+)
+"src/render.ml" 127 4956 4964 "src/render.ml" 127 4956 4978
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 127 4956 4981 "src/render.ml" 127 4956 4997
+type(
+  (Vg.image * Vg.image -> int * int -> G2048.square -> Vg.image * Vg.image) ->
+  Vg.image * Vg.image -> G2048.board -> Vg.image * Vg.image
+)
+ident(
+  ext_ref G2048.fold_board
+)
+"src/render.ml" 127 4956 4998 "src/render.ml" 127 4956 5008
+type(
+  Vg.image * Vg.image -> int * int -> G2048.square -> Vg.image * Vg.image
+)
+ident(
+  int_ref add_square "src/render.ml" 119 4577 4585 "src/render.ml" 119 4577 4595
+)
+"src/render.ml" 127 4956 5010 "src/render.ml" 127 4956 5016
+type(
+  Vg.image
+)
+ident(
+  ext_ref Vg.I.void
+)
+"src/render.ml" 127 4956 5018 "src/render.ml" 127 4956 5024
+type(
+  Vg.image
+)
+ident(
+  ext_ref Vg.I.void
+)
+"src/render.ml" 127 4956 5009 "src/render.ml" 127 4956 5025
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 127 4956 5026 "src/render.ml" 127 4956 5031
+type(
+  G2048.board
+)
+ident(
+  int_ref board "src/render.ml" 112 4138 4168 "src/render.ml" 112 4138 4173
+)
+"src/render.ml" 127 4956 4981 "src/render.ml" 127 4956 5031
+call(
+  stack
+)
+type(
+  Vg.image * Vg.image
+)
+"src/render.ml" 128 5035 5039 "src/render.ml" 128 5035 5046
+type(
+  Gg.color -> Vg.image
+)
+ident(
+  ext_ref Vg.I.const
+)
+"src/render.ml" 128 5035 5047 "src/render.ml" 128 5035 5063
+type(
+  Gg.color
+)
+ident(
+  int_ref board_background "src/render.ml" 101 3879 3885 "src/render.ml" 101 3879 3901
+)
+"src/render.ml" 128 5035 5039 "src/render.ml" 128 5035 5063
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 128 5035 5064 "src/render.ml" 128 5035 5066
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 128 5035 5067 "src/render.ml" 128 5035 5074
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 128 5035 5075 "src/render.ml" 128 5035 5082
+type(
+  Vg.image
+)
+ident(
+  int_ref squares "src/render.ml" 127 4956 4964 "src/render.ml" 127 4956 4971
+)
+"src/render.ml" 128 5035 5067 "src/render.ml" 128 5035 5082
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 128 5035 5039 "src/render.ml" 128 5035 5082
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 128 5035 5083 "src/render.ml" 128 5035 5085
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 128 5035 5086 "src/render.ml" 128 5035 5093
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 128 5035 5094 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+ident(
+  int_ref tiles "src/render.ml" 127 4956 4973 "src/render.ml" 127 4956 4978
+)
+"src/render.ml" 128 5035 5086 "src/render.ml" 128 5035 5099
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 128 5035 5039 "src/render.ml" 128 5035 5099
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 127 4956 4960 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 119 4577 4581 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 118 4504 4508 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 117 4450 4454 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 116 4371 4375 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 115 4295 4299 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 114 4228 4232 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 113 4176 4180 "src/render.ml" 128 5035 5099
+type(
+  Vg.image
+)
+"src/render.ml" 132 5119 5125 "src/render.ml" 132 5119 5137
+type(
+  Vg.Font.t
+)
+ident(
+  def overlay_font "src/render.ml" 133 5176 5178 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 132 5119 5142 "src/render.ml" 132 5119 5151
+type(
+  Vg.Font.t
+)
+ident(
+  int_ref base_font "src/render.ml" 13 213 219 "src/render.ml" 13 213 228
+)
+"src/render.ml" 132 5119 5169 "src/render.ml" 132 5119 5173
+type(
+  float
+)
+"src/render.ml" 132 5119 5140 "src/render.ml" 132 5119 5175
+type(
+  Vg.Font.t
+)
+"src/render.ml" 133 5176 5182 "src/render.ml" 133 5176 5200
+type(
+  Gg.color
+)
+ident(
+  def overlay_back_color "src/render.ml" 134 5225 5227 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 133 5176 5203 "src/render.ml" 133 5176 5213
+type(
+  ?a:float -> float -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.gray
+)
+"src/render.ml" 133 5176 5217 "src/render.ml" 133 5176 5220
+type(
+  float
+)
+"src/render.ml" 133 5176 5221 "src/render.ml" 133 5176 5224
+type(
+  float
+)
+"src/render.ml" 133 5176 5203 "src/render.ml" 133 5176 5224
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 134 5225 5231 "src/render.ml" 134 5225 5248
+type(
+  Gg.color
+)
+ident(
+  def overlay_msg_color "src/render.ml" 136 5281 5283 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 134 5225 5251 "src/render.ml" 134 5225 5264
+type(
+  ?a:float -> int -> int -> int -> Gg.color
+)
+ident(
+  ext_ref Gg.Color.v_srgbi
+)
+"src/render.ml" 134 5225 5265 "src/render.ml" 134 5225 5269
+type(
+  int
+)
+"src/render.ml" 134 5225 5270 "src/render.ml" 134 5225 5274
+type(
+  int
+)
+"src/render.ml" 134 5225 5275 "src/render.ml" 134 5225 5279
+type(
+  int
+)
+"src/render.ml" 134 5225 5251 "src/render.ml" 134 5225 5279
+call(
+  stack
+)
+type(
+  Gg.color
+)
+"src/render.ml" 136 5281 5287 "src/render.ml" 136 5281 5298
+type(
+  string -> Gg.v2 -> Vg.image
+)
+ident(
+  def overlay_img "src/render.ml" 140 5463 5465 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 136 5281 5299 "src/render.ml" 136 5281 5303
+type(
+  string
+)
+ident(
+  def text "src/render.ml" 136 5281 5304 "src/render.ml" 138 5395 5461
+)
+"src/render.ml" 136 5281 5304 "src/render.ml" 136 5281 5312
+type(
+  Gg.v2
+)
+ident(
+  def text_pos "src/render.ml" 137 5315 5319 "src/render.ml" 138 5395 5461
+)
+"src/render.ml" 137 5315 5323 "src/render.ml" 137 5315 5326
+type(
+  Vg.image
+)
+ident(
+  def msg "src/render.ml" 138 5395 5399 "src/render.ml" 138 5395 5461
+)
+"src/render.ml" 137 5315 5329 "src/render.ml" 137 5315 5341
+type(
+  ?area:[ `O of Vg.P.outline ] ->
+  ?text:string ->
+  ?blocks:bool * (int * int) list ->
+  ?advances:Gg.v2 list -> Vg.font -> Vg.glyph list -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.cut_glyphs
+)
+"src/render.ml" 137 5315 5343 "src/render.ml" 137 5315 5347
+type(
+  string
+)
+ident(
+  int_ref text "src/render.ml" 136 5281 5299 "src/render.ml" 136 5281 5303
+)
+"src/render.ml" 137 5315 5348 "src/render.ml" 137 5315 5360
+type(
+  Vg.font
+)
+ident(
+  int_ref overlay_font "src/render.ml" 132 5119 5125 "src/render.ml" 132 5119 5137
+)
+"src/render.ml" 137 5315 5361 "src/render.ml" 137 5315 5363
+type(
+  Vg.glyph list
+)
+"src/render.ml" 137 5315 5365 "src/render.ml" 137 5315 5372
+type(
+  Gg.color -> Vg.image
+)
+ident(
+  ext_ref Vg.I.const
+)
+"src/render.ml" 137 5315 5373 "src/render.ml" 137 5315 5390
+type(
+  Gg.color
+)
+ident(
+  int_ref overlay_msg_color "src/render.ml" 134 5225 5231 "src/render.ml" 134 5225 5248
+)
+"src/render.ml" 137 5315 5364 "src/render.ml" 137 5315 5391
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 137 5315 5329 "src/render.ml" 137 5315 5391
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 138 5395 5399 "src/render.ml" 138 5395 5406
+type(
+  Gg.color -> Vg.image
+)
+ident(
+  ext_ref Vg.I.const
+)
+"src/render.ml" 138 5395 5407 "src/render.ml" 138 5395 5425
+type(
+  Gg.color
+)
+ident(
+  int_ref overlay_back_color "src/render.ml" 133 5176 5182 "src/render.ml" 133 5176 5200
+)
+"src/render.ml" 138 5395 5399 "src/render.ml" 138 5395 5425
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 138 5395 5426 "src/render.ml" 138 5395 5428
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 138 5395 5429 "src/render.ml" 138 5395 5436
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 138 5395 5438 "src/render.ml" 138 5395 5441
+type(
+  Vg.image
+)
+ident(
+  int_ref msg "src/render.ml" 137 5315 5323 "src/render.ml" 137 5315 5326
+)
+"src/render.ml" 138 5395 5442 "src/render.ml" 138 5395 5444
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 138 5395 5445 "src/render.ml" 138 5395 5451
+type(
+  Gg.v2 -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.move
+)
+"src/render.ml" 138 5395 5452 "src/render.ml" 138 5395 5460
+type(
+  Gg.v2
+)
+ident(
+  int_ref text_pos "src/render.ml" 136 5281 5304 "src/render.ml" 136 5281 5312
+)
+"src/render.ml" 138 5395 5445 "src/render.ml" 138 5395 5460
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 138 5395 5437 "src/render.ml" 138 5395 5461
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 138 5395 5429 "src/render.ml" 138 5395 5461
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 138 5395 5399 "src/render.ml" 138 5395 5461
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 137 5315 5319 "src/render.ml" 138 5395 5461
+type(
+  Vg.image
+)
+"src/render.ml" 140 5463 5469 "src/render.ml" 140 5463 5486
+type(
+  Vg.image
+)
+ident(
+  def game_over_overlay "src/render.ml" 141 5531 5533 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 140 5463 5489 "src/render.ml" 140 5463 5500
+type(
+  string -> Gg.p2 -> Vg.image
+)
+ident(
+  int_ref overlay_img "src/render.ml" 136 5281 5287 "src/render.ml" 136 5281 5298
+)
+"src/render.ml" 140 5463 5501 "src/render.ml" 140 5463 5513
+type(
+  string
+)
+"src/render.ml" 140 5463 5515 "src/render.ml" 140 5463 5519
+type(
+  float -> float -> Gg.p2
+)
+ident(
+  ext_ref Gg.P2.v
+)
+"src/render.ml" 140 5463 5520 "src/render.ml" 140 5463 5524
+type(
+  float
+)
+"src/render.ml" 140 5463 5525 "src/render.ml" 140 5463 5529
+type(
+  float
+)
+"src/render.ml" 140 5463 5514 "src/render.ml" 140 5463 5530
+call(
+  stack
+)
+type(
+  Gg.p2
+)
+"src/render.ml" 140 5463 5489 "src/render.ml" 140 5463 5530
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 141 5531 5537 "src/render.ml" 141 5531 5557
+type(
+  Vg.image
+)
+ident(
+  def game_winning_overlay "src/render.ml" 143 5600 5602 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 141 5531 5560 "src/render.ml" 141 5531 5571
+type(
+  string -> Gg.p2 -> Vg.image
+)
+ident(
+  int_ref overlay_img "src/render.ml" 136 5281 5287 "src/render.ml" 136 5281 5298
+)
+"src/render.ml" 141 5531 5572 "src/render.ml" 141 5531 5582
+type(
+  string
+)
+"src/render.ml" 141 5531 5584 "src/render.ml" 141 5531 5588
+type(
+  float -> float -> Gg.p2
+)
+ident(
+  ext_ref Gg.P2.v
+)
+"src/render.ml" 141 5531 5589 "src/render.ml" 141 5531 5592
+type(
+  float
+)
+"src/render.ml" 141 5531 5593 "src/render.ml" 141 5531 5597
+type(
+  float
+)
+"src/render.ml" 141 5531 5583 "src/render.ml" 141 5531 5598
+call(
+  stack
+)
+type(
+  Gg.p2
+)
+"src/render.ml" 141 5531 5560 "src/render.ml" 141 5531 5598
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 143 5600 5606 "src/render.ml" 143 5600 5619
+type(
+  G2048.board -> Vg.image
+)
+ident(
+  def board_overlay "src/render.ml" 150 5785 5787 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 143 5600 5620 "src/render.ml" 143 5600 5625
+type(
+  G2048.board
+)
+ident(
+  def board "src/render.ml" 144 5628 5632 "src/render.ml" 146 5747 5757
+)
+"src/render.ml" 144 5628 5635 "src/render.ml" 144 5628 5653
+type(
+  G2048.board -> bool
+)
+ident(
+  ext_ref G.is_board_winning
+)
+"src/render.ml" 144 5628 5654 "src/render.ml" 144 5628 5659
+type(
+  G2048.board
+)
+ident(
+  int_ref board "src/render.ml" 143 5600 5620 "src/render.ml" 143 5600 5625
+)
+"src/render.ml" 144 5628 5635 "src/render.ml" 144 5628 5659
+call(
+  stack
+)
+type(
+  bool
+)
+"src/render.ml" 144 5628 5665 "src/render.ml" 144 5628 5685
+type(
+  Vg.image
+)
+ident(
+  int_ref game_winning_overlay "src/render.ml" 141 5531 5537 "src/render.ml" 141 5531 5557
+)
+"src/render.ml" 145 5691 5698 "src/render.ml" 145 5691 5712
+type(
+  G2048.board -> bool
+)
+ident(
+  ext_ref G.is_game_over
+)
+"src/render.ml" 145 5691 5713 "src/render.ml" 145 5691 5718
+type(
+  G2048.board
+)
+ident(
+  int_ref board "src/render.ml" 143 5600 5620 "src/render.ml" 143 5600 5625
+)
+"src/render.ml" 145 5691 5698 "src/render.ml" 145 5691 5718
+call(
+  stack
+)
+type(
+  bool
+)
+"src/render.ml" 145 5691 5724 "src/render.ml" 145 5691 5741
+type(
+  Vg.image
+)
+ident(
+  int_ref game_over_overlay "src/render.ml" 140 5463 5469 "src/render.ml" 140 5463 5486
+)
+"src/render.ml" 146 5747 5751 "src/render.ml" 146 5747 5757
+type(
+  Vg.image
+)
+ident(
+  ext_ref Vg.I.void
+)
+"src/render.ml" 145 5691 5695 "src/render.ml" 146 5747 5757
+type(
+  Vg.image
+)
+"src/render.ml" 144 5628 5632 "src/render.ml" 146 5747 5757
+type(
+  Vg.image
+)
+"src/render.ml" 150 5785 5791 "src/render.ml" 150 5785 5804
+type(
+  float -> G2048.move option -> G2048.board -> Vg.image
+)
+ident(
+  def animate_board "src/render.ml" 154 5967 5969 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 150 5785 5805 "src/render.ml" 150 5785 5806
+type(
+  float
+)
+ident(
+  def t "src/render.ml" 150 5785 5807 "src/render.ml" 152 5893 5965
+)
+"src/render.ml" 150 5785 5807 "src/render.ml" 150 5785 5811
+type(
+  G2048.move option
+)
+ident(
+  def move "src/render.ml" 150 5785 5812 "src/render.ml" 152 5893 5965
+)
+"src/render.ml" 150 5785 5812 "src/render.ml" 150 5785 5817
+type(
+  G2048.board
+)
+ident(
+  def board "src/render.ml" 150 5785 5820 "src/render.ml" 152 5893 5965
+)
+"src/render.ml" 150 5785 5826 "src/render.ml" 150 5785 5842
+type(
+  G2048.board -> int * int
+)
+ident(
+  ext_ref G2048.board_size
+)
+"src/render.ml" 150 5785 5843 "src/render.ml" 150 5785 5848
+type(
+  G2048.board
+)
+ident(
+  int_ref board "src/render.ml" 150 5785 5812 "src/render.ml" 150 5785 5817
+)
+"src/render.ml" 150 5785 5826 "src/render.ml" 150 5785 5848
+call(
+  stack
+)
+type(
+  int * int
+)
+"src/render.ml" 151 5854 5859 "src/render.ml" 151 5854 5860
+type(
+  int
+)
+"src/render.ml" 151 5854 5862 "src/render.ml" 151 5854 5863
+type(
+  int
+)
+"src/render.ml" 151 5854 5858 "src/render.ml" 151 5854 5864
+type(
+  int * int
+)
+"src/render.ml" 151 5854 5868 "src/render.ml" 151 5854 5875
+type(
+  Gg.color -> Vg.image
+)
+ident(
+  ext_ref Vg.I.const
+)
+"src/render.ml" 151 5854 5876 "src/render.ml" 151 5854 5892
+type(
+  Gg.color
+)
+ident(
+  int_ref board_background "src/render.ml" 101 3879 3885 "src/render.ml" 101 3879 3901
+)
+"src/render.ml" 151 5854 5868 "src/render.ml" 151 5854 5892
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 152 5893 5897 "src/render.ml" 152 5893 5901
+type(
+  int * int
+)
+ident(
+  def size "src/render.ml" 152 5893 5905 "src/render.ml" 152 5893 5965
+)
+"src/render.ml" 152 5893 5905 "src/render.ml" 152 5893 5914
+type(
+  int * int -> float -> G2048.move option -> G2048.board -> Vg.image
+)
+ident(
+  int_ref board_img "src/render.ml" 112 4138 4144 "src/render.ml" 112 4138 4153
+)
+"src/render.ml" 152 5893 5915 "src/render.ml" 152 5893 5919
+type(
+  int * int
+)
+ident(
+  int_ref size "src/render.ml" 152 5893 5897 "src/render.ml" 152 5893 5901
+)
+"src/render.ml" 152 5893 5920 "src/render.ml" 152 5893 5921
+type(
+  float
+)
+ident(
+  int_ref t "src/render.ml" 150 5785 5805 "src/render.ml" 150 5785 5806
+)
+"src/render.ml" 152 5893 5922 "src/render.ml" 152 5893 5926
+type(
+  G2048.move option
+)
+ident(
+  int_ref move "src/render.ml" 150 5785 5807 "src/render.ml" 150 5785 5811
+)
+"src/render.ml" 152 5893 5927 "src/render.ml" 152 5893 5932
+type(
+  G2048.board
+)
+ident(
+  int_ref board "src/render.ml" 150 5785 5812 "src/render.ml" 150 5785 5817
+)
+"src/render.ml" 152 5893 5905 "src/render.ml" 152 5893 5932
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 152 5893 5933 "src/render.ml" 152 5893 5935
+type(
+  Vg.image -> (Vg.image -> Vg.image) -> Vg.image
+)
+ident(
+  ext_ref Vg.( >> )
+)
+"src/render.ml" 152 5893 5936 "src/render.ml" 152 5893 5943
+type(
+  Vg.image -> Vg.image -> Vg.image
+)
+ident(
+  ext_ref Vg.I.blend
+)
+"src/render.ml" 152 5893 5945 "src/render.ml" 152 5893 5958
+type(
+  G2048.board -> Vg.image
+)
+ident(
+  int_ref board_overlay "src/render.ml" 143 5600 5606 "src/render.ml" 143 5600 5619
+)
+"src/render.ml" 152 5893 5959 "src/render.ml" 152 5893 5964
+type(
+  G2048.board
+)
+ident(
+  int_ref board "src/render.ml" 150 5785 5812 "src/render.ml" 150 5785 5817
+)
+"src/render.ml" 152 5893 5944 "src/render.ml" 152 5893 5965
+call(
+  stack
+)
+type(
+  Vg.image
+)
+"src/render.ml" 152 5893 5936 "src/render.ml" 152 5893 5965
+call(
+  stack
+)
+type(
+  Vg.image -> Vg.image
+)
+"src/render.ml" 152 5893 5905 "src/render.ml" 152 5893 5965
+call(
+  tail
+)
+type(
+  Vg.image
+)
+"src/render.ml" 150 5785 5820 "src/render.ml" 152 5893 5965
+type(
+  Vg.image
+)
+"src/render.ml" 154 5967 5973 "src/render.ml" 154 5967 5987
+type(
+  G2048.board -> Vg.image
+)
+ident(
+  def image_of_board "src/render.ml" 154 5967 6024 "src/render.ml" 156 6026 6029
+)
+"src/render.ml" 154 5967 5988 "src/render.ml" 154 5967 5993
+type(
+  G2048.board
+)
+ident(
+  def board "src/render.ml" 154 5967 5996 "src/render.ml" 154 5967 6024
+)
+"src/render.ml" 154 5967 5996 "src/render.ml" 154 5967 6009
+type(
+  float -> G2048.move option -> G2048.board -> Vg.image
+)
+ident(
+  int_ref animate_board "src/render.ml" 150 5785 5791 "src/render.ml" 150 5785 5804
+)
+"src/render.ml" 154 5967 6010 "src/render.ml" 154 5967 6013
+type(
+  float
+)
+"src/render.ml" 154 5967 6014 "src/render.ml" 154 5967 6018
+type(
+  G2048.move option
+)
+"src/render.ml" 154 5967 6019 "src/render.ml" 154 5967 6024
+type(
+  G2048.board
+)
+ident(
+  int_ref board "src/render.ml" 154 5967 5988 "src/render.ml" 154 5967 5993
+)
+"src/render.ml" 154 5967 5996 "src/render.ml" 154 5967 6024
+call(
+  tail
+)
+type(
+  Vg.image
+)

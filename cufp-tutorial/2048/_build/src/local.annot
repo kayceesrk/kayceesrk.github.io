@@ -1,0 +1,26 @@
+"src/local.ml" 8 154 165 "src/local.ml" 8 154 189
+call(
+  stack
+)
+"src/local.ml" 10 191 195 "src/local.ml" 10 191 197
+type(
+  unit
+)
+"src/local.ml" 10 191 200 "src/local.ml" 10 191 207
+type(
+  unit -> unit
+)
+ident(
+  ext_ref M.start
+)
+"src/local.ml" 10 191 208 "src/local.ml" 10 191 210
+type(
+  unit
+)
+"src/local.ml" 10 191 200 "src/local.ml" 10 191 210
+call(
+  stack
+)
+type(
+  unit
+)

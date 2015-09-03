@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="Utils.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="G2048" rel="Chapter" href="G2048.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Test" rel="Chapter" href="Test.html">
+<link title="Render" rel="Chapter" href="Render.html">
+<link title="Anim" rel="Chapter" href="Anim.html">
+<link title="Useri" rel="Chapter" href="Useri.html">
+<link title="Useri_jsoo" rel="Chapter" href="Useri_jsoo.html"><link title="Types" rel="Section" href="#1_Types">
+<link title="Provenance" rel="Section" href="#1_Provenance">
+<link title="Solutions" rel="Section" href="#1_Solutions">
+<link title="Squares" rel="Subsection" href="#2_Squares">
+<link title="Boards" rel="Subsection" href="#2_Boards">
+<title>G2048</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Utils.html" title="Utils">Next</a>
+</div>
+<h1>Module <a href="type_G2048.html">G2048</a></h1>
+
+<pre><span class="keyword">module</span> G2048: <code class="code"><span class="keyword">sig</span></code> <a href="G2048.html">..</a> <code class="code"><span class="keyword">end</span></code></pre><div class="info module top">
+2048 game logic.<br>
+</div>
+<hr width="100%">
+<br>
+<h1 id="1_Types">Types</h1><br>
+
+<pre><span id="TYPEsquare"><span class="keyword">type</span> <code class="type"></code>square</span> = <code class="type">int option</code> </pre>
+<div class="info ">
+The type for squares.<br>
+</div>
+
+
+<pre><span id="TYPErow"><span class="keyword">type</span> <code class="type"></code>row</span> = <code class="type"><a href="G2048.html#TYPEsquare">square</a> list</code> </pre>
+<div class="info ">
+The type for board rows.<br>
+</div>
+
+
+<pre><span id="TYPEboard"><span class="keyword">type</span> <code class="type"></code>board</span> = <code class="type"><a href="G2048.html#TYPErow">row</a> list</code> </pre>
+<div class="info ">
+The type for boards.<br>
+</div>
+
+
+<pre><code><span id="TYPEmove"><span class="keyword">type</span> <code class="type"></code>move</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmove.L"><span class="constructor">L</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmove.R"><span class="constructor">R</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmove.U"><span class="constructor">U</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTmove.D"><span class="constructor">D</span></span></code></td>
+
+</tr></table>
+
+<div class="info ">
+The type for game moves.
+    <ul>
+<li><code class="code"><span class="constructor">L</span></code> when the player press the left arrow.</li>
+<li><code class="code"><span class="constructor">R</span></code> when the player press the up arrow.</li>
+<li><code class="code"><span class="constructor">U</span></code> when the player press the up arrow.</li>
+<li><code class="code"><span class="constructor">D</span></code> when the player press the down arrow.</li>
+</ul>
+<br>
+</div>
+
+<br>
+<h2 id="2_Squares">Squares</h2><br>
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">empty</code> is an empty square.<br>
+</div>
+
+<pre><span id="VALt2"><span class="keyword">val</span> t2</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t2</code> is a square with value 2.<br>
+</div>
+
+<pre><span id="VALt4"><span class="keyword">val</span> t4</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t4</code> is a square with value 4.<br>
+</div>
+
+<pre><span id="VALt8"><span class="keyword">val</span> t8</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t8</code> is a square with value 8.<br>
+</div>
+
+<pre><span id="VALt16"><span class="keyword">val</span> t16</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t16</code> is a square with value 16.<br>
+</div>
+
+<pre><span id="VALt32"><span class="keyword">val</span> t32</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t32</code> is a square with value 32.<br>
+</div>
+
+<pre><span id="VALt64"><span class="keyword">val</span> t64</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t64</code> is a square with value 64.<br>
+</div>
+
+<pre><span id="VALt128"><span class="keyword">val</span> t128</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t128</code> is a square with value 128.<br>
+</div>
+
+<pre><span id="VALt256"><span class="keyword">val</span> t256</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t256</code> is a square with value 256.<br>
+</div>
+
+<pre><span id="VALt512"><span class="keyword">val</span> t512</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t512</code> is a square with value 512.<br>
+</div>
+
+<pre><span id="VALt1024"><span class="keyword">val</span> t1024</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t1024</code> is a square with value 1024.<br>
+</div>
+
+<pre><span id="VALt2048"><span class="keyword">val</span> t2048</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a></code></pre><div class="info ">
+<code class="code">t2048</code> is a square with value 2048.<br>
+</div>
+
+<pre><span id="VALsquare_value"><span class="keyword">val</span> square_value</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a> -> int option</code></pre><div class="info ">
+<code class="code">square_value t</code> is <code class="code">t</code>'s value (if any).<br>
+</div>
+
+<pre><span id="VALstring_of_square"><span class="keyword">val</span> string_of_square</span> : <code class="type"><a href="G2048.html#TYPEsquare">square</a> -> string</code></pre><div class="info ">
+<code class="code">string_of_square t</code> is <code class="code">t</code> as a string.<br>
+</div>
+<br>
+<h2 id="2_Boards">Boards</h2><br>
+
+<pre><span id="VALcreate_board"><span class="keyword">val</span> create_board</span> : <code class="type">unit -> <a href="G2048.html#TYPEboard">board</a></code></pre><div class="info ">
+<code class="code">create_board ()</code> is a new board.<br>
+</div>
+
+<pre><span id="VALboard_size"><span class="keyword">val</span> board_size</span> : <code class="type"><a href="G2048.html#TYPEboard">board</a> -> int * int</code></pre><div class="info ">
+<code class="code">board_size board</code> is the number of columns and rows in the board.<br>
+</div>
+
+<pre><span id="VALfold_board"><span class="keyword">val</span> fold_board</span> : <code class="type">('a -> int * int -> <a href="G2048.html#TYPEsquare">square</a> -> 'a) -> 'a -> <a href="G2048.html#TYPEboard">board</a> -> 'a</code></pre><div class="info ">
+<code class="code">fold_board f acc board</code> folds <code class="code">f</code> over all the squares of <code class="code">board</code> with
+    the zero-based positions and starting with <code class="code">acc</code>. The left-bottom
+    corner has position <code class="code">(0,0)</code>.<br>
+</div>
+<br>
+<h1 id="1_Provenance">Provenance</h1><br>
+
+<pre><code><span id="TYPEprovenance"><span class="keyword">type</span> <code class="type"></code>provenance</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprovenance.shift">shift</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprovenance.value">value</span>&nbsp;: <code class="type">int</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+The provenance of a tile. <em>Not used by the online tutorial.</em><br>
+</div>
+
+<br>
+<h1 id="1_Solutions">Solutions</h1><br>
+
+<pre><span class="keyword">module type</span> <a href="G2048.Solution.html">Solution</a> = <code class="code"><span class="keyword">sig</span></code> <a href="G2048.Solution.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
+<pre><span class="keyword">module</span> <a href="G2048.Default.html">Default</a>: <code class="type"><a href="G2048.Solution.html">Solution</a></code><code class="type"> </code></pre>
+<pre><span class="keyword">module</span> <a href="G2048.Make.html">Make</a>: <div class="sig_block"><code class="code"><span class="keyword">functor</span> (</code><code class="code"><span class="constructor">S</span></code><code class="code"> : </code><code class="type"><a href="G2048.Solution.html">Solution</a></code><code class="code">) <span class="keywordsign">-&gt;</span> </code><code class="code"><span class="keyword">sig</span></code> <a href="G2048.Make.html">..</a> <code class="code"><span class="keyword">end</span></code></div></pre></body></html>
