@@ -147,7 +147,7 @@ India](https://www.annauniv.edu/).
 
 # Talks
 
-* **Effective Concurrency with Algebraic Effects**
+ * **Effective Concurrency with Algebraic Effects**
 <div> OCaml Workshop, Sep 2015 </div>
  * **Functional Programming Abstractions for Weakly Consistent Systems**
 <div> Purdue University, Dec 2014 </div>
