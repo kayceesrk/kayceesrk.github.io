@@ -112,6 +112,7 @@ India](https://www.annauniv.edu/).
  1. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy
 <div> [Effective Concurrency with Algebraic Effects](papers/effects_ocaml15.pdf) </a> </div>
 <div> *OCaml Worshop, 2015* </div>
+<div style="font-size: 80%"> [\[code\]](https://github.com/kayceesrk/ocaml-eff-example) [\[slides (pdf)\]](slides/OCaml15.pdf) [\[slides (key)\]](slides/OCaml15.key) </div>
 <div style="line-height: 50%"> </br> </div>
  2. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [Migrating MultiMLton to the Cloud](papers/mmcloud_mlw13.pdf) </a> </div>
@@ -146,6 +147,8 @@ India](https://www.annauniv.edu/).
 
 # Talks
 
+* **Effective Concurrency with Algebraic Effects**
+<div> OCaml Workshop, Sep 2015 </div>
  * **Functional Programming Abstractions for Weakly Consistent Systems**
 <div> Purdue University, Dec 2014 </div>
  * **Functional Abstractions for Practical and Scalable Concurrent Programming**
