@@ -7,7 +7,7 @@ categories: [multicore, opam, ocaml]
 
 I recently gave a talk on Algebraic Effects in OCaml at the [OCaml Workshop
 2015](https://ocaml.org/meetings/ocaml/2015/). The extended abstract and the
-slides from the talk are available [here](kcsrk.info/#ocaml15). The slides
+slides from the talk are available [here](http://kcsrk.info/#ocaml15). The slides
 should provide a gentle introduction to programming with algebraic effects and
 handlers in OCaml. The examples from the talk (and many more!) are available
 [here](https://github.com/kayceesrk/ocaml-eff-example).
