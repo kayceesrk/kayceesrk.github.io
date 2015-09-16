@@ -5,12 +5,14 @@ title: About
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 220px; float:
 left; padding-right: 1rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am a
-post-doctoral research associate under the [OCaml
+Post-doctoral Research Associate under the [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the
 [University of Cambridge](http://www.cam.ac.uk/) [Computer
-Lab](http://www.cl.cam.ac.uk/) and a research fellow at [Darwin College,
-Cambridge](https://www.darwin.cam.ac.uk/). I am also a member of the [Network
-and Operating Systems](http://www.cl.cam.ac.uk/research/srg/netos/) group.
+Lab](http://www.cl.cam.ac.uk/), an [1851 Research
+Fellow](http://www.royalcommission1851.org/awards/) and a Research Fellow at
+[Darwin College, Cambridge](https://www.darwin.cam.ac.uk/). I am also a member
+of the [Network and Operating
+Systems](http://www.cl.cam.ac.uk/research/srg/netos/) group.
 
 I am interested in the design and implementation of concurrent functional
 programming languages targeting scalable platforms such as many-core processors
