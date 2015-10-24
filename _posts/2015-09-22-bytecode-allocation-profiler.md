@@ -120,7 +120,7 @@ $ git clone https://github.com/kayceesrk/ocaml
 $ cd ocaml
 $ git checkout 4.02-profile-alloc
 $ opam compiler-conf configure
-$ make world
+$ make world.opt
 $ opam compiler-conf install
 {% endhighlight %}
 
