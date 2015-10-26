@@ -163,6 +163,8 @@ We can see that the program spent 39.09% of allocations for appending to lists
 in `queens.ml` line 61. For the curious, the other 39.09% was spent in
 `List.map` function.
 
+<div id="earlytermination"/>
+
 # Dealing with early termination
 
 The profiler normally writes out the profile at the end of the standard program
