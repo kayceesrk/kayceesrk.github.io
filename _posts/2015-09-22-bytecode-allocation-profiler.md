@@ -163,6 +163,49 @@ We can see that the program spent 39.09% of allocations for appending to lists
 in `queens.ml` line 61. For the curious, the other 39.09% was spent in
 `List.map` function.
 
+# Dealing with early termination
+
+The profiler normally writes out the profile at the end of the standard program
+termination, when the interpreter has run to completion. However, programs may
+terminate early by explicitly invoking `exit`. In such cases, the runtime does
+not get a chance to output the profile. Hence, a function `output_profile: unit
+-> unit` is provided to explicitly request the profile to be written out to the
+filename provided in `CAML_PROFILE_ALLOC`. The following example illustrates
+the use case in a program that uses the `Async` library:
+
+{% highlight ocaml %}
+(* foo.ml *)
+open Core.Std
+open Async.Std
+
+let main () =
+  printf "Hello!\n";
+  (* Without this call, profile isn't written out *)
+  output_profile ();
+  return ()
+
+let () =
+  Command.async_basic
+    ~summary:"foo"
+    Command.Spec.(empty)
+    main
+  |> Command.run
+{% endhighlight %}
+
+The program is compiled and run as follows:
+
+{% highlight bash %}
+$ ocamlbuild -use-ocamlfind foo.byte -package core -package async -tag thread -tag debug
+Finished, 3 targets (0 cached) in 00:00:00.
+$ CAML_PROFILE_ALLOC=foo.preprof ./foo.byte
+Hello!
+$ ls foo.preprof
+foo.preprof
+{% endhighlight %}
+
+Thanks to [trevorsummerssmith](https://github.com/trevorsummerssmith) for the
+motivation and the example.
+
 # Conclusion
 
 The allocation profiler has been quite useful for optimizing small programs. It
