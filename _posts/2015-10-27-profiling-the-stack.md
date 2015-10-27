@@ -36,9 +36,10 @@ File "src/bigstring.ml", line 98, characters 20-37:
   C_CALL1 caml_create_string
 {% endhighlight %}
 
-And all you want is the caller of the standard library function in your code. A
-stack depth of a small number should provide you this information. You might
-have to play around with the stack depth to identify what you are looking for.
+And all you want is to find out the caller of that standard library function in
+your code. A stack depth of a small number should provide you this information.
+You might have to play around with the stack depth to identify what you are
+looking for.
 
 # Profiling N-queens
 
@@ -69,11 +70,14 @@ Instr   Words   % of total      Location
 {% endhighlight %}
 
 Observe that we now have the precise location information directly in the
-profile. We see that 40.38% of allocations were in `list.ml:55`, which is
-the `List.map` function. However, we cannot pin down the source of these
-allocations in `queens.ml` since the profile is flat. Let us now obtain the
-stack allocation profile, which will reveal the source of this allocation in
-`queens.ml`.
+profile, whereas
+[earlier](http://kcsrk.info/ocaml/profiling/2015/09/23/bytecode-allocation-profiler)
+one had to manually identify the source location using the instruction
+information. In this profile, we see that most allocations were in
+`list.ml:55`, which is the `List.map` function. However, we cannot pin down the
+source of these allocations in `queens.ml` from this profile since the profile
+is flat. Let us now obtain the stack allocation profile, which will reveal the
+source of these allocations in `queens.ml`.
 
 {% highlight bash %}
 $ CAML_PROFILE_ALLOC=queens.preprof CAML_STACK_PROFILE=10000 ./queens
