@@ -8,7 +8,7 @@ categories: [ocaml, profiling]
 In the [last
 post](http://kcsrk.info/ocaml/profiling/2015/09/23/bytecode-allocation-profiler/),
 I described a *flat* allocation profiler for OCaml 4.02 bytecode interpreter.
-In this post, I'll describe further developments which adds support for call
+In this post, I'll describe further developments which add support for call
 stack information and better location information. Lets dive straight to the
 usage:
 
