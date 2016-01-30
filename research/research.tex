@@ -151,6 +151,30 @@ experiences have provided me insights into the issues are faced by developers
 in today's parallel compute systems, and also the necessary expertise to
 realize my ideas in complex, real-world software platforms.
 
+\section*{Current Work}
+
+After finishing my PhD~\cite{thesis} at Purdue University, I joined University
+of Cambridge as a Research Associate under the OCaml Labs initiative where I
+continue to explore the development of concurrent and parallel functional
+programming language systems. I lead the Multicore OCaml project which aims to
+add concurrent and parallel programming support for the industrial strength
+OCaml programming language.
+
+A particularly distinguishing feature of this effort is that instead of baking
+the concurrency support into the compiler and exposing libraries for concurrent
+programming, we extend OCaml with support for lineaer algebraic effects and
+handlers~\cite{effects}. Algebraic effects and handlers provide a modular
+abstraction for expressing effectful computation, allowing the programmer to
+separate the expression of an effectful computation from its implementation. In
+this system, concurrency is just another effect, modularly expressed through
+algebraic effects and their handlers. This design allows the programmer to
+describe thread schedulers and concurrent data structures as OCaml libraries,
+keeping the compiler lean, while providing the flexibility of swapping in
+alternate but equivalent implementations. Given that OCaml has an excellent
+Javascript backend~\cite{js_of_ocaml}, the addition of concurrency support to
+OCaml has the potential to greatly simplify the implementation of
+highly-concurrent real-world web-services.
+
 \section*{Future Work}
 
 In my future work, I wish to build on the MultiMLton programming model to

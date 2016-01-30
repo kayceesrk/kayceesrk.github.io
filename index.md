@@ -149,6 +149,9 @@ India](https://www.annauniv.edu/).
 
 # Talks
 
+ * **Concurrent and Multicore OCaml: A deep dive**
+<div> Facebook, Menlo Park, CA, Jan 2016 </div>
+<div style="font-size: 80%"> [\[slides (pdf)\]](slides/multicore_fb16.pdf) [\[slides (key)\]](slides/multicore_fb16.key) </div>
  * **Effective Concurrency with Algebraic Effects**
 <div> OCaml Workshop, Sep 2015 </div>
  * **Functional Programming Abstractions for Weakly Consistent Systems**
