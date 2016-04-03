@@ -80,7 +80,7 @@ is flat. Let us now obtain the stack allocation profile, which will reveal the
 source of these allocations in `queens.ml`.
 
 {% highlight bash %}
-$ CAML_PROFILE_ALLOC=queens.preprof CAML_STACK_PROFILE=10000 ./queens
+$ CAML_PROFILE_ALLOC=queens.preprof CAML_PROFILE_STACK=10000 ./queens
 Chess boards's size ? 8
 The 8 queens problem has 92 solutions.
 
