@@ -1,0 +1,9 @@
+@article{quelea,
+	author    = {Sivaramakrishnan, KC and Kaki, Gowtham and Jagannathan, Suresh},
+	title     = {{Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores}},
+	journal   = {IEEE Data Engineering Bulletin},
+	volume    = {39},
+	number    = {1},
+	pages     = {52--64},
+	year      = {2016},
+}

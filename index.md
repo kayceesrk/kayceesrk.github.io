@@ -49,7 +49,7 @@ India](https://www.annauniv.edu/).
 ## Overview
 
  * Distributed Programming : [PLDI15](#pldi15) | [PADL14](#padl14) | [ML13](#ml13)
- * Concurrent Programming : [OCaml15](#ocaml15) | [PLDI11](#pldi11) | [ICFP09](#icfp09) | [JFP15](#jfp15) | [ML10](#ml10) | [TR11](#tr11) | [DAMP10](#damp10)
+ * Concurrent Programming : [OCaml15](#ocaml15) | [PLDI11](#pldi11) | [ICFP09](#icfp09) | [JFP16](#jfp16) | [ML10](#ml10) | [TR11](#tr11) | [DAMP10](#damp10)
  * Multicore Runtime : [JFP14](#jfp14) | [MARC12](#marc12) | [ISMM12](#ismm12) | [SFMA11](#sfma11)
  * Session Types : [SCP13](#scp13) | [COORDINATION10](#coordination10)
 
@@ -62,12 +62,23 @@ India](https://www.annauniv.edu/).
 
 ## Journal publications
 
- 1. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
+ 1. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones
+<div> [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf) </a> </div>
+<div> *Accecpted to Journal of Functional Programming (JFP), 2016* </div>
+<div style="font-size: 80%"> [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2) </div>
+<div style="line-height: 50%"> </br> </div>
+ 2. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan
+<div> [Representation without Taxation: A Uniform, Low-Overhead, and High-Level
+Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) </a> </div>
+<div> *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016* </div>
+<div style="font-size: 80%">  **Invited Paper** [\[bib\]](bib/ieee16.txt) </div>
+<div style="line-height: 50%"> </br> </div>
+ 3. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf) </a> </div>
 <div> *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014* </div>
 <div style="font-size: 80%"> [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt) </div>
 <div style="line-height: 50%"> </br> </div>
- 2. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster
+ 4. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster
 <div> [Efficient Sessions](papers/sting_scp13.pdf) </a> </div>
 <div> *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013* </div>
 <div style="font-size: 80%">  **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt) </div>
@@ -137,12 +148,7 @@ India](https://www.annauniv.edu/).
 
 ## Technical Reports and Drafts
 
- 1. <div id="jfp15"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones
-<div> [Composable Scheduler Activations for Haskell](papers/schedact_jfp15.pdf) </a> </div>
-<div> *Under consideration for Journal of Functional Programming (JFP)* </div>
-<div style="font-size: 80%"> [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2) </div>
-<div style="line-height: 50%"> </br> </div>
- 2. <div id="tr11"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
+ 1. <div id="tr11"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [Featherweight Threads for Communication](papers/parasites_tech11.pdf) </a> </div>
 <div> *Purdue University Computer Science Technical Report – TR-11-018, 2011* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/featherweight.txt) </div>
