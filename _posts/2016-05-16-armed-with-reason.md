@@ -64,5 +64,5 @@ Welcome to Linaro 13.04 (GNU/Linux 3.4.61+ armv7l)
 * Documentation:  https://wiki.linaro.org/
 Last login: Fri May 20 08:35:01 2016 from 192.168.0.3
 linaro@cubietruck:~$ ./hello.native
-Hello, reason!
+Hello, Reason!
 {% endhighlight %}
