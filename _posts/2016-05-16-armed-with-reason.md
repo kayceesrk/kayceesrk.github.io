@@ -13,7 +13,7 @@ Mac](https://blog.docker.com/2016/03/docker-for-mac-windows-beta/), which is
 still under beta program. Using Docker for development has two important
 advantages over traditional cross-compilation. First, the Reason toolchain comes
 packaged as a Docker image and hence no local installation is necessary.
-Secondly, cross-compiler are often tricky to get right. Docker for Mac comes
+Secondly, cross-compilers are often tricky to get right. Docker for Mac comes
 with multiarch support and hence removes the need for traditional
 cross-compilation.
 
