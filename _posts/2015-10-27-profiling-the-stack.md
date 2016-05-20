@@ -3,6 +3,7 @@ layout: post
 title: "Profiling the stack"
 date: 2015-10-27 17:29:30
 categories: [ocaml, profiling]
+excerpt_separator: <!--more-->
 ---
 
 In the [last
@@ -11,6 +12,8 @@ I described a *flat* allocation profiler for OCaml 4.02 bytecode interpreter.
 In this post, I'll describe further developments which add support for call
 stack information and better location information. Lets dive straight to the
 usage:
+
+<!--more-->
 
 # Enabling stack profiling
 

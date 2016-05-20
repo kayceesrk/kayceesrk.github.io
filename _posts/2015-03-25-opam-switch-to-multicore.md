@@ -3,6 +3,7 @@ layout: post
 title: "Opam Switch to Multicore OCaml"
 date: 2015-03-25 18:15:00
 categories: [multicore, opam, ocaml]
+excerpt_separator: <!--more-->
 ---
 
 OPAM has a great [compiler
@@ -15,6 +16,8 @@ advantage of doing this is that it lets you easily install packages from the
 [OPAM repository](http://opam.ocaml.org/), while sandboxing it from other OCaml
 installations on your system. The post will show how to create OPAM compiler
 switch for multicore OCaml.
+
+<!--more-->
 
 ## Install opam-compiler-conf
 

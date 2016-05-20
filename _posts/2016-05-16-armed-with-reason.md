@@ -3,6 +3,7 @@ layout: post
 title: "Armed with Reason"
 date: 2016-05-16 10:00:05
 categories: [Reason, ARM]
+excerpt_separator: <!--more-->
 ---
 
 This is a short tutorial on how to build
@@ -15,6 +16,8 @@ packaged as a Docker image and hence no local installation is necessary.
 Secondly, cross-compiler are often tricky to get right. Docker for Mac comes
 with multiarch support and hence removes the need for traditional
 cross-compilation.
+
+<!--more-->
 
 # Setup
 

@@ -3,6 +3,7 @@ layout: post
 title: "Pearls of Algebraic Effects and Handlers"
 date: 2015-05-27 14:06:00
 categories: [ocaml, multicore, effects]
+excerpt_separator: <!--more-->
 ---
 
 In the [previous
@@ -16,6 +17,7 @@ excellent paper on Eff programming language[^Eff]. All of the examples
 presented below are available
 [here](https://github.com/kayceesrk/ocaml-eff-example).
 
+<!--more-->
 
 ## State
 

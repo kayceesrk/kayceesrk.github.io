@@ -3,6 +3,7 @@ layout: post
 title: "Experiment with OCaml Multicore and Algebraic Effects"
 date: 2015-09-10 13:11:00
 categories: [multicore, opam, ocaml]
+excerpt_separator: <!--more-->
 ---
 
 I recently gave a talk on Algebraic Effects in OCaml at the [OCaml Workshop
@@ -11,6 +12,8 @@ slides from the talk are available [here](http://kcsrk.info/#ocaml15). The slide
 should provide a gentle introduction to programming with algebraic effects and
 handlers in OCaml. The examples from the talk (and many more!) are available
 [here](https://github.com/kayceesrk/ocaml-eff-example).
+
+<!--more-->
 
 Algebraic effects in OCaml are available as a part of the multicore OCaml
 compiler as well as a standalone feature incorporated into vanilla OCaml. The

@@ -3,10 +3,13 @@ layout: post
 title: "An Allocation Profiler for OCaml Bytecode Interpreter"
 date: 2015-09-23 09:51:30
 categories: [ocaml, profiling]
+excerpt_separator: <!--more-->
 ---
 
 This post describes a simple flat allocation profiler for OCaml 4.02 bytecode
 interpreter.
+
+<!--more-->
 
 OCaml is a strongly typed functional language with automatic memory management.
 Automatic memory management alleviates the need to manually deal with memory

@@ -3,6 +3,7 @@ layout: post
 title: "Effective Concurrency with Algebraic Effects"
 date: 2015-05-20 14:04:00
 categories: [ocaml, multicore]
+excerpt_separator: <!--more-->
 ---
 
 Algebraic effects and handlers provide a modular abstraction for expressing
@@ -15,6 +16,8 @@ implementation of algebraic effects for multicore OCaml is due to [Leo
 White](http://www.lpw25.net/), [Stephen Dolan](https://github.com/stedolan) and
 the multicore team at [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/).
+
+<!--more-->
 
 ## Motivation
 
