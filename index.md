@@ -64,7 +64,7 @@ India](https://www.annauniv.edu/).
 
  1. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones
 <div> [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf) </a> </div>
-<div> *Accecpted to Journal of Functional Programming (JFP), 2016* </div>
+<div> *Journal of Functional Programming (JFP), 2016* </div>
 <div style="font-size: 80%"> [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2) </div>
 <div style="line-height: 50%"> </br> </div>
  2. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan
