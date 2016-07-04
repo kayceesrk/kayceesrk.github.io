@@ -273,7 +273,7 @@ utop # let rec foo r =
   let r = write r (string_of_int (v+1)) in
   let v,r = read r in
   let r = write r (int_of_string v) in
-  foo r
+  foo r;;
 val foo :
   (int,
    [> `Read of int * 'a
