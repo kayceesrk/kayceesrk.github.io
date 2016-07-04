@@ -8,11 +8,12 @@ excerpt_separator: <!--_more-->
 
 Behavioural types such as session types, contracts and choreography describe the
 behaviour of a software entity as a sequence of *operations* on a resource such
-as a communication channel, web service session or a file descriptor. Behavioural
-types capture well-defined interactions, which are enforced statically with the
-help of type system machinery. In this post, I will describe a lightweight
-embedding of behavioural types in OCaml using polymorphic variants through a
-series of examples.
+as a communication channel, web service session or a file descriptor.
+Behavioural types capture well-defined interactions, which are enforced
+statically with the help of type system machinery. In this post, I will describe
+a lightweight embedding of behavioural types in OCaml using polymorphic variants
+through a series of examples. The complete source code for the examples is
+available (here)[https://github.com/kayceesrk/code-snippets/blob/master/behavior.ml].
 
 <!--_more-->
 
