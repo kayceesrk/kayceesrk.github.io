@@ -169,12 +169,15 @@ Observe that the inferred type captures the branching behaviour, and works as
 expected:
 
 ```ocaml
-utop # utop # let my_ref4 = Ref.ref 10 in foo3 my_ref4 32;;
+utop # let my_ref4 = Ref.ref 10 in foo3 my_ref4 32;;
 done
 - : (int, _[>  ]) Ref.ref = <abstr>
 ```
 
 ### Implementation
+
+The implementation is unremarkable except for the machinery to dynamically
+enforce linearity.
 
 ```ocaml
 module Ref : Ref =
@@ -205,11 +208,9 @@ struct
 end
 ```
 
-The implementation is unremarkable except for the machinery to dynamically
-enforce linearity. Behavioural types crucially depend on linear use of the
-resources. Since OCaml does not have linear types, there is nothing that
-prevents writing the following function that seemingly violates the behavioural
-contract.
+Behavioural types crucially depend on linear use of the resources. Since OCaml
+does not have linear types, there is nothing that prevents writing the following
+function that seemingly violates the behavioural contract.
 
 ```ocaml
 utop # let foo (r : (int, [`Read of [`Stop]]) Ref.ref) =
