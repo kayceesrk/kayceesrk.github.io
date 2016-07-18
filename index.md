@@ -122,26 +122,34 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
 
 ## Workshop publications
 
- 1. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy
+ 1. <div id="ml16_1"/> Daniel Hilleström, Sam Lindley, KC Sivaramakrishnan
+<div> [Compiling Links Effect Handlers to the OCaml Backend](papers/links_ocaml_ml16.pdf) </a> </div>
+<div> *ML Worshop, 2016* </div>
+<div style="line-height: 50%"> </br> </div>
+ 2. <div id="ml16_1"/> Oleg Kiselyov and Kc Sivaramakrishnan
+<div> [Eff Directly in OCaml](papers/eff_ocaml_ml16.pdf)
+<div> *ML Worshop, 2016* </div>
+<div style="line-height: 50%"> </br> </div>
+ 3. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy
 <div> [Effective Concurrency with Algebraic Effects](papers/effects_ocaml15.pdf) </a> </div>
 <div> *OCaml Worshop, 2015* </div>
 <div style="font-size: 80%"> [\[code\]](https://github.com/kayceesrk/ocaml-eff-example) [\[slides (pdf)\]](slides/OCaml15.pdf) [\[slides (key)\]](slides/OCaml15.key) </div>
 <div style="line-height: 50%"> </br> </div>
- 2. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
+ 4. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [Migrating MultiMLton to the Cloud](papers/mmcloud_mlw13.pdf) </a> </div>
 <div> *ML Worshop, 2013* </div>
 <div style="line-height: 50%"> </br> </div>
- 3. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan
+ 5. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan
 <div> [Scalable Lightweight Task Management Schemes for MIMD Processors](papers/snapple_sfma11.pdf) </a> </div>
 <div> *Workshop on Systems for Future Multi-Core Architectures (SFMA), 2011* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/sfma11.txt) </div>
 <div style="line-height: 50%"> </br> </div>
- 4. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek
+ 6. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek
 <div> [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf) </a> </div>
 <div> *ML Workshop, 2010* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/mlw10.txt) </div>
 <div style="line-height: 50%"> </br> </div>
- 5. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan
+ 7. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan
 <div> [Lightweight Asynchrony using Parasitic Threads](papers/parasites_damp10.pdf) </a> </div>
 <div> *Workshop on Declarative Aspects of Multicore Programming (DAMP), 2010* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/damp10.txt) </div>
