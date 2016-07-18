@@ -126,7 +126,7 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
 <div> [Compiling Links Effect Handlers to the OCaml Backend](papers/links_ocaml_ml16.pdf) </a> </div>
 <div> *ML Worshop, 2016* </div>
 <div style="line-height: 50%"> </br> </div>
- 2. <div id="ml16_1"/> Oleg Kiselyov and Kc Sivaramakrishnan
+ 2. <div id="ml16_2"/> Oleg Kiselyov and Kc Sivaramakrishnan
 <div> [Eff Directly in OCaml](papers/eff_ocaml_ml16.pdf)
 <div> *ML Worshop, 2016* </div>
 <div style="line-height: 50%"> </br> </div>
