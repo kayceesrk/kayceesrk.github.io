@@ -15,22 +15,18 @@ handlers in OCaml. The examples from the talk (and many more!) are available
 
 <!--more-->
 
-Algebraic effects in OCaml are available as a part of the multicore OCaml
-compiler as well as a standalone feature incorporated into vanilla OCaml. The
-experimental compilers could easily be installed using the OCaml Labs opam
+Algebraic effects in OCaml are available as a part of the multicore OCaml. The
+experimental compiler could easily be installed using the OCaml Labs opam
 development repo.
 
 {% highlight bash %}
 $ opam remote add ocamllabs -k git https://github.com/ocamllabs/opam-repo-dev
-$ opam switch 4.02.1+multicore
-$ opam switch 4.03.0+effects
+$ opam switch 4.02.2+multicore
 {% endhighlight %}
 
-Only bytecode compiler is supported at the moment. We don't foresee any
-blockers for native code; it just needs to be done! If you are interested in
-contributing, please do experiment with algebraic effects, and report any
-inevitable bugs or feature requests to the multicore OCaml [issue
-tracker](https://github.com/ocamllabs/ocaml-multicore/issues).
+If you are interested in contributing, please do experiment with algebraic
+effects, and report any inevitable bugs or feature requests to the multicore
+OCaml [issue tracker](https://github.com/ocamllabs/ocaml-multicore/issues).
 
 We are also quite interested in hearing interesting applications of algebraic
 effects such as the encoding of [monadic
