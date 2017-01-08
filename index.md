@@ -167,9 +167,18 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
 
 # Talks
 
+ * **Effective parallelism with Reagents**
+<div> London Facebook Faculty Summit - Facebook London, UK, Sep 2016 </div>
+<div style="font-size: 80%"> [\[slides (pdf)\]](slides/reagents_fb_fac_summit_16.pdf) [\[slides (key)\]](slides/reagents_fb_fac_summit_16.key) </div>
  * **Multicore OCaml and Programming with Reagents**
-<div> [LDN Functionals](https://www.meetup.com/London-Functionals/), Jane Street UK, London  </div>
+<div> [LDN Functionals](https://www.meetup.com/London-Functionals/), Jane Street UK, London, Aug 2016  </div>
 <div style="font-size: 80%"> [\[video\]](https://youtu.be/qRWTws_YPBA), [\[slides (pdf)\]](slides/reagents_aug_2_17.pdf) [\[slides (key)\]](slides/reagents_aug_2_17.key) </div>
+ * **Effect handlers in Multicore OCaml**
+<div> Dagstuhl Seminar, Mar 2016 </div>
+<div style="font-size: 80%"> [\[slides (pdf)\]](slides/handlers_dagstuhl_16.pdf) [\[slides (key)\]](slides/handlers_dagstuhl_16.key) </div>
+ * **Arrows and Reagents**
+<div> Invited Lecture, Advanced Functional Programming, Mar 2016 </div>
+<div style="font-size: 80%"> [\[slides (pdf)\]](slides/reagents_adv_fp_16.pdf) [\[slides (key)\]](slides/reagents_adv_fp_16.key) </div>
  * **Concurrent and Multicore OCaml: A deep dive**
 <div> Facebook, Menlo Park, CA, Jan 2016 </div>
 <div style="font-size: 80%"> [\[slides (pdf)\]](slides/multicore_fb16.pdf) [\[slides (key)\]](slides/multicore_fb16.key) </div>
