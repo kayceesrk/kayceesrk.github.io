@@ -42,7 +42,7 @@ India](https://www.annauniv.edu/).
 
 # Timeline
 
-<img src="assets/timeline.png" alt="Timeline" style="width: 38rem;"/>
+<img src="assets/timeline.png" alt="Timeline" style="width: 45rem;"/>
 
 # Publications
 
