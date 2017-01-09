@@ -167,12 +167,24 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
 
 # Talks
 
+## 2016
+
+ * **Composable lock-free programming for Multicore OCaml**
+<div> ABCD Meeting, University of Edinburgh, Nov 2016 </div>
+<div style="font-size: 80%"> [\[slides (pdf)\]](slides/reagents_edinburgh.pdf) [\[slides (key)\]](slides/reagents_edinburgh.key) </div>
+ * **Practical Algebraic Effect Handlers in Multicore OCaml**
+<div> LFCS Seminar, University of Edinburgh, Nov 2016 </div>
+<div style="font-size: 80%"> [\[slides (pdf)\]](slides/handlers_edinburgh.pdf) [\[slides (key)\]](slides/handlers_edinburgh.key) </div>
+ * **Effective Concurrency and Parallelism in Multicore OCaml**
+<div> Invited Seminar, IIT Madras, Nov 2016 </div>
+ * **Effective Concurrency and Parallelism in Multicore OCaml**
+<div> Invited Seminar, IIT Bombay, Nov 2016 </div>
  * **Effective parallelism with Reagents**
 <div> London Facebook Faculty Summit - Facebook London, UK, Sep 2016 </div>
 <div style="font-size: 80%"> [\[slides (pdf)\]](slides/reagents_fb_fac_summit_16.pdf) [\[slides (key)\]](slides/reagents_fb_fac_summit_16.key) </div>
  * **Multicore OCaml and Programming with Reagents**
 <div> [LDN Functionals](https://www.meetup.com/London-Functionals/), Jane Street UK, London, Aug 2016  </div>
-<div style="font-size: 80%"> [\[video\]](https://youtu.be/qRWTws_YPBA), [\[slides (pdf)\]](slides/reagents_aug_2_17.pdf) [\[slides (key)\]](slides/reagents_aug_2_17.key) </div>
+<div style="font-size: 80%"> [\[video\]](https://youtu.be/qRWTws_YPBA) [\[slides (pdf)\]](slides/reagents_aug_2_17.pdf) [\[slides (key)\]](slides/reagents_aug_2_17.key) </div>
  * **Effect handlers in Multicore OCaml**
 <div> Dagstuhl Seminar, Mar 2016 </div>
 <div style="font-size: 80%"> [\[slides (pdf)\]](slides/handlers_dagstuhl_16.pdf) [\[slides (key)\]](slides/handlers_dagstuhl_16.key) </div>
@@ -182,8 +194,22 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
  * **Concurrent and Multicore OCaml: A deep dive**
 <div> Facebook, Menlo Park, CA, Jan 2016 </div>
 <div style="font-size: 80%"> [\[slides (pdf)\]](slides/multicore_fb16.pdf) [\[slides (key)\]](slides/multicore_fb16.key) </div>
+
+## 2015
+
+ * **Multicore OCaml: Status Report**
+ <div> OCaml Developer's workshop, Paris, Nov 2015 </div>
+ * **The state of the OCaml Platform**
+ <div> OCaml Consortium Meeting, Paris, Nov 2015 </div>
+ * **Silence is Golden: Controlling Communication and Coordination in Distributed Databases**
+ <div> Darwin College Science Seminar, University of Cambridge, Oct 2015 </div>
  * **Effective Concurrency with Algebraic Effects**
 <div> OCaml Workshop, Sep 2015 </div>
+ * **Quelea: Declarative Programming over Eventually Consistent Data Stores**
+ <div> University of Cambridge, Apr 2015 </div>
+
+## 2014
+
  * **Functional Programming Abstractions for Weakly Consistent Systems**
 <div> Purdue University, Dec 2014 </div>
  * **Functional Abstractions for Practical and Scalable Concurrent Programming**
@@ -191,8 +217,14 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
 <div style="font-size: 80%"> [\[slides (pdf)\]](slides/msr14.pdf) [\[slides (pptx)\]](slides/msr14.pptx) </div>
  * **Rx-CML: A Prescription for Safely Relaxing Synchrony**
 <div> PADL '14, Jan 2014</div>
+
+## 2013
+
  * **Migrating MultiMLton to the Cloud**
 <div> ML Workshop '13, Sep 2013 </div>
+
+## 2012
+
  * **A Coherent and Managed Runtime for ML on the SCC**
 <div> MARC '12, Nov 2012 </div>
  * **Eliminating Read Barriers through Procrastination and Cleanliness**
@@ -203,4 +235,3 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
 <div style="font-size: 80%"> [\[slides (pdf)\]](slides/ghclwc.pdf) [\[slides (pptx)\]](slides/ghclwc.pptx) </div>
  * **Efficient Session Type guided Distributed Interaction**
 <div> COORDINATION '12, Jun 2012 </div>
-
