@@ -53,6 +53,13 @@ India](https://www.annauniv.edu/).
  * Multicore Runtime : [JFP14](#jfp14) | [MARC12](#marc12) | [ISMM12](#ismm12) | [SFMA11](#sfma11)
  * Session Types : [SCP13](#scp13) | [COORDINATION10](#coordination10)
 
+## Drafts
+
+ 1. <div id="snapl17"/> Gowtham Kaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy, Suresh Jagannathan
+<div> [DaLi: Database as a Library](papers/snapl17_draft.pdf) </a> </div>
+<div> Draft, *In submission*, Jan 2017 </div>
+<div style="line-height: 50%"> </br> </div>
+
 ## PhD Dissertation
 
  * <div id="phd"/> KC Sivaramakrishnan
@@ -158,7 +165,7 @@ Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) <
 <div> *Workshop on Declarative Aspects of Multicore Programming (DAMP), 2010* </div>
 <div style="font-size: 80%"> [\[bib\]](bib/damp10.txt) </div>
 
-## Technical Reports and Drafts
+## Technical Reports
 
  1. <div id="tr11"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
 <div> [Featherweight Threads for Communication](papers/parasites_tech11.pdf) </a> </div>

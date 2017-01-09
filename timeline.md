@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Timeline
+permalink: timeline.html
 ---
 
 <script type="text/javascript" src="/scripts/d3.min.js"></script>

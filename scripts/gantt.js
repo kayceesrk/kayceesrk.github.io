@@ -13,6 +13,8 @@ var tasks = [
 {"startDate":new Date("Aug 2012"),"endDate":new Date("Dec 2012"), "taskName":"Purdue University\n[Teaching Assistant]","status":"ASSISTANTSHIP"},
 {"startDate":new Date("Dec 2012"),"endDate":new Date("Dec 2014"), "taskName":"Purdue University\n[Research Assistant]","status":"ASSISTANTSHIP"},
 {"startDate":new Date("Dec 2014"),"endDate":new Date(), "taskName":"University of Cambridge\n[Research Associate]","status":"JOB"},
+{"startDate":new Date("Oct 2015"),"endDate":new Date(), "taskName":"1851 Royal Commission\n[Research Fellow]","status":"ASSISTANTSHIP"},
+{"startDate":new Date("Oct 2015"),"endDate":new Date(), "taskName":"Darwin College, Cambridge\n[Research Fellow]","status":"ASSISTANTSHIP"},
 ];
 
 var taskStatus = {
@@ -32,6 +34,8 @@ var taskNames = [
 	"Purdue University\n[Teaching Assistant]",
 	"Microsoft Research\n[Research Intern]",
 	"University of Cambridge\n[Research Associate]",
+  "1851 Royal Commission\n[Research Fellow]",
+  "Darwin College, Cambridge\n[Research Fellow]"
 ];
 
 tasks.sort(function(a, b) {
