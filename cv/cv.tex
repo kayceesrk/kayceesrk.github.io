@@ -70,6 +70,14 @@
 
 \newcommand{\service}[1]{\item $\bullet$ \hspace{1ex}\parbox{7.2in}{#1}}
 
+\newcommand{\positionnodesc}[2]
+{%\filbreak
+\item
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{#2}
+  \end{tabular*}
+}
+
 \newenvironment{position}[5]
 {%\filbreak
 \item
@@ -199,24 +207,25 @@ static analysis, schedulers, threading systems, and memory management.}
     {Aug 2008 -- May 2011}
     {}
     {Purdue University, USA}
-		\vspace*{-3ex}
-		\item \qquad GPA: 3.94/4
   \end{education}
 
 \item
   \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
     \textbf{Bachelor of Engineering --- Computer Science and Engineering} & \textit{Aug 2004 -- May 2008} \\
 		 & \small{PSG College of Technology} \\
-		& \small{Anna University, India} \\
+		& \small{Anna University, India}
   \end{tabular*}
-		\vspace*{-5.5ex}
-		\item \qquad GPA: 9.55/10
+	\vspace{-12pt}
 
 \end{nonumregion}
 
 \begin{nonumregion} {\lbar{orange}Experience}
+	% \positionnodesc{Chief Technology Officer, OCaml Labs Consultancy Ltd.}{Aug 2016 -- present}
+	\positionnodesc{Research Fellow, Royal Commission for the Exhibition of 1851}{Oct 2015 -- present}
+	\positionnodesc{Research Fellow, Darwin College, Cambridge}{Oct 2015 -- present}
 	\begin{position}{Research Associate, University of Cambridge}{Dec 2014 -- present}{Advisor: Anil Madhavapeddy}{Cambridge, UK}
-		 {Developing \href{https://github.com/ocamllabs/ocaml-multicore}{Multicore OCaml} under the OCaml Labs initiative in the Computer Laboratory.}
+		{Technical director of OCaml Labs leading the development of \href{https://github.com/ocamllabs/ocaml-multicore}{Multicore OCaml} project.
+		 Applying programming languages and program verfication to solve extreme-scale parallelism and distribution.}
 	\end{position}
 
 	\begin{position}{Research Assistant, Purdue University}{Aug 2008 -- Dec 2014}{Advisor: Suresh Jagannathan}{West Lafayette, IN, USA}
@@ -267,7 +276,7 @@ static analysis, schedulers, threading systems, and memory management.}
 	\end{position}
 \end{nonumregion}
 
-\begin{region} {\lbar{purple}Journal Publications}{{J}1}{2}
+\begin{region} {\lbar{purple}Journal Publications}{{J}1}{4}
 
 	\begin{publication}{http://kcsrk.info/papers/schedact_jfp15.pdf}
 		{Composable Scheduler Activations for Haskell}
@@ -340,7 +349,7 @@ static analysis, schedulers, threading systems, and memory management.}
 \end{region}
 
 
-\begin{region} {\lbar{purple}Workshop Publications}{{W}1}{4}
+\begin{region} {\lbar{purple}Workshop Publications}{{W}1}{8}
 
 	\begin{publication}{http://kcsrk.info/papers/reagents_ocaml16.pdf}
 		{Lock-free programming for the masses}
@@ -391,7 +400,7 @@ static analysis, schedulers, threading systems, and memory management.}
 	\end{publication}
 \end{region}
 
-\begin{region} {\lbar{purple}Technical Reports and Drafts}{{T}1}{2}
+\begin{region} {\lbar{purple}Technical Reports and Drafts}{{T}1}{1}
 
 	\begin{publication}{http://kcsrk.info/papers/parasites_tech11.pdf}
 		{Featherweight Threads for Communication}
@@ -409,6 +418,8 @@ static analysis, schedulers, threading systems, and memory management.}
 	\end{itemize}
 	\service{Supervisions at University of Cambridge:}
 	\begin{itemize}
+		\service{Databases, Michaelmas 2016--17.}
+		\service{Concurrent and Distributed Systems, Michaelmas 2016--17.}
 		\service{Algorithms, Lent 2015--16.}
 		\service{Concurrent and Distributed Systems, Lent 2015--16.}
 		\service{Concurrent and Distributed Systems, Michaelmas 2015--16.}
@@ -421,31 +432,79 @@ static analysis, schedulers, threading systems, and memory management.}
 	\end{itemize}
 	\service{Projects supervised:}
 	\begin{itemize}
-		\service{James Wright, University of Cambridge, Mechanized semantics of Algebraic Effects in OCaml, Michelmas 2015 -- present.}
-		\service{Armael Gueneau, ENS de Lyon, Algebraic Effects for js\_of\_ocaml, Sep 2015 -- present.}
-		\service{Theo Laurent, ENS de Lyon, Reagents for Multicore OCaml, May 2015 -- Aug 2015.}
+		\service{Matt Harrison, University of Cambridge, Secure Decentralized Apps, Sep 2016 -- present.}
+		\service{Maxime Lesourd, Ens de Lyon, Verified CPS translation of handlers, Sep 2016 -- present.}
+		\service{Philip Dexter, Binghampton University, Approximate computing for OCaml, May 2016 -- Aug 2016.}
+		\service{James Wright, University of Cambridge, Mechanized semantics of Algebraic Effects in OCaml, Sep 2015 -- Mar 2016.}
+		\service{Armael Gueneau, ENS de Lyon, Algebraic Effects for js\_of\_ocaml, Sep 2015 -- Mar 2016.}
+		\service{Theo Laurent, ENS, Reagents for Multicore OCaml, May 2015 -- Aug 2015.}
 		\service{Guillain Potron, ENS de Lyon, Semantics of Irmin branch-consistent data store, March 2015 -- Aug 2015.}
 	\end{itemize}
 \end{itemregion}
 
 \begin{itemregion}{\lbar{blue}Talks}
+
+	\begin{talk} {Composable lock-free programming for Multicore OCaml}
+		{Nov 2016} {ABCD Meeting} {University of Edinburgh}
+	\end{talk}
+
+	\begin{talk} {Practical Algebraic Effect Handlers in Multicore OCaml}
+		{Nov 2016} {LFCS Seminar} {University of Edinburgh}
+	\end{talk}
+
+ 	\begin{talk} {Effective Concurrency and Parallelism in Multicore OCaml}
+		{Nov 2016} {PL Seminar} {Indian Institute of Technology, Madras}
+	\end{talk}
+
+ 	\begin{talk} {Effective Concurrency and Parallelism in Multicore OCaml}
+		{Nov 2016} {PL Seminar} {Indian Institute of Technology, Bombay}
+	\end{talk}
+
+	\begin{talk} {Effective parallelism with Reagents}
+		{Sep 2016} {Facebook Faculty Summit} {London, UK}
+	\end{talk}
+ 	\begin{talk} {Multicore OCaml and Programming with Reagents}
+		{Aug 2016} {LDN Functionals} {Jane Street UK, London}
+	\end{talk}
+
+	\begin{talk} {Effect handlers in Multicore OCaml}
+		{Mar 2016} {Dagstuhl Seminar} {Dagstuhl, Germany}
+	\end{talk}
+
+	\begin{talk} {Arrows and Reagents}
+		{Mar 2016} {Invited Lecture, Advanced Functional Programming} {Cambridge, UK}
+	\end{talk}
+
+	\begin{talk} {Concurrent and Multicore OCaml: A deep dive}
+		{Jan 2016} {Facebook Tech Talk} {Menlo Park, CA}
+	\end{talk}
+
 	\begin{talk} {OCaml Platform: Update}
-			{Nov 2015}{OCaml Consortium Meeting}{Paris, France}
+		{Nov 2015}{OCaml Consortium Meeting}{Paris, France}
 	\end{talk}
 
 	\begin{talk} {Multicore OCaml: Update}
-			{Nov 2015}{OCaml Developer's Meeting}{Paris, France}
+		{Nov 2015}{OCaml Developer's Meeting}{Paris, France}
+	\end{talk}
+
+	\begin{talk} {Silence is Golden: Controlling Communication and Coordination in Distributed Databases}
+		{Oct 2015}{Darwin College Science Seminar}{Cambridge, UK}
 	\end{talk}
 
 	\begin{talk} {Effective Concurrency with Algebraic Effects}
-			{Sep 2015}{OCaml Workshop 2015}{Vancouver, Canada}
+		{Sep 2015}{OCaml Workshop 2015}{Vancouver, Canada}
 	\end{talk}
+
+	\begin{talk} {Quelea: Declarative Programming over Eventually Consistent Data Stores}
+		{Apr 2015}{Computer Laboratory, University of Cambridge} {Cambridge, UK}
+	\end{talk}
+
 	\begin{talk} {Functional Programming Abstractions for Weakly Consistent Systems}
-	   {Dec 2014}{PhD Defense}{Purdue University}
+	  {Dec 2014}{PhD Defense}{Purdue University}
 	\end{talk}
 
 	\begin{talk} {Functional Abstractions for Practical and Scalable Concurrent Programming}
-		 {Mar 2014}{Invited Lecture}{Microsoft Research, Cambridge, UK}
+		{Mar 2014}{Invited Lecture}{Microsoft Research, Cambridge, UK}
 	\end{talk}
 
 	\begin{talk}{Rx-CML: A Prescription for Safely Relaxing Synchrony}
@@ -476,7 +535,7 @@ static analysis, schedulers, threading systems, and memory management.}
 \end{itemregion}
 
 \begin{itemregion} {\lbar{blue}Professional Service}
-	\service{Program Committee member: OCaml Workshop 2016, SPLASH-MARC symposium, 2013.}
+	\service{Program Committee member: Off-the-beaten track (OBT) 2017, OCaml Workshop 2016, SPLASH-MARC symposium, 2013.}
 	\service{Artifact Evaluation Committee member: PLDI 2015, PPoPP/CGO 2016.} \vspace{0.5ex}
 	\service{Reviewer: TODS, JFP, POPL, ICFP, ASPLOS, TLDI, Concurrency and Computation:
 	Practice and Experience, Software: Practice and Experience.}
