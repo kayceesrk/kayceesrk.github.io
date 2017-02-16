@@ -354,7 +354,7 @@ strategy is correct. Merges can also be equivalently viewed as a [pushout in
 category theory](https://arxiv.org/pdf/1311.3903.pdf), leading to the same
 result. I will have to save the discussion of the category theoretic reasoning
 of Irmin merges for another time. But Liam O'Connor has written a concise
-[post](liamoc.net/posts/2015-11-10-patch-theory.html) on the theory of patches
+[post](http://liamoc.net/posts/2015-11-10-patch-theory.html) on the theory of patches
 which is worth a read.
 
 ### Recursive merges
