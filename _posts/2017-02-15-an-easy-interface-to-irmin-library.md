@@ -476,18 +476,20 @@ strings. Ezirmin provides [mergeable
 ropes](http://kcsrk.info/ezirmin/Ezirmin.Rope.html) where for [arbitrary
 contents](http://kcsrk.info/ezirmin/Ezirmin.Rope_content.html), but also
 specialized for [strings](http://kcsrk.info/ezirmin/Ezirmin.Rope_string.html).
-The crux of the implementation is that given a common ancestor and the two trees
-to be merged, the merge algorithm works out the smallest subtrees where the
-modification occurred. If the modifications are on distinct subtrees, then the
-merge is trivial.
+Ropes automatically rebalance to maintain the invariant that the height of the
+tree is proportional to the length of the contents. The crux of the merge
+strategy is that given a common ancestor and the two trees to be merged,
+the merge algorithm works out the smallest subtrees where the modification
+occurred. If the modifications are on distinct subtrees, then the merge is
+trivial.
 
 <p align="center"> <img src="{{ base.url }}/assets/merge_rope.png" alt="merge rope"/> </p>
 
 If the modification is on the same subtree, then the algorithm delegates to
 merge the contents. This problem has been well studied under the name of
 [operational
-transformation](https://en.wikipedia.org/wiki/Operational_transformation).
-Operational transformation can be categorically explained in terms of pushouts.
+transformation](https://en.wikipedia.org/wiki/Operational_transformation) (OT).
+OT can be categorically explained in terms of pushouts.
 Mergeable strings with insert, delete and replace operations are isomorphic to
 counters with increment and decrement. We apply a similar strategy to merge
 string.
@@ -497,10 +499,9 @@ string.
 First we compute the diff between the common ancestor and the new tree using
 [Wagner-Fischer
 algorithm](https://en.wikipedia.org/wiki/Wagner%E2%80%93Fischer_algorithm). Then
-we transform one patch with respect to the other using standard operational
-transformation definition such that we can first apply one of the original patch
-to the common ancestor and then apply the transformed patch of the other branch
-to get the result tree.
+we transform one patch with respect to the other using standard OT definition
+such that we can first apply one of the original patch to the common ancestor
+and then apply the transformed patch of the other branch to get the result tree.
 
 For example,
 
@@ -542,6 +543,17 @@ utop # Lwt_main.run (
 - : unit = ()
 w is "ayxc"
 ```
+
+The combination of mergeable ropes with OT gets the best of both worlds.
+Compared to a purely OT based implementation, diffs are only computed if updates
+conflict at the leaves. The representation using ropes is also efficient in
+terms of storage where multiple versions of the tree shares blocks. A purely
+rope based implementation either has the option of storing individual characters
+(atoms) at the leaves (and resolve conflicts based on some deterministic
+mechanism such as timestamps or other deterministic strategies) or manifest the
+conflict at the leaves to the user to get it resolved. A simple strategy might
+be to present both of the conflicting strings, and ask the user to resolve it.
+Hence, mergeable ropes + OT is strictly better than either of the approaches.
 
 # Next steps
 
