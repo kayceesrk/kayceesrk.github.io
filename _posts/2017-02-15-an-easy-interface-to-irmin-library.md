@@ -561,9 +561,9 @@ Ezirmin is open to comments and contributions. Next steps would be:
 
 - Implement more mergeable data types
 - Implement generic mergeable datatypes using [depyt](https://github.com/samoht/depyt).
-- Explore the data types which admit conflicts. For example, a bank account
-with non-zero balance does not form a CRDT but operations such as `deposit` and
-`accrue_interest` can be coordination-free.
+- Explore the data types which admit conflicts. For example, a bank account with
+  non-negative balance does not form a CRDT with a `withdraw operation. However,
+  operations such as `deposit` and `accrue_interest` can be coordination-free.
 
 # Footnotes
 {:.no_toc}
