@@ -12,7 +12,14 @@ persistent mergeable data structures based on the principles of Git. In this
 post, I will primarily discuss the Ezirmin library, but also discuss some of the
 finer technical details of mergeable datatypes implemented over Irmin.
 
-## Irmin and Ezirmin
+<!--more-->
+
+# Contents
+
+* TOC
+{:toc}
+
+# Irmin and Ezirmin
 
 Irmin is a library for manipulating persistent mergeable data structures
 (including CRDTs) that follows the same principles of Git. In particular, it has
@@ -26,16 +33,16 @@ One of the downsides to being extremely configurable is that the Irmin library
 is not beginner friendly. In particular, the library tends to be rather functor
 heavy, and even [simple
 uses](https://github.com/mirage/irmin/blob/master/README.md#usage) require
-multiple functor instantiations[^irmin1.0]. The primary goal of Ezirmin is to
+multiple functor instantiations[^irmin]. The primary goal of Ezirmin is to
 provide a defuntorized interface to Irmin, specialized to useful defaults.
 However, as I've continued to build Ezirmin, it has come to include a collection
 of useful mergeable datatypes including counters, queues, ropes, logs, etc. I
 will spend some time describing some of the interesting aspects of these data
 structures.
 
-[^irmin1.0]: Things are indeed improving with a cleaner API in the [1.0 release](https://github.com/mirage/irmin/pull/397).
+[^irmin]: Things are indeed improving with a cleaner API in the [1.0 release](https://github.com/mirage/irmin/pull/397).
 
-## Quick tour of Ezirmin
+# Quick tour of Ezirmin
 
 You can install the latest version of Ezirmin by
 
@@ -101,10 +108,10 @@ utop # pop m ["home"; "todo"];;
 For concurrency control, use branches. In the first terminal,
 
 ```ocaml
-utop # let wip_t1 = Lwt_main.run @@ clone_force m "wip_t1";;
-utop # push wip_t1 ["home"; "todo"] "walk dog";;
+utop # let wip = Lwt_main.run @@ clone_force m "wip";;
+utop # push wip ["home"; "todo"] "walk dog";;
 - : unit = ()
-utop # push wip_t1 ["home"; "todo"] "take out trash";;
+utop # push wip ["home"; "todo"] "take out trash";;
 - : unit = ()
 ```
 
@@ -113,11 +120,29 @@ The changes are not visible until the branches are merged.
 ```ocaml
 utop # to_list m ["home"; "todo"];;
 - : string list = []
-utop # merge wip_t1 ~into:m;;
+utop # merge wip ~into:m;;
 - : unit = ()
 utop # to_list m ["home"; "todo"];;
 - : string list = ["walk dog"; "take out trash"]
 ```
+
+## Merge semantics
+
+What should be the semantics of popping the queue at `home/todo` concurrently
+at the master branch and wip branch? It is reasonable to ascribe exactly once
+semantics to pop such that popping the same element on both branches and
+subsequently merging the queues would lead to a merge conflict. However, a more
+useful semantics is where we relax this invariant and allow elements to be
+popped more than once on different branches. In particular, the merge operation
+on the queue ensures that:
+
+1. An element popped in one of the branches is not present after the merge.
+2. Merges respect the program order in each of the branches.
+3. Merges converge.
+
+Hence, our merge queues are CRDTs.
+
+## Working with history
 
 Irmin is fully compatible with Git. Hence, we can explore the history of the
 operations using the git command line. In another terminal:
@@ -125,7 +150,7 @@ operations using the git command line. In another terminal:
 ```bash
 $ cd /tmp/ezirminq
 $ git lg
-* e75da48 - (4 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126] (HEAD -> master, wip_t1)
+* e75da48 - (4 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126] (HEAD -> master, wip)
 * 40ed32d - (4 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126]
 * 6a56fb0 - (5 minutes ago) pop - Irmin xxxx.cam.ac.uk.[73221]
 * 6a2cc9a - (6 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126]
@@ -140,7 +165,7 @@ also manipulate history using the Git command line.
 ```bash
 $ git reset HEAD~2 --hard
 $ git lg
-* e75da48 - (8 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126] (wip_t1)
+* e75da48 - (8 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126] (wip)
 * 40ed32d - (9 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126]
 * 6a56fb0 - (9 minutes ago) pop - Irmin xxxx.cam.ac.uk.[73221] (HEAD -> master)
 * 6a2cc9a - (10 minutes ago) push - Irmin xxxx.cam.ac.uk.[73126]
@@ -155,11 +180,8 @@ utop # to_list m ["home"; "todo"];;
 ```
 
 Since we rolled back the master to before the pushes were merged, we see an
-empty list.
-
-### Working with history
-
-Ezimrin simplifies programmatically working with history.
+empty list. Ezimrin also provides APIs for working with history
+programmatically.
 
 ```ocaml
 utop # let run = Lwt_main.run;;
@@ -197,6 +219,65 @@ utop # run @@ to_list m path;;
 - : string list = ["Baa"; "Baa"; "Black"; "Sheep"]
 ```
 
+## Reacting to changes
+
+Ezirmin supports watching a particular key for updates and invoking a callback
+function when there is one.
+
+```ocaml
+utop # let cb _ = Lwt.return (print_endline "callback: update to home/todo");;
+utop # watch m ["home"; "todo"] cb
+```
+
+The code above installs a listener `cb` on the queue at `home/todo`, which is
+run everytime the queue is updated. This includes local `push` and `pop`
+operations as well as updates due to merges.
+
+```ocaml
+utop # push m ["home"; "todo"] "hang pictures";;
+callback: update to home/todo
+- : unit = ()
+```
+## Interaction with remotes
+
+Unlike distributed data stores, where the updates are disseminated
+transparently between the replicas, Ezirmin provides you the necessary building
+blocks for building your own dissemination protocol. As with Git, Ezirmin
+exposes the functionality to `push`[^push] and `pull` changes from remotes.
+
+[^push]: Push is currently [broken](https://github.com/mirage/irmin/issues/379). But given that Irmin is compatible with git, one can use `git-push` to publish changes.
+
+```ocaml
+#show_module Sync;;
+module Sync : sig
+  type remote
+  val remote_uri : string -> remote
+  val pull : remote -> branch -> [ `Merge | `Update ] -> [ `Conflict of string | `Error | `No_head | `Ok ] Lwt.t
+  val push : remote -> branch -> [ `Error | `Ok ] Lwt.t
+end
+```
+
+This design provides the flexibility to decribe your own network layout, with
+anti-entropy mechanisms built-in to the synchronization protocol. For example,
+one might deploy the replicas in a hub-and-spoke model where each replica
+accepts client writes locally and periodically publishes changes to the master
+and also fetches any latest updates. The data structures provided by Ezirmin
+are always mergeable and converge. Hence, the updates are never rejected. It is
+important to note that even though we have a centralized master, this
+deployment is still highly available. Even if the master is unavailable, the
+other nodes can still accept client requests. The replicas may also be
+connected in a peer-to-peer fashion without a centralized master for a more
+resilient deployment.
+
+# Mergeable persistent data types
+
+Ezirmin is equipped with a [growing
+collection](https://github.com/kayceesrk/ezirmin#whats-in-the-box) of mergeable
+data types. The mergeable datatypes occupy a unique position in the space of
+CRDTs. Given that we have the history, the design of mergeable datatypes is
+much simpler. Additionally, it also lead to richer structures typically not
+found in CRDTs. It is worth studying them in detail.
+
 ## Irmin Architecture
 
 Irmin provides a high-level key-value interface built over two lower level
@@ -226,7 +307,7 @@ global names to blocks in the block store. The notion of branches are built on
 top of the tag store. Cloning a branch creates a new tag that points to the same
 block as the cloned branch.
 
-### User-defined merges
+## User-defined merges
 
 The real power of Irmin is due to the user-defined merges. Irmin expects the
 developer to provide a 3-way merge function with the following signature:
@@ -246,3 +327,6 @@ captures the intent of the two branches. *If the merge function never conflicts,
 we have CRDTs*.
 
 [^blockchain]: The same principle underlies the irrefutability of [blockchain](https://en.wikipedia.org/wiki/Blockchain_(database)). No block can be changed without reflecting the change in every subsequent block.
+
+# Footnotes
+{:.no_toc}

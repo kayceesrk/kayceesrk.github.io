@@ -1,8 +1,9 @@
 # Dependencies
-markdown:            redcarpet
-redcarpet:
-  extensions:        [footnotes]
-highlighter:         pygments
+markdown:            kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter:         rouge
 
 # Permalinks
 #
