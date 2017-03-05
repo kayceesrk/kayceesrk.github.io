@@ -55,9 +55,9 @@ $ opam pin add -kgit carcass https://github.com/dbuenzli/carcass
     $ git remote add origin https://github.com/kayceesrk/mergeable-vector
     $ git push --set-upstream origin master
     ```
-- Develop: The `mergeable_vector/src` directory has the source files. I use the
-   following [Makefile](https://github.com/kayceesrk/mergeable-vector/blob/master/Makefile)
-   at the root of the package.
+- Develop: The `mergeable_vector/src` directory has the source files. I use this
+  [Makefile](https://github.com/kayceesrk/mergeable-vector/blob/master/Makefile)
+  at the root of the package.
 
 - Test the package locally with OPAM
     ```
