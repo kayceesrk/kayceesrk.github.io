@@ -50,201 +50,176 @@ India](https://www.annauniv.edu/).
 
 ## Overview
 
- * Distributed Programming : [PLDI15](#pldi15) | [PADL14](#padl14) | [ML13](#ml13)
- * Concurrent Programming : [OCaml15](#ocaml15) | [PLDI11](#pldi11) | [ICFP09](#icfp09) | [JFP16](#jfp16) | [ML10](#ml10) | [TR11](#tr11) | [DAMP10](#damp10)
- * Multicore Runtime : [JFP14](#jfp14) | [MARC12](#marc12) | [ISMM12](#ismm12) | [SFMA11](#sfma11)
- * Session Types : [SCP13](#scp13) | [COORDINATION10](#coordination10)
-
-## Drafts
-
- 1. <div id="snapl17"/> Gowtham Kaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy, Suresh Jagannathan
-<div> [DaLi: Database as a Library](papers/snapl17_draft.pdf) </a> </div>
-<div> Draft, *In submission*, Jan 2017 </div>
-<div style="line-height: 50%"> </br> </div>
+ * Distributed Programming : [PLDI15](#pldi15), [PADL14](#padl14), [ML13](#ml13)
+ * Concurrent Programming : [OCaml15](#ocaml15), [PLDI11](#pldi11), [ICFP09](#icfp09), [JFP16](#jfp16), [ML10](#ml10), [TR11](#tr11), [DAMP10](#damp10)
+ * Multicore Runtime : [JFP14](#jfp14), [MARC12](#marc12), [ISMM12](#ismm12), [SFMA11](#sfma11)
+ * Session Types : [SCP13](#scp13), [COORDINATION10](#coordination10)
 
 ## PhD Dissertation
 
- * <div id="phd"/> KC Sivaramakrishnan
-<div> [Functional Programming Abstractions for Weakly Consistent Systems](papers/dissertation_dec14.pdf) </a> </div>
-<div> *Department of Computer Science, Purdue University, Dec 2014* </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/defense.pdf) [\[slides (pptx)\]](slides/defense.pptx) [\[bib\]](bib/phd.txt) </div>
+ * <div id="phd"/> KC Sivaramakrishnan  
+   [Functional Programming Abstractions for Weakly Consistent Systems](papers/dissertation_dec14.pdf)  
+   *Department of Computer Science, Purdue University, Dec 2014*   
+   [\[slides (pdf)\]](slides/defense.pdf) [\[slides (pptx)\]](slides/defense.pptx) [\[bib\]](bib/phd.txt)  
 
 ## Journal publications
 
- 1. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones
-<div> [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf) </a> </div>
-<div> *Journal of Functional Programming (JFP), 2016* </div>
-<div style="font-size: 80%"> [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2) </div>
-<div style="line-height: 50%"> </br> </div>
- 2. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan
-<div> [Representation without Taxation: A Uniform, Low-Overhead, and High-Level
-Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf) </a> </div>
-<div> *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016* </div>
-<div style="font-size: 80%">  **Invited Paper** [\[bib\]](bib/ieee16.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 3. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
-<div> [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf) </a> </div>
-<div> *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014* </div>
-<div style="font-size: 80%"> [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 4. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster
-<div> [Efficient Sessions](papers/sting_scp13.pdf) </a> </div>
-<div> *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013* </div>
-<div style="font-size: 80%">  **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt) </div>
+ 1. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones  
+    [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf)  
+    *Journal of Functional Programming (JFP), 2016*  
+    [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
+ 2. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan   
+    [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)   
+    *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*   
+    **Invited Paper** [\[bib\]](bib/ieee16.txt)  
+ 3. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+    [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf)  
+    *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014*  
+    [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt)  
+ 4. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
+    [Efficient Sessions](papers/sting_scp13.pdf)  
+    *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
+    **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
 
 ## Conference publications
 
- 1. <div id="pldi15"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan
-<div> [Declarative Programming over Eventually Consistent Data Stores](papers/quelea_pldi15.pdf) </div>
-<div> *International Conference on Programming Language Design and Implementation (PLDI), 2015* </div>
-<div style="font-size: 80%"> [\[code\]](http://kcsrk.info/Quelea) [\[techrep\]](papers/quelea-long.pdf) [\[bib\]](bib/pldi15.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 2. <div id="padl14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
-<div> [Rx-CML: A Prescription for Safely Relaxing Synchrony](papers/rxcml_padl14.pdf) </a> </div>
-<div> *Symposium on Practical Aspects of Declarative Languages (PADL), 2014* </div>
-<div style="font-size: 80%"> [\[code\]](https://github.com/kayceesrk/mlton-zmq) [\[slides (pdf)\]](slides/padl14.pdf) [\[slides (key)\]](slides/padl14.key) [\[bib\]](bib/padl14.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 3. <div id="marc12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
-<div> [A Coherent and Managed Runtime for ML on the SCC](papers/mmscc_marc12.pdf) </a> </div>
-<div> *Many-core Architecture Research Community Symposium (MARC), 2012* </div>
-<div style="font-size: 80%"> **Best Paper Award** [\[code\]](https://github.com/kayceesrk/multiMLton/tree/split-heap-parallel-GC-IntelSCC) [\[slides (pdf)\]](slides/marc12.pdf) [\[slides (pptx)\]](slides/marc12.pptx) [\[bib\]](bib/marc12.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 4. <div id="ismm12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
-<div> [Eliminating Read Barriers through Procrastination and Cleanliness](papers/mmgc_ismm12.pdf) </a> </div>
-<div> *International Symposium on Memory Management (ISMM), 2012* </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/ismm12.pdf) [\[slides (pptx)\]](slides/ismm12.pptx) [\[bib\]](bib/ismm12.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 5. <div id="pldi11"/> Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan
-<div> [Composable Asynchronous Events](papers/acml_pldi11.pdf) </a> </div>
-<div> *International Conference on Programming Language Design and Implementation (PLDI), 2011* </div>
-<div style="font-size: 80%"> [\[bib\]](bib/pldi11.txt) </div>
-<div style="line-height: 50%"> </br> </div>
+ 1. <div id="pldi15"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
+    [Declarative Programming over Eventually Consistent Data Stores](papers/quelea_pldi15.pdf)  
+    *International Conference on Programming Language Design and Implementation (PLDI), 2015*  
+    [\[code\]](http://kcsrk.info/Quelea) [\[techrep\]](papers/quelea-long.pdf) [\[bib\]](bib/pldi15.txt)   
+ 2. <div id="padl14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+    [Rx-CML: A Prescription for Safely Relaxing Synchrony](papers/rxcml_padl14.pdf)  
+    *Symposium on Practical Aspects of Declarative Languages (PADL), 2014*  
+    [\[code\]](https://github.com/kayceesrk/mlton-zmq) [\[slides (pdf)\]](slides/padl14.pdf) [\[slides (key)\]](slides/padl14.key) [\[bib\]](bib/padl14.txt)  
+ 3. <div id="marc12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+    [A Coherent and Managed Runtime for ML on the SCC](papers/mmscc_marc12.pdf)  
+    *Many-core Architecture Research Community Symposium (MARC), 2012*  
+    **Best Paper Award** [\[code\]](https://github.com/kayceesrk/multiMLton/tree/split-heap-parallel-GC-IntelSCC) [\[slides (pdf)\]](slides/marc12.pdf) [\[slides (pptx)\]](slides/marc12.pptx) [\[bib\]](bib/marc12.txt)   
+ 4. <div id="ismm12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+    [Eliminating Read Barriers through Procrastination and Cleanliness](papers/mmgc_ismm12.pdf)   
+    *International Symposium on Memory Management (ISMM), 2012*   
+    [\[slides (pdf)\]](slides/ismm12.pdf) [\[slides (pptx)\]](slides/ismm12.pptx) [\[bib\]](bib/ismm12.txt)  
+ 5. <div id="pldi11"/> Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan  
+    [Composable Asynchronous Events](papers/acml_pldi11.pdf)  
+    *International Conference on Programming Language Design and Implementation (PLDI), 2011*  
+    [\[bib\]](bib/pldi11.txt)   
  6. <div id="coordination10"/> KC Sivaramakrishnan, Karthik Nagaraj, Lukasz Ziarek, Patrick Eugster
-<div> [Efficient Session Type Guided Distributed Interaction](papers/sting_coordination10.pdf) </a> </div>
-<div> *International Conference on Coordination Models and Languages (COORDINATION), 2010* </div>
-<div style="font-size: 80%"> [\[code\]](https://github.com/kayceesrk/Sting) [\[slides (pdf)\]](slides/coordination10.pdf) [\[slides (key)\]](slides/coordination10.key) [\[bib\]](bib/coordination10.txt) </div>
-<div style="line-height: 50%"> </br> </div>
+    [Efficient Session Type Guided Distributed Interaction](papers/sting_coordination10.pdf)   
+    *International Conference on Coordination Models and Languages (COORDINATION), 2010*
+    [\[code\]](https://github.com/kayceesrk/Sting) [\[slides (pdf)\]](slides/coordination10.pdf) [\[slides (key)\]](slides/coordination10.key) [\[bib\]](bib/coordination10.txt)
  7. <div id="icfp09"/> Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan
-<div> [Partial Memoization of Concurrency and Communication](papers/memo_icfp09.pdf) </a> </div>
-<div> *International Conference on Functional Programming (ICFP), 2009* </div>
-<div style="font-size: 80%"> [\[bib\]](bib/icfp09.txt) </div>
+    [Partial Memoization of Concurrency and Communication](papers/memo_icfp09.pdf)
+    *International Conference on Functional Programming (ICFP), 2009*
+    [\[bib\]](bib/icfp09.txt)
 
 ## Workshop publications
 
- 1. <div id="ppl17"/> Oleg Kiselyov and KC Sivaramakrishnan
-<div> [Eff directly in OCaml](papers/eff_ocaml_ppl17.pdf)
-<div> *JSSST Workshop on Programming and Programming Languages* </div>
-<div style="line-height: 50%"> </br> </div>
- 2. <div id="ocaml16"/> KC Sivaramakrishnan and Théo Laurent
-<div> [Lock-free programming for the masses](papers/reagents_ocaml16.pdf) </a> </div>
-<div> *OCaml Workshop, 2016* </div>
-<div style="line-height: 50%"> </br> </div>
- 3. <div id="ml16_1"/> Daniel Hilleström, Sam Lindley, KC Sivaramakrishnan
-<div> [Compiling Links Effect Handlers to the OCaml Backend](papers/links_ocaml_ml16.pdf) </a> </div>
-<div> *ML Worshop, 2016* </div>
-<div style="line-height: 50%"> </br> </div>
- 4. <div id="ml16_2"/> Oleg Kiselyov and Kc Sivaramakrishnan
-<div> [Eff Directly in OCaml](papers/eff_ocaml_ml16.pdf)
-<div> *ML Worshop, 2016* </div>
-<div style="line-height: 50%"> </br> </div>
- 5. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy
-<div> [Effective Concurrency with Algebraic Effects](papers/effects_ocaml15.pdf) </a> </div>
-<div> *OCaml Worshop, 2015* </div>
-<div style="font-size: 80%"> [\[code\]](https://github.com/kayceesrk/ocaml-eff-example) [\[slides (pdf)\]](slides/OCaml15.pdf) [\[slides (key)\]](slides/OCaml15.key) </div>
-<div style="line-height: 50%"> </br> </div>
- 6. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
-<div> [Migrating MultiMLton to the Cloud](papers/mmcloud_mlw13.pdf) </a> </div>
-<div> *ML Worshop, 2013* </div>
-<div style="line-height: 50%"> </br> </div>
- 7. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan
-<div> [Scalable Lightweight Task Management Schemes for MIMD Processors](papers/snapple_sfma11.pdf) </a> </div>
-<div> *Workshop on Systems for Future Multi-Core Architectures (SFMA), 2011* </div>
-<div style="font-size: 80%"> [\[bib\]](bib/sfma11.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 8. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek
-<div> [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf) </a> </div>
-<div> *ML Workshop, 2010* </div>
-<div style="font-size: 80%"> [\[bib\]](bib/mlw10.txt) </div>
-<div style="line-height: 50%"> </br> </div>
- 9. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan
-<div> [Lightweight Asynchrony using Parasitic Threads](papers/parasites_damp10.pdf) </a> </div>
-<div> *Workshop on Declarative Aspects of Multicore Programming (DAMP), 2010* </div>
-<div style="font-size: 80%"> [\[bib\]](bib/damp10.txt) </div>
+ 1. <div id="ppl17"/> Oleg Kiselyov and KC Sivaramakrishnan  
+    [Eff directly in OCaml](papers/eff_ocaml_ppl17.pdf)
+    *JSSST Workshop on Programming and Programming Languages*
+ 2. <div id="ocaml16"/> KC Sivaramakrishnan and Théo Laurent   
+    [Lock-free programming for the masses](papers/reagents_ocaml16.pdf)   
+    *OCaml Workshop, 2016*   
+ 3. <div id="ml16_1"/> Daniel Hilleström, Sam Lindley, KC Sivaramakrishnan  
+    [Compiling Links Effect Handlers to the OCaml Backend](papers/links_ocaml_ml16.pdf)  
+    *ML Worshop, 2016*  
+ 4. <div id="ml16_2"/> Oleg Kiselyov and Kc Sivaramakrishnan  
+    [Eff Directly in OCaml](papers/eff_ocaml_ml16.pdf)  
+    *ML Worshop, 2016*  
+ 5. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy  
+    [Effective Concurrency with Algebraic Effects](papers/effects_ocaml15.pdf)  
+    *OCaml Worshop, 2015*  
+    [\[code\]](https://github.com/kayceesrk/ocaml-eff-example) [\[slides (pdf)\]](slides/OCaml15.pdf) [\[slides (key)\]](slides/OCaml15.key)  
+ 6. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+    [Migrating MultiMLton to the Cloud](papers/mmcloud_mlw13.pdf)  
+    *ML Worshop, 2013*  
+ 7. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan  
+    [Scalable Lightweight Task Management Schemes for MIMD Processors](papers/snapple_sfma11.pdf)  
+    *Workshop on Systems for Future Multi-Core Architectures (SFMA), 2011*   
+    [\[bib\]](bib/sfma11.txt)  
+ 8. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek  
+    [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf)  
+    *ML Workshop, 2010*  
+    [\[bib\]](bib/mlw10.txt)  
+ 9. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan  
+    [Lightweight Asynchrony using Parasitic Threads](papers/parasites_damp10.pdf)   
+    *Workshop on Declarative Aspects of Multicore Programming (DAMP), 2010*   
+    [\[bib\]](bib/damp10.txt)   
 
 ## Technical Reports
 
- 1. <div id="tr11"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan
-<div> [Featherweight Threads for Communication](papers/parasites_tech11.pdf) </a> </div>
-<div> *Purdue University Computer Science Technical Report – TR-11-018, 2011* </div>
-<div style="font-size: 80%"> [\[bib\]](bib/featherweight.txt) </div>
+ 1. <div id="tr11"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+    [Featherweight Threads for Communication](papers/parasites_tech11.pdf)  
+    *Purdue University Computer Science Technical Report – TR-11-018, 2011*  
+    [\[bib\]](bib/featherweight.txt)  
 
 # Talks
 
 ## 2016
 
- * **Composable lock-free programming for Multicore OCaml**
-<div> ABCD Meeting, University of Edinburgh, Nov 2016 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/reagents_edinburgh.pdf) [\[slides (key)\]](slides/reagents_edinburgh.key) </div>
- * **Practical Algebraic Effect Handlers in Multicore OCaml**
-<div> LFCS Seminar, University of Edinburgh, Nov 2016 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/handlers_edinburgh.pdf) [\[slides (key)\]](slides/handlers_edinburgh.key) </div>
- * **Effective Concurrency and Parallelism in Multicore OCaml**
-<div> Invited Seminar, IIT Madras, Nov 2016 </div>
- * **Effective Concurrency and Parallelism in Multicore OCaml**
-<div> Invited Seminar, IIT Bombay, Nov 2016 </div>
- * **Effective parallelism with Reagents**
-<div> London Facebook Faculty Summit - Facebook London, UK, Sep 2016 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/reagents_fb_fac_summit_16.pdf) [\[slides (key)\]](slides/reagents_fb_fac_summit_16.key) </div>
- * **Multicore OCaml and Programming with Reagents**
-<div> [LDN Functionals](https://www.meetup.com/London-Functionals/), Jane Street UK, London, Aug 2016  </div>
-<div style="font-size: 80%"> [\[video\]](https://youtu.be/qRWTws_YPBA) [\[slides (pdf)\]](slides/reagents_aug_2_17.pdf) [\[slides (key)\]](slides/reagents_aug_2_17.key) </div>
- * **Effect handlers in Multicore OCaml**
-<div> Dagstuhl Seminar, Mar 2016 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/handlers_dagstuhl_16.pdf) [\[slides (key)\]](slides/handlers_dagstuhl_16.key) </div>
- * **Arrows and Reagents**
-<div> Invited Lecture, Advanced Functional Programming, Mar 2016 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/reagents_adv_fp_16.pdf) [\[slides (key)\]](slides/reagents_adv_fp_16.key) </div>
- * **Concurrent and Multicore OCaml: A deep dive**
-<div> Facebook, Menlo Park, CA, Jan 2016 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/multicore_fb16.pdf) [\[slides (key)\]](slides/multicore_fb16.key) </div>
+ * **Composable lock-free programming for Multicore OCaml**  
+   ABCD Meeting, University of Edinburgh, Nov 2016  
+   [\[slides (pdf)\]](slides/reagents_edinburgh.pdf) [\[slides (key)\]](slides/reagents_edinburgh.key)   
+ * **Practical Algebraic Effect Handlers in Multicore OCaml**  
+   LFCS Seminar, University of Edinburgh, Nov 2016   
+   [\[slides (pdf)\]](slides/handlers_edinburgh.pdf) [\[slides (key)\]](slides/handlers_edinburgh.key)   
+ * **Effective Concurrency and Parallelism in Multicore OCaml**  
+   Invited Seminar, IIT Madras, Nov 2016   
+ * **Effective Concurrency and Parallelism in Multicore OCaml**  
+   Invited Seminar, IIT Bombay, Nov 2016   
+ * **Effective parallelism with Reagents**  
+   London Facebook Faculty Summit - Facebook London, UK, Sep 2016   
+   [\[slides (pdf)\]](slides/reagents_fb_fac_summit_16.pdf) [\[slides (key)\]](slides/reagents_fb_fac_summit_16.key)   
+ * **Multicore OCaml and Programming with Reagents**  
+   [LDN Functionals](https://www.meetup.com/London-Functionals/), Jane Street UK, London, Aug 2016    
+   [\[video\]](https://youtu.be/qRWTws_YPBA) [\[slides (pdf)\]](slides/reagents_aug_2_17.pdf) [\[slides (key)\]](slides/reagents_aug_2_17.key)   
+ * **Effect handlers in Multicore OCaml**  
+   Dagstuhl Seminar, Mar 2016   
+   [\[slides (pdf)\]](slides/handlers_dagstuhl_16.pdf) [\[slides (key)\]](slides/handlers_dagstuhl_16.key)   
+ * **Arrows and Reagents**  
+   Invited Lecture, Advanced Functional Programming, Mar 2016   
+   [\[slides (pdf)\]](slides/reagents_adv_fp_16.pdf) [\[slides (key)\]](slides/reagents_adv_fp_16.key)   
+ * **Concurrent and Multicore OCaml: A deep dive**  
+   Facebook, Menlo Park, CA, Jan 2016   
+   [\[slides (pdf)\]](slides/multicore_fb16.pdf) [\[slides (key)\]](slides/multicore_fb16.key)   
 
 ## 2015
 
- * **Multicore OCaml: Status Report**
- <div> OCaml Developer's workshop, Paris, Nov 2015 </div>
- * **The state of the OCaml Platform**
- <div> OCaml Consortium Meeting, Paris, Nov 2015 </div>
- * **Silence is Golden: Controlling Communication and Coordination in Distributed Databases**
- <div> Darwin College Science Seminar, University of Cambridge, Oct 2015 </div>
- * **Effective Concurrency with Algebraic Effects**
-<div> OCaml Workshop, Sep 2015 </div>
- * **Quelea: Declarative Programming over Eventually Consistent Data Stores**
- <div> University of Cambridge, Apr 2015 </div>
+ * **Multicore OCaml: Status Report**  
+   OCaml Developer's workshop, Paris, Nov 2015   
+ * **The state of the OCaml Platform**  
+   OCaml Consortium Meeting, Paris, Nov 2015   
+ * **Silence is Golden: Controlling Communication and Coordination in Distributed Databases**  
+   Darwin College Science Seminar, University of Cambridge, Oct 2015   
+ * **Effective Concurrency with Algebraic Effects**  
+  OCaml Workshop, Sep 2015   
+ * **Quelea: Declarative Programming over Eventually Consistent Data Stores**  
+   University of Cambridge, Apr 2015   
 
 ## 2014
 
- * **Functional Programming Abstractions for Weakly Consistent Systems**
-<div> Purdue University, Dec 2014 </div>
- * **Functional Abstractions for Practical and Scalable Concurrent Programming**
-<div> Microsoft Research, Cambridge, UK, Mar 2014 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/msr14.pdf) [\[slides (pptx)\]](slides/msr14.pptx) </div>
- * **Rx-CML: A Prescription for Safely Relaxing Synchrony**
-<div> PADL '14, Jan 2014</div>
+ * **Functional Programming Abstractions for Weakly Consistent Systems**  
+   Purdue University, Dec 2014   
+ * **Functional Abstractions for Practical and Scalable Concurrent Programming**  
+   Microsoft Research, Cambridge, UK, Mar 2014   
+   [\[slides (pdf)\]](slides/msr14.pdf) [\[slides (pptx)\]](slides/msr14.pptx)   
+ * **Rx-CML: A Prescription for Safely Relaxing Synchrony**  
+   PADL '14, Jan 2014  
 
 ## 2013
 
- * **Migrating MultiMLton to the Cloud**
-<div> ML Workshop '13, Sep 2013 </div>
+ * **Migrating MultiMLton to the Cloud**  
+   ML Workshop '13, Sep 2013   
 
 ## 2012
 
- * **A Coherent and Managed Runtime for ML on the SCC**
-<div> MARC '12, Nov 2012 </div>
- * **Eliminating Read Barriers through Procrastination and Cleanliness**
-<div> &dagger; &nbsp; ISMM '12, Jun 2012 </div>
-<div> &dagger; &nbsp; Wrestling Wednesdays, Microsoft Research, Cambridge, May 2012 </div>
- * **Lightweight Concurrency in GHC**
-<div> Microsoft Research, Cambridge, May 2012 </div>
-<div style="font-size: 80%"> [\[slides (pdf)\]](slides/ghclwc.pdf) [\[slides (pptx)\]](slides/ghclwc.pptx) </div>
- * **Efficient Session Type guided Distributed Interaction**
-<div> COORDINATION '12, Jun 2012 </div>
+ * **A Coherent and Managed Runtime for ML on the SCC**  
+   MARC '12, Nov 2012   
+ * **Eliminating Read Barriers through Procrastination and Cleanliness**  
+   &dagger; &nbsp; ISMM '12, Jun 2012   
+   &dagger; &nbsp; Wrestling Wednesdays, Microsoft Research, Cambridge, May 2012   
+ * **Lightweight Concurrency in GHC**  
+   Microsoft Research, Cambridge, May 2012   
+   [\[slides (pdf)\]](slides/ghclwc.pdf) [\[slides (pptx)\]](slides/ghclwc.pptx)   
+ * **Efficient Session Type guided Distributed Interaction**  
+   COORDINATION '12, Jun 2012   
