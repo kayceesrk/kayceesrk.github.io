@@ -62,6 +62,12 @@ India](https://www.annauniv.edu/).
    *Department of Computer Science, Purdue University, Dec 2014*  
    [\[slides (pdf)\]](slides/defense.pdf) [\[slides (pptx)\]](slides/defense.pptx) [\[bib\]](bib/phd.txt)  
 
+## Drafts
+
+1. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan    
+    [Eff directly in OCaml](papers/caml-eff17.pdf)    
+    In submission, Apr 2017    
+
 ## Journal publications
 
  1. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones  
