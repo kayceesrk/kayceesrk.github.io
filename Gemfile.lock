@@ -208,6 +208,7 @@ DEPENDENCIES
   github-pages
   html-proofer
   jekyll-paginate
+  jekyll-relative-links
 
 BUNDLED WITH
    1.14.6
