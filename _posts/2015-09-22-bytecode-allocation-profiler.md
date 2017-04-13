@@ -37,7 +37,7 @@ profiler `gprof` for time profiling. However, these do not necessarily help
 with identifying the cost of abstractions, for which one needs an allocation
 profiler[^1].
 
-#The state of allocation profiling in OCaml
+# The state of allocation profiling in OCaml
 
 While allocation profiler is not part of the standard OCaml distribution,
 several alternatives do exist. [Memprof](http://memprof.typerex.org/) from
@@ -58,7 +58,7 @@ Since the allocation profiler will be useful in general, I have also ported it
 to [OCaml 4.02](https://github.com/kayceesrk/ocaml/tree/4.02-profile-alloc).
 This post talks about the vanilla OCaml allocation profiler.
 
-#Bytecode allocation profiler
+# Bytecode allocation profiler
 
 The idea of this allocation profiler is to record the allocations and associate
 them with the position in the code where the corresponding block or closure was
