@@ -67,6 +67,9 @@ India](https://www.annauniv.edu/).
 1. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan    
     [Eff directly in OCaml](papers/caml-eff17.pdf)    
     In submission, Apr 2017    
+2. <div id="fscd17"/> Daniel Hilleström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan
+    [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)
+    In submission, Apr 2017
 
 ## Journal publications
 
