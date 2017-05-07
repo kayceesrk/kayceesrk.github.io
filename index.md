@@ -64,10 +64,13 @@ India](https://www.annauniv.edu/).
 
 ## Drafts
 
-1. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan    
+1. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White    
+    [Concurrent System Programming with Effect Handlers](papers/system_effects_may_17.pdf)    
+    In submission, May 2017
+2. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan    
     [Eff directly in OCaml](papers/caml-eff17.pdf)    
     In submission, Apr 2017    
-2. <div id="fscd17"/> Daniel Hilleström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan   
+3. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan   
     [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)   
     In submission, Apr 2017   
 
