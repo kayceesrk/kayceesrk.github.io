@@ -171,8 +171,6 @@ India](https://www.annauniv.edu/).
 
 # Talks
 
-## 2016
-
  * **Composable lock-free programming for Multicore OCaml**  
    ABCD Meeting, University of Edinburgh, Nov 2016  
    [\[slides (pdf)\]](slides/reagents_edinburgh.pdf) [\[slides (key)\]](slides/reagents_edinburgh.key)  
@@ -198,9 +196,6 @@ India](https://www.annauniv.edu/).
  * **Concurrent and Multicore OCaml: A deep dive**  
    Facebook, Menlo Park, CA, Jan 2016  
    [\[slides (pdf)\]](slides/multicore_fb16.pdf) [\[slides (key)\]](slides/multicore_fb16.key)  
-
-## 2015
-
  * **Multicore OCaml: Status Report**  
    OCaml Developer's workshop, Paris, Nov 2015  
  * **The state of the OCaml Platform**  
@@ -211,9 +206,6 @@ India](https://www.annauniv.edu/).
   OCaml Workshop, Sep 2015  
  * **Quelea: Declarative Programming over Eventually Consistent Data Stores**  
    University of Cambridge, Apr 2015  
-
-## 2014
-
  * **Functional Programming Abstractions for Weakly Consistent Systems**  
    Purdue University, Dec 2014  
  * **Functional Abstractions for Practical and Scalable Concurrent Programming**  
@@ -221,14 +213,8 @@ India](https://www.annauniv.edu/).
    [\[slides (pdf)\]](slides/msr14.pdf) [\[slides (pptx)\]](slides/msr14.pptx)  
  * **Rx-CML: A Prescription for Safely Relaxing Synchrony**  
    PADL '14, Jan 2014  
-
-## 2013
-
  * **Migrating MultiMLton to the Cloud**  
    ML Workshop '13, Sep 2013  
-
-## 2012
-
  * **A Coherent and Managed Runtime for ML on the SCC**  
    MARC '12, Nov 2012  
  * **Eliminating Read Barriers through Procrastination and Cleanliness**  
