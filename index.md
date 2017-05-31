@@ -169,7 +169,7 @@ India](https://www.annauniv.edu/).
     *Purdue University Computer Science Technical Report – TR-11-018, 2011*  
     [\[bib\]](bib/featherweight.txt)  
 
-# Talks
+## Talks
 
  * **Composable lock-free programming for Multicore OCaml**  
    ABCD Meeting, University of Edinburgh, Nov 2016  
