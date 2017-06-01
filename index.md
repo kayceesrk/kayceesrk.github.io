@@ -64,10 +64,19 @@ India](https://www.annauniv.edu/).
 
 ## Drafts
 
-1. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan    
+1. <div id="mcm17"/> Stephen Dolan and KC Sivaramakrishnan  
+    [A Memory Model for Multicore OCaml](papers/memory_model_ocaml17.pdf)  
+    In submission, May 2017  
+2. <div id="awk17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White     
+    [Effectively Tackling the Awkward Squad](papers/awkward_effects_ml17.pdf)  
+    In submission, May 2017  
+3. <div id="mt17"/> Gowtham Kaki, KC Sivaramakrishnan, Samodya Abeysiriwardane, Suresh Jagannathan   
+    [Mergeable Types](papers/mergeable_types_ml17.pdf)   
+    In submission, May 2017   
+4. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan    
     [Eff directly in OCaml](papers/caml-eff17.pdf)    
     In submission, Apr 2017    
-2. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan   
+5. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan   
     [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)   
     In submission, Apr 2017   
 
