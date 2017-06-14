@@ -37,11 +37,11 @@ goes the other way. In multicore OCaml, we can implement monadic reflection for
 
 We introduce an effect `E` which is parameterized with the monadic computation.
 When this effect is performed, it returns the result of performing this monadic
-computation. Reify wraps the direct-style computation with an effect handler
+computation. `reify` wraps the direct-style computation with an effect handler
 that handles `E m` and binds the monadic computation `m` to the rest of the
-direct-style computation. Reflect simply performs the given monadic computation
-wrapped in `E`. The idea here is that whenever the monad does anything
-interesting, we perform the effect `E` which delegates the handling of
+direct-style computation. `reflect` simply performs the given monadic
+computation wrapped in `E`. The idea here is that whenever the monad does
+anything interesting, we perform the effect `E` which delegates the handling of
 interesting monadic behavior to the effect handler.
 
 ## Monadic to Direct 
