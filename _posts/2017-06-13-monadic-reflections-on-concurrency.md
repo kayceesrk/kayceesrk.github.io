@@ -31,9 +31,11 @@ styles:
 
 `reify` transforms a direct-style computation to a monadic one and `reflect`
 goes the other way. In multicore OCaml, we can implement monadic reflection for
-*any* monad as:
+*any* monad as[^yallop]:
 
 <script src="http://gist-it.appspot.com/https://github.com/kayceesrk/reify_reflect_concurrency/blob/914c24ccfb4e438f17ac779404bf0418d421b450/rr_conc.ml?slice=427:440"></script>
+
+[^yallop]: Thanks to [Jeremy Yallop](https://www.cl.cam.ac.uk/~jdy22/) for introducing me to monadic reflection and [contributing this implementation](https://github.com/kayceesrk/effects-examples/blob/master/reify_reflect.ml). 
 
 We introduce an effect `E` which is parameterized with the monadic computation.
 When this effect is performed, it returns the result of performing this monadic
@@ -108,3 +110,5 @@ We have been prototyping a multicore-capable I/O library for OCaml called
 Lwt and Async built on top of this library. Monadic reflection and other
 techniques can help resolve the schism between monadic libraries and
 direct-style code.
+
+## Footnotes
