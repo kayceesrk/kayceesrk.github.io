@@ -10,10 +10,10 @@ We recently published a paper on [concurrent system programming with effect
 handlers](kcsrk.info/papers/system_effects_may_17.pdf). In this paper, we show
 that with the help of effect handlers, we could express in _direct-style_,
 various interactions of a concurrent program with OS services that typically
-require callbacks. The question is what do we do legacy code that uses monadic
-concurrency libraries such as Lwt and Async. Surely a wholesale rewrite of all
-Lwt and Async code is a no go. This post is an exploration of some ideas to make
-Lwt and Async compatible with direct-style code.
+require callbacks. The question is what do we do about legacy code that uses
+monadic concurrency libraries such as Lwt and Async. Surely a wholesale rewrite
+of all Lwt and Async code is a no go. This post is an exploration of some ideas
+to make Lwt and Async compatible with direct-style code.
 
 <!--more-->
 
