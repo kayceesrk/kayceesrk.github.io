@@ -76,9 +76,6 @@ India](https://www.annauniv.edu/).
 4. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan    
     [Eff directly in OCaml](papers/caml-eff17.pdf)    
     In submission, Apr 2017    
-5. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan   
-    [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)   
-    In submission, Apr 2017   
 
 ## Journal publications
 
@@ -101,35 +98,38 @@ India](https://www.annauniv.edu/).
 
 ## Conference publications
 
- 1. <div id="snapl17"/> Gowtham Kaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy, Suresh Jagannathan  
+ 1. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan   
+    [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)   
+    *International Conference on Formal Structures for Computation and Deduction (FSCD), 2017*  
+ 2. <div id="snapl17"/> Gowtham Kaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy, Suresh Jagannathan  
     [DaLi: Database as a Library](papers/dali_snapl17.pdf)  
     *The 2nd Annual Summit on Advances in Programming Languages (SNAPL), 2017*  
     Oral presentation  
- 2. <div id="pldi15"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
+ 3. <div id="pldi15"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Declarative Programming over Eventually Consistent Data Stores](papers/quelea_pldi15.pdf)  
     *International Conference on Programming Language Design and Implementation (PLDI), 2015*  
     [\[code\]](http://kcsrk.info/Quelea) [\[techrep\]](papers/quelea-long.pdf) [\[bib\]](bib/pldi15.txt)  
- 3. <div id="padl14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 4. <div id="padl14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Rx-CML: A Prescription for Safely Relaxing Synchrony](papers/rxcml_padl14.pdf)  
     *Symposium on Practical Aspects of Declarative Languages (PADL), 2014*  
     [\[code\]](https://github.com/kayceesrk/mlton-zmq) [\[slides (pdf)\]](slides/padl14.pdf) [\[slides (key)\]](slides/padl14.key) [\[bib\]](bib/padl14.txt)  
- 4. <div id="marc12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 5. <div id="marc12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [A Coherent and Managed Runtime for ML on the SCC](papers/mmscc_marc12.pdf)  
     *Many-core Architecture Research Community Symposium (MARC), 2012*  
     **Best Paper Award** [\[code\]](https://github.com/kayceesrk/multiMLton/tree/split-heap-parallel-GC-IntelSCC) [\[slides (pdf)\]](slides/marc12.pdf) [\[slides (pptx)\]](slides/marc12.pptx) [\[bib\]](bib/marc12.txt)  
- 5. <div id="ismm12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 6. <div id="ismm12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Eliminating Read Barriers through Procrastination and Cleanliness](papers/mmgc_ismm12.pdf)  
     *International Symposium on Memory Management (ISMM), 2012*  
     [\[slides (pdf)\]](slides/ismm12.pdf) [\[slides (pptx)\]](slides/ismm12.pptx) [\[bib\]](bib/ismm12.txt)  
- 6. <div id="pldi11"/> Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan  
+ 7. <div id="pldi11"/> Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan  
     [Composable Asynchronous Events](papers/acml_pldi11.pdf)  
     *International Conference on Programming Language Design and Implementation (PLDI), 2011*  
     [\[bib\]](bib/pldi11.txt)  
- 7. <div id="coordination10"/> KC Sivaramakrishnan, Karthik Nagaraj, Lukasz Ziarek, Patrick Eugster  
+ 8. <div id="coordination10"/> KC Sivaramakrishnan, Karthik Nagaraj, Lukasz Ziarek, Patrick Eugster  
     [Efficient Session Type Guided Distributed Interaction](papers/sting_coordination10.pdf)  
     *International Conference on Coordination Models and Languages (COORDINATION), 2010*  
     [\[code\]](https://github.com/kayceesrk/Sting) [\[slides (pdf)\]](slides/coordination10.pdf) [\[slides (key)\]](slides/coordination10.key) [\[bib\]](bib/coordination10.txt)  
- 8. <div id="icfp09"/> Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan  
+ 9. <div id="icfp09"/> Lukasz Ziarek, KC Sivaramakrishnan, Suresh Jagannathan  
     [Partial Memoization of Concurrency and Communication](papers/memo_icfp09.pdf)  
     *International Conference on Functional Programming (ICFP), 2009*  
     [\[bib\]](bib/icfp09.txt)  
