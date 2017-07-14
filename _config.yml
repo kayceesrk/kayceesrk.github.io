@@ -16,7 +16,7 @@ tagline:             'Research Associate @ OCaml Labs'
 description:         'KC Sivaramakrishnan'
 url:                 http://kcsrk.info
 baseurl:             ""
-paginate:            5
+paginate:            10
 paginate_path:       blog/page:num
 excerpt_separator:   ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
 
