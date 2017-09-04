@@ -40,8 +40,12 @@ India](https://www.annauniv.edu/).
  * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
  * BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
 
-# News
+# Latest News
 
+ * **\[Sep 17\]** Running a tutorial on "Concurrent Programming with Effect Handlers"
+   at [ICFP 2017 @ Oxford](http://cufp.org/2017/c3-daniel-hillerstrom-kc-concurrent-programming-with-effect-handlers.html).  
+ * **\[Jul 17\]** Organizing Dagstuhl Seminar on ["Algebraic Effect Handlers go Mainstream"](http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172) 
+   with Daan Leijen, Matija Pretnar, Tom Schrijvers. The seminar will take place in April 2018.  
 
 # Timeline
 
