@@ -55,12 +55,9 @@ India](https://www.annauniv.edu/).
 
 # Publications
 
-## Overview
-
- * Distributed Programming : [PLDI15](#pldi15), [PADL14](#padl14), [ML13](#ml13)
- * Concurrent Programming : [OCaml15](#ocaml15), [PLDI11](#pldi11), [ICFP09](#icfp09), [JFP16](#jfp16), [ML10](#ml10), [TR11](#tr11), [DAMP10](#damp10)
- * Multicore Runtime : [JFP14](#jfp14), [MARC12](#marc12), [ISMM12](#ismm12), [SFMA11](#sfma11)
- * Session Types : [SCP13](#scp13), [COORDINATION10](#coordination10)
+See [Google
+Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl=en) for an
+up to date list.
 
 ## PhD Dissertation  
   
@@ -74,19 +71,19 @@ India](https://www.annauniv.edu/).
  1. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/caml-eff17.pdf)  
     *Post-proceedings of the ML Workshop 2016, 2017 (accepted)*  
- 1. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones  
+ 2. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
     [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf)  
     *Journal of Functional Programming (JFP), 2016*  
     [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
- 2. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
+ 3. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
     **Invited Paper** [\[bib\]](bib/ieee16.txt)  
- 3. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 4. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf)  
     *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014*  
     [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt)  
- 4. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
+ 5. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
     [Efficient Sessions](papers/sting_scp13.pdf)  
     *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
     **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
