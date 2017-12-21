@@ -29,6 +29,9 @@ Jagannathan](https://www.cs.purdue.edu/homes/suresh/). At Purdue, I led the
 degree in Computer Science and Engineering from [Anna University,
 India](https://www.annauniv.edu/).
 
+I write about my research in my [blog](http://kcsrk.info/blog/) (though not as
+often as I would like to).
+
  * [CV](cv/cv.pdf)
  * [Research Statement](research/research.pdf)
 
