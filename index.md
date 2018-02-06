@@ -196,9 +196,8 @@ up to date list.
    LFCS Seminar, University of Edinburgh, Nov 2016  
    [\[slides (pdf)\]](slides/handlers_edinburgh.pdf) [\[slides (key)\]](slides/handlers_edinburgh.key)  
  * **Effective Concurrency and Parallelism in Multicore OCaml**  
-   Invited Seminar, IIT Madras, Nov 2016  
- * **Effective Concurrency and Parallelism in Multicore OCaml**  
-   Invited Seminar, IIT Bombay, Nov 2016  
+   &dagger; &nbsp; Invited Seminar, IIT Madras, Nov 2016  
+   &dagger; &nbsp; Invited Seminar, IIT Bombay, Nov 2016  
  * **Effective parallelism with Reagents**  
    London Facebook Faculty Summit - Facebook London, UK, Sep 2016  
    [\[slides (pdf)\]](slides/reagents_fb_fac_summit_16.pdf) [\[slides (key)\]](slides/reagents_fb_fac_summit_16.key)  
