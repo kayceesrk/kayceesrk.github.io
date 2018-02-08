@@ -71,22 +71,25 @@ up to date list.
   
 ## Journal publications  
 
- 1. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
+ 1. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
+    [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
+    *Post-proceedings of the Symposium on Trends in Functional Programming, 2017 (accepted)*  
+ 2. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/caml-eff17.pdf)  
     *Post-proceedings of the ML Workshop 2016, 2017 (accepted)*  
- 2. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
+ 3. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
     [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf)  
     *Journal of Functional Programming (JFP), 2016*  
     [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
- 3. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
+ 4. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
     **Invited Paper** [\[bib\]](bib/ieee16.txt)  
- 4. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 5. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf)  
     *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014*  
     [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt)  
- 5. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
+ 6. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
     [Efficient Sessions](papers/sting_scp13.pdf)  
     *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
     **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
@@ -141,8 +144,8 @@ up to date list.
     [Mergeable Types](papers/mergeable_types_ml17.pdf)  
     *ML Workshop, 2017*  
  4. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
-    [Concurrent System Programming with Effect Handlers](papers/system_effects_may_17.pdf)  
-    *Trends in Functional Programming, 2017*  
+    [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
+    *Symposium on Trends in Functional Programming, 2017*  
  5. <div id="ppl17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/eff_ocaml_ppl17.pdf)  
     *JSSST Workshop on Programming and Programming Languages, 2017*  
