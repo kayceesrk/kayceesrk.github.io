@@ -45,6 +45,9 @@ often as I would like to).
 
 # Latest News
 
+ * **\[Feb 18\]** Position paper on ["An Architecture for Interspatial Communication"](papers/osmose_feb_18.pdf) accepted to [HotPOST'18](http://hotpost18.weebly.com/).
+ * **\[Jan 18\]** Organizing NII Shonan Meeting on ["Programming Language support for Data-intensive Applications"]()
+   with Suresh Jagannathan, Anil Madhavapeddy, Oleg Kiselyov. This seminar will take place in early 2019.
  * **\[Sep 17\]** Running a tutorial on "Concurrent Programming with Effect Handlers"
    at [ICFP 2017 @ Oxford](http://cufp.org/2017/c3-daniel-hillerstrom-kc-concurrent-programming-with-effect-handlers.html).
  * **\[Jul 17\]** Organizing Dagstuhl Seminar on ["Algebraic Effect Handlers go Mainstream"](http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172)
@@ -53,14 +56,12 @@ often as I would like to).
 # Timeline
 
 <a href="timeline.html">
-  <img src="assets/timeline.png" alt="Timeline" style="width: 45rem;"/>
+  <img src="assets/timeline.png" alt="Timeline" style="width: 55rem;"/>
 </a>
 
 # Publications
 
-See [Google
-Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl=en) for an
-up to date list.
+See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl=en) for an up to date list.
 
 ## PhD Dissertation  
   
@@ -134,46 +135,49 @@ up to date list.
   
 ## Workshop publications  
   
- 1. <div id="mcm17"/> Stephen Dolan and KC Sivaramakrishnan  
+ 1. <div id="osmose18"/> Anil Madhavapeddy, KC Sivaramakrishnan, Gemma Gordon, Thomas Gazagnaire  
+    [An Architecture for Interspatial Communication](papers/osmose_feb_18.pdf)  
+    *Hot Topics in Pervasive Mobile and Online Social Networking (HotPOST), 2018*  
+ 2. <div id="mcm17"/> Stephen Dolan and KC Sivaramakrishnan  
     [A Memory Model for Multicore OCaml](papers/memory_model_ocaml17.pdf)  
     *OCaml Workshop, 2017*  
- 2. <div id="awk17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
+ 3. <div id="awk17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Effectively Tackling the Awkward Squad](papers/awkward_effects_ml17.pdf)  
     *ML Workshop, 2017*  
- 3. <div id="mt17"/> Gowtham Kaki, KC Sivaramakrishnan, Samodya Abeysiriwardane, Suresh Jagannathan  
+ 4. <div id="mt17"/> Gowtham Kaki, KC Sivaramakrishnan, Samodya Abeysiriwardane, Suresh Jagannathan  
     [Mergeable Types](papers/mergeable_types_ml17.pdf)  
     *ML Workshop, 2017*  
- 4. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
+ 5. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
     *Symposium on Trends in Functional Programming, 2017*  
- 5. <div id="ppl17"/> Oleg Kiselyov and KC Sivaramakrishnan  
+ 6. <div id="ppl17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/eff_ocaml_ppl17.pdf)  
     *JSSST Workshop on Programming and Programming Languages, 2017*  
- 6. <div id="ocaml16"/> KC Sivaramakrishnan and Théo Laurent  
+ 7. <div id="ocaml16"/> KC Sivaramakrishnan and Théo Laurent  
     [Lock-free programming for the masses](papers/reagents_ocaml16.pdf)  
     *OCaml Workshop, 2016*  
- 7. <div id="ml16_1"/> Daniel Hilleström, Sam Lindley, KC Sivaramakrishnan  
+ 8. <div id="ml16_1"/> Daniel Hilleström, Sam Lindley, KC Sivaramakrishnan  
     [Compiling Links Effect Handlers to the OCaml Backend](papers/links_ocaml_ml16.pdf)  
     *ML Worshop, 2016*  
- 8. <div id="ml16_2"/> Oleg Kiselyov and Kc Sivaramakrishnan  
+ 9. <div id="ml16_2"/> Oleg Kiselyov and Kc Sivaramakrishnan  
     [Eff Directly in OCaml](papers/eff_ocaml_ml16.pdf)  
     *ML Worshop, 2016*  
- 9. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy  
+ 10. <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy  
     [Effective Concurrency with Algebraic Effects](papers/effects_ocaml15.pdf)  
     *OCaml Worshop, 2015*  
     [\[code\]](https://github.com/kayceesrk/ocaml-eff-example) [\[slides (pdf)\]](slides/OCaml15.pdf) [\[slides (key)\]](slides/OCaml15.key)  
- 10. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 11. <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Migrating MultiMLton to the Cloud](papers/mmcloud_mlw13.pdf)  
     *ML Worshop, 2013*  
- 11. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan  
+ 12. <div id="sfma11"/> Daniel G. Waddington, Chen Tian, KC Sivaramakrishnan  
     [Scalable Lightweight Task Management Schemes for MIMD Processors](papers/snapple_sfma11.pdf)  
     *Workshop on Systems for Future Multi-Core Architectures (SFMA), 2011*  
     [\[bib\]](bib/sfma11.txt)  
- 12. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek  
+ 13. <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek  
     [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf)  
     *ML Workshop, 2010*  
     [\[bib\]](bib/mlw10.txt)  
- 13. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan  
+ 14. <div id="damp10"/> KC Sivaramakrishnan, Lukasz Ziarek, Raghavendra Prasad, Suresh Jagannathan  
     [Lightweight Asynchrony using Parasitic Threads](papers/parasites_damp10.pdf)  
     *Workshop on Declarative Aspects of Multicore Programming (DAMP), 2010*  
     [\[bib\]](bib/damp10.txt)  
