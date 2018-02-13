@@ -45,7 +45,7 @@ often as I would like to).
 
 # Latest News
 
- * **\[Feb 18\]** ["Beyond Data Races in Space and Time"](papers/osmose_feb_18.pdf) *conditionally* accepted to [PLDI'18](https://pldi18.sigplan.org/).
+ * **\[Feb 18\]** ["Beyond Data Races in Space and Time"](papers/pldi18-memory.pdf) *conditionally* accepted to [PLDI'18](https://pldi18.sigplan.org/).
  * **\[Feb 18\]** Position paper on ["An Architecture for Interspatial Communication"](papers/osmose_feb_18.pdf) accepted to [HotPOST'18](http://hotpost18.weebly.com/).
  * **\[Jan 18\]** Organizing NII Shonan Meeting on ["Programming Language support for Data-intensive Applications"]()
    with Suresh Jagannathan, Anil Madhavapeddy, Oleg Kiselyov. This seminar will take place in early 2019.
