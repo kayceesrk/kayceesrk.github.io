@@ -45,7 +45,7 @@ often as I would like to).
 
 # Latest News
 
- * **\[Feb 18\]** ["Beyond Data Races in Space and Time"](papers/pldi18-memory.pdf) *conditionally* accepted to [PLDI'18](https://pldi18.sigplan.org/).
+ * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) *conditionally* accepted to [PLDI'18](https://pldi18.sigplan.org/).
  * **\[Feb 18\]** Position paper on ["An Architecture for Interspatial Communication"](papers/osmose_feb_18.pdf) accepted to [HotPOST'18](http://hotpost18.weebly.com/).
  * **\[Jan 18\]** Organizing NII Shonan Meeting on ["Programming Language support for Data-intensive Applications"]()
    with Suresh Jagannathan, Anil Madhavapeddy, Oleg Kiselyov. This seminar will take place in early 2019.
@@ -99,7 +99,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 ## Conference publications  
   
  1. <div id="pldi18"/> Stephen Dolan, KC Sivaramakrishnan, Anil Madhavapeddy   
-    [Beyond Data Races in Space and Time](papers/pldi18-memory.pdf)  
+    [Bounding Data Races in Space and Time](papers/pldi18-memory.pdf)  
     *International Conference on Programming Language Design and Implementation (PLDI), 2018 (conditionally accepted)*   
  2. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan  
     [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)  
