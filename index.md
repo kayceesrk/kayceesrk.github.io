@@ -45,7 +45,8 @@ often as I would like to).
 
 # Latest News
 
- * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) *conditionally* accepted to [PLDI'18](https://pldi18.sigplan.org/).
+ * **\[Jun 18\]** "Safe Replication through Bounded Concurrency Verification" accepted to [OOPSLA'18](https://2018.splashcon.org/track/splash-2018-OOPSLA)   
+ * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) accepted to [PLDI'18](https://pldi18.sigplan.org/).
  * **\[Feb 18\]** Position paper on ["An Architecture for Interspatial Communication"](papers/osmose_feb_18.pdf) accepted to [HotPOST'18](http://hotpost18.weebly.com/).
  * **\[Jan 18\]** Organizing NII Shonan Meeting on ["Programming Language support for Data-intensive Applications"]()
    with Suresh Jagannathan, Anil Madhavapeddy, Oleg Kiselyov. This seminar will take place in early 2019.
@@ -73,25 +74,28 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Journal publications  
 
- 1. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
+ 1. <div id="oopsla18"/> Gowtham Kaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan     
+    [Safe Replication through Bounded Concurrency Verification](papers/oopsla18-q9.pdf)    
+    *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2018*    
+ 2. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
-    *Post-proceedings of the Symposium on Trends in Functional Programming, 2017 (accepted)*  
- 2. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
+    *Post-proceedings of the Symposium on Trends in Functional Programming, 2017*  
+ 3. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/caml-eff17.pdf)  
-    *Post-proceedings of the ML Workshop 2016, 2017 (accepted)*  
- 3. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
+    *Post-proceedings of the ML Workshop 2016, 2017*  
+ 4. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
     [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf)  
     *Journal of Functional Programming (JFP), 2016*  
     [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
- 4. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
+ 5. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
     **Invited Paper** [\[bib\]](bib/ieee16.txt)  
- 5. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 6. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf)  
     *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014*  
     [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt)  
- 6. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
+ 7. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
     [Efficient Sessions](papers/sting_scp13.pdf)  
     *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
     **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
@@ -100,7 +104,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
  1. <div id="pldi18"/> Stephen Dolan, KC Sivaramakrishnan, Anil Madhavapeddy   
     [Bounding Data Races in Space and Time](papers/pldi18-memory.pdf)  
-    *International Conference on Programming Language Design and Implementation (PLDI), 2018 (conditionally accepted)*   
+    *International Conference on Programming Language Design and Implementation (PLDI), 2018*   
  2. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan  
     [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)  
     *International Conference on Formal Structures for Computation and Deduction (FSCD), 2017*  
@@ -195,6 +199,12 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Talks  
   
+ * **State of Multicore OCaml**   
+   INRIA Gallium, Paris, Jun 2018   
+   [\[slides (pdf)\]](slides/mcocaml_gallium.pdf) [\[slides (key)\]](slides/mcocaml_gallium.key)   
+ * **Bounding Data Races in Space and Time**   
+   Department Seminar, Computer Science and Engineering, IIT Madras, Feb 2018   
+   [\[slides (pdf)\]](slides/ldrf_iitm.pdf) [\[slides (key)\]](slides/ldrf_iitm.key)   
  * **A Deep Dive into Multicore OCaml Garbage Collector**  
    &dagger; &nbsp; Department Seminar, Computer Science and Engineering, IIT Madras, Oct 2017  
    &dagger; &nbsp; System Research Group (SRG) seminar, Computer Laboratory, University of Cambridge, Jul 2017  
