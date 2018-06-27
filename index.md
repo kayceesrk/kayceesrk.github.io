@@ -45,7 +45,7 @@ often as I would like to).
 
 # Latest News
 
- * **\[Jun 18\]** "Safe Replication through Bounded Concurrency Verification" accepted to [OOPSLA'18](https://2018.splashcon.org/track/splash-2018-OOPSLA)   
+ * **\[Jun 18\]** "Safe Replication through Bounded Concurrency Verification" conditionally accepted to [OOPSLA'18](https://2018.splashcon.org/track/splash-2018-OOPSLA)   
  * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) accepted to [PLDI'18](https://pldi18.sigplan.org/).
  * **\[Feb 18\]** Position paper on ["An Architecture for Interspatial Communication"](papers/osmose_feb_18.pdf) accepted to [HotPOST'18](http://hotpost18.weebly.com/).
  * **\[Jan 18\]** Organizing NII Shonan Meeting on ["Programming Language support for Data-intensive Applications"]()
