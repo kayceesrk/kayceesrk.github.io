@@ -5,7 +5,7 @@ title: About
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 220px; float:
 left; padding-right: 1rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am a
-Post-doctoral Research Associate under the [OCaml
+Senior Research Associate under the [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the
 [University of Cambridge](http://www.cam.ac.uk/) [Computer
 Lab](http://www.cl.cam.ac.uk/), an [1851 Research
