@@ -30,5 +30,5 @@ author:
 version:             1.0.0
 
 # Plugins
-gems:                [jekyll-paginate]
+plugins:             [jekyll-paginate]
 
