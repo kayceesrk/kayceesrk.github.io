@@ -64,6 +64,7 @@ include, but are not limited to:
 * Applications of algebraic effect handlers (probabilistic programming, event
   correlation, meta-programming, asynchronous I/O, debugging)
 
+<br/>
 Reports on applications of these techniques to real-world problems are
 especially encouraged, as are submissions that relate ideas and concepts from
 several of these topics, or bridge the gap between theory and practice.
