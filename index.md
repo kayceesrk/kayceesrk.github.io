@@ -45,15 +45,9 @@ often as I would like to).
 
 # Latest News
 
+ * **\[Aug 18\]** Andrej Bauer and I are guest editing [a special issue of JFP on effect handlers](http://kcsrk.info/handlers/paper/2018/08/16/jfp-effect-handlers/). Please submit!  
  * **\[Jun 18\]** "Safe Replication through Bounded Concurrency Verification" conditionally accepted to [OOPSLA'18](https://2018.splashcon.org/track/splash-2018-OOPSLA)   
  * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) accepted to [PLDI'18](https://pldi18.sigplan.org/).
- * **\[Feb 18\]** Position paper on ["An Architecture for Interspatial Communication"](papers/osmose_feb_18.pdf) accepted to [HotPOST'18](http://hotpost18.weebly.com/).
- * **\[Jan 18\]** Organizing NII Shonan Meeting on ["Programming Language support for Data-intensive Applications"]()
-   with Suresh Jagannathan, Anil Madhavapeddy, Oleg Kiselyov. This seminar will take place in early 2019.
- * **\[Sep 17\]** Running a tutorial on "Concurrent Programming with Effect Handlers"
-   at [ICFP 2017 @ Oxford](http://cufp.org/2017/c3-daniel-hillerstrom-kc-concurrent-programming-with-effect-handlers.html).
- * **\[Jul 17\]** Organizing Dagstuhl Seminar on ["Algebraic Effect Handlers go Mainstream"](http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172)
-   with Daan Leijen, Matija Pretnar, Tom Schrijvers. The seminar will take place in April 2018.
 
 # Timeline
 
