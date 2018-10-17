@@ -195,7 +195,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
  * **Concurrent System Programming with Effect Handlers**   
    [\[slides (pdf)\]](slides/effects_sussex.pdf) [\[slides (key)\]](slides/effects_sussex.key)   
-   University of Sussex, Oct 2018
+   University of Sussex, Oct 2018    
  * **State of Multicore OCaml**   
    INRIA Gallium, Paris, Jun 2018   
    [\[slides (pdf)\]](slides/mcocaml_gallium.pdf) [\[slides (key)\]](slides/mcocaml_gallium.key)   
