@@ -99,6 +99,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  1. <div id="pldi18"/> Stephen Dolan, KC Sivaramakrishnan, Anil Madhavapeddy   
     [Bounding Data Races in Space and Time](papers/pldi18-memory.pdf)  
     *International Conference on Programming Language Design and Implementation (PLDI), 2018*   
+    [\[The Morning Paper: Part I\]](https://blog.acolyer.org/2018/08/09/bounding-data-races-in-space-and-time-part-i/)  [\[The Morning Paper: Part II\]](https://blog.acolyer.org/2018/08/10/bounding-data-races-in-space-and-time-part-ii/)   
  2. <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan  
     [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)  
     *International Conference on Formal Structures for Computation and Deduction (FSCD), 2017*  
