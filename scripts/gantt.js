@@ -13,9 +13,10 @@ var tasks = [
 {"startDate":new Date("Aug 2012"),"endDate":new Date("Dec 2012"), "taskName":"Purdue University\n[Teaching Assistant]","status":"ASSISTANTSHIP"},
 {"startDate":new Date("Dec 2012"),"endDate":new Date("Dec 2014"), "taskName":"Purdue University\n[Research Assistant]","status":"ASSISTANTSHIP"},
 {"startDate":new Date("Dec 2014"),"endDate":new Date("Sep 2017"), "taskName":"University of Cambridge\n[Research Associate]","status":"JOB"},
-{"startDate":new Date("Oct 2017"),"endDate":new Date(), "taskName":"University of Cambridge\n[Senior Research Associate]","status":"JOB"},
-{"startDate":new Date("Oct 2015"),"endDate":new Date(), "taskName":"1851 Royal Commission\n[Research Fellow]","status":"ASSISTANTSHIP"},
-{"startDate":new Date("Oct 2015"),"endDate":new Date(), "taskName":"Darwin College, Cambridge\n[Research Fellow]","status":"ASSISTANTSHIP"},
+{"startDate":new Date("Oct 2017"),"endDate":new Date("Dec 2018"), "taskName":"University of Cambridge\n[Senior Research Associate]","status":"JOB"},
+{"startDate":new Date("Oct 2015"),"endDate":new Date("Oct 2018"), "taskName":"1851 Royal Commission\n[Research Fellow]","status":"ASSISTANTSHIP"},
+{"startDate":new Date("Oct 2015"),"endDate":new Date("Oct 2018"), "taskName":"Darwin College, Cambridge\n[Research Fellow]","status":"ASSISTANTSHIP"},
+{"startDate":new Date("Jan 2019"),"endDate":new Date(), "taskName":"IIT Madras\n[Assistant Professor]","status":"JOB"},
 ];
 
 var taskStatus = {
@@ -37,7 +38,8 @@ var taskNames = [
 	"University of Cambridge\n[Research Associate]",
 	"University of Cambridge\n[Senior Research Associate]",
   "1851 Royal Commission\n[Research Fellow]",
-  "Darwin College, Cambridge\n[Research Fellow]"
+  "Darwin College, Cambridge\n[Research Fellow]",
+  "IIT Madras\n[Assistant Professor]"
 ];
 
 tasks.sort(function(a, b) {

@@ -4,29 +4,21 @@ title: About
 ---
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 220px; float:
-left; padding-right: 1rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am a
-Senior Research Associate under the [OCaml
-Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the
-[University of Cambridge](http://www.cam.ac.uk/) [Computer
-Lab](http://www.cl.cam.ac.uk/), an [1851 Research
-Fellow](http://www.royalcommission1851.org/awards/) and a Research Fellow at
-[Darwin College, Cambridge](https://www.darwin.cam.ac.uk/). I am also a member
-of the [Network and Operating
-Systems](http://www.cl.cam.ac.uk/research/srg/netos/) group.
+left; padding-right: 1rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am an
+Assistant Professor in the Computer Science and Engineering department at Indian
+Institute of Technology, Madras. I work on the intersection of Programming
+Languages and (Concurrent, Parallel, Distributed) Systems. 
 
-I am interested in the design and implementation of concurrent functional
-programming languages targeting scalable platforms such as many-core processors
-and compute clouds. My research spans programming models, compilers, static
-analysis, schedulers, threading systems, and memory management.
-
-Before coming to Cambridge, I was a [graduate
-student](https://www.cs.purdue.edu/homes/chandras/) at [Purdue
-University](http://www.purdue.edu/) where I obtained an MS and a PhD degree in
-Computer Science under the supervision of the wonderful [Prof. Suresh
-Jagannathan](https://www.cs.purdue.edu/homes/suresh/). At Purdue, I led the
-[MultiMLton](http://multimlton.cs.purdue.edu/) and
-[Quelea](http://kcsrk.info/Quelea/) projects. Before that, I obtained my BEng
-degree in Computer Science and Engineering from [Anna University,
+I was a Senior Research Associate under the [OCaml
+Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the [University
+of Cambridge](http://www.cam.ac.uk/) [Computer Lab](http://www.cl.cam.ac.uk/),
+an [1851 Research Fellow](http://www.royalcommission1851.org/awards/) and a
+Research Fellow at [Darwin College, Cambridge](https://www.darwin.cam.ac.uk/).
+Earlier, I was a [graduate student](https://www.cs.purdue.edu/homes/chandras/)
+at [Purdue University](http://www.purdue.edu/) where I obtained an MS and a PhD
+degree in Computer Science under the supervision of the wonderful [Prof. Suresh
+Jagannathan](https://www.cs.purdue.edu/homes/suresh/). Before that, I obtained
+my BEng degree in Computer Science and Engineering from [Anna University,
 India](https://www.annauniv.edu/).
 
 I write about my research in my [blog](http://kcsrk.info/blog/) (though not as
@@ -37,14 +29,15 @@ often as I would like to).
 
 # Contact
 
- * Email : `(\i -> i ++ "@cl.cam.ac.uk") "sk826"`
- * IRL : 15 JJ Thomson Ave, Cambridge CB3 0FD
+ * Email : kc@kcsrk.info, kcsrk@cse.iitm.ac.in
+ * IRL : BSB 371, Department of Computer Science and Engineering, IIT Madras, Chennai, India
  * Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a>
  * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
  * BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
 
 # Latest News
 
+ * **\[Jan 19\]** Joined IIT Madras as Assistant Professor in Computer Science and Engineering.  
  * **\[Aug 18\]** Andrej Bauer and I are guest editing [a special issue of JFP on effect handlers](http://kcsrk.info/handlers/paper/2018/08/16/jfp-effect-handlers/). Please submit!  
  * **\[Jun 18\]** "Safe Replication through Bounded Concurrency Verification" conditionally accepted to [OOPSLA'18](https://2018.splashcon.org/track/splash-2018-OOPSLA)   
  * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) accepted to [PLDI'18](https://pldi18.sigplan.org/).
