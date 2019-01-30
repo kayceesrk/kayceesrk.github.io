@@ -42,6 +42,10 @@ often as I would like to).
  * **\[Jun 18\]** "Safe Replication through Bounded Concurrency Verification" conditionally accepted to [OOPSLA'18](https://2018.splashcon.org/track/splash-2018-OOPSLA)   
  * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) accepted to [PLDI'18](https://pldi18.sigplan.org/).
 
+# Calendar
+
+<iframe src="https://calendar.google.com/calendar/embed?title=Is%20KC%20available%3F&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=kaycee.srk%40gmail.com&amp;color=%23691426&amp;src=eafrkmmscolccjup0be58si8d8%40group.calendar.google.com&amp;color=%231B887A&amp;src=66f9dh89s946nnquh16kulfm80%40group.calendar.google.com&amp;color=%23875509&amp;ctz=Asia%2FKolkata" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 # Timeline
 
 <a href="timeline.html">
