@@ -190,7 +190,9 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
     [\[bib\]](bib/featherweight.txt)  
   
 ## Talks  
- * **Retrofitting a Concurrent GC onto OCaml**   
+ * **Version Control is for your Data too**  
+   PACE Seminar, IIT Madras, Mar 2019  
+ * **Retrofitting a Concurrent GC onto OCaml**    
    [\[slides (pdf)\]](slides/gc_glass.pdf) [\[slides (key)\]](slides/gc_glass.key)   
    GLASS Seminar, University of Glasgow, Oct 2018    
  * **Concurrent System Programming with Effect Handlers**   
