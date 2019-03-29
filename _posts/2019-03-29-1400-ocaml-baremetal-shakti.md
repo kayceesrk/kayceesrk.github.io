@@ -3,7 +3,6 @@ layout: post
 title: "OCaml on Baremetal Shakti RISC-V processor"
 date: 2019-03-29 14:00:00
 categories: [ocaml, riscv, shakti]
-published: false
 excerpt_separator: <!--more-->
 ---
 
