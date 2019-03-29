@@ -33,7 +33,7 @@ dockerhub:
 $ docker run -it iitmshakti/riscv-ocaml-baremetal:0.1.0
 
 # Write your program
-$ echo 'let _ = print_endline "A camel treads on hardware"' > hello.ml
+$ echo 'let _ = print_endline "A camel treads on hardware!"' > hello.ml
 # Compile for Shakti
 $ ocamlopt -output-obj -o payload.o hello.ml
 $ file payload.o
@@ -66,14 +66,14 @@ kernel: ELF 64-bit LSB executable, UCB RISC-V, version 1 (SYSV), statically link
 # Run under spike RISC-V ISA simulator
 $ spike kernel
 ocaml-boot: heap@0x80042be8 stack@0x8002fbc0
-hello ocaml, on riscv baremetal!
+A camel treads on hardware!
 ocaml-boot: caml runtime returned. shutting down!
 
 # Run under QEMU
 qemu-system-riscv64 -machine spike_v1.10 -smp 1 -m 1G -serial stdio -kernel kernel
 VNC server running on 127.0.0.1:5900
 ocaml-boot: heap@0x80042be8 stack@0x8002fbc0
-hello ocaml, on riscv baremetal!
+A camel treads on hardware!
 ocaml-boot: caml runtime returned. shutting down!
 ```
 
