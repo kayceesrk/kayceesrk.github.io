@@ -70,7 +70,7 @@ A camel treads on hardware!
 ocaml-boot: caml runtime returned. shutting down!
 
 # Run under QEMU
-qemu-system-riscv64 -machine spike_v1.10 -smp 1 -m 1G -serial stdio -kernel kernel
+$ qemu-system-riscv64 -machine spike_v1.10 -smp 1 -m 1G -serial stdio -kernel kernel
 VNC server running on 127.0.0.1:5900
 ocaml-boot: heap@0x80042be8 stack@0x8002fbc0
 A camel treads on hardware!
