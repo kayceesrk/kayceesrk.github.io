@@ -32,3 +32,4 @@ version:             1.0.0
 # Plugins
 plugins:             [jekyll-paginate]
 
+future:              true
