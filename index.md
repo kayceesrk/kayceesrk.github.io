@@ -93,7 +93,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Conference publications  
   
- 1. <div id="snapl19"/> Gowtham Kaki, KC Sivaramakrishnan, Suresh Jagannathan
+ 1. <div id="snapl19"/> Gowtham Kaki, KC Sivaramakrishnan, Suresh Jagannathan    
     [Version Control Is For Your Data Too](papers/snapl19-mrdt.pdf)  
     *The 3rd Summit on Advances in Programming Languages (SNAPL), 2019*   
  2. <div id="pldi18"/> Stephen Dolan, KC Sivaramakrishnan, Anil Madhavapeddy   
