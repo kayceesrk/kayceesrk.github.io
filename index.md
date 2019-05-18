@@ -191,7 +191,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Talks  
  * **Relational Reasoning for Mergeable Replicated Data Structures**    
-   MIT, Boston, May 2019
+   MIT, Boston, May 2019   
    [\[slides (pdf)\]](slides/quark_mit_2019.pdf) [\[slides (key)\]](slides/quark_mit_2019.key)
  * **Version Control is for your Data too**  
    PACE Seminar, IIT Madras, Mar 2019  
