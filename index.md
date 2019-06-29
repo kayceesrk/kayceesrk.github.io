@@ -37,10 +37,9 @@ often as I would like to).
 
 # Latest News
 
+ * **\[Jul 19\]** Co-organizing NII Shonan Meeting on [Programming Language support for Data-intensive Systems](https://github.com/avsm/shonan-143)
  * **\[Jan 19\]** Joined IIT Madras as Assistant Professor in Computer Science and Engineering.  
  * **\[Aug 18\]** Andrej Bauer and I are guest editing [a special issue of JFP on effect handlers](http://kcsrk.info/handlers/paper/2018/08/16/jfp-effect-handlers/). Please submit!  
- * **\[Jun 18\]** "Safe Replication through Bounded Concurrency Verification" conditionally accepted to [OOPSLA'18](https://2018.splashcon.org/track/splash-2018-OOPSLA)   
- * **\[Feb 18\]** ["Bounding Data Races in Space and Time"](papers/pldi18-memory.pdf) accepted to [PLDI'18](https://pldi18.sigplan.org/).
 
 # Calendar
 
