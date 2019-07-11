@@ -64,28 +64,31 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Journal publications  
 
- 1. <div id="oopsla18"/> Gowtham Kaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan     
+ 1. <div id="oopsla18"/> Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan     
+    [Relational Reasoning for Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf)    
+    *Conditionally Accepted to Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2019*    
+ 2. <div id="oopsla18"/> Gowtham Kaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan     
     [Safe Replication through Bounded Concurrency Verification](papers/oopsla18-q9.pdf)    
     *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2018*    
- 2. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
+ 3. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
     *Post-proceedings of the Symposium on Trends in Functional Programming, 2017*  
- 3. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
+ 4. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/caml-eff17.pdf)  
     *Post-proceedings of the ML Workshop 2016, 2017*  
- 4. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
+ 5. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
     [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf)  
     *Journal of Functional Programming (JFP), 2016*  
     [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
- 5. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
+ 6. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
     **Invited Paper** [\[bib\]](bib/ieee16.txt)  
- 6. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 7. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf)  
     *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014*  
     [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt)  
- 7. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
+ 8. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
     [Efficient Sessions](papers/sting_scp13.pdf)  
     *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
     **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
