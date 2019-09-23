@@ -33,6 +33,7 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Sep 19\]** [Hiring](http://kcsrk.info/ocaml/multicore/job/2019/09/16/1115-multicore-job/) **Research Software Engineers** to work on Multicore OCaml at IIT Madras.   
  * **\[Jul 19\]** Teaching [CS3100 Principles of Programming](/cs3100_f19) at IIT Madras. 
  * **\[Jul 19\]** [Relational Reasoning for Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf) conditionally accepted to OOPSLA 2019.  
  * **\[Jul 19\]** Co-organizing NII Shonan Meeting on [Programming Language support for Data-intensive Systems](https://github.com/avsm/shonan-143)
