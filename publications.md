@@ -19,9 +19,9 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### 2019
 
- 1. <div id="oopsla18"/> Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan     
-    [Relational Reasoning for Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf)    
-    *Conditionally Accepted to Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2019*    
+ 1. <div id="oopsla19"/> Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan     
+    [Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf)    
+    *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2019*    
 
 ### 2018
     
