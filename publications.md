@@ -8,6 +8,12 @@ permalink: publications.html
 
 See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl=en) for an up to date list.
 
+## Edited Proceeedings
+
+  1. <div id="dagstuhl18"> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers
+     [Algebraic Effect Handlers Go Mainstream](papers/effects_dagstuhl18.pdf)
+     *Dagstuhl Seminar 18172, Dagstuhl Reports, Volume 8, Issue 4, April 2018*
+
 ## PhD Dissertation  
   
  * <div id="phd"/> KC Sivaramakrishnan  
