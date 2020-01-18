@@ -10,9 +10,9 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ## Edited Proceeedings
 
-  1. <div id="dagstuhl18"> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers
-     [Algebraic Effect Handlers Go Mainstream](papers/effects_dagstuhl18.pdf)
-     *Dagstuhl Seminar 18172, Dagstuhl Reports, Volume 8, Issue 4, April 2018*
+  1. <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
+     [Algebraic Effect Handlers Go Mainstream](papers/effects_dagstuhl18.pdf)  
+     *Dagstuhl Seminar 18172, Dagstuhl Reports, Volume 8, Issue 4, April 2018*  
 
 ## PhD Dissertation  
   
@@ -28,6 +28,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  1. <div id="oopsla19"/> Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan     
     [Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf)    
     *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2019*    
+    [\[The Morning Paper: Part I\]](https://blog.acolyer.org/2019/11/25/mergeable-replicated-data-types-part-i/)  [\[The Morning Paper: Part II\]](https://blog.acolyer.org/2019/11/27/mergeable-replicated-data-types-part-ii/)
 
 ### 2018
     
