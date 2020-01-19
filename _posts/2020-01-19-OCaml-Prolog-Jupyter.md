@@ -82,7 +82,7 @@ notebooks.
 
 Jupyter notebooks are webpages that mixes text and code. For lectures, I prefer
 slides that let's you focus on a particular topic. While Jupyter allows the
-conversion of notebooks to slides **out-of-band**,
+conversion of notebooks to slides *out-of-band*,
 [RISE](https://github.com/damianavila/RISE) is an Jupyter notebook extension
 that lets turn your Jupyter notebook into a slideshow. Adding RISE to the setup
 makes the Jupyter experience compatible with traditional slides based lectures.
