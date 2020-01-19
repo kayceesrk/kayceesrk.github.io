@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Teaching OCaml and Prolog through Jupyter Notebooks"
-date: 2019-01-19 15:16
+date: 2020-01-19 15:16
 categories: [OCaml, Prolog, Jupyter, Notebooks]
 excerpt_separator: <!--more-->
 ---
@@ -45,9 +45,11 @@ functional programming part of the lecture, I had introduced [simply typed
 lambda calculus](http://kcsrk.info/cs3100_f19/lectures/lec11/lec11.pdf). In the
 logic part of the course, we developed a type checker for simply typed lambda
 calculus in Prolog. Merely encoding type checking rules for simply typed lambda
-calculus in Prolog, type inference with polymorphic types falls out. With a tiny
-bit of coaxing, Prolog synthesizes programs for the given type. In the last
-assignment, the students were asked to implement a Prolog interpreter in OCaml.
+calculus in Prolog, [type inference with polymorphic types falls
+out](http://kcsrk.info/cs3100_f19/lectures/lec25/lec25.pdf). With a tiny bit of
+coaxing, Prolog synthesizes programs for the given type. In the last assignment,
+the students were asked to implement [a Prolog interpreter in
+OCaml](https://github.com/kayceesrk/cs3100_f19/blob/gh-pages/assignments/assignment6.ipynb).
 There was indeed some value in teaching the two paradigms in the same course.
 
 ## Course Delivery
