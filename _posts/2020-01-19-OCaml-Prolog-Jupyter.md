@@ -7,14 +7,14 @@ excerpt_separator: <!--more-->
 ---
 
 Last semester at IIT Madras, I taught a revamped core course [CS3100 Paradigms
-of Programming](http://kcsrk.info/cs3100_f19/), which introduces 3-year students
-to functional and logic programming paradigms. While the course had been
-traditionally offered in Lisp and Prolog, I introduced OCaml instead of Prolog.
-All of the lectures were delivered through interactive Jupyter notebooks. The
-assignments were also distributed as Jupyter notebooks and evaluated through
-autograder facility in Jupyter. There has been several requests to replicate
-this setup elsewhere. Hence, I thought I should write about the set up and
-experience of teaching through Jupyter notebooks. 
+of Programming](http://kcsrk.info/cs3100_f19/), which introduces 3rd-year
+students to functional and logic programming paradigms. While the course had
+been traditionally offered in Lisp and Prolog, I introduced OCaml instead of
+Prolog. All of the lectures were delivered through interactive Jupyter
+notebooks. The assignments were also distributed as Jupyter notebooks and
+evaluated through autograder facility in Jupyter. There has since been several
+requests to replicate this setup elsewhere. Hence, I thought I should write
+about the set up and experience of teaching through Jupyter notebooks. 
 
 <!--more-->
 
@@ -50,7 +50,9 @@ out](http://kcsrk.info/cs3100_f19/lectures/lec25/lec25.pdf). With a tiny bit of
 coaxing, Prolog synthesizes programs for the given type. In the last assignment,
 the students were asked to implement [a Prolog interpreter in
 OCaml](https://github.com/kayceesrk/cs3100_f19/blob/gh-pages/assignments/assignment6.ipynb).
-There was indeed some value in teaching the two paradigms in the same course.
+There was indeed some value in teaching multiple paradigms in the same course,
+not just for a comparative study of strengths and weaknesses, but to be able to
+teach the students to pick the right tool for the job.
 
 ## Course Delivery
 
@@ -68,24 +70,25 @@ Hence, I decided to use Jupyter Notebooks for the course. Jupyter is a
 collection of open source standards and software for interactive development.
 Jupyter supports a variety of languages. For OCaml, I used
 [akabe/ocaml-jupyter](https://github.com/akabe/ocaml-jupyter), an OCaml kernel
-for Jupyter notebooks. This uses `utop` in the backend and hence provides
-excellent interactive top-level support. The situation for Prolog was not so
-great. Eventually, I zeroed in on
+for Jupyter notebooks. This uses `utop`, an advanced OCaml top-level in the
+backend and hence provides excellent interactive top-level support. The
+situation for Prolog was not so great. Eventually, I zeroed in on
 [targodan/jupyter-swi-prolog](https://github.com/targodan/jupyter-swi-prolog)
 but ended up improving the solution a bit
 [kayceesrk/jupyter-swi-prolog](https://github.com/kayceesrk/jupyter-swi-prolog)
-(TODO KC: upstream fixes). Jupyter supports
-[mathjax](https://www.mathjax.org/), which allows typesetting LaTeX in the
-notebooks. 
+(TODO KC: upstream fixes). Jupyter supports [mathjax](https://www.mathjax.org/),
+which allows typesetting LaTeX in the notebooks. This was great for writing the
+lectures on lambda calculus. 
 
 ### RISE for slideshow
 
-Jupyter notebooks are webpages that mixes text and code. For lectures, I prefer
-slides that let's you focus on a particular topic. While Jupyter allows the
-conversion of notebooks to slides *out-of-band*,
-[RISE](https://github.com/damianavila/RISE) is an Jupyter notebook extension
-that lets turn your Jupyter notebook into a slideshow. Adding RISE to the setup
-makes the Jupyter experience compatible with traditional slides based lectures.
+Jupyter notebooks are webpages that mixes text and code. For lectures, I much
+prefer slides since they let you focus on a particular images, statement or an
+inference rule. While Jupyter allows the conversion of notebooks to slides
+*out-of-band*, [RISE](https://github.com/damianavila/RISE) is an Jupyter
+notebook extension that lets turn your Jupyter notebook into a slideshow. Adding
+RISE to the setup makes the Jupyter experience compatible with traditional
+slides based lectures.
 
 ## Course Distribution 
 
@@ -96,18 +99,21 @@ extensions, Jupyter Kernels for OCaml and Prolog) and correctly was not
 something I wanted the students to go through. I wasn't even sure if this
 software combination works on various Mac, Windows and Linux distributions.
 Hence, everything was packaged as a [Docker
-file](https://github.com/kayceesrk/cs3100_f19/blob/gh-pages/_docker/dockerfile).
-In order to review the course, the students only had to install Docker and Git
-and run [exactly 4
+file](https://github.com/kayceesrk/cs3100_f19/blob/gh-pages/_docker/dockerfile),
+and the latest version of the image uploaded to [docker
+hub](https://hub.docker.com/r/kayceesrk/cs3100_iitm). In order to review the
+course, the students only had to install Docker and Git and run [exactly 4
 commands](https://github.com/kayceesrk/cs3100_f19#running-the-jupyter-notebooks).
 
 Docker is generally supported on all major OSes. Packaging up the course content
 as a docker image and pushing it to dockerhub is insurance against the software
-not working in the next offering of the course; if for some reason one of the
-dependency does not work next year, I can always fallback to the docker image
-while I find a fix. One of my TAs ran a tutorial on basic Docker and Git in the
-first week of the course to ensure that everyone was setup. After that, the
-students did not ever have to do anything on the command line. 
+combination not working in the next offering of the course; if for some reason
+one of the dependency does not work next year, I can always fallback to the
+docker image while I find a fix. One of my TAs ran a tutorial on basic Docker
+and Git in the first week of the course to ensure that everyone was setup. I
+would consider Docker and Git as essential tools for modern software development
+as well as research. After that, the students did not ever have to do anything
+on the command line. 
 
 ## Assignments 
 
@@ -152,6 +158,9 @@ lecturing. Here are some of the things that could be improved.
   SWI-Prolog top-level for a few lectures. That said, the Prolog support is
   mostly there and the issues can be fixed with some effort. 
 
+## Conclusion
+
 I have started working on fixing some of these issues and upstreaming the
 solutions. Hopefully the fixes should be ready for the next iteration of the
-course.
+course. If you would like to replicate this setup for your course, do feel free
+to utilise the course materials. 
