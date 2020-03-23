@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 ---
 
 We recently published a paper on [concurrent system programming with effect
-handlers](http://kcsrk.info/papers/system_effects_may_17.pdf). In this paper, we show
+handlers](http://kcsrk.info/papers/system_effects_feb_18.pdf). In this paper, we show
 that with the help of effect handlers, we could express in _direct-style_,
 various interactions of a concurrent program with OS services that typically
 require callbacks. The question is what do we do about legacy code that uses
