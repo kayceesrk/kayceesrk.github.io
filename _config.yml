@@ -14,7 +14,7 @@ permalink:           pretty
 title:               KC Sivaramakrishnan
 tagline:             'Assistant Professor @ IIT Madras'
 description:         'KC Sivaramakrishnan'
-url:                 http://kcsrk.info
+url:                 https://kcsrk.info
 baseurl:             ""
 paginate:            10
 paginate_path:       blog/page:num
