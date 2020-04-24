@@ -8,6 +8,12 @@ permalink: publications.html
 
 See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl=en) for an up to date list.
 
+## Drafts
+
+  1. <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy
+     [Retrofitting Parallelism onto OCaml](papers/retro-parallel.pdf)  
+     *April 2020*
+
 ## Edited Proceeedings
 
   1. <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
