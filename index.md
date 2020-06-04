@@ -33,9 +33,9 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[May 20\]** [Retrofitting Parallelism onto OCaml](https://arxiv.org/abs/2004.11663) conditionally accepted to ICFP'20. 
  * **\[Dec 19\]** Teaching [CS6225 Programs and Proofs](/cs6225_s20_iitm).
  * **\[Sep 19\]** [Hiring](http://kcsrk.info/ocaml/multicore/job/2019/09/16/1115-multicore-job/) **Research Software Engineers** to work on Multicore OCaml at IIT Madras.   
- * **\[Jul 19\]** [Relational Reasoning for Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf) conditionally accepted to OOPSLA 2019.  
 
 # Contact
 
