@@ -8,12 +8,6 @@ permalink: publications.html
 
 See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl=en) for an up to date list.
 
-## Drafts
-
-  1. <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy   
-     [Retrofitting Parallelism onto OCaml](papers/retro-parallel.pdf)     
-     *April 2020*   
-
 ## Edited Proceeedings
 
   1. <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
@@ -29,46 +23,52 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Journal publications  
 
+### 2020
+
+  1. <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy   
+     [Retrofitting Parallelism onto OCaml](papers/retro-parallel.pdf)     
+     *Proceedings of the ACM on Programming Languages (PACMPL), issue ICFP 2020*  
+
 ### 2019
 
- 1. <div id="oopsla19"/> Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan     
+ 2. <div id="oopsla19"/> Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan     
     [Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf)    
     *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2019*    
     [\[The Morning Paper: Part I\]](https://blog.acolyer.org/2019/11/25/mergeable-replicated-data-types-part-i/)  [\[The Morning Paper: Part II\]](https://blog.acolyer.org/2019/11/27/mergeable-replicated-data-types-part-ii/)
 
 ### 2018
     
- 2. <div id="oopsla18"/> Gowtham Kaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan     
+ 3. <div id="oopsla18"/> Gowtham Kaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan     
     [Safe Replication through Bounded Concurrency Verification](papers/oopsla18-q9.pdf)    
     *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2018*    
 
 ### 2017
 
- 3. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
+ 4. <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
     *Post-proceedings of the Symposium on Trends in Functional Programming, 2017*  
- 4. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
+ 5. <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/caml-eff17.pdf)  
     *Post-proceedings of the ML Workshop 2016, 2017*  
 
 ### 2016
 
- 5. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
+ 6. <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
     [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf)  
     *Journal of Functional Programming (JFP), 2016*  
     [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
- 6. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
+ 7. <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
     **Invited Paper** [\[bib\]](bib/ieee16.txt)  
 
 ### 2014
 
- 7. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
+ 8. <div id="jfp14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [MultiMLton: A Multicore-aware Runtime for Standard ML](papers/multimlton_jfp14.pdf)  
     *Journal of Functional Programming (JFP), 24(6): 613 – 674, 2014*  
     [\[code\]](https://github.com/kayceesrk/multiMLton) [\[bib\]](bib/jfp14.txt)  
- 8. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
+ 9. <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
     [Efficient Sessions](papers/sting_scp13.pdf)  
     *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
     **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
