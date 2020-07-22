@@ -26,7 +26,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 ### 2020
 
   1. <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy   
-     [Retrofitting Parallelism onto OCaml](papers/retro-parallel.pdf)     
+     [Retrofitting Parallelism onto OCaml](papers/retro-parallel_icfp_20.pdf)     
      *Proceedings of the ACM on Programming Languages (PACMPL), issue ICFP 2020*  
 
 ### 2019
