@@ -79,9 +79,10 @@ the principles of Git.
 
 ## Research Software Development Engineers
 
+* Shakti Kannan (2020-)
 * Shubham Kumar (2019-)
 * Sudha Parimala (2019-)
-* Shakti Kannan (2020-)
+* Sai Venkata Krishnan (2019-)
 * Anmol Sahoo (2019-2020)
 
 ## Interns
