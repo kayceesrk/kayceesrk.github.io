@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Effect Handlers in Multicore OCaml**  
+   WebAssembly Community Group meeting, Aug 2020  
+   [\[slides (pdf)\]](slides/WASM_CG_4Aug20.pdf) [\[slides (key)\]](slides/WASM_CG_4Aug20.key)   
  * **Relational Reasoning for Mergeable Replicated Data Structures**    
    MIT, Boston, May 2019   
    [\[slides (pdf)\]](slides/quark_mit_2019.pdf) [\[slides (key)\]](slides/quark_mit_2019.key)
