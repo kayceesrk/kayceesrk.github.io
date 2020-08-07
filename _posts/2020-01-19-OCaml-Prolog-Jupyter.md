@@ -10,7 +10,7 @@ Last semester at IIT Madras, I taught a revamped core course [CS3100 Paradigms
 of Programming](http://kcsrk.info/cs3100_f19/), which introduces 3rd-year
 students to functional and logic programming paradigms. While the course had
 been traditionally offered in Lisp and Prolog, I introduced OCaml instead of
-Prolog. All of the lectures were delivered through interactive Jupyter
+Lisp. All of the lectures were delivered through interactive Jupyter
 notebooks. The assignments were also distributed as Jupyter notebooks and
 evaluated through autograder facility in Jupyter. There has since been several
 requests to replicate this setup elsewhere. Hence, I thought I should write
