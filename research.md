@@ -87,8 +87,7 @@ _I'm looking for MTech students with good programming and systems background_
 
 ## Interns
 
-### At OCaml Labs
-  * Shagun Goel, Stanford University (Summer 2020)
+* Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020)
 
 # Past 
 
@@ -99,17 +98,17 @@ _I'm looking for MTech students with good programming and systems background_
 
 ## At University of Cambridge
 
-  * Simon Fowler, Intern, University of Edinburgh
-  * Matevz Polijanc, Part II Project, University of Cambridge
-  * Charlie Crisp, Part II Project, University of Cambridge
-  * Henry Mercer, Part II Project, University of Cambridge
-  * Nicolas Assouad, Intern, ENS Paris
-  * Matt Harrison, Part II Project, University of Cambridge
-  * Maxime Lesourd, Intern, ENS de Lyon
-  * Philip Dexter, Intern, Binghampton University
-  * James Wright, Intern, University of Cambridge
-  * Armael Gueneau, Intern, ENS de Lyon
-  * Theo Laurent, Intern, ENS Paris
-  * Guillain Potron, Intern, ENS de Lyon
+* Simon Fowler, Intern, University of Edinburgh
+* Matevz Polijanc, Part II Project, University of Cambridge
+* Charlie Crisp, Part II Project, University of Cambridge
+* Henry Mercer, Part II Project, University of Cambridge
+* Nicolas Assouad, Intern, ENS Paris
+* Matt Harrison, Part II Project, University of Cambridge
+* Maxime Lesourd, Intern, ENS de Lyon
+* Philip Dexter, Intern, Binghampton University
+* James Wright, Intern, University of Cambridge
+* Armael Gueneau, Intern, ENS de Lyon
+* Theo Laurent, Intern, ENS Paris
+* Guillain Potron, Intern, ENS de Lyon
 
 <br/>
