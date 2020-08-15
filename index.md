@@ -33,9 +33,9 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[May 20\]** [Retrofitting Parallelism onto OCaml](https://arxiv.org/abs/2004.11663) conditionally accepted to ICFP'20. 
- * **\[Dec 19\]** Teaching [CS6225 Programs and Proofs](/cs6225_s20_iitm).
- * **\[Sep 19\]** [Hiring](http://kcsrk.info/ocaml/multicore/job/2019/09/16/1115-multicore-job/) **Research Software Engineers** to work on Multicore OCaml at IIT Madras.   
+ * **\[Aug 20\]** Teaching [CS3100: Paradigms of Programming](http://kcsrk.info/cs3100_m20/) again this term.
+ * **\[Aug 20\]** [Parallelising your code with Multicore OCaml](https://icfp20.sigplan.org/details/ocaml-2020-papers/5/Parallelising-your-OCaml-Code-with-Multicore-OCaml) accepted to OCaml'20.
+ * **\[May 20\]** [Retrofitting Parallelism onto OCaml](https://icfp20.sigplan.org/details/icfp-2020-papers/21/Retrofitting-Parallelism-onto-OCaml) accepted to ICFP'20. 
 
 # Contact
 
