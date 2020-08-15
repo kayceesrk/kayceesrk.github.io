@@ -61,7 +61,7 @@ abstractions](https://github.com/mirage/irmin#oopsla19) over
 [Irmin](https://github.com/mirage/irmin), a distributed database developed on
 the principles of Git. 
 
-# Team
+# Current Team
 
 ## PhD Students
 
@@ -75,27 +75,29 @@ the principles of Git.
 
 ## MTech Students
 
-* Atul Dhiman (2019-2020)
+_I'm looking for MTech students with good programming and systems background_
 
-## Research Software Development Engineers
+## Research Software Development Engineers (RSDE)
 
+* Shubhendra Singhal (2020-)
 * Shakti Kannan (2020-)
 * Shubham Kumar (2019-)
 * Sudha Parimala (2019-)
 * Sai Venkata Krishnan (2019-)
-* Anmol Sahoo (2019-2020)
 
 ## Interns
 
 ### At OCaml Labs
-  * Anirudh Sunder Raj, IITM (Summer 2020)
   * Shagun Goel, Stanford University (Summer 2020)
 
-### At IITM
+# Past 
 
-  * Pratap Singh, Harvard University (Summer 2019)
+* Atul Dhiman, MTech, IITM (2019-2020)
+* Anmol Sahoo, RSDE, IITM (2019-2020)
+* Anirudh Sunder Raj (IITM), Intern at OCaml Labs (Summer 2020)
+* Pratap Singh (Harvard University), Intern at IITM (Summer 2019)
 
-## Past @ University of Cambridge 
+## At University of Cambridge
 
   * Simon Fowler, Intern, University of Edinburgh
   * Matevz Polijanc, Part II Project, University of Cambridge
@@ -109,3 +111,5 @@ the principles of Git.
   * Armael Gueneau, Intern, ENS de Lyon
   * Theo Laurent, Intern, ENS Paris
   * Guillain Potron, Intern, ENS de Lyon
+
+<br/>
