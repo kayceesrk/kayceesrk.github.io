@@ -25,6 +25,9 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### 2020
 
+  *  <div id="aplas20"/> Shashank Shakhar Dubey, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy
+     [Banyan: Coordination-free Distributed Transactions over Mergeable Types](papers/banyan-aplas20.pdf)
+     *Proceedings of the 18th Asian Symposium on Programming Languages and Systems (APLAS), 2020*
   *  <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy   
      [Retrofitting Parallelism onto OCaml](papers/retro-parallel_icfp_20.pdf)     
      *Proceedings of the ACM on Programming Languages (PACMPL), issue ICFP 2020*  
