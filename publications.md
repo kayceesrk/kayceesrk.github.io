@@ -27,71 +27,83 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
   *  <div id="aplas20"/> Shashank Shakhar Dubey, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy   
      [Banyan: Coordination-free Distributed Transactions over Mergeable Types](papers/banyan_aplas20.pdf)   
-     *Proceedings of the 18th Asian Symposium on Programming Languages and Systems (APLAS), 2020*   
+     *Proceedings of the 18th Asian Symposium on Programming Languages and Systems (APLAS), 2020*    
   *  <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy   
      [Retrofitting Parallelism onto OCaml](papers/retro-parallel_icfp_20.pdf)     
-     *Proceedings of the ACM on Programming Languages (PACMPL), issue ICFP 2020*  
+     *Proceedings of the ACM on Programming Languages (PACMPL), issue ICFP 2020*    
+     **Distinguished Paper Award** [\[slides(pdf)\]]() [\[slides(key)\]]() [\[bib\]]()
 
 ### 2019
 
  *  <div id="oopsla19"/> Gowtham Kaki, Swarn Priya, KC Sivaramakrishnan, Suresh Jagannathan     
     [Mergeable Replicated Data Types](papers/oopsla19-mrdt.pdf)    
     *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2019*    
-    [\[The Morning Paper: Part I\]](https://blog.acolyer.org/2019/11/25/mergeable-replicated-data-types-part-i/)  [\[The Morning Paper: Part II\]](https://blog.acolyer.org/2019/11/27/mergeable-replicated-data-types-part-ii/)
+    [\[bib\]]() [\[The Morning Paper: Part I\]](https://blog.acolyer.org/2019/11/25/mergeable-replicated-data-types-part-i/)  [\[The Morning Paper: Part II\]](https://blog.acolyer.org/2019/11/27/mergeable-replicated-data-types-part-ii/)
  *  <div id="snapl19"/> Gowtham Kaki, KC Sivaramakrishnan, Suresh Jagannathan    
-    [Version Control Is For Your Data Too](papers/snapl19-mrdt.pdf)  
-    *The 3rd Summit on Advances in Programming Languages (SNAPL), 2019*   
+    [Version Control Is For Your Data Too](papers/snapl19-mrdt.pdf)   
+    *The 3rd Summit on Advances in Programming Languages (SNAPL), 2019*    
+    [\[bib\]]()
 
 ### 2018
     
  *  <div id="oopsla18"/> Gowtham Kaki, Kapil Earanky, KC Sivaramakrishnan, Suresh Jagannathan     
     [Safe Replication through Bounded Concurrency Verification](papers/oopsla18-q9.pdf)    
     *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2018*    
+    [\[bib\]]()  
  *  <div id="pldi18"/> Stephen Dolan, KC Sivaramakrishnan, Anil Madhavapeddy   
     [Bounding Data Races in Space and Time](papers/pldi18-memory.pdf)  
     *International Conference on Programming Language Design and Implementation (PLDI), 2018*   
-    [\[The Morning Paper: Part I\]](https://blog.acolyer.org/2018/08/09/bounding-data-races-in-space-and-time-part-i/)  [\[The Morning Paper: Part II\]](https://blog.acolyer.org/2018/08/10/bounding-data-races-in-space-and-time-part-ii/)   
+    [\[bib\]]()  [\[The Morning Paper: Part I\]](https://blog.acolyer.org/2018/08/09/bounding-data-races-in-space-and-time-part-i/)  [\[The Morning Paper: Part II\]](https://blog.acolyer.org/2018/08/10/bounding-data-races-in-space-and-time-part-ii/)   
  *  <div id="osmose18"/> Anil Madhavapeddy, KC Sivaramakrishnan, Gemma Gordon, Thomas Gazagnaire  
     [An Architecture for Interspatial Communication](papers/osmose_feb_18.pdf)  
     *Hot Topics in Pervasive Mobile and Online Social Networking (HotPOST), 2018*  
+    [\[bib\]]()  
 
 ### 2017
 
  *  <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
-    *Post-proceedings of the Symposium on Trends in Functional Programming, 2017*  
+    *Post-proceedings of the Symposium on Trends in Functional Programming, 2017*    
+    [\[bib\]]()  
  *  <div id="eff17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/caml-eff17.pdf)  
     *Post-proceedings of the ML Workshop 2016, 2017*  
+    [\[bib\]]()  
  *  <div id="fscd17"/> Daniel Hillerström, Sam Lindley, Robert Atkey, KC Sivaramakrishnan  
     [Continuation Passing Style for Effect Handlers](papers/cps-handler-fscd17.pdf)  
     *International Conference on Formal Structures for Computation and Deduction (FSCD), 2017*  
+    [\[bib\]]()  
  *  <div id="snapl17"/> Gowtham Kaki, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy, Suresh Jagannathan  
     [DaLi: Database as a Library](papers/dali_snapl17.pdf)  
     *The 2nd Summit on Advances in Programming Languages (SNAPL), 2017*  
-    Oral presentation  
+    Oral presentation [\[bib\]]()
  *  <div id="mcm17"/> Stephen Dolan and KC Sivaramakrishnan  
     [A Memory Model for Multicore OCaml](papers/memory_model_ocaml17.pdf)  
     *OCaml Workshop, 2017*  
+    [\[bib\]]()   
  *  <div id="awk17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Effectively Tackling the Awkward Squad](papers/awkward_effects_ml17.pdf)  
     *ML Workshop, 2017*  
+    [\[bib\]]()   
  *  <div id="mt17"/> Gowtham Kaki, KC Sivaramakrishnan, Samodya Abeysiriwardane, Suresh Jagannathan  
     [Mergeable Types](papers/mergeable_types_ml17.pdf)  
     *ML Workshop, 2017*  
+    [\[bib\]]()   
  *  <div id="sys17"/> Stephen Dolan, Spiros Eliopolous, Daniel Hillerström, Anil Madhavapeddy, KC Sivaramakrishnan, Leo White  
     [Concurrent System Programming with Effect Handlers](papers/system_effects_feb_18.pdf)  
     *Symposium on Trends in Functional Programming, 2017*  
+    [\[bib\]]()   
  *  <div id="ppl17"/> Oleg Kiselyov and KC Sivaramakrishnan  
     [Eff directly in OCaml](papers/eff_ocaml_ppl17.pdf)  
     *JSSST Workshop on Programming and Programming Languages, 2017*  
+    [\[bib\]]()   
 
 ### 2016
 
  *  <div id="jfp16"/> KC Sivaramakrishnan, Tim Harris, Simon Marlow, Simon Peyton Jones   
     [Composable Scheduler Activations for Haskell](papers/schedact_jfp16.pdf)  
     *Journal of Functional Programming (JFP), 2016*  
-    [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
+    [\[bib\]]()  [\[code\]](https://github.com/ghc/ghc/tree/ghc-lwc2)  
  *  <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
@@ -99,12 +111,15 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="ocaml16"/> KC Sivaramakrishnan and Théo Laurent  
     [Lock-free programming for the masses](papers/reagents_ocaml16.pdf)  
     *OCaml Workshop, 2016*  
+    [\[bib\]]()    
  *  <div id="ml16_1"/> Daniel Hilleström, Sam Lindley, KC Sivaramakrishnan  
     [Compiling Links Effect Handlers to the OCaml Backend](papers/links_ocaml_ml16.pdf)  
     *ML Worshop, 2016*  
+    [\[bib\]]()    
  *  <div id="ml16_2"/> Oleg Kiselyov and Kc Sivaramakrishnan  
     [Eff Directly in OCaml](papers/eff_ocaml_ml16.pdf)  
     *ML Worshop, 2016*  
+    [\[bib\]]()    
 
 ### 2015
 
@@ -115,7 +130,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="ocaml15"/> Stephen Dolan, Leo White, KC Sivaramakrishnan, Jeremy Yallop and Anil Madhavapeddy  
     [Effective Concurrency with Algebraic Effects](papers/effects_ocaml15.pdf)  
     *OCaml Worshop, 2015*  
-    [\[code\]](https://github.com/kayceesrk/ocaml-eff-example) [\[slides (pdf)\]](slides/OCaml15.pdf) [\[slides (key)\]](slides/OCaml15.key)  
+    [\[code\]](https://github.com/kayceesrk/ocaml-eff-example) [\[slides (pdf)\]](slides/OCaml15.pdf) [\[slides (key)\]](slides/OCaml15.key)  [\[bib\]]()    
 
 ### 2014
 
@@ -137,6 +152,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="ml13"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Migrating MultiMLton to the Cloud](papers/mmcloud_mlw13.pdf)  
     *ML Worshop, 2013*  
+    [\[bib\]]()    
 
 ### 2012
 
