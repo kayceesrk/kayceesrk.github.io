@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Retrofitting Parallelism onto OCaml**   
+   ICFP 2020, Aug 2020     
+   [\[slides (pdf)\]](slides/retro_parallel_icfp20.pdf) [\[slides (key)\]](slides/retro_parallel_icfp20.key)     
  * **Effect Handlers in Multicore OCaml**  
    WebAssembly Community Group meeting, Aug 2020  
    [\[slides (pdf)\]](slides/WASM_CG_4Aug20.pdf) [\[slides (key)\]](slides/WASM_CG_4Aug20.key)   
