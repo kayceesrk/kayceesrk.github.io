@@ -39,6 +39,13 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
  * **\[Aug 20\]** [Parallelising your code with Multicore OCaml](https://icfp20.sigplan.org/details/ocaml-2020-papers/5/Parallelising-your-OCaml-Code-with-Multicore-OCaml) accepted to OCaml'20.
  * **\[May 20\]** [Retrofitting Parallelism onto OCaml](https://icfp20.sigplan.org/details/icfp-2020-papers/21/Retrofitting-Parallelism-onto-OCaml) accepted to ICFP'20. 
 
+# Activities
+
+* **PC Chair** -- ML'19
+* **PC member** -- PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13
+* **ERC member** -- ICFP'19
+* **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
+
 # Contact
 
  * Email : kc@kcsrk.info, kcsrk@cse.iitm.ac.in
