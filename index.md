@@ -7,7 +7,13 @@ title: About
 left; padding-right: 1rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am an
 Assistant Professor in the Computer Science and Engineering department at Indian
 Institute of Technology, Madras. I work on the intersection of Programming
-Languages and (Concurrent, Parallel, Distributed) Systems. 
+Languages and (Concurrent, Parallel, Distributed) Systems.
+
+I've co-founded several companies ([OCaml Labs Consultancy,
+UK](http://ocamllabs.io/), [Tarides, France](https://tarides.com/), [Segfault
+Systems, India](https://segfault.systems)) to build systems that are functional,
+and functional programming in [OCaml](https://ocaml.org/) turns out to be a fine
+choice for this. 
 
 I was a Senior Research Associate under the [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the [University
