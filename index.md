@@ -39,11 +39,10 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Nov 20\]** "ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs" accepted to PADL'21.
  * **\[Aug 20\]** "Retrofitting Parallelism onto OCaml" chosen as a **Distinguished Paper** at ICFP'20.   
  * **\[Aug 20\]** [Banyan: Coordination-free Distributed Transactions over Mergeable Types ](papers/banyan_aplas20.pdf) accepted to APLAS'20.
  * **\[Aug 20\]** Teaching [CS3100: Paradigms of Programming](http://kcsrk.info/cs3100_m20/) again this term.
- * **\[Aug 20\]** [Parallelising your code with Multicore OCaml](https://icfp20.sigplan.org/details/ocaml-2020-papers/5/Parallelising-your-OCaml-Code-with-Multicore-OCaml) accepted to OCaml'20.
- * **\[May 20\]** [Retrofitting Parallelism onto OCaml](https://icfp20.sigplan.org/details/icfp-2020-papers/21/Retrofitting-Parallelism-onto-OCaml) accepted to ICFP'20. 
 
 # Activities
 

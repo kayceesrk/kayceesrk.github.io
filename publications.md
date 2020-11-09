@@ -23,6 +23,12 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Publications  
 
+### 2021
+
+  *  <div id="padl21"/> Sumit Padhiyar, KC Sivaramakrishnan
+     [ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs](papers/confuzz_padl21.pdf)   
+     *Proceedings of the 23rd International Symposium on Practical Aspects of Declarative Languages (PADL), 2021*    
+
 ### 2020
 
   *  <div id="aplas20"/> Shashank Shakhar Dubey, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy   
