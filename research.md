@@ -72,10 +72,16 @@ the principles of Git.
 
 * Shashank Shekhar Dubey (2019-)
 * Sumit Padhiyar (2019-)
+* Deepali Ande (2020-)
 
 ## MTech Students
 
 _I'm looking for MTech students with good programming and systems background_
+
+## BTech
+
+* Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021)
+* Arnhav Datar (UGRC; 2021)
 
 ## Research Software Development Engineers (RSDE)
 
@@ -87,10 +93,9 @@ _I'm looking for MTech students with good programming and systems background_
 
 ## Interns
 
-* Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020)
-
 # Past 
 
+* Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020)
 * Atul Dhiman, MTech, IITM (2019-2020)
 * Anmol Sahoo, RSDE, IITM (2019-2020)
 * Anirudh Sunder Raj (IITM), Intern at OCaml Labs (Summer 2020)
