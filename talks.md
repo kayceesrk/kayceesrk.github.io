@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Multicore OCaml -- What's coming in 2021**    
+   Nomadic Labs Research Seminar, Dec 2020    
+   [\[slides (pdf)\]](slides/nl_multicore.pdf) [\[slides (key)\]](slides/nl_multicore.key)         
  * **Retrofitting Parallelism onto OCaml**   
    ICFP 2020, Aug 2020     
    [\[slides (pdf)\]](slides/retro_parallel_icfp20.pdf) [\[slides (key)\]](slides/retro_parallel_icfp20.key)     
