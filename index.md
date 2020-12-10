@@ -39,6 +39,8 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Dec 20\]** Talk on "Effect Handlers in Multicore OCaml" at NUS PLV Research Seminar.
+ * **\[Dec 20\]** Talk on "Multicore OCaml - what's coming in 2021" at Nomadic Labs Research Seminar.
  * **\[Nov 20\]** "ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs" accepted to PADL'21.
  * **\[Aug 20\]** "Retrofitting Parallelism onto OCaml" chosen as a **Distinguished Paper** at ICFP'20.   
  * **\[Aug 20\]** [Banyan: Coordination-free Distributed Transactions over Mergeable Types ](papers/banyan_aplas20.pdf) accepted to APLAS'20.

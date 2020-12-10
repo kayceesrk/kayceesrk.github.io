@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Effect handlers in Multicore OCaml**   
+   NUS PLV Research Seminar, Dec 2020    
+   [\[slides (pdf)\]](slides/nus_effects.pdf) [\[slides (key)\]](slides/nus_effects.key)         
  * **Multicore OCaml -- What's coming in 2021**    
    Nomadic Labs Research Seminar, Dec 2020    
    [\[slides (pdf)\]](slides/nl_multicore.pdf) [\[slides (key)\]](slides/nl_multicore.key)         
