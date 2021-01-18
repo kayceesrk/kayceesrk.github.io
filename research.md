@@ -67,6 +67,7 @@ the principles of Git.
 
 * Sheera Shamsu (2019-)
 * Vimala S (2020-)
+* Sai Venkata Krishnan (2021-)
 
 ## MS Students
 
@@ -85,16 +86,16 @@ _I'm looking for MTech students with good programming and systems background_
 
 ## Research Software Development Engineers (RSDE)
 
-* Shubhendra Singhal (2020-)
 * Shakti Kannan (2020-)
 * Shubham Kumar (2019-)
 * Sudha Parimala (2019-)
-* Sai Venkata Krishnan (2019-)
 
 ## Interns
 
 # Past 
 
+* Sai Venkata Krishnan, RSDE, IITM (2019-2021)
+* Shubhendra Singhal, RSDE, IITM (2020-2021)
 * Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020)
 * Atul Dhiman, MTech, IITM (2019-2020)
 * Anmol Sahoo, RSDE, IITM (2019-2020)
