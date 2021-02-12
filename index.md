@@ -53,7 +53,7 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
   + Dagstuhl meeting on "Effect Handlers go Mainstream!"
   + Shonan meeting on "Programming Language support for Data-intensive Systems"
 * **PC Chair** -- ML'19
-* **PC member** -- PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13
+* **PC member** -- TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 
