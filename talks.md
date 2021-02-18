@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Effective Programming in OCaml**   
+   Lambda Days, Feb 2021
+   [\[slides (pdf)\]](slides/lambda_days_21.pdf) [\[slides (key)\]](slides/lambda_days_21.key)         
  * **Effect handlers in Multicore OCaml**   
    NUS PLV Research Seminar, Dec 2020    
    [\[slides (pdf)\]](slides/nus_effects.pdf) [\[slides (key)\]](slides/nus_effects.key)         
