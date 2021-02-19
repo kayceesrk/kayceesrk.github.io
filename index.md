@@ -39,12 +39,12 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[Dec 20\]** Talk on "Effect Handlers in Multicore OCaml" at NUS PLV Research Seminar.
- * **\[Dec 20\]** Talk on "Multicore OCaml - what's coming in 2021" at Nomadic Labs Research Seminar.
- * **\[Nov 20\]** "ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs" accepted to PADL'21.
- * **\[Aug 20\]** "Retrofitting Parallelism onto OCaml" chosen as a **Distinguished Paper** at ICFP'20.   
- * **\[Aug 20\]** [Banyan: Coordination-free Distributed Transactions over Mergeable Types ](papers/banyan_aplas20.pdf) accepted to APLAS'20.
- * **\[Aug 20\]** Teaching [CS3100: Paradigms of Programming](http://kcsrk.info/cs3100_m20/) again this term.
+ * **\[Feb 21\]** Talk on ["Effective Programming in OCaml"](https://speakerdeck.com/kayceesrk/effective-programming-in-ocaml-at-lambda-days-2021) at Lambda Days 2021.  
+ * **\[Jan 20\]** Teaching [Programs and Proofs](https://kcsrk.info/cs6225_s21_iitm/) in Spring 2021.  
+ * **\[Dec 20\]** Talk on "Effect Handlers in Multicore OCaml" at NUS PLV Research Seminar.  
+ * **\[Dec 20\]** Talk on ["Multicore OCaml - what's coming in 2021"](https://www.youtube.com/watch?v=mel76DFerL0&t=2s) at Nomadic Labs Research Seminar.  
+ * **\[Nov 20\]** "ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs" accepted to PADL'21.  
+ * **\[Aug 20\]** "Retrofitting Parallelism onto OCaml" chosen as a **Distinguished Paper** at ICFP'20.     
 
 # Activities
 
