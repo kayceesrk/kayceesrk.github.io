@@ -25,6 +25,12 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### 2021
 
+  *  <div id="pldi21"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anil Madhavapeddy  
+     [Retrofitting Effect Handlers to OCaml](papers/drafts/retro-concurrency.pdf)   
+     *International Conference on Programming Language Design and Implementation (PLDI), 2021*   
+  *  <div id="papoc21"/> Vimala Soundarapandian, KC Sivaramakrishnan, Kartik Nagar   
+     [Certified Mergeable Replicated Data Types]()  
+     *8th Workshop on Principles and Practice of Consistency for Distributed Data (PaPoC), 2021*   
   *  <div id="padl21"/> Sumit Padhiyar, KC Sivaramakrishnan    
      [ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs](papers/confuzz_padl21.pdf)     
      *Proceedings of the 23rd International Symposium on Practical Aspects of Declarative Languages (PADL), 2021*    
