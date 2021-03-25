@@ -39,12 +39,12 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Mar 21\]** Serving on the PC of [GPCE 2021](https://conf.researchr.org/home/gpce-2021).
  * **\[Mar 21\]** Serving on the PC of [TyDe 2021](https://icfp21.sigplan.org/home/TyDe-2021).
  * **\[Mar 21\]** ["Retrofitting Effect Handlers to OCaml"](https://kcsrk.info/papers/drafts/retro-concurrency.pdf) accepted to PLDI 2021.
  * **\[Mar 21\]** "Certified Mergeable Replicated Data Types" accepted to PaPoC 2021.
- * **\[Feb 21\]** Talk on ["Effective Programming in OCaml"](https://speakerdeck.com/kayceesrk/effective-programming-in-ocaml-at-lambda-days-2021) at Lambda Days 2021.  
+ * **\[Feb 21\]** Spoke about ["Effective Programming in OCaml"](https://speakerdeck.com/kayceesrk/effective-programming-in-ocaml-at-lambda-days-2021) at Lambda Days 2021.  
  * **\[Jan 20\]** Teaching [Programs and Proofs](https://kcsrk.info/cs6225_s21_iitm/) in Spring 2021.  
- * **\[Dec 20\]** Talk on "Effect Handlers in Multicore OCaml" at NUS PLV Research Seminar.  
 
 # Activities
 
