@@ -10,7 +10,9 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ## Edited Proceeedings
 
-  1. <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
+  * <div id="effects20"/> KC Sivaramakrishnan, Andrej Bauer (Eds.)
+     [JFP Special Issue on the Theory and Practice of Algebraic Effects and Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
+  * <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
      [Algebraic Effect Handlers Go Mainstream](papers/effects_dagstuhl18.pdf)  
      *Dagstuhl Seminar 18172, Dagstuhl Reports, Volume 8, Issue 4, April 2018*  
 

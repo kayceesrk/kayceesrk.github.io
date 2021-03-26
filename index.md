@@ -48,9 +48,9 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Activities
 
-* **Editor** -- JFP Special Issue on Effect Handlers
+* **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
 * **Organizer** 
-  + Dagstuhl meeting on "Effect Handlers go Mainstream!"
+  + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172)
   + Shonan meeting on "Programming Language support for Data-intensive Systems"
 * **PC Chair** -- ML'19
 * **PC member** -- GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13
