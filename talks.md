@@ -6,6 +6,8 @@ permalink: talks.html
 
 # Talks  
  * **Effective Programming in OCaml**   
+   Tarides Tech Talks, Apr 2021  
+ * **Effective Programming in OCaml**   
    Jet Brains, Apr 2021  
    [\[slides (pdf)\]](slides/jet_brains_21.pdf) [\[slides (key)\]](slides/jet_brains_21.key)         
  * **Effective Programming in OCaml**   
