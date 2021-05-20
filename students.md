@@ -8,6 +8,7 @@ permalink: students.html
 
 * Sheera Shamsu (2019-)
 * Vimala S (2020-)
+  + [Prime Minister's Research Fellow](https://pmrf.in/)
 * Sai Venkata Krishnan (2021-) (co-supervised with [Chester Rebeiro](https://www.cse.iitm.ac.in/~chester/))
 
 ## MS Students
