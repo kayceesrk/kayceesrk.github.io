@@ -123,7 +123,8 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
-    **Invited Paper** [\[bib\]](bib/ieee16.txt)  
+    **Invited Paper**   
+    [\[bib\]](bib/ieee16.txt)  
  *  <div id="ocaml16"/> KC Sivaramakrishnan and Théo Laurent  
     [Lock-free programming for the masses](papers/reagents_ocaml16.pdf)  
     *OCaml Workshop, 2016*  
@@ -175,7 +176,8 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="marc12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [A Coherent and Managed Runtime for ML on the SCC](papers/mmscc_marc12.pdf)  
     *Many-core Architecture Research Community Symposium (MARC), 2012*  
-    **Best Paper Award** [\[code\]](https://github.com/kayceesrk/multiMLton/tree/split-heap-parallel-GC-IntelSCC) [\[slides (pdf)\]](slides/marc12.pdf) [\[slides (pptx)\]](slides/marc12.pptx) [\[bib\]](bib/marc12.txt)  
+    **Best Paper Award**   
+    [\[code\]](https://github.com/kayceesrk/multiMLton/tree/split-heap-parallel-GC-IntelSCC) [\[slides (pdf)\]](slides/marc12.pdf) [\[slides (pptx)\]](slides/marc12.pptx) [\[bib\]](bib/marc12.txt)  
  *  <div id="ismm12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Eliminating Read Barriers through Procrastination and Cleanliness](papers/mmgc_ismm12.pdf)  
     *International Symposium on Memory Management (ISMM), 2012*  
