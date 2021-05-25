@@ -36,6 +36,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   *  <div id="padl21"/> Sumit Padhiyar, KC Sivaramakrishnan    
      [ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs](papers/confuzz_padl21.pdf)     
      *Proceedings of the 23rd International Symposium on Practical Aspects of Declarative Languages (PADL), 2021*    
+     **Distinguished Paper. Selected for JFP special issue.**  
 
 ### 2020
 
@@ -45,7 +46,8 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   *  <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy   
      [Retrofitting Parallelism onto OCaml](papers/retro-parallel_icfp_20.pdf)     
      *Proceedings of the ACM on Programming Languages (PACMPL), issue ICFP 2020*    
-     **Distinguished Paper Award** [\[slides(pdf)\]]() [\[slides(key)\]]() [\[bib\]]()
+     **Distinguished Paper Award**   
+     [\[slides(pdf)\]]() [\[slides(key)\]]() [\[bib\]]()
 
 ### 2019
 
@@ -155,7 +157,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
     [Efficient Sessions](papers/sting_scp13.pdf)  
     *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
-    **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
+    [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
  *  <div id="padl14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Rx-CML: A Prescription for Safely Relaxing Synchrony](papers/rxcml_padl14.pdf)  
     *Symposium on Practical Aspects of Declarative Languages (PADL), 2014*  
@@ -199,6 +201,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="coordination10"/> KC Sivaramakrishnan, Karthik Nagaraj, Lukasz Ziarek, Patrick Eugster  
     [Efficient Session Type Guided Distributed Interaction](papers/sting_coordination10.pdf)  
     *International Conference on Coordination Models and Languages (COORDINATION), 2010*  
+    **Distinguished Paper. Selected for SCP Special Issue.**  
     [\[code\]](https://github.com/kayceesrk/Sting) [\[slides (pdf)\]](slides/coordination10.pdf) [\[slides (key)\]](slides/coordination10.key) [\[bib\]](bib/coordination10.txt)  
  *  <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek  
     [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf)  
