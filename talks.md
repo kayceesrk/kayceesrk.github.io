@@ -5,6 +5,8 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Effective Programming in OCaml**   
+   WebAssembly Stacks Sub-group, Jun 2021  
  * **Retrofitting Effect Handlers onto OCaml**     
    PLDI 2021, Jun 2021    
  * **Multicore Support for Tezos Blockchain**   
