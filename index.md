@@ -39,11 +39,11 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[May 21\]** Chairing the Artifact Evaluation Committee (AEC) for [ESOP'22](https://etaps.org/2022/esop).
  * **\[May 21\]** [ConFuzz](publications.html#padl21) chosen as a Distinguished Paper at [PADL 2021](https://popl21.sigplan.org/details/PADL-2021-papers/4/ConFuzz-Coverage-guided-Property-Fuzzing-for-Event-driven-Programs).
  * **\[May 21\]** Serving on the PC of [PLDI 2022]().
  * **\[May 21\]** Vimala S (PhD student) has been chosen as a [Prime Minister's Research Fellow](https://dec2020.pmrf.in/)!
  * **\[Mar 21\]** Serving on the PC of [GPCE 2021](https://conf.researchr.org/home/gpce-2021).
- * **\[Mar 21\]** Serving on the PC of [TyDe 2021](https://icfp21.sigplan.org/home/TyDe-2021).
  * **\[Mar 21\]** ["Retrofitting Effect Handlers to OCaml"](https://kcsrk.info/papers/retro-concurrency_pldi_21.pdf) accepted to PLDI 2021.
 
 # Activities
@@ -53,6 +53,7 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
   + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172)
   + Shonan meeting on "Programming Language support for Data-intensive Systems"
 * **PC Chair** -- ML'19
+* **AEC Chair** -- ESOP'22
 * **PC member** -- PLDI'22, GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13.
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
