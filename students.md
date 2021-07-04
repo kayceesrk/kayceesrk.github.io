@@ -26,25 +26,22 @@ _I'm looking for MTech students with good programming and systems background_
 * Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021)
 * Arnhav Datar (UGRC; 2021)
 
-## Research Software Development Engineers (RSDE)
-
-* Shakti Kannan (2020-)
-* Shubham Kumar (2019-)
-* Sudha Parimala (2019-)
-
 ## Interns
 
 * Aadharsh Kamath (NITK; 2021)
 
 # Past 
 
-* Sai Venkata Krishnan, RSDE, IITM (2019-2021)
-* Shubhendra Singhal, RSDE, IITM (2020-2021)
-* Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020)
-* Atul Dhiman, MTech, IITM (2019-2020)
-* Anmol Sahoo, RSDE, IITM (2019-2020)
-* Anirudh Sunder Raj (IITM), Intern at OCaml Labs (Summer 2020)
-* Pratap Singh (Harvard University), Intern at IITM (Summer 2019)
+* Shakti Kannan, RSDE, IITM (2020-2021). Next: [Segfault Systems](https://segfault.systems).
+* Shubham Kumar, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
+* Sudha Parimala, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
+* Sai Venkata Krishnan, RSDE, IITM (2019-2021). Next: PhD student at IITM.
+* Shubhendra Singhal, RSDE, IITM (2020-2021). Next: MS student at U Penn. 
+* Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020). Next: continuing at Stanford.
+* Atul Dhiman, MTech, IITM (2019-2020). Next: Oracle India.
+* Anmol Sahoo, RSDE, IITM (2019-2020). Next: PhD student at Purdue University.
+* Anirudh Sunder Raj (IITM), Intern at OCaml Labs (Summer 2020). Next: continuing at IITM.
+* Pratap Singh (Harvard University), Intern at IITM (Summer 2019). Next: continuing at Harvard.
 
 ## At University of Cambridge
 
