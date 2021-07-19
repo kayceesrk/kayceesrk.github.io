@@ -54,7 +54,7 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
   + Shonan meeting on "Programming Language support for Data-intensive Systems"
 * **PC Chair** -- ML'19
 * **AEC Chair** -- ESOP'22
-* **PC member** -- PLDI'22, GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13.
+* **PC member** -- PEPM'22, PLDI'22, GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13.
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 
