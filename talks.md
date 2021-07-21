@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Retrofitting Effect Handlers onto OCaml**  
+   Dagstuhl Meeting on Scalable Handling of Effects, Jul 2021    
+   [\[slides (pdf)\]](slides/effects_she.pdf) [\[slides (key)\]](slides/effects_she.key)          
  * **Effective Programming in OCaml**   
    WebAssembly Stacks Sub-group, Jun 2021  
  * **Retrofitting Effect Handlers onto OCaml**     
