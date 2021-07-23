@@ -10,7 +10,9 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ## Edited Proceeedings
 
-  1. <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
+  * <div id="effects20"/> KC Sivaramakrishnan, Andrej Bauer (Eds.)   
+     [JFP Special Issue on the Theory and Practice of Algebraic Effects and Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)   
+  * <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
      [Algebraic Effect Handlers Go Mainstream](papers/effects_dagstuhl18.pdf)  
      *Dagstuhl Seminar 18172, Dagstuhl Reports, Volume 8, Issue 4, April 2018*  
 
@@ -23,6 +25,19 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Publications  
 
+### 2021
+
+  *  <div id="pldi21"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anil Madhavapeddy  
+     [Retrofitting Effect Handlers to OCaml](papers/retro-concurrency_pldi_21.pdf)   
+     *International Conference on Programming Language Design and Implementation (PLDI), 2021*   
+  *  <div id="papoc21"/> Vimala Soundarapandian, KC Sivaramakrishnan, Kartik Nagar   
+     [Certified Mergeable Replicated Data Types]()  
+     *8th Workshop on Principles and Practice of Consistency for Distributed Data (PaPoC), 2021*   
+  *  <div id="padl21"/> Sumit Padhiyar, KC Sivaramakrishnan    
+     [ConFuzz: Coverage-guided Property Fuzzing for Event-driven Programs](papers/confuzz_padl21.pdf)     
+     *Proceedings of the 23rd International Symposium on Practical Aspects of Declarative Languages (PADL), 2021*    
+     **Distinguished Paper. Selected for JFP special issue.**  
+
 ### 2020
 
   *  <div id="aplas20"/> Shashank Shakhar Dubey, KC Sivaramakrishnan, Thomas Gazagnaire, Anil Madhavapeddy   
@@ -31,7 +46,8 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   *  <div id="icfp20"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anmol Sahoo, Sudha Parimala, Atul Dhiman, Anil Madhavapeddy   
      [Retrofitting Parallelism onto OCaml](papers/retro-parallel_icfp_20.pdf)     
      *Proceedings of the ACM on Programming Languages (PACMPL), issue ICFP 2020*    
-     **Distinguished Paper Award** [\[slides(pdf)\]]() [\[slides(key)\]]() [\[bib\]]()
+     **Distinguished Paper Award**   
+     [\[slides(pdf)\]]() [\[slides(key)\]]() [\[bib\]]()
 
 ### 2019
 
@@ -107,7 +123,8 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="jfp14"/> KC Sivaramakrishnan, Gowtham Kaki, Suresh Jagannathan  
     [Representation without Taxation: A Uniform, Low-Overhead, and High-Level Interface to Eventually Consistent Key-Value Stores](papers/quelea_ieee16.pdf)  
     *IEEE Data Engineering Bulletin, 39(1): 52 – 64, March 2016*  
-    **Invited Paper** [\[bib\]](bib/ieee16.txt)  
+    **Invited Paper**   
+    [\[bib\]](bib/ieee16.txt)  
  *  <div id="ocaml16"/> KC Sivaramakrishnan and Théo Laurent  
     [Lock-free programming for the masses](papers/reagents_ocaml16.pdf)  
     *OCaml Workshop, 2016*  
@@ -141,7 +158,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="scp13"/> KC Sivaramakrishnan, Mohammad Qudeisat, Lukasz Ziarek, Karthik Nagaraj, Patrick Eugster  
     [Efficient Sessions](papers/sting_scp13.pdf)  
     *Science of Computer Programming (SCP), 78(2): 147 – 167, 2013*  
-    **Invited Paper** [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
+    [\[code\]](https://github.com/kayceesrk/Sting) [\[bib\]](bib/scp13.txt)  
  *  <div id="padl14"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Rx-CML: A Prescription for Safely Relaxing Synchrony](papers/rxcml_padl14.pdf)  
     *Symposium on Practical Aspects of Declarative Languages (PADL), 2014*  
@@ -159,7 +176,8 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="marc12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [A Coherent and Managed Runtime for ML on the SCC](papers/mmscc_marc12.pdf)  
     *Many-core Architecture Research Community Symposium (MARC), 2012*  
-    **Best Paper Award** [\[code\]](https://github.com/kayceesrk/multiMLton/tree/split-heap-parallel-GC-IntelSCC) [\[slides (pdf)\]](slides/marc12.pdf) [\[slides (pptx)\]](slides/marc12.pptx) [\[bib\]](bib/marc12.txt)  
+    **Best Paper Award**   
+    [\[code\]](https://github.com/kayceesrk/multiMLton/tree/split-heap-parallel-GC-IntelSCC) [\[slides (pdf)\]](slides/marc12.pdf) [\[slides (pptx)\]](slides/marc12.pptx) [\[bib\]](bib/marc12.txt)  
  *  <div id="ismm12"/> KC Sivaramakrishnan, Lukasz Ziarek, Suresh Jagannathan  
     [Eliminating Read Barriers through Procrastination and Cleanliness](papers/mmgc_ismm12.pdf)  
     *International Symposium on Memory Management (ISMM), 2012*  
@@ -185,6 +203,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
  *  <div id="coordination10"/> KC Sivaramakrishnan, Karthik Nagaraj, Lukasz Ziarek, Patrick Eugster  
     [Efficient Session Type Guided Distributed Interaction](papers/sting_coordination10.pdf)  
     *International Conference on Coordination Models and Languages (COORDINATION), 2010*  
+    **Distinguished Paper. Selected for SCP Special Issue.**  
     [\[code\]](https://github.com/kayceesrk/Sting) [\[slides (pdf)\]](slides/coordination10.pdf) [\[slides (key)\]](slides/coordination10.key) [\[bib\]](bib/coordination10.txt)  
  *  <div id="ml10"/> Suresh Jagannathan, Armand Navabi, KC Sivaramakrishnan, Lukasz Ziarek  
     [Design Rationale for MultiMLton](papers/multimlton_mlw10.pdf)  

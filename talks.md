@@ -5,6 +5,30 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **Retrofitting Effect Handlers onto OCaml**  
+   Dagstuhl Meeting on Scalable Handling of Effects, Jul 2021    
+   [\[slides (pdf)\]](slides/effects_she.pdf) [\[slides (key)\]](slides/effects_she.key)          
+ * **Effective Programming in OCaml**   
+   WebAssembly Stacks Sub-group, Jun 2021  
+ * **Retrofitting Effect Handlers onto OCaml**     
+   PLDI 2021, Jun 2021    
+ * **Multicore Support for Tezos Blockchain**   
+   IITM / UZH Blockchain center round table   
+   [\[slides (pdf)\]](slides/multicore_tezos.pdf) [\[slides (key)\]](slides/multicore_tezos.key)          
+ * **Effective Programming in OCaml**   
+   Tarides Tech Talks, Apr 2021  
+ * **Effective Programming in OCaml**   
+   Jet Brains, Apr 2021  
+   [\[slides (pdf)\]](slides/jet_brains_21.pdf) [\[slides (key)\]](slides/jet_brains_21.key)         
+ * **Effective Programming in OCaml**   
+   Lambda Days, Feb 2021  
+   [\[slides (pdf)\]](slides/lambda_days_21.pdf) [\[slides (key)\]](slides/lambda_days_21.key)         
+ * **Effect handlers in Multicore OCaml**   
+   NUS PLV Research Seminar, Dec 2020    
+   [\[slides (pdf)\]](slides/nus_effects.pdf) [\[slides (key)\]](slides/nus_effects.key)         
+ * **Multicore OCaml -- What's coming in 2021**    
+   Nomadic Labs Research Seminar, Dec 2020    
+   [\[slides (pdf)\]](slides/nl_multicore.pdf) [\[slides (key)\]](slides/nl_multicore.key)         
  * **Retrofitting Parallelism onto OCaml**   
    ICFP 2020, Aug 2020     
    [\[slides (pdf)\]](slides/retro_parallel_icfp20.pdf) [\[slides (key)\]](slides/retro_parallel_icfp20.key)     
