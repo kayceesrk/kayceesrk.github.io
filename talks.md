@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks  
+ * **ParaFuzz: Fuzzing Multicore OCaml programs**   
+   Dagstuhl Meeting on Scalable Handling of Effects, Jul 2021    
+   [\[slides (pdf)\]](slides/parafuzz_dagstuhl_21.pdf) [\[slides (key)\]](slides/parafuzz_dagstuhl_21.key)          
  * **Retrofitting Effect Handlers onto OCaml**  
    Dagstuhl Meeting on Scalable Handling of Effects, Jul 2021    
    [\[slides (pdf)\]](slides/effects_she.pdf) [\[slides (key)\]](slides/effects_she.key)          
