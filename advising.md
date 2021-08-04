@@ -1,30 +1,30 @@
 ---
 layout: default
-title: Students
-permalink: students.html
+title: Advising
+permalink: advising.html
 ---
+
+I have had the pleasure of working with wonderful students over the years.
 
 ## PhD Students
 
-* Sheera Shamsu (2019-)
-* Vimala S (2020-)
+* Sheera Shamsu (2019-) (co-supervised with [Kartik Nagar](https://kartiknagar.github.io/))
+* Vimala S (2020-) (co-supervised with [Kartik Nagar](https://kartiknagar.github.io/))
   + [Prime Minister's Research Fellow](https://pmrf.in/)
 * Sai Venkata Krishnan (2021-) (co-supervised with [Chester Rebeiro](https://www.cse.iitm.ac.in/~chester/))
 
 ## MS Students
 
-* Shashank Shekhar Dubey (2019-)
-* Sumit Padhiyar (2019-)
 * Deepali Ande (2020-)
 
 ## MTech Students
 
-_I'm looking for MTech students with good programming and systems background_
+**_I'm looking for MTech students with good programming and systems
+background_**
 
 ## BTech
 
 * Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021)
-* Arnhav Datar (UGRC; 2021)
 
 ## Interns
 
@@ -32,6 +32,9 @@ _I'm looking for MTech students with good programming and systems background_
 
 # Past 
 
+* Shashank Shekhar Dubey, MS, IITM (2019-2021)
+* Sumit Padhiyar, MS, IITM (2019-2021)
+* Arnhav Datar, UGRC, IITM (2021)
 * Shakti Kannan, RSDE, IITM (2020-2021). Next: [Segfault Systems](https://segfault.systems).
 * Shubham Kumar, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
 * Sudha Parimala, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
