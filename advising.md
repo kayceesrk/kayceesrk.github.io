@@ -4,6 +4,8 @@ title: Advising
 permalink: advising.html
 ---
 
+# Advising
+
 I have had the pleasure of working with wonderful students over the years.
 
 ## PhD Students
