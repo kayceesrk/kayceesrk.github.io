@@ -16,7 +16,7 @@ permalink: talks.html
  * **Retrofitting Effect Handlers onto OCaml**     
    PLDI 2021, Jun 2021    
  * **Multicore Support for Tezos Blockchain**   
-   IITM / UZH Blockchain center round table   
+   IITM / UZH Blockchain center round table, May 2021  
    [\[slides (pdf)\]](slides/multicore_tezos.pdf) [\[slides (key)\]](slides/multicore_tezos.key)          
  * **Effective Programming in OCaml**   
    Tarides Tech Talks, Apr 2021  
