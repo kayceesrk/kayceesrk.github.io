@@ -36,7 +36,6 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
  * [CV](cv/cv.pdf)
  * [Research Statement](research/research.pdf)
  * [Publications](publications.html)
- * [Advising](advising.html)
 
 # Latest News
 
