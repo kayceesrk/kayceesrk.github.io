@@ -39,6 +39,7 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Sep 21\]** Sumit Padhiyar and Shashank Shekhar Dubey have submitted their MS theses. Congratulations!
  * **\[May 21\]** Chairing the Artifact Evaluation Committee (AEC) for [ESOP'22](https://etaps.org/2022/esop).
  * **\[May 21\]** [ConFuzz](publications.html#padl21) chosen as a Distinguished Paper at [PADL 2021](https://popl21.sigplan.org/details/PADL-2021-papers/4/ConFuzz-Coverage-guided-Property-Fuzzing-for-Event-driven-Programs).
  * **\[May 21\]** Serving on the PC of [PLDI 2022]().
