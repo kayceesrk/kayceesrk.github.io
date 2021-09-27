@@ -4,7 +4,13 @@ title: Talks
 permalink: talks.html
 ---
 
-# Talks  
+# Talks
+ * **Retrofitting Effect Handlers onto OCaml**  
+   SimCorp, Sep 2021  
+   [\[slides (pdf)\]](slides/retro_effects_simcorp.pdf) [\[slides (key)\]](slides/retro_effects_simcorp.key)          
+ * **Retrofitting Parallelism onto OCaml**  
+   SimCorp, Sep 2021  
+   [\[slides (pdf)\]](slides/retro_parallel_simcorp.pdf) [\[slides (key)\]](slides/retro_parallel_simcorp.key)          
  * **ParaFuzz: Fuzzing Multicore OCaml programs**   
    Dagstuhl Meeting on Scalable Handling of Effects, Jul 2021    
    [\[slides (pdf)\]](slides/parafuzz_dagstuhl_21.pdf) [\[slides (key)\]](slides/parafuzz_dagstuhl_21.key)          
