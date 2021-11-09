@@ -9,11 +9,14 @@ Assistant Professor in the Computer Science and Engineering department at Indian
 Institute of Technology, Madras. I work on the intersection of Programming
 Languages and (Concurrent, Parallel, Distributed) Systems.
 
-I've co-founded several companies ([OCaml Labs Consultancy -
-UK](http://ocamllabs.io/), [Tarides - France](https://tarides.com/), [Segfault
-Systems - India](https://segfault.systems)) to build systems that are
-functional, and functional programming in [OCaml](https://ocaml.org/) turns out
-to be a fine choice for this. 
+I've co-founded several companies 
+
+* [OCaml Labs Consultancy - UK](http://ocamllabs.io/)
+* [Tarides - France](https://tarides.com/)
+* [Segfault Systems - India](https://segfault.systems) 
+
+to build systems that are _functional_, and functional programming in
+[OCaml](https://ocaml.org/) turns out to be a fine choice for this. 
 
 I was a Senior Research Associate under the [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the [University
@@ -39,13 +42,11 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Nov 21\]** [Nominate yourself](https://forms.gle/hiMuQ3r9n7KRjzLt5) to be on the ESOP '22 AEC  
  * **\[Sep 21\]** Sumit Padhiyar and Shashank Shekhar Dubey have submitted their MS theses. Congratulations!
  * **\[May 21\]** Chairing the Artifact Evaluation Committee (AEC) for [ESOP'22](https://etaps.org/2022/esop).
  * **\[May 21\]** [ConFuzz](publications.html#padl21) chosen as a Distinguished Paper at [PADL 2021](https://popl21.sigplan.org/details/PADL-2021-papers/4/ConFuzz-Coverage-guided-Property-Fuzzing-for-Event-driven-Programs).
  * **\[May 21\]** Serving on the PC of [PLDI 2022]().
- * **\[May 21\]** Vimala S (PhD student) has been chosen as a [Prime Minister's Research Fellow](https://dec2020.pmrf.in/)!
- * **\[Mar 21\]** Serving on the PC of [GPCE 2021](https://conf.researchr.org/home/gpce-2021).
- * **\[Mar 21\]** ["Retrofitting Effect Handlers to OCaml"](https://kcsrk.info/papers/retro-concurrency_pldi_21.pdf) accepted to PLDI 2021.
 
 # Activities
 
