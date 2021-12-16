@@ -28,15 +28,15 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 ### 2021
 
   *  <div id="ocaml21a"/> Sumit Padhiyar, Adharsh Kamath, KC Sivaramakrishnan   
-     [Parafuzz: Coverage-guided Property Fuzzing for Multicore OCaml programs](papers/ocaml2021a.pdf)
+     [Parafuzz: Coverage-guided Property Fuzzing for Multicore OCaml programs](papers/ocaml2021a.pdf)   
      *OCaml Workshop, 2021*   
      [\[video\]](https://watch.ocaml.org/videos/watch/c0d591e0-91c9-4eaa-a4d7-c4f514de0a57)  
   *  <div id="ocaml21b"/> Thomas Leonard, Craig Ferguson, Patrick Ferris, Sadiq Jaffer, Tom Kelly, KC Sivaramakrishnan, Anil Madhavapeddy   
-     [Experiences with Effects](papers/ocaml2021b.pdf)
+     [Experiences with Effects](papers/ocaml2021b.pdf)   
      *OCaml Workshop, 2021*   
      [\[video\]](https://watch.ocaml.org/videos/watch/74ece0a8-380f-4e2a-bef5-c6bb9092be89)  
   *  <div id="ocaml21c"/> Sudha Parimala, Enguerrand Decorne, Sadiq Jaffer, Tom Kelly, KC Sivaramakrishnan   
-     [Adapting the OCaml ecosystem for Multicore OCaml](papers/ocaml2021c.pdf)
+     [Adapting the OCaml ecosystem for Multicore OCaml](papers/ocaml2021c.pdf)    
      *OCaml Workshop, 2021*   
      [\[video\]](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02)  
   *  <div id="pldi21"/> KC Sivaramakrishnan, Stephen Dolan, Leo White, Sadiq Jaffer, Tom Kelly, Anil Madhavapeddy  
