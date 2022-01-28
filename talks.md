@@ -5,8 +5,8 @@ permalink: talks.html
 ---
 
 # Talks
- * **Retrofitting Parallelism onto OCaml**
-   Marigold Tech Talk, Dec 2021
+ * **Retrofitting Parallelism onto OCaml**  
+   Marigold Tech Talk, Dec 2021   
  * **Future of OCaml : Effect Handlers in OCaml 5.00**   
    Hwawei Strategy and Technology Workshop (STW), Oct 2021  
    [\[slides (pdf)\]](slides/retro_effects_hwawei.pdf) [\[slides (key)\]](slides/retro_effects_hwawei.key)          
