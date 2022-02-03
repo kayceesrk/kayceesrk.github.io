@@ -4,10 +4,11 @@ title: About
 ---
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 180px; float:
-right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am an
-Assistant Professor in the Computer Science and Engineering department at Indian
-Institute of Technology, Madras. I work on the intersection of Programming
-Languages and (Concurrent, Parallel, Distributed) Systems.
+right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am
+an Assistant Professor **(on leave 2021-22, hacking)** in the Computer Science
+and Engineering department at Indian Institute of Technology, Madras. I work on
+the intersection of Programming Languages and (Concurrent, Parallel,
+Distributed) Systems.
 
 I've co-founded several companies 
 
