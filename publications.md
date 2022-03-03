@@ -25,6 +25,15 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Publications  
 
+### 2022
+
+  *  <div id="papoc22"/> Vimala Soundarapandian, Adharsh Kamath, Kartik Nagar, KC Sivaramakrishnan    
+     [Certified Mergeable Replicated Datatypes](papers/pldi22.pdf)   
+     *International Conference on Programming Language Design and Implementation (PLDI), 2022 (conditionally accepted)*   
+  *  <div id="papoc22"/> Vimala Soundarapandian, Adharsh Kamath, Kartik Nagar, KC Sivaramakrishnan    
+     [Marrying Replicated and Functional Data Structures](papers/papoc22.pdf)   
+     *9th Workshop on Principles and Practice of Consistency for Distributed Data (PaPoC), 2022*   
+
 ### 2021
 
   *  <div id="ocaml21a"/> Sumit Padhiyar, Adharsh Kamath, KC Sivaramakrishnan   
