@@ -21,8 +21,7 @@ I have had the pleasure of working with wonderful students over the years.
 
 ## MTech Students
 
-**_I'm looking for MTech students with good programming and systems
-background_**
+**_I'm looking for MTech students with good programming and systems background_**
 
 ## BTech
 
@@ -35,8 +34,8 @@ background_**
 # Past 
 
 * Shashank Shekhar Dubey, MS, IITM (2019-2021)
-* Sumit Padhiyar, MS, IITM (2019-2021)
-* Arnhav Datar, UGRC, IITM (2021)
+* Sumit Padhiyar, MS, IITM (2019-2021).
+* Arnhav Datar, UGRC, IITM (2021).
 * Shakti Kannan, RSDE, IITM (2020-2021). Next: [Segfault Systems](https://segfault.systems).
 * Shubham Kumar, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
 * Sudha Parimala, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).

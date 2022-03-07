@@ -10,15 +10,22 @@ and Engineering department at Indian Institute of Technology, Madras. I work on
 the intersection of Programming Languages and (Concurrent, Parallel,
 Distributed) Systems.
 
+I led the development of [Multicore
+OCaml](https://github.com/ocamllabs/ocaml-multicore), a concurrent and parallel
+extension of the OCaml programming language. Multicore OCaml is now
+[merged](https://github.com/ocaml/ocaml/pull/10831) into OCaml, and will be
+available for general use in OCaml 5.0.
+
 I've co-founded several companies 
 
-* [OCaml Labs Consultancy - UK](http://ocamllabs.io/)
 * [Tarides - France](https://tarides.com/)
-* [Segfault Systems - India](https://segfault.systems)
+* [OCaml Labs Consultancy - UK](http://ocamllabs.io/) _(joined Tarides)_
+* [Segfault Systems - India](https://segfault.systems) _(joined Tarides)_
 
 <p/>
 to build systems that are _functional_, and functional programming in
-[OCaml](https://ocaml.org/) turns out to be a fine choice for this. 
+[OCaml](https://ocaml.org/) turns out to be a fine choice for this. I serve as
+an advisor to Tarides.
 
 I was a Senior Research Associate under the [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the [University
@@ -32,10 +39,7 @@ Jagannathan](https://www.cs.purdue.edu/homes/suresh/). Before that, I obtained
 my BEng degree in Computer Science and Engineering from [Anna University,
 India](https://www.annauniv.edu/).
 
-I lead the development of [Multicore
-OCaml](https://github.com/ocamllabs/ocaml-multicore), a concurrent and parallel
-extension of the OCaml programming language, which is slowly but surely being
-merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
+I write about my research in my [blog](http://kcsrk.info/blog/)
 (though not as often as I would like to).
 
  * [CV](cv/cv.pdf)
@@ -44,11 +48,9 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[Nov 21\]** [Nominate yourself](https://forms.gle/hiMuQ3r9n7KRjzLt5) to be on the ESOP '22 AEC  
- * **\[Sep 21\]** Sumit Padhiyar and Shashank Shekhar Dubey have submitted their MS theses. Congratulations!
- * **\[May 21\]** Chairing the Artifact Evaluation Committee (AEC) for [ESOP'22](https://etaps.org/2022/esop).
- * **\[May 21\]** [ConFuzz](publications.html#padl21) chosen as a Distinguished Paper at [PADL 2021](https://popl21.sigplan.org/details/PADL-2021-papers/4/ConFuzz-Coverage-guided-Property-Fuzzing-for-Event-driven-Programs).
- * **\[May 21\]** Serving on the PC of [PLDI 2022]().
+ * **\[Mar 22\]** "Certified Mergeable Replicated Data Types" conditionally accepted to PLDI 2022.  
+ * **\[Mar 22\]** Segfault Systems and OCaml Labs [join Tarides](https://tarides.com/blog/2022-03-01-segfault-systems-joins-tarides).  
+ * **\[Jan 22\]** Multicore OCaml has been [merged](https://github.com/ocaml/ocaml/pull/10831) into OCaml!  
 
 # Activities
 
@@ -56,9 +58,9 @@ merged upstream. I write about my research in my [blog](http://kcsrk.info/blog/)
 * **Organizer** 
   + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172)
   + Shonan meeting on "Programming Language support for Data-intensive Systems"
-* **PC Chair** -- ML'19
+* **PC Chair** -- PaPoC'22, ML'19
 * **AEC Chair** -- ESOP'22
-* **PC member** -- PEPM'22, PLDI'22, GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13.
+* **PC member** -- ML'22, PEPM'22, PLDI'22, GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13.
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 
