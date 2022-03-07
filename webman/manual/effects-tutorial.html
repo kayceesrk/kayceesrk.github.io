@@ -105,9 +105,7 @@ status as follows:</p><div class="caml-example verbatim">
 
 </div><p>The task may either have been <span class="machine"><span class="font-tt">Complete</span></span> with the result or is <span class="machine"><span class="font-tt">Suspended</span></span> with
 the message <span class="machine"><span class="font-tt">msg</span></span> to send and the continuation <span class="machine"><span class="font-tt">cont</span></span>. The type <span class="machine"><span class="font-tt">(int, 'a status) continuation</span></span> says that the suspended computation expects an <span class="machine"><span class="font-tt">int</span></span>
-value to resume and returns a <span class="machine"><span class="font-tt">'a status</span></span> value when resumed. It is useful to
-note that, unlike undelimited continuations, when delimited continuations are
-resumed, they return to the caller.</p><p>Next, we define a <span class="machine"><span class="font-tt">step</span></span> function that executes one step of computation until
+value to resume and returns a <span class="machine"><span class="font-tt">'a status</span></span> value when resumed.</p><p>Next, we define a <span class="machine"><span class="font-tt">step</span></span> function that executes one step of computation until
 it completes or suspends:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
