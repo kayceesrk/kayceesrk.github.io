@@ -48,6 +48,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Apr 22\]** Running the Principles and Practice of Consistency for Distributed Data workshop (PaPoC 2022) on [April 5th, 2022](https://papoc-workshop.github.io/2022/).
+ * **\[Mar 22\]** YouTube playlists for ["CS6225: Programs and Proofs"](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb) and ["CS3100: Paradigms of Programming"](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkE-NTs87s7QjwYwqeihb-D) are now available.
  * **\[Mar 22\]** "Certified Mergeable Replicated Data Types" conditionally accepted to PLDI 2022.  
  * **\[Mar 22\]** Segfault Systems and OCaml Labs [join Tarides](https://tarides.com/blog/2022-03-01-segfault-systems-joins-tarides).  
  * **\[Jan 22\]** Multicore OCaml has been [merged](https://github.com/ocaml/ocaml/pull/10831) into OCaml!  
@@ -60,7 +62,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
   + Shonan meeting on "Programming Language support for Data-intensive Systems"
 * **PC Chair** -- PaPoC'22, ML'19
 * **AEC Chair** -- ESOP'22
-* **PC member** -- ML'22, PEPM'22, PLDI'22, GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13.
+* **PC member** -- OCaml'22, ML'22, PEPM'22, PLDI'22, GPCE'21, TyDe'21, PaPoC'21, PADL'21, ICFP'20, PaPoC'20, OCaml'19, PMLDC'17, OBT'17, OCaml'16, Splash-MARC symposium '13.
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 
