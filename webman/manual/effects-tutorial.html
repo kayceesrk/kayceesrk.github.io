@@ -17,16 +17,16 @@
 <li><a href="effects-tutorial.html#s%3Aeffects-basics"><span class="number">1</span> Basics</a>
 </li><li><a href="effects-tutorial.html#s%3Aeffects-concurrency"><span class="number">2</span> Concurrency</a>
 </li><li><a href="effects-tutorial.html#s%3Aeffects-user-threads"><span class="number">3</span> User-level threads</a>
-</li><li><a href="effects-tutorial.html#s%3Aeffects-generator"><span class="number">4</span> Generators</a>
+</li><li><a href="effects-tutorial.html#s%3Aeffects-sequence"><span class="number">4</span> Control inversion</a>
 </li><li><a href="effects-tutorial.html#s%3Aeffects-semantics"><span class="number">5</span> Semantics</a>
 </li><li><a href="effects-tutorial.html#s%3Aeffects-shallow"><span class="number">6</span> Shallow handlers</a>
 </li></ul></nav></header>
 <p> <a id="c:effects-tutorial"></a>
 </p><p>Effect handlers are a mechanism for modular programming with user-defined
 effects. Effect handlers allow the programmers to describe
-<span class="font-it">computations</span> that <span class="font-it">perform</span> effectful <span class="font-it">operations</span>, whose
-meaning is described by <span class="font-it">handlers</span> that enclose the computations. Effect
-handlers are a generalization of exception handlers and enable non-local
+<span class="font-it">computations</span> that <span class="font-it">perform</span> effectful <span class="font-it">operations</span>,
+whose meaning is described by <span class="font-it">handlers</span> that enclose the computations.
+Effect handlers are a generalization of exception handlers and enable non-local
 control-flow mechanisms such as resumable exceptions, lightweight threads,
 coroutines, generators and asynchronous I/O to be composably expressed. In this
 tutorial, we shall see how some of these mechanisms can be built using effect
@@ -143,10 +143,10 @@ Case <span class="machine"><span class="font-tt">retc</span></span>: If the comp
 <span class="machine"><span class="font-tt">Complete v</span></span>.
 </li><li class="li-itemize">Case <span class="machine"><span class="font-tt">exnc</span></span>: If the computation raises an exception, then the handler
 raises the same exception.
-	</li><li class="li-itemize">Case <span class="machine"><span class="font-tt">effc</span></span>: If the computation performs the effect <span class="machine"><span class="font-tt">Xchg msg</span></span> with the
-		continuation <span class="machine"><span class="font-tt">cont</span></span>, then we return <span class="machine"><span class="font-tt">Suspended{msg;cont}</span></span>. Thus, in this
-		case, the continuation cont is not immediately invoked by the handler;
-		instead, it is stored in a data structure for later use.
+</li><li class="li-itemize">Case <span class="machine"><span class="font-tt">effc</span></span>: If the computation performs the effect <span class="machine"><span class="font-tt">Xchg msg</span></span> with the
+continuation <span class="machine"><span class="font-tt">cont</span></span>, then we return <span class="machine"><span class="font-tt">Suspended{msg;cont}</span></span>. Thus, in this
+case, the continuation cont is not immediately invoked by the handler;
+instead, it is stored in a data structure for later use.
 </li></ul><p>Since the <span class="machine"><span class="font-tt">step</span></span> function handles the <span class="machine"><span class="font-tt">Xchg</span></span> effect, <span class="machine"><span class="font-tt">step f</span></span> is a computation
 that does not perform the <span class="machine"><span class="font-tt">Xchg</span></span> effect. It may however perform other effects.
 Moreover, since we are using deep handlers, the continuation <span class="machine"><span class="font-tt">cont</span></span> stored in
@@ -236,17 +236,17 @@ also offering to exchange a value.</p><p>We shall also define helper functions t
   <span class="ocamlkeyword">let</span> exchanger = <span class="ocamlkeyword">ref</span> None <span class="ocamlkeyword">in</span> <span class="ocamlcomment">(* waiting exchanger *)</span>
   <span class="ocamlkeyword">let</span> run_q = Queue.create () <span class="ocamlkeyword">in</span> <span class="ocamlcomment">(* scheduler queue *)</span>
   <span class="ocamlkeyword">let</span> enqueue k v =
-          <span class="ocamlkeyword">let</span> task () = continue k v <span class="ocamlkeyword">in</span>
+    <span class="ocamlkeyword">let</span> task () = continue k v <span class="ocamlkeyword">in</span>
     Queue.push task run_q
   <span class="ocamlkeyword">in</span>
   <span class="ocamlkeyword">let</span> dequeue () =
     <span class="ocamlkeyword">if</span> Queue.is_empty run_q <span class="ocamlkeyword">then</span> () <span class="ocamlcomment">(* done *)</span>
     <span class="ocamlkeyword">else</span> <span class="ocamlkeyword">begin</span>
-                  <span class="ocamlkeyword">let</span> task = Queue.pop run_q <span class="ocamlkeyword">in</span>
-                        task ()
-          <span class="ocamlkeyword">end</span>
+      <span class="ocamlkeyword">let</span> task = Queue.pop run_q <span class="ocamlkeyword">in</span>
+      task ()
+    <span class="ocamlkeyword">end</span>
   <span class="ocamlkeyword">in</span>
-        <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> spawn (f : unit -&gt; unit) : unit =
+  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> spawn (f : unit -&gt; unit) : unit =
     match_with f () {
       retc = dequeue;
       exnc = (<span class="ocamlkeyword">fun</span> e -&gt;
@@ -301,11 +301,11 @@ operations:</p><div class="caml-example verbatim">
 <span class="ocamlkeyword">let</span> _ = run (<span class="ocamlkeyword">fun</span> _ -&gt;
   fork (<span class="ocamlkeyword">fun</span> _ -&gt;
     printf <span class="ocamlstring">"[t1] Sending 0\n"</span>;
-                <span class="ocamlkeyword">let</span> v = xchg 0 <span class="ocamlkeyword">in</span>
+    <span class="ocamlkeyword">let</span> v = xchg 0 <span class="ocamlkeyword">in</span>
     printf <span class="ocamlstring">"[t1] received %d\n"</span> v);
   fork (<span class="ocamlkeyword">fun</span> _ -&gt;
     printf <span class="ocamlstring">"[t2] Sending 1\n"</span>;
-                <span class="ocamlkeyword">let</span> v = xchg 1 <span class="ocamlkeyword">in</span>
+    <span class="ocamlkeyword">let</span> v = xchg 1 <span class="ocamlkeyword">in</span>
     printf <span class="ocamlstring">"[t2] received %d\n"</span> v))</div>
 
 
@@ -382,74 +382,78 @@ dequeue function discontinues the blocked thread with an
 <span class="machine"><span class="font-tt">xchg</span></span> function call, which causes the <span class="machine"><span class="font-tt">finally</span></span> block to be run and closes the
 output channel <span class="machine"><span class="font-tt">oc</span></span>. From the point of view of the user, it seems as though the
 function call <span class="machine"><span class="font-tt">xchg 0</span></span> raises the exception <span class="machine"><span class="font-tt">Improper_synchronization</span></span>.</p>
-<h2 class="section" id="s:effects-generator"><a class="section-anchor" href="#s:effects-generator" aria-hidden="true">﻿</a><span class="number">4</span> Generators</h2>
-<p>Generators are a language mechanism that permits non-continuous traversal of a
-data structure. Languages like Python and JavaScript provide primitive support
-for generators. Let us see an example of how generators can be implemented
-using effect handlers. In particular, we shall implement support for deriving a
-generator given an iterator for any data structure. The implementation is given
-below:</p><div class="caml-example verbatim">
+<h2 class="section" id="s:effects-sequence"><a class="section-anchor" href="#s:effects-sequence" aria-hidden="true">﻿</a><span class="number">4</span> Control inversion</h2>
+<p>When it comes to performing traversals on a data structure, there are two
+fundamental ways depending on whether the producer or the consumer has the
+control over the traversal. For example, in <span class="machine"><span class="font-tt">List.iter f l</span></span>, the producer
+<span class="machine"><span class="font-tt">List.iter</span></span> has the control and pushes the element to the consumer <span class="machine"><span class="font-tt">f</span></span> who
+processes them. On the other hand, the <a href="../api/Seq.html"><span class="font-tt">Seq</span></a> module provides a
+mechanism similar to delayed lists where the consumer controls the traversal.
+For example, <span class="machine"><span class="font-tt">Seq.forever Random.bool</span></span> returns an infinite sequence of random
+bits where every bit is produced (on demand) when queried by the consumer.</p><p>Naturally, producers such as <span class="machine"><span class="font-tt">List.iter</span></span> are easier to write in the former
+style. The latter style is ergonomically better for the consumer since it is
+preferable and more natural to be in control. To have the best of both worlds,
+we would like to write a producer in the former style and automatically convert
+it to the latter style. The conversation can be written <em>once and for all</em>
+as a library function, thanks to effect handlers. Let us name this function
+<span class="machine"><span class="font-tt">invert</span></span>. We will first look at how to use the <span class="machine"><span class="font-tt">invert</span></span> function before looking
+at its implementation details. The type of this function is given below:</p><div class="caml-example signature">
 
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlkeyword">module</span> MkGen (S :<span class="ocamlkeyword">sig</span>
-  <span class="ocamlkeyword">type</span> 'a t
-  <span class="ocamlkeyword">val</span> iter : ('a -&gt; unit) -&gt; 'a t -&gt; unit
-<span class="ocamlkeyword">end</span>) : <span class="ocamlkeyword">sig</span>
-  <span class="ocamlkeyword">val</span> gen : 'a S.t -&gt; (unit -&gt; 'a option)
-<span class="ocamlkeyword">end</span> = <span class="ocamlkeyword">struct</span>
-  <span class="ocamlkeyword">let</span> gen : <span class="ocamlkeyword">type</span> a. a S.t -&gt; (unit -&gt; a option) = <span class="ocamlkeyword">fun</span> l -&gt;
-    <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">module</span> M = <span class="ocamlkeyword">struct</span>
-      <span class="ocamlkeyword">type</span> _ Effect.t += Yield : a -&gt; unit t
-    <span class="ocamlkeyword">end</span> <span class="ocamlkeyword">in</span>
-    <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> step = <span class="ocamlkeyword">ref</span> (<span class="ocamlkeyword">fun</span> () -&gt;
-      match_with (S.iter (<span class="ocamlkeyword">fun</span> v -&gt; perform (M.Yield v))) l
-      {retc = (<span class="ocamlkeyword">fun</span> () -&gt; None);
-       exnc = raise;
-       effc = <span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (eff : b Effect.t) -&gt;
-         <span class="ocamlkeyword">match</span> eff <span class="ocamlkeyword">with</span>
-         | M.Yield v -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
-            step := (<span class="ocamlkeyword">fun</span> () -&gt; continue k ());
-            Some v)
-         | _ -&gt; None })
-    <span class="ocamlkeyword">in</span>
-    <span class="ocamlkeyword">fun</span> () -&gt; !step ()
-<span class="ocamlkeyword">end</span></div></div>
+<div class="pre caml-input"><span class="ocamlkeyword">val</span> invert : iter:(('a -&gt; unit) -&gt; unit) -&gt; 'a Seq.t</div></div>
 
-</div><p>The type signature for the functor <span class="machine"><span class="font-tt">MkGen</span></span> says that it expects a data
-structure of type <span class="machine"><span class="font-tt">'a t</span></span> and its iterator, and it returns a generator function
-<span class="machine"><span class="font-tt">gen</span></span>. When the <span class="machine"><span class="font-tt">gen</span></span> function is applied to the data structure, it returns a
-thunk. Everytime this thunk is invoked, the program performs one step of the
-traversal on the data structure.</p><p>The implementation utilises several advanced features of OCaml including local
-modules, recursive values and locally abstract types. This illustrates that
-effect handlers work well with other advanced features in the language. While
-the implementation is complicated, the crux of the idea is that, at every step
-of the iteration, the <span class="machine"><span class="font-tt">Yield</span></span> effect is performed. This effect is handled by a
-local handler (case <span class="machine"><span class="font-tt">effc</span></span>), that prepares a <span class="machine"><span class="font-tt">step</span></span> function in order to
-continue the traversal. When the traversal is complete (case <span class="machine"><span class="font-tt">retc</span></span>), <span class="machine"><span class="font-tt">None</span></span> is
-returned to the caller to indicate the end of traversal.</p><p>We can now traverse data structures on demand given only their iterator. For
-example, we can do on-demand traversal of lists as follows:</p><div class="caml-example verbatim">
+</div><p>The <span class="machine"><span class="font-tt">invert</span></span> function takes an <span class="machine"><span class="font-tt">iter</span></span> function (a producer that pushes elements
+to the consumer) and returns a sequence (where the consumer has the control).
+For example,</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlkeyword">module</span> L = MkGen (<span class="ocamlkeyword">struct</span>
-  <span class="ocamlkeyword">type</span> 'a t = 'a list
-  <span class="ocamlkeyword">let</span> iter = List.iter
-<span class="ocamlkeyword">end</span>)
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> lst_iter = Fun.flip List.iter [1;2;3]</div>
 
-<span class="ocamlkeyword">let</span> next = L.gen [1;2;3]</div></div>
 
-</div><div class="caml-example toplevel">
+
+<div class="pre caml-output ok"><span class="ocamlkeyword">val</span> lst_iter : (int -&gt; unit) -&gt; unit = &lt;<span class="ocamlkeyword">fun</span>&gt;</div></div>
+
+</div><p>is an <span class="machine"><span class="font-tt">iter</span></span> function with type <span class="machine"><span class="font-tt">(int -&gt; unit) -&gt; unit</span></span>. The expression
+<span class="machine"><span class="font-tt">lst_iter f</span></span> pushes the elements 1, 2 and 3 to the consumer <span class="machine"><span class="font-tt">f</span></span>. For example,</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">lst_iter (<span class="ocamlkeyword">fun</span> i -&gt; Printf.printf <span class="ocamlstring">"%d\n"</span> i)</div>
+
+
+
+<div class="pre caml-output ok">1
+2
+3
+- : unit = ()</div></div>
+
+</div><p>The expression <span class="machine"><span class="font-tt">invert lst_iter</span></span> returns a sequence that allows the consumer to
+traverse the list on demand. For example,</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> s = invert ~iter:lst_iter
+<span class="ocamlkeyword">let</span> next = Seq.to_dispenser s;;</div>
+
+
+
+<div class="pre caml-output ok"><span class="ocamlkeyword">val</span> s : int Seq.t = &lt;<span class="ocamlkeyword">fun</span>&gt;
+<span class="ocamlkeyword">val</span> next : unit -&gt; int option = &lt;<span class="ocamlkeyword">fun</span>&gt;</div></div>
+<div class="ocaml">
+
+
+
+<div class="pre caml-input">next();;</div>
 
 
 
@@ -458,7 +462,7 @@ example, we can do on-demand traversal of lists as follows:</p><div class="caml-
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">next();;</div>
 
 
 
@@ -467,7 +471,7 @@ example, we can do on-demand traversal of lists as follows:</p><div class="caml-
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">next();;</div>
 
 
 
@@ -476,64 +480,119 @@ example, we can do on-demand traversal of lists as follows:</p><div class="caml-
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">next();;</div>
 
 
 
 <div class="pre caml-output ok">- : int option = None</div></div>
 
-</div><p>We can use the same <span class="machine"><span class="font-tt">MkGen</span></span> functor on other data types too. For example,</p><div class="caml-example verbatim">
+</div><p>We can use the same <span class="machine"><span class="font-tt">invert</span></span> function on any <span class="machine"><span class="font-tt">iter</span></span> function. For example,</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlkeyword">module</span> A = MkGen (<span class="ocamlkeyword">struct</span>
-  <span class="ocamlkeyword">type</span> 'a t = 'a array
-  <span class="ocamlkeyword">let</span> iter = Array.iter
-<span class="ocamlkeyword">end</span>)
-<span class="ocamlkeyword">let</span> next = A.gen [|1;2;3|]</div></div>
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> s = invert ~iter:(Fun.flip String.iter <span class="ocamlstring">"OCaml"</span>)
+<span class="ocamlkeyword">let</span> next = Seq.to_dispenser s;;</div>
 
-</div><div class="caml-example toplevel">
 
+
+<div class="pre caml-output ok"><span class="ocamlkeyword">val</span> s : char Seq.t = &lt;<span class="ocamlkeyword">fun</span>&gt;
+<span class="ocamlkeyword">val</span> next : unit -&gt; char option = &lt;<span class="ocamlkeyword">fun</span>&gt;</div></div>
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">next();;</div>
 
 
 
-<div class="pre caml-output ok">- : int option = Some 1</div></div>
+<div class="pre caml-output ok">- : char option = Some 'O'</div></div>
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">next();;</div>
 
 
 
-<div class="pre caml-output ok">- : int option = Some 2</div></div>
+<div class="pre caml-output ok">- : char option = Some 'C'</div></div>
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">next();;</div>
 
 
 
-<div class="pre caml-output ok">- : int option = Some 3</div></div>
+<div class="pre caml-output ok">- : char option = Some 'a'</div></div>
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlprompt">#</span> next();;</div>
+<div class="pre caml-input">next();;</div>
 
 
 
-<div class="pre caml-output ok">- : int option = None</div></div>
+<div class="pre caml-output ok">- : char option = Some 'm'</div></div>
+<div class="ocaml">
+
+
+
+<div class="pre caml-input">next();;</div>
+
+
+
+<div class="pre caml-output ok">- : char option = Some 'l'</div></div>
+<div class="ocaml">
+
+
+
+<div class="pre caml-input">next();;</div>
+
+
+
+<div class="pre caml-output ok">- : char option = None</div></div>
 
 </div>
+<h3 class="subsection" id="s:effects-sequence-implementation"><a class="section-anchor" href="#s:effects-sequence-implementation" aria-hidden="true">﻿</a><span class="number">4.1</span> Implementing control inversion</h3>
+<p>The implementation of the <span class="machine"><span class="font-tt">invert</span></span> function is given below:</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> invert (<span class="ocamlkeyword">type</span> a) ~(iter : (a -&gt; unit) -&gt; unit) : a Seq.t =
+  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">module</span> M = <span class="ocamlkeyword">struct</span>
+    <span class="ocamlkeyword">type</span> _ Effect.t += Yield : a -&gt; unit t
+  <span class="ocamlkeyword">end</span> <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">let</span> yield v = perform (M.Yield v) <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">fun</span> () -&gt; match_with iter yield
+  { retc = (<span class="ocamlkeyword">fun</span> _ -&gt; Seq.Nil);
+    exnc = raise;
+    effc = <span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (eff : b Effect.t) -&gt;
+      <span class="ocamlkeyword">match</span> eff <span class="ocamlkeyword">with</span>
+      | M.Yield v -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
+          Seq.Cons (v, continue k))
+      | _ -&gt; None }</div></div>
+
+</div><p>The <span class="machine"><span class="font-tt">invert</span></span> function declares an effect <span class="machine"><span class="font-tt">Yield</span></span> that takes the element to be
+yielded as a parameter. The <span class="machine"><span class="font-tt">yield</span></span> function performs the <span class="machine"><span class="font-tt">Yield</span></span> effect. The
+lambda abstraction <span class="machine"><span class="font-tt">fun () -&gt; ...</span></span> delays all action until the first element of
+the sequence is demanded. Once this happens, the computation <span class="machine"><span class="font-tt">iter yield</span></span> is
+executed under an effect handler. Every time the <span class="machine"><span class="font-tt">iter</span></span> function pushes an
+element to the <span class="machine"><span class="font-tt">yield</span></span> function, the computation is interrupted by the <span class="machine"><span class="font-tt">Yield</span></span>
+effect. The <span class="machine"><span class="font-tt">Yield</span></span> effect is handled by returning the value
+<span class="machine"><span class="font-tt">Seq.Cons(v,continue k)</span></span> to the consumer. The consumer gets the element <span class="machine"><span class="font-tt">v</span></span> as
+well as the suspended computation, which in consumer’s eyes is just the tail of
+sequence.</p><p>When the consumer demands the next element from the sequence (by applying it to
+<span class="machine"><span class="font-tt">()</span></span>), the continuation <span class="machine"><span class="font-tt">k</span></span> is resumed. This allows the computation <span class="machine"><span class="font-tt">iter yield</span></span> to make progress, until it either yields another element or terminates
+normally. In the latter case, the value <span class="machine"><span class="font-tt">Seq.Nil</span></span> is returned, indicating to
+the consumer that the iteration is over.</p><p>It is important to note that the sequence returned by the <span class="machine"><span class="font-tt">invert</span></span> function is
+<em>ephemeral</em> (as defined by the <a href="../api/Seq.html"><span class="font-tt">Seq</span></a> module) i.e., the
+sequence must be used at most once. Additionally, the sequence must be fully
+consumed (i.e., used at least once) so as to ensure that the captured
+continuation is used linearly.</p>
 <h2 class="section" id="s:effects-semantics"><a class="section-anchor" href="#s:effects-semantics" aria-hidden="true">﻿</a><span class="number">5</span> Semantics</h2>
 <p>In this section, we shall see the semantics of the effect handlers with the
 help of examples.</p>
@@ -683,80 +742,37 @@ finalisers is much more than the cost of capturing a continuation. Hence, it is
 recommended that the user take care of resuming the continuation exactly once
 rather than relying on the finaliser.</p>
 <h2 class="section" id="s:effects-shallow"><a class="section-anchor" href="#s:effects-shallow" aria-hidden="true">﻿</a><span class="number">6</span> Shallow handlers</h2>
-<p>The examples that we have seen so far have used <span class="font-it">deep</span> handlers.
-Whenever a continuation is captured in a deep handler, the captured
-continuation also includes the handler. This means that, when the continuation
-is resumed, the effect handler is automatically re-installed, and will handle
-the effect(s) that the computation may perform in the future.</p><p>OCaml also provides <span class="font-it">shallow</span> handlers. Compared to deep handlers, the
+<p>The examples that we have seen so far have used <span class="font-it">deep</span> handlers. A deep
+handler monitors a computation and handles all the effects performed (in
+sequence) by the computation. Whenever a continuation is captured in a deep
+handler, the captured continuation also includes the handler. This means that,
+when the continuation is resumed, the effect handler is automatically
+re-installed, and will handle the effect(s) that the computation may perform in
+the future.</p><p>OCaml also provides <span class="font-it">shallow</span> handlers. Compared to deep handlers, a
+shallow handler handles only the first effect performed by the computation. The
 continuation captured in a shallow handler does not include the handler. This
-means that, when the continuation is resumed, the effect handler is no longer
-present. For this reason, the user is expected to provide a new effect handler
-(possibly a different one) to handle the next effect that the computation may
-perform in the future.</p><p>Shallow handlers make it easier to express certain kinds of programs. For
-example, suppose we want to implement a state handler that permits put and get
-operations on ambient state. We can implement the state handler using deep
-handlers as follows:</p><div class="caml-example verbatim">
+means that, when the continuation is resumed, the handler is no longer present.
+For this reason, the user is expected to provide a new effect handler (possibly
+a different one) to handle the next effect that the computation may perform in
+the future.</p><p>Shallow handlers make it easier to express certain kinds of programs. Let us
+implement a shallow handler that enforces a particular sequence of effects (a
+protocol) on a computation. For this example, let us consider that the
+computation may perform the following effects:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
 
 
-<div class="pre caml-input"><span class="ocamlkeyword">open</span> Effect
-<span class="ocamlkeyword">open</span> Effect.Deep
+<div class="pre caml-input"><span class="ocamlkeyword">type</span> _ Effect.t += Send : int -&gt; unit Effect.t
+                 | Recv : int Effect.t</div></div>
 
-<span class="ocamlkeyword">type</span> _ Effect.t += Put : int -&gt; unit Effect.t
-                 | Get : int Effect.t
-<span class="ocamlkeyword">let</span> put v = perform (Put v)
-<span class="ocamlkeyword">let</span> get () = perform Get
-
-<span class="ocamlkeyword">let</span> run (f : unit -&gt; unit) ~init =
-  <span class="ocamlkeyword">let</span> comp =
-    match_with f ()
-    { retc = (<span class="ocamlkeyword">fun</span> x -&gt; (<span class="ocamlkeyword">fun</span> s -&gt; (s, x)));
-      exnc = raise;
-      effc = <span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (e : b Effect.t) -&gt;
-        <span class="ocamlkeyword">match</span> e <span class="ocamlkeyword">with</span>
-        | Get -&gt; Some (<span class="ocamlkeyword">fun</span> (k : (b, int -&gt; (int * unit)) continuation) -&gt;
-            (<span class="ocamlkeyword">fun</span> (s : int) -&gt; continue k s s))
-        | Put s' -&gt; Some (<span class="ocamlkeyword">fun</span> k -&gt;
-            (<span class="ocamlkeyword">fun</span> _s -&gt; continue k () s'))
-        | _ -&gt; None }
-  <span class="ocamlkeyword">in</span>
-  comp init</div></div>
-
-</div><p>The <span class="machine"><span class="font-tt">get</span></span> operation returns the current state, and <span class="machine"><span class="font-tt">put</span></span> updates the state. For
-simplicity, we assume that the state is an integer. This implementation is
-analogous to the monadic implementation of state. The <span class="machine"><span class="font-tt">run</span></span> function builds up
-a new closure when it handles <span class="machine"><span class="font-tt">Get</span></span> and <span class="machine"><span class="font-tt">Put</span></span> effects. Here is an example of
-using this state handler:</p><div class="caml-example verbatim">
-
-<div class="ocaml">
-
-
-
-<div class="pre caml-input"><span class="ocamlkeyword">let</span> foo () : unit =
-  printf <span class="ocamlstring">"%d\n"</span> (get ());
-  put 42;
-  printf <span class="ocamlstring">"%d\n"</span> (get ());
-  put 21;
-  printf <span class="ocamlstring">"%d\n"</span> (get ())</div></div>
-
-</div><div class="caml-example verbatim">
-
-<div class="ocaml">
-
-
-
-<div class="pre caml-input">run foo ~init:0</div>
-
-
-
-<div class="pre caml-output ok">0
-42
-21
-- : int * unit = (21, ())</div></div>
-
-</div><p>The shallow handler version of state handler is given below:</p><div class="caml-example verbatim">
+</div><p>Let us assume that we want to enforce a protocol that only permits an
+alternating sequence of <span class="machine"><span class="font-tt">Send</span></span> and <span class="machine"><span class="font-tt">Recv</span></span> effects that conform to the regular
+expression <span class="machine"><span class="font-tt">(Send;Recv)*;Send?</span></span>. Hence, the sequence of effects <span class="machine"><span class="font-tt">[]</span></span> (the empty
+sequence), <span class="machine"><span class="font-tt">[Send]</span></span>, <span class="machine"><span class="font-tt">[Send;Recv]</span></span>, <span class="machine"><span class="font-tt">[Send;Recv;Send]</span></span>, etc., are allowed, but
+not <span class="machine"><span class="font-tt">[Recv]</span></span>, <span class="machine"><span class="font-tt">[Send;Send]</span></span>, <span class="machine"><span class="font-tt">[Send;Recv;Recv]</span></span>, etc. The key observation here
+is that the set of effects handled evolves over time. We can enforce this
+protocol quite naturally using shallow handlers as show below:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
@@ -764,57 +780,86 @@ using this state handler:</p><div class="caml-example verbatim">
 
 <div class="pre caml-input"><span class="ocamlkeyword">open</span> Effect.Shallow
 
-<span class="ocamlkeyword">let</span> run (f: unit -&gt; unit) ~init =
-  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> loop : <span class="ocamlkeyword">type</span> a. int -&gt; (a, unit) continuation -&gt; a -&gt; int * unit =
-    <span class="ocamlkeyword">fun</span> s k x -&gt;
-      continue_with k x
-      { retc = (<span class="ocamlkeyword">fun</span> x -&gt; (s,x));
-        exnc = (<span class="ocamlkeyword">fun</span> e -&gt; raise e);
-        effc = (<span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (eff : b t) -&gt;
-          <span class="ocamlkeyword">match</span> eff <span class="ocamlkeyword">with</span>
-          | Get -&gt; Some (<span class="ocamlkeyword">fun</span> (k : (b,_) continuation) -&gt;
-              loop s k s)
-          | Put s' -&gt; Some (<span class="ocamlkeyword">fun</span> (k : (b,_) continuation) -&gt;
-              loop s' k ())
-          | e -&gt; None) }
+<span class="ocamlkeyword">let</span> run (<span class="ocamlkeyword">type</span> a) (comp: unit -&gt; unit) =
+  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> loop : <span class="ocamlkeyword">type</span> a. (a,unit) continuation -&gt; a
+                 -&gt; [`Send | `Recv <span class="ocamlkeyword">of</span> int] -&gt; unit =
+    <span class="ocamlkeyword">fun</span> k v accept -&gt;
+      continue_with k v
+      { retc = Fun.id;
+        exnc = raise;
+        effc = <span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (eff : b t) -&gt;
+          <span class="ocamlkeyword">match</span> eff, accept <span class="ocamlkeyword">with</span>
+          | Send v, `Send -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
+              loop k () (`Recv v))
+          | Recv, `Recv v -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
+              loop k v `Send)
+          | Send v, _ -&gt; failwith <span class="ocamlstring">"protocol violation"</span>
+          | Recv, _ -&gt; failwith <span class="ocamlstring">"protocol violation"</span>
+          | _ -&gt; None }
   <span class="ocamlkeyword">in</span>
-  loop init (fiber f) ()</div></div>
+  loop (fiber comp) () `Send</div></div>
 
-</div><p>The shallow handler uses a different set of primitives compared to the deep
-handler. The primitive <span class="machine"><span class="font-tt">fiber</span></span> takes an <span class="machine"><span class="font-tt">'a -&gt; 'b</span></span> function and returns a
-<span class="machine"><span class="font-tt">('a,'b) continuation</span></span>. <span class="machine"><span class="font-tt">continue_with k v h</span></span> resumes the continuation <span class="machine"><span class="font-tt">k</span></span> with
-value <span class="machine"><span class="font-tt">v</span></span> under the handler <span class="machine"><span class="font-tt">h</span></span>. Observe that unlike deep handlers, we avoid
-allocating a new closure when handling <span class="machine"><span class="font-tt">Get</span></span> and <span class="machine"><span class="font-tt">Put</span></span> effects. The ambient
-state <span class="machine"><span class="font-tt">s</span></span> is simply threaded through in the recursive call. The use of the
-shallow state handler remains the same as the deep version:</p><div class="caml-example verbatim">
-
-<div class="ocaml">
-
-
-
-<div class="pre caml-input"><span class="ocamlkeyword">let</span> foo () : unit =
-  printf <span class="ocamlstring">"%d\n"</span> (get ());
-  put 42;
-  printf <span class="ocamlstring">"%d\n"</span> (get ());
-  put 21;
-  printf <span class="ocamlstring">"%d\n"</span> (get ())</div></div>
-
-</div><div class="caml-example verbatim">
+</div><p>The <span class="machine"><span class="font-tt">run</span></span> function executes the computation <span class="machine"><span class="font-tt">comp</span></span> ensuring that it can only
+perform an alternating sequence of <span class="machine"><span class="font-tt">Send</span></span> and <span class="machine"><span class="font-tt">Recv</span></span> effects. We use the
+polymorphic variant tags <span class="machine"><span class="font-tt">`Send</span></span> and <span class="machine"><span class="font-tt">`Recv</span></span> to track which effect the
+computation is allowed to perform next.</p><p>The shallow handler uses a different set of primitives compared to the deep
+handler. The primitive <span class="machine"><span class="font-tt">fiber</span></span> (on the last line) takes an <span class="machine"><span class="font-tt">'a -&gt; 'b</span></span> function
+and returns a <span class="machine"><span class="font-tt">('a,'b) Effects.Shallow.continuation</span></span>. The expression
+<span class="machine"><span class="font-tt">continue_with k v h</span></span> resumes the continuation <span class="machine"><span class="font-tt">k</span></span> with value <span class="machine"><span class="font-tt">v</span></span> under the
+handler <span class="machine"><span class="font-tt">h</span></span>.</p><p>The initial call to the <span class="machine"><span class="font-tt">loop</span></span> function (on the last line) takes <span class="machine"><span class="font-tt">`Send</span></span> as an
+argument indicating that the first effect that the computation is allowed to do
+is <span class="machine"><span class="font-tt">Send</span></span>. The <span class="machine"><span class="font-tt">loop</span></span> function uses the <span class="machine"><span class="font-tt">continue_with</span></span> primitive to resume the
+continuation <span class="machine"><span class="font-tt">k</span></span> with the value <span class="machine"><span class="font-tt">v</span></span> under the given handler. If the computation
+performs the expected effect (<span class="machine"><span class="font-tt">Send</span></span> effect when the tag is <span class="machine"><span class="font-tt">`Send</span></span> and <span class="machine"><span class="font-tt">Recv</span></span>
+effect when the tag is <span class="machine"><span class="font-tt">`Recv</span></span>), then we tail call the <span class="machine"><span class="font-tt">loop</span></span> function with the
+next allowed operation. Given that the continuation captured in the shallow
+handler do not include the handler, there is only ever one handler installed in
+the dynamic scope of the computation <span class="machine"><span class="font-tt">comp</span></span>. If the computation performs an
+unexpected effect, then the computation fails with <span class="machine"><span class="font-tt">protocol violation</span></span>.</p><p>We can see that the <span class="machine"><span class="font-tt">run</span></span> function will permit computations that follow the
+protocol:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
 
 
-<div class="pre caml-input">run foo ~init:0</div>
+<div class="pre caml-input">run (<span class="ocamlkeyword">fun</span> () -&gt;
+  printf <span class="ocamlstring">"Send 42\n"</span>;
+  perform (Send 42);
+  printf <span class="ocamlstring">"Recv: %d\n"</span> (perform Recv);
+  printf <span class="ocamlstring">"Send 43\n"</span>;
+  perform (Send 43);
+  printf <span class="ocamlstring">"Recv: %d\n"</span> (perform Recv))</div>
 
 
 
-<div class="pre caml-output ok">0
-42
-21
-- : int * unit = (21, ())</div></div>
+<div class="pre caml-output ok">Send 42
+Recv: 42
+Send 43
+Recv: 43
+- : unit = ()</div></div>
 
-</div>
+</div><p>but not those which do not follow the protocol:</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input">run (<span class="ocamlkeyword">fun</span> () -&gt;
+  Printf.printf <span class="ocamlstring">"Send 0\n"</span>;
+  perform (Send 0);
+  Printf.printf <span class="ocamlstring">"Send 1\n"</span>;
+  perform (Send 1) <span class="ocamlcomment">(* protocol violation *)</span>)</div>
+
+
+
+<div class="pre caml-output ok">Send 0
+Send 1
+Exception: Failure <span class="ocamlstring">"protocol violation"</span>.</div></div>
+
+</div><p>We may implement the same example using deep handlers using reference cells
+(easy, but unsatisfying) or without them (harder). We leave this as an exercise
+to the reader.
+</p>
 <hr>
 <div class="bottom-navigation"><a class="previous" href="advexamples.html">« Advanced examples with classes and modules</a><a class="next" href="language.html">The OCaml language »</a></div>
 
