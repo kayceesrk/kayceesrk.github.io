@@ -2005,7 +2005,7 @@
   copy-on-write of the modified pages; the underlying file is not
   affected.</p>
 
-<p><code class="code"><span class="constructor">Genarray</span>.map_file</code> is much more efficient than reading
+<p><a href="UnixLabels.html#VALmap_file"><code class="code"><span class="constructor">UnixLabels</span>.map_file</code></a> is much more efficient than reading
   the whole file in a Bigarray, modifying that Bigarray,
   and writing it afterwards.</p>
 
@@ -2013,7 +2013,7 @@
   the actual size of the file, the major dimension (that is,
   the first dimension for an array with C layout, and the last
   dimension for an array with Fortran layout) can be given as
-  <code class="code">-1</code>.  <code class="code"><span class="constructor">Genarray</span>.map_file</code> then determines the major dimension
+  <code class="code">-1</code>.  <a href="UnixLabels.html#VALmap_file"><code class="code"><span class="constructor">UnixLabels</span>.map_file</code></a> then determines the major dimension
   from the size of the file.  The file must contain an integral
   number of sub-arrays as determined by the non-major dimensions,
   otherwise <code class="code"><span class="constructor">Failure</span></code> is raised.</p>

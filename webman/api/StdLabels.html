@@ -103,7 +103,7 @@
 <pre class="codepre"><code class="code">     <span class="keyword">open</span> <span class="constructor">StdLabels</span>
 
      <span class="keyword">let</span> to_upper = <span class="constructor">String</span>.map ~f:<span class="constructor">Char</span>.uppercase_ascii
-     <span class="keyword">let</span> seq len = <span class="constructor">List</span>.init ~f:(<span class="keyword">function</span> i <span class="keywordsign">-&gt;</span> i) ~len
+     <span class="keyword">let</span> seq len = <span class="constructor">List</span>.init ~f:(<span class="keyword">fun</span> i <span class="keywordsign">-&gt;</span> i) ~len
      <span class="keyword">let</span> everything = <span class="constructor">Array</span>.create_matrix ~dimx:42 ~dimy:42 42
    </code></pre></div>
 </div>

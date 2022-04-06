@@ -7,12 +7,12 @@
 <link rel="stylesheet" type="text/css" href="manual.css">
 <title>OCaml - Lexer and parser generators (ocamllex, ocamlyacc)</title>
 <script src="scroll.js"></script><script src="navigation.js"></script><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></head>
-<body><div class="content manual"><div id="sidebar-button"><span>☰</span></div><nav id="part-title"><span>☰</span>The OCaml tools</nav><ul id="part-menu"><li><a href="comp.html">Batch compilation (ocamlc)</a></li><li><a href="toplevel.html">The toplevel system or REPL (ocaml)</a></li><li><a href="runtime.html">The runtime system (ocamlrun)</a></li><li><a href="native.html">Native-code compilation (ocamlopt)</a></li><li class="active"><a href="lexyacc.html">Lexer and parser generators (ocamllex, ocamlyacc)</a></li><li><a href="depend.html">Dependency generator (ocamldep)</a></li><li><a href="ocamldoc.html">The documentation generator (ocamldoc)</a></li><li><a href="debugger.html">The debugger (ocamldebug)</a></li><li><a href="profil.html">Profiling (ocamlprof)</a></li><li><a href="intfc.html">Interfacing C with OCaml</a></li><li><a href="flambda.html">Optimisation with Flambda</a></li><li><a href="afl-fuzz.html">Fuzzing with afl-fuzz</a></li><li><a href="instrumented-runtime.html">Runtime tracing with the instrumented runtime</a></li></ul>
+<body><div class="content manual"><div id="sidebar-button"><span>☰</span></div><nav id="part-title"><span>☰</span>The OCaml tools</nav><ul id="part-menu"><li><a href="comp.html">Batch compilation (ocamlc)</a></li><li><a href="toplevel.html">The toplevel system or REPL (ocaml)</a></li><li><a href="runtime.html">The runtime system (ocamlrun)</a></li><li><a href="native.html">Native-code compilation (ocamlopt)</a></li><li class="active"><a href="lexyacc.html">Lexer and parser generators (ocamllex, ocamlyacc)</a></li><li><a href="depend.html">Dependency generator (ocamldep)</a></li><li><a href="ocamldoc.html">The documentation generator (ocamldoc)</a></li><li><a href="debugger.html">The debugger (ocamldebug)</a></li><li><a href="profil.html">Profiling (ocamlprof)</a></li><li><a href="intfc.html">Interfacing C with OCaml</a></li><li><a href="flambda.html">Optimisation with Flambda</a></li><li><a href="afl-fuzz.html">Fuzzing with afl-fuzz</a></li><li><a href="instrumented-runtime.html">Runtime tracing with the instrumented runtime</a></li><li><a href="tail_mod_cons.html">The “Tail Modulo Constructor” program transformation</a></li></ul>
 
 
 
 
-<h1 class="chapter" id="sec338"><span class="chapter-number">Chapter 16</span> Lexer and parser generators (ocamllex, ocamlyacc)</h1>
+<h1 class="chapter" id="sec338"><span class="chapter-number">Chapter 15</span> Lexer and parser generators (ocamllex, ocamlyacc)</h1>
 <header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Lexer and parser generators (ocamllex, ocamlyacc)</a></li>
 <li><a href="lexyacc.html#s%3Aocamllex-overview"><span class="number">1</span> Overview of <span class="font-tt">ocamllex</span></a>
 </li><li><a href="lexyacc.html#s%3Aocamllex-syntax"><span class="number">2</span> Syntax of lexer definitions</a>
@@ -88,7 +88,7 @@ and …
 Comments are delimited by <span class="machine"><span class="font-tt">(*</span></span> and <span class="machine"><span class="font-tt">*)</span></span>, as in OCaml.
 The <span class="machine"><span class="font-tt">parse</span></span> keyword, can be replaced by the <span class="machine"><span class="font-tt">shortest</span></span> keyword, with
 the semantic consequences explained below.</p><p>Refill handlers are a recent (optional) feature introduced in 4.02,
-documented below in subsection ‍<a href="#ss%3Arefill-handlers">16.2.7</a>.</p>
+documented below in subsection ‍<a href="#ss%3Arefill-handlers">15.2.7</a>.</p>
 <h3 class="subsection" id="ss:ocamllex-header-trailer"><a class="section-anchor" href="#ss:ocamllex-header-trailer" aria-hidden="true">﻿</a><span class="number">2.1</span> Header and trailer</h3>
 <p>
 The <span class="font-it">header</span> and <span class="font-it">trailer</span> sections are arbitrary OCaml
@@ -437,7 +437,7 @@ Process <span class="font-it">file</span> as the grammar specification, even if 
 starts with a dash (-) character. This option must be the last on the
 command line.</dd></dl><p>At run-time, the <span class="machine"><span class="font-tt">ocamlyacc</span></span>-generated parser can be debugged by
 setting the <span class="machine"><span class="font-tt">p</span></span> option in the <span class="machine"><span class="font-tt">OCAMLRUNPARAM</span></span> environment variable
-(see section ‍<a href="runtime.html#s%3Aocamlrun-options">14.2</a>). This causes the pushdown
+(see section ‍<a href="runtime.html#s%3Aocamlrun-options">13.2</a>). This causes the pushdown
 automaton executing the parser to print a trace of its action (tokens
 shifted, rules reduced, etc). The trace mentions rule numbers and
 state numbers that can be interpreted by looking at the file

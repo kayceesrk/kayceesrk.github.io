@@ -206,12 +206,16 @@
     to use <a href="Unix.html"><code class="code"><span class="constructor">Unix</span></code></a> functions directly.</p>
 
 <pre><span id="VALwait_timed_read"><span class="keyword">val</span> wait_timed_read</span> : <code class="type"><a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> -&gt; float -&gt; bool</code></pre><div class="info ">
+<div class="info-deprecated">
+<span class="warning">Deprecated. </span>Use Unix.select instead.</div>
 <div class="info-desc">
 <p>See <a href="Thread.html#VALwait_timed_write"><code class="code"><span class="constructor">Thread</span>.wait_timed_write</code></a>.</p>
 </div>
 </div>
 
 <pre><span id="VALwait_timed_write"><span class="keyword">val</span> wait_timed_write</span> : <code class="type"><a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> -&gt; float -&gt; bool</code></pre><div class="info ">
+<div class="info-deprecated">
+<span class="warning">Deprecated. </span>Use Unix.select instead.</div>
 <div class="info-desc">
 <p>Suspend the execution of the calling thread until at least
    one character or EOF is available for reading (<code class="code">wait_timed_read</code>) or
@@ -225,6 +229,8 @@
 </div>
 
 <pre><span id="VALselect"><span class="keyword">val</span> select</span> : <code class="type"><a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> list -&gt;<br>       <a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> list -&gt;<br>       <a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> list -&gt;<br>       float -&gt; <a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> list * <a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> list * <a href="Unix.html#TYPEfile_descr">Unix.file_descr</a> list</code></pre><div class="info ">
+<div class="info-deprecated">
+<span class="warning">Deprecated. </span>Use Unix.select instead.</div>
 <div class="info-desc">
 <p>Same function as <a href="Unix.html#VALselect"><code class="code"><span class="constructor">Unix</span>.select</code></a>.
    Suspend the execution of the calling thread until input/output
@@ -235,6 +241,8 @@
 </div>
 
 <pre><span id="VALwait_pid"><span class="keyword">val</span> wait_pid</span> : <code class="type">int -&gt; int * <a href="Unix.html#TYPEprocess_status">Unix.process_status</a></code></pre><div class="info ">
+<div class="info-deprecated">
+<span class="warning">Deprecated. </span>Use Unix.waitpid instead.</div>
 <div class="info-desc">
 <p>Same function as <a href="Unix.html#VALwaitpid"><code class="code"><span class="constructor">Unix</span>.waitpid</code></a>.
    <code class="code">wait_pid&nbsp;p</code> suspends the execution of the calling thread

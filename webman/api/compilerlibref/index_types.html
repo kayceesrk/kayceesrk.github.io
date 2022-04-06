@@ -68,7 +68,11 @@
 <tr><td><a href="Pparse.html#TYPEast_kind">ast_kind</a> [<a href="Pparse.html">Pparse</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEattribute">attribute</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Attributes such as <code class="code">[@id&nbsp;<span class="constructor">ARG</span>]</code> and <code class="code">[@@id&nbsp;<span class="constructor">ARG</span>]</code>.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEattributes">attributes</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Ast_helper.html#TYPEattrs">attrs</a> [<a href="Ast_helper.html">Ast_helper</a>]</td>
@@ -82,7 +86,11 @@
 <td></td></tr>
 <tr><td align="left"><div>C</div></td></tr>
 <tr><td><a href="Parsetree.html#TYPEcase">case</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <a href="Parsetree.html#TYPEcase"><code class="code"><span class="constructor">Parsetree</span>.case</code></a> represents <code class="code">(<span class="constructor">P</span>&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">E</span>)</code> or <code class="code">(<span class="constructor">P</span>&nbsp;<span class="keyword">when</span>&nbsp;<span class="constructor">E0</span>&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">E</span>)</code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Diffing_with_keys.Define.html#TYPEchange">change</a> [<a href="Diffing_with_keys.Define.html">Diffing_with_keys.Define</a>]</td>
 <td><div class="info">
 <p>Atomic changes</p>
@@ -130,11 +138,26 @@
 <tr><td><a href="Parsetree.html#TYPEclass_field_kind">class_field_kind</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEclass_infos">class_infos</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">class_expr&nbsp;class_infos</code> represents: <code class="code"><span class="keyword">class</span>&nbsp;c&nbsp;=&nbsp;...</code>, <code class="code"><span class="keyword">class</span>&nbsp;[<span class="keywordsign">'</span>a1,...,<span class="keywordsign">'</span>an]&nbsp;c&nbsp;=&nbsp;...</code>, <code class="code"><span class="keyword">class</span>&nbsp;<span class="keyword">virtual</span>&nbsp;c&nbsp;=&nbsp;...</code>
+   They are also used for "class type" declaration.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEclass_signature">class_signature</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">class_signature</code> represents: <code class="code"><span class="keyword">object</span>(<span class="keywordsign">'</span>selfpat)&nbsp;...&nbsp;<span class="keyword">end</span></code>, <code class="code"><span class="keyword">object</span>&nbsp;...&nbsp;<span class="keyword">end</span></code> when <a href="Parsetree.html#TYPEELTclass_signature.pcsig_self"><code class="code">pcsig_self</code></a>
+                         is <a href="Parsetree.html#TYPEELTcore_type_desc.Ptyp_any"><code class="code"><span class="constructor">Ptyp_any</span></code></a></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEclass_structure">class_structure</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <a href="Parsetree.html#TYPEclass_structure"><code class="code"><span class="constructor">Parsetree</span>.class_structure</code></a> represents: <code class="code"><span class="keyword">object</span>(selfpat)&nbsp;...&nbsp;<span class="keyword">end</span></code>, <code class="code"><span class="keyword">object</span>&nbsp;...&nbsp;<span class="keyword">end</span></code> when <a href="Parsetree.html#TYPEELTclass_structure.pcstr_self"><code class="code">pcstr_self</code></a>
+                         is <a href="Parsetree.html#TYPEELTpattern_desc.Ppat_any"><code class="code"><span class="constructor">Ppat_any</span></code></a></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEclass_type">class_type</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEclass_type_declaration">class_type_declaration</a> [<a href="Parsetree.html">Parsetree</a>]</td>
@@ -249,7 +272,11 @@
 <tr><td><a href="Parsetree.html#TYPEexpression_desc">expression_desc</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEextension">extension</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Extension points such as <code class="code">[%id&nbsp;<span class="constructor">ARG</span>]&nbsp;<span class="keyword">and</span>&nbsp;[%%id&nbsp;<span class="constructor">ARG</span>]</code>.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEextension_constructor">extension_constructor</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEextension_constructor_kind">extension_constructor_kind</a> [<a href="Parsetree.html">Parsetree</a>]</td>
@@ -268,9 +295,17 @@
 <td></td></tr>
 <tr><td align="left"><div>I</div></td></tr>
 <tr><td><a href="Parsetree.html#TYPEinclude_declaration">include_declaration</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">include_declaration</code> represents <code class="code"><span class="keyword">include</span>&nbsp;<span class="constructor">ME</span></code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEinclude_description">include_description</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">include_description</code> represents <code class="code"><span class="keyword">include</span>&nbsp;<span class="constructor">MT</span></code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEinclude_infos">include_infos</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Misc.Magic_number.html#TYPEinfo">info</a> [<a href="Misc.Magic_number.html">Misc.Magic_number</a>]</td>
@@ -299,7 +334,16 @@
 <tr><td><a href="Asttypes.html#TYPElabel">label</a> [<a href="Asttypes.html">Asttypes</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPElabel_declaration">label_declaration</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>- <code class="code">{&nbsp;...;&nbsp;l:&nbsp;<span class="constructor">T</span>;&nbsp;...&nbsp;}</code>
+                           when <a href="Parsetree.html#TYPEELTlabel_declaration.pld_mutable"><code class="code">pld_mutable</code></a>
+                             is <a href="Asttypes.html#TYPEELTmutable_flag.Immutable"><code class="code"><span class="constructor">Immutable</span></code></a>, <code class="code">{&nbsp;...;&nbsp;<span class="keyword">mutable</span>&nbsp;l:&nbsp;<span class="constructor">T</span>;&nbsp;...&nbsp;}</code>
+                           when <a href="Parsetree.html#TYPEELTlabel_declaration.pld_mutable"><code class="code">pld_mutable</code></a>
+                             is <a href="Asttypes.html#TYPEELTmutable_flag.Mutable"><code class="code"><span class="constructor">Mutable</span></code></a>.
+   Note: <code class="code"><span class="constructor">T</span></code> can be a <a href="Parsetree.html#TYPEELTcore_type_desc.Ptyp_poly"><code class="code"><span class="constructor">Ptyp_poly</span></code></a>.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Diffing_with_keys.Define.html#TYPEleft">left</a> [<a href="Diffing_with_keys.Define.html">Diffing_with_keys.Define</a>]</td>
 <td></td></tr>
 <tr><td><a href="Diffing.Defs.html#TYPEleft">left</a> [<a href="Diffing.Defs.html">Diffing.Defs</a>]</td>
@@ -349,19 +393,36 @@
 <tr><td><a href="Misc.html#TYPEmodname">modname</a> [<a href="Misc.html">Misc</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_binding">module_binding</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">module_binding</code> represents <code class="code"><span class="keyword">module</span>&nbsp;<span class="constructor">X</span>&nbsp;=&nbsp;<span class="constructor">ME</span></code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_declaration">module_declaration</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">module_declaration</code> represents <code class="code"><span class="constructor">S</span>&nbsp;:&nbsp;<span class="constructor">MT</span></code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_expr">module_expr</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_expr_desc">module_expr_desc</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_substitution">module_substitution</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">module_substitution</code> represents <code class="code"><span class="constructor">S</span>&nbsp;:=&nbsp;<span class="constructor">M</span></code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_type">module_type</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_type_declaration">module_type_declaration</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">module_type_declaration</code> represents: <code class="code"><span class="constructor">S</span>&nbsp;=&nbsp;<span class="constructor">MT</span></code>,, <code class="code"><span class="constructor">S</span></code> for abstract module type declaration,
+     when <a href="Parsetree.html#TYPEELTmodule_type_declaration.pmtd_type"><code class="code">pmtd_type</code></a> is <code class="code"><span class="constructor">None</span></code>.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEmodule_type_desc">module_type_desc</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Location.html#TYPEmsg">msg</a> [<a href="Location.html">Location</a>]</td>
@@ -386,16 +447,36 @@
 <tr><td><a href="Parsetree.html#TYPEobject_field_desc">object_field_desc</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEopen_declaration">open_declaration</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">open_declaration</code> represents: <code class="code"><span class="keyword">open</span>&nbsp;<span class="constructor">M</span>.<span class="constructor">N</span></code>, <code class="code"><span class="keyword">open</span>&nbsp;<span class="constructor">M</span>(<span class="constructor">N</span>).<span class="constructor">O</span></code>, <code class="code"><span class="keyword">open</span>&nbsp;<span class="keyword">struct</span>&nbsp;...&nbsp;<span class="keyword">end</span></code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEopen_description">open_description</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code">open_description</code> represents: <code class="code"><span class="keyword">open</span>&nbsp;<span class="constructor">M</span>.<span class="constructor">N</span></code>, <code class="code"><span class="keyword">open</span>&nbsp;<span class="constructor">M</span>(<span class="constructor">N</span>).<span class="constructor">O</span></code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEopen_infos">open_infos</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <code class="code"><span class="keywordsign">'</span>a&nbsp;open_infos</code> represents: <code class="code"><span class="keyword">open</span>!&nbsp;<span class="constructor">X</span></code> when <a href="Parsetree.html#TYPEELTopen_infos.popen_override"><code class="code">popen_override</code></a>
+                  is <a href="Asttypes.html#TYPEELToverride_flag.Override"><code class="code"><span class="constructor">Override</span></code></a>
+    (silences the "used identifier shadowing" warning), <code class="code"><span class="keyword">open</span>&nbsp;&nbsp;<span class="constructor">X</span></code> when <a href="Parsetree.html#TYPEELTopen_infos.popen_override"><code class="code">popen_override</code></a>
+                  is <a href="Asttypes.html#TYPEELToverride_flag.Fresh"><code class="code"><span class="constructor">Fresh</span></code></a></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Asttypes.html#TYPEoverride_flag">override_flag</a> [<a href="Asttypes.html">Asttypes</a>]</td>
 <td></td></tr>
 <tr><td align="left"><div>P</div></td></tr>
 <tr><td><a href="Parsetree.html#TYPEpackage_type">package_type</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>As <a href="Parsetree.html#TYPEpackage_type"><code class="code"><span class="constructor">Parsetree</span>.package_type</code></a> typed values: <code class="code">(<span class="constructor">S</span>,&nbsp;[])</code> represents <code class="code">(<span class="keyword">module</span>&nbsp;<span class="constructor">S</span>)</code>,, <code class="code">(<span class="constructor">S</span>,&nbsp;[(t1,&nbsp;<span class="constructor">T1</span>)&nbsp;;&nbsp;...&nbsp;;&nbsp;(tn,&nbsp;<span class="constructor">Tn</span>)])</code>
+          represents <code class="code">(<span class="keyword">module</span>&nbsp;<span class="constructor">S</span>&nbsp;<span class="keyword">with</span>&nbsp;<span class="keyword">type</span>&nbsp;t1&nbsp;=&nbsp;<span class="constructor">T1</span>&nbsp;<span class="keyword">and</span>&nbsp;...&nbsp;<span class="keyword">and</span>&nbsp;tn&nbsp;=&nbsp;<span class="constructor">Tn</span>)</code>.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Build_path_prefix_map.html#TYPEpair">pair</a> [<a href="Build_path_prefix_map.html">Build_path_prefix_map</a>]</td>
 <td></td></tr>
 <tr><td><a href="Misc.Magic_number.html#TYPEparse_error">parse_error</a> [<a href="Misc.Magic_number.html">Misc.Magic_number</a>]</td>
@@ -628,11 +709,39 @@
 <tr><td><a href="CamlinternalMenhirLib.Convert.html#TYPEtraditional">traditional</a> [<a href="CamlinternalMenhirLib.Convert.html">CamlinternalMenhirLib.Convert</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEtype_declaration">type_declaration</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Here are type declarations and their representation,
+   for various <a href="Parsetree.html#TYPEELTtype_declaration.ptype_kind"><code class="code">ptype_kind</code></a>
+           and <a href="Parsetree.html#TYPEELTtype_declaration.ptype_manifest"><code class="code">ptype_manifest</code></a> values: <code class="code"><span class="keyword">type</span>&nbsp;t</code>   when <code class="code">type_kind</code> is <a href="Parsetree.html#TYPEELTtype_kind.Ptype_abstract"><code class="code"><span class="constructor">Ptype_abstract</span></code></a>,
+               and <code class="code">manifest</code>  is <code class="code"><span class="constructor">None</span></code>,, <code class="code"><span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">T0</span></code>
+              when <code class="code">type_kind</code> is <a href="Parsetree.html#TYPEELTtype_kind.Ptype_abstract"><code class="code"><span class="constructor">Ptype_abstract</span></code></a>,
+               and <code class="code">manifest</code>  is <code class="code"><span class="constructor">Some</span>&nbsp;<span class="constructor">T0</span></code>,, <code class="code"><span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">C</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">T</span>&nbsp;<span class="keywordsign">|</span>&nbsp;...</code>
+              when <code class="code">type_kind</code> is <a href="Parsetree.html#TYPEELTtype_kind.Ptype_variant"><code class="code"><span class="constructor">Ptype_variant</span></code></a>,
+               and <code class="code">manifest</code>  is <code class="code"><span class="constructor">None</span></code>,, <code class="code"><span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">T0</span>&nbsp;=&nbsp;<span class="constructor">C</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">T</span>&nbsp;<span class="keywordsign">|</span>&nbsp;...</code>
+              when <code class="code">type_kind</code> is <a href="Parsetree.html#TYPEELTtype_kind.Ptype_variant"><code class="code"><span class="constructor">Ptype_variant</span></code></a>,
+               and <code class="code">manifest</code>  is <code class="code"><span class="constructor">Some</span>&nbsp;<span class="constructor">T0</span></code>,, <code class="code"><span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;{l:&nbsp;<span class="constructor">T</span>;&nbsp;...}</code>
+              when <code class="code">type_kind</code> is <a href="Parsetree.html#TYPEELTtype_kind.Ptype_record"><code class="code"><span class="constructor">Ptype_record</span></code></a>,
+               and <code class="code">manifest</code>  is <code class="code"><span class="constructor">None</span></code>,, <code class="code"><span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;<span class="constructor">T0</span>&nbsp;=&nbsp;{l&nbsp;:&nbsp;<span class="constructor">T</span>;&nbsp;...}</code>
+              when <code class="code">type_kind</code> is <a href="Parsetree.html#TYPEELTtype_kind.Ptype_record"><code class="code"><span class="constructor">Ptype_record</span></code></a>,
+               and <code class="code">manifest</code>  is <code class="code"><span class="constructor">Some</span>&nbsp;<span class="constructor">T0</span></code>,, <code class="code"><span class="keyword">type</span>&nbsp;t&nbsp;=&nbsp;..</code>
+              when <code class="code">type_kind</code> is <a href="Parsetree.html#TYPEELTtype_kind.Ptype_open"><code class="code"><span class="constructor">Ptype_open</span></code></a>,
+               and <code class="code">manifest</code>  is <code class="code"><span class="constructor">None</span></code>.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEtype_exception">type_exception</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Definition of a new exception (<code class="code"><span class="keyword">exception</span>&nbsp;<span class="constructor">E</span></code>).</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEtype_extension">type_extension</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Definition of new extensions constructors for the extensive sum type <code class="code">t</code>
+   (<code class="code"><span class="keyword">type</span>&nbsp;t&nbsp;+=&nbsp;...</code>).</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Parsetree.html#TYPEtype_kind">type_kind</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td align="left"><div>U</div></td></tr>
@@ -646,7 +755,13 @@
 <tr><td><a href="Parsetree.html#TYPEvalue_binding">value_binding</a> [<a href="Parsetree.html">Parsetree</a>]</td>
 <td></td></tr>
 <tr><td><a href="Parsetree.html#TYPEvalue_description">value_description</a> [<a href="Parsetree.html">Parsetree</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Values of type <a href="Parsetree.html#TYPEvalue_description"><code class="code"><span class="constructor">Parsetree</span>.value_description</code></a> represents: <code class="code"><span class="keyword">val</span>&nbsp;x:&nbsp;<span class="constructor">T</span></code>,
+            when <a href="Parsetree.html#TYPEELTvalue_description.pval_prim"><code class="code">pval_prim</code></a> is <code class="code">[]</code>, <code class="code"><span class="keyword">external</span>&nbsp;x:&nbsp;<span class="constructor">T</span>&nbsp;=&nbsp;<span class="string">"s1"</span>&nbsp;...&nbsp;<span class="string">"sn"</span></code>
+            when <a href="Parsetree.html#TYPEELTvalue_description.pval_prim"><code class="code">pval_prim</code></a> is <code class="code">[<span class="string">"s1"</span>;...<span class="string">"sn"</span>]</code></p>
+
+</div>
+</td></tr>
 <tr><td><a href="Asttypes.html#TYPEvariance">variance</a> [<a href="Asttypes.html">Asttypes</a>]</td>
 <td></td></tr>
 <tr><td><a href="Misc.Magic_number.html#TYPEversion">version</a> [<a href="Misc.Magic_number.html">Misc.Magic_number</a>]</td>

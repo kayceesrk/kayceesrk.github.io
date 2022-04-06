@@ -7,12 +7,12 @@
 <link rel="stylesheet" type="text/css" href="manual.css">
 <title>OCaml - Batch compilation (ocamlc)</title>
 <script src="scroll.js"></script><script src="navigation.js"></script><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></head>
-<body><div class="content manual"><div id="sidebar-button"><span>☰</span></div><nav id="part-title"><span>☰</span>The OCaml tools</nav><ul id="part-menu"><li class="active"><a href="comp.html">Batch compilation (ocamlc)</a></li><li><a href="toplevel.html">The toplevel system or REPL (ocaml)</a></li><li><a href="runtime.html">The runtime system (ocamlrun)</a></li><li><a href="native.html">Native-code compilation (ocamlopt)</a></li><li><a href="lexyacc.html">Lexer and parser generators (ocamllex, ocamlyacc)</a></li><li><a href="depend.html">Dependency generator (ocamldep)</a></li><li><a href="ocamldoc.html">The documentation generator (ocamldoc)</a></li><li><a href="debugger.html">The debugger (ocamldebug)</a></li><li><a href="profil.html">Profiling (ocamlprof)</a></li><li><a href="intfc.html">Interfacing C with OCaml</a></li><li><a href="flambda.html">Optimisation with Flambda</a></li><li><a href="afl-fuzz.html">Fuzzing with afl-fuzz</a></li><li><a href="instrumented-runtime.html">Runtime tracing with the instrumented runtime</a></li></ul>
+<body><div class="content manual"><div id="sidebar-button"><span>☰</span></div><nav id="part-title"><span>☰</span>The OCaml tools</nav><ul id="part-menu"><li class="active"><a href="comp.html">Batch compilation (ocamlc)</a></li><li><a href="toplevel.html">The toplevel system or REPL (ocaml)</a></li><li><a href="runtime.html">The runtime system (ocamlrun)</a></li><li><a href="native.html">Native-code compilation (ocamlopt)</a></li><li><a href="lexyacc.html">Lexer and parser generators (ocamllex, ocamlyacc)</a></li><li><a href="depend.html">Dependency generator (ocamldep)</a></li><li><a href="ocamldoc.html">The documentation generator (ocamldoc)</a></li><li><a href="debugger.html">The debugger (ocamldebug)</a></li><li><a href="profil.html">Profiling (ocamlprof)</a></li><li><a href="intfc.html">Interfacing C with OCaml</a></li><li><a href="flambda.html">Optimisation with Flambda</a></li><li><a href="afl-fuzz.html">Fuzzing with afl-fuzz</a></li><li><a href="instrumented-runtime.html">Runtime tracing with the instrumented runtime</a></li><li><a href="tail_mod_cons.html">The “Tail Modulo Constructor” program transformation</a></li></ul>
 
 
 
 
-<h1 class="chapter" id="sec304"><span class="chapter-number">Chapter 12</span> Batch compilation (ocamlc)</h1>
+<h1 class="chapter" id="sec304"><span class="chapter-number">Chapter 11</span> Batch compilation (ocamlc)</h1>
 <header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Batch compilation (ocamlc)</a></li>
 <li><a href="comp.html#s%3Acomp-overview"><span class="number">1</span> Overview of the compiler</a>
 </li><li><a href="comp.html#s%3Acomp-options"><span class="number">2</span> Options</a>
@@ -80,7 +80,7 @@ produced by the linking phase, the command
 </pre><p>
 executes the compiled code contained in <span class="machine"><span class="font-tt">a.out</span></span>, passing it as
 arguments the character strings <span class="font-it">arg</span><sub>1</sub> to <span class="font-it">arg</span><sub><span class="font-it">n</span></sub>.
-(See chapter ‍<a href="runtime.html#c%3Aruntime">14</a> for more details.)</p><p>On most systems, the file produced by the linking
+(See chapter ‍<a href="runtime.html#c%3Aruntime">13</a> for more details.)</p><p>On most systems, the file produced by the linking
 phase can be run directly, as in:
 </p><pre>        ./a.out <span class="font-it">arg</span><sub>1</sub> <span class="font-it">arg</span><sub>2</sub> … <span class="font-it">arg</span><sub><span class="font-it">n</span></sub>
 </pre><p>
@@ -145,7 +145,7 @@ Use the given interface file to type-check the ML source file to compile.
 When this option is not specified, the compiler looks for a <span class="font-it">.mli</span> file
 with the same base name than the implementation it is compiling and in the
 same directory. If such a file is found, the compiler looks for a
-correspoinding <span class="font-it">.cmi</span> file in the included directories and reports an
+corresponding <span class="font-it">.cmi</span> file in the included directories and reports an
 error if it fails to find one.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-color</span></span> <span class="font-it">mode</span></span></dt><dd class="dd-description">
 Enable or disable colors in compiler messages (especially warnings and errors).
@@ -192,7 +192,7 @@ and the bytecode for the program. The resulting file is larger, but it
 can be executed directly, even if the <span class="machine"><span class="font-tt">ocamlrun</span></span> command is not
 installed. Moreover, the “custom runtime” mode enables static
 linking of OCaml code with user-defined C functions, as described in
-chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>.
+chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>.
 <blockquote class="quote"><span class="osvariant">Unix:</span> 
 Never use the <span class="machine"><span class="font-tt">strip</span></span> command on executables produced by <span class="machine"><span class="font-tt">ocamlc -custom</span></span>,
 this would remove the bytecode part of the executable.
@@ -214,7 +214,7 @@ C libraries. At link-time, shared libraries are searched in the
 standard search path (the one corresponding to the <span class="machine"><span class="font-tt">-I</span></span> option).
 The <span class="machine"><span class="font-tt">-dllpath</span></span> option simply stores <span class="font-it">dir</span> in the produced
 executable file, where <span class="machine"><span class="font-tt">ocamlrun</span></span> can find it and use it as
-described in section ‍<a href="runtime.html#s%3Aocamlrun-dllpath">14.3</a>.
+described in section ‍<a href="runtime.html#s%3Aocamlrun-dllpath">13.3</a>.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-for-pack</span></span> <span class="font-it">module-path</span></span></dt><dd class="dd-description">
 Generate an object file (<span class="machine"><span class="font-tt">.cmo</span></span>)
 that can later be included
@@ -229,9 +229,9 @@ names.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-g</span></span></span></dt><dd class="dd-description">
 Add debugging information while compiling and linking. This option is
 required in order to be able to debug the program with <span class="machine"><span class="font-tt">ocamldebug</span></span>
-(see chapter ‍<a href="debugger.html#c%3Adebugger">19</a>), and to produce stack backtraces when
+(see chapter ‍<a href="debugger.html#c%3Adebugger">18</a>), and to produce stack backtraces when
 the program terminates on an uncaught exception (see
-section ‍<a href="runtime.html#s%3Aocamlrun-options">14.2</a>).
+section ‍<a href="runtime.html#s%3Aocamlrun-options">13.2</a>).
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-i</span></span></span></dt><dd class="dd-description">
 Cause the compiler to print all defined names (with their inferred
 types or their definitions) when compiling an implementation (<span class="machine"><span class="font-tt">.ml</span></span>
@@ -277,7 +277,7 @@ incorporating the C object files and libraries given on the command
 line. This custom runtime system can be used later to execute
 bytecode executables produced with the
 <span class="machine"><span class="font-tt">ocamlc -use-runtime</span></span> <span class="font-it">runtime-name</span> option.
-See section ‍<a href="intfc.html#ss%3Acustom-runtime">21.1.6</a> for more information.
+See section ‍<a href="intfc.html#ss%3Acustom-runtime">20.1.6</a> for more information.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-match-context-rows</span></span></span></dt><dd class="dd-description">
 Set the number of rows of context used for optimization during
 pattern matching compilation. The default value is 32. Lower values
@@ -286,7 +286,7 @@ option is meant for use in the event that a pattern-match-heavy
 program leads to significant increases in compilation time.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-alias-deps</span></span></span></dt><dd class="dd-description">
 Do not record dependencies for module aliases. See
-section ‍<a href="modulealias.html#s%3Amodule-alias">11.8</a> for more information.
+section ‍<a href="modulealias.html#s%3Amodule-alias">10.8</a> for more information.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-app-funct</span></span></span></dt><dd class="dd-description">
 Deactivates the applicative behaviour of functors. With this option,
 each functor application generates new types in its result and
@@ -352,8 +352,8 @@ were added at the top of each file.
 Cause the linker to produce a C object file instead of
 a bytecode executable file.
 This is useful to wrap OCaml code as a C library,
-callable from any C program. See chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>,
-section ‍<a href="intfc.html#ss%3Ac-embedded-code">21.7.5</a>. The name of the output object file
+callable from any C program. See chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>,
+section ‍<a href="intfc.html#ss%3Ac-embedded-code">20.7.5</a>. The name of the output object file
 must be set with the <span class="machine"><span class="font-tt">-o</span></span> option.
 This option can also be used to produce a C source file (<span class="machine"><span class="font-tt">.c</span></span> extension)
 or a compiled shared/dynamic library (<span class="machine"><span class="font-tt">.so</span></span> extension, <span class="machine"><span class="font-tt">.dll</span></span> under Windows).
@@ -449,7 +449,7 @@ since OCaml 5.0.</dd><dt class="dt-description"><span class="font-bold"><span cl
 Generate a bytecode executable file that can be executed on the custom
 runtime system <span class="font-it">runtime-name</span>, built earlier with
 <span class="machine"><span class="font-tt">ocamlc -make-runtime</span></span> <span class="font-it">runtime-name</span>.
-See section ‍<a href="intfc.html#ss%3Acustom-runtime">21.1.6</a> for more information.
+See section ‍<a href="intfc.html#ss%3Acustom-runtime">20.1.6</a> for more information.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-v</span></span></span></dt><dd class="dd-description">
 Print the version number of the compiler and the location of the
 standard library directory, then exit.</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-verbose</span></span></span></dt><dd class="dd-description">
@@ -537,49 +537,49 @@ character.
 </dd><dt class="dt-description"><span class="font-bold">29 <span class="machine"><span class="font-tt">eol-in-string</span></span></span></dt><dd class="dd-description"> Unescaped end-of-line in a string constant (non-portable code).
 </dd><dt class="dt-description"><span class="font-bold">30 <span class="machine"><span class="font-tt">duplicate-definitions</span></span></span></dt><dd class="dd-description"> Two labels or constructors of the same name are defined in two
 mutually recursive types.
-</dd><dt class="dt-description"><span class="font-bold">31 <span class="machine"><span class="font-tt">module-linked-twice</span></span></span></dt><dd class="dd-description"> A module is linked twice in the same executable.
-</dd><dt class="dt-description"><span class="font-bold">32 <span class="machine"><span class="font-tt">unused-value-declaration</span></span></span></dt><dd class="dd-description"> Unused value declaration.
-</dd><dt class="dt-description"><span class="font-bold">33 <span class="machine"><span class="font-tt">unused-open</span></span></span></dt><dd class="dd-description"> Unused open statement.
-</dd><dt class="dt-description"><span class="font-bold">34 <span class="machine"><span class="font-tt">unused-type-declaration</span></span></span></dt><dd class="dd-description"> Unused type declaration.
-</dd><dt class="dt-description"><span class="font-bold">35 <span class="machine"><span class="font-tt">unused-for-index</span></span></span></dt><dd class="dd-description"> Unused for-loop index.
-</dd><dt class="dt-description"><span class="font-bold">36 <span class="machine"><span class="font-tt">unused-ancestor</span></span></span></dt><dd class="dd-description"> Unused ancestor variable.
-</dd><dt class="dt-description"><span class="font-bold">37 <span class="machine"><span class="font-tt">unused-constructor</span></span></span></dt><dd class="dd-description"> Unused constructor.
-</dd><dt class="dt-description"><span class="font-bold">38 <span class="machine"><span class="font-tt">unused-extension</span></span></span></dt><dd class="dd-description"> Unused extension constructor.
-</dd><dt class="dt-description"><span class="font-bold">39 <span class="machine"><span class="font-tt">unused-rec-flag</span></span></span></dt><dd class="dd-description"> Unused rec flag.
-</dd><dt class="dt-description"><span class="font-bold">40 <span class="machine"><span class="font-tt">name-out-of-scope</span></span></span></dt><dd class="dd-description"> Constructor or label name used out of scope.
-</dd><dt class="dt-description"><span class="font-bold">41 <span class="machine"><span class="font-tt">ambiguous-name</span></span></span></dt><dd class="dd-description"> Ambiguous constructor or label name.
-</dd><dt class="dt-description"><span class="font-bold">42 <span class="machine"><span class="font-tt">disambiguated-name</span></span></span></dt><dd class="dd-description"> Disambiguated constructor or label name (compatibility warning).
-</dd><dt class="dt-description"><span class="font-bold">43 <span class="machine"><span class="font-tt">nonoptional-label</span></span></span></dt><dd class="dd-description"> Nonoptional label applied as optional.
-</dd><dt class="dt-description"><span class="font-bold">44 <span class="machine"><span class="font-tt">open-shadow-identifier</span></span></span></dt><dd class="dd-description"> Open statement shadows an already defined identifier.
-</dd><dt class="dt-description"><span class="font-bold">45 <span class="machine"><span class="font-tt">open-shadow-label-constructor</span></span></span></dt><dd class="dd-description"> Open statement shadows an already defined label or constructor.
-</dd><dt class="dt-description"><span class="font-bold">46 <span class="machine"><span class="font-tt">bad-env-variable</span></span></span></dt><dd class="dd-description"> Error in environment variable.
-</dd><dt class="dt-description"><span class="font-bold">47 <span class="machine"><span class="font-tt">attribute-payload</span></span></span></dt><dd class="dd-description"> Illegal attribute payload.
-</dd><dt class="dt-description"><span class="font-bold">48 <span class="machine"><span class="font-tt">eliminated-optional-arguments</span></span></span></dt><dd class="dd-description"> Implicit elimination of optional arguments.
-</dd><dt class="dt-description"><span class="font-bold">49 <span class="machine"><span class="font-tt">no-cmi-file</span></span></span></dt><dd class="dd-description"> Absent cmi file when looking up module alias.
-</dd><dt class="dt-description"><span class="font-bold">50 <span class="machine"><span class="font-tt">unexpected-docstring</span></span></span></dt><dd class="dd-description"> Unexpected documentation comment.
-</dd><dt class="dt-description"><span class="font-bold">51 <span class="machine"><span class="font-tt">wrong-tailcall-expectation</span></span></span></dt><dd class="dd-description"> Function call annotated with an incorrect @tailcall attribute
-</dd><dt class="dt-description"><span class="font-bold">52 <span class="machine"><span class="font-tt">fragile-literal-pattern</span></span> (see </span><a href="#ss%3Awarn52"><span class="font-bold">12.5.3</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Fragile constant pattern.
-</dd><dt class="dt-description"><span class="font-bold">53 <span class="machine"><span class="font-tt">misplaced-attribute</span></span></span></dt><dd class="dd-description"> Attribute cannot appear in this context.
-</dd><dt class="dt-description"><span class="font-bold">54 <span class="machine"><span class="font-tt">duplicated-attribute</span></span></span></dt><dd class="dd-description"> Attribute used more than once on an expression.
-</dd><dt class="dt-description"><span class="font-bold">55 <span class="machine"><span class="font-tt">inlining-impossible</span></span></span></dt><dd class="dd-description"> Inlining impossible.
-</dd><dt class="dt-description"><span class="font-bold">56 <span class="machine"><span class="font-tt">unreachable-case</span></span></span></dt><dd class="dd-description"> Unreachable case in a pattern-matching (based on type information).
-</dd><dt class="dt-description"><span class="font-bold">57 <span class="machine"><span class="font-tt">ambiguous-var-in-pattern-guard</span></span> (see </span><a href="#ss%3Awarn57"><span class="font-bold">12.5.4</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Ambiguous or-pattern variables under guard.
-</dd><dt class="dt-description"><span class="font-bold">58 <span class="machine"><span class="font-tt">no-cmx-file</span></span></span></dt><dd class="dd-description"> Missing cmx file.
-</dd><dt class="dt-description"><span class="font-bold">59 <span class="machine"><span class="font-tt">flambda-assignment-to-non-mutable-value</span></span></span></dt><dd class="dd-description"> Assignment to non-mutable value.
-</dd><dt class="dt-description"><span class="font-bold">60 <span class="machine"><span class="font-tt">unused-module</span></span></span></dt><dd class="dd-description"> Unused module declaration.
-</dd><dt class="dt-description"><span class="font-bold">61 <span class="machine"><span class="font-tt">unboxable-type-in-prim-decl</span></span></span></dt><dd class="dd-description"> Unboxable type in primitive declaration.
-</dd><dt class="dt-description"><span class="font-bold">62 <span class="machine"><span class="font-tt">constraint-on-gadt</span></span></span></dt><dd class="dd-description"> Type constraint on GADT type declaration.
-</dd><dt class="dt-description"><span class="font-bold">63 <span class="machine"><span class="font-tt">erroneous-printed-signature</span></span></span></dt><dd class="dd-description"> Erroneous printed signature.
-</dd><dt class="dt-description"><span class="font-bold">64 <span class="machine"><span class="font-tt">unsafe-array-syntax-without-parsing</span></span></span></dt><dd class="dd-description"> -unsafe used with a preprocessor returning a syntax tree.
-</dd><dt class="dt-description"><span class="font-bold">65 <span class="machine"><span class="font-tt">redefining-unit</span></span></span></dt><dd class="dd-description"> Type declaration defining a new ’()’ constructor.
-</dd><dt class="dt-description"><span class="font-bold">66 <span class="machine"><span class="font-tt">unused-open-bang</span></span></span></dt><dd class="dd-description"> Unused open! statement.
-</dd><dt class="dt-description"><span class="font-bold">67 <span class="machine"><span class="font-tt">unused-functor-parameter</span></span></span></dt><dd class="dd-description"> Unused functor parameter.
+</dd><dt class="dt-description"><span class="font-bold">31 <span class="machine"><span class="font-tt">module-linked-twice</span></span></span></dt><dd class="dd-description"> A module is linked twice in the same executable. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">32 <span class="machine"><span class="font-tt">unused-value-declaration</span></span></span></dt><dd class="dd-description"> Unused value declaration. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">33 <span class="machine"><span class="font-tt">unused-open</span></span></span></dt><dd class="dd-description"> Unused open statement. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">34 <span class="machine"><span class="font-tt">unused-type-declaration</span></span></span></dt><dd class="dd-description"> Unused type declaration. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">35 <span class="machine"><span class="font-tt">unused-for-index</span></span></span></dt><dd class="dd-description"> Unused for-loop index. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">36 <span class="machine"><span class="font-tt">unused-ancestor</span></span></span></dt><dd class="dd-description"> Unused ancestor variable. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">37 <span class="machine"><span class="font-tt">unused-constructor</span></span></span></dt><dd class="dd-description"> Unused constructor. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">38 <span class="machine"><span class="font-tt">unused-extension</span></span></span></dt><dd class="dd-description"> Unused extension constructor. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">39 <span class="machine"><span class="font-tt">unused-rec-flag</span></span></span></dt><dd class="dd-description"> Unused rec flag. (since 4.00)
+</dd><dt class="dt-description"><span class="font-bold">40 <span class="machine"><span class="font-tt">name-out-of-scope</span></span></span></dt><dd class="dd-description"> Constructor or label name used out of scope. (since 4.01)
+</dd><dt class="dt-description"><span class="font-bold">41 <span class="machine"><span class="font-tt">ambiguous-name</span></span></span></dt><dd class="dd-description"> Ambiguous constructor or label name. (since 4.01)
+</dd><dt class="dt-description"><span class="font-bold">42 <span class="machine"><span class="font-tt">disambiguated-name</span></span></span></dt><dd class="dd-description"> Disambiguated constructor or label name (compatibility warning). (since 4.01)
+</dd><dt class="dt-description"><span class="font-bold">43 <span class="machine"><span class="font-tt">nonoptional-label</span></span></span></dt><dd class="dd-description"> Nonoptional label applied as optional. (since 4.01)
+</dd><dt class="dt-description"><span class="font-bold">44 <span class="machine"><span class="font-tt">open-shadow-identifier</span></span></span></dt><dd class="dd-description"> Open statement shadows an already defined identifier. (since 4.01)
+</dd><dt class="dt-description"><span class="font-bold">45 <span class="machine"><span class="font-tt">open-shadow-label-constructor</span></span></span></dt><dd class="dd-description"> Open statement shadows an already defined label or constructor. (since 4.01)
+</dd><dt class="dt-description"><span class="font-bold">46 <span class="machine"><span class="font-tt">bad-env-variable</span></span></span></dt><dd class="dd-description"> Error in environment variable. (since 4.01)
+</dd><dt class="dt-description"><span class="font-bold">47 <span class="machine"><span class="font-tt">attribute-payload</span></span></span></dt><dd class="dd-description"> Illegal attribute payload. (since 4.02)
+</dd><dt class="dt-description"><span class="font-bold">48 <span class="machine"><span class="font-tt">eliminated-optional-arguments</span></span></span></dt><dd class="dd-description"> Implicit elimination of optional arguments. (since 4.02)
+</dd><dt class="dt-description"><span class="font-bold">49 <span class="machine"><span class="font-tt">no-cmi-file</span></span></span></dt><dd class="dd-description"> Absent cmi file when looking up module alias. (since 4.02)
+</dd><dt class="dt-description"><span class="font-bold">50 <span class="machine"><span class="font-tt">unexpected-docstring</span></span></span></dt><dd class="dd-description"> Unexpected documentation comment. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">51 <span class="machine"><span class="font-tt">wrong-tailcall-expectation</span></span></span></dt><dd class="dd-description"> Function call annotated with an incorrect @tailcall attribute. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">52 <span class="machine"><span class="font-tt">fragile-literal-pattern</span></span> (see </span><a href="#ss%3Awarn52"><span class="font-bold">11.5.3</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Fragile constant pattern. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">53 <span class="machine"><span class="font-tt">misplaced-attribute</span></span></span></dt><dd class="dd-description"> Attribute cannot appear in this context. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">54 <span class="machine"><span class="font-tt">duplicated-attribute</span></span></span></dt><dd class="dd-description"> Attribute used more than once on an expression. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">55 <span class="machine"><span class="font-tt">inlining-impossible</span></span></span></dt><dd class="dd-description"> Inlining impossible. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">56 <span class="machine"><span class="font-tt">unreachable-case</span></span></span></dt><dd class="dd-description"> Unreachable case in a pattern-matching (based on type information). (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">57 <span class="machine"><span class="font-tt">ambiguous-var-in-pattern-guard</span></span> (see </span><a href="#ss%3Awarn57"><span class="font-bold">11.5.4</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Ambiguous or-pattern variables under guard. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">58 <span class="machine"><span class="font-tt">no-cmx-file</span></span></span></dt><dd class="dd-description"> Missing cmx file. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">59 <span class="machine"><span class="font-tt">flambda-assignment-to-non-mutable-value</span></span></span></dt><dd class="dd-description"> Assignment to non-mutable value. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">60 <span class="machine"><span class="font-tt">unused-module</span></span></span></dt><dd class="dd-description"> Unused module declaration. (since 4.04)
+</dd><dt class="dt-description"><span class="font-bold">61 <span class="machine"><span class="font-tt">unboxable-type-in-prim-decl</span></span></span></dt><dd class="dd-description"> Unboxable type in primitive declaration. (since 4.04)
+</dd><dt class="dt-description"><span class="font-bold">62 <span class="machine"><span class="font-tt">constraint-on-gadt</span></span></span></dt><dd class="dd-description"> Type constraint on GADT type declaration. (since 4.06)
+</dd><dt class="dt-description"><span class="font-bold">63 <span class="machine"><span class="font-tt">erroneous-printed-signature</span></span></span></dt><dd class="dd-description"> Erroneous printed signature. (since 4.08)
+</dd><dt class="dt-description"><span class="font-bold">64 <span class="machine"><span class="font-tt">unsafe-array-syntax-without-parsing</span></span></span></dt><dd class="dd-description"> -unsafe used with a preprocessor returning a syntax tree. (since 4.08)
+</dd><dt class="dt-description"><span class="font-bold">65 <span class="machine"><span class="font-tt">redefining-unit</span></span></span></dt><dd class="dd-description"> Type declaration defining a new ’()’ constructor. (since 4.08)
+</dd><dt class="dt-description"><span class="font-bold">66 <span class="machine"><span class="font-tt">unused-open-bang</span></span></span></dt><dd class="dd-description"> Unused open! statement. (since 4.08)
+</dd><dt class="dt-description"><span class="font-bold">67 <span class="machine"><span class="font-tt">unused-functor-parameter</span></span></span></dt><dd class="dd-description"> Unused functor parameter. (since 4.10)
 </dd><dt class="dt-description"><span class="font-bold">68 <span class="machine"><span class="font-tt">match-on-mutable-state-prevent-uncurry</span></span></span></dt><dd class="dd-description"> Pattern-matching depending on mutable state prevents the remaining 
-arguments from being uncurried.
-</dd><dt class="dt-description"><span class="font-bold">69 <span class="machine"><span class="font-tt">unused-field</span></span></span></dt><dd class="dd-description"> Unused record field.
-</dd><dt class="dt-description"><span class="font-bold">70 <span class="machine"><span class="font-tt">missing-mli</span></span></span></dt><dd class="dd-description"> Missing interface file.
-</dd><dt class="dt-description"><span class="font-bold">71 <span class="machine"><span class="font-tt">unused-tmc-attribute</span></span></span></dt><dd class="dd-description"> Unused @tail_mod_cons attribute
-</dd><dt class="dt-description"><span class="font-bold">72 <span class="machine"><span class="font-tt">tmc-breaks-tailcall</span></span></span></dt><dd class="dd-description"> A tail call is turned into a non-tail call by the @tail_mod_cons transformation.
+arguments from being uncurried. (since 4.12)
+</dd><dt class="dt-description"><span class="font-bold">69 <span class="machine"><span class="font-tt">unused-field</span></span></span></dt><dd class="dd-description"> Unused record field. (since 4.13)
+</dd><dt class="dt-description"><span class="font-bold">70 <span class="machine"><span class="font-tt">missing-mli</span></span></span></dt><dd class="dd-description"> Missing interface file. (since 4.13)
+</dd><dt class="dt-description"><span class="font-bold">71 <span class="machine"><span class="font-tt">unused-tmc-attribute</span></span></span></dt><dd class="dd-description"> Unused @tail_mod_cons attribute. (since 4.14)
+</dd><dt class="dt-description"><span class="font-bold">72 <span class="machine"><span class="font-tt">tmc-breaks-tailcall</span></span></span></dt><dd class="dd-description"> A tail call is turned into a non-tail call by the @tail_mod_cons transformation. (since 4.14)
 </dd><dt class="dt-description"><span class="font-bold">A</span></dt><dd class="dd-description"> all warnings
 </dd><dt class="dt-description"><span class="font-bold">C</span></dt><dd class="dd-description"> warnings 1, 2.
 </dd><dt class="dt-description"><span class="font-bold">D</span></dt><dd class="dd-description"> Alias for warning 3.
@@ -792,7 +792,7 @@ mod2.ml:    let g y = ... Mod1.f ...
 </pre></li></ul></dd><dt class="dt-description"><span class="font-bold">The external function <span class="font-it">f</span> is not available</span></dt><dd class="dd-description">
 This error appears when trying to link code that calls external
 functions written in C. As explained in
-chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>, such code must be linked with C libraries that
+chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>, such code must be linked with C libraries that
 implement the required <span class="font-it">f</span> C function. If the C libraries in
 question are not shared libraries (DLLs), the code must be linked in
 “custom runtime” mode. Fix: add the required C libraries to the
@@ -858,7 +858,7 @@ string, but only in the case in which library authors expressed
 their intent to possibly change the constructor parameter value in
 the future, by using the attribute <span class="machine"><span class="font-tt">ocaml.warn_on_literal_pattern</span></span>
 (see the manual section on builtin attributes in
-<a href="attributes.html#ss%3Abuiltin-attributes">11.12.1</a>):
+<a href="attributes.html#ss%3Abuiltin-attributes">10.12.1</a>):
 
 </p><div class="caml-example verbatim">
 
@@ -882,7 +882,7 @@ the future, by using the attribute <span class="machine"><span class="font-tt">o
 
 <div class="pre caml-output warn"><span class="ocamlwarning">Warning</span> 52 [fragile-literal-pattern]: Code should not depend on the actual values of
 this constructor's arguments. They are only for information
-and may change in future versions. (See manual section 12.5)</div></div>
+and may change in future versions. (See manual section 11.5)</div></div>
 
 </div><p>In particular, all built-in exceptions with a string argument have
 this attribute set: <span class="machine"><span class="font-tt">Invalid_argument</span></span>, <span class="machine"><span class="font-tt">Failure</span></span>, <span class="machine"><span class="font-tt">Sys_error</span></span> will
@@ -906,7 +906,7 @@ those several cases.</p><p>For example,
   | Failure "int_of_string" -&gt; (0, true)
   | Failure "bool_of_string" -&gt; (-1, false)
 </pre><p> should be rewritten into more atomic tests. For example,
-using the <span class="machine"><span class="font-tt">exception</span></span> patterns documented in Section ‍<a href="patterns.html#sss%3Aexception-match">10.6</a>,
+using the <span class="machine"><span class="font-tt">exception</span></span> patterns documented in Section ‍<a href="patterns.html#sss%3Aexception-match">9.6</a>,
 one can write:
 </p><pre>match int_of_string count_str with
   | exception (Failure _) -&gt; (0, true)

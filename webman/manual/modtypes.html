@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec93"><span class="chapter-number">Chapter 10</span> The OCaml language</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">The OCaml language</a></li>
+<h1 class="chapter" id="sec80"><span class="chapter-number">Chapter 9</span> The OCaml language</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">The OCaml language</a></li>
 <li><a href="lex.html#start-section"><span class="number">1</span> Lexical conventions</a>
 </li><li><a href="values.html#start-section"><span class="number">2</span> Values</a>
 </li><li><a href="names.html#start-section"><span class="number">3</span> Names</a>
@@ -129,7 +129,7 @@ meaning.</p><h4 class="subsubsection" id="sss:mty-values"><a class="section-anch
 value and <a class="syntax" href="types.html#typexpr"><span class="nonterminal">typexpr</span></a> its expected type.</p><p><a id="hevea_manual.kwd166"></a></p><p>The form <span class="syntax-token">external</span> <a class="syntax" href="names.html#value-name"><span class="nonterminal">value-name</span></a> <span class="syntax-token">:</span> <a class="syntax" href="types.html#typexpr"><span class="nonterminal">typexpr</span></a> <span class="syntax-token">=</span> <a class="syntax" href="intfc.html#external-declaration"><span class="nonterminal">external-declaration</span></a>
 is similar, except that it requires in addition the name to be
 implemented as the external function specified in <a class="syntax" href="intfc.html#external-declaration"><span class="nonterminal">external-declaration</span></a>
-(see chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>).</p><h4 class="subsubsection" id="sss:mty-type"><a class="section-anchor" href="#sss:mty-type" aria-hidden="true">﻿</a>Type specifications</h4>
+(see chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>).</p><h4 class="subsubsection" id="sss:mty-type"><a class="section-anchor" href="#sss:mty-type" aria-hidden="true">﻿</a>Type specifications</h4>
 <p><a id="hevea_manual.kwd167"></a></p><p>A specification of one or several type components in a signature is
 written <span class="syntax-token">type</span> <a class="syntax" href="typedecl.html#typedef"><span class="nonterminal">typedef</span></a> { <span class="syntax-token">and</span> <a class="syntax" href="typedecl.html#typedef"><span class="nonterminal">typedef</span></a> } and consists of a sequence
 of mutually recursive definitions of type names.</p><p>Each type definition in the signature specifies an optional type
@@ -173,13 +173,13 @@ users of the structure.</p><h4 class="subsubsection" id="sss:mty-class"><a class
 <p><a id="hevea_manual.kwd169"></a></p><p>A specification of one or several classes in a signature is written
 <span class="syntax-token">class</span> <a class="syntax" href="classes.html#class-spec"><span class="nonterminal">class-spec</span></a> { <span class="syntax-token">and</span> <a class="syntax" href="classes.html#class-spec"><span class="nonterminal">class-spec</span></a> } and consists of a sequence
 of mutually recursive definitions of class names.</p><p>Class specifications are described more precisely in
-section ‍<a href="classes.html#ss%3Aclass-spec">10.9.4</a>.</p><h4 class="subsubsection" id="sss:mty-classtype"><a class="section-anchor" href="#sss:mty-classtype" aria-hidden="true">﻿</a>Class type specifications</h4>
+section ‍<a href="classes.html#ss%3Aclass-spec">9.9.4</a>.</p><h4 class="subsubsection" id="sss:mty-classtype"><a class="section-anchor" href="#sss:mty-classtype" aria-hidden="true">﻿</a>Class type specifications</h4>
 <p><a id="hevea_manual.kwd170"></a>
 <a id="hevea_manual.kwd171"></a></p><p>A specification of one or several class types in a signature is
 written <span class="syntax-token">class</span> <span class="syntax-token">type</span> <a class="syntax" href="classes.html#classtype-def"><span class="nonterminal">classtype-def</span></a> { <span class="syntax-token">and</span> <a class="syntax" href="classes.html#classtype-def"><span class="nonterminal">classtype-def</span></a> } and
 consists of a sequence of mutually recursive definitions of class type
 names. Class type specifications are described more precisely in
-section ‍<a href="classes.html#ss%3Aclasstype">10.9.5</a>.</p><h4 class="subsubsection" id="sss:mty-module"><a class="section-anchor" href="#sss:mty-module" aria-hidden="true">﻿</a>Module specifications</h4>
+section ‍<a href="classes.html#ss%3Aclasstype">9.9.5</a>.</p><h4 class="subsubsection" id="sss:mty-module"><a class="section-anchor" href="#sss:mty-module" aria-hidden="true">﻿</a>Module specifications</h4>
 <p><a id="hevea_manual.kwd172"></a></p><p>A specification of a module component in a signature is written
 <span class="syntax-token">module</span> <a class="syntax" href="names.html#module-name"><span class="nonterminal">module-name</span></a> <span class="syntax-token">:</span> <a class="syntax" href="#module-type"><span class="nonterminal">module-type</span></a>, where <a class="syntax" href="names.html#module-name"><span class="nonterminal">module-name</span></a> is the
 name of the module component and <a class="syntax" href="#module-type"><span class="nonterminal">module-type</span></a> its expected type.

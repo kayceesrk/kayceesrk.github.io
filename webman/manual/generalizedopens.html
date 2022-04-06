@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec259"><span class="chapter-number">Chapter 11</span> Language extensions</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Language extensions</a></li>
+<h1 class="chapter" id="sec246"><span class="chapter-number">Chapter 10</span> Language extensions</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Language extensions</a></li>
 <li><a href="letrecvalues.html#start-section"><span class="number">1</span> Recursive definitions of values</a>
 </li><li><a href="recursivemodules.html#start-section"><span class="number">2</span> Recursive modules</a>
 </li><li><a href="privatetypes.html#start-section"><span class="number">3</span> Private types</a>
@@ -36,6 +36,7 @@
 </li><li><a href="alerts.html#start-section"><span class="number">21</span> Alerts</a>
 </li><li><a href="generalizedopens.html#start-section"><span class="number">22</span> Generalized open statements</a>
 </li><li><a href="bindingops.html#start-section"><span class="number">23</span> Binding operators</a>
+</li><li><a href="effects.html#start-section"><span class="number">24</span> Effect handlers</a>
 </li></ul></nav></header><a id="start-section"></a><section id="section">
 
 
@@ -204,7 +205,7 @@ locally. Although the above would be OK if <span class="machine"><span class="fo
 
 </div><p>and not</p><pre>  open struct type t = int end
 </pre><p>
-In those situations, local substitutions(see <a href="signaturesubstitution.html#ss%3Alocal-substitution">11.7.2</a>)
+In those situations, local substitutions(see <a href="signaturesubstitution.html#ss%3Alocal-substitution">10.7.2</a>)
 can be used instead.</p><p>Beware that this extension is not available inside class definitions:</p><pre>class c =
   let open Set.Make(Int) in
   ...

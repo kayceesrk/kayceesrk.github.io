@@ -5,24 +5,52 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <link rel="stylesheet" type="text/css" href="manual.css">
-<title>OCaml - Effect handlers</title>
+<title>OCaml - Language extensions</title>
 <script src="scroll.js"></script><script src="navigation.js"></script><link rel="shortcut icon" type="image/x-icon" href="favicon.ico"></head>
-<body><div class="content manual"><div id="sidebar-button"><span>☰</span></div><nav id="part-title"><span>☰</span>An introduction to OCaml</nav><ul id="part-menu"><li><a href="coreexamples.html">The core language</a></li><li><a href="moduleexamples.html">The module system</a></li><li><a href="objectexamples.html">Objects in OCaml</a></li><li><a href="lablexamples.html">Labeled arguments</a></li><li><a href="polyvariant.html">Polymorphic variants</a></li><li><a href="polymorphism.html">Polymorphism and its limitations</a></li><li><a href="gadts-tutorial.html">Generalized algebraic datatypes</a></li><li><a href="advexamples.html">Advanced examples with classes and modules</a></li><li class="active"><a href="effects-tutorial.html">Effect handlers</a></li></ul>
+<body><div class="content manual"><div id="sidebar-button"><span>☰</span></div><nav id="part-title"><span>☰</span>The OCaml language</nav><ul id="part-menu"><li><a href="language.html">The OCaml language</a></li><li class="active"><a href="extn.html">Language extensions</a></li></ul>
 
 
 
 
-<h1 class="chapter" id="sec79"><span class="chapter-number">Chapter 9</span> Effect handlers</h1>
-<header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Effect handlers</a></li>
-<li><a href="effects-tutorial.html#s%3Aeffects-basics"><span class="number">1</span> Basics</a>
-</li><li><a href="effects-tutorial.html#s%3Aeffects-concurrency"><span class="number">2</span> Concurrency</a>
-</li><li><a href="effects-tutorial.html#s%3Aeffects-user-threads"><span class="number">3</span> User-level threads</a>
-</li><li><a href="effects-tutorial.html#s%3Aeffects-sequence"><span class="number">4</span> Control inversion</a>
-</li><li><a href="effects-tutorial.html#s%3Aeffects-semantics"><span class="number">5</span> Semantics</a>
-</li><li><a href="effects-tutorial.html#s%3Aeffects-shallow"><span class="number">6</span> Shallow handlers</a>
-</li></ul></nav></header>
-<p> <a id="c:effects-tutorial"></a>
-</p><p>Effect handlers are a mechanism for modular programming with user-defined
+<h1 class="chapter" id="sec246"><span class="chapter-number">Chapter 10</span> Language extensions</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Language extensions</a></li>
+<li><a href="letrecvalues.html#start-section"><span class="number">1</span> Recursive definitions of values</a>
+</li><li><a href="recursivemodules.html#start-section"><span class="number">2</span> Recursive modules</a>
+</li><li><a href="privatetypes.html#start-section"><span class="number">3</span> Private types</a>
+</li><li><a href="locallyabstract.html#start-section"><span class="number">4</span> Locally abstract types</a>
+</li><li><a href="firstclassmodules.html#start-section"><span class="number">5</span> First-class modules</a>
+</li><li><a href="moduletypeof.html#start-section"><span class="number">6</span> Recovering the type of a module</a>
+</li><li><a href="signaturesubstitution.html#start-section"><span class="number">7</span> Substituting inside a signature</a>
+</li><li><a href="modulealias.html#start-section"><span class="number">8</span> Type-level module aliases</a>
+</li><li><a href="overridingopen.html#start-section"><span class="number">9</span> Overriding in open statements</a>
+</li><li><a href="gadts.html#start-section"><span class="number">10</span> Generalized algebraic datatypes</a>
+</li><li><a href="bigarray.html#start-section"><span class="number">11</span> Syntax for Bigarray access</a>
+</li><li><a href="attributes.html#start-section"><span class="number">12</span> Attributes</a>
+</li><li><a href="extensionnodes.html#start-section"><span class="number">13</span> Extension nodes</a>
+</li><li><a href="extensiblevariants.html#start-section"><span class="number">14</span> Extensible variant types</a>
+</li><li><a href="generativefunctors.html#start-section"><span class="number">15</span> Generative functors</a>
+</li><li><a href="extensionsyntax.html#start-section"><span class="number">16</span> Extension-only syntax</a>
+</li><li><a href="inlinerecords.html#start-section"><span class="number">17</span> Inline records</a>
+</li><li><a href="doccomments.html#start-section"><span class="number">18</span> Documentation comments</a>
+</li><li><a href="indexops.html#start-section"><span class="number">19</span> Extended indexing operators </a>
+</li><li><a href="emptyvariants.html#start-section"><span class="number">20</span> Empty variant types</a>
+</li><li><a href="alerts.html#start-section"><span class="number">21</span> Alerts</a>
+</li><li><a href="generalizedopens.html#start-section"><span class="number">22</span> Generalized open statements</a>
+</li><li><a href="bindingops.html#start-section"><span class="number">23</span> Binding operators</a>
+</li><li><a href="effects.html#start-section"><span class="number">24</span> Effect handlers</a>
+</li></ul></nav></header><a id="start-section"></a><section id="section">
+
+
+
+<h2 class="section" id="s:effect-handlers"><a class="section-anchor" href="#s:effect-handlers" aria-hidden="true"></a><span class="number">24</span> Effect handlers</h2>
+<ul>
+<li><a href="effects.html#s%3Aeffects-basics"><span class="number">24.1</span> Basics</a>
+</li><li><a href="effects.html#s%3Aeffects-concurrency"><span class="number">24.2</span> Concurrency</a>
+</li><li><a href="effects.html#s%3Aeffects-user-threads"><span class="number">24.3</span> User-level threads</a>
+</li><li><a href="effects.html#s%3Aeffects-sequence"><span class="number">24.4</span> Control inversion</a>
+</li><li><a href="effects.html#s%3Aeffects-semantics"><span class="number">24.5</span> Semantics</a>
+</li><li><a href="effects.html#s%3Aeffects-shallow"><span class="number">24.6</span> Shallow handlers</a>
+</li></ul>
+<p>Effect handlers are a mechanism for modular programming with user-defined
 effects. Effect handlers allow the programmers to describe
 <span class="font-it">computations</span> that <span class="font-it">perform</span> effectful <span class="font-it">operations</span>,
 whose meaning is described by <span class="font-it">handlers</span> that enclose the computations.
@@ -31,7 +59,7 @@ control-flow mechanisms such as resumable exceptions, lightweight threads,
 coroutines, generators and asynchronous I/O to be composably expressed. In this
 tutorial, we shall see how some of these mechanisms can be built using effect
 handlers.</p>
-<h2 class="section" id="s:effects-basics"><a class="section-anchor" href="#s:effects-basics" aria-hidden="true"></a><span class="number">1</span> Basics</h2>
+<h3 class="subsection" id="s:effects-basics"><a class="section-anchor" href="#s:effects-basics" aria-hidden="true">﻿</a><span class="number">24.1</span> Basics</h3>
 <p>To understand the basics, let us define an effect (that is, an operation) that
 takes an integer argument and returns an integer result. We name this effect
 <span class="machine"><span class="font-tt">Xchg</span></span>.</p><div class="caml-example verbatim">
@@ -95,8 +123,8 @@ contrast, a shallow handler monitors a computation until either the computation
 terminates or the computation performs one effect, and it handles this single
 effect only. In situations where they are applicable, deep handlers are usually
 preferred. An example that utilises shallow handlers is discussed later
-in ‍<a href="#s%3Aeffects-shallow">9.6</a>.</p>
-<h2 class="section" id="s:effects-concurrency"><a class="section-anchor" href="#s:effects-concurrency" aria-hidden="true">﻿</a><span class="number">2</span> Concurrency</h2>
+in ‍<a href="#s%3Aeffects-shallow">10.24.6</a>.</p>
+<h3 class="subsection" id="s:effects-concurrency"><a class="section-anchor" href="#s:effects-concurrency" aria-hidden="true">﻿</a><span class="number">24.2</span> Concurrency</h3>
 <p>The expressive power of effect handlers comes from the delimited continuation.
 While the previous example immediately resumed the computation, the computation
 may be resumed later, running some other computation in the interim. Let us
@@ -195,7 +223,7 @@ the values <span class="machine"><span class="font-tt">21</span></span> and <spa
 and <span class="machine"><span class="font-tt">1</span></span>, which it multiplies, producing <span class="machine"><span class="font-tt">0</span></span>. The communication between the two
 computations is programmed entirely inside <span class="machine"><span class="font-tt">run_both</span></span>. Indeed, the definitions
 of <span class="machine"><span class="font-tt">comp1</span></span> and <span class="machine"><span class="font-tt">comp2</span></span>, alone, do not assign any meaning to the <span class="machine"><span class="font-tt">Xchg</span></span> effect.</p>
-<h2 class="section" id="s:effects-user-threads"><a class="section-anchor" href="#s:effects-user-threads" aria-hidden="true">﻿</a><span class="number">3</span> User-level threads</h2>
+<h3 class="subsection" id="s:effects-user-threads"><a class="section-anchor" href="#s:effects-user-threads" aria-hidden="true">﻿</a><span class="number">24.3</span> User-level threads</h3>
 <p>Let us extend the previous example for an arbitrary number of tasks. Many
 languages such as GHC Haskell and Go provide user-level threads as a primitive
 feature implemented in the runtime system. With effect handlers, user-level
@@ -289,7 +317,7 @@ exchange. If so, we enqueue the waiting task with the current value being
 offered and immediately resume the current task with the value being offered.
 If not, we make the current task the waiting exchanger, and run the next task
 from the scheduler queue.</p><p>Note that this scheduler code is not perfect – it can leak resources. We shall
-explain and fix this in the next section ‍<a href="#s%3Aeffects-discontinue">9.3.1</a>.</p><p>Now we can write a concurrent program that utilises the newly defined
+explain and fix this in the next section ‍<a href="#s%3Aeffects-discontinue">10.24.3</a>.</p><p>Now we can write a concurrent program that utilises the newly defined
 operations:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -321,7 +349,7 @@ style (no monadic operations). This example illustrates that, with effect
 handlers, the user code in a concurrent program can remain in simple direct
 style, and the use of effect handlers can be fully contained within the
 concurrency library implementation.</p>
-<h3 class="subsection" id="s:effects-discontinue"><a class="section-anchor" href="#s:effects-discontinue" aria-hidden="true">﻿</a><span class="number">3.1</span> Resuming with an exception</h3>
+<h4 class="subsubsection" id="s:effects-discontinue"><a class="section-anchor" href="#s:effects-discontinue" aria-hidden="true">﻿</a>Resuming with an exception</h4>
 <p>In addition to resuming a continuation with a value, effect handlers also
 permit resuming by raising an effect at the point of perform. This is done with
 the help of the <span class="machine"><span class="font-tt">discontinue</span></span> primitive. The <span class="machine"><span class="font-tt">discontinue</span></span> primitive helps
@@ -382,7 +410,7 @@ dequeue function discontinues the blocked thread with an
 <span class="machine"><span class="font-tt">xchg</span></span> function call, which causes the <span class="machine"><span class="font-tt">finally</span></span> block to be run and closes the
 output channel <span class="machine"><span class="font-tt">oc</span></span>. From the point of view of the user, it seems as though the
 function call <span class="machine"><span class="font-tt">xchg 0</span></span> raises the exception <span class="machine"><span class="font-tt">Improper_synchronization</span></span>.</p>
-<h2 class="section" id="s:effects-sequence"><a class="section-anchor" href="#s:effects-sequence" aria-hidden="true">﻿</a><span class="number">4</span> Control inversion</h2>
+<h3 class="subsection" id="s:effects-sequence"><a class="section-anchor" href="#s:effects-sequence" aria-hidden="true">﻿</a><span class="number">24.4</span> Control inversion</h3>
 <p>When it comes to performing traversals on a data structure, there are two
 fundamental ways depending on whether the producer or the consumer has the
 control over the traversal. For example, in <span class="machine"><span class="font-tt">List.iter f l</span></span>, the producer
@@ -394,7 +422,7 @@ bits where every bit is produced (on demand) when queried by the consumer.</p><p
 style. The latter style is ergonomically better for the consumer since it is
 preferable and more natural to be in control. To have the best of both worlds,
 we would like to write a producer in the former style and automatically convert
-it to the latter style. The conversation can be written <em>once and for all</em>
+it to the latter style. The conversion can be written <em>once and for all</em>
 as a library function, thanks to effect handlers. Let us name this function
 <span class="machine"><span class="font-tt">invert</span></span>. We will first look at how to use the <span class="machine"><span class="font-tt">invert</span></span> function before looking
 at its implementation details. The type of this function is given below:</p><div class="caml-example signature">
@@ -555,7 +583,7 @@ traverse the list on demand. For example,</p><div class="caml-example verbatim">
 <div class="pre caml-output ok">- : char option = None</div></div>
 
 </div>
-<h3 class="subsection" id="s:effects-sequence-implementation"><a class="section-anchor" href="#s:effects-sequence-implementation" aria-hidden="true">﻿</a><span class="number">4.1</span> Implementing control inversion</h3>
+<h4 class="subsubsection" id="s:effects-sequence-implementation"><a class="section-anchor" href="#s:effects-sequence-implementation" aria-hidden="true">﻿</a>Implementing control inversion</h4>
 <p>The implementation of the <span class="machine"><span class="font-tt">invert</span></span> function is given below:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -584,8 +612,8 @@ executed under an effect handler. Every time the <span class="machine"><span cla
 element to the <span class="machine"><span class="font-tt">yield</span></span> function, the computation is interrupted by the <span class="machine"><span class="font-tt">Yield</span></span>
 effect. The <span class="machine"><span class="font-tt">Yield</span></span> effect is handled by returning the value
 <span class="machine"><span class="font-tt">Seq.Cons(v,continue k)</span></span> to the consumer. The consumer gets the element <span class="machine"><span class="font-tt">v</span></span> as
-well as the suspended computation, which in consumer’s eyes is just the tail of
-sequence.</p><p>When the consumer demands the next element from the sequence (by applying it to
+well as the suspended computation, which in the consumer’s eyes is just the
+tail of sequence.</p><p>When the consumer demands the next element from the sequence (by applying it to
 <span class="machine"><span class="font-tt">()</span></span>), the continuation <span class="machine"><span class="font-tt">k</span></span> is resumed. This allows the computation <span class="machine"><span class="font-tt">iter yield</span></span> to make progress, until it either yields another element or terminates
 normally. In the latter case, the value <span class="machine"><span class="font-tt">Seq.Nil</span></span> is returned, indicating to
 the consumer that the iteration is over.</p><p>It is important to note that the sequence returned by the <span class="machine"><span class="font-tt">invert</span></span> function is
@@ -593,10 +621,10 @@ the consumer that the iteration is over.</p><p>It is important to note that the 
 sequence must be used at most once. Additionally, the sequence must be fully
 consumed (i.e., used at least once) so as to ensure that the captured
 continuation is used linearly.</p>
-<h2 class="section" id="s:effects-semantics"><a class="section-anchor" href="#s:effects-semantics" aria-hidden="true">﻿</a><span class="number">5</span> Semantics</h2>
-<p>In this section, we shall see the semantics of the effect handlers with the
-help of examples.</p>
-<h3 class="subsection" id="s:effects-nesting"><a class="section-anchor" href="#s:effects-nesting" aria-hidden="true">﻿</a><span class="number">5.1</span> Nesting handlers</h3>
+<h3 class="subsection" id="s:effects-semantics"><a class="section-anchor" href="#s:effects-semantics" aria-hidden="true">﻿</a><span class="number">24.5</span> Semantics</h3>
+<p>In this section, we shall see the semantics of effect handlers with the help of
+examples.</p>
+<h4 class="subsubsection" id="s:effects-nesting"><a class="section-anchor" href="#s:effects-nesting" aria-hidden="true">﻿</a>Nesting handlers</h4>
 <p>Like exception handlers, effect handlers can be nested.</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -638,7 +666,7 @@ only <span class="machine"><span class="font-tt">E</span></span> and the outer h
 <div class="pre caml-output ok">- : string = <span class="ocamlstring">"Hello, world!"</span></div></div>
 
 </div>
-<h3 class="subsection" id="s:effects-fibers"><a class="section-anchor" href="#s:effects-fibers" aria-hidden="true">﻿</a><span class="number">5.2</span> Fibers</h3>
+<h4 class="subsubsection" id="s:effects-fibers"><a class="section-anchor" href="#s:effects-fibers" aria-hidden="true">﻿</a>Fibers</h4>
 <p>It is useful to know a little bit about the implementation of effect handlers
 to appreciate the design choices and their performance characteristics. Effect
 handlers are implemented with the help of runtime-managed, dynamically growing
@@ -672,7 +700,7 @@ segment pointed to by <span class="machine"><span class="font-tt">k</span></span
 capture nor resumption requires copying stack frames, suspending the execution
 using <span class="machine"><span class="font-tt">perform</span></span> and resuming it using either <span class="machine"><span class="font-tt">continue</span></span> or <span class="machine"><span class="font-tt">discontinue</span></span> are
 fast.</p>
-<h3 class="subsection" id="s:effects-unhandled"><a class="section-anchor" href="#s:effects-unhandled" aria-hidden="true">﻿</a><span class="number">5.3</span> Unhandled effects</h3>
+<h4 class="subsubsection" id="s:effects-unhandled"><a class="section-anchor" href="#s:effects-unhandled" aria-hidden="true">﻿</a>Unhandled effects</h4>
 <p>Unlike languages such as Eff and Koka, effect handlers in OCaml do not provide
 <span class="font-it">effect safety</span>; the compiler does not statically ensure that all the
 effects performed by the program are handled. If effects do not have a matching
@@ -692,8 +720,8 @@ handle the effect <span class="machine"><span class="font-tt">F</span></span>. H
 <div class="pre caml-output ok">- : string = <span class="ocamlstring">"Saw unhandled exception"</span></div></div>
 
 </div>
-<h3 class="subsection" id="s:effects-linearity"><a class="section-anchor" href="#s:effects-linearity" aria-hidden="true">﻿</a><span class="number">5.4</span> Linear continuations</h3>
-<p>As discussed earlier ‍<a href="#s%3Aeffects-discontinue">9.3.1</a>, the delimited continuations
+<h4 class="subsubsection" id="s:effects-linearity"><a class="section-anchor" href="#s:effects-linearity" aria-hidden="true">﻿</a>Linear continuations</h4>
+<p>As discussed earlier ‍<a href="#s%3Aeffects-discontinue">10.24.3</a>, the delimited continuations
 in OCaml must be used linearly – <em><span class="font-bold">every captured continuation
 must be resumed either with a <span class="machine"><span class="font-tt">continue</span></span> or <span class="machine"><span class="font-tt">discontinue</span></span> exactly once</span></em>.
 Attempting to use a continuation more than once raises a
@@ -741,7 +769,7 @@ allowing the computation to free up resources. However, the runtime cost of
 finalisers is much more than the cost of capturing a continuation. Hence, it is
 recommended that the user take care of resuming the continuation exactly once
 rather than relying on the finaliser.</p>
-<h2 class="section" id="s:effects-shallow"><a class="section-anchor" href="#s:effects-shallow" aria-hidden="true">﻿</a><span class="number">6</span> Shallow handlers</h2>
+<h3 class="subsection" id="s:effects-shallow"><a class="section-anchor" href="#s:effects-shallow" aria-hidden="true">﻿</a><span class="number">24.6</span> Shallow handlers</h3>
 <p>The examples that we have seen so far have used <span class="font-it">deep</span> handlers. A deep
 handles all the effects performed (in sequence) by the computation. Whenever a
 continuation is captured in a deep handler, the captured continuation also
@@ -866,11 +894,9 @@ Exception: Failure <span class="ocamlstring">"protocol violation"</span>.</div><
 (easy, but unsatisfying) or without them (harder). We leave this as an exercise
 to the reader.
 </p>
-<hr>
-<div class="bottom-navigation"><a class="previous" href="advexamples.html">« Advanced examples with classes and modules</a><a class="next" href="language.html">The OCaml language »</a></div>
+<div class="bottom-navigation"><a class="previous" href="bindingops.html">« Binding operators</a><a class="next up" href="extn.html">Language extensions</a></div>
 
 
 
-
-<div class="copyright">Copyright © 2022 Institut National de
+</section><div class="copyright">Copyright © 2022 Institut National de
 Recherche en Informatique et en Automatique</div></div></body></html>
