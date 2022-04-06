@@ -50,9 +50,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
  * **\[Apr 22\]** Running the Principles and Practice of Consistency for Distributed Data workshop (PaPoC 2022) on [April 5th, 2022](https://papoc-workshop.github.io/2022/).
  * **\[Mar 22\]** YouTube playlists for ["CS6225: Programs and Proofs"](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb) and ["CS3100: Paradigms of Programming"](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkE-NTs87s7QjwYwqeihb-D) are now available.
- * **\[Mar 22\]** "Certified Mergeable Replicated Data Types" conditionally accepted to PLDI 2022.  
+ * **\[Mar 22\]** ["Certified Mergeable Replicated Data Types"](https://arxiv.org/abs/2203.14518) ~conditionally~ accepted to PLDI 2022.  
  * **\[Mar 22\]** Segfault Systems and OCaml Labs [join Tarides](https://tarides.com/blog/2022-03-01-segfault-systems-joins-tarides).  
- * **\[Jan 22\]** Multicore OCaml has been [merged](https://github.com/ocaml/ocaml/pull/10831) into OCaml!  
 
 # Activities
 

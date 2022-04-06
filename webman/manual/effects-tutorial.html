@@ -743,18 +743,17 @@ recommended that the user take care of resuming the continuation exactly once
 rather than relying on the finaliser.</p>
 <h2 class="section" id="s:effects-shallow"><a class="section-anchor" href="#s:effects-shallow" aria-hidden="true">﻿</a><span class="number">6</span> Shallow handlers</h2>
 <p>The examples that we have seen so far have used <span class="font-it">deep</span> handlers. A deep
-handler monitors a computation and handles all the effects performed (in
-sequence) by the computation. Whenever a continuation is captured in a deep
-handler, the captured continuation also includes the handler. This means that,
-when the continuation is resumed, the effect handler is automatically
-re-installed, and will handle the effect(s) that the computation may perform in
-the future.</p><p>OCaml also provides <span class="font-it">shallow</span> handlers. Compared to deep handlers, a
+handles all the effects performed (in sequence) by the computation. Whenever a
+continuation is captured in a deep handler, the captured continuation also
+includes the handler. This means that, when the continuation is resumed, the
+effect handler is automatically re-installed, and will handle the effect(s)
+that the computation may perform in the future.</p><p>OCaml also provides <span class="font-it">shallow</span> handlers. Compared to deep handlers, a
 shallow handler handles only the first effect performed by the computation. The
 continuation captured in a shallow handler does not include the handler. This
 means that, when the continuation is resumed, the handler is no longer present.
-For this reason, the user is expected to provide a new effect handler (possibly
-a different one) to handle the next effect that the computation may perform in
-the future.</p><p>Shallow handlers make it easier to express certain kinds of programs. Let us
+For this reason, when the continuation is resumed, the user is expected to
+provide a new effect handler (possibly a different one) to handle the next
+effect that the computation may perform.</p><p>Shallow handlers make it easier to express certain kinds of programs. Let us
 implement a shallow handler that enforces a particular sequence of effects (a
 protocol) on a computation. For this example, let us consider that the
 computation may perform the following effects:</p><div class="caml-example verbatim">
@@ -772,7 +771,7 @@ expression <span class="machine"><span class="font-tt">(Send;Recv)*;Send?</span>
 sequence), <span class="machine"><span class="font-tt">[Send]</span></span>, <span class="machine"><span class="font-tt">[Send;Recv]</span></span>, <span class="machine"><span class="font-tt">[Send;Recv;Send]</span></span>, etc., are allowed, but
 not <span class="machine"><span class="font-tt">[Recv]</span></span>, <span class="machine"><span class="font-tt">[Send;Send]</span></span>, <span class="machine"><span class="font-tt">[Send;Recv;Recv]</span></span>, etc. The key observation here
 is that the set of effects handled evolves over time. We can enforce this
-protocol quite naturally using shallow handlers as show below:</p><div class="caml-example verbatim">
+protocol quite naturally using shallow handlers as shown below:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
@@ -780,42 +779,49 @@ protocol quite naturally using shallow handlers as show below:</p><div class="ca
 
 <div class="pre caml-input"><span class="ocamlkeyword">open</span> Effect.Shallow
 
-<span class="ocamlkeyword">let</span> run (<span class="ocamlkeyword">type</span> a) (comp: unit -&gt; unit) =
-  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> loop : <span class="ocamlkeyword">type</span> a. (a,unit) continuation -&gt; a
-                 -&gt; [`Send | `Recv <span class="ocamlkeyword">of</span> int] -&gt; unit =
-    <span class="ocamlkeyword">fun</span> k v accept -&gt;
-      continue_with k v
+<span class="ocamlkeyword">let</span> run (comp: unit -&gt; unit) : unit =
+  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> loop_send : <span class="ocamlkeyword">type</span> a. (a,unit) continuation -&gt; a -&gt; unit = <span class="ocamlkeyword">fun</span> k v -&gt;
+    continue_with k v
       { retc = Fun.id;
         exnc = raise;
-        effc = <span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (eff : b t) -&gt;
-          <span class="ocamlkeyword">match</span> eff, accept <span class="ocamlkeyword">with</span>
-          | Send v, `Send -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
-              loop k () (`Recv v))
-          | Recv, `Recv v -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
-              loop k v `Send)
-          | Send v, _ -&gt; failwith <span class="ocamlstring">"protocol violation"</span>
-          | Recv, _ -&gt; failwith <span class="ocamlstring">"protocol violation"</span>
+        effc = <span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (eff : b Effect.t) -&gt;
+          <span class="ocamlkeyword">match</span> eff <span class="ocamlkeyword">with</span>
+          | Send n -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
+              loop_recv n k ())
+          | Recv -&gt; failwith <span class="ocamlstring">"protocol violation"</span>
+          | _ -&gt; None }
+  <span class="ocamlkeyword">and</span> loop_recv : <span class="ocamlkeyword">type</span> a. int -&gt; (a,unit) continuation -&gt; a -&gt; unit = <span class="ocamlkeyword">fun</span> n k v -&gt;
+    continue_with k v
+      { retc = Fun.id;
+        exnc = raise;
+        effc = <span class="ocamlkeyword">fun</span> (<span class="ocamlkeyword">type</span> b) (eff : b Effect.t) -&gt;
+          <span class="ocamlkeyword">match</span> eff <span class="ocamlkeyword">with</span>
+          | Recv -&gt; Some (<span class="ocamlkeyword">fun</span> (k: (b,_) continuation) -&gt;
+              loop_send k n)
+          | Send v -&gt; failwith <span class="ocamlstring">"protocol violation"</span>
           | _ -&gt; None }
   <span class="ocamlkeyword">in</span>
-  loop (fiber comp) () `Send</div></div>
+  loop_send (fiber comp) ()</div></div>
 
 </div><p>The <span class="machine"><span class="font-tt">run</span></span> function executes the computation <span class="machine"><span class="font-tt">comp</span></span> ensuring that it can only
-perform an alternating sequence of <span class="machine"><span class="font-tt">Send</span></span> and <span class="machine"><span class="font-tt">Recv</span></span> effects. We use the
-polymorphic variant tags <span class="machine"><span class="font-tt">`Send</span></span> and <span class="machine"><span class="font-tt">`Recv</span></span> to track which effect the
-computation is allowed to perform next.</p><p>The shallow handler uses a different set of primitives compared to the deep
-handler. The primitive <span class="machine"><span class="font-tt">fiber</span></span> (on the last line) takes an <span class="machine"><span class="font-tt">'a -&gt; 'b</span></span> function
-and returns a <span class="machine"><span class="font-tt">('a,'b) Effects.Shallow.continuation</span></span>. The expression
-<span class="machine"><span class="font-tt">continue_with k v h</span></span> resumes the continuation <span class="machine"><span class="font-tt">k</span></span> with value <span class="machine"><span class="font-tt">v</span></span> under the
-handler <span class="machine"><span class="font-tt">h</span></span>.</p><p>The initial call to the <span class="machine"><span class="font-tt">loop</span></span> function (on the last line) takes <span class="machine"><span class="font-tt">`Send</span></span> as an
-argument indicating that the first effect that the computation is allowed to do
-is <span class="machine"><span class="font-tt">Send</span></span>. The <span class="machine"><span class="font-tt">loop</span></span> function uses the <span class="machine"><span class="font-tt">continue_with</span></span> primitive to resume the
-continuation <span class="machine"><span class="font-tt">k</span></span> with the value <span class="machine"><span class="font-tt">v</span></span> under the given handler. If the computation
-performs the expected effect (<span class="machine"><span class="font-tt">Send</span></span> effect when the tag is <span class="machine"><span class="font-tt">`Send</span></span> and <span class="machine"><span class="font-tt">Recv</span></span>
-effect when the tag is <span class="machine"><span class="font-tt">`Recv</span></span>), then we tail call the <span class="machine"><span class="font-tt">loop</span></span> function with the
-next allowed operation. Given that the continuation captured in the shallow
-handler do not include the handler, there is only ever one handler installed in
-the dynamic scope of the computation <span class="machine"><span class="font-tt">comp</span></span>. If the computation performs an
-unexpected effect, then the computation fails with <span class="machine"><span class="font-tt">protocol violation</span></span>.</p><p>We can see that the <span class="machine"><span class="font-tt">run</span></span> function will permit computations that follow the
+perform an alternating sequence of <span class="machine"><span class="font-tt">Send</span></span> and <span class="machine"><span class="font-tt">Recv</span></span> effects. The shallow
+handler uses a different set of primitives compared to the deep handler. The
+primitive <span class="machine"><span class="font-tt">fiber</span></span> (on the last line) takes an <span class="machine"><span class="font-tt">'a -&gt; 'b</span></span> function and returns a
+<span class="machine"><span class="font-tt">('a,'b) Effects.Shallow.continuation</span></span>. The expression <span class="machine"><span class="font-tt">continue_with k v h</span></span>
+resumes the continuation <span class="machine"><span class="font-tt">k</span></span> with value <span class="machine"><span class="font-tt">v</span></span> under the handler <span class="machine"><span class="font-tt">h</span></span>.</p><p>The mutually recursive functions <span class="machine"><span class="font-tt">loop_send</span></span> and <span class="machine"><span class="font-tt">loop_recv</span></span> resume the given
+continuation <span class="machine"><span class="font-tt">k</span></span> with value <span class="machine"><span class="font-tt">v</span></span> under different handlers. The <span class="machine"><span class="font-tt">loop_send</span></span>
+function handles the <span class="machine"><span class="font-tt">Send</span></span> effect and tail calls the <span class="machine"><span class="font-tt">loop_recv</span></span> function. If
+the computation performs the <span class="machine"><span class="font-tt">Recv</span></span> effect, then <span class="machine"><span class="font-tt">loop_send</span></span> aborts the
+computation by raising an exception. Similarly, the <span class="machine"><span class="font-tt">loop_recv</span></span> function
+handles the <span class="machine"><span class="font-tt">Recv</span></span> effect and tail calls the <span class="machine"><span class="font-tt">loop_send</span></span> function. If the
+computation performs the <span class="machine"><span class="font-tt">Send</span></span> effect, then <span class="machine"><span class="font-tt">loop_recv</span></span> aborts the
+computation. Given that the continuation captured in the shallow handler do not
+include the handler, there is only ever one handler installed in the dynamic
+scope of the computation <span class="machine"><span class="font-tt">comp</span></span>.</p><p>The computation is initially executed by the <span class="machine"><span class="font-tt">loop_send</span></span> function (see last
+line in the code above) which ensures that the first effect that the
+computation is allowed to perform is the <span class="machine"><span class="font-tt">Send</span></span> effect. Note that the
+computation is free to perform effects other than <span class="machine"><span class="font-tt">Send</span></span> and <span class="machine"><span class="font-tt">Recv</span></span>, which may
+be handled by an outer handler.</p><p>We can see that the <span class="machine"><span class="font-tt">run</span></span> function will permit a computation that follows the
 protocol:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -838,7 +844,7 @@ Send 43
 Recv: 43
 - : unit = ()</div></div>
 
-</div><p>but not those which do not follow the protocol:</p><div class="caml-example verbatim">
+</div><p>and aborts those that do not:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
