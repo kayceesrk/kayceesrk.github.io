@@ -50,7 +50,13 @@
 </li><li><a href="effects.html#s%3Aeffects-semantics"><span class="number">24.5</span> Semantics</a>
 </li><li><a href="effects.html#s%3Aeffects-shallow"><span class="number">24.6</span> Shallow handlers</a>
 </li></ul>
-<p>Effect handlers are a mechanism for modular programming with user-defined
+<p>(Introduced in 5.0)</p><p><span class="font-it">Note: Effect handlers in OCaml 5.0 should be considered experimental.
+Effect handlers are exposed in the standard library as a thin wrapper
+around their implementations in the runtime. They are not supported as a
+language feature with new syntax. You can rely on them to build non-local
+control-flow abstractions such as user-level threading that do not expose
+the effect handler primitives to the user. Expect breaking changes in the
+future.</span></p><p>Effect handlers are a mechanism for modular programming with user-defined
 effects. Effect handlers allow the programmers to describe
 <span class="font-it">computations</span> that <span class="font-it">perform</span> effectful <span class="font-it">operations</span>,
 whose meaning is described by <span class="font-it">handlers</span> that enclose the computations.
