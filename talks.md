@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Certified Mergeable Replicated Data Types**  
+   Nomadic Labs Research Seminars, Apr 2022  
+   [\[slides (pdf)\]](slides/certified_mrdts_nl.pdf) [\[slides (key)\]](slides/certified_mrdts_nl.key)          
  * **Retrofitting Parallelism onto OCaml**  
    Marigold Tech Talk, Dec 2021   
  * **Future of OCaml : Effect Handlers in OCaml 5.00**   
