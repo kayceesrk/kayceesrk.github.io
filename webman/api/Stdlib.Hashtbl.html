@@ -312,7 +312,7 @@
 <p>It is recommended that applications or Web frameworks that need to
     protect themselves against the denial-of-service attack described
     in <a href="Hashtbl.html#VALcreate"><code class="code"><span class="constructor">Hashtbl</span>.create</code></a> call <code class="code"><span class="constructor">Hashtbl</span>.randomize()</code> at initialization
-    time.</p>
+    time before any domains are created.</p>
 
 <p>Note that once <code class="code"><span class="constructor">Hashtbl</span>.randomize()</code> was called, there is no way
     to revert to the non-randomized default behavior of <a href="Hashtbl.html#VALcreate"><code class="code"><span class="constructor">Hashtbl</span>.create</code></a>.

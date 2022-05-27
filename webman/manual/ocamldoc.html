@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec362"><span class="chapter-number">Chapter 17</span> The documentation generator (ocamldoc)</h1>
+<h1 class="chapter" id="sec369"><span class="chapter-number">Chapter 18</span> The documentation generator (ocamldoc)</h1>
 <header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">The documentation generator (ocamldoc)</a></li>
 <li><a href="ocamldoc.html#s%3Aocamldoc-usage"><span class="number">1</span> Usage</a>
 </li><li><a href="ocamldoc.html#s%3Aocamldoc-comments"><span class="number">2</span> Syntax of documentation comments</a>
@@ -23,10 +23,10 @@
 </p><p>This chapter describes OCamldoc, a tool that generates documentation from
 special comments embedded in source files. The comments used by OCamldoc
 are of the form <span class="machine"><span class="font-tt">(**</span></span>…<span class="machine"><span class="font-tt">*)</span></span> and follow the format described
-in section <a href="#s%3Aocamldoc-comments">17.2</a>.</p><p>OCamldoc can produce documentation in various formats: HTML, L<sup>A</sup>T<sub>E</sub>X,
+in section <a href="#s%3Aocamldoc-comments">18.2</a>.</p><p>OCamldoc can produce documentation in various formats: HTML, L<sup>A</sup>T<sub>E</sub>X,
 TeXinfo, Unix man pages, and <span class="machine"><span class="font-tt">dot</span></span> dependency graphs. Moreover,
 users can add their own custom generators, as explained in
-section <a href="#s%3Aocamldoc-custom-generators">17.3</a>.</p><p>In this chapter, we use the word <em>element</em> to refer to any of the
+section <a href="#s%3Aocamldoc-custom-generators">18.3</a>.</p><p>In this chapter, we use the word <em>element</em> to refer to any of the
 following parts of an OCaml source file: a type declaration, a value,
 a module, an exception, a module type, a type constructor, a record
 field, a class, a class type, a class method, a class value or a class
@@ -64,7 +64,7 @@ The textual representation of the graph is written to the file
 <span class="machine"><span class="font-tt">ocamldoc.out</span></span>, or to the file specified with the <span class="font-bold"><span class="font-tt">-o</span></span> option.
 Use <span class="machine"><span class="font-tt">dot ocamldoc.out</span></span> to display it.</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-g</span></span> <span class="font-it">file.cm[o,a,xs]</span></span></dt><dd class="dd-description">
 Dynamically load the given file, which defines a custom documentation
-generator. See section <a href="#ss%3Aocamldoc-compilation-and-usage">17.4.1</a>. This
+generator. See section <a href="#ss%3Aocamldoc-compilation-and-usage">18.4.1</a>. This
 option is supported by the <span class="machine"><span class="font-tt">ocamldoc</span></span> command (to load <span class="machine"><span class="font-tt">.cmo</span></span> and <span class="machine"><span class="font-tt">.cma</span></span> files)
 and by its native-code version <span class="machine"><span class="font-tt">ocamldoc.opt</span></span> (to load <span class="machine"><span class="font-tt">.cmxs</span></span> files).
 If the given file is a simple one and does not exist in
@@ -90,7 +90,7 @@ when available.</dd><dt class="dt-description"><span class="font-bold"><span cla
 Load information from <span class="font-it">file</span>, which has been produced by
 <span class="machine"><span class="font-tt">ocamldoc -dump</span></span>. Several <span class="machine"><span class="font-tt">-load</span></span> options can be given.</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-m</span></span> <span class="font-it">flags</span></span></dt><dd class="dd-description">
 Specify merge options between interfaces and implementations.
-(see section <a href="#ss%3Aocamldoc-merge">17.1.2</a> for details).
+(see section <a href="#ss%3Aocamldoc-merge">18.1.2</a> for details).
 <span class="font-it">flags</span> can be one or several of the following characters:
 <dl class="description"><dt class="dt-description">
 <span class="font-bold"><span class="machine"><span class="font-tt">d</span></span></span></dt><dd class="dd-description"> merge description
@@ -105,9 +105,9 @@ Specify merge options between interfaces and implementations.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">r</span></span></span></dt><dd class="dd-description"> merge <span class="machine"><span class="font-tt">@return</span></span>
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">A</span></span></span></dt><dd class="dd-description"> merge everything
 </dd></dl></dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-custom-tags</span></span></span></dt><dd class="dd-description">
-Do not allow custom @-tags (see section <a href="#ss%3Aocamldoc-tags">17.2.5</a>).</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-stop</span></span></span></dt><dd class="dd-description">
+Do not allow custom @-tags (see section <a href="#ss%3Aocamldoc-tags">18.2.5</a>).</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-stop</span></span></span></dt><dd class="dd-description">
 Keep elements placed after/between the <span class="machine"><span class="font-tt">(**/**)</span></span> special comment(s)
-(see section <a href="#s%3Aocamldoc-comments">17.2</a>).</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-o</span></span> <span class="font-it">file</span></span></dt><dd class="dd-description">
+(see section <a href="#s%3Aocamldoc-comments">18.2</a>).</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-o</span></span> <span class="font-it">file</span></span></dt><dd class="dd-description">
 Output the generated documentation to <span class="font-it">file</span> instead of <span class="machine"><span class="font-tt">ocamldoc.out</span></span>.
 This option is meaningful only in conjunction with the
 <span class="font-bold"><span class="font-tt">-latex</span></span>, <span class="font-bold"><span class="font-tt">-texi</span></span>, or <span class="font-bold"><span class="font-tt">-dot</span></span> options.</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-pp</span></span> <span class="font-it">command</span></span></dt><dd class="dd-description">
@@ -592,9 +592,9 @@ This point can be referenced by its fully-qualified label in a
 <tr><td class="c014">∣</td><td class="c013"> <span class="syntax-token">{v</span> <span class="nonterminal">string</span> <span class="syntax-token">v}</span> </td><td class="c010">set the given <span class="nonterminal">string</span> in verbatim style. </td></tr>
 <tr><td class="c014">∣</td><td class="c013"> <span class="syntax-token">{%</span> <span class="nonterminal">string</span> <span class="syntax-token">%}</span> </td><td class="c010">target-specific content
 (L<sup>A</sup>T<sub>E</sub>X code by default, see details
-in <a href="#sss%3Aocamldoc-target-specific-syntax">17.2.4.4</a>) </td></tr>
+in <a href="#sss%3Aocamldoc-target-specific-syntax">18.2.4.4</a>) </td></tr>
 <tr><td class="c014">∣</td><td class="c013"> <span class="syntax-token">{!</span> <span class="nonterminal">string</span> <span class="syntax-token">}</span> </td><td class="c010">insert a cross-reference to an element
-(see section <a href="#sss%3Aocamldoc-crossref">17.2.4.2</a> for the syntax of cross-references).</td></tr>
+(see section <a href="#sss%3Aocamldoc-crossref">18.2.4.2</a> for the syntax of cross-references).</td></tr>
 <tr><td class="c014">∣</td><td class="c013"> <span class="syntax-token">{{!</span> <span class="nonterminal">string</span> <span class="syntax-token">}</span> <a class="syntax" href="#inline-text"><span class="nonterminal">inline-text</span></a> <span class="syntax-token">}</span> </td><td class="c010">insert a cross-reference with the given text. </td></tr>
 <tr><td class="c014">∣</td><td class="c013"> <span class="syntax-token">{!modules:</span> <span class="nonterminal">string</span> <span class="nonterminal">string</span> ... <span class="syntax-token">}</span> </td><td class="c010">insert an index table
 for the given module names. Used in HTML only.</td></tr>
@@ -757,7 +757,7 @@ comment, as in:
 *)
 </pre><p>
 To handle custom tags, you need to define a custom generator,
-as explained in section <a href="#ss%3Aocamldoc-handling-custom-tags">17.3.2</a>.</p>
+as explained in section <a href="#ss%3Aocamldoc-handling-custom-tags">18.3.2</a>.</p>
 <h2 class="section" id="s:ocamldoc-custom-generators"><a class="section-anchor" href="#s:ocamldoc-custom-generators" aria-hidden="true">﻿</a><span class="number">3</span> Custom generators</h2>
 <p>OCamldoc operates in two steps:
 </p><ol class="enumerate" type="1"><li class="li-enumerate">
@@ -793,7 +793,7 @@ documentation for a given list of modules ‍:</p><pre>        method generate
 This method will be called with the list of analysed and possibly
 merged <span class="machine"><span class="font-tt">Odoc_info.t_module</span></span> structures.</p><p>It is recommended to inherit from the current generator of the same
 kind as the one you want to define. Doing so, it is possible to
-load various custom generators to combine improvements brought by each one.</p><p>This is done using first class modules (see chapter <a href="firstclassmodules.html#s%3Afirst-class-modules">10.5</a>).</p><p>The easiest way to define a custom generator is the following this example,
+load various custom generators to combine improvements brought by each one.</p><p>This is done using first class modules (see chapter <a href="firstclassmodules.html#s%3Afirst-class-modules">11.5</a>).</p><p>The easiest way to define a custom generator is the following this example,
 here extending the current HTML generator. We don’t have to know if this is
 the original HTML generator defined in ocamldoc or if it has been extended
 already by a previously loaded custom generator ‍:</p><pre>module Generator (G : Odoc_html.Html_generator) =
@@ -826,7 +826,7 @@ for HTML ‍: <a href="https://github.com/ocaml/ocaml/blob/5.0/ocamldoc/odoc_h
 </li></ul>
 <h3 class="subsection" id="ss:ocamldoc-handling-custom-tags"><a class="section-anchor" href="#ss:ocamldoc-handling-custom-tags" aria-hidden="true">﻿</a><span class="number">3.2</span> Handling custom tags</h3>
 <p>Making a custom generator handle custom tags (see
-<a href="#sss%3Aocamldoc-custom-tags">17.2.5</a>) is very simple.</p><h4 class="subsubsection" id="sss:ocamldoc-html-generator"><a class="section-anchor" href="#sss:ocamldoc-html-generator" aria-hidden="true">﻿</a>For HTML</h4>
+<a href="#sss%3Aocamldoc-custom-tags">18.2.5</a>) is very simple.</p><h4 class="subsubsection" id="sss:ocamldoc-html-generator"><a class="section-anchor" href="#sss:ocamldoc-html-generator" aria-hidden="true">﻿</a>For HTML</h4>
 <p>
 Here is how to develop a HTML generator handling your custom tags.</p><p>The class <span class="machine"><span class="font-tt">Odoc_html.Generator.html</span></span> inherits
 from the class <span class="machine"><span class="font-tt">Odoc_html.info</span></span>, containing a field <span class="machine"><span class="font-tt">tag_functions</span></span> which is a

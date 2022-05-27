@@ -306,7 +306,9 @@
 <pre><span id="VALset_temp_dir_name"><span class="keyword">val</span> set_temp_dir_name</span> : <code class="type">string -&gt; unit</code></pre><div class="info ">
 <div class="info-desc">
 <p>Change the temporary directory returned by <a href="Filename.html#VALget_temp_dir_name"><code class="code"><span class="constructor">Filename</span>.get_temp_dir_name</code></a>
-    and used by <a href="Filename.html#VALtemp_file"><code class="code"><span class="constructor">Filename</span>.temp_file</code></a> and <a href="Filename.html#VALopen_temp_file"><code class="code"><span class="constructor">Filename</span>.open_temp_file</code></a>.</p>
+    and used by <a href="Filename.html#VALtemp_file"><code class="code"><span class="constructor">Filename</span>.temp_file</code></a> and <a href="Filename.html#VALopen_temp_file"><code class="code"><span class="constructor">Filename</span>.open_temp_file</code></a>.
+    The temporary directory is a domain-local value which is inherited
+    by child domains.</p>
 </div>
 <ul class="info-attributes">
 <li><b>Since</b> 4.00.0</li>

@@ -1136,7 +1136,7 @@
 </td></tr>
 <tr><td><a href="Domain.html#VALat_exit">at_exit</a> [<a href="Domain.html">Domain</a>]</td>
 <td><div class="info">
-<p>Register the given function to be called at when a domain exits.</p>
+<p>Register the given function to be called at when a spawned domain exits.</p>
 
 </div>
 </td></tr>
@@ -1149,8 +1149,9 @@
 </td></tr>
 <tr><td><a href="Domain.html#VALat_first_spawn">at_first_spawn</a> [<a href="Domain.html">Domain</a>]</td>
 <td><div class="info">
-<p>Register the given function to be called before the first domain is
-    spawned.</p>
+<p>Register the given function to be called before any domain is
+    spawned (except the initial domain) and before any function registered
+    with <a href="Domain.html#VALat_startup"><code class="code"><span class="constructor">Domain</span>.at_startup</code></a> is called.</p>
 
 </div>
 </td></tr>
@@ -1510,8 +1511,8 @@
 </td></tr>
 <tr><td><a href="Condition.html#VALbroadcast">broadcast</a> [<a href="Condition.html">Condition</a>]</td>
 <td><div class="info">
-<p><code class="code">broadcast&nbsp;c</code> restarts all processes waiting on the
-   condition variable <code class="code">c</code>.</p>
+<p><code class="code">broadcast&nbsp;c</code> wakes up all threads waiting on the condition
+   variable <code class="code">c</code>.</p>
 
 </div>
 </td></tr>
@@ -2929,7 +2930,7 @@
 <td></td></tr>
 <tr><td><a href="Condition.html#VALcreate">create</a> [<a href="Condition.html">Condition</a>]</td>
 <td><div class="info">
-<p>Return a new condition variable.</p>
+<p><code class="code">create()</code> creates and returns a new condition variable.</p>
 
 </div>
 </td></tr>
@@ -6432,8 +6433,8 @@
 </td></tr>
 <tr><td><a href="Random.html#VALget_state">get_state</a> [<a href="Random.html">Random</a>]</td>
 <td><div class="info">
-<p>Return the current state of the domain-local generator used by the basic
-    functions.</p>
+<p><code class="code">get_state()</code> returns a fresh copy of the current state of the
+    domain-local generator (which is used by the basic functions).</p>
 
 </div>
 </td></tr>
@@ -7193,9 +7194,17 @@
 
 </div>
 </td></tr>
-<tr><td><a href="MoreLabels.Hashtbl.SeededHashedType.html#VALhash">hash</a> [<a href="MoreLabels.Hashtbl.SeededHashedType.html">MoreLabels.Hashtbl.SeededHashedType</a>]</td>
+<tr><td><a href="String.html#VALhash">hash</a> [<a href="String.html">String</a>]</td>
 <td><div class="info">
-<p>A seeded hashing function on keys.</p>
+<p>An unseeded hash function for strings, with the same output value as
+    <a href="Hashtbl.html#VALhash"><code class="code"><span class="constructor">Hashtbl</span>.hash</code></a>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="StringLabels.html#VALhash">hash</a> [<a href="StringLabels.html">StringLabels</a>]</td>
+<td><div class="info">
+<p>An unseeded hash function for strings, with the same output value as
+    <a href="Hashtbl.html#VALhash"><code class="code"><span class="constructor">Hashtbl</span>.hash</code></a>.</p>
 
 </div>
 </td></tr>
@@ -7209,12 +7218,6 @@
 <td><div class="info">
 <p><code class="code"><span class="constructor">Hashtbl</span>.hash&nbsp;x</code> associates a nonnegative integer to any value of
      any type.</p>
-
-</div>
-</td></tr>
-<tr><td><a href="Hashtbl.SeededHashedType.html#VALhash">hash</a> [<a href="Hashtbl.SeededHashedType.html">Hashtbl.SeededHashedType</a>]</td>
-<td><div class="info">
-<p>A seeded hashing function on keys.</p>
 
 </div>
 </td></tr>
@@ -7614,13 +7617,13 @@
 </td></tr>
 <tr><td><a href="ListLabels.html#VALinit">init</a> [<a href="ListLabels.html">ListLabels</a>]</td>
 <td><div class="info">
-<p><code class="code">init&nbsp;~len&nbsp;~f</code> is <code class="code">f&nbsp;0;&nbsp;f&nbsp;1;&nbsp;...;&nbsp;f&nbsp;(len-1)</code>, evaluated left to right.</p>
+<p><code class="code">init&nbsp;~len&nbsp;~f</code> is <code class="code">[f&nbsp;0;&nbsp;f&nbsp;1;&nbsp;...;&nbsp;f&nbsp;(len-1)]</code>, evaluated left to right.</p>
 
 </div>
 </td></tr>
 <tr><td><a href="List.html#VALinit">init</a> [<a href="List.html">List</a>]</td>
 <td><div class="info">
-<p><code class="code">init&nbsp;len&nbsp;f</code> is <code class="code">f&nbsp;0;&nbsp;f&nbsp;1;&nbsp;...;&nbsp;f&nbsp;(len-1)</code>, evaluated left to right.</p>
+<p><code class="code">init&nbsp;len&nbsp;f</code> is <code class="code">[f&nbsp;0;&nbsp;f&nbsp;1;&nbsp;...;&nbsp;f&nbsp;(len-1)]</code>, evaluated left to right.</p>
 
 </div>
 </td></tr>
@@ -8364,14 +8367,14 @@
 <tr><td><a href="ListLabels.html#VALiter">iter</a> [<a href="ListLabels.html">ListLabels</a>]</td>
 <td><div class="info">
 <p><code class="code">iter&nbsp;~f&nbsp;[a1;&nbsp;...;&nbsp;an]</code> applies function <code class="code">f</code> in turn to
-   <code class="code">a1;&nbsp;...;&nbsp;an</code>.</p>
+   <code class="code">[a1;&nbsp;...;&nbsp;an]</code>.</p>
 
 </div>
 </td></tr>
 <tr><td><a href="List.html#VALiter">iter</a> [<a href="List.html">List</a>]</td>
 <td><div class="info">
 <p><code class="code">iter&nbsp;f&nbsp;[a1;&nbsp;...;&nbsp;an]</code> applies function <code class="code">f</code> in turn to
-   <code class="code">a1;&nbsp;...;&nbsp;an</code>.</p>
+   <code class="code">[a1;&nbsp;...;&nbsp;an]</code>.</p>
 
 </div>
 </td></tr>
@@ -13604,10 +13607,36 @@
 
 </div>
 </td></tr>
+<tr><td><a href="String.html#VALseeded_hash">seeded_hash</a> [<a href="String.html">String</a>]</td>
+<td><div class="info">
+<p>A seeded hash function for strings, with the same output value as
+    <a href="Hashtbl.html#VALseeded_hash"><code class="code"><span class="constructor">Hashtbl</span>.seeded_hash</code></a>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="StringLabels.html#VALseeded_hash">seeded_hash</a> [<a href="StringLabels.html">StringLabels</a>]</td>
+<td><div class="info">
+<p>A seeded hash function for strings, with the same output value as
+    <a href="Hashtbl.html#VALseeded_hash"><code class="code"><span class="constructor">Hashtbl</span>.seeded_hash</code></a>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="MoreLabels.Hashtbl.SeededHashedType.html#VALseeded_hash">seeded_hash</a> [<a href="MoreLabels.Hashtbl.SeededHashedType.html">MoreLabels.Hashtbl.SeededHashedType</a>]</td>
+<td><div class="info">
+<p>A seeded hashing function on keys.</p>
+
+</div>
+</td></tr>
 <tr><td><a href="MoreLabels.Hashtbl.html#VALseeded_hash">seeded_hash</a> [<a href="MoreLabels.Hashtbl.html">MoreLabels.Hashtbl</a>]</td>
 <td><div class="info">
 <p>A variant of <a href="MoreLabels.Hashtbl.html#VALhash"><code class="code"><span class="constructor">MoreLabels</span>.<span class="constructor">Hashtbl</span>.hash</code></a> that is further parameterized by
      an integer seed.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Hashtbl.SeededHashedType.html#VALseeded_hash">seeded_hash</a> [<a href="Hashtbl.SeededHashedType.html">Hashtbl.SeededHashedType</a>]</td>
+<td><div class="info">
+<p>A seeded hashing function on keys.</p>
 
 </div>
 </td></tr>
@@ -14201,7 +14230,9 @@
 </td></tr>
 <tr><td><a href="Random.html#VALset_state">set_state</a> [<a href="Random.html">Random</a>]</td>
 <td><div class="info">
-<p>Set the state of the domain-local generator used by the basic functions.</p>
+<p><code class="code">set_state&nbsp;s</code> updates the current state of the domain-local
+    generator (which is used by the basic functions) by copying
+    the state <code class="code">s</code> into it.</p>
 
 </div>
 </td></tr>
@@ -14649,8 +14680,8 @@
 </td></tr>
 <tr><td><a href="Condition.html#VALsignal">signal</a> [<a href="Condition.html">Condition</a>]</td>
 <td><div class="info">
-<p><code class="code">signal&nbsp;c</code> restarts one of the processes waiting on the
-   condition variable <code class="code">c</code>.</p>
+<p><code class="code">signal&nbsp;c</code> wakes up one of the threads waiting on the condition
+   variable <code class="code">c</code>, if there is one.</p>
 
 </div>
 </td></tr>
@@ -17335,8 +17366,8 @@
 </td></tr>
 <tr><td><a href="Condition.html#VALwait">wait</a> [<a href="Condition.html">Condition</a>]</td>
 <td><div class="info">
-<p><code class="code">wait&nbsp;c&nbsp;m</code> atomically unlocks the mutex <code class="code">m</code> and suspends the
-   calling process on the condition variable <code class="code">c</code>.</p>
+<p>The call <code class="code">wait&nbsp;c&nbsp;m</code> is permitted only if <code class="code">m</code> is the mutex associated
+   with the condition variable <code class="code">c</code>, and only if <code class="code">m</code> is currently locked.</p>
 
 </div>
 </td></tr>

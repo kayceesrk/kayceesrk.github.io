@@ -12,13 +12,13 @@
 
 
 
-<h1 class="chapter" id="sec600"><span class="chapter-number">Chapter 27</span> The compiler front-end</h1>
+<h1 class="chapter" id="sec607"><span class="chapter-number">Chapter 28</span> The compiler front-end</h1>
 <p> <a id="c:parsinglib"></a></p><p>
 <a id="Compiler-underscorelibs"></a> </p><p>This chapter describes the OCaml front-end, which declares the abstract
 syntax tree used by the compiler, provides a way to parse, print
 and pretty-print OCaml code, and ultimately allows one to write abstract
-syntax tree preprocessors invoked via the <span class="font-tt">-ppx</span> flag (see chapters ‍<a href="comp.html#c%3Acamlc">11</a>
-and ‍<a href="native.html#c%3Anativecomp">14</a>).</p><p>It is important to note that the exported front-end interface follows the evolution of the OCaml language and implementation, and thus does not provide <span class="font-bold">any</span> backwards compatibility guarantees.</p><p>The front-end is a part of <span class="machine"><span class="font-tt">compiler-libs</span></span> library.
+syntax tree preprocessors invoked via the <span class="font-tt">-ppx</span> flag (see chapters ‍<a href="comp.html#c%3Acamlc">12</a>
+and ‍<a href="native.html#c%3Anativecomp">15</a>).</p><p>It is important to note that the exported front-end interface follows the evolution of the OCaml language and implementation, and thus does not provide <span class="font-bold">any</span> backwards compatibility guarantees.</p><p>The front-end is a part of <span class="machine"><span class="font-tt">compiler-libs</span></span> library.
 Programs that use the <span class="machine"><span class="font-tt">compiler-libs</span></span> library should be built as follows:
 </p><pre>        ocamlfind ocamlc <span class="font-it">other options</span> -package compiler-libs.common <span class="font-it">other files</span>
         ocamlfind ocamlopt <span class="font-it">other options</span> -package compiler-libs.common <span class="font-it">other files</span>

@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec304"><span class="chapter-number">Chapter 11</span> Batch compilation (ocamlc)</h1>
+<h1 class="chapter" id="sec311"><span class="chapter-number">Chapter 12</span> Batch compilation (ocamlc)</h1>
 <header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Batch compilation (ocamlc)</a></li>
 <li><a href="comp.html#s%3Acomp-overview"><span class="number">1</span> Overview of the compiler</a>
 </li><li><a href="comp.html#s%3Acomp-options"><span class="number">2</span> Options</a>
@@ -80,7 +80,7 @@ produced by the linking phase, the command
 </pre><p>
 executes the compiled code contained in <span class="machine"><span class="font-tt">a.out</span></span>, passing it as
 arguments the character strings <span class="font-it">arg</span><sub>1</sub> to <span class="font-it">arg</span><sub><span class="font-it">n</span></sub>.
-(See chapter ‍<a href="runtime.html#c%3Aruntime">13</a> for more details.)</p><p>On most systems, the file produced by the linking
+(See chapter ‍<a href="runtime.html#c%3Aruntime">14</a> for more details.)</p><p>On most systems, the file produced by the linking
 phase can be run directly, as in:
 </p><pre>        ./a.out <span class="font-it">arg</span><sub>1</sub> <span class="font-it">arg</span><sub>2</sub> … <span class="font-it">arg</span><sub><span class="font-it">n</span></sub>
 </pre><p>
@@ -192,7 +192,7 @@ and the bytecode for the program. The resulting file is larger, but it
 can be executed directly, even if the <span class="machine"><span class="font-tt">ocamlrun</span></span> command is not
 installed. Moreover, the “custom runtime” mode enables static
 linking of OCaml code with user-defined C functions, as described in
-chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>.
+chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>.
 <blockquote class="quote"><span class="osvariant">Unix:</span> 
 Never use the <span class="machine"><span class="font-tt">strip</span></span> command on executables produced by <span class="machine"><span class="font-tt">ocamlc -custom</span></span>,
 this would remove the bytecode part of the executable.
@@ -214,7 +214,7 @@ C libraries. At link-time, shared libraries are searched in the
 standard search path (the one corresponding to the <span class="machine"><span class="font-tt">-I</span></span> option).
 The <span class="machine"><span class="font-tt">-dllpath</span></span> option simply stores <span class="font-it">dir</span> in the produced
 executable file, where <span class="machine"><span class="font-tt">ocamlrun</span></span> can find it and use it as
-described in section ‍<a href="runtime.html#s%3Aocamlrun-dllpath">13.3</a>.
+described in section ‍<a href="runtime.html#s%3Aocamlrun-dllpath">14.3</a>.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-for-pack</span></span> <span class="font-it">module-path</span></span></dt><dd class="dd-description">
 Generate an object file (<span class="machine"><span class="font-tt">.cmo</span></span>)
 that can later be included
@@ -229,9 +229,9 @@ names.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-g</span></span></span></dt><dd class="dd-description">
 Add debugging information while compiling and linking. This option is
 required in order to be able to debug the program with <span class="machine"><span class="font-tt">ocamldebug</span></span>
-(see chapter ‍<a href="debugger.html#c%3Adebugger">18</a>), and to produce stack backtraces when
+(see chapter ‍<a href="debugger.html#c%3Adebugger">19</a>), and to produce stack backtraces when
 the program terminates on an uncaught exception (see
-section ‍<a href="runtime.html#s%3Aocamlrun-options">13.2</a>).
+section ‍<a href="runtime.html#s%3Aocamlrun-options">14.2</a>).
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-i</span></span></span></dt><dd class="dd-description">
 Cause the compiler to print all defined names (with their inferred
 types or their definitions) when compiling an implementation (<span class="machine"><span class="font-tt">.ml</span></span>
@@ -277,7 +277,7 @@ incorporating the C object files and libraries given on the command
 line. This custom runtime system can be used later to execute
 bytecode executables produced with the
 <span class="machine"><span class="font-tt">ocamlc -use-runtime</span></span> <span class="font-it">runtime-name</span> option.
-See section ‍<a href="intfc.html#ss%3Acustom-runtime">20.1.6</a> for more information.
+See section ‍<a href="intfc.html#ss%3Acustom-runtime">21.1.6</a> for more information.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-match-context-rows</span></span></span></dt><dd class="dd-description">
 Set the number of rows of context used for optimization during
 pattern matching compilation. The default value is 32. Lower values
@@ -286,7 +286,7 @@ option is meant for use in the event that a pattern-match-heavy
 program leads to significant increases in compilation time.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-alias-deps</span></span></span></dt><dd class="dd-description">
 Do not record dependencies for module aliases. See
-section ‍<a href="modulealias.html#s%3Amodule-alias">10.8</a> for more information.
+section ‍<a href="modulealias.html#s%3Amodule-alias">11.8</a> for more information.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-app-funct</span></span></span></dt><dd class="dd-description">
 Deactivates the applicative behaviour of functors. With this option,
 each functor application generates new types in its result and
@@ -352,8 +352,8 @@ were added at the top of each file.
 Cause the linker to produce a C object file instead of
 a bytecode executable file.
 This is useful to wrap OCaml code as a C library,
-callable from any C program. See chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>,
-section ‍<a href="intfc.html#ss%3Ac-embedded-code">20.7.5</a>. The name of the output object file
+callable from any C program. See chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>,
+section ‍<a href="intfc.html#ss%3Ac-embedded-code">21.7.5</a>. The name of the output object file
 must be set with the <span class="machine"><span class="font-tt">-o</span></span> option.
 This option can also be used to produce a C source file (<span class="machine"><span class="font-tt">.c</span></span> extension)
 or a compiled shared/dynamic library (<span class="machine"><span class="font-tt">.so</span></span> extension, <span class="machine"><span class="font-tt">.dll</span></span> under Windows).
@@ -386,7 +386,7 @@ errors, the intermediate file is deleted afterwards.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-ppx</span></span> <span class="font-it">command</span></span></dt><dd class="dd-description">
 After parsing, pipe the abstract syntax tree through the preprocessor
 <span class="font-it">command</span>. The module <span class="machine"><span class="font-tt">Ast_mapper</span></span>, described in
-chapter ‍<a href="parsing.html#c%3Aparsinglib">27</a>:
+chapter ‍<a href="parsing.html#c%3Aparsinglib">28</a>:
 <a href="../api/compilerlibref/Ast_mapper.html"> <span class="font-tt">Ast_mapper</span> </a>
 ,
 implements the external interface of a preprocessor.</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-principal</span></span></span></dt><dd class="dd-description">
@@ -449,7 +449,7 @@ since OCaml 5.0.</dd><dt class="dt-description"><span class="font-bold"><span cl
 Generate a bytecode executable file that can be executed on the custom
 runtime system <span class="font-it">runtime-name</span>, built earlier with
 <span class="machine"><span class="font-tt">ocamlc -make-runtime</span></span> <span class="font-it">runtime-name</span>.
-See section ‍<a href="intfc.html#ss%3Acustom-runtime">20.1.6</a> for more information.
+See section ‍<a href="intfc.html#ss%3Acustom-runtime">21.1.6</a> for more information.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-v</span></span></span></dt><dd class="dd-description">
 Print the version number of the compiler and the location of the
 standard library directory, then exit.</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-verbose</span></span></span></dt><dd class="dd-description">
@@ -558,12 +558,12 @@ mutually recursive types.
 </dd><dt class="dt-description"><span class="font-bold">49 <span class="machine"><span class="font-tt">no-cmi-file</span></span></span></dt><dd class="dd-description"> Absent cmi file when looking up module alias. (since 4.02)
 </dd><dt class="dt-description"><span class="font-bold">50 <span class="machine"><span class="font-tt">unexpected-docstring</span></span></span></dt><dd class="dd-description"> Unexpected documentation comment. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">51 <span class="machine"><span class="font-tt">wrong-tailcall-expectation</span></span></span></dt><dd class="dd-description"> Function call annotated with an incorrect @tailcall attribute. (since 4.03)
-</dd><dt class="dt-description"><span class="font-bold">52 <span class="machine"><span class="font-tt">fragile-literal-pattern</span></span> (see </span><a href="#ss%3Awarn52"><span class="font-bold">11.5.3</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Fragile constant pattern. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">52 <span class="machine"><span class="font-tt">fragile-literal-pattern</span></span> (see </span><a href="#ss%3Awarn52"><span class="font-bold">12.5.3</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Fragile constant pattern. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">53 <span class="machine"><span class="font-tt">misplaced-attribute</span></span></span></dt><dd class="dd-description"> Attribute cannot appear in this context. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">54 <span class="machine"><span class="font-tt">duplicated-attribute</span></span></span></dt><dd class="dd-description"> Attribute used more than once on an expression. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">55 <span class="machine"><span class="font-tt">inlining-impossible</span></span></span></dt><dd class="dd-description"> Inlining impossible. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">56 <span class="machine"><span class="font-tt">unreachable-case</span></span></span></dt><dd class="dd-description"> Unreachable case in a pattern-matching (based on type information). (since 4.03)
-</dd><dt class="dt-description"><span class="font-bold">57 <span class="machine"><span class="font-tt">ambiguous-var-in-pattern-guard</span></span> (see </span><a href="#ss%3Awarn57"><span class="font-bold">11.5.4</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Ambiguous or-pattern variables under guard. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">57 <span class="machine"><span class="font-tt">ambiguous-var-in-pattern-guard</span></span> (see </span><a href="#ss%3Awarn57"><span class="font-bold">12.5.4</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Ambiguous or-pattern variables under guard. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">58 <span class="machine"><span class="font-tt">no-cmx-file</span></span></span></dt><dd class="dd-description"> Missing cmx file. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">59 <span class="machine"><span class="font-tt">flambda-assignment-to-non-mutable-value</span></span></span></dt><dd class="dd-description"> Assignment to non-mutable value. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">60 <span class="machine"><span class="font-tt">unused-module</span></span></span></dt><dd class="dd-description"> Unused module declaration. (since 4.04)
@@ -624,7 +624,7 @@ Process <span class="font-it">file</span> as a file name, even if it starts with
 character.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-help</span></span> or <span class="machine"><span class="font-tt">--help</span></span></span></dt><dd class="dd-description">
 Display a short usage summary and exit.</dd></dl>
-<h5 class="paragraph" id="sec307"><a class="section-anchor" href="#sec307" aria-hidden="true">﻿</a>contextual-cli-control</h5>
+<h5 class="paragraph" id="sec314"><a class="section-anchor" href="#sec314" aria-hidden="true">﻿</a>contextual-cli-control</h5>
 <p>Contextual control of command-line options</p><p>The compiler command line can be modified “from the outside”
 with the following mechanisms. These are experimental
 and subject to change. They should be used only for experimental and
@@ -792,7 +792,7 @@ mod2.ml:    let g y = ... Mod1.f ...
 </pre></li></ul></dd><dt class="dt-description"><span class="font-bold">The external function <span class="font-it">f</span> is not available</span></dt><dd class="dd-description">
 This error appears when trying to link code that calls external
 functions written in C. As explained in
-chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>, such code must be linked with C libraries that
+chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>, such code must be linked with C libraries that
 implement the required <span class="font-it">f</span> C function. If the C libraries in
 question are not shared libraries (DLLs), the code must be linked in
 “custom runtime” mode. Fix: add the required C libraries to the
@@ -858,7 +858,7 @@ string, but only in the case in which library authors expressed
 their intent to possibly change the constructor parameter value in
 the future, by using the attribute <span class="machine"><span class="font-tt">ocaml.warn_on_literal_pattern</span></span>
 (see the manual section on builtin attributes in
-<a href="attributes.html#ss%3Abuiltin-attributes">10.12.1</a>):
+<a href="attributes.html#ss%3Abuiltin-attributes">11.12.1</a>):
 
 </p><div class="caml-example verbatim">
 
@@ -906,7 +906,7 @@ those several cases.</p><p>For example,
   | Failure "int_of_string" -&gt; (0, true)
   | Failure "bool_of_string" -&gt; (-1, false)
 </pre><p> should be rewritten into more atomic tests. For example,
-using the <span class="machine"><span class="font-tt">exception</span></span> patterns documented in Section ‍<a href="patterns.html#sss%3Aexception-match">9.6</a>,
+using the <span class="machine"><span class="font-tt">exception</span></span> patterns documented in Section ‍<a href="patterns.html#sss%3Aexception-match">10.6</a>,
 one can write:
 </p><pre>match int_of_string count_str with
   | exception (Failure _) -&gt; (0, true)

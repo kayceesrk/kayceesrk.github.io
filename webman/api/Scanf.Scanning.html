@@ -99,7 +99,9 @@
    of characters, including a <a href="Stdlib.html#TYPEin_channel"><code class="code">in_channel</code></a> value.
    A Scanf.Scanning.in_channel value is also called a <i>formatted input
    channel</i> or equivalently a <i>scanning buffer</i>.
-   The type <a href="Scanf.Scanning.html#TYPEscanbuf"><code class="code"><span class="constructor">Scanf</span>.<span class="constructor">Scanning</span>.scanbuf</code></a> below is an alias for <code class="code"><span class="constructor">Scanning</span>.in_channel</code>.</p>
+   The type <a href="Scanf.Scanning.html#TYPEscanbuf"><code class="code"><span class="constructor">Scanf</span>.<span class="constructor">Scanning</span>.scanbuf</code></a> below is an alias for <code class="code"><span class="constructor">Scanning</span>.in_channel</code>.
+   Note that a <code class="code"><span class="constructor">Scanning</span>.in_channel</code> is not concurrency-safe: concurrent use
+   may produce arbitrary values or exceptions.</p>
 </div>
 <ul class="info-attributes">
 <li><b>Since</b> 3.12.0</li>

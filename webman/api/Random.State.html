@@ -139,6 +139,7 @@
 <pre><span id="VALsplit"><span class="keyword">val</span> split</span> : <code class="type"><a href="Random.State.html#TYPEt">t</a> -&gt; <a href="Random.State.html#TYPEt">t</a></code></pre><div class="info ">
 <div class="info-desc">
 <p>Draw a fresh PRNG state from the given PRNG state.
+      (The given PRNG state is modified.)
       The new PRNG is statistically independent from the given PRNG.
       Data can be drawn from both PRNGs, in any order, without risk of
       correlation.  Both PRNGs can be split later, arbitrarily many times.</p>

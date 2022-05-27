@@ -212,7 +212,7 @@
 
 <pre><span id="VALinit"><span class="keyword">val</span> init</span> : <code class="type">int -&gt; (int -&gt; 'a) -&gt; 'a list</code></pre><div class="info ">
 <div class="info-desc">
-<p><code class="code">init&nbsp;len&nbsp;f</code> is <code class="code">f&nbsp;0;&nbsp;f&nbsp;1;&nbsp;...;&nbsp;f&nbsp;(len-1)</code>, evaluated left to right.</p>
+<p><code class="code">init&nbsp;len&nbsp;f</code> is <code class="code">[f&nbsp;0;&nbsp;f&nbsp;1;&nbsp;...;&nbsp;f&nbsp;(len-1)]</code>, evaluated left to right.</p>
 </div>
 <ul class="info-attributes">
 <li><b>Since</b> 4.06.0</li>
@@ -292,8 +292,8 @@
 <pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">('a -&gt; unit) -&gt; 'a list -&gt; unit</code></pre><div class="info ">
 <div class="info-desc">
 <p><code class="code">iter&nbsp;f&nbsp;[a1;&nbsp;...;&nbsp;an]</code> applies function <code class="code">f</code> in turn to
-   <code class="code">a1;&nbsp;...;&nbsp;an</code>. It is equivalent to
-   <code class="code"><span class="keyword">begin</span>&nbsp;f&nbsp;a1;&nbsp;f&nbsp;a2;&nbsp;...;&nbsp;f&nbsp;an;&nbsp;()&nbsp;<span class="keyword">end</span></code>.</p>
+   <code class="code">[a1;&nbsp;...;&nbsp;an]</code>. It is equivalent to
+   <code class="code">f&nbsp;a1;&nbsp;f&nbsp;a2;&nbsp;...;&nbsp;f&nbsp;an</code>.</p>
 </div>
 </div>
 

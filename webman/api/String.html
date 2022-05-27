@@ -767,6 +767,28 @@
 </ul>
 </div>
 
+<pre><span id="VALhash"><span class="keyword">val</span> hash</span> : <code class="type"><a href="String.html#TYPEt">t</a> -&gt; int</code></pre><div class="info ">
+<div class="info-desc">
+<p>An unseeded hash function for strings, with the same output value as
+    <a href="Hashtbl.html#VALhash"><code class="code"><span class="constructor">Hashtbl</span>.hash</code></a>. This function allows this module to be passed as argument
+    to the functor <a href="Hashtbl.Make.html"><code class="code"><span class="constructor">Hashtbl</span>.<span class="constructor">Make</span></code></a>.</p>
+</div>
+<ul class="info-attributes">
+<li><b>Since</b> 5.0.0</li>
+</ul>
+</div>
+
+<pre><span id="VALseeded_hash"><span class="keyword">val</span> seeded_hash</span> : <code class="type">int -&gt; <a href="String.html#TYPEt">t</a> -&gt; int</code></pre><div class="info ">
+<div class="info-desc">
+<p>A seeded hash function for strings, with the same output value as
+    <a href="Hashtbl.html#VALseeded_hash"><code class="code"><span class="constructor">Hashtbl</span>.seeded_hash</code></a>. This function allows this module to be passed as
+    argument to the functor <a href="Hashtbl.MakeSeeded.html"><code class="code"><span class="constructor">Hashtbl</span>.<span class="constructor">MakeSeeded</span></code></a>.</p>
+</div>
+<ul class="info-attributes">
+<li><b>Since</b> 5.0.0</li>
+</ul>
+</div>
+
 <pre><span id="VALget_int32_be"><span class="keyword">val</span> get_int32_be</span> : <code class="type">string -&gt; int -&gt; int32</code></pre><div class="info ">
 <div class="info-desc">
 <p><code class="code">get_int32_be&nbsp;b&nbsp;i</code> is <code class="code">b</code>'s big-endian 32-bit integer

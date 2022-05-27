@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec246"><span class="chapter-number">Chapter 10</span> Language extensions</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Language extensions</a></li>
+<h1 class="chapter" id="sec253"><span class="chapter-number">Chapter 11</span> Language extensions</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Language extensions</a></li>
 <li><a href="letrecvalues.html#start-section"><span class="number">1</span> Recursive definitions of values</a>
 </li><li><a href="recursivemodules.html#start-section"><span class="number">2</span> Recursive modules</a>
 </li><li><a href="privatetypes.html#start-section"><span class="number">3</span> Private types</a>
@@ -307,8 +307,8 @@ Note that it is not well-defined which scope is used for a specific
 warning. This is implementation dependent and can change between versions.
 Some warnings are even completely outside the control of “ocaml.warning”
 (for instance, warnings 1, 2, 14, 29 and 50).</li><li class="li-itemize">“ocaml.warnerror” or “warnerror”, with a string literal payload.
-Same as “ocaml.warning”, for the <span class="machine"><span class="font-tt">-warn-error</span></span> command-line option.</li><li class="li-itemize">“ocaml.alert” or “alert”: see section ‍<a href="alerts.html#s%3Aalerts">10.21</a>.</li><li class="li-itemize">“ocaml.deprecated” or “deprecated”: alias for the
-“deprecated” alert, see section ‍<a href="alerts.html#s%3Aalerts">10.21</a>.
+Same as “ocaml.warning”, for the <span class="machine"><span class="font-tt">-warn-error</span></span> command-line option.</li><li class="li-itemize">“ocaml.alert” or “alert”: see section ‍<a href="alerts.html#s%3Aalerts">11.21</a>.</li><li class="li-itemize">“ocaml.deprecated” or “deprecated”: alias for the
+“deprecated” alert, see section ‍<a href="alerts.html#s%3Aalerts">11.21</a>.
 </li><li class="li-itemize">“ocaml.deprecated_mutable” or “deprecated_mutable”.
 Can be applied to a mutable record label. If the label is later
 used to modify the field (with “expr.l &lt;- expr”), the “deprecated” alert
@@ -342,7 +342,7 @@ is not inlined, a warning (55) is emitted.
 </li><li class="li-itemize">“ocaml.noalloc”, “ocaml.unboxed”and “ocaml.untagged” or
 “noalloc”, “unboxed” and “untagged” can be used on external
 definitions to obtain finer control over the C-to-OCaml interface. See
-<a href="intfc.html#s%3AC-cheaper-call">20.11</a> for more details.
+<a href="intfc.html#s%3AC-cheaper-call">21.11</a> for more details.
 </li><li class="li-itemize">“ocaml.immediate” or “immediate” applied on an abstract type mark the type as
 having a non-pointer implementation (e.g. “int”, “bool”, “char” or
 enumerated types). Mutation of these immediate types does not activate the

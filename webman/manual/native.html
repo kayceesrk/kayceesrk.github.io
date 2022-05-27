@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec328"><span class="chapter-number">Chapter 14</span> Native-code compilation (ocamlopt)</h1>
+<h1 class="chapter" id="sec335"><span class="chapter-number">Chapter 15</span> Native-code compilation (ocamlopt)</h1>
 <header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Native-code compilation (ocamlopt)</a></li>
 <li><a href="native.html#s%3Anative-overview"><span class="number">1</span> Overview of the compiler</a>
 </li><li><a href="native.html#s%3Anative-options"><span class="number">2</span> Options</a>
@@ -55,7 +55,7 @@ should always be referred to under the name <span class="font-it">x</span><span 
 a <span class="machine"><span class="font-tt">.o</span></span> or <span class="machine"><span class="font-tt">.obj</span></span> file, <span class="machine"><span class="font-tt">ocamlopt</span></span> assumes that it contains code compiled from C,
 not from OCaml).<p>The implementation is checked against the interface file <span class="font-it">x</span><span class="machine"><span class="font-tt">.mli</span></span>
 (if it exists) as described in the manual for <span class="machine"><span class="font-tt">ocamlc</span></span>
-(chapter ‍<a href="comp.html#c%3Acamlc">11</a>).</p></li><li class="li-itemize">Arguments ending in <span class="machine"><span class="font-tt">.cmx</span></span> are taken to be compiled object code. These
+(chapter ‍<a href="comp.html#c%3Acamlc">12</a>).</p></li><li class="li-itemize">Arguments ending in <span class="machine"><span class="font-tt">.cmx</span></span> are taken to be compiled object code. These
 files are linked together, along with the object files obtained
 by compiling <span class="machine"><span class="font-tt">.ml</span></span> arguments (if any), and the OCaml standard
 library, to produce a native-code executable program. The order in
@@ -197,7 +197,7 @@ names.
 Add debugging information while compiling and linking. This option is
 required in order to  produce stack backtraces when
 the program terminates on an uncaught exception (see
-section ‍<a href="runtime.html#s%3Aocamlrun-options">13.2</a>).
+section ‍<a href="runtime.html#s%3Aocamlrun-options">14.2</a>).
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-i</span></span></span></dt><dd class="dd-description">
 Cause the compiler to print all defined names (with their inferred
 types or their definitions) when compiling an implementation (<span class="machine"><span class="font-tt">.ml</span></span>
@@ -259,7 +259,7 @@ option is meant for use in the event that a pattern-match-heavy
 program leads to significant increases in compilation time.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-alias-deps</span></span></span></dt><dd class="dd-description">
 Do not record dependencies for module aliases. See
-section ‍<a href="modulealias.html#s%3Amodule-alias">10.8</a> for more information.
+section ‍<a href="modulealias.html#s%3Amodule-alias">11.8</a> for more information.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-no-app-funct</span></span></span></dt><dd class="dd-description">
 Deactivates the applicative behaviour of functors. With this option,
 each functor application generates new types in its result and
@@ -335,8 +335,8 @@ were added at the top of each file.
 Cause the linker to produce a C object file instead of
 an executable file.
 This is useful to wrap OCaml code as a C library,
-callable from any C program. See chapter ‍<a href="intfc.html#c%3Aintf-c">20</a>,
-section ‍<a href="intfc.html#ss%3Ac-embedded-code">20.7.5</a>. The name of the output object file
+callable from any C program. See chapter ‍<a href="intfc.html#c%3Aintf-c">21</a>,
+section ‍<a href="intfc.html#ss%3Ac-embedded-code">21.7.5</a>. The name of the output object file
 must be set with the <span class="machine"><span class="font-tt">-o</span></span> option.
 This option can also be used to produce a  compiled shared/dynamic library (<span class="machine"><span class="font-tt">.so</span></span> extension, <span class="machine"><span class="font-tt">.dll</span></span> under Windows).
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-output-complete-obj</span></span></span></dt><dd class="dd-description">
@@ -372,7 +372,7 @@ errors, the intermediate file is deleted afterwards.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-ppx</span></span> <span class="font-it">command</span></span></dt><dd class="dd-description">
 After parsing, pipe the abstract syntax tree through the preprocessor
 <span class="font-it">command</span>. The module <span class="machine"><span class="font-tt">Ast_mapper</span></span>, described in
-chapter ‍<a href="parsing.html#c%3Aparsinglib">27</a>:
+chapter ‍<a href="parsing.html#c%3Aparsinglib">28</a>:
 <a href="../api/compilerlibref/Ast_mapper.html"> <span class="font-tt">Ast_mapper</span> </a>
 ,
 implements the external interface of a preprocessor.</dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-principal</span></span></span></dt><dd class="dd-description">
@@ -406,7 +406,7 @@ The currently supported passes and the corresponding file extensions are:
 <span class="machine"><span class="font-tt">scheduling</span></span> (<span class="machine"><span class="font-tt">.cmir-linear</span></span>).<p>This experimental feature enables external tools to inspect and manipulate
 compiler’s intermediate representation of the program
 using <span class="machine"><span class="font-tt">compiler-libs</span></span> library (see
-chapter ‍<a href="parsing.html#c%3Aparsinglib">27</a> and
+chapter ‍<a href="parsing.html#c%3Aparsinglib">28</a> and
 <a href="../api/compilerlibref/Compiler_libs.html"> <span class="font-tt">Compiler_libs</span> </a>
 ).
 </p></dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-S</span></span></span></dt><dd class="dd-description">
@@ -563,12 +563,12 @@ mutually recursive types.
 </dd><dt class="dt-description"><span class="font-bold">49 <span class="machine"><span class="font-tt">no-cmi-file</span></span></span></dt><dd class="dd-description"> Absent cmi file when looking up module alias. (since 4.02)
 </dd><dt class="dt-description"><span class="font-bold">50 <span class="machine"><span class="font-tt">unexpected-docstring</span></span></span></dt><dd class="dd-description"> Unexpected documentation comment. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">51 <span class="machine"><span class="font-tt">wrong-tailcall-expectation</span></span></span></dt><dd class="dd-description"> Function call annotated with an incorrect @tailcall attribute. (since 4.03)
-</dd><dt class="dt-description"><span class="font-bold">52 <span class="machine"><span class="font-tt">fragile-literal-pattern</span></span> (see </span><a href="comp.html#ss%3Awarn52"><span class="font-bold">11.5.3</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Fragile constant pattern. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">52 <span class="machine"><span class="font-tt">fragile-literal-pattern</span></span> (see </span><a href="comp.html#ss%3Awarn52"><span class="font-bold">12.5.3</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Fragile constant pattern. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">53 <span class="machine"><span class="font-tt">misplaced-attribute</span></span></span></dt><dd class="dd-description"> Attribute cannot appear in this context. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">54 <span class="machine"><span class="font-tt">duplicated-attribute</span></span></span></dt><dd class="dd-description"> Attribute used more than once on an expression. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">55 <span class="machine"><span class="font-tt">inlining-impossible</span></span></span></dt><dd class="dd-description"> Inlining impossible. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">56 <span class="machine"><span class="font-tt">unreachable-case</span></span></span></dt><dd class="dd-description"> Unreachable case in a pattern-matching (based on type information). (since 4.03)
-</dd><dt class="dt-description"><span class="font-bold">57 <span class="machine"><span class="font-tt">ambiguous-var-in-pattern-guard</span></span> (see </span><a href="comp.html#ss%3Awarn57"><span class="font-bold">11.5.4</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Ambiguous or-pattern variables under guard. (since 4.03)
+</dd><dt class="dt-description"><span class="font-bold">57 <span class="machine"><span class="font-tt">ambiguous-var-in-pattern-guard</span></span> (see </span><a href="comp.html#ss%3Awarn57"><span class="font-bold">12.5.4</span></a><span class="font-bold">)</span></dt><dd class="dd-description"> Ambiguous or-pattern variables under guard. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">58 <span class="machine"><span class="font-tt">no-cmx-file</span></span></span></dt><dd class="dd-description"> Missing cmx file. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">59 <span class="machine"><span class="font-tt">flambda-assignment-to-non-mutable-value</span></span></span></dt><dd class="dd-description"> Assignment to non-mutable value. (since 4.03)
 </dd><dt class="dt-description"><span class="font-bold">60 <span class="machine"><span class="font-tt">unused-module</span></span></span></dt><dd class="dd-description"> Unused module declaration. (since 4.04)
@@ -629,7 +629,7 @@ Process <span class="font-it">file</span> as a file name, even if it starts with
 character.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-help</span></span> or <span class="machine"><span class="font-tt">--help</span></span></span></dt><dd class="dd-description">
 Display a short usage summary and exit.</dd></dl>
-<h5 class="paragraph" id="sec331"><a class="section-anchor" href="#sec331" aria-hidden="true">﻿</a>Options for the 32-bit x86 architecture</h5>
+<h5 class="paragraph" id="sec338"><a class="section-anchor" href="#sec338" aria-hidden="true">﻿</a>Options for the 32-bit x86 architecture</h5>
 <p>
 The 32-bit code generator for Intel/AMD x86 processors (<span class="machine"><span class="font-tt">i386</span></span>
 architecture) supports the
@@ -643,7 +643,7 @@ and the precision of the result can be reduced. In particular,
 trigonometric operations <span class="machine"><span class="font-tt">cos</span></span>, <span class="machine"><span class="font-tt">sin</span></span>, <span class="machine"><span class="font-tt">tan</span></span> have their range reduced to
 [−2<sup>64</sup>, 2<sup>64</sup>].
 </dd></dl>
-<h5 class="paragraph" id="sec332"><a class="section-anchor" href="#sec332" aria-hidden="true">﻿</a>Options for the 64-bit x86 architecture</h5>
+<h5 class="paragraph" id="sec339"><a class="section-anchor" href="#sec339" aria-hidden="true">﻿</a>Options for the 64-bit x86 architecture</h5>
 <p>
 The 64-bit code generator for Intel/AMD x86 processors (<span class="machine"><span class="font-tt">amd64</span></span>
 architecture) supports the following additional options:</p><dl class="description"><dt class="dt-description">
@@ -651,7 +651,7 @@ architecture) supports the following additional options:</p><dl class="descripti
 the default.
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">-fno-PIC</span></span></span></dt><dd class="dd-description"> Generate position-dependent machine code.
 </dd></dl>
-<h5 class="paragraph" id="sec333"><a class="section-anchor" href="#sec333" aria-hidden="true">﻿</a>Options for the PowerPC architecture</h5>
+<h5 class="paragraph" id="sec340"><a class="section-anchor" href="#sec340" aria-hidden="true">﻿</a>Options for the PowerPC architecture</h5>
 <p>
 The PowerPC code generator supports the following additional options:</p><dl class="description"><dt class="dt-description">
 <span class="font-bold"><span class="machine"><span class="font-tt">-flarge-toc</span></span></span></dt><dd class="dd-description"> Enables the PowerPC large model allowing the TOC (table of
@@ -660,7 +660,7 @@ contents) to be arbitrarily large. This is the default since 4.11.
 to 64 kbytes per compilation unit. Prior to 4.11 this was the default
 behaviour.
 </dd></dl>
-<h5 class="paragraph" id="sec334"><a class="section-anchor" href="#sec334" aria-hidden="true">﻿</a>Contextual control of command-line options</h5>
+<h5 class="paragraph" id="sec341"><a class="section-anchor" href="#sec341" aria-hidden="true">﻿</a>Contextual control of command-line options</h5>
 <p>The compiler command line can be modified “from the outside”
 with the following mechanisms. These are experimental
 and subject to change. They should be used only for experimental and
@@ -683,7 +683,7 @@ configured value. Primarily used for bootstrapping.
 </dd></dl>
 <h2 class="section" id="s:native-common-errors"><a class="section-anchor" href="#s:native-common-errors" aria-hidden="true">﻿</a><span class="number">3</span> Common errors</h2>
 <p>The error messages are almost identical to those of <span class="machine"><span class="font-tt">ocamlc</span></span>.
-See section ‍<a href="comp.html#s%3Acomp-errors">11.4</a>.</p>
+See section ‍<a href="comp.html#s%3Acomp-errors">12.4</a>.</p>
 <h2 class="section" id="s:native:running-executable"><a class="section-anchor" href="#s:native:running-executable" aria-hidden="true">﻿</a><span class="number">4</span> Running executables produced by ocamlopt</h2>
 <p>Executables generated by <span class="machine"><span class="font-tt">ocamlopt</span></span> are native, stand-alone executable
 files that can be invoked directly. They do
@@ -692,7 +692,7 @@ dynamically-loaded C/OCaml stub libraries.</p><p>During execution of an <span cl
 the following environment variables are also consulted:
 </p><dl class="description"><dt class="dt-description">
 <span class="font-bold"><span class="machine"><span class="font-tt">OCAMLRUNPARAM</span></span></span></dt><dd class="dd-description"> Same usage as in <span class="machine"><span class="font-tt">ocamlrun</span></span>
-(see section ‍<a href="runtime.html#s%3Aocamlrun-options">13.2</a>), except that option <span class="machine"><span class="font-tt">l</span></span>
+(see section ‍<a href="runtime.html#s%3Aocamlrun-options">14.2</a>), except that option <span class="machine"><span class="font-tt">l</span></span>
 is ignored (the operating system’s stack size limit
 is used instead).
 </dd><dt class="dt-description"><span class="font-bold"><span class="machine"><span class="font-tt">CAMLRUNPARAM</span></span></span></dt><dd class="dd-description"> If <span class="machine"><span class="font-tt">OCAMLRUNPARAM</span></span> is not found in the

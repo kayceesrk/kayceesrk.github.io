@@ -240,21 +240,25 @@
 <pre><span id="MODULEState"><span class="keyword">module</span> <a href="Random.State.html">State</a></span>: <code class="code"><span class="keyword">sig</span></code> <a href="Random.State.html">..</a> <code class="code"><span class="keyword">end</span></code></pre>
 <pre><span id="VALget_state"><span class="keyword">val</span> get_state</span> : <code class="type">unit -&gt; <a href="Random.State.html#TYPEt">State.t</a></code></pre><div class="info ">
 <div class="info-desc">
-<p>Return the current state of the domain-local generator used by the basic
-    functions.</p>
+<p><code class="code">get_state()</code> returns a fresh copy of the current state of the
+    domain-local generator (which is used by the basic functions).</p>
 </div>
 </div>
 
 <pre><span id="VALset_state"><span class="keyword">val</span> set_state</span> : <code class="type"><a href="Random.State.html#TYPEt">State.t</a> -&gt; unit</code></pre><div class="info ">
 <div class="info-desc">
-<p>Set the state of the domain-local generator used by the basic functions.</p>
+<p><code class="code">set_state&nbsp;s</code> updates the current state of the domain-local
+    generator (which is used by the basic functions) by copying
+    the state <code class="code">s</code> into it.</p>
 </div>
 </div>
 
 <pre><span id="VALsplit"><span class="keyword">val</span> split</span> : <code class="type">unit -&gt; <a href="Random.State.html#TYPEt">State.t</a></code></pre><div class="info ">
 <div class="info-desc">
 <p>Draw a fresh PRNG state from the current state of the domain-local
-    generator used by the default functions.  See <a href="Random.State.html#VALsplit"><code class="code"><span class="constructor">Random</span>.<span class="constructor">State</span>.split</code></a>.</p>
+    generator used by the default functions.
+    (The state of the domain-local generator is modified.)
+    See <a href="Random.State.html#VALsplit"><code class="code"><span class="constructor">Random</span>.<span class="constructor">State</span>.split</code></a>.</p>
 </div>
 <ul class="info-attributes">
 <li><b>Since</b> 5.0.0</li>

@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="c:intf-c"><span class="chapter-number">Chapter 20</span> Interfacing C with OCaml</h1>
+<h1 class="chapter" id="c:intf-c"><span class="chapter-number">Chapter 21</span> Interfacing C with OCaml</h1>
 <header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Interfacing C with OCaml</a></li>
 <li><a href="intfc.html#s%3Ac-overview"><span class="number">1</span> Overview and compilation information</a>
 </li><li><a href="intfc.html#s%3Ac-value"><span class="number">2</span> The <span class="font-tt">value</span> type</a>
@@ -172,16 +172,16 @@ objects) </td></tr>
 <tr><td class="c012"><span class="machine"><span class="font-tt">caml/memory.h</span></span></td><td class="c011">miscellaneous memory-related functions
 and macros (for GC interface, in-place modification of structures, etc). </td></tr>
 <tr><td class="c012"><span class="machine"><span class="font-tt">caml/fail.h</span></span></td><td class="c011">functions for raising exceptions
-(see section ‍<a href="#ss%3Ac-exceptions">20.4.5</a>) </td></tr>
+(see section ‍<a href="#ss%3Ac-exceptions">21.4.5</a>) </td></tr>
 <tr><td class="c012"><span class="machine"><span class="font-tt">caml/callback.h</span></span></td><td class="c011">callback from C to OCaml (see
-section ‍<a href="#s%3Ac-callback">20.7</a>). </td></tr>
+section ‍<a href="#s%3Ac-callback">21.7</a>). </td></tr>
 <tr><td class="c012"><span class="machine"><span class="font-tt">caml/custom.h</span></span></td><td class="c011">operations on custom blocks (see
-section ‍<a href="#s%3Ac-custom">20.9</a>). </td></tr>
+section ‍<a href="#s%3Ac-custom">21.9</a>). </td></tr>
 <tr><td class="c012"><span class="machine"><span class="font-tt">caml/intext.h</span></span></td><td class="c011">operations for writing user-defined
 serialization and deserialization functions for custom blocks
-(see section ‍<a href="#s%3Ac-custom">20.9</a>). </td></tr>
+(see section ‍<a href="#s%3Ac-custom">21.9</a>). </td></tr>
 <tr><td class="c012"><span class="machine"><span class="font-tt">caml/threads.h</span></span></td><td class="c011">operations for interfacing in the presence
-of multiple threads (see section ‍<a href="#s%3AC-multithreading">20.12</a>). </td></tr>
+of multiple threads (see section ‍<a href="#s%3AC-multithreading">21.12</a>). </td></tr>
 </tbody></table></div></div><p>
 These files reside in the <span class="machine"><span class="font-tt">caml/</span></span> subdirectory of the OCaml
 standard library directory, which is returned by the command
@@ -195,7 +195,7 @@ table of functions (the table of primitives).</p><p>In the default mode, the OCa
 standard runtime system, with a standard set of primitives. References
 to primitives that are not in this standard set result in the
 “unavailable C primitive” error. (Unless dynamic loading of C
-libraries is supported – see section ‍<a href="#ss%3Adynlink-c-code">20.1.4</a> below.)</p><p>In the “custom runtime” mode, the OCaml linker scans the
+libraries is supported – see section ‍<a href="#ss%3Adynlink-c-code">21.1.4</a> below.)</p><p>In the “custom runtime” mode, the OCaml linker scans the
 object files and determines the set of required primitives. Then, it
 builds a suitable runtime system, by calling the native code linker with:
 </p><ul class="itemize"><li class="li-itemize">
@@ -267,7 +267,7 @@ operating system), and 2- building a
 shared library from the resulting object files. The resulting shared
 library or DLL file must be installed in a place where <span class="machine"><span class="font-tt">ocamlrun</span></span> can
 find it later at program start-up time (see
-section ‍<a href="runtime.html#s%3Aocamlrun-dllpath">13.3</a>).
+section ‍<a href="runtime.html#s%3Aocamlrun-dllpath">14.3</a>).
 Finally (step 3), execute the <span class="machine"><span class="font-tt">ocamlc</span></span> command with
 </p><ul class="itemize"><li class="li-itemize">
 the names of the desired OCaml object files (<span class="machine"><span class="font-tt">.cmo</span></span> and <span class="machine"><span class="font-tt">.cma</span></span> files) ;
@@ -278,8 +278,8 @@ in one of the standard library directories can also be specified as
 <span class="machine"><span class="font-tt">-dllib -l</span></span><span class="font-it">name</span>.
 </li></ul><p>
 Do <em>not</em> set the <span class="machine"><span class="font-tt">-custom</span></span> flag, otherwise you’re back to static linking
-as described in section ‍<a href="#ss%3Astaticlink-c-code">20.1.3</a>.
-The <span class="machine"><span class="font-tt">ocamlmklib</span></span> tool (see section ‍<a href="#s%3Aocamlmklib">20.14</a>)
+as described in section ‍<a href="#ss%3Astaticlink-c-code">21.1.3</a>.
+The <span class="machine"><span class="font-tt">ocamlmklib</span></span> tool (see section ‍<a href="#s%3Aocamlmklib">21.14</a>)
 automates steps 2 and 3.</p><p>As in the case of static linking, it is possible (and recommended) to
 record the names of C libraries in an OCaml <span class="machine"><span class="font-tt">.cma</span></span> library archive.
 Consider again an OCaml library
@@ -326,7 +326,7 @@ compile to position-independent code and build a shared library vary
 wildly between different Unix systems. Also, dynamic linking is not
 supported on all Unix systems, requiring a fall-back case to static
 linking in the Makefile for the library. The <span class="machine"><span class="font-tt">ocamlmklib</span></span> command
-(see section ‍<a href="#s%3Aocamlmklib">20.14</a>) tries to hide some of these system
+(see section ‍<a href="#s%3Aocamlmklib">21.14</a>) tries to hide some of these system
 dependencies.</p><p>In conclusion: dynamic linking is highly recommended under the native
 Windows port, because there are no portability problems and it is much
 more convenient for the end users. Under Unix, dynamic linking should
@@ -367,7 +367,7 @@ manipulate values of that type. An object of type <span class="machine"><span cl
 an unboxed integer;
 </li><li class="li-itemize">or a pointer to a block inside the heap,
 allocated through one of the <code class="verb">caml_alloc_*</code> functions described
-in section ‍<a href="#ss%3Ac-block-allocation">20.4.4</a>.
+in section ‍<a href="#ss%3Ac-block-allocation">21.4.4</a>.
 </li></ul>
 <h3 class="subsection" id="ss:c-int"><a class="section-anchor" href="#ss:c-int" aria-hidden="true">﻿</a><span class="number">2.1</span> Integer values</h3>
 <p>Integer values encode 63-bit signed integers (31-bit on 32-bit
@@ -409,7 +409,7 @@ supported since OCaml 5.0.</p><p>A correct way to manipulate pointers to out-of-
 OCaml is to store those pointers in OCaml blocks with tag
 <span class="machine"><span class="font-tt">Abstract_tag</span></span> or <span class="machine"><span class="font-tt">Custom_tag</span></span>, then use the blocks as the OCaml
 values.</p><p>Here is an example of encapsulation of out-of-heap pointers of C type
-<span class="machine"><span class="font-tt">ty *</span></span> inside <span class="machine"><span class="font-tt">Abstract_tag</span></span> blocks. Section ‍<a href="#s%3Ac-intf-example">20.6</a>
+<span class="machine"><span class="font-tt">ty *</span></span> inside <span class="machine"><span class="font-tt">Abstract_tag</span></span> blocks. Section ‍<a href="#s%3Ac-intf-example">21.6</a>
 gives a more complete example using <span class="machine"><span class="font-tt">Custom_tag</span></span> blocks.
 </p><pre>/* Create an OCaml value encapsulating the pointer p */
 static value val_of_typtr(ty * p)
@@ -532,7 +532,7 @@ specially; a concrete data type is unboxable if it has exactly one
 constructor and this constructor has exactly one argument. Unboxable
 concrete data types are represented in the same ways as unboxable
 record types: see the description in
-section ‍<a href="#ss%3Ac-tuples-and-records">20.3.2</a>.</p>
+section ‍<a href="#ss%3Ac-tuples-and-records">21.3.2</a>.</p>
 <h3 class="subsection" id="ss:c-objects"><a class="section-anchor" href="#ss:c-objects" aria-hidden="true">﻿</a><span class="number">3.5</span> Objects</h3>
 <p>Objects are represented as blocks with tag <span class="machine"><span class="font-tt">Object_tag</span></span>. The first
 field of the block refers to the object’s class and associated method
@@ -740,7 +740,7 @@ with argument <span class="font-it">s</span>.
 </li></ul><p>Raising arbitrary exceptions from C is more delicate: the
 exception identifier is dynamically allocated by the OCaml program, and
 therefore must be communicated to the C function using the
-registration facility described below in section ‍<a href="#ss%3Ac-register-exn">20.7.3</a>.
+registration facility described below in section ‍<a href="#ss%3Ac-register-exn">21.7.3</a>.
 Once the exception identifier is recovered in C, the following
 functions actually raise the exception:
 </p><ul class="itemize"><li class="li-itemize">
@@ -781,7 +781,7 @@ argument must be
 replaced by <span class="machine"><span class="font-tt">CAMLreturn0</span></span>. If your C function is a procedure (i.e. if
 it returns void), you must insert <span class="machine"><span class="font-tt">CAMLreturn0</span></span> at the end (to replace
 C’s implicit <span class="machine"><span class="font-tt">return</span></span>).</p>
-<h5 class="paragraph" id="sec467"><a class="section-anchor" href="#sec467" aria-hidden="true">﻿</a>Note:</h5>
+<h5 class="paragraph" id="sec474"><a class="section-anchor" href="#sec474" aria-hidden="true">﻿</a>Note:</h5>
 <p> some C compilers give bogus warnings about unused
 variables <span class="machine"><span class="font-tt">caml__dummy_xxx</span></span> at each use of <span class="machine"><span class="font-tt">CAMLparam</span></span> and
 <span class="machine"><span class="font-tt">CAMLlocal</span></span>. You should ignore them.</p><p> <br>
@@ -793,7 +793,7 @@ variables <span class="machine"><span class="font-tt">caml__dummy_xxx</span></sp
   CAMLreturn0;
 }
 </pre>
-<h5 class="paragraph" id="sec468"><a class="section-anchor" href="#sec468" aria-hidden="true">﻿</a>Note:</h5>
+<h5 class="paragraph" id="sec475"><a class="section-anchor" href="#sec475" aria-hidden="true">﻿</a>Note:</h5>
 <p> if your function is a primitive with more than 5 arguments
 for use with the byte-code runtime, its arguments are not <span class="machine"><span class="font-tt">value</span></span>s and
 must not be declared (they have types <span class="machine"><span class="font-tt">value *</span></span> and <span class="machine"><span class="font-tt">int</span></span>).</p><div class="theorem"><span class="font-bold">Rule ‍2</span> <em>
@@ -834,13 +834,13 @@ block (i.e. <span class="machine"><span class="font-tt">Is_block(</span></span><
   CAMLreturn (result);
 }
 </pre>
-<h5 class="paragraph" id="sec469"><a class="section-anchor" href="#sec469" aria-hidden="true">﻿</a>Warning:</h5>
+<h5 class="paragraph" id="sec476"><a class="section-anchor" href="#sec476" aria-hidden="true">﻿</a>Warning:</h5>
 <p> The first argument of <span class="machine"><span class="font-tt">Store_field</span></span> and
 <span class="machine"><span class="font-tt">Store_double_field</span></span> must be a variable declared by <span class="machine"><span class="font-tt">CAMLparam*</span></span> or
 a parameter declared by <span class="machine"><span class="font-tt">CAMLlocal*</span></span> to ensure that a garbage
 collection triggered by the evaluation of the other arguments will not
 invalidate the first argument after it is computed.</p>
-<h5 class="paragraph" id="sec470"><a class="section-anchor" href="#sec470" aria-hidden="true">﻿</a>Use with CAMLlocalN:</h5>
+<h5 class="paragraph" id="sec477"><a class="section-anchor" href="#sec477" aria-hidden="true">﻿</a>Use with CAMLlocalN:</h5>
 <p> Arrays of values declared using
 <span class="machine"><span class="font-tt">CAMLlocalN</span></span> must not be written to using <span class="machine"><span class="font-tt">Store_field</span></span>.
 Use the normal C array syntax instead.</p><div class="theorem"><span class="font-bold">Rule ‍4</span> <em> Global variables containing values must be registered
@@ -862,7 +862,7 @@ is moved within the OCaml heap. In the presence of threads care must be taken to
 ensure appropriate synchronisation with the OCaml runtime to avoid a race
 condition against the garbage collector when reading or writing the value. (See
 section
-<a href="#ss%3Aparallel-execution-long-running-c-code">20.12.2</a>.)</p><p>A registered global variable <span class="machine"><span class="font-tt">v</span></span> can be un-registered by calling
+<a href="#ss%3Aparallel-execution-long-running-c-code">21.12.2</a>.)</p><p>A registered global variable <span class="machine"><span class="font-tt">v</span></span> can be un-registered by calling
 <span class="machine"><span class="font-tt">caml_remove_global_root(&amp;v)</span></span>.</p><p>If the contents of the global variable <span class="machine"><span class="font-tt">v</span></span> are seldom modified after
 registration, better performance can be achieved by calling
 <span class="machine"><span class="font-tt">caml_register_generational_global_root(&amp;v)</span></span> to register <span class="machine"><span class="font-tt">v</span></span> (after
@@ -875,7 +875,7 @@ The garbage collector takes advantage of the guarantee that <span class="machine
 modified between calls to <span class="machine"><span class="font-tt">caml_modify_generational_global_root</span></span> to scan it
 less often. This improves performance if the
 modifications of <span class="machine"><span class="font-tt">v</span></span> happen less often than minor collections.</p>
-<h5 class="paragraph" id="sec471"><a class="section-anchor" href="#sec471" aria-hidden="true">﻿</a>Note:</h5>
+<h5 class="paragraph" id="sec478"><a class="section-anchor" href="#sec478" aria-hidden="true">﻿</a>Note:</h5>
 <p> The <span class="machine"><span class="font-tt">CAML</span></span> macros use identifiers (local variables, type
 identifiers, structure tags) that start with <span class="machine"><span class="font-tt">caml__</span></span>. Do not use any
 identifier starting with <span class="machine"><span class="font-tt">caml__</span></span> in your programs.</p>
@@ -996,7 +996,7 @@ used for clean up before re-raising:</p><pre>    CAMLlocal1(exn);
     }
 </pre><p>
 Correct use of exceptional return, in particular in the presence of
-garbage collection, is further detailed in Section ‍<a href="#ss%3Ac-callbacks">20.7.1</a>.</p>
+garbage collection, is further detailed in Section ‍<a href="#ss%3Ac-callbacks">21.7.1</a>.</p>
 <h2 class="section" id="s:c-intf-example"><a class="section-anchor" href="#s:c-intf-example" aria-hidden="true">﻿</a><span class="number">6</span> A complete example</h2>
 <p>This section outlines how the functions from the Unix <span class="machine"><span class="font-tt">curses</span></span> library
 can be made available to OCaml programs. First of all, here is
@@ -1174,7 +1174,7 @@ exception occurred, and <span class="font-it">v</span> is the value returned by 
 function. If <span class="machine"><span class="font-tt">Is_exception_result(</span></span><span class="font-it">v</span><span class="machine"><span class="font-tt">)</span></span> returns “true”,
 an exception escaped, and its value (the exception descriptor) can be
 recovered using <span class="machine"><span class="font-tt">Extract_exception(</span></span><span class="font-it">v</span><span class="machine"><span class="font-tt">)</span></span>.</p>
-<h5 class="paragraph" id="sec477"><a class="section-anchor" href="#sec477" aria-hidden="true">﻿</a>Warning:</h5>
+<h5 class="paragraph" id="sec484"><a class="section-anchor" href="#sec484" aria-hidden="true">﻿</a>Warning:</h5>
 <p> If the OCaml function returned with an exception,
 <span class="machine"><span class="font-tt">Extract_exception</span></span> should be applied to the exception result prior
 to calling a function that may trigger garbage collection.
@@ -1256,7 +1256,7 @@ exception to register. For example:
 </pre><p>The C code can then recover the exception identifier using
 <span class="machine"><span class="font-tt">caml_named_value</span></span> and pass it as first argument to the functions
 <span class="machine"><span class="font-tt">raise_constant</span></span>, <span class="machine"><span class="font-tt">raise_with_arg</span></span>, and <span class="machine"><span class="font-tt">raise_with_string</span></span> (described
-in section ‍<a href="#ss%3Ac-exceptions">20.4.5</a>) to actually raise the exception. For
+in section ‍<a href="#ss%3Ac-exceptions">21.4.5</a>) to actually raise the exception. For
 example, here is a C function that raises the <span class="machine"><span class="font-tt">Error</span></span> exception with
 the given argument:
 </p><pre>    void raise_error(char * msg)
@@ -1288,7 +1288,7 @@ executes the initialization code of the OCaml program. Typically, this
 initialization code registers callback functions using <span class="machine"><span class="font-tt">Callback.register</span></span>.
 Once the OCaml initialization code is complete, control returns to the
 C code that called <span class="machine"><span class="font-tt">caml_main</span></span>.</li><li class="li-itemize">The C code can then invoke OCaml functions using the callback
-mechanism (see section ‍<a href="#ss%3Ac-callbacks">20.7.1</a>).
+mechanism (see section ‍<a href="#ss%3Ac-callbacks">21.7.1</a>).
 </li></ul>
 <h3 class="subsection" id="ss:c-embedded-code"><a class="section-anchor" href="#ss:c-embedded-code" aria-hidden="true">﻿</a><span class="number">7.5</span> Embedding the OCaml code in the C code</h3>
 <p>The bytecode compiler in custom runtime mode (<span class="machine"><span class="font-tt">ocamlc -custom</span></span>)
@@ -1297,7 +1297,7 @@ custom runtime. This has two consequences. First, the final linking
 step must be performed by <span class="machine"><span class="font-tt">ocamlc</span></span>. Second, the OCaml runtime library
 must be able to find the name of the executable file from the
 command-line arguments. When using <span class="machine"><span class="font-tt">caml_main(argv)</span></span> as in
-section ‍<a href="#ss%3Amain-c">20.7.4</a>, this means that <span class="machine"><span class="font-tt">argv[0]</span></span> or <span class="machine"><span class="font-tt">argv[1]</span></span> must
+section ‍<a href="#ss%3Amain-c">21.7.4</a>, this means that <span class="machine"><span class="font-tt">argv[0]</span></span> or <span class="machine"><span class="font-tt">argv[1]</span></span> must
 contain the executable file name.</p><p>An alternative is to embed the bytecode in the C code. The
 <span class="machine"><span class="font-tt">-output-obj</span></span> and <span class="machine"><span class="font-tt">-output-complete-obj</span></span> options to <span class="machine"><span class="font-tt">ocamlc</span></span> are
 provided for this purpose. They cause the <span class="machine"><span class="font-tt">ocamlc</span></span> compiler to output a
@@ -1364,7 +1364,7 @@ With <span class="machine"><span class="font-tt">ocamlopt</span></span>, you sho
         cc -o myprog <span class="font-it">C objects and libraries</span> \
            camlcode.o <span class="font-it">C libraries required by the runtime, eg -lm -ldl</span>
 </pre>
-<h5 class="paragraph" id="sec482"><a class="section-anchor" href="#sec482" aria-hidden="true">﻿</a>Warning:</h5>
+<h5 class="paragraph" id="sec489"><a class="section-anchor" href="#sec489" aria-hidden="true">﻿</a>Warning:</h5>
 <p> On some ports, special options are required on the final
 linking phase that links together the object file produced by the
 <span class="machine"><span class="font-tt">-output-obj</span></span> and <span class="machine"><span class="font-tt">-output-complete-obj</span></span> options and the remainder of the program. Those options
@@ -1378,7 +1378,7 @@ all other object files linked with it should also be compiled with
 </li><li class="li-itemize">other systems: you may have to add one or both of
 <span class="machine"><span class="font-tt">-lm</span></span> and <span class="machine"><span class="font-tt">-ldl</span></span>, depending on your OS and C compiler.
 </li></ul>
-<h5 class="paragraph" id="sec483"><a class="section-anchor" href="#sec483" aria-hidden="true">﻿</a>Stack backtraces.</h5>
+<h5 class="paragraph" id="sec490"><a class="section-anchor" href="#sec490" aria-hidden="true">﻿</a>Stack backtraces.</h5>
 <p> When OCaml bytecode produced by
 <span class="machine"><span class="font-tt">ocamlc -g</span></span> is embedded in a C program, no debugging information is
 included, and therefore it is impossible to print stack backtraces on
@@ -1390,7 +1390,7 @@ by calling <span class="machine"><span class="font-tt">Printexc.record_backtrace
 one of the OCaml modules. This can also be achieved from the C side
 by calling <span class="machine"><span class="font-tt">caml_record_backtraces(1);</span></span> in the OCaml-C glue code.
 (<span class="machine"><span class="font-tt">caml_record_backtraces</span></span> is declared in <span class="machine"><span class="font-tt">backtrace.h</span></span>)</p>
-<h5 class="paragraph" id="sec484"><a class="section-anchor" href="#sec484" aria-hidden="true">﻿</a>Unloading the runtime.</h5>
+<h5 class="paragraph" id="sec491"><a class="section-anchor" href="#sec491" aria-hidden="true">﻿</a>Unloading the runtime.</h5>
 <p>In case the shared library produced with <span class="machine"><span class="font-tt">-output-obj</span></span> is to be loaded and
 unloaded repeatedly by a single process, care must be taken to unload the
 OCaml runtime explicitly, in order to avoid various system resource leaks.</p><p>Since 4.05, <span class="machine"><span class="font-tt">caml_shutdown</span></span> function can be used to shut the runtime down
@@ -1398,7 +1398,7 @@ gracefully, which equals the following:
 </p><ul class="itemize"><li class="li-itemize">
 Running the functions that were registered with <span class="machine"><span class="font-tt">Stdlib.at_exit</span></span>.
 </li><li class="li-itemize">Triggering finalization of allocated custom blocks (see
-section ‍<a href="#s%3Ac-custom">20.9</a>). For example, <span class="machine"><span class="font-tt">Stdlib.in_channel</span></span> and
+section ‍<a href="#s%3Ac-custom">21.9</a>). For example, <span class="machine"><span class="font-tt">Stdlib.in_channel</span></span> and
 <span class="machine"><span class="font-tt">Stdlib.out_channel</span></span> are represented by custom blocks that enclose file
 descriptors, which are to be released.
 </li><li class="li-itemize">Unloading the dependent shared libraries that were loaded by the runtime,
@@ -1417,7 +1417,7 @@ to <span class="machine"><span class="font-tt">caml_shutdown</span></span> (in a
 there are no outstanding calls to <span class="machine"><span class="font-tt">caml_startup</span></span>.</p><p>Once a runtime is unloaded, it cannot be started up again without reloading the
 shared library and reinitializing its static data. Therefore, at the moment, the
 facility is only useful for building reloadable shared libraries.</p>
-<h5 class="paragraph" id="sec485"><a class="section-anchor" href="#sec485" aria-hidden="true">﻿</a>Unix signal handling.</h5>
+<h5 class="paragraph" id="sec492"><a class="section-anchor" href="#sec492" aria-hidden="true">﻿</a>Unix signal handling.</h5>
 <p> Depending on the target platform and
 operating system, the native-code runtime system may install signal
 handlers for one or several of the <span class="machine"><span class="font-tt">SIGSEGV</span></span>, <span class="machine"><span class="font-tt">SIGTRAP</span></span> and <span class="machine"><span class="font-tt">SIGFPE</span></span>
@@ -1426,7 +1426,7 @@ their default behaviors when <span class="machine"><span class="font-tt">caml_sh
 program written in ‍C should not try to handle these signals itself.</p>
 <h2 class="section" id="s:c-advexample"><a class="section-anchor" href="#s:c-advexample" aria-hidden="true">﻿</a><span class="number">8</span> Advanced example with callbacks</h2>
 <p>This section illustrates the callback facilities described in
-section ‍<a href="#s%3Ac-callback">20.7</a>. We are going to package some OCaml functions
+section ‍<a href="#s%3Ac-callback">21.7</a>. We are going to package some OCaml functions
 in such a way that they can be linked with C code and called from C
 just like any C functions. The OCaml functions are defined in the
 following <span class="machine"><span class="font-tt">mod.ml</span></span> OCaml source:</p><pre>(* File mod.ml -- some "useful" OCaml functions *)
@@ -1754,7 +1754,7 @@ The kind of array elements is one of the following constants:
 <tr><td class="c006"><span class="machine"><span class="font-tt">CAML_BA_COMPLEX64</span></span></td><td class="c006">64-bit double-precision complex numbers </td></tr>
 <tr><td class="c006"><span class="machine"><span class="font-tt">CAML_BA_CHAR</span></span></td><td class="c006">8-bit characters </td></tr>
 </tbody></table></div></div>
-<h5 class="paragraph" id="sec497"><a class="section-anchor" href="#sec497" aria-hidden="true">﻿</a>Warning:</h5>
+<h5 class="paragraph" id="sec504"><a class="section-anchor" href="#sec504" aria-hidden="true">﻿</a>Warning:</h5>
 <p>
 <span class="machine"><span class="font-tt">Caml_ba_array_val(</span></span><span class="font-it">v</span><span class="machine"><span class="font-tt">)</span></span> must always be dereferenced immediately and not stored
 anywhere, including local variables.
@@ -1877,7 +1877,7 @@ code around C calls. Technically it wraps every C call with the C function
 <span class="machine"><span class="font-tt">caml_c_call</span></span> which is part of the OCaml runtime.</p><p>For small functions that are called repeatedly, this indirection can have
 a big impact on performances. However this is not needed if we know that
 the C function doesn’t allocate, doesn’t raise exceptions, and doesn’t release
-the master lock (see section ‍<a href="#ss%3Aparallel-execution-long-running-c-code">20.12.2</a>).
+the master lock (see section ‍<a href="#ss%3Aparallel-execution-long-running-c-code">21.12.2</a>).
 We can instruct the OCaml native-code compiler of this fact by annotating the
 external declaration with the attribute <span class="machine"><span class="font-tt">[@@noalloc]</span></span>:</p><pre>external bar : int -&gt; int -&gt; int = "foo" [@@noalloc]
 </pre><p>
@@ -1940,7 +1940,7 @@ The calling thread re-acquires the master lock and other OCaml
 resources. It may block until no other thread uses the OCaml run-time
 system.
 </li></ul><p>These functions poll for pending signals by calling asynchronous
-callbacks (section ‍<a href="#ss%3Ac-process-pending-actions">20.5.3</a>) before releasing and
+callbacks (section ‍<a href="#ss%3Ac-process-pending-actions">21.5.3</a>) before releasing and
 after acquiring the lock. They can therefore execute arbitrary OCaml
 code including raising an asynchronous exception.</p><p>After <span class="machine"><span class="font-tt">caml_release_runtime_system()</span></span> was called and until
 <span class="machine"><span class="font-tt">caml_acquire_runtime_system()</span></span> is called, the C code must not access
@@ -2043,7 +2043,7 @@ string returned by <span class="machine"><span class="font-tt">caml_stat_strdup_
 <span class="machine"><span class="font-tt">caml_copy_string</span></span>.</li></ul><p><span class="font-bold">Note:</span> The strings returned by <span class="machine"><span class="font-tt">caml_stat_strdup_to_os</span></span> and
 <span class="machine"><span class="font-tt">caml_stat_strdup_of_os</span></span> are allocated using <span class="machine"><span class="font-tt">caml_stat_alloc</span></span>, so they need to
 be deallocated using <span class="machine"><span class="font-tt">caml_stat_free</span></span> when they are no longer needed.</p>
-<h5 class="paragraph" id="sec507"><a class="section-anchor" href="#sec507" aria-hidden="true">﻿</a>Example</h5>
+<h5 class="paragraph" id="sec514"><a class="section-anchor" href="#sec514" aria-hidden="true">﻿</a>Example</h5>
 <p> We want to bind the function <span class="machine"><span class="font-tt">getenv</span></span> in a way that works
 both under Unix and Windows. Under Unix this function has the prototype:</p><pre>    char *getenv(const char *);
 </pre><p>While the Unicode version under Windows has the prototype:
@@ -2138,7 +2138,7 @@ If not specified, defaults to the output name given with <span class="machine"><
 <span class="font-bold"><span class="machine"><span class="font-tt">OCAML_FLEXLINK</span></span></span></dt><dd class="dd-description"> Alternative executable to use instead of the
 configured value. Primarily used for bootstrapping.
 </dd></dl>
-<h5 class="paragraph" id="sec509"><a class="section-anchor" href="#sec509" aria-hidden="true">﻿</a>Example</h5>
+<h5 class="paragraph" id="sec516"><a class="section-anchor" href="#sec516" aria-hidden="true">﻿</a>Example</h5>
 <p> Consider an OCaml interface to the standard <span class="machine"><span class="font-tt">libz</span></span>
 C library for reading and writing compressed files. Assume this
 library resides in <span class="machine"><span class="font-tt">/usr/local/zlib</span></span>. This interface is
@@ -2184,7 +2184,7 @@ to this internal runtime API, this section provides some guidelines
 that may help you to write code that might not break on every new version
 of OCaml.
 </p>
-<h5 class="paragraph" id="sec511"><a class="section-anchor" href="#sec511" aria-hidden="true">﻿</a>Note</h5>
+<h5 class="paragraph" id="sec518"><a class="section-anchor" href="#sec518" aria-hidden="true">﻿</a>Note</h5>
 <p> Programmers which come to rely on the internal API
 for a use-case which they find realistic and useful are encouraged to open
 a request for improvement on the bug tracker.</p>

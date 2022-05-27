@@ -111,11 +111,9 @@
 
 <pre><span id="VALjoin"><span class="keyword">val</span> join</span> : <code class="type">'a <a href="Domain.html#TYPEt">t</a> -&gt; 'a</code></pre><div class="info ">
 <div class="info-desc">
-<p><code class="code">join&nbsp;d</code> blocks until domain <code class="code">d</code> runs to completion.
-    If <code class="code">d</code> results in a value, then that is returned by <code class="code">join&nbsp;d</code>.
-    If <code class="code">d</code> raises an uncaught exception, then that is thrown by <code class="code">join&nbsp;d</code>.
-    Domains may only be joined once: subsequent uses of <code class="code">join&nbsp;d</code>
-    raise Invalid_argument.</p>
+<p><code class="code">join&nbsp;d</code> blocks until domain <code class="code">d</code> runs to completion. If <code class="code">d</code> results in a
+    value, then that is returned by <code class="code">join&nbsp;d</code>. If <code class="code">d</code> raises an uncaught
+    exception, then that is re-raised by <code class="code">join&nbsp;d</code>.</p>
 </div>
 </div>
 
@@ -141,8 +139,11 @@
 
 <pre><span id="VALat_first_spawn"><span class="keyword">val</span> at_first_spawn</span> : <code class="type">(unit -&gt; unit) -&gt; unit</code></pre><div class="info ">
 <div class="info-desc">
-<p>Register the given function to be called before the first domain is
-    spawned.</p>
+<p>Register the given function to be called before any domain is
+    spawned (except the initial domain) and before any function registered
+    with <a href="Domain.html#VALat_startup"><code class="code"><span class="constructor">Domain</span>.at_startup</code></a> is called. The functions registered with
+    <code class="code">at_first_spawn</code> are called in 'last in, first out' order: the function
+    most recently added with <code class="code">at_first_spawn</code> is called first.</p>
 </div>
 <ul class="info-attributes">
 <li><b>Raises</b> <code>Invalid_argument</code> if the first domain has already been spawned.</li>
@@ -151,9 +152,11 @@
 
 <pre><span id="VALat_exit"><span class="keyword">val</span> at_exit</span> : <code class="type">(unit -&gt; unit) -&gt; unit</code></pre><div class="info ">
 <div class="info-desc">
-<p>Register the given function to be called at when a domain exits. This
-    function is also registered with <a href="Stdlib.html#VALat_exit"><code class="code">at_exit</code></a>. If the registered
-    function raises an exception, the exceptions are ignored.</p>
+<p>Register the given function to be called at when a spawned domain exits.
+    This function is also registered with <a href="Stdlib.html#VALat_exit"><code class="code">at_exit</code></a>. If the registered
+    function raises an exception, the exceptions are ignored. The registered
+    functions are called in 'last in, first out' order: the function most
+    recently added with <code class="code">at_exit</code> is called first.</p>
 </div>
 </div>
 
@@ -161,7 +164,9 @@
 <div class="info-desc">
 <p>Register the given function to be called when a domain starts. This
     function is called before the callback specified to <code class="code">spawn&nbsp;f</code> is
-    executed.</p>
+    executed. The registered functions are called in 'last in, first out'
+    order: the function most recently added with <code class="code">at_startup</code> is
+    called first.</p>
 </div>
 </div>
 
