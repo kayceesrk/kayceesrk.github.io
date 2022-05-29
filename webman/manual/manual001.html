@@ -129,11 +129,20 @@
 </li><li class="li-toc"><a href="parallelism.html#s%3Apar_iterators"><span class="number">2.2</span> Parallel iterators</a>
 </li></ul>
 </li><li class="li-toc"><a href="parallelism.html#s%3Agc"><span class="number">3</span> Parallel garbage collection</a>
-</li></ul>
-</li></ul>
-</li><li class="li-toc"><a href="index.html#sec86">Part ‍II The OCaml language</a>
+</li><li class="li-toc"><a href="parallelism.html#s%3Amm_easy"><span class="number">4</span> Memory model: the easy bits</a>
+</li><li class="li-toc"><a href="parallelism.html#s%3Aatomics"><span class="number">5</span> Atomics</a>
 <ul class="toc"><li class="li-toc">
-<a href="language.html#sec87"><span class="chapter-number">Chapter 10</span> The OCaml language</a>
+<a href="parallelism.html#s%3Alockfree_stack"><span class="number">5.1</span> Lock-free stack</a>
+</li></ul>
+</li><li class="li-toc"><a href="parallelism.html#s%3Async"><span class="number">6</span> Blocking synchronization</a>
+<ul class="toc"><li class="li-toc">
+<a href="parallelism.html#s%3Asysthread_intereaction"><span class="number">6.1</span> Interaction with threads</a>
+</li></ul>
+</li></ul>
+</li></ul>
+</li><li class="li-toc"><a href="index.html#sec91">Part ‍II The OCaml language</a>
+<ul class="toc"><li class="li-toc">
+<a href="language.html#sec92"><span class="chapter-number">Chapter 10</span> The OCaml language</a>
 <ul class="toc"><li class="li-toc">
 <a href="lex.html#s%3Alexical-conventions"><span class="number">1</span> Lexical conventions</a>
 </li><li class="li-toc"><a href="values.html#s%3Avalues"><span class="number">2</span> Values</a>
@@ -190,7 +199,7 @@
 </li></ul>
 </li><li class="li-toc"><a href="compunit.html#s%3Acompilation-units"><span class="number">12</span> Compilation units</a>
 </li></ul>
-</li><li class="li-toc"><a href="extn.html#sec253"><span class="chapter-number">Chapter 11</span> Language extensions</a>
+</li><li class="li-toc"><a href="extn.html#sec258"><span class="chapter-number">Chapter 11</span> Language extensions</a>
 <ul class="toc"><li class="li-toc">
 <a href="letrecvalues.html#s%3Aletrecvalues"><span class="number">1</span> Recursive definitions of values</a>
 </li><li class="li-toc"><a href="recursivemodules.html#s%3Arecursive-modules"><span class="number">2</span> Recursive modules</a>
@@ -261,9 +270,9 @@
 </li></ul>
 </li></ul>
 </li></ul>
-</li><li class="li-toc"><a href="index.html#sec310">Part ‍III The OCaml tools</a>
+</li><li class="li-toc"><a href="index.html#sec315">Part ‍III The OCaml tools</a>
 <ul class="toc"><li class="li-toc">
-<a href="comp.html#sec311"><span class="chapter-number">Chapter 12</span> Batch compilation (ocamlc)</a>
+<a href="comp.html#sec316"><span class="chapter-number">Chapter 12</span> Batch compilation (ocamlc)</a>
 <ul class="toc"><li class="li-toc">
 <a href="comp.html#s%3Acomp-overview"><span class="number">1</span> Overview of the compiler</a>
 </li><li class="li-toc"><a href="comp.html#s%3Acomp-options"><span class="number">2</span> Options</a>
@@ -277,7 +286,7 @@
 </li><li class="li-toc"><a href="comp.html#ss%3Awarn57"><span class="number">5.4</span> Warning 57: Ambiguous or-pattern variables under guard</a>
 </li></ul>
 </li></ul>
-</li><li class="li-toc"><a href="toplevel.html#sec322"><span class="chapter-number">Chapter 13</span> The toplevel system or REPL (ocaml)</a>
+</li><li class="li-toc"><a href="toplevel.html#sec327"><span class="chapter-number">Chapter 13</span> The toplevel system or REPL (ocaml)</a>
 <ul class="toc"><li class="li-toc">
 <a href="toplevel.html#s%3Atoplevel-options"><span class="number">1</span> Options</a>
 </li><li class="li-toc"><a href="toplevel.html#s%3Atoplevel-directives"><span class="number">2</span> Toplevel directives</a>
@@ -289,14 +298,14 @@
 </li></ul>
 </li><li class="li-toc"><a href="toplevel.html#s%3Aocamlnat"><span class="number">6</span> The native toplevel: <span class="font-tt">ocamlnat</span> (experimental)</a>
 </li></ul>
-</li><li class="li-toc"><a href="runtime.html#sec330"><span class="chapter-number">Chapter 14</span> The runtime system (ocamlrun)</a>
+</li><li class="li-toc"><a href="runtime.html#sec335"><span class="chapter-number">Chapter 14</span> The runtime system (ocamlrun)</a>
 <ul class="toc"><li class="li-toc">
 <a href="runtime.html#s%3Aocamlrun-overview"><span class="number">1</span> Overview</a>
 </li><li class="li-toc"><a href="runtime.html#s%3Aocamlrun-options"><span class="number">2</span> Options</a>
 </li><li class="li-toc"><a href="runtime.html#s%3Aocamlrun-dllpath"><span class="number">3</span> Dynamic loading of shared libraries</a>
 </li><li class="li-toc"><a href="runtime.html#s%3Aocamlrun-common-errors"><span class="number">4</span> Common errors</a>
 </li></ul>
-</li><li class="li-toc"><a href="native.html#sec335"><span class="chapter-number">Chapter 15</span> Native-code compilation (ocamlopt)</a>
+</li><li class="li-toc"><a href="native.html#sec340"><span class="chapter-number">Chapter 15</span> Native-code compilation (ocamlopt)</a>
 <ul class="toc"><li class="li-toc">
 <a href="native.html#s%3Anative-overview"><span class="number">1</span> Overview of the compiler</a>
 </li><li class="li-toc"><a href="native.html#s%3Anative-options"><span class="number">2</span> Options</a>
@@ -304,7 +313,7 @@
 </li><li class="li-toc"><a href="native.html#s%3Anative%3Arunning-executable"><span class="number">4</span> Running executables produced by ocamlopt</a>
 </li><li class="li-toc"><a href="native.html#s%3Acompat-native-bytecode"><span class="number">5</span> Compatibility with the bytecode compiler</a>
 </li></ul>
-</li><li class="li-toc"><a href="lexyacc.html#sec345"><span class="chapter-number">Chapter 16</span> Lexer and parser generators (ocamllex, ocamlyacc)</a>
+</li><li class="li-toc"><a href="lexyacc.html#sec350"><span class="chapter-number">Chapter 16</span> Lexer and parser generators (ocamllex, ocamlyacc)</a>
 <ul class="toc"><li class="li-toc">
 <a href="lexyacc.html#s%3Aocamllex-overview"><span class="number">1</span> Overview of <span class="font-tt">ocamllex</span></a>
 <ul class="toc"><li class="li-toc">
@@ -333,12 +342,12 @@
 </li><li class="li-toc"><a href="lexyacc.html#s%3Alexyacc-example"><span class="number">6</span> A complete example</a>
 </li><li class="li-toc"><a href="lexyacc.html#s%3Alexyacc-common-errors"><span class="number">7</span> Common errors</a>
 </li></ul>
-</li><li class="li-toc"><a href="depend.html#sec366"><span class="chapter-number">Chapter 17</span> Dependency generator (ocamldep)</a>
+</li><li class="li-toc"><a href="depend.html#sec371"><span class="chapter-number">Chapter 17</span> Dependency generator (ocamldep)</a>
 <ul class="toc"><li class="li-toc">
 <a href="depend.html#s%3Aocamldep-options"><span class="number">1</span> Options</a>
 </li><li class="li-toc"><a href="depend.html#s%3Aocamldep-makefile"><span class="number">2</span> A typical Makefile</a>
 </li></ul>
-</li><li class="li-toc"><a href="ocamldoc.html#sec369"><span class="chapter-number">Chapter 18</span> The documentation generator (ocamldoc)</a>
+</li><li class="li-toc"><a href="ocamldoc.html#sec374"><span class="chapter-number">Chapter 18</span> The documentation generator (ocamldoc)</a>
 <ul class="toc"><li class="li-toc">
 <a href="ocamldoc.html#s%3Aocamldoc-usage"><span class="number">1</span> Usage</a>
 <ul class="toc"><li class="li-toc">
@@ -364,7 +373,7 @@
 <a href="ocamldoc.html#ss%3Aocamldoc-compilation-and-usage"><span class="number">4.1</span> Compilation and usage</a>
 </li></ul>
 </li></ul>
-</li><li class="li-toc"><a href="debugger.html#sec406"><span class="chapter-number">Chapter 19</span> The debugger (ocamldebug)</a>
+</li><li class="li-toc"><a href="debugger.html#sec411"><span class="chapter-number">Chapter 19</span> The debugger (ocamldebug)</a>
 <ul class="toc"><li class="li-toc">
 <a href="debugger.html#s%3Adebugger-compilation"><span class="number">1</span> Compiling for debugging</a>
 </li><li class="li-toc"><a href="debugger.html#s%3Adebugger-invocation"><span class="number">2</span> Invocation</a>
@@ -405,7 +414,7 @@
 </li><li class="li-toc"><a href="debugger.html#s%3Adebugger-misc-cmds"><span class="number">9</span> Miscellaneous commands</a>
 </li><li class="li-toc"><a href="debugger.html#s%3Ainf-debugger"><span class="number">10</span> Running the debugger under Emacs</a>
 </li></ul>
-</li><li class="li-toc"><a href="profil.html#sec437"><span class="chapter-number">Chapter 20</span> Profiling (ocamlprof)</a>
+</li><li class="li-toc"><a href="profil.html#sec442"><span class="chapter-number">Chapter 20</span> Profiling (ocamlprof)</a>
 <ul class="toc"><li class="li-toc">
 <a href="profil.html#s%3Aocamlprof-compiling"><span class="number">1</span> Compiling for profiling</a>
 </li><li class="li-toc"><a href="profil.html#s%3Aocamlprof-profiling"><span class="number">2</span> Profiling an execution</a>
@@ -496,7 +505,7 @@
 </li><li class="li-toc"><a href="intfc.html#ss%3Ac-internal-macros"><span class="number">15.2</span> OCaml version macros</a>
 </li></ul>
 </li></ul>
-</li><li class="li-toc"><a href="flambda.html#sec521"><span class="chapter-number">Chapter 22</span> Optimisation with Flambda</a>
+</li><li class="li-toc"><a href="flambda.html#sec526"><span class="chapter-number">Chapter 22</span> Optimisation with Flambda</a>
 <ul class="toc"><li class="li-toc">
 <a href="flambda.html#s%3Aflambda-overview"><span class="number">1</span> Overview</a>
 </li><li class="li-toc"><a href="flambda.html#s%3Aflambda-cli"><span class="number">2</span> Command-line flags</a>
@@ -552,7 +561,7 @@
 </li><li class="li-toc"><a href="flambda.html#s%3Aflambda-unsafe"><span class="number">15</span> Use of unsafe operations</a>
 </li><li class="li-toc"><a href="flambda.html#s%3Aflambda-glossary"><span class="number">16</span> Glossary</a>
 </li></ul>
-</li><li class="li-toc"><a href="afl-fuzz.html#sec572"><span class="chapter-number">Chapter 23</span> Fuzzing with afl-fuzz</a>
+</li><li class="li-toc"><a href="afl-fuzz.html#sec577"><span class="chapter-number">Chapter 23</span> Fuzzing with afl-fuzz</a>
 <ul class="toc"><li class="li-toc">
 <a href="afl-fuzz.html#s%3Aafl-overview"><span class="number">1</span> Overview</a>
 </li><li class="li-toc"><a href="afl-fuzz.html#s%3Aafl-generate"><span class="number">2</span> Generating instrumentation</a>
@@ -561,7 +570,7 @@
 </li></ul>
 </li><li class="li-toc"><a href="afl-fuzz.html#s%3Aafl-example"><span class="number">3</span> Example</a>
 </li></ul>
-</li><li class="li-toc"><a href="instrumented-runtime.html#sec577"><span class="chapter-number">Chapter 24</span> Runtime tracing with the instrumented runtime</a>
+</li><li class="li-toc"><a href="instrumented-runtime.html#sec582"><span class="chapter-number">Chapter 24</span> Runtime tracing with the instrumented runtime</a>
 <ul class="toc"><li class="li-toc">
 <a href="instrumented-runtime.html#s%3Ainstr-runtime-overview"><span class="number">1</span> Overview</a>
 </li><li class="li-toc"><a href="instrumented-runtime.html#s%3Ainstr-runtime-enabling"><span class="number">2</span> Enabling runtime instrumentation</a>
@@ -577,7 +586,7 @@
 </li><li class="li-toc"><a href="instrumented-runtime.html#ss%3Ainstr-runtime-limitations"><span class="number">4.3</span> Limitations</a>
 </li></ul>
 </li></ul>
-</li><li class="li-toc"><a href="tail_mod_cons.html#sec588"><span class="chapter-number">Chapter 25</span> The “Tail Modulo Constructor” program transformation</a>
+</li><li class="li-toc"><a href="tail_mod_cons.html#sec593"><span class="chapter-number">Chapter 25</span> The “Tail Modulo Constructor” program transformation</a>
 <ul class="toc"><li class="li-toc">
 <a href="tail_mod_cons.html#sec%3Adisambiguation"><span class="number">1</span> Disambiguation</a>
 </li><li class="li-toc"><a href="tail_mod_cons.html#sec%3Aout-of-tmc"><span class="number">2</span> Danger: getting out of tail-mod-cons</a>
@@ -585,28 +594,28 @@
 </li><li class="li-toc"><a href="tail_mod_cons.html#sec%3Alimitations"><span class="number">4</span> Current limitations</a>
 </li></ul>
 </li></ul>
-</li><li class="li-toc"><a href="index.html#sec600">Part ‍IV The OCaml library</a>
+</li><li class="li-toc"><a href="index.html#sec605">Part ‍IV The OCaml library</a>
 <ul class="toc"><li class="li-toc">
-<a href="core.html#sec601"><span class="chapter-number">Chapter 26</span> The core library</a>
+<a href="core.html#sec606"><span class="chapter-number">Chapter 26</span> The core library</a>
 <ul class="toc"><li class="li-toc">
 <a href="core.html#s%3Acore-builtins"><span class="number">1</span> Built-in types and predefined exceptions</a>
 </li><li class="li-toc"><a href="core.html#s%3Astdlib-module"><span class="number">2</span> Module <span class="font-tt">Stdlib</span>: the initially opened module</a>
 </li></ul>
-</li><li class="li-toc"><a href="stdlib.html#sec606"><span class="chapter-number">Chapter 27</span> The standard library</a>
-</li><li class="li-toc"><a href="parsing.html#sec607"><span class="chapter-number">Chapter 28</span> The compiler front-end</a>
-</li><li class="li-toc"><a href="libunix.html#sec608"><span class="chapter-number">Chapter 29</span> The unix library: Unix system calls</a>
-</li><li class="li-toc"><a href="libstr.html#sec609"><span class="chapter-number">Chapter 30</span> The str library: regular expressions and string processing</a>
-</li><li class="li-toc"><a href="libthreads.html#sec610"><span class="chapter-number">Chapter 31</span> The threads library</a>
-</li><li class="li-toc"><a href="libdynlink.html#sec611"><span class="chapter-number">Chapter 32</span> The dynlink library: dynamic loading and linking of object files</a>
-</li><li class="li-toc"><a href="old.html#sec612"><span class="chapter-number">Chapter 33</span> Recently removed or moved libraries (Graphics, Bigarray, Num, LablTk)</a>
+</li><li class="li-toc"><a href="stdlib.html#sec611"><span class="chapter-number">Chapter 27</span> The standard library</a>
+</li><li class="li-toc"><a href="parsing.html#sec612"><span class="chapter-number">Chapter 28</span> The compiler front-end</a>
+</li><li class="li-toc"><a href="libunix.html#sec613"><span class="chapter-number">Chapter 29</span> The unix library: Unix system calls</a>
+</li><li class="li-toc"><a href="libstr.html#sec614"><span class="chapter-number">Chapter 30</span> The str library: regular expressions and string processing</a>
+</li><li class="li-toc"><a href="libthreads.html#sec615"><span class="chapter-number">Chapter 31</span> The threads library</a>
+</li><li class="li-toc"><a href="libdynlink.html#sec616"><span class="chapter-number">Chapter 32</span> The dynlink library: dynamic loading and linking of object files</a>
+</li><li class="li-toc"><a href="old.html#sec617"><span class="chapter-number">Chapter 33</span> Recently removed or moved libraries (Graphics, Bigarray, Num, LablTk)</a>
 <ul class="toc"><li class="li-toc">
 <a href="old.html#s%3Agraphics-removed"><span class="number">1</span> The Graphics Library</a>
 </li><li class="li-toc"><a href="old.html#s%3Abigarray-moved"><span class="number">2</span> The Bigarray Library</a>
-</li><li class="li-toc"><a href="old.html#sec615"><span class="number">3</span> The Num Library</a>
+</li><li class="li-toc"><a href="old.html#sec620"><span class="number">3</span> The Num Library</a>
 </li><li class="li-toc"><a href="old.html#s%3Alabltk-removed"><span class="number">4</span> The Labltk Library and OCamlBrowser</a>
 </li></ul>
 </li></ul>
-</li><li class="li-toc"><a href="index.html#sec617">Part ‍V Indexes</a>
+</li><li class="li-toc"><a href="index.html#sec622">Part ‍V Indexes</a>
 </li></ul>
 <div class="bottom-navigation"><a class="previous up" href="index.html">Home</a><a class="next" href="foreword.html">Foreword »</a></div>
 

@@ -17,6 +17,9 @@
 <li><a href="parallelism.html#s%3Adomains"><span class="number">1</span> Domains</a>
 </li><li><a href="parallelism.html#s%3Aparfib"><span class="number">2</span> Domainslib: A library for nested-parallel programming</a>
 </li><li><a href="parallelism.html#s%3Agc"><span class="number">3</span> Parallel garbage collection</a>
+</li><li><a href="parallelism.html#s%3Amm_easy"><span class="number">4</span> Memory model: the easy bits</a>
+</li><li><a href="parallelism.html#s%3Aatomics"><span class="number">5</span> Atomics</a>
+</li><li><a href="parallelism.html#s%3Async"><span class="number">6</span> Blocking synchronization</a>
 </li></ul></nav></header>
 <p>
 <a id="c:parallelism"></a></p><p>In this chapter, we shall look at the parallel programming facilities in OCaml.
@@ -397,8 +400,120 @@ algorithm that involves a few short stop-the-world pauses for each major cycle.<
 increasing number of domains, with the latency remaining low. For more
 information on the design and evaluation of the garbage collector, please have
 a look at the ICFP 2020 paper on
-<a href="https://arxiv.org/abs/2004.11663"><span class="machine"><span class="font-tt">Retrofitting Parallelism onto OCaml</span></span></a>.
-</p>
+<a href="https://arxiv.org/abs/2004.11663"><span class="machine"><span class="font-tt">Retrofitting Parallelism onto OCaml</span></span></a>.</p>
+<h2 class="section" id="s:mm_easy"><a class="section-anchor" href="#s:mm_easy" aria-hidden="true">﻿</a><span class="number">4</span> Memory model: the easy bits</h2>
+<p>Modern processors and compilers aggressively optimise programs. These
+optimisations accelerate without otherwise affecting sequential programs, but
+cause surprising behaviours to be visible in parallel programs. To benefit from
+these optimisations, OCaml adopts a <span class="font-it">weak memory model</span> that precisely
+specifies which of these <em>relaxed behaviours</em> programs may observe. While
+these models are difficult to program against directly, the OCaml memory model
+provides recipes that retains the simplicity of sequential reasoning.</p><p>Firstly, immutable values may be freely shared between multiple domains and may
+be accessed in parallel. For mutable data structures such as reference cells,
+arrays and mutable record fields, programmers should avoid <em>data races</em>.
+Reference cells, arrays and mutable record fields are said to be
+<em>non-atomic</em> data structures. A data race is said to occur when two
+domains concurrently access a non-atomic memory location without
+<em>synchronization</em> and at least one of the accesses is a write. OCaml
+provides a number of ways to introduce synchronization including atomic
+variables ‍<a href="#s%3Aatomics">9.5</a> and mutexes ‍<a href="#s%3Async">9.6</a>.</p><p>Importantly, <span class="font-bold">for data race free (DRF) programs, OCaml provides
+sequentially consistent (SC) semantics</span> – the observed behaviour of such
+programs can be explained by the interleaving of operations from different
+domains. This property is known as DRF-SC guarantee. Moreover, in OCaml, DRF-SC
+guarantee is modular – if a part of a program is data race free, then the
+OCaml memory model ensures that those parts have sequential consistency despite
+other parts of the program having data races. Even for programs with data
+races, OCaml provides strong guarantees. While the user may observe non
+sequentially consistent behaviours, there are no crashes.</p><p>For more details on the relaxed behaviours in the presence of data races,
+please have a look at the chapter on the hard bits of the memory model (TODO:
+ref).</p>
+<h2 class="section" id="s:atomics"><a class="section-anchor" href="#s:atomics" aria-hidden="true">﻿</a><span class="number">5</span> Atomics</h2>
+<p>One way to avoid data races is to use <a href="../api/Atomic.html"><span class="font-tt">Atomic</span></a> variables for
+inter-domain synchronization. Importantly, racy access to shared atomic
+locations in parallel is not a data race. Hence, the program will only exhibit
+sequentially consistent behaviour.</p><p>The following program increments a non-atomic and an atomic counter in
+parallel.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlcomment">(* incr.ml *)</span>
+<span class="ocamlkeyword">let</span> twice_in_parallel f =
+  <span class="ocamlkeyword">let</span> d1 = Domain.spawn f <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">let</span> d2 = Domain.spawn f <span class="ocamlkeyword">in</span>
+  ignore @@ Domain.join d1;
+  ignore @@ Domain.join d2
+
+<span class="ocamlkeyword">let</span> plain_ref n =
+  <span class="ocamlkeyword">let</span> r = <span class="ocamlkeyword">ref</span> 0 <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">let</span> f () = <span class="ocamlkeyword">for</span> _i=1 <span class="ocamlkeyword">to</span> n <span class="ocamlkeyword">do</span> incr r <span class="ocamlkeyword">done</span> <span class="ocamlkeyword">in</span>
+  twice_in_parallel f;
+  Printf.printf <span class="ocamlstring">"Non-atomic ref count: %d\n"</span> !r
+
+<span class="ocamlkeyword">let</span> atomic_ref n =
+  <span class="ocamlkeyword">let</span> r = Atomic.make 0 <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">let</span> f () = <span class="ocamlkeyword">for</span> _i=1 <span class="ocamlkeyword">to</span> n <span class="ocamlkeyword">do</span> Atomic.incr r <span class="ocamlkeyword">done</span> <span class="ocamlkeyword">in</span>
+  twice_in_parallel f;
+  Printf.printf <span class="ocamlstring">"Atomic ref count: %d\n"</span> (Atomic.get r)
+
+<span class="ocamlkeyword">let</span> main () =
+  <span class="ocamlkeyword">let</span> n = <span class="ocamlkeyword">try</span> int_of_string Sys.argv.(1) <span class="ocamlkeyword">with</span> _ -&gt; 1 <span class="ocamlkeyword">in</span>
+  plain_ref n;
+  atomic_ref n
+
+<span class="ocamlkeyword">let</span> _ = main ()</div></div>
+
+</div><pre>$ ocamlopt -o incr.exe incr.ml
+$ ./incr.exe 1_000_000
+Non-atomic ref count: 1187193
+Atomic ref count: 2000000
+</pre><p>
+As one can see, the non-atomic increment undercounts.</p>
+<h3 class="subsection" id="s:lockfree_stack"><a class="section-anchor" href="#s:lockfree_stack" aria-hidden="true">﻿</a><span class="number">5.1</span> Lock-free stack</h3>
+<p>The Atomic module is used to implement non-blocking, lock-free data structures.
+The following program implements a lock-free stack.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">module</span> Lockfree_stack : <span class="ocamlkeyword">sig</span>
+  <span class="ocamlkeyword">type</span> 'a t
+  <span class="ocamlkeyword">val</span> make : unit -&gt; 'a t
+  <span class="ocamlkeyword">val</span> push : 'a t -&gt; 'a -&gt; unit
+  <span class="ocamlkeyword">val</span> pop  : 'a t -&gt; 'a option
+<span class="ocamlkeyword">end</span> = <span class="ocamlkeyword">struct</span>
+  <span class="ocamlkeyword">type</span> 'a t = 'a list Atomic.t
+
+  <span class="ocamlkeyword">let</span> make () = Atomic.make []
+
+  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> push r v =
+    <span class="ocamlkeyword">let</span> s = Atomic.get r <span class="ocamlkeyword">in</span>
+    <span class="ocamlkeyword">if</span> Atomic.compare_and_set r s (v::s) <span class="ocamlkeyword">then</span> ()
+    <span class="ocamlkeyword">else</span> (Domain.cpu_relax (); push r v)
+
+  <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> pop r =
+    <span class="ocamlkeyword">let</span> s = Atomic.get r <span class="ocamlkeyword">in</span>
+    <span class="ocamlkeyword">match</span> s <span class="ocamlkeyword">with</span>
+    | [] -&gt; None
+    | x::xs -&gt;
+        <span class="ocamlkeyword">if</span> Atomic.compare_and_set r s xs <span class="ocamlkeyword">then</span> Some x
+        <span class="ocamlkeyword">else</span> (Domain.cpu_relax (); pop r)
+<span class="ocamlkeyword">end</span></div></div>
+
+</div><p>The atomic stack is represented by an atomic reference that holds a list. The
+<span class="machine"><span class="font-tt">push</span></span> and <span class="machine"><span class="font-tt">pop</span></span> operations use the <span class="machine"><span class="font-tt">compare_and_set</span></span> primitive to attempt to
+atomically update the atomic reference. The expression <span class="machine"><span class="font-tt">compare_and_set r seen v</span></span> sets the value of <span class="machine"><span class="font-tt">r</span></span> to <span class="machine"><span class="font-tt">v</span></span> if and only if its current value is physically
+equal to <span class="machine"><span class="font-tt">seen</span></span>. Importantly, the comparison and the set occur atomically. The
+expression evaluates to <span class="machine"><span class="font-tt">true</span></span> if the comparison succeeded (so the set
+happened) and <span class="machine"><span class="font-tt">false</span></span> otherwise.</p><p>If the <span class="machine"><span class="font-tt">compare_and_set</span></span> fails, then some other domain is also attempting to
+update the atomic reference at the same time. In this case, the <span class="machine"><span class="font-tt">push</span></span> and
+<span class="machine"><span class="font-tt">pop</span></span> operations call <span class="machine"><span class="font-tt">Domain.cpu_relax</span></span> to back off for a short duration
+allowing competing domains to make progress before retrying the failed
+operation.</p>
+<h2 class="section" id="s:sync"><a class="section-anchor" href="#s:sync" aria-hidden="true">﻿</a><span class="number">6</span> Blocking synchronization</h2>
+<h3 class="subsection" id="s:systhread_intereaction"><a class="section-anchor" href="#s:systhread_intereaction" aria-hidden="true">﻿</a><span class="number">6.1</span> Interaction with threads</h3>
 <hr>
 <div class="bottom-navigation"><a class="previous" href="advexamples.html">« Advanced examples with classes and modules</a><a class="next" href="language.html">The OCaml language »</a></div>
 
