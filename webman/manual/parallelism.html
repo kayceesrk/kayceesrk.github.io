@@ -17,7 +17,7 @@
 <li><a href="parallelism.html#s%3Adomains"><span class="number">1</span> Domains</a>
 </li><li><a href="parallelism.html#s%3Aparfib"><span class="number">2</span> Domainslib: A library for nested-parallel programming</a>
 </li><li><a href="parallelism.html#s%3Agc"><span class="number">3</span> Parallel garbage collection</a>
-</li><li><a href="parallelism.html#s%3Amm_easy"><span class="number">4</span> Memory model: the easy bits</a>
+</li><li><a href="parallelism.html#s%3Amm_easy"><span class="number">4</span> Memory model: The easy bits</a>
 </li><li><a href="parallelism.html#s%3Aatomics"><span class="number">5</span> Atomics</a>
 </li><li><a href="parallelism.html#s%3Async"><span class="number">6</span> Blocking synchronization</a>
 </li></ul></nav></header>
@@ -401,7 +401,7 @@ increasing number of domains, with the latency remaining low. For more
 information on the design and evaluation of the garbage collector, please have
 a look at the ICFP 2020 paper on
 <a href="https://arxiv.org/abs/2004.11663"><span class="machine"><span class="font-tt">Retrofitting Parallelism onto OCaml</span></span></a>.</p>
-<h2 class="section" id="s:mm_easy"><a class="section-anchor" href="#s:mm_easy" aria-hidden="true">﻿</a><span class="number">4</span> Memory model: the easy bits</h2>
+<h2 class="section" id="s:mm_easy"><a class="section-anchor" href="#s:mm_easy" aria-hidden="true">﻿</a><span class="number">4</span> Memory model: The easy bits</h2>
 <p>Modern processors and compilers aggressively optimise programs. These
 optimisations accelerate without otherwise affecting sequential programs, but
 cause surprising behaviours to be visible in parallel programs. To benefit from
@@ -513,7 +513,110 @@ update the atomic reference at the same time. In this case, the <span class="mac
 allowing competing domains to make progress before retrying the failed
 operation.</p>
 <h2 class="section" id="s:sync"><a class="section-anchor" href="#s:sync" aria-hidden="true">﻿</a><span class="number">6</span> Blocking synchronization</h2>
-<h3 class="subsection" id="s:systhread_intereaction"><a class="section-anchor" href="#s:systhread_intereaction" aria-hidden="true">﻿</a><span class="number">6.1</span> Interaction with threads</h3>
+<p>Domains may also perform blocking synchronization with the help of
+<a href="../api/Mutex.html"><span class="font-tt">Mutex</span></a>, <a href="../api/Condition.html"><span class="font-tt">Condition</span></a> and <a href="../api/Semaphore.html"><span class="font-tt">Semaphore</span></a>
+modules. These modules are the same as those used to synchronize threads
+created by the threads library ‍<a href="libthreads.html#c%3Athreads">31</a>. For clarity, in the rest of
+this chapter, we shall call the threads created by the threads library as
+systhreads. The following program implements a blocking version of a concurrent
+stack using mutex and condition variables.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">module</span> Blocking_stack : <span class="ocamlkeyword">sig</span>
+  <span class="ocamlkeyword">type</span> 'a t
+  <span class="ocamlkeyword">val</span> make : unit -&gt; 'a t
+  <span class="ocamlkeyword">val</span> push : 'a t -&gt; 'a -&gt; unit
+  <span class="ocamlkeyword">val</span> pop  : 'a t -&gt; 'a
+<span class="ocamlkeyword">end</span> = <span class="ocamlkeyword">struct</span>
+  <span class="ocamlkeyword">type</span> 'a t = {
+    <span class="ocamlkeyword">mutable</span> contents: 'a list;
+    mutex : Mutex.t;
+    condition : Condition.t
+  }
+
+  <span class="ocamlkeyword">let</span> make () = {
+    contents = [];
+    mutex = Mutex.create ();
+    condition = Condition.create ()
+  }
+
+  <span class="ocamlkeyword">let</span> push r v =
+    Mutex.lock r.mutex;
+    r.contents &lt;- v::r.contents;
+    Condition.signal r.condition;
+    Mutex.unlock r.mutex
+
+  <span class="ocamlkeyword">let</span> pop r =
+    Mutex.lock r.mutex;
+    <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> loop () =
+      <span class="ocamlkeyword">match</span> r.contents <span class="ocamlkeyword">with</span>
+      | [] -&gt;
+          Condition.wait r.condition r.mutex;
+          loop ()
+      | x::xs -&gt; r.contents &lt;- xs; x
+    <span class="ocamlkeyword">in</span>
+    <span class="ocamlkeyword">let</span> res = loop () <span class="ocamlkeyword">in</span>
+    Mutex.unlock r.mutex;
+    res
+<span class="ocamlkeyword">end</span></div></div>
+
+</div><p>Unlike the non-blocking version described earlier, the <span class="machine"><span class="font-tt">pop</span></span> operation blocks
+the calling domain if the stack is empty. The domain is unblocked when a
+subsequent <span class="machine"><span class="font-tt">push</span></span> operation is performed on this stack.</p>
+<h3 class="subsection" id="s:systhread_intereaction"><a class="section-anchor" href="#s:systhread_intereaction" aria-hidden="true">﻿</a><span class="number">6.1</span> Interaction with systhreads</h3>
+<p>How do systhreads interact with domains? The systhreads created on a particular
+domain remain pinned to that domain. Only one systhread at a time is allowed to
+run OCaml code on a particular domain. However, systhreads belonging to a
+particular domain may run C library or system code in parallel. Systhreads
+belonging to different domains may execute in parallel.</p><p>When using systhreads, the thread created for executing the computation given
+to <span class="machine"><span class="font-tt">Domain.spawn</span></span> is also treated as a systhread. For example, the following
+program creates in total two domains (including the initial domain) with two
+systhreads each (including the initial systhread for each of the domains).</p><pre>(* dom_thr.ml *)
+let m = Mutex.create ()
+let r = ref None (* protected by m *)
+
+let task () =
+  let my_thr_id = Thread.(id (self ())) in
+  let my_dom_id :&gt; int = Domain.self () in
+  Mutex.lock m;
+  begin match !r with
+  | None -&gt;
+      Printf.printf "Thread %d running on domain %d saw initial write\n%!"
+        my_thr_id my_dom_id
+  | Some their_thr_id -&gt;
+      Printf.printf "Thread %d running on domain %d saw the write by thread %d\n%!"
+        my_thr_id my_dom_id their_thr_id;
+  end;
+  r := Some my_thr_id;
+  Mutex.unlock m
+
+let task' () =
+  let t = Thread.create task () in
+  task ();
+  Thread.join t
+
+let main () =
+  let d = Domain.spawn task' in
+  task' ();
+  Domain.join d
+
+let _ = main ()
+</pre><pre>$ ocamlopt -I +threads unix.cmxa threads.cmxa -o dom_thr.exe dom_thr.ml
+$ ./dom_thr.exe
+Thread 1 running on domain 1 saw initial write
+Thread 0 running on domain 0 saw the write by thread 1
+Thread 2 running on domain 1 saw the write by thread 0
+Thread 3 running on domain 0 saw the write by thread 2
+</pre><p>
+This program uses a shared reference cell protected by a mutex to communicate
+between the different systhreads running on two different domains. The
+systhread identifiers are unique to each systhread in the program. The initial
+domain gets the domain id and the thread id as 0. The newly spawned domain gets
+domain id as 1.
+</p>
 <hr>
 <div class="bottom-navigation"><a class="previous" href="advexamples.html">« Advanced examples with classes and modules</a><a class="next" href="language.html">The OCaml language »</a></div>
 
