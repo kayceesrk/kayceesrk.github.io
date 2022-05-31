@@ -18,7 +18,7 @@
 </li><li><a href="memorymodel.html#s%3Adrf_sc"><span class="number">2</span> Data race freedom implies sequential consistency</a>
 </li><li><a href="memorymodel.html#s%3Adrf_reasoning"><span class="number">3</span> Reasoning with DRF-SC</a>
 </li><li><a href="memorymodel.html#s%3Alocal_drf"><span class="number">4</span> Local data race freedom</a>
-</li><li><a href="memorymodel.html#s%3Atearing"><span class="number">5</span> Operations that are not memory model compliant</a>
+</li><li><a href="memorymodel.html#s%3Atearing"><span class="number">5</span> Non-compliant operations</a>
 </li></ul></nav></header>
 <p>
 <a id="c:memorymodel"></a></p><p>(WIP)</p><p>This chapter describes the details of OCaml weak memory model. The weak memory
@@ -390,7 +390,7 @@ here is <span class="machine"><span class="font-tt">c</span></span>. Reasoning o
 in space (the race on <span class="machine"><span class="font-tt">g</span></span>) nor in time (the future race on <span class="machine"><span class="font-tt">c</span></span>). Hence, the
 snippet will have sequentially consistent behaviour, and the value returned by
 <span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p>
-<h2 class="section" id="s:tearing"><a class="section-anchor" href="#s:tearing" aria-hidden="true">﻿</a><span class="number">5</span> Operations that are not memory model compliant</h2>
+<h2 class="section" id="s:tearing"><a class="section-anchor" href="#s:tearing" aria-hidden="true">﻿</a><span class="number">5</span> Non-compliant operations</h2>
 <ul class="itemize"><li class="li-itemize">
 <span class="machine"><span class="font-tt">Array.blit</span></span> on float arrays.
 </li><li class="li-itemize">32-bit flat-float arrays: Getting and setting is not an atomic operation.
