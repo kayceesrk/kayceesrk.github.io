@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec258"><span class="chapter-number">Chapter 11</span> Language extensions</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Language extensions</a></li>
+<h1 class="chapter" id="sec269"><span class="chapter-number">Chapter 12</span> Language extensions</h1><header id="sidebar"><nav class="toc brand"><a class="brand" href="https://ocaml.org/"><img src="colour-logo.svg" class="svg" alt="OCaml"></a></nav><nav class="toc"><div class="toc_version"><a id="version-select" href="https://ocaml.org/releases/">Version 5.0</a></div><div class="toc_title"><a href="index.html">&lt; The OCaml Manual</a></div><ul><li class="top"><a href="#">Language extensions</a></li>
 <li><a href="letrecvalues.html#start-section"><span class="number">1</span> Recursive definitions of values</a>
 </li><li><a href="recursivemodules.html#start-section"><span class="number">2</span> Recursive modules</a>
 </li><li><a href="privatetypes.html#start-section"><span class="number">3</span> Private types</a>
@@ -129,7 +129,7 @@ contrast, a shallow handler monitors a computation until either the computation
 terminates or the computation performs one effect, and it handles this single
 effect only. In situations where they are applicable, deep handlers are usually
 preferred. An example that utilises shallow handlers is discussed later
-in ‍<a href="#s%3Aeffects-shallow">11.24.6</a>.</p>
+in ‍<a href="#s%3Aeffects-shallow">12.24.6</a>.</p>
 <h3 class="subsection" id="s:effects-concurrency"><a class="section-anchor" href="#s:effects-concurrency" aria-hidden="true">﻿</a><span class="number">24.2</span> Concurrency</h3>
 <p>The expressive power of effect handlers comes from the delimited continuation.
 While the previous example immediately resumed the computation, the computation
@@ -323,7 +323,7 @@ exchange. If so, we enqueue the waiting task with the current value being
 offered and immediately resume the current task with the value being offered.
 If not, we make the current task the waiting exchanger, and run the next task
 from the scheduler queue.</p><p>Note that this scheduler code is not perfect – it can leak resources. We shall
-explain and fix this in the next section ‍<a href="#s%3Aeffects-discontinue">11.24.3</a>.</p><p>Now we can write a concurrent program that utilises the newly defined
+explain and fix this in the next section ‍<a href="#s%3Aeffects-discontinue">12.24.3</a>.</p><p>Now we can write a concurrent program that utilises the newly defined
 operations:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -727,7 +727,7 @@ handle the effect <span class="machine"><span class="font-tt">F</span></span>. H
 
 </div>
 <h4 class="subsubsection" id="s:effects-linearity"><a class="section-anchor" href="#s:effects-linearity" aria-hidden="true">﻿</a>Linear continuations</h4>
-<p>As discussed earlier ‍<a href="#s%3Aeffects-discontinue">11.24.3</a>, the delimited continuations
+<p>As discussed earlier ‍<a href="#s%3Aeffects-discontinue">12.24.3</a>, the delimited continuations
 in OCaml must be used linearly – <em><span class="font-bold">every captured continuation
 must be resumed either with a <span class="machine"><span class="font-tt">continue</span></span> or <span class="machine"><span class="font-tt">discontinue</span></span> exactly once</span></em>.
 Attempting to use a continuation more than once raises a
