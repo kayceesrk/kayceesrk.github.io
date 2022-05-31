@@ -29,13 +29,14 @@ programming libraries such as
 <a href="https://github.com/ocaml-multicore/domainslib">domainslib</a>. This
 tutorial will first cover the high-level parallel programming using domainslib
 followed by low-level primitives exposed by the compiler.</p><p>OCaml distinguishes concurrency and parallelism and provides distinct
-mechanisms for expressing them. Concurrency is overlapped execution of tasks
-whereas parallelism is simultaneous execution of tasks. In particular, parallel
-tasks overlap in time but concurrent tasks may not. Tasks may execute
-concurrently by yielding control to each other. While concurrency is a program
-structuring mechanism, parallelism is a mechanism to make your programs run
-faster. If you are interested in the concurrent programming mechanisms in
-OCaml, please refer to the section <a href="effects.html#s%3Aeffect-handlers">12.24</a> on effect handlers.</p>
+mechanisms for expressing them. Concurrency is overlapped execution of
+tasks ‍<a href="effects.html#s%3Aeffects-concurrency">12.24.2</a> whereas parallelism is simultaneous
+execution of tasks. In particular, parallel tasks overlap in time but
+concurrent tasks may not. Tasks may execute concurrently by yielding control
+to each other. While concurrency is a program structuring mechanism,
+parallelism is a mechanism to make your programs run faster. If you are
+interested in the concurrent programming mechanisms in OCaml, please refer to
+the section <a href="effects.html#s%3Aeffect-handlers">12.24</a> on effect handlers.</p>
 <h2 class="section" id="s:domains"><a class="section-anchor" href="#s:domains" aria-hidden="true"></a><span class="number">1</span> Domains</h2>
 <p>Domains are the units of parallelism in OCaml. The module <a href="../api/Domain.html"><span class="font-tt">Domain</span></a>
 provides the primitives to create and manage domains. New domains can be

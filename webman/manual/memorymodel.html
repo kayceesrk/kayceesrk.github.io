@@ -18,8 +18,7 @@
 </li><li><a href="memorymodel.html#s%3Adrf_sc"><span class="number">2</span> Data race freedom implies sequential consistency</a>
 </li><li><a href="memorymodel.html#s%3Adrf_reasoning"><span class="number">3</span> Reasoning with DRF-SC</a>
 </li><li><a href="memorymodel.html#s%3Alocal_drf"><span class="number">4</span> Local data race freedom</a>
-</li><li><a href="memorymodel.html#s%3Aldrf_reasoning"><span class="number">5</span> Reasoning with LDRF</a>
-</li><li><a href="memorymodel.html#s%3Atearing"><span class="number">6</span> Operations that are not memory model compliant</a>
+</li><li><a href="memorymodel.html#s%3Atearing"><span class="number">5</span> Operations that are not memory model compliant</a>
 </li></ul></nav></header>
 <p>
 <a id="c:memorymodel"></a></p><p>(WIP)</p><p>This chapter describes the details of OCaml weak memory model. The weak memory
@@ -137,7 +136,7 @@ writes performed at a CPU core are not immediately published to all of the
 other cores. Since <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">b</span></span> are different memory locations, the reads of <span class="machine"><span class="font-tt">a</span></span>
 and <span class="machine"><span class="font-tt">b</span></span> may both witness the initial values, leading to the assertion failure.
 This behaviour can be explained if a load is allowed to be reordered before a
-preceding store to different memory location.</p>
+preceding store to a different memory location.</p>
 <h2 class="section" id="s:drf_sc"><a class="section-anchor" href="#s:drf_sc" aria-hidden="true">﻿</a><span class="number">2</span> Data race freedom implies sequential consistency</h2>
 <p>The aim of the OCaml weak memory model is to precisely describe which orders
 are preserved by the OCaml program. The compiler and the hardware are free to
@@ -206,13 +205,192 @@ their program has a data race. In particular, they do not need to reason about
 reorderings described in section ‍<a href="#s%3Awhy_weak_memory">10.1</a> in order to determine
 whether their program has a data race. Once the determination that a particular
 program is data race free is made, they do not need to worry about reorderings
-in their code.</p>
+in their code.</p><p>For programs with data races, OCaml memory model ensures that there are no
+out-of-thin-air (OOTA) values. Reads always return a value written to a memory
+location (including possibly be the initial write). Data races do not cause
+programs to crash.</p>
 <h2 class="section" id="s:drf_reasoning"><a class="section-anchor" href="#s:drf_reasoning" aria-hidden="true">﻿</a><span class="number">3</span> Reasoning with DRF-SC</h2>
+<p>In this section, we will look at examples of using DRF-SC for program
+reasoning. In this section, we will use the functions with names <span class="machine"><span class="font-tt">dN</span></span> to
+represent domains executing in parallel with other domains.</p><p>Here is a simple example with a data race:</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlcomment">(* Has data race *)</span>
+<span class="ocamlkeyword">let</span> r = <span class="ocamlkeyword">ref</span> 0
+<span class="ocamlkeyword">let</span> d1 () = <span class="ocamlkeyword">ref</span> 1
+<span class="ocamlkeyword">let</span> d2 () = !r</div></div>
+
+</div><p><span class="machine"><span class="font-tt">r</span></span> is a non-atomic reference. The two domains race to access the reference,
+and <span class="machine"><span class="font-tt">d1</span></span> is a write. Since there is no happens-before relationship between the
+conflicting accesses, there is a data race.</p><p>Accessing disjoint array indices and fields of a record in parallel is not a
+data race. For example,</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlcomment">(* No data race *)</span>
+<span class="ocamlkeyword">let</span> a = [| 0; 1 |]
+<span class="ocamlkeyword">let</span> d1 = a.(0) &lt;- 42
+<span class="ocamlkeyword">let</span> d2 = a.(1) &lt;- 42</div></div>
+
+</div><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlcomment">(* No data race *)</span>
+<span class="ocamlkeyword">type</span> t = {
+  <span class="ocamlkeyword">mutable</span> a : int;
+  <span class="ocamlkeyword">mutable</span> b : int
+}
+<span class="ocamlkeyword">let</span> r = {a = 0; b = 1}
+<span class="ocamlkeyword">let</span> d1 = r.a &lt;- 42
+<span class="ocamlkeyword">let</span> d2 = r.b &lt;- 42</div></div>
+
+</div><p>do not have data races.</p><p>Races on atomic locations do not lead to a data race.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlcomment">(* No data race *)</span>
+<span class="ocamlkeyword">let</span> r = Atomic.make 0
+<span class="ocamlkeyword">let</span> d1 () = Atomic.set r 1
+<span class="ocamlkeyword">let</span> d2 () = Atomic.get r</div></div>
+
+</div><p>Atomic variables may be used for implementing non-blocking communication
+between domains.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlcomment">(* No data race *)</span>
+<span class="ocamlkeyword">let</span> msg = <span class="ocamlkeyword">ref</span> 0
+<span class="ocamlkeyword">let</span> flag = Atomic.make <span class="ocamlkeyword">false</span>
+<span class="ocamlkeyword">let</span> d1 () =
+  msg := 42; <span class="ocamlcomment">(* a *)</span>
+  Atomic.set flag <span class="ocamlkeyword">true</span> <span class="ocamlcomment">(* b *)</span>
+<span class="ocamlkeyword">let</span> d2 () =
+  <span class="ocamlkeyword">if</span> Atomic.get flag <span class="ocamlcomment">(* c *)</span> <span class="ocamlkeyword">then</span>
+    !msg <span class="ocamlcomment">(* d *)</span>
+  <span class="ocamlkeyword">else</span> 0</div></div>
+
+</div><p>Observe that the actions <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">d</span></span> write and read from the same non-atomic
+location <span class="machine"><span class="font-tt">msg</span></span>, respectively, and hence are conflicting. We need to establish
+that <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">d</span></span> have a happens-before relationship in order to show that this
+program does not have a data race.</p><p>The action <span class="machine"><span class="font-tt">a</span></span> precedes <span class="machine"><span class="font-tt">b</span></span> in program order, and hence, <span class="machine"><span class="font-tt">a</span></span> happens-before
+<span class="machine"><span class="font-tt">b</span></span>. Similarly, <span class="machine"><span class="font-tt">c</span></span> happens-before <span class="machine"><span class="font-tt">d</span></span>. If <span class="machine"><span class="font-tt">d2</span></span> observes the atomic variable
+<span class="machine"><span class="font-tt">flag</span></span> to be <span class="machine"><span class="font-tt">true</span></span>, then <span class="machine"><span class="font-tt">b</span></span> precedes <span class="machine"><span class="font-tt">c</span></span> in happens-before order. Since
+happens-before is transitive, the conflicting actions <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">d</span></span> are in
+happens-before order. If <span class="machine"><span class="font-tt">d2</span></span> observes the <span class="machine"><span class="font-tt">flag</span></span> to be <span class="machine"><span class="font-tt">false</span></span>, then the read
+of <span class="machine"><span class="font-tt">msg</span></span> is not done. Hence, there is no conflicting access in this execution
+trace. Hence, the program does not have a data race.</p><p>The following modified version of the message passing program does have a data
+race.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlcomment">(* No data race *)</span>
+<span class="ocamlkeyword">let</span> msg = <span class="ocamlkeyword">ref</span> 0
+<span class="ocamlkeyword">let</span> flag = Atomic.make <span class="ocamlkeyword">false</span>
+<span class="ocamlkeyword">let</span> d1 () =
+  msg := 42; <span class="ocamlcomment">(* a *)</span>
+  Atomic.set flag <span class="ocamlkeyword">true</span> <span class="ocamlcomment">(* b *)</span>
+<span class="ocamlkeyword">let</span> d2 () =
+  ignore (Atomic.get flag); <span class="ocamlcomment">(* c *)</span>
+  !msg <span class="ocamlcomment">(* d *)</span></div></div>
+
+</div><p>The domain <span class="machine"><span class="font-tt">d2</span></span> now unconditionally reads the non-atomic reference <span class="machine"><span class="font-tt">msg</span></span>.
+Consider the execution trace:</p><pre>Atomic.get flag; (* c *)
+!msg; (* d *)
+msg := 42; (* a *)
+Atomic.set flag true (* b *)
+</pre><p>
+In this trace, <span class="machine"><span class="font-tt">d</span></span> and <span class="machine"><span class="font-tt">a</span></span> are conflicting operations. But there is no
+happens-before relationship between them. Hence, this program has a data race.</p><p>Both of the programs that we had seen in the section ‍<a href="#s%3Awhy_weak_memory">10.1</a>
+have have data races, and hence, exhibit non sequentially consistent
+behaviours.</p>
 <h2 class="section" id="s:local_drf"><a class="section-anchor" href="#s:local_drf" aria-hidden="true">﻿</a><span class="number">4</span> Local data race freedom</h2>
-<p>OCaml memory model also guarantees that even for programs with data races,
-there are no crashes.</p>
-<h2 class="section" id="s:ldrf_reasoning"><a class="section-anchor" href="#s:ldrf_reasoning" aria-hidden="true">﻿</a><span class="number">5</span> Reasoning with LDRF</h2>
-<h2 class="section" id="s:tearing"><a class="section-anchor" href="#s:tearing" aria-hidden="true">﻿</a><span class="number">6</span> Operations that are not memory model compliant</h2>
+<p>OCaml memory model offers strong guarantees even for programs with data races.
+It offers what is known as <em>local data race freedom sequential
+consistency(LDRF-SC)</em> guarantee. A formal definition of this property is beyond
+the scope of this manual chapter. Interested readers are encouraged to read the
+PLDI 2018 paper on <a href="https://doi.org/10.1145/3192366.3192421">Bounding Data
+Races in Space and Time</a>.</p><p>Informally, LDRF-SC says that the data race free parts of the program remain
+sequentially consistent. That is, even if the program has data races, those
+parts of the program that are disjoint from the parts with data races are
+amenable to sequential reasoning.</p><p>Consider the following snippet:</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> snippet () =
+  <span class="ocamlkeyword">let</span> c = <span class="ocamlkeyword">ref</span> 0 <span class="ocamlkeyword">in</span>
+  c := 42;
+  <span class="ocamlkeyword">let</span> a = !c <span class="ocamlkeyword">in</span>
+  a</div></div>
+
+</div><p>Observe that <span class="machine"><span class="font-tt">c</span></span> is a newly allocated reference. Can the read of <span class="machine"><span class="font-tt">c</span></span> return a
+value which is not 42? Surprisingly, in the C++ and Java memory models, the
+answer is yes. With the C++ memory model, if the program has a data race, even
+in unrelated parts, then the semantics is undefined. If this snippet were
+linked with a library that had a data race, then, under the C++ memory model,
+the read may return any value. Since data races on unrelated locations can
+affect program behaviour, we say that C++ memory model is not bound in space.</p><p>Unlike C++, Java memory model is bound in space. But Java memory model is not
+bound in time; data races in the future will affect the past behaviour. For
+example, consider the translation of this example to Java. We assume a prior
+definition of <span class="machine"><span class="font-tt">Class c {int x;}</span></span> and a shared <em>non-volatile</em> variable <span class="machine"><span class="font-tt">C g</span></span>. Now the snippet may be part of a larger program with parallel threads:</p><pre>(* Thread 1 *)
+C c = new C();
+c.x = 42;
+a = c.x;
+g = c;
+
+(* Thread 2 *)
+g.x = 7;
+</pre><p>
+The read of <span class="machine"><span class="font-tt">c.x</span></span> and the write of <span class="machine"><span class="font-tt">g</span></span> in the first thread are done on separate
+memory locations. Hence, the Java memory model allows them to be reordered. As
+a result, the write in the second thread may occur before the read of <span class="machine"><span class="font-tt">c.x</span></span>,
+and hence, <span class="machine"><span class="font-tt">c.x</span></span> returns <span class="machine"><span class="font-tt">7</span></span>.</p><p>The OCaml equivalent of the Java code above is:</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> g = <span class="ocamlkeyword">ref</span> None
+
+<span class="ocamlkeyword">let</span> d1 () =
+  <span class="ocamlkeyword">let</span> c = <span class="ocamlkeyword">ref</span> 0 <span class="ocamlkeyword">in</span>
+  c := 42;
+  <span class="ocamlkeyword">let</span> a = !c <span class="ocamlkeyword">in</span>
+  g := Some c;
+  a
+
+<span class="ocamlkeyword">let</span> d2 () =
+  <span class="ocamlkeyword">match</span> !g <span class="ocamlkeyword">with</span>
+  | None -&gt; ()
+  | Some c -&gt; c := 7</div></div>
+
+</div><p>Observe that there is a data race on both <span class="machine"><span class="font-tt">g</span></span> and <span class="machine"><span class="font-tt">c</span></span>. Consider only the first
+three instructions in <span class="machine"><span class="font-tt">d1</span></span>:</p><pre>let c = ref 0 in
+c := 42;
+let a = !c in
+...
+</pre><p>
+OCaml memory model is bound both in space and time. The only memory location
+here is <span class="machine"><span class="font-tt">c</span></span>. Reasoning only about this snippet, there is neither the data race
+in space (the race on <span class="machine"><span class="font-tt">g</span></span>) nor in time (the future race on <span class="machine"><span class="font-tt">c</span></span>). Hence, the
+snippet will have sequentially consistent behaviour, and the value returned by
+<span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p>
+<h2 class="section" id="s:tearing"><a class="section-anchor" href="#s:tearing" aria-hidden="true">﻿</a><span class="number">5</span> Operations that are not memory model compliant</h2>
 <ul class="itemize"><li class="li-itemize">
 <span class="machine"><span class="font-tt">Array.blit</span></span> on float arrays.
 </li><li class="li-itemize">32-bit flat-float arrays: Getting and setting is not an atomic operation.
