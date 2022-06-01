@@ -18,10 +18,12 @@
 </li><li><a href="memorymodel.html#s%3Adrf_sc"><span class="number">2</span> Data race freedom implies sequential consistency</a>
 </li><li><a href="memorymodel.html#s%3Adrf_reasoning"><span class="number">3</span> Reasoning with DRF-SC</a>
 </li><li><a href="memorymodel.html#s%3Alocal_drf"><span class="number">4</span> Local data race freedom</a>
-</li><li><a href="memorymodel.html#s%3Atearing"><span class="number">5</span> Non-compliant operations</a>
+</li><li><a href="memorymodel.html#s%3Amm_semantics"><span class="number">5</span> Semantics of OCaml memory model</a>
+</li><li><a href="memorymodel.html#s%3Amm_semantics_reasoning"><span class="number">6</span> Reasoning using the semantics</a>
+</li><li><a href="memorymodel.html#s%3Amm_tearing"><span class="number">7</span> Non-compliant operations</a>
 </li></ul></nav></header>
 <p>
-<a id="c:memorymodel"></a></p><p>(WIP)</p><p>This chapter describes the details of OCaml weak memory model. The weak memory
+<a id="c:memorymodel"></a></p><p>This chapter describes the details of OCaml weak memory model. The weak memory
 model describes what values an OCaml program is allowed to witness when reading
 a memory location. If you are interested in high-level parallel programming in
 OCaml, please have a look at the parallel programming chapter
@@ -391,7 +393,9 @@ OCaml memory model is bound both in space and time. The only memory location
 here is <span class="machine"><span class="font-tt">c</span></span>. Reasoning only about this snippet, there is neither the data race
 in space (the race on <span class="machine"><span class="font-tt">g</span></span>) nor in time (the future race on <span class="machine"><span class="font-tt">c</span></span>). Hence, the
 snippet will have sequentially consistent behaviour, and the value returned by
-<span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p><p>Let us consider another example for reasoning with LDRF. Let us take a variant
+<span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p>
+<h3 class="subsection" id="s:mm_msg_passing_again"><a class="section-anchor" href="#s:mm_msg_passing_again" aria-hidden="true">﻿</a><span class="number">4.1</span> Message passing</h3>
+<p>Let us consider another example for reasoning with LDRF. Let us take a variant
 of the message passing example seen earlier ‍<a href="#s%3Amm_msg_passing">10.3</a>.</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -440,7 +444,144 @@ that uses <span class="machine"><span class="font-tt">s</span></span> and <span 
 will read those objects is the one in which <span class="machine"><span class="font-tt">d1</span></span> executes before <span class="machine"><span class="font-tt">d2</span></span>. Thanks
 to LDRF-SC, we can use sequential reasoning, which guarantees that <span class="machine"><span class="font-tt">d2</span></span> will
 always see the initialising writes from <span class="machine"><span class="font-tt">d1</span></span>.</p>
-<h2 class="section" id="s:tearing"><a class="section-anchor" href="#s:tearing" aria-hidden="true">﻿</a><span class="number">5</span> Non-compliant operations</h2>
+<h2 class="section" id="s:mm_semantics"><a class="section-anchor" href="#s:mm_semantics" aria-hidden="true">﻿</a><span class="number">5</span> Semantics of OCaml memory model</h2>
+<p>In this section, we describe the semantics of the OCaml memory model. Given an
+OCaml program, which may possibly contain data races, the semantics tells you
+the values that may be observed by the read of a memory location. For
+simplicity, we restrict the intra-thread actions to just the accesses to atomic
+and non-atomic locations, ignoring domain spawn and join operations, and the
+operations on mutexes.</p>
+<h3 class="subsection" id="ss:mm_non_atomic"><a class="section-anchor" href="#ss:mm_non_atomic" aria-hidden="true">﻿</a><span class="number">5.1</span> Non-atomic locations</h3>
+<p>Similar to our earlier definition ‍<a href="#s%3Ahappens_before">10.2.2</a>, we define the
+semantics using an abstract machine that executes one action at a time,
+arbitrarily picking one of the available domains at each step. In the
+semantics, we model non-atomic locations as a finite map from timestamps <span class="machine"><span class="font-tt">t</span></span> to
+values <span class="machine"><span class="font-tt">v</span></span>. We take timestamps to be rational numbers. The timestamps are
+totally ordered but dense; there is a timestamp between any two others.</p><p>For example,</p><pre>a: [t1 -&gt; 1; t2 -&gt; 2]
+b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
+c: [t6 -&gt; 5; t7 -&gt; 6; t8 -&gt; 7]
+</pre><p>
+represents three non-atomic locations <span class="machine"><span class="font-tt">a</span></span>, <span class="machine"><span class="font-tt">b</span></span> and <span class="machine"><span class="font-tt">c</span></span> and their
+histories. The location <span class="machine"><span class="font-tt">a</span></span> has two writes at timestamps <span class="machine"><span class="font-tt">t1</span></span> and <span class="machine"><span class="font-tt">t2</span></span> with
+values <span class="machine"><span class="font-tt">1</span></span> and <span class="machine"><span class="font-tt">2</span></span>, respectively. When we write <span class="machine"><span class="font-tt">a: [t1 -&gt; 1; t2 -&gt; 2]</span></span>, we
+assume that <span class="machine"><span class="font-tt">t1 &lt; t2</span></span>. We assume that the locations are initialised with a
+history that has a single entry at timestamp 0 that maps to the initial value.</p>
+<h3 class="subsection" id="ss:mm_domains"><a class="section-anchor" href="#ss:mm_domains" aria-hidden="true">﻿</a><span class="number">5.2</span> Domains</h3>
+<p>Each domain is equipped with a <em>frontier</em>, which is a map from non-atomic
+locations to timestamps. Intuitively, each domain’s frontier records, for each
+non-atomic locations, the latest write known to the thread. More recent writes
+may have occurred, but are not guaranteed to be visible.</p><p>For example,</p><pre>d1: [a -&gt; t1; b -&gt; t3; c -&gt; t6]
+d2: [a -&gt; t1; b -&gt; t4; c -&gt; t7]
+</pre><p>
+represents two domains <span class="machine"><span class="font-tt">d1</span></span> and <span class="machine"><span class="font-tt">d2</span></span> and their frontiers.</p>
+<h3 class="subsection" id="ss:mm_na_access"><a class="section-anchor" href="#ss:mm_na_access" aria-hidden="true">﻿</a><span class="number">5.3</span> Non-atomic accesses</h3>
+<p>Let us now define the semantics of non-atomic reads and writes. Suppose domain
+<span class="machine"><span class="font-tt">d1</span></span> performs the read of <span class="machine"><span class="font-tt">b</span></span>. For non-atomic reads, the domains may read an
+arbitrary element of the history for that location, as long as it is not older
+than the timestamp in the domains’s frontier. In this case, since <span class="machine"><span class="font-tt">d1</span></span> frontier
+at <span class="machine"><span class="font-tt">b</span></span> is at <span class="machine"><span class="font-tt">t3</span></span>, the read may return the value <span class="machine"><span class="font-tt">3</span></span>, <span class="machine"><span class="font-tt">4</span></span> or <span class="machine"><span class="font-tt">5</span></span>.</p><p>Suppose domain <span class="machine"><span class="font-tt">d2</span></span> writes the value <span class="machine"><span class="font-tt">10</span></span> to <span class="machine"><span class="font-tt">c</span></span> (<span class="machine"><span class="font-tt">c := 10</span></span>). We pick a new
+timestamp <span class="machine"><span class="font-tt">t9</span></span> for this write such that it is later than <span class="machine"><span class="font-tt">d2</span></span>’s frontier at
+<span class="machine"><span class="font-tt">c</span></span>. Note a subtlety here: this new timestamp may not be later than everything
+else in the history, but merely later than any other write known to the writing
+domain. Hence, <span class="machine"><span class="font-tt">t9</span></span> may be inserted in <span class="machine"><span class="font-tt">c</span></span>’s history either (a) between <span class="machine"><span class="font-tt">t7</span></span>
+and <span class="machine"><span class="font-tt">t8</span></span> or (b) after <span class="machine"><span class="font-tt">t8</span></span>. Let us pick the former option for our discussion.
+Since the new write appears after all the writes known by the domain <span class="machine"><span class="font-tt">d2</span></span> to
+the location <span class="machine"><span class="font-tt">c</span></span>, <span class="machine"><span class="font-tt">d2</span></span>’s frontier at <span class="machine"><span class="font-tt">c</span></span> is also updated. The new state of the
+abstract machine is:</p><pre>(* Non-atomic locations *)
+a: [t1 -&gt; 1; t2 -&gt; 2]
+b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
+c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7] (* new write at t9 *)
+
+(* Domains *)
+d1: [a -&gt; t1; b -&gt; t3; c -&gt; t6]
+d2: [a -&gt; t1; b -&gt; t4; c -&gt; t9] (* frontier updated at c *)
+</pre>
+<h3 class="subsection" id="ss:mm_at_access"><a class="section-anchor" href="#ss:mm_at_access" aria-hidden="true">﻿</a><span class="number">5.4</span> Atomic accesses</h3>
+<p>Atomic locations carry not only values but also synchronization information. We
+model atomic locations as a pair of the value held by that location and a
+frontier. The frontier models the synchronization information, which is merged
+with the frontiers of threads that operate on the location. In this way,
+non-atomic writes made by one thread can become known to another by
+communicating via an atomic location.</p><p>For example,</p><pre>(* Atomic locations *)
+A: 10, [a -&gt; t1; b -&gt; t5; c -&gt; t7]
+B: 5,  [a -&gt; t2; b -&gt; t4; c -&gt; t6]
+</pre><p>
+shows two atomic variables <span class="machine"><span class="font-tt">A</span></span> and <span class="machine"><span class="font-tt">B</span></span> with values <span class="machine"><span class="font-tt">10</span></span> and <span class="machine"><span class="font-tt">5</span></span>,
+respectively, and frontiers of their own. We use upper-case variable names to
+indicate atomic locations.</p><p>During atomic reads, the frontier of the location is merged into that of the
+domain performing the read. For example, suppose <span class="machine"><span class="font-tt">d1</span></span> reads <span class="machine"><span class="font-tt">B</span></span>. The read
+returns <span class="machine"><span class="font-tt">5</span></span>, and <span class="machine"><span class="font-tt">d1</span></span>’s frontier merged with <span class="machine"><span class="font-tt">B</span></span>’s frontier, choosing the later
+timestamp for each location. The abstract machine state before the atomic read
+is:</p><pre>(* Non-atomic locations *)
+a: [t1 -&gt; 1; t2 -&gt; 2]
+b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
+c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7]
+
+(* Domains *)
+d1: [a -&gt; t1; b -&gt; t3; c -&gt; t6]
+d2: [a -&gt; t1; b -&gt; t4; c -&gt; t9]
+
+(* Atomic locations *)
+A: 10, [a -&gt; t1; b -&gt; t5; c -&gt; t7]
+B: 5,  [a -&gt; t2; b -&gt; t4; c -&gt; t6]
+</pre><p>
+As a result of the atomic read, the abstract machine state is updated to:</p><pre>(* Non-atomic locations *)
+a: [t1 -&gt; 1; t2 -&gt; 2]
+b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
+c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7]
+
+(* Domains *)
+d1: [a -&gt; t2; b -&gt; t4; c -&gt; t6] (* frontier updated at a and b *)
+d2: [a -&gt; t1; b -&gt; t4; c -&gt; t9]
+
+(* Atomic locations *)
+A: 10, [a -&gt; t1; b -&gt; t5; c -&gt; t7]
+B: 5,  [a -&gt; t2; b -&gt; t4; c -&gt; t6]
+</pre><p>
+During atomic writes, the value held by the atomic location is updated. The
+frontiers of both the reading domain and that of the location being read is
+updated to the merge of the two frontiers. For example, if <span class="machine"><span class="font-tt">d2</span></span> writes <span class="machine"><span class="font-tt">20</span></span> to
+<span class="machine"><span class="font-tt">A</span></span> in the current machine state, the machine state is updated to:</p><pre>(* Non-atomic locations *)
+a: [t1 -&gt; 1; t2 -&gt; 2]
+b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
+c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7]
+
+(* Domains *)
+d1: [a -&gt; t2; b -&gt; t4; c -&gt; t6]
+d2: [a -&gt; t1; b -&gt; t5; c -&gt; t9] (* frontier updated at b *)
+
+(* Atomic locations *)
+A: 20, [a -&gt; t1; b -&gt; t5; c -&gt; t9] (* value updated. frontier updated at c. *)
+B: 5,  [a -&gt; t2; b -&gt; t4; c -&gt; t6]
+</pre>
+<h2 class="section" id="s:mm_semantics_reasoning"><a class="section-anchor" href="#s:mm_semantics_reasoning" aria-hidden="true">﻿</a><span class="number">6</span> Reasoning using the semantics</h2>
+<p>Let us revisit an example from earlier ‍<a href="#s%3Awhy_weak_memory">10.1</a>.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> a = <span class="ocamlkeyword">ref</span> 0
+<span class="ocamlkeyword">and</span> b = <span class="ocamlkeyword">ref</span> 0
+
+<span class="ocamlkeyword">let</span> d1 () =
+  a := 1;
+  !b
+
+<span class="ocamlkeyword">let</span> d2 () =
+  b := 1;
+  !a
+
+<span class="ocamlkeyword">let</span> main () =
+  <span class="ocamlkeyword">let</span> h = Domain.spawn d2 <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">let</span> r1 = d1 () <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">let</span> r2 = Domain.join h <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">assert</span> (not (r1 = 0 &amp;&amp; r2 = 0))</div></div>
+
+</div><p>This program has a data race on <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">b</span></span>, and hence, the program may observe
+non sequentially consistent behaviour. Let us use the semantics to show that
+the program may observe <span class="machine"><span class="font-tt">r1 = 0 &amp;&amp; r2 = 0</span></span>.</p><p>The initial state of the abstract machine is (WIP).</p>
+<h2 class="section" id="s:mm_tearing"><a class="section-anchor" href="#s:mm_tearing" aria-hidden="true">﻿</a><span class="number">7</span> Non-compliant operations</h2>
 <p>There are certain operations which are not memory model compliant.</p><ul class="itemize"><li class="li-itemize">
 <span class="machine"><span class="font-tt">Array.blit</span></span> function on float arrays may cause <em>tearing</em>. When an
 unsynchronized blit operation runs concurrently with some overlapping write
