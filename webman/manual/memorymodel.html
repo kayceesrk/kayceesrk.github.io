@@ -147,7 +147,7 @@ will only exhibit sequentially consistent behaviours. This guarantee is known
 as data race freedom implies sequential consistency (DRF-SC). In this section,
 we shall describe this guarantee. In order to do this, we first need a number
 of definitions.</p>
-<h3 class="subsection" id="sec94"><a class="section-anchor" href="#sec94" aria-hidden="true">﻿</a><span class="number">2.1</span> Memory locations</h3>
+<h3 class="subsection" id="s:atomics"><a class="section-anchor" href="#s:atomics" aria-hidden="true">﻿</a><span class="number">2.1</span> Memory locations</h3>
 <p>OCaml classifies memory locations into <em>atomic</em> and <em>non-atomic</em>
 locations. Reference cells, array fields and mutable record fields are
 non-atomic memory locations. Immutable objects are non-atomic locations with an
@@ -225,7 +225,9 @@ represent domains executing in parallel with other domains.</p><p>Here is a simp
 
 </div><p><span class="machine"><span class="font-tt">r</span></span> is a non-atomic reference. The two domains race to access the reference,
 and <span class="machine"><span class="font-tt">d1</span></span> is a write. Since there is no happens-before relationship between the
-conflicting accesses, there is a data race.</p><p>Accessing disjoint array indices and fields of a record in parallel is not a
+conflicting accesses, there is a data race.</p><p>Both of the programs that we had seen in the section ‍<a href="#s%3Awhy_weak_memory">10.1</a>
+have have data races, and hence, exhibit non sequentially consistent
+behaviours.</p><p>Accessing disjoint array indices and fields of a record in parallel is not a
 data race. For example,</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -263,7 +265,9 @@ data race. For example,</p><div class="caml-example verbatim">
 <span class="ocamlkeyword">let</span> d1 () = Atomic.set r 1
 <span class="ocamlkeyword">let</span> d2 () = Atomic.get r</div></div>
 
-</div><p>Atomic variables may be used for implementing non-blocking communication
+</div>
+<h4 class="subsubsection" id="s:mm_msg_passing"><a class="section-anchor" href="#s:mm_msg_passing" aria-hidden="true">﻿</a>Message-passing</h4>
+<p>Atomic variables may be used for implementing non-blocking communication
 between domains.</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -314,9 +318,7 @@ msg := 42; (* a *)
 Atomic.set flag true (* b *)
 </pre><p>
 In this trace, <span class="machine"><span class="font-tt">d</span></span> and <span class="machine"><span class="font-tt">a</span></span> are conflicting operations. But there is no
-happens-before relationship between them. Hence, this program has a data race.</p><p>Both of the programs that we had seen in the section ‍<a href="#s%3Awhy_weak_memory">10.1</a>
-have have data races, and hence, exhibit non sequentially consistent
-behaviours.</p>
+happens-before relationship between them. Hence, this program has a data race.</p>
 <h2 class="section" id="s:local_drf"><a class="section-anchor" href="#s:local_drf" aria-hidden="true">﻿</a><span class="number">4</span> Local data race freedom</h2>
 <p>OCaml memory model offers strong guarantees even for programs with data races.
 It offers what is known as <em>local data race freedom sequential
@@ -389,12 +391,67 @@ OCaml memory model is bound both in space and time. The only memory location
 here is <span class="machine"><span class="font-tt">c</span></span>. Reasoning only about this snippet, there is neither the data race
 in space (the race on <span class="machine"><span class="font-tt">g</span></span>) nor in time (the future race on <span class="machine"><span class="font-tt">c</span></span>). Hence, the
 snippet will have sequentially consistent behaviour, and the value returned by
-<span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p>
+<span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p><p>Let us consider another example for reasoning with LDRF. Let us take a variant
+of the message passing example seen earlier ‍<a href="#s%3Amm_msg_passing">10.3</a>.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> r = <span class="ocamlkeyword">ref</span> None
+<span class="ocamlkeyword">let</span> d1 () =
+  r := Some <span class="ocamlstring">"Hello, world!"</span>
+<span class="ocamlkeyword">let</span> d2 () =
+  <span class="ocamlkeyword">match</span> !r <span class="ocamlkeyword">with</span>
+  | None -&gt; ()
+  | Some s -&gt; print_endline s</div></div>
+
+</div><p>The program uses a non-atomic reference <span class="machine"><span class="font-tt">r</span></span> to share a message between domains.
+It is easy to see that there is a data race on <span class="machine"><span class="font-tt">r</span></span>. For the value <span class="machine"><span class="font-tt">Some "Hello, world!"</span></span>, OCaml allocates two objects – one for the string and the
+other for the <span class="machine"><span class="font-tt">Some</span></span> constructor. Both of these objects are first allocated
+uninitialised and then initialised with initialising writes. Are we guaranteed
+that when <span class="machine"><span class="font-tt">d2</span></span> sees the <span class="machine"><span class="font-tt">Some</span></span> variant when reading <span class="machine"><span class="font-tt">r</span></span>, the objects have been
+fully initialised?</p><p>The answer is yes, and we can use LDRF to reason about this. Let us refactor the
+program to make the newly allocated objects explicit.</p><div class="caml-example verbatim">
+
+<div class="ocaml">
+
+
+
+<div class="pre caml-input"><span class="ocamlkeyword">let</span> r = <span class="ocamlkeyword">ref</span> None
+<span class="ocamlkeyword">let</span> d1 () =
+  <span class="ocamlkeyword">let</span> s = <span class="ocamlstring">"Hello, world!"</span> <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">let</span> o = Some s <span class="ocamlkeyword">in</span>
+  r := o
+<span class="ocamlkeyword">let</span> d2 () =
+  <span class="ocamlkeyword">let</span> o = !r <span class="ocamlkeyword">in</span>
+  <span class="ocamlkeyword">match</span> o <span class="ocamlkeyword">with</span>
+  | None -&gt; ()
+  | Some s -&gt; print_endline s</div></div>
+
+</div><p>LDRF allows us to reason about the program behaviour for a subset of memory
+locations. Let us ignore <span class="machine"><span class="font-tt">r</span></span> and only consider <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>. The objects <span class="machine"><span class="font-tt">s</span></span> and
+<span class="machine"><span class="font-tt">o</span></span> have initialising writes in <span class="machine"><span class="font-tt">d1</span></span> and reads in <span class="machine"><span class="font-tt">d2</span></span>. The happens-before
+definition ‍<a href="#s%3Ahappens_before">10.2.2</a> says that the initial write to a location
+precedes any other actions on that location. Hence, there is a happens before
+relationship between the initial writes to <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> in <span class="machine"><span class="font-tt">d1</span></span> and the reads in
+<span class="machine"><span class="font-tt">d2</span></span>. Hence, there is no data race on <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>, and the program fragment
+that uses <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> will have sequentially consistent behaviour.</p><p>Since <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> are newly allocated in <span class="machine"><span class="font-tt">d1</span></span>, the only schedule where <span class="machine"><span class="font-tt">d2</span></span>
+will read those objects is the one in which <span class="machine"><span class="font-tt">d1</span></span> executes before <span class="machine"><span class="font-tt">d2</span></span>. Thanks
+to LDRF-SC, we can use sequential reasoning, which guarantees that <span class="machine"><span class="font-tt">d2</span></span> will
+always see the initialising writes from <span class="machine"><span class="font-tt">d1</span></span>.</p>
 <h2 class="section" id="s:tearing"><a class="section-anchor" href="#s:tearing" aria-hidden="true">﻿</a><span class="number">5</span> Non-compliant operations</h2>
-<ul class="itemize"><li class="li-itemize">
-<span class="machine"><span class="font-tt">Array.blit</span></span> on float arrays.
-</li><li class="li-itemize">32-bit flat-float arrays: Getting and setting is not an atomic operation.
-</li><li class="li-itemize">Tearing with mixed-sized accesses on Bytes.
+<p>There are certain operations which are not memory model compliant.</p><ul class="itemize"><li class="li-itemize">
+<span class="machine"><span class="font-tt">Array.blit</span></span> function on float arrays may cause <em>tearing</em>. When an
+unsynchronized blit operation runs concurrently with some overlapping write
+to the fields of the some float array, the field may end up with bits from
+either of the writes.
+</li><li class="li-itemize">With flat-float arrays on 32-bit architectures, getting or setting a
+field involves two separate memory accesses. In the presence of data races,
+the user may observe tearing.
+</li><li class="li-itemize">The <span class="machine"><span class="font-tt">Bytes</span></span> module ‍<a href="../api/Bytes.html"><span class="font-tt">Bytes</span></a> permits mixed-mode accesses
+where reads and writes may be of different sizes. Unsynchronized mixed-mode
+accesses lead to tearing.
 </li></ul>
 <hr>
 <div class="bottom-navigation"><a class="previous" href="parallelism.html">« Parallel programming</a><a class="next" href="language.html">The OCaml language »</a></div>
