@@ -19,8 +19,7 @@
 </li><li><a href="memorymodel.html#s%3Adrf_reasoning"><span class="number">3</span> Reasoning with DRF-SC</a>
 </li><li><a href="memorymodel.html#s%3Alocal_drf"><span class="number">4</span> Local data race freedom</a>
 </li><li><a href="memorymodel.html#s%3Amm_semantics"><span class="number">5</span> Semantics of OCaml memory model</a>
-</li><li><a href="memorymodel.html#s%3Amm_semantics_reasoning"><span class="number">6</span> Reasoning using the semantics</a>
-</li><li><a href="memorymodel.html#s%3Amm_tearing"><span class="number">7</span> Non-compliant operations</a>
+</li><li><a href="memorymodel.html#s%3Amm_tearing"><span class="number">6</span> Non-compliant operations</a>
 </li></ul></nav></header>
 <p>
 <a id="c:memorymodel"></a></p><p>This chapter describes the details of OCaml weak memory model. The weak memory
@@ -554,7 +553,7 @@ d2: [a -&gt; t1; b -&gt; t5; c -&gt; t9] (* frontier updated at b *)
 A: 20, [a -&gt; t1; b -&gt; t5; c -&gt; t9] (* value updated. frontier updated at c. *)
 B: 5,  [a -&gt; t2; b -&gt; t4; c -&gt; t6]
 </pre>
-<h2 class="section" id="s:mm_semantics_reasoning"><a class="section-anchor" href="#s:mm_semantics_reasoning" aria-hidden="true">﻿</a><span class="number">6</span> Reasoning using the semantics</h2>
+<h3 class="subsection" id="s:mm_semantics_reasoning"><a class="section-anchor" href="#s:mm_semantics_reasoning" aria-hidden="true">﻿</a><span class="number">5.5</span> Reasoning with the semantics</h3>
 <p>Let us revisit an example from earlier ‍<a href="#s%3Awhy_weak_memory">10.1</a>.</p><div class="caml-example verbatim">
 
 <div class="ocaml">
@@ -580,8 +579,42 @@ B: 5,  [a -&gt; t2; b -&gt; t4; c -&gt; t6]
 
 </div><p>This program has a data race on <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">b</span></span>, and hence, the program may observe
 non sequentially consistent behaviour. Let us use the semantics to show that
-the program may observe <span class="machine"><span class="font-tt">r1 = 0 &amp;&amp; r2 = 0</span></span>.</p><p>The initial state of the abstract machine is (WIP).</p>
-<h2 class="section" id="s:mm_tearing"><a class="section-anchor" href="#s:mm_tearing" aria-hidden="true">﻿</a><span class="number">7</span> Non-compliant operations</h2>
+the program may observe <span class="machine"><span class="font-tt">r1 = 0 &amp;&amp; r2 = 0</span></span>.</p><p>The initial state of the abstract machine is:</p><pre>(* Non-atomic locations *)
+a: [t0 -&gt; 0]
+b: [t1 -&gt; 0]
+
+(* Domains *)
+d1: [a -&gt; t0; b -&gt; t1]
+d2: [a -&gt; t0; b -&gt; t1]
+</pre><p>
+There are several possible schedules for executing this program. Let us
+consider the following schedule:</p><pre>1: a := 1 @ d1
+2: b := 1 @ d2
+3: !b     @ d1
+4: !a     @ d2
+</pre><p>
+After the first action <span class="machine"><span class="font-tt">a:=1</span></span> by <span class="machine"><span class="font-tt">d1</span></span>, the machine state is:</p><pre>(* Non-atomic locations *)
+a: [t0 -&gt; 0; t2 -&gt; 1] (* new write at t2 *)
+b: [t1 -&gt; 0]
+
+(* Domains *)
+d1: [a -&gt; t2; b -&gt; t1] (* frontier updated at a *)
+d2: [a -&gt; t0; b -&gt; t1]
+</pre><p>
+After the second action <span class="machine"><span class="font-tt">b:=1</span></span> by <span class="machine"><span class="font-tt">d2</span></span>, the machine state is:</p><pre>(* Non-atomic locations *)
+a: [t0 -&gt; 0; t2 -&gt; 1]
+b: [t1 -&gt; 0; t3 -&gt; 1] (* new write at t3 *)
+
+(* Domains *)
+d1: [a -&gt; t2; b -&gt; t1]
+d2: [a -&gt; t0; b -&gt; t3] (* frontier updated at b *)
+</pre><p>
+Now, for the third action <span class="machine"><span class="font-tt">!b</span></span> by <span class="machine"><span class="font-tt">d1</span></span>, observe that the <span class="machine"><span class="font-tt">d1</span></span>’s frontier at <span class="machine"><span class="font-tt">b</span></span>
+is at <span class="machine"><span class="font-tt">t1</span></span>. Hence, the read may return either <span class="machine"><span class="font-tt">0</span></span> or <span class="machine"><span class="font-tt">1</span></span>. Let us assume that it
+returns <span class="machine"><span class="font-tt">0</span></span>. The machine state is not updated by the non-atomic read.</p><p>Similarly, for the forth action <span class="machine"><span class="font-tt">!a</span></span> by <span class="machine"><span class="font-tt">d2</span></span>, <span class="machine"><span class="font-tt">d2</span></span>’s frontier at <span class="machine"><span class="font-tt">a</span></span> is at
+<span class="machine"><span class="font-tt">t0</span></span>. Hence, this read may also return either <span class="machine"><span class="font-tt">0</span></span> or <span class="machine"><span class="font-tt">1</span></span>. Let us assume that it
+returns <span class="machine"><span class="font-tt">0</span></span>. Hence, the assertion in the original program <span class="machine"><span class="font-tt">assert (not (r1 = 0 &amp;&amp; r2 = 0))</span></span> will fail for this particular execution.</p>
+<h2 class="section" id="s:mm_tearing"><a class="section-anchor" href="#s:mm_tearing" aria-hidden="true">﻿</a><span class="number">6</span> Non-compliant operations</h2>
 <p>There are certain operations which are not memory model compliant.</p><ul class="itemize"><li class="li-itemize">
 <span class="machine"><span class="font-tt">Array.blit</span></span> function on float arrays may cause <em>tearing</em>. When an
 unsynchronized blit operation runs concurrently with some overlapping write
