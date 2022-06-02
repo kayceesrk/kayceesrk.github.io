@@ -18,7 +18,7 @@
 </li><li><a href="memorymodel.html#s%3Adrf_sc"><span class="number">2</span> Data race freedom implies sequential consistency</a>
 </li><li><a href="memorymodel.html#s%3Adrf_reasoning"><span class="number">3</span> Reasoning with DRF-SC</a>
 </li><li><a href="memorymodel.html#s%3Alocal_drf"><span class="number">4</span> Local data race freedom</a>
-</li><li><a href="memorymodel.html#s%3Amm_semantics"><span class="number">5</span> Semantics of OCaml memory model</a>
+</li><li><a href="memorymodel.html#s%3Amm_semantics"><span class="number">5</span> An operational view of the memory model</a>
 </li><li><a href="memorymodel.html#s%3Amm_tearing"><span class="number">6</span> Non-compliant operations</a>
 </li></ul></nav></header>
 <p>
@@ -395,7 +395,7 @@ snippet will have sequentially consistent behaviour, and the value returned by
 <span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p>
 <h3 class="subsection" id="s:mm_msg_passing_again"><a class="section-anchor" href="#s:mm_msg_passing_again" aria-hidden="true">﻿</a><span class="number">4.1</span> Message passing</h3>
 <p>Let us consider another example for reasoning with LDRF. Let us take a variant
-of the message passing example seen earlier ‍<a href="#s%3Amm_msg_passing">10.3</a>.</p><div class="caml-example verbatim">
+of the message passing example seen earlier (section <a href="#s%3Amm_msg_passing">10.3</a>).</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
@@ -435,28 +435,30 @@ program to make the newly allocated objects explicit.</p><div class="caml-exampl
 </div><p>LDRF allows us to reason about the program behaviour for a subset of memory
 locations. Let us ignore <span class="machine"><span class="font-tt">r</span></span> and only consider <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>. The objects <span class="machine"><span class="font-tt">s</span></span> and
 <span class="machine"><span class="font-tt">o</span></span> have initialising writes in <span class="machine"><span class="font-tt">d1</span></span> and reads in <span class="machine"><span class="font-tt">d2</span></span>. The happens-before
-definition ‍<a href="#s%3Ahappens_before">10.2.2</a> says that the initial write to a location
-precedes any other actions on that location. Hence, there is a happens before
-relationship between the initial writes to <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> in <span class="machine"><span class="font-tt">d1</span></span> and the reads in
-<span class="machine"><span class="font-tt">d2</span></span>. Hence, there is no data race on <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>, and the program fragment
-that uses <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> will have sequentially consistent behaviour.</p><p>Since <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> are newly allocated in <span class="machine"><span class="font-tt">d1</span></span>, the only schedule where <span class="machine"><span class="font-tt">d2</span></span>
+definition (section <a href="#s%3Ahappens_before">10.2.2</a>) says that the initial write to a
+location precedes any other actions on that location. Hence, there is a happens
+before relationship between the initial writes to <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> in <span class="machine"><span class="font-tt">d1</span></span> and the
+reads in <span class="machine"><span class="font-tt">d2</span></span>. Hence, there is no data race on <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>, and the program
+fragment that uses <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> will have sequentially consistent behaviour.</p><p>Since <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> are newly allocated in <span class="machine"><span class="font-tt">d1</span></span>, the only schedule where <span class="machine"><span class="font-tt">d2</span></span>
 will read those objects is the one in which <span class="machine"><span class="font-tt">d1</span></span> executes before <span class="machine"><span class="font-tt">d2</span></span>. Thanks
 to LDRF-SC, we can use sequential reasoning, which guarantees that <span class="machine"><span class="font-tt">d2</span></span> will
 always see the initialising writes from <span class="machine"><span class="font-tt">d1</span></span>.</p>
-<h2 class="section" id="s:mm_semantics"><a class="section-anchor" href="#s:mm_semantics" aria-hidden="true">﻿</a><span class="number">5</span> Semantics of OCaml memory model</h2>
+<h2 class="section" id="s:mm_semantics"><a class="section-anchor" href="#s:mm_semantics" aria-hidden="true">﻿</a><span class="number">5</span> An operational view of the memory model</h2>
 <p>In this section, we describe the semantics of the OCaml memory model. Given an
 OCaml program, which may possibly contain data races, the semantics tells you
 the values that may be observed by the read of a memory location. For
 simplicity, we restrict the intra-thread actions to just the accesses to atomic
 and non-atomic locations, ignoring domain spawn and join operations, and the
-operations on mutexes.</p>
+operations on mutexes.</p><p>We describe the semantics of the OCaml memory model in a straight-forward
+small-step operational manner. That is, the semantics is described by an
+abstract machine that executes one action at a time, arbitrarily picking one of
+the available domains at each step. This is similar to the abstract machine
+that we had used to describe the happens-before relationship in
+section ‍<a href="#s%3Ahappens_before">10.2.2</a>.</p>
 <h3 class="subsection" id="ss:mm_non_atomic"><a class="section-anchor" href="#ss:mm_non_atomic" aria-hidden="true">﻿</a><span class="number">5.1</span> Non-atomic locations</h3>
-<p>Similar to our earlier definition ‍<a href="#s%3Ahappens_before">10.2.2</a>, we define the
-semantics using an abstract machine that executes one action at a time,
-arbitrarily picking one of the available domains at each step. In the
-semantics, we model non-atomic locations as a finite map from timestamps <span class="machine"><span class="font-tt">t</span></span> to
-values <span class="machine"><span class="font-tt">v</span></span>. We take timestamps to be rational numbers. The timestamps are
-totally ordered but dense; there is a timestamp between any two others.</p><p>For example,</p><pre>a: [t1 -&gt; 1; t2 -&gt; 2]
+<p>In the semantics, we model non-atomic locations as a finite map from timestamps
+<span class="machine"><span class="font-tt">t</span></span> to values <span class="machine"><span class="font-tt">v</span></span>. We take timestamps to be rational numbers. The timestamps
+are totally ordered but dense; there is a timestamp between any two others.</p><p>For example,</p><pre>a: [t1 -&gt; 1; t2 -&gt; 2]
 b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
 c: [t6 -&gt; 5; t7 -&gt; 6; t8 -&gt; 7]
 </pre><p>
@@ -554,7 +556,7 @@ A: 20, [a -&gt; t1; b -&gt; t5; c -&gt; t9] (* value updated. frontier updated a
 B: 5,  [a -&gt; t2; b -&gt; t4; c -&gt; t6]
 </pre>
 <h3 class="subsection" id="s:mm_semantics_reasoning"><a class="section-anchor" href="#s:mm_semantics_reasoning" aria-hidden="true">﻿</a><span class="number">5.5</span> Reasoning with the semantics</h3>
-<p>Let us revisit an example from earlier ‍<a href="#s%3Awhy_weak_memory">10.1</a>.</p><div class="caml-example verbatim">
+<p>Let us revisit an example from earlier (section <a href="#s%3Awhy_weak_memory">10.1</a>).</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
@@ -613,7 +615,7 @@ Now, for the third action <span class="machine"><span class="font-tt">!b</span><
 is at <span class="machine"><span class="font-tt">t1</span></span>. Hence, the read may return either <span class="machine"><span class="font-tt">0</span></span> or <span class="machine"><span class="font-tt">1</span></span>. Let us assume that it
 returns <span class="machine"><span class="font-tt">0</span></span>. The machine state is not updated by the non-atomic read.</p><p>Similarly, for the forth action <span class="machine"><span class="font-tt">!a</span></span> by <span class="machine"><span class="font-tt">d2</span></span>, <span class="machine"><span class="font-tt">d2</span></span>’s frontier at <span class="machine"><span class="font-tt">a</span></span> is at
 <span class="machine"><span class="font-tt">t0</span></span>. Hence, this read may also return either <span class="machine"><span class="font-tt">0</span></span> or <span class="machine"><span class="font-tt">1</span></span>. Let us assume that it
-returns <span class="machine"><span class="font-tt">0</span></span>. Hence, the assertion in the original program <span class="machine"><span class="font-tt">assert (not (r1 = 0 &amp;&amp; r2 = 0))</span></span> will fail for this particular execution.</p>
+returns <span class="machine"><span class="font-tt">0</span></span>. Hence, the assertion in the original program, <span class="machine"><span class="font-tt">assert (not (r1 = 0 &amp;&amp; r2 = 0))</span></span>, will fail for this particular execution.</p>
 <h2 class="section" id="s:mm_tearing"><a class="section-anchor" href="#s:mm_tearing" aria-hidden="true">﻿</a><span class="number">6</span> Non-compliant operations</h2>
 <p>There are certain operations which are not memory model compliant.</p><ul class="itemize"><li class="li-itemize">
 <span class="machine"><span class="font-tt">Array.blit</span></span> function on float arrays may cause <em>tearing</em>. When an
