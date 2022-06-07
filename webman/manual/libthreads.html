@@ -12,7 +12,7 @@
 
 
 
-<h1 class="chapter" id="sec633"><span class="chapter-number">Chapter 32</span> The threads library</h1>
+<h1 class="chapter" id="sec635"><span class="chapter-number">Chapter 32</span> The threads library</h1>
 <p>
 <a id="c:threads"></a></p><p>The <span class="machine"><span class="font-tt">threads</span></span> library allows concurrent programming in OCaml. It provides
 multiple threads of control (also called lightweight processes) that execute
@@ -22,7 +22,7 @@ communication channels.</p><p>The <span class="machine"><span class="font-tt">th
 provided by the operating system: POSIX 1003.1c threads for Linux, MacOS, and
 other Unix-like systems; Win32 threads for Windows. Only one thread at a time
 is allowed to run OCaml code on a particular
-domain ‍<a href="parallelism.html#s%3Apar_systhread_interaction">9.6.1</a>. Hence, opportunities for parallelism
+domain ‍<a href="parallelism.html#s%3Apar_systhread_interaction">9.5.1</a>. Hence, opportunities for parallelism
 are limited to the parts of the program that run system or C library code.
 However, threads provide concurrency and can be used to structure programs as
 several communicating processes. Threads also efficiently support concurrent,
