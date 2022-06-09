@@ -68,7 +68,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 # Contact
 
  * Email : kc@kcsrk.info, kcsrk@cse.iitm.ac.in
- * IRL : BSB 371, Department of Computer Science and Engineering, IIT Madras, Chennai, India
+ * IRL : SSB 401, Department of Computer Science and Engineering, IIT Madras, Chennai, India
  * Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a>
  * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
  * BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
