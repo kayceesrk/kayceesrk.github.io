@@ -5,6 +5,12 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Certified Mergeable Replicated Data Types**   
+   PLDI, Jun 2022    
+   [\[slides (pdf)\]](slides/certified_mrdts_pldi.pdf) [\[slides (key)\]](slides/certified_mrdts_pldi.key)    
+ * **Certified Mergeable Replicated Data Types**  
+   Nomadic Labs Research Seminars, Apr 2022  
+   [\[slides (pdf)\]](slides/certified_mrdts_nl.pdf) [\[slides (key)\]](slides/certified_mrdts_nl.key)  [\[video\]](https://www.youtube.com/watch?v=P9L8oFXXw-k)     
  * **Certified Mergeable Replicated Data Types**  
    Nomadic Labs Research Seminars, Apr 2022  
    [\[slides (pdf)\]](slides/certified_mrdts_nl.pdf) [\[slides (key)\]](slides/certified_mrdts_nl.key)          
