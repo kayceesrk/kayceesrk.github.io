@@ -27,11 +27,13 @@ memory model describes what values an OCaml program is allowed to witness when
 reading a memory location. If you are interested in high-level parallel
 programming in OCaml, please have a look at the parallel programming chapter
 <a href="parallelism.html#c%3Aparallelism">9</a>.</p><p>This chapter is aimed at experts who would like to understand the details of
-the OCaml memory model from a practitioner’s standpoint. For a formal
+the OCaml memory model from a practitioner’s perspective. For a formal
 definition of the OCaml memory model, its guarantees and the compilation to
-hardware memory model, please have a look at the PLDI 2018 paper on
+hardware memory models, please have a look at the PLDI 2018 paper on
 <a href="https://doi.org/10.1145/3192366.3192421">Bounding Data Races in Space and
-Time</a>.</p>
+Time</a>. The memory model presented in this chapter is an extension of the one
+presented in the PLDI 2018 paper. This chapter also covers some pragmatic
+aspects of the memory model that is not covered in the paper.</p>
 <h2 class="section" id="s:why_relaxed_memory"><a class="section-anchor" href="#s:why_relaxed_memory" aria-hidden="true"></a><span class="number">1</span> Why weakly consistent memory?</h2>
 <p>The simplest memory model that we could give to our programs is sequential
 consistency. Under sequential consistency, the values observed by the program
@@ -90,7 +92,7 @@ of the operations from different domains.</p><p>Let us now assume that <span cla
 reference cell. One would expect that the assertion in the main function will
 never fail. The reasoning is that if <span class="machine"><span class="font-tt">r2</span></span> is <span class="machine"><span class="font-tt">0</span></span>, then the write in <span class="machine"><span class="font-tt">d2</span></span>
 occurred before the read of <span class="machine"><span class="font-tt">b</span></span> in <span class="machine"><span class="font-tt">d1</span></span>. Given that <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">b</span></span> are aliases,
-the read of <span class="machine"><span class="font-tt">a</span></span> in <span class="machine"><span class="font-tt">d1</span></span> should also return <span class="machine"><span class="font-tt">0</span></span>.</p>
+the second read of <span class="machine"><span class="font-tt">a</span></span> in <span class="machine"><span class="font-tt">d1</span></span> should also return <span class="machine"><span class="font-tt">0</span></span>.</p>
 <h3 class="subsection" id="ss:mm_comp_opt"><a class="section-anchor" href="#ss:mm_comp_opt" aria-hidden="true">﻿</a><span class="number">1.1</span> Compiler optimisations</h3>
 <p>Surprisingly, this assertion may fail in OCaml due to compiler optimisations.
 The OCaml compiler observes the common sub-expression <span class="machine"><span class="font-tt">!a * 2</span></span> in <span class="machine"><span class="font-tt">d1</span></span> and
@@ -120,11 +122,11 @@ optimises the program to:</p><div class="caml-example verbatim">
 </div><p>This optimisation is known as the common sub-expression elimination (CSE). Such
 optimisations are valid and necessary for good performance, and do not change
 the sequential meaning of the program. However, CSE breaks sequential
-reasoning.</p><p>In the optimized program above, even if the write to be <span class="machine"><span class="font-tt">b</span></span> in <span class="machine"><span class="font-tt">d2</span></span> occurs
-between the first and the second reads in <span class="machine"><span class="font-tt">d1</span></span>, the program will observe the
-value <span class="machine"><span class="font-tt">2</span></span> for <span class="machine"><span class="font-tt">r3</span></span>, causing the assertion to fail. The observed behaviour
-cannot be explained by interleaving of operations from different domains in the
-source program. Thus, CSE optimization is said to be invalid under sequential
+reasoning.</p><p>In the optimized program above, even if the write to <span class="machine"><span class="font-tt">b</span></span> in <span class="machine"><span class="font-tt">d2</span></span> occurs between
+the first and the second reads in <span class="machine"><span class="font-tt">d1</span></span>, the program will observe the value <span class="machine"><span class="font-tt">2</span></span>
+for <span class="machine"><span class="font-tt">r3</span></span>, causing the assertion to fail. The observed behaviour cannot be
+explained by interleaving of operations from different domains in the source
+program. Thus, CSE optimization is said to be invalid under sequential
 consistency.</p><p>One way to explain the observed behaviour is as if the operations performed on
 a domain were reordered. For example, if the second and the third reads from
 <span class="machine"><span class="font-tt">d2</span></span> were reordered,</p><div class="caml-example verbatim">
@@ -208,7 +210,7 @@ influenced by actions on other domains. There are several inter-domain actions:<
 Reads and writes of atomic and non-atomic locations.
 </li><li class="li-itemize">Spawn and join of domains.
 </li><li class="li-itemize">Operations on mutexes.
-</li></ul><p><em>(TODO: Include semaphores and condition variables in inter-domain
+</li></ul><p><em>(TODO: Include semaphores and condition variables in the inter-domain
 actions.)</em></p><p>On the other hand, intra-domain actions can neither be observed nor influence
 the execution of other domains. Examples include evaluating an arithmetic
 expression, calling a function, etc. The memory model specification ignores
@@ -344,7 +346,7 @@ race.</p><div class="caml-example verbatim">
 
 
 
-<div class="pre caml-input"><span class="ocamlcomment">(* No data race *)</span>
+<div class="pre caml-input"><span class="ocamlcomment">(* Has data race *)</span>
 <span class="ocamlkeyword">let</span> msg = <span class="ocamlkeyword">ref</span> 0
 <span class="ocamlkeyword">let</span> flag = Atomic.make <span class="ocamlkeyword">false</span>
 <span class="ocamlkeyword">let</span> d1 () =
@@ -435,9 +437,13 @@ here is <span class="machine"><span class="font-tt">c</span></span>. Reasoning o
 in space (the race on <span class="machine"><span class="font-tt">g</span></span>) nor in time (the future race on <span class="machine"><span class="font-tt">c</span></span>). Hence, the
 snippet will have sequentially consistent behaviour, and the value returned by
 <span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p>
-<h3 class="subsection" id="s:mm_msg_passing_again"><a class="section-anchor" href="#s:mm_msg_passing_again" aria-hidden="true">﻿</a><span class="number">4.1</span> Message passing</h3>
-<p>Let us consider another example for reasoning with LDRF. Let us take a variant
-of the message passing example seen earlier (section <a href="#s%3Amm_msg_passing">10.3</a>).</p><div class="caml-example verbatim">
+<h3 class="subsection" id="s:mm_memory_safety"><a class="section-anchor" href="#s:mm_memory_safety" aria-hidden="true">﻿</a><span class="number">4.1</span> Memory safety</h3>
+<p>The OCaml memory model guarantees that even for programs with data races,
+memory safety is preserved. While programs with data races may observe
+non-sequentially consistent behaviours, they will not crash. Let us look at an
+example of how to utilise LDRF to argue about memory safety in the presence of
+data races. Let us take a variant of the message passing example seen earlier
+(section <a href="#s%3Amm_msg_passing">10.3</a>).</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
@@ -455,7 +461,7 @@ of the message passing example seen earlier (section <a href="#s%3Amm_msg_passin
 It is easy to see that there is a data race on <span class="machine"><span class="font-tt">r</span></span>. For the value <span class="machine"><span class="font-tt">Some "Hello, world!"</span></span>, OCaml allocates two objects – one for the string and the
 other for the <span class="machine"><span class="font-tt">Some</span></span> constructor. Both of these objects are first allocated
 uninitialised and then initialised with initialising writes. Are we guaranteed
-that when <span class="machine"><span class="font-tt">d2</span></span> sees the <span class="machine"><span class="font-tt">Some</span></span> variant when reading <span class="machine"><span class="font-tt">r</span></span>, the objects have been
+that, when <span class="machine"><span class="font-tt">d2</span></span> sees the <span class="machine"><span class="font-tt">Some</span></span> variant when reading <span class="machine"><span class="font-tt">r</span></span>, the objects have been
 fully initialised?</p><p>The answer is yes, and we can use LDRF to reason about this. Let us refactor the
 program to make the newly allocated objects explicit.</p><div class="caml-example verbatim">
 
@@ -474,15 +480,16 @@ program to make the newly allocated objects explicit.</p><div class="caml-exampl
   | None -&gt; ()
   | Some s -&gt; print_endline s</div></div>
 
-</div><p>LDRF allows us to reason about the program behaviour for a subset of memory
-locations. Let us ignore <span class="machine"><span class="font-tt">r</span></span> and only consider <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>. The objects <span class="machine"><span class="font-tt">s</span></span> and
-<span class="machine"><span class="font-tt">o</span></span> have initialising writes in <span class="machine"><span class="font-tt">d1</span></span> and reads in <span class="machine"><span class="font-tt">d2</span></span>. The happens-before
-definition (section <a href="#s%3Ahappens_before">10.2.2</a>) says that the initial write to a
-location precedes any other actions on that location. Hence, there is a
-happens-before relationship between the initial writes to <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> in <span class="machine"><span class="font-tt">d1</span></span>
-and the reads in <span class="machine"><span class="font-tt">d2</span></span>. Hence, there is no data race on <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>, and the
-program fragment that uses <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> will have sequentially consistent
-behaviour.</p><p>Since <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> are newly allocated in <span class="machine"><span class="font-tt">d1</span></span>, the only schedule where <span class="machine"><span class="font-tt">d2</span></span>
+</div><p>Observe that if <span class="machine"><span class="font-tt">d2</span></span> does not witness the initialising writes on <span class="machine"><span class="font-tt">s</span></span> or <span class="machine"><span class="font-tt">o</span></span>,
+the program may crash. LDRF allows us to reason about the program behaviour for
+a subset of memory locations. Let us ignore <span class="machine"><span class="font-tt">r</span></span> and only consider <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>.
+The objects <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> have initialising writes in <span class="machine"><span class="font-tt">d1</span></span> and reads in <span class="machine"><span class="font-tt">d2</span></span>. The
+happens-before definition (section <a href="#s%3Ahappens_before">10.2.2</a>) says that the
+initial write to a location precedes any other actions on that location. Hence,
+there is a happens-before relationship between the initial writes to <span class="machine"><span class="font-tt">s</span></span> and
+<span class="machine"><span class="font-tt">o</span></span> in <span class="machine"><span class="font-tt">d1</span></span> and the reads in <span class="machine"><span class="font-tt">d2</span></span>. Hence, there is no data race on <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>,
+and the program fragment that uses <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> will have sequentially
+consistent behaviour.</p><p>Since <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> are newly allocated in <span class="machine"><span class="font-tt">d1</span></span>, the only schedule where <span class="machine"><span class="font-tt">d2</span></span>
 will read those objects is the one in which <span class="machine"><span class="font-tt">d1</span></span> executes before <span class="machine"><span class="font-tt">d2</span></span>. Thanks
 to LDRF-SC, we can use sequential reasoning, which guarantees that <span class="machine"><span class="font-tt">d2</span></span> will
 always see the initialising writes from <span class="machine"><span class="font-tt">d1</span></span>.</p>
