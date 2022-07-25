@@ -8,6 +8,7 @@ permalink: teaching.html
 
 ## IIT Madras
 
+* Monsoon 2022: [CS3300 Compiler Design]({{ site.url }}/cs3300_m22)
 * Spring 2021: [CS6225 Programs and Proofs]({{ site.url }}/cs6225_s21_iitm)
   + [YouTube playlist of the lectures](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb)
 * Monsoon 2020: [CS3100 Paradigms of Programming]({{ site.url }}/cs3100_m20)  
