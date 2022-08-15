@@ -27,9 +27,12 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### 2022
 
+  *  <div id="ocaml22"/> Deepali Ande, KC Sivaramakrishnan  
+     [Composing Schedulers using Effect Handlers](papers/compose_ocaml22.pdf)  
+     *OCaml workshop, 2022*  
   *  <div id="papoc22"/> Vimala Soundarapandian, Adharsh Kamath, Kartik Nagar, KC Sivaramakrishnan    
      [Certified Mergeable Replicated Datatypes](papers/certified_mrdt.pdf)   
-     *International Conference on Programming Language Design and Implementation (PLDI), 2022 (conditionally accepted)*   
+     *International Conference on Programming Language Design and Implementation (PLDI), 2022*
   *  <div id="papoc22"/> Vimala Soundarapandian, Adharsh Kamath, Kartik Nagar, KC Sivaramakrishnan    
      [Marrying Replicated and Functional Data Structures](papers/papoc22.pdf)   
      *9th Workshop on Principles and Practice of Consistency for Distributed Data (PaPoC), 2022*   
