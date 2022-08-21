@@ -47,10 +47,10 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[Apr 22\]** Running the Principles and Practice of Consistency for Distributed Data workshop (PaPoC 2022) on [April 5th, 2022](https://papoc-workshop.github.io/2022/).
- * **\[Mar 22\]** YouTube playlists for ["CS6225: Programs and Proofs"](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb) and ["CS3100: Paradigms of Programming"](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkE-NTs87s7QjwYwqeihb-D) are now available.
- * **\[Mar 22\]** ["Certified Mergeable Replicated Data Types"](https://arxiv.org/abs/2203.14518) ~conditionally~ accepted to PLDI 2022.  
- * **\[Mar 22\]** Segfault Systems and OCaml Labs [join Tarides](https://tarides.com/blog/2022-03-01-segfault-systems-joins-tarides).  
+ * **\[Sep 22\]** Invited to deliver a [keynote at ICFP 2022](https://icfp22.sigplan.org/details/icfp-2022-papers/48/Keynote-3).
+ * **\[Sep 22\]** Deepali Ande will present [Composing Schedulers using Effect Handlers](papers/compose_ocaml22.pdf) at the OCaml Workshop 2022. 
+ * **\[Aug 22\]** Teaching [Compiler Construction](https://kcsrk.info/cs3300_m22/) in the Monsoon semester.
+ * **\[Aug 22\]** Serving on the PLDI 2023 PC.
 
 # Activities
 
