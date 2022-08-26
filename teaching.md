@@ -15,3 +15,7 @@ permalink: teaching.html
   + [YouTube playlist of the lectures](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkE-NTs87s7QjwYwqeihb-D)
 * Spring 2020: [CS6225 Programs and Proofs]({{ site.url }}/cs6225_s20_iitm)
 * Monsoon 2019: [CS3100 Paradigms of Programming]({{ site.url }}/cs3100_f19)
+  + The materials developed for this course were used by others to teach the
+    following courses:
+    - [IITM CS3100 Monsoon 2021](https://www.cse.iitm.ac.in/~jayalal/teaching/reference.php?courseid=64)
+    - [Rutgers CS314 Principles of Programming Languages](https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-314-principles-of-programming-languages)
