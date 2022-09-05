@@ -47,7 +47,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[Sep 22\]** Invited to deliver a [keynote at ICFP 2022](https://icfp22.sigplan.org/details/icfp-2022-papers/48/Keynote-3).
+ * **\[Sep 22\]** Invited to deliver a [keynote at ICFP 2022](https://icfp22.sigplan.org/details/icfp-2022-papers/48/Keynote-3).   
+ * **\[Sep 22\]** Invited to deliver a [keynote at OCaml workshop 2022](https://icfp22.sigplan.org/details/ocaml-2022-papers/16/Keynote-OCaml-5-0).   
  * **\[Sep 22\]** Deepali Ande will present [Composing Schedulers using Effect Handlers](papers/compose_ocaml22.pdf) at the OCaml Workshop 2022. 
  * **\[Aug 22\]** Teaching [Compiler Construction](https://kcsrk.info/cs3300_m22/) in the Monsoon semester.
  * **\[Aug 22\]** Serving on the PLDI 2023 PC.
