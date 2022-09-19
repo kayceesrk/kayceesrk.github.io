@@ -106,7 +106,7 @@ computes the nth Fibonacci number twice in parallel.</p><div class="caml-example
 
 
 <div class="pre caml-input"><span class="ocamlcomment">(* fib_twice.ml *)</span>
-<span class="ocamlkeyword">let</span> n = <span class="ocamlkeyword">try</span> int_of_string Sys.argv.(1) <span class="ocamlkeyword">with</span> _ -&gt; 1
+<span class="ocamlkeyword">let</span> n = int_of_string Sys.argv.(1)
 
 <span class="ocamlkeyword">let</span> <span class="ocamlkeyword">rec</span> fib n = <span class="ocamlkeyword">if</span> n &lt; 2 <span class="ocamlkeyword">then</span> 1 <span class="ocamlkeyword">else</span> fib (n - 1) + fib (n - 2)
 
@@ -124,7 +124,7 @@ computes the nth Fibonacci number twice in parallel.</p><div class="caml-example
 <span class="machine"><span class="font-tt">spawn</span></span> function returns a <span class="machine"><span class="font-tt">Domain.t</span></span> value which can be joined to get the
 result of the parallel computation. The <span class="machine"><span class="font-tt">join</span></span> function blocks until the
 computation runs to completion.</p><pre>$ ocamlopt -o fib_twice.exe fib_twice.ml
-$ ./fib_twice.exe
+$ ./fib_twice.exe 42
 fib(42) = 433494437
 fib(42) = 433494437
 $ hyperfine './fib_twice.exe 42'
@@ -187,8 +187,8 @@ awaiting their results. On top of this mechanism, domainslib provides parallel
 iterators. At its core, domainslib has an efficient implementation of
 work-stealing queue in order to efficiently share tasks with other domains. A
 parallel implementation of the Fibonacci program is given below.</p><pre>(* fib_par2.ml *)
-let num_domains = try int_of_string Sys.argv.(1) with _ -&gt; 1
-let n = try int_of_string Sys.argv.(2) with _ -&gt; 1
+let num_domains = int_of_string Sys.argv.(1)
+let n = int_of_string Sys.argv.(2)
 
 let rec fib n = if n &lt; 2 then 1 else fib (n - 1) + fib (n - 2)
 
@@ -378,11 +378,10 @@ Summary
     1.55 ± 0.03 times faster than './spectralnorm_par.exe 2 4096'
     2.85 ± 0.05 times faster than './spectralnorm.exe 4096'
 </pre><p>
-On the author’s machine, the program scales well up to 4 domains but performs
-worse with 8 domains. This is due to the fact that unlike the parallel
-Fibonacci program, this program performs floating-point computations. At 8
-domains, the hyper-threaded siblings contend for the shared floating-point
-units on a core leading to worse behaviour than at 4 domains.</p>
+On the author’s machine, the program scales reasonably well up to 4 domains but
+performs worse with 8 domains. Recall that the machine only has 4 physical
+cores. Debugging and fixing this performance issue is beyond the scope of this
+tutorial.</p>
 <h2 class="section" id="s:par_gc"><a class="section-anchor" href="#s:par_gc" aria-hidden="true">﻿</a><span class="number">3</span> Parallel garbage collection</h2>
 <p>An important aspect of the scalability of parallel OCaml programs is the
 scalability of the garbage collector (GC). The OCaml GC is designed to have
@@ -406,7 +405,7 @@ a look at the ICFP 2020 paper on
 <p>Modern processors and compilers aggressively optimise programs. These
 optimisations accelerate without otherwise affecting sequential programs, but
 cause surprising behaviours to be visible in parallel programs. To benefit from
-these optimisations, OCaml adopts a <span class="font-it">weak memory model</span> that precisely
+these optimisations, OCaml adopts a <span class="font-it">relaxed memory model</span> that precisely
 specifies which of these <em>relaxed behaviours</em> programs may observe. While
 these models are difficult to program against directly, the OCaml memory model
 provides recipes that retain the simplicity of sequential reasoning.</p><p>Firstly, immutable values may be freely shared between multiple domains and may
@@ -565,8 +564,8 @@ and an atomic counter in parallel.</p><div class="caml-example verbatim">
 <span class="ocamlkeyword">let</span> twice_in_parallel f =
   <span class="ocamlkeyword">let</span> d1 = Domain.spawn f <span class="ocamlkeyword">in</span>
   <span class="ocamlkeyword">let</span> d2 = Domain.spawn f <span class="ocamlkeyword">in</span>
-  ignore @@ Domain.join d1;
-  ignore @@ Domain.join d2
+  Domain.join d1;
+  Domain.join d2
 
 <span class="ocamlkeyword">let</span> plain_ref n =
   <span class="ocamlkeyword">let</span> r = <span class="ocamlkeyword">ref</span> 0 <span class="ocamlkeyword">in</span>

@@ -5,6 +5,12 @@ permalink: talks.html
 ---
 
 # Talks
+ * **OCaml 5.0**   
+   OCaml Workshop Keynote, Sep 2022  
+   [\[slides (pdf)\]](slides/ocaml22_keynote.pdf) [\[slides (key)\]](slides/ocaml22_keynote.key)      
+ * **Retrofitting Concurrency -- lessons from the engine room**  
+   ICFP Keynote, Sep 2022  
+   [\[slides (pdf)\]](slides/icfp22_keynote.pdf) [\[slides (key)\]](slides/icfp22_keynote.key)    
  * **Certified Mergeable Replicated Data Types**   
    PLDI, Jun 2022    
    [\[slides (pdf)\]](slides/certified_mrdts_pldi.pdf) [\[slides (key)\]](slides/certified_mrdts_pldi.key)    

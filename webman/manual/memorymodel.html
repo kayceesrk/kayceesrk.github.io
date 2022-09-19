@@ -33,7 +33,7 @@ hardware memory models, please have a look at the PLDI 2018 paper on
 <a href="https://doi.org/10.1145/3192366.3192421">Bounding Data Races in Space and
 Time</a>. The memory model presented in this chapter is an extension of the one
 presented in the PLDI 2018 paper. This chapter also covers some pragmatic
-aspects of the memory model that is not covered in the paper.</p>
+aspects of the memory model that are not covered in the paper.</p>
 <h2 class="section" id="s:why_relaxed_memory"><a class="section-anchor" href="#s:why_relaxed_memory" aria-hidden="true"></a><span class="number">1</span> Why weakly consistent memory?</h2>
 <p>The simplest memory model that we could give to our programs is sequential
 consistency. Under sequential consistency, the values observed by the program
@@ -173,7 +173,7 @@ program:</p><div class="caml-example verbatim">
   <span class="ocamlkeyword">assert</span> (not (r1 = 0 &amp;&amp; r2 = 0))</div></div>
 
 </div><p>Under sequential consistency, we would never expect the assertion to fail.
-However, even on x86, which offers much stronger guarantees than the ARM, the
+However, even on x86, which offers much stronger guarantees than ARM, the
 writes performed at a CPU core are not immediately published to all of the
 other cores. Since <span class="machine"><span class="font-tt">a</span></span> and <span class="machine"><span class="font-tt">b</span></span> are different memory locations, the reads of <span class="machine"><span class="font-tt">a</span></span>
 and <span class="machine"><span class="font-tt">b</span></span> may both witness the initial values, leading to the assertion failure.</p><p>This behaviour can be explained if a load is allowed to be reordered before a
@@ -219,13 +219,11 @@ inter-domain actions.</p><p>A totally ordered list of actions executed by the ab
 <em>execution trace</em>. There might be several possible execution traces for a
 given program due to non-determinism.</p><p>For a given execution trace, we define an irreflexive, transitive
 <em>happens-before relation</em> that captures the causality between actions in
-the OCaml program. The happens-before relation is defined as follows:</p><ul class="itemize"><li class="li-itemize">
+the OCaml program. The happens-before relation is defined as the smallest
+transitive relation satisfying the following properties:</p><ul class="itemize"><li class="li-itemize">
 We define the order in which a domain executes its actions as the
 <em>program order</em>. If an action <span class="machine"><span class="font-tt">x</span></span> precedes another action <span class="machine"><span class="font-tt">y</span></span> in
 program order, then <span class="machine"><span class="font-tt">x</span></span> precedes <span class="machine"><span class="font-tt">y</span></span> in happens-before order.
-	</li><li class="li-itemize">If <span class="machine"><span class="font-tt">x</span></span> is an initialising write to a memory location (atomic or
-		otherwise) and <span class="machine"><span class="font-tt">y</span></span> is any other read or write to that memory location, then
-		<span class="machine"><span class="font-tt">x</span></span> precedes <span class="machine"><span class="font-tt">y</span></span> in happens-before order.
 </li><li class="li-itemize">If <span class="machine"><span class="font-tt">x</span></span> is a write to an atomic location and <span class="machine"><span class="font-tt">y</span></span> is a subsequent read or
 write to that memory location in the execution trace, then <span class="machine"><span class="font-tt">x</span></span> precedes <span class="machine"><span class="font-tt">y</span></span>
 in happens-before order. For atomic locations, <span class="machine"><span class="font-tt">compare_and_set</span></span>,
@@ -241,7 +239,8 @@ happens-before order.
 </li></ul>
 <h3 class="subsection" id="s:datarace"><a class="section-anchor" href="#s:datarace" aria-hidden="true">﻿</a><span class="number">2.3</span> Data race</h3>
 <p>In a given trace, two actions are said to be <em>conflicting</em> if they access
-the same non-atomic location, and at least one is a write.</p><p>We say that a program has a <em>data race</em> if there exists some execution
+the same non-atomic location, at least one is a write and neither is an
+initialising write to that location.</p><p>We say that a program has a <em>data race</em> if there exists some execution
 trace of the program with two conflicting actions and there does not exist a
 happens-before relationship between the conflicting accesses. A program without
 data races is said to be <em>correctly synchronised</em>.</p>
@@ -257,7 +256,16 @@ free is made, they do not need to worry about reorderings in their code.</p>
 <h2 class="section" id="s:drf_reasoning"><a class="section-anchor" href="#s:drf_reasoning" aria-hidden="true">﻿</a><span class="number">3</span> Reasoning with DRF-SC</h2>
 <p>In this section, we will look at examples of using DRF-SC for program
 reasoning. In this section, we will use the functions with names <span class="machine"><span class="font-tt">dN</span></span> to
-represent domains executing in parallel with other domains.</p><p>Here is a simple example with a data race:</p><div class="caml-example verbatim">
+represent domains executing in parallel with other domains. That is, we assume
+that there is a <span class="machine"><span class="font-tt">main</span></span> function that runs the <span class="machine"><span class="font-tt">dN</span></span> functions in parallel as
+follows:</p><pre>let main () =
+  let h1 = Domain.spawn d1 in
+  let h2 = Domain.spawn d2 in
+  ...
+  ignore @@ Domain.join h1;
+  ignore @@ Domain.join h2
+</pre><p>
+Here is a simple example with a data race:</p><div class="caml-example verbatim">
 
 <div class="ocaml">
 
@@ -365,8 +373,8 @@ Atomic.set flag true (* b *)
 In this trace, <span class="machine"><span class="font-tt">d</span></span> and <span class="machine"><span class="font-tt">a</span></span> are conflicting operations. But there is no
 happens-before relationship between them. Hence, this program has a data race.</p>
 <h2 class="section" id="s:local_drf"><a class="section-anchor" href="#s:local_drf" aria-hidden="true">﻿</a><span class="number">4</span> Local data race freedom</h2>
-<p>The OCaml memory model offers strong guarantees even for programs with data races.
-It offers what is known as <em>local data race freedom sequential
+<p>The OCaml memory model offers strong guarantees even for programs with data
+races. It offers what is known as <em>local data race freedom sequential
 consistency (LDRF-SC)</em> guarantee. A formal definition of this property is beyond
 the scope of this manual chapter. Interested readers are encouraged to read the
 PLDI 2018 paper on <a href="https://doi.org/10.1145/3192366.3192421">Bounding Data
@@ -383,16 +391,17 @@ amenable to sequential reasoning.</p><p>Consider the following snippet:</p><div 
   <span class="ocamlkeyword">let</span> c = <span class="ocamlkeyword">ref</span> 0 <span class="ocamlkeyword">in</span>
   c := 42;
   <span class="ocamlkeyword">let</span> a = !c <span class="ocamlkeyword">in</span>
-  a</div></div>
+  (a, c)</div></div>
 
 </div><p>Observe that <span class="machine"><span class="font-tt">c</span></span> is a newly allocated reference. Can the read of <span class="machine"><span class="font-tt">c</span></span> return a
-value which is not 42? Surprisingly, in the C++ and Java memory models, the
-answer is yes. With the C++ memory model, if the program has a data race, even
-in unrelated parts, then the semantics is undefined. If this snippet were
-linked with a library that had a data race, then, under the C++ memory model,
-the read may return any value. Since data races on unrelated locations can
-affect program behaviour, we say that C++ memory model is not bound in space.</p><p>Unlike C++, Java memory model is bound in space. But Java memory model is not
-bound in time; data races in the future will affect the past behaviour. For
+value which is not 42? That is, can <span class="machine"><span class="font-tt">a</span></span> ever be not <span class="machine"><span class="font-tt">42</span></span>? Surprisingly, in the
+C++ and Java memory models, the answer is yes. With the C++ memory model, if
+the program has a data race, even in unrelated parts, then the semantics is
+undefined. If this snippet were linked with a library that had a data race,
+then, under the C++ memory model, the read may return any value. Since data
+races on unrelated locations can affect program behaviour, we say that C++
+memory model is not bounded in space.</p><p>Unlike C++, Java memory model is bounded in space. But Java memory model is not
+bounded in time; data races in the future will affect the past behaviour. For
 example, consider the translation of this example to Java. We assume a prior
 definition of <span class="machine"><span class="font-tt">Class c {int x;}</span></span> and a shared <em>non-volatile</em> variable <span class="machine"><span class="font-tt">C g</span></span>. Now the snippet may be part of a larger program with parallel threads:</p><pre>(* Thread 1 *)
 C c = new C();
@@ -414,10 +423,14 @@ and hence, <span class="machine"><span class="font-tt">c.x</span></span> returns
 
 <div class="pre caml-input"><span class="ocamlkeyword">let</span> g = <span class="ocamlkeyword">ref</span> None
 
-<span class="ocamlkeyword">let</span> d1 () =
+<span class="ocamlkeyword">let</span> snippet () =
   <span class="ocamlkeyword">let</span> c = <span class="ocamlkeyword">ref</span> 0 <span class="ocamlkeyword">in</span>
   c := 42;
   <span class="ocamlkeyword">let</span> a = !c <span class="ocamlkeyword">in</span>
+  (a, c)
+
+<span class="ocamlkeyword">let</span> d1 () =
+  <span class="ocamlkeyword">let</span> (a,c) = snippet () <span class="ocamlkeyword">in</span>
   g := Some c;
   a
 
@@ -427,86 +440,36 @@ and hence, <span class="machine"><span class="font-tt">c.x</span></span> returns
   | Some c -&gt; c := 7</div></div>
 
 </div><p>Observe that there is a data race on both <span class="machine"><span class="font-tt">g</span></span> and <span class="machine"><span class="font-tt">c</span></span>. Consider only the first
-three instructions in <span class="machine"><span class="font-tt">d1</span></span>:</p><pre>let c = ref 0 in
+three instructions in <span class="machine"><span class="font-tt">snippet</span></span>:</p><pre>let c = ref 0 in
 c := 42;
 let a = !c in
 ...
 </pre><p>
-The OCaml memory model is bound both in space and time. The only memory location
-here is <span class="machine"><span class="font-tt">c</span></span>. Reasoning only about this snippet, there is neither the data race
-in space (the race on <span class="machine"><span class="font-tt">g</span></span>) nor in time (the future race on <span class="machine"><span class="font-tt">c</span></span>). Hence, the
-snippet will have sequentially consistent behaviour, and the value returned by
-<span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p>
-<h3 class="subsection" id="s:mm_memory_safety"><a class="section-anchor" href="#s:mm_memory_safety" aria-hidden="true">﻿</a><span class="number">4.1</span> Memory safety</h3>
-<p>The OCaml memory model guarantees that even for programs with data races,
+The OCaml memory model is bounded both in space and time. The only memory
+location here is <span class="machine"><span class="font-tt">c</span></span>. Reasoning only about this snippet, there is neither the
+data race in space (the race on <span class="machine"><span class="font-tt">g</span></span>) nor in time (the future race on <span class="machine"><span class="font-tt">c</span></span>).
+Hence, the snippet will have sequentially consistent behaviour, and the value
+returned by <span class="machine"><span class="font-tt">!c</span></span> will be <span class="machine"><span class="font-tt">42</span></span>.</p><p>The OCaml memory model guarantees that even for programs with data races,
 memory safety is preserved. While programs with data races may observe
-non-sequentially consistent behaviours, they will not crash. Let us look at an
-example of how to utilise LDRF to argue about memory safety in the presence of
-data races. Let us take a variant of the message passing example seen earlier
-(section <a href="#s%3Amm_msg_passing">10.3</a>).</p><div class="caml-example verbatim">
-
-<div class="ocaml">
-
-
-
-<div class="pre caml-input"><span class="ocamlkeyword">let</span> r = <span class="ocamlkeyword">ref</span> None
-<span class="ocamlkeyword">let</span> d1 () =
-  r := Some <span class="ocamlstring">"Hello, world!"</span>
-<span class="ocamlkeyword">let</span> d2 () =
-  <span class="ocamlkeyword">match</span> !r <span class="ocamlkeyword">with</span>
-  | None -&gt; ()
-  | Some s -&gt; print_endline s</div></div>
-
-</div><p>The program uses a non-atomic reference <span class="machine"><span class="font-tt">r</span></span> to share a message between domains.
-It is easy to see that there is a data race on <span class="machine"><span class="font-tt">r</span></span>. For the value <span class="machine"><span class="font-tt">Some "Hello, world!"</span></span>, OCaml allocates two objects – one for the string and the
-other for the <span class="machine"><span class="font-tt">Some</span></span> constructor. Both of these objects are first allocated
-uninitialised and then initialised with initialising writes. Are we guaranteed
-that, when <span class="machine"><span class="font-tt">d2</span></span> sees the <span class="machine"><span class="font-tt">Some</span></span> variant when reading <span class="machine"><span class="font-tt">r</span></span>, the objects have been
-fully initialised?</p><p>The answer is yes, and we can use LDRF to reason about this. Let us refactor the
-program to make the newly allocated objects explicit.</p><div class="caml-example verbatim">
-
-<div class="ocaml">
-
-
-
-<div class="pre caml-input"><span class="ocamlkeyword">let</span> r = <span class="ocamlkeyword">ref</span> None
-<span class="ocamlkeyword">let</span> d1 () =
-  <span class="ocamlkeyword">let</span> s = <span class="ocamlstring">"Hello, world!"</span> <span class="ocamlkeyword">in</span>
-  <span class="ocamlkeyword">let</span> o = Some s <span class="ocamlkeyword">in</span>
-  r := o
-<span class="ocamlkeyword">let</span> d2 () =
-  <span class="ocamlkeyword">let</span> o = !r <span class="ocamlkeyword">in</span>
-  <span class="ocamlkeyword">match</span> o <span class="ocamlkeyword">with</span>
-  | None -&gt; ()
-  | Some s -&gt; print_endline s</div></div>
-
-</div><p>Observe that if <span class="machine"><span class="font-tt">d2</span></span> does not witness the initialising writes on <span class="machine"><span class="font-tt">s</span></span> or <span class="machine"><span class="font-tt">o</span></span>,
-the program may crash. LDRF allows us to reason about the program behaviour for
-a subset of memory locations. Let us ignore <span class="machine"><span class="font-tt">r</span></span> and only consider <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>.
-The objects <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> have initialising writes in <span class="machine"><span class="font-tt">d1</span></span> and reads in <span class="machine"><span class="font-tt">d2</span></span>. The
-happens-before definition (section <a href="#s%3Ahappens_before">10.2.2</a>) says that the
-initial write to a location precedes any other actions on that location. Hence,
-there is a happens-before relationship between the initial writes to <span class="machine"><span class="font-tt">s</span></span> and
-<span class="machine"><span class="font-tt">o</span></span> in <span class="machine"><span class="font-tt">d1</span></span> and the reads in <span class="machine"><span class="font-tt">d2</span></span>. Hence, there is no data race on <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span>,
-and the program fragment that uses <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> will have sequentially
-consistent behaviour.</p><p>Since <span class="machine"><span class="font-tt">s</span></span> and <span class="machine"><span class="font-tt">o</span></span> are newly allocated in <span class="machine"><span class="font-tt">d1</span></span>, the only schedule where <span class="machine"><span class="font-tt">d2</span></span>
-will read those objects is the one in which <span class="machine"><span class="font-tt">d1</span></span> executes before <span class="machine"><span class="font-tt">d2</span></span>. Thanks
-to LDRF-SC, we can use sequential reasoning, which guarantees that <span class="machine"><span class="font-tt">d2</span></span> will
-always see the initialising writes from <span class="machine"><span class="font-tt">d1</span></span>.</p>
+non-sequentially consistent behaviours, they will not crash.</p>
 <h2 class="section" id="s:mm_semantics"><a class="section-anchor" href="#s:mm_semantics" aria-hidden="true">﻿</a><span class="number">5</span> An operational view of the memory model</h2>
-<p>In this section, we describe the semantics of the OCaml memory model. Given an
-OCaml program, which may possibly contain data races, the semantics tells you
-the values that may be observed by the read of a memory location. For
-simplicity, we restrict the intra-thread actions to just the accesses to atomic
-and non-atomic locations, ignoring domain spawn and join operations, and the
-operations on mutexes.</p><p>We describe the semantics of the OCaml memory model in a straightforward
+<p>In this section, we describe the semantics of the OCaml memory model. A formal
+definition of the operational view of the memory model is presented in section
+3 of the PLDI 2018 paper on
+<a href="https://doi.org/10.1145/3192366.3192421">Bounding Data Races in Space and
+Time</a>. This section presents an informal description of the memory model with
+the help of an example.</p><p>Given an OCaml program, which may possibly contain data races, the operational
+semantics tells you the values that may be observed by the read of a memory
+location. For simplicity, we restrict the intra-thread actions to just the
+accesses to atomic and non-atomic locations, ignoring domain spawn and join
+operations, and the operations on mutexes.</p><p>We describe the semantics of the OCaml memory model in a straightforward
 small-step operational manner. That is, the semantics is described by an
 abstract machine that executes one action at a time, arbitrarily picking one of
 the available domains at each step. This is similar to the abstract machine
 that we had used to describe the happens-before relationship in
 section ‍<a href="#s%3Ahappens_before">10.2.2</a>.</p>
 <h3 class="subsection" id="ss:mm_non_atomic"><a class="section-anchor" href="#ss:mm_non_atomic" aria-hidden="true">﻿</a><span class="number">5.1</span> Non-atomic locations</h3>
-<p>In the semantics, we model non-atomic locations as a finite map from timestamps
+<p>In the semantics, we model non-atomic locations as finite maps from timestamps
 <span class="machine"><span class="font-tt">t</span></span> to values <span class="machine"><span class="font-tt">v</span></span>. We take timestamps to be rational numbers. The timestamps
 are totally ordered but dense; there is a timestamp between any two others.</p><p>For example,</p><pre>a: [t1 -&gt; 1; t2 -&gt; 2]
 b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
@@ -521,7 +484,7 @@ history that has a single entry at timestamp 0 that maps to the initial value.</
 <p>Each domain is equipped with a <em>frontier</em>, which is a map from non-atomic
 locations to timestamps. Intuitively, each domain’s frontier records, for each
 non-atomic location, the latest write known to the thread. More recent writes
-may have occurred, but are not guaranteed to be visible.</p><p>For example,</p><pre>d1: [a -&gt; t1; b -&gt; t3; c -&gt; t6]
+may have occurred, but are not guaranteed to be visible.</p><p>For example,</p><pre>d1: [a -&gt; t1; b -&gt; t3; c -&gt; t7]
 d2: [a -&gt; t1; b -&gt; t4; c -&gt; t7]
 </pre><p>
 represents two domains <span class="machine"><span class="font-tt">d1</span></span> and <span class="machine"><span class="font-tt">d2</span></span> and their frontiers.</p>
@@ -530,7 +493,8 @@ represents two domains <span class="machine"><span class="font-tt">d1</span></sp
 <span class="machine"><span class="font-tt">d1</span></span> performs the read of <span class="machine"><span class="font-tt">b</span></span>. For non-atomic reads, the domains may read an
 arbitrary element of the history for that location, as long as it is not older
 than the timestamp in the domains’s frontier. In this case, since <span class="machine"><span class="font-tt">d1</span></span> frontier
-at <span class="machine"><span class="font-tt">b</span></span> is at <span class="machine"><span class="font-tt">t3</span></span>, the read may return the value <span class="machine"><span class="font-tt">3</span></span>, <span class="machine"><span class="font-tt">4</span></span> or <span class="machine"><span class="font-tt">5</span></span>.</p><p>Suppose domain <span class="machine"><span class="font-tt">d2</span></span> writes the value <span class="machine"><span class="font-tt">10</span></span> to <span class="machine"><span class="font-tt">c</span></span> (<span class="machine"><span class="font-tt">c := 10</span></span>). We pick a new
+at <span class="machine"><span class="font-tt">b</span></span> is at <span class="machine"><span class="font-tt">t3</span></span>, the read may return the value <span class="machine"><span class="font-tt">3</span></span>, <span class="machine"><span class="font-tt">4</span></span> or <span class="machine"><span class="font-tt">5</span></span>. A non-atomic
+read does not change the frontier of the current domain.</p><p>Suppose domain <span class="machine"><span class="font-tt">d2</span></span> writes the value <span class="machine"><span class="font-tt">10</span></span> to <span class="machine"><span class="font-tt">c</span></span> (<span class="machine"><span class="font-tt">c := 10</span></span>). We pick a new
 timestamp <span class="machine"><span class="font-tt">t9</span></span> for this write such that it is later than <span class="machine"><span class="font-tt">d2</span></span>’s frontier at
 <span class="machine"><span class="font-tt">c</span></span>. Note a subtlety here: this new timestamp might not be later than everything
 else in the history, but merely later than any other write known to the writing
@@ -544,7 +508,7 @@ b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
 c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7] (* new write at t9 *)
 
 (* Domains *)
-d1: [a -&gt; t1; b -&gt; t3; c -&gt; t6]
+d1: [a -&gt; t1; b -&gt; t3; c -&gt; t7]
 d2: [a -&gt; t1; b -&gt; t4; c -&gt; t9] (* frontier updated at c *)
 </pre>
 <h3 class="subsection" id="ss:mm_at_access"><a class="section-anchor" href="#ss:mm_at_access" aria-hidden="true">﻿</a><span class="number">5.4</span> Atomic accesses</h3>
@@ -569,7 +533,7 @@ b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
 c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7]
 
 (* Domains *)
-d1: [a -&gt; t1; b -&gt; t3; c -&gt; t6]
+d1: [a -&gt; t1; b -&gt; t3; c -&gt; t7]
 d2: [a -&gt; t1; b -&gt; t4; c -&gt; t9]
 
 (* Atomic locations *)
@@ -582,7 +546,7 @@ b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
 c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7]
 
 (* Domains *)
-d1: [a -&gt; t2; b -&gt; t4; c -&gt; t6] (* frontier updated at a and b *)
+d1: [a -&gt; t2; b -&gt; t4; c -&gt; t7] (* frontier updated at a and b *)
 d2: [a -&gt; t1; b -&gt; t4; c -&gt; t9]
 
 (* Atomic locations *)
@@ -598,7 +562,7 @@ b: [t3 -&gt; 3; t4 -&gt; 4; t5 -&gt; 5]
 c: [t6 -&gt; 5; t7 -&gt; 6; t9 -&gt; 10; t8 -&gt; 7]
 
 (* Domains *)
-d1: [a -&gt; t2; b -&gt; t4; c -&gt; t6]
+d1: [a -&gt; t2; b -&gt; t4; c -&gt; t7]
 d2: [a -&gt; t1; b -&gt; t5; c -&gt; t9] (* frontier updated at b *)
 
 (* Atomic locations *)
@@ -661,20 +625,20 @@ b: [t1 -&gt; 0; t3 -&gt; 1] (* new write at t3 *)
 d1: [a -&gt; t2; b -&gt; t1]
 d2: [a -&gt; t0; b -&gt; t3] (* frontier updated at b *)
 </pre><p>
-Now, for the third action <span class="machine"><span class="font-tt">!b</span></span> by <span class="machine"><span class="font-tt">d1</span></span>, observe that the <span class="machine"><span class="font-tt">d1</span></span>’s frontier at <span class="machine"><span class="font-tt">b</span></span>
+Now, for the third action <span class="machine"><span class="font-tt">!b</span></span> by <span class="machine"><span class="font-tt">d1</span></span>, observe that <span class="machine"><span class="font-tt">d1</span></span>’s frontier at <span class="machine"><span class="font-tt">b</span></span>
 is at <span class="machine"><span class="font-tt">t1</span></span>. Hence, the read may return either <span class="machine"><span class="font-tt">0</span></span> or <span class="machine"><span class="font-tt">1</span></span>. Let us assume that it
-returns <span class="machine"><span class="font-tt">0</span></span>. The machine state is not updated by the non-atomic read.</p><p>Similarly, for the forth action <span class="machine"><span class="font-tt">!a</span></span> by <span class="machine"><span class="font-tt">d2</span></span>, <span class="machine"><span class="font-tt">d2</span></span>’s frontier at <span class="machine"><span class="font-tt">a</span></span> is at
+returns <span class="machine"><span class="font-tt">0</span></span>. The machine state is not updated by the non-atomic read.</p><p>Similarly, for the fourth action <span class="machine"><span class="font-tt">!a</span></span> by <span class="machine"><span class="font-tt">d2</span></span>, <span class="machine"><span class="font-tt">d2</span></span>’s frontier at <span class="machine"><span class="font-tt">a</span></span> is at
 <span class="machine"><span class="font-tt">t0</span></span>. Hence, this read may also return either <span class="machine"><span class="font-tt">0</span></span> or <span class="machine"><span class="font-tt">1</span></span>. Let us assume that it
 returns <span class="machine"><span class="font-tt">0</span></span>. Hence, the assertion in the original program, <span class="machine"><span class="font-tt">assert (not (r1 = 0 &amp;&amp; r2 = 0))</span></span>, will fail for this particular execution.</p>
 <h2 class="section" id="s:mm_tearing"><a class="section-anchor" href="#s:mm_tearing" aria-hidden="true">﻿</a><span class="number">6</span> Non-compliant operations</h2>
 <p>There are certain operations which are not memory model compliant.</p><ul class="itemize"><li class="li-itemize">
 <span class="machine"><span class="font-tt">Array.blit</span></span> function on float arrays may cause <em>tearing</em>. When an
 unsynchronized blit operation runs concurrently with some overlapping write
-to the fields of the some float array, the field may end up with bits from
+to the fields of the same float array, the field may end up with bits from
 either of the writes.
-</li><li class="li-itemize">With flat-float arrays on 32-bit architectures, getting or setting a
-field involves two separate memory accesses. In the presence of data races,
-the user may observe tearing.
+</li><li class="li-itemize">With flat-float arrays or records with only float fields on 32-bit
+architectures, getting or setting a field involves two separate memory
+accesses. In the presence of data races, the user may observe tearing.
 </li><li class="li-itemize">The <span class="machine"><span class="font-tt">Bytes</span></span> module ‍<a href="../api/Bytes.html"><span class="font-tt">Bytes</span></a> permits mixed-mode accesses
 where reads and writes may be of different sizes. Unsynchronized mixed-mode
 accesses lead to tearing.
