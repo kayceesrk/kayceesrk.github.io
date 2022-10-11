@@ -14,6 +14,7 @@ I have had the pleasure of working with wonderful students over the years.
 * Vimala S (2020-) (co-supervised with [Kartik Nagar](https://kartiknagar.github.io/))
   + [Prime Minister's Research Fellow](https://pmrf.in/)
 * Sai Venkata Krishnan (2021-) (co-supervised with [Chester Rebeiro](https://www.cse.iitm.ac.in/~chester/))
+  + [Prime Minister's Research Fellow](https://pmrf.in/)
 
 ## MS Students
 
@@ -29,13 +30,12 @@ I have had the pleasure of working with wonderful students over the years.
 
 ## Interns
 
-* Aadharsh Kamath (NITK; 2021)
-
 # Past 
 
-* Shashank Shekhar Dubey, MS, IITM (2019-2021)
+* Aadharsh Kamath (NITK; 2021-2022). Next: [Research Fellow @ Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/).
+* Shashank Shekhar Dubey, MS, IITM (2019-2021).
 * Sumit Padhiyar, MS, IITM (2019-2021).
-* Arnhav Datar, UGRC, IITM (2021).
+* Arnhav Datar, UGRC, IITM (2021). Next: [MSCS @ CMU](https://www.cs.cmu.edu/).
 * Shakti Kannan, RSDE, IITM (2020-2021). Next: [Segfault Systems](https://segfault.systems).
 * Shubham Kumar, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
 * Sudha Parimala, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
