@@ -20,19 +20,20 @@ I have had the pleasure of working with wonderful students over the years.
 
 * Deepali Ande (2020-)
 
-## MTech Students
-
-**_I'm looking for MTech students with good programming and systems background_**
-
 ## BTech
 
-* Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021)
+* Sooraj Srinivasan, UGRC, IITM (2023).
+* Mantra Trambadia, UGRC, IITM (2023).
+* Narasimha YSS, UGRC, IITM (2023).
 
 ## Interns
 
+* Dipesh Kafle (NITT; 2022-). 
+ 
 # Past 
 
 * Aadharsh Kamath (NITK; 2021-2022). Next: [Research Fellow @ Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/).
+* Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021)
 * Shashank Shekhar Dubey, MS, IITM (2019-2021).
 * Sumit Padhiyar, MS, IITM (2019-2021).
 * Arnhav Datar, UGRC, IITM (2021). Next: [MSCS @ CMU](https://www.cs.cmu.edu/).
