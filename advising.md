@@ -33,9 +33,9 @@ I have had the pleasure of working with wonderful students over the years.
 # Past 
 
 * Aadharsh Kamath (NITK; 2021-2022). Next: [Research Fellow @ Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/).
-* Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021)
-* Shashank Shekhar Dubey, MS, IITM (2019-2021).
-* Sumit Padhiyar, MS, IITM (2019-2021).
+* Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021). Next: Rubrick. 
+* Shashank Shekhar Dubey, MS, IITM (2019-2021). [thesis](papers/shashank_ms_thesis.pdf).
+* Sumit Padhiyar, MS, IITM (2019-2021). [thesis](papers/sumit_ms_thesis.pdf).
 * Arnhav Datar, UGRC, IITM (2021). Next: [MSCS @ CMU](https://www.cs.cmu.edu/).
 * Shakti Kannan, RSDE, IITM (2020-2021). Next: [Segfault Systems](https://segfault.systems).
 * Shubham Kumar, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
