@@ -4,10 +4,11 @@ title: About
 ---
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 180px; float:
-right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> 
-I am the Chief Technology Officer at [Tarides](https://tarides.com/) and an
-Adjunct Professor in the Computer Science and Engineering department at Indian
-Institute of Technology, Madras. I am interested in building robust, secure and
+right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am
+the Chief Technology Officer at [Tarides](https://tarides.com/) and an Adjunct
+Professor in the [Computer Science and Engineering
+department](http://cse.iitm.ac.in/) at [Indian Institute of Technology,
+Madras](https://www.iitm.ac.in/). I am interested in building robust, secure and
 scalable systems using programming language technology. 
 
 I led the development of [Multicore
