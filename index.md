@@ -14,8 +14,8 @@ scalable systems using programming language technology.
 I led the development of [Multicore
 OCaml](https://github.com/ocamllabs/ocaml-multicore), a concurrent and parallel
 extension of the OCaml programming language. Multicore OCaml is now
-[merged](https://github.com/ocaml/ocaml/pull/10831) into OCaml, and will be
-available for general use in OCaml 5.0.
+[merged](https://github.com/ocaml/ocaml/pull/10831) into OCaml, and is available
+for general use in OCaml 5.0.
 
 I've co-founded several companies 
 
