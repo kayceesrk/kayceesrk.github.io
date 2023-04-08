@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Programming and Proving Distributed Systems with Persistent Data Structures**   
+   Seminar at Collège de France  
+   [\[slides (pdf)\]](slides/mrdt_cdf23.pdf) [\[slides (key)\]](slides/mrdt_cdf23.key)      
  * **OCaml 5.0**   
    OCaml Workshop Keynote, Sep 2022  
    [\[slides (pdf)\]](slides/ocaml22_keynote.pdf) [\[slides (key)\]](slides/ocaml22_keynote.key)      
