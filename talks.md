@@ -5,7 +5,7 @@ permalink: talks.html
 ---
 
 # Talks
- * **Programming and Proving Distributed Systems with Persistent Data Structures**   
+ * **Mergeable Replicated Data Types**   
    Seminar at Collège de France, Apr 2023  
    [\[slides (pdf)\]](slides/mrdt_cdf23.pdf) [\[slides (key)\]](slides/mrdt_cdf23.key) [\[video (youtube)\]](https://www.college-de-france.fr/agenda/seminaire/structures-de-donnees-persistantes/mergeable-replicated-data-types)      
  * **OCaml 5.0**   
@@ -13,13 +13,13 @@ permalink: talks.html
    [\[slides (pdf)\]](slides/ocaml22_keynote.pdf) [\[slides (key)\]](slides/ocaml22_keynote.key)      
  * **Retrofitting Concurrency -- lessons from the engine room**  
    ICFP Keynote, Sep 2022  
-   [\[slides (pdf)\]](slides/icfp22_keynote.pdf) [\[slides (key)\]](slides/icfp22_keynote.key) [\[video (youtube)\]](https://www.youtube.com/watch?v=zJ4G0TKwzVc&list=PLyrlk8Xaylp4ee6ZAtFD9XMD2EZ02K9xK&index=38)    
+   [\[slides (pdf)\]](slides/icfp22_keynote.pdf) [\[slides (key)\]](slides/icfp22_keynote.key) [\[video (youtube)\]](https://www.youtube.com/watch?v=zJ4G0TKwzVc)  
  * **Certified Mergeable Replicated Data Types**   
    PLDI, Jun 2022    
-   [\[slides (pdf)\]](slides/certified_mrdts_pldi.pdf) [\[slides (key)\]](slides/certified_mrdts_pldi.key)    
+   [\[slides (pdf)\]](slides/certified_mrdts_pldi.pdf) [\[slides (key)\]](slides/certified_mrdts_pldi.key) [\[video (youtube)\]](https://www.youtube.com/watch?v=3aEgGc96jB0)   
  * **Certified Mergeable Replicated Data Types**  
    Nomadic Labs Research Seminars, Apr 2022  
-   [\[slides (pdf)\]](slides/certified_mrdts_nl.pdf) [\[slides (key)\]](slides/certified_mrdts_nl.key)          
+   [\[slides (pdf)\]](slides/certified_mrdts_nl.pdf) [\[slides (key)\]](slides/certified_mrdts_nl.key) [\[video (youtube)\]](https://www.youtube.com/watch?v=P9L8oFXXw-k)  
  * **Retrofitting Parallelism onto OCaml**  
    Marigold Tech Talk, Dec 2021   
  * **Future of OCaml : Effect Handlers in OCaml 5.00**   
