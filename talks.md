@@ -6,14 +6,14 @@ permalink: talks.html
 
 # Talks
  * **Programming and Proving Distributed Systems with Persistent Data Structures**   
-   Seminar at Collège de France  
-   [\[slides (pdf)\]](slides/mrdt_cdf23.pdf) [\[slides (key)\]](slides/mrdt_cdf23.key)      
+   Seminar at Collège de France, Apr 2023  
+   [\[slides (pdf)\]](slides/mrdt_cdf23.pdf) [\[slides (key)\]](slides/mrdt_cdf23.key) [\[video (youtube)\]](https://www.college-de-france.fr/agenda/seminaire/structures-de-donnees-persistantes/mergeable-replicated-data-types)      
  * **OCaml 5.0**   
    OCaml Workshop Keynote, Sep 2022  
    [\[slides (pdf)\]](slides/ocaml22_keynote.pdf) [\[slides (key)\]](slides/ocaml22_keynote.key)      
  * **Retrofitting Concurrency -- lessons from the engine room**  
    ICFP Keynote, Sep 2022  
-   [\[slides (pdf)\]](slides/icfp22_keynote.pdf) [\[slides (key)\]](slides/icfp22_keynote.key)    
+   [\[slides (pdf)\]](slides/icfp22_keynote.pdf) [\[slides (key)\]](slides/icfp22_keynote.key) [\[video (youtube)\]](https://www.youtube.com/watch?v=zJ4G0TKwzVc&list=PLyrlk8Xaylp4ee6ZAtFD9XMD2EZ02K9xK&index=38)    
  * **Certified Mergeable Replicated Data Types**   
    PLDI, Jun 2022    
    [\[slides (pdf)\]](slides/certified_mrdts_pldi.pdf) [\[slides (key)\]](slides/certified_mrdts_pldi.key)    
