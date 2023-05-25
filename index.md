@@ -66,6 +66,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **PC Chair** -- PaPoC'22, ML'19
 * **AEC Chair** -- ESOP'22
 * **PC member**
+  + 2024: POPL'24
   + 2023: PLDI'23
   + 2022: OCaml'22, ML'22, PEPM'22, PLDI'22
   + 2021: GPCE'21, TyDe'21, PaPoC'21, PADL'21
@@ -75,7 +76,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
   + 2016: OCaml'16
   + 2013: Splash-MARC symposium '13.
 * **Expert Reviewer**
-  + 2023: POPL'23
+  + 2023: POPL'23, PPoPP'23
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 
