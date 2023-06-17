@@ -66,7 +66,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **PC Chair** -- PaPoC'22, ML'19
 * **AEC Chair** -- ESOP'22
 * **PC member**
-  + 2024: POPL'24
+  + 2024: TFP'24, POPL'24
   + 2023: PLDI'23
   + 2022: OCaml'22, ML'22, PEPM'22, PLDI'22
   + 2021: GPCE'21, TyDe'21, PaPoC'21, PADL'21
