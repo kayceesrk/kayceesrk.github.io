@@ -51,6 +51,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Jul 23\]** Serving on [TFP 24](https://trendsfp.github.io/) PC. 
+ * **\[Jul 23\]** Serving on [POPL 24](https://popl24.sigplan.org/) PC. 
  * **\[Jun 23\]** Award: I am deeply honoured to receive the [2023 ACM SIGPLAN Programming Languages Software Award](https://twitter.com/kc_srk/status/1670849062684467202) for the development of OCaml along with other compiler developers.
 
 # Activities
