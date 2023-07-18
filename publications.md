@@ -29,6 +29,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
   *  <div id="draft0723"/> Deepali Ande, Sudha Parimala, KC Sivaramakrishnan  
      [Effectively Composing Concurrency Libraries](papers/composable_concurrency.pdf)  
+     *July 2023*  
 
 ### 2022
 
