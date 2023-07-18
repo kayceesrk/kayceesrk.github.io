@@ -25,6 +25,11 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   
 ## Publications  
 
+### Working drafts
+
+  *  <div id="draft0723"/> Deepali Ande, Sudha Parimala, KC Sivaramakrishnan  
+     [Effectively Composing Concurrency Libraries](papers/composable_concurrency.pdf)  
+
 ### 2022
 
   *  <div id="ocaml22"/> Deepali Ande, KC Sivaramakrishnan  
