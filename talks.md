@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Effective Composition of Concurrency Libraries**   
+   [EHOP Seminar](https://effect-handlers.org/events/ehop-workshop2023.html), Jul 2023  
+   [\[slides (pdf)\]](slides/compconc_jul23.pdf) [\[slides (key)\]](slides/compconc_jul23.key)  
  * **Mergeable Replicated Data Types**   
    Seminar at Collège de France, Apr 2023  
    [\[slides (pdf)\]](slides/mrdt_cdf23.pdf) [\[slides (key)\]](slides/mrdt_cdf23.key) [\[video (youtube)\]](https://www.college-de-france.fr/agenda/seminaire/structures-de-donnees-persistantes/mergeable-replicated-data-types)      
