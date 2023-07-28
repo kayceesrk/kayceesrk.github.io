@@ -18,13 +18,9 @@ I have had the pleasure of working with wonderful students over the years.
 
 ## MS Students
 
-* Deepali Ande (2020-)
+## MTech
 
 ## BTech
-
-* Sooraj Srinivasan, UGRC, IITM (2023).
-* Mantra Trambadia, UGRC, IITM (2023).
-* Narasimha YSS, UGRC, IITM (2023).
 
 ## Interns
 
@@ -32,6 +28,10 @@ I have had the pleasure of working with wonderful students over the years.
  
 # Past 
 
+* Sooraj Srinivasan, UGRC, IITM (2023).
+* Mantra Trambadia, UGRC, IITM (2023).
+* Narasimha YSS, UGRC, IITM (2023).
+* Deepali Ande, MS, IITM (2020-2023). Next: Goldman Sachs.
 * Aadharsh Kamath (NITK; 2021-2022). Next: [Research Fellow @ Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/).
 * Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021). Next: Rubrick. 
 * Shashank Shekhar Dubey, MS, IITM (2019-2021). [thesis](papers/shashank_ms_thesis.pdf).
