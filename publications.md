@@ -31,6 +31,18 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
      [Effectively Composing Concurrency Libraries](papers/composable_concurrency.pdf)  
      *July 2023*  
 
+### 2023
+
+  *  <div id="oopsla23"/> Luna Phipps-Costin, Andreas Rossberg, Arjun Guha, Daan Leijen, Daniel Hillerström, KC Sivaramakrishnan, Sam Lindley  
+     [Continuing WebAssembly with Effect Handlers](papers/wasmfx_oopsla23.pdf)  
+     *Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2023*    
+  *  <div id="ocaml23a"/> Thomas Leonard, Patrick Ferris, Christiano Haesbaert, Lucas Pluvinage, Vesa Karvonen, Sudha Parimala, KC Sivaramakrishnan, Vincent Balat, Anil Madhavapeddy  
+     [Eio 1.0 – Effects-based IO for OCaml 5](papers/eio_ocaml23a.pdf)  
+     *OCaml Workshop 2023*    
+  *  <div id="ocaml23b"/> Vesa Karvonen, Bartosz Modelski, Carine Morel, Thomas Leonard, KC Sivaramakrishnan, YSS Narasimha Naidu, Sudha Parimala  
+     [Building a lock-free STM for OCaml](papers/kcas_ocaml23b.pdf)  
+     *OCaml Workshop 2023*    
+
 ### 2022
 
   *  <div id="ocaml22"/> Deepali Ande, KC Sivaramakrishnan  
