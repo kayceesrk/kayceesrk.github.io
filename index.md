@@ -5,7 +5,7 @@ title: About
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 180px; float:
 right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am
-the Chief Technology Officer at [Tarides](https://tarides.com/) and an Adjunct
+the Chief Technology Officer of [Tarides](https://tarides.com/) and an Adjunct
 Professor in the [Computer Science and Engineering
 department](http://cse.iitm.ac.in/) at [Indian Institute of Technology,
 Madras](https://www.iitm.ac.in/). I am interested in building robust, secure and
@@ -25,11 +25,10 @@ I've co-founded several companies
 
 <p/>
 to build systems that are _functional_, and functional programming in
-[OCaml](https://ocaml.org/) turns out to be a fine choice for this. I serve as
-an advisor to Tarides.
+[OCaml](https://ocaml.org/) turns out to be a fine choice for this.
 
 I was an Assistant Professor in the Computer Science and Engineering department
-at Indian Institute of Technology, Madras.  Prior to that, I was a Senior
+at Indian Institute of Technology, Madras. Prior to that, I was a Senior
 Research Associate under the [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the [University
 of Cambridge](http://www.cam.ac.uk/) [Computer Lab](http://www.cl.cam.ac.uk/),
