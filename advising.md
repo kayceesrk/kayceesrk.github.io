@@ -18,35 +18,48 @@ I have had the pleasure of working with wonderful students over the years.
 
 ## MS Students
 
+### Alumni
+
+* Deepali Ande, MS, IITM (2020-2023). Next: Goldman Sachs.
+* Sumit Padhiyar, MS, IITM (2019-2021). [thesis](papers/sumit_ms_thesis.pdf).
+* Shashank Shekhar Dubey, MS, IITM (2019-2021). [thesis](papers/shashank_ms_thesis.pdf).
+
 ## MTech
+
+### Alumni
+
+* Atul Dhiman, MTech, IITM (2019-2020). Next: Oracle India.
 
 ## BTech
 
-## Interns
-
-* Dipesh Kafle (NITT; 2022-). 
- 
-# Past 
+### Alumni
 
 * Sooraj Srinivasan, UGRC, IITM (2023).
 * Mantra Trambadia, UGRC, IITM (2023).
 * Narasimha YSS, UGRC, IITM (2023).
-* Deepali Ande, MS, IITM (2020-2023). Next: Goldman Sachs.
-* Aadharsh Kamath (NITK; 2021-2022). Next: [Research Fellow @ Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/).
 * Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021). Next: Rubrick. 
-* Shashank Shekhar Dubey, MS, IITM (2019-2021). [thesis](papers/shashank_ms_thesis.pdf).
-* Sumit Padhiyar, MS, IITM (2019-2021). [thesis](papers/sumit_ms_thesis.pdf).
 * Arnhav Datar, UGRC, IITM (2021). Next: [MSCS @ CMU](https://www.cs.cmu.edu/).
+
+## Interns
+ 
+### Alumni
+
+* Dipesh Kafle (NITT; 2022-2023). 
+* Adharsh Kamath (NITK; 2021-2022). Next: [Research Fellow @ Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/).
+* Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020). Next: continuing at Stanford.
+* Anmol Sahoo, RSDE, IITM (2019-2020). Next: PhD student at Purdue University.
+* Anirudh Sunder Raj (IITM), Intern at OCaml Labs (Summer 2020). Next: continuing at IITM.
+* Pratap Singh (Harvard University), Intern at IITM (Summer 2019). Next: continuing at Harvard.
+
+## Research Software Development Engineers (RSDEs)
+
+### Alumni
+
 * Shakti Kannan, RSDE, IITM (2020-2021). Next: [Segfault Systems](https://segfault.systems).
 * Shubham Kumar, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
 * Sudha Parimala, RSDE, IITM (2019-2021). Next: [Segfault Systems](https://segfault.systems).
 * Sai Venkata Krishnan, RSDE, IITM (2019-2021). Next: PhD student at IITM.
 * Shubhendra Singhal, RSDE, IITM (2020-2021). Next: MS student at U Penn. 
-* Shagun Goel (Stanford University), Intern at OCaml Labs (Summer 2020). Next: continuing at Stanford.
-* Atul Dhiman, MTech, IITM (2019-2020). Next: Oracle India.
-* Anmol Sahoo, RSDE, IITM (2019-2020). Next: PhD student at Purdue University.
-* Anirudh Sunder Raj (IITM), Intern at OCaml Labs (Summer 2020). Next: continuing at IITM.
-* Pratap Singh (Harvard University), Intern at IITM (Summer 2019). Next: continuing at Harvard.
 
 ## At University of Cambridge
 
