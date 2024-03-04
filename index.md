@@ -79,8 +79,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Contact
 
- * Email : kc@kcsrk.info, kcsrk@cse.iitm.ac.in
- * IRL : SSB 401, Department of Computer Science and Engineering, IIT Madras, Chennai, India
+ * Email : kcsrk@cse.iitm.ac.in (used for academic work), kc@tarides.com, kc@kcsrk.info
+ * IRL : <a href="https://maps.app.goo.gl/jZhP9rRnTLQbctPi9"> Tarides, Chennai </a>
  * Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a>
  * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
  * BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
