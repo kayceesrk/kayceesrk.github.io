@@ -76,4 +76,15 @@ I have had the pleasure of working with wonderful students over the years.
 * Theo Laurent, Intern, ENS Paris
 * Guillain Potron, Intern, ENS de Lyon
 
+# Advice
+
+It is a pity that advising cannot but include advice. There is very good advice
+from the [Programming Language Mentoring
+Workshops](https://www.sigplan.org/Conferences/PLMW/). Many of the talks are
+available online on YouTube. Here are the ones that I found to be quite useful:
+
+* Derek Dreyer's series of talks on writing papers and giving talks:
+  + [How to write papers and give talks that people can follow](https://people.mpi-sws.org/~dreyer/talks/talk-plmw22icfp.pdf)
+  + [How To Write Papers So People Can Read Them](https://www.youtube.com/watch?v=XpgJ31GKPWI)
+
 <br/>
