@@ -27,9 +27,9 @@ I've co-founded several companies
 to build systems that are _functional_, and functional programming in
 [OCaml](https://ocaml.org/) turns out to be a fine choice for this.
 
-I was an Assistant Professor in the Computer Science and Engineering department
-at Indian Institute of Technology, Madras. Prior to that, I was a Senior
-Research Associate under the [OCaml
+Until 2022, I was an Assistant Professor in the Computer Science and Engineering
+department at Indian Institute of Technology, Madras. Prior to that, I was a
+Senior Research Associate under the [OCaml
 Labs](http://www.cl.cam.ac.uk/projects/ocamllabs/) initiative at the [University
 of Cambridge](http://www.cam.ac.uk/) [Computer Lab](http://www.cl.cam.ac.uk/),
 an [1851 Research Fellow](http://www.royalcommission1851.org/awards/) and a
@@ -50,14 +50,13 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[Jul 23\]** Serving on [TFP 24](https://trendsfp.github.io/) PC. 
- * **\[Jul 23\]** Serving on [POPL 24](https://popl24.sigplan.org/) PC. 
- * **\[Jun 23\]** Award: I am deeply honoured to receive the [2023 ACM SIGPLAN Programming Languages Software Award](https://twitter.com/kc_srk/status/1670849062684467202) for the development of OCaml along with other compiler developers.
+ * **\[Apr 24\]** Serving on [OOPSLA 24](https://2024.splashcon.org/track/splash-2024-oopsla) PC. 
 
 # Activities
 
 * **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
 * **Organizer** 
+  + [First OCaml Retreat at Auroville](https://ocamlretreat.org/)
   + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172)
   + Shonan meeting on "Programming Language support for Data-intensive Systems"
 * **PC Chair** -- PaPoC'22, ML'19
