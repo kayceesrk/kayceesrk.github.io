@@ -50,15 +50,16 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
+ * **\[Apr 24\]** Attending WG2.8 meeting at Utrecht.
  * **\[Apr 24\]** Serving on [OOPSLA 24](https://2024.splashcon.org/track/splash-2024-oopsla) PC. 
 
 # Activities
 
 * **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
 * **Organizer** 
-  + [First OCaml Retreat at Auroville](https://ocamlretreat.org/)
-  + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172)
-  + Shonan meeting on "Programming Language support for Data-intensive Systems"
+  + [First OCaml Retreat at Auroville](https://ocamlretreat.org/), 2024
+  + [Shonan meeting on "Programming Language support for Data-intensive Systems"](https://shonan.nii.ac.jp/seminars/143/), 2019
+  + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172), 2018
 * **PC Chair** -- PaPoC'22, ML'19
 * **AEC Chair** -- ESOP'22
 * **PC member**
@@ -75,6 +76,11 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
   + 2023: POPL'23, PPoPP'23
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
+* **Invited meetings**
+  + WG 2.8, Utrecht, 2024
+  + [Dagstuhl meeting on "Foundation of WebAssembly"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/23101), 2023
+  + [Dagstuhl meeting on "Scalable handling of effects"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/21292), 2021
+  + [Dagstuhl meeting on "From Theory to Practice of Algebraic Effects and Handlers"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/16112), 2016
 
 # Contact
 
