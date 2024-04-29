@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Securing Functional Programs with Hardware Support**  
+   [WG 2.8 2024](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), Apr 2024  
+   [\[slides (pdf)\]](slides/fides_wg28.pdf) [\[slides (key)\]](slides/fides_wg28.key)  
  * **Effective Composition of Concurrency Libraries**   
    [EHOP Seminar](https://effect-handlers.org/events/ehop-workshop2023.html), Jul 2023  
    [\[slides (pdf)\]](slides/compconc_jul23.pdf) [\[slides (key)\]](slides/compconc_jul23.key)  
