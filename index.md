@@ -78,7 +78,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 * **Invited meetings**
-  + WG 2.8, Utrecht, 2024
+  + Observer, WG 2.1, Canberra, 2024
+  + [Guest, WG 2.8, Utrecht](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), 2024
   + [Dagstuhl meeting on "Foundation of WebAssembly"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/23101), 2023
   + [Dagstuhl meeting on "Scalable handling of effects"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/21292), 2021
   + [Dagstuhl meeting on "From Theory to Practice of Algebraic Effects and Handlers"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/16112), 2016
