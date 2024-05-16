@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Concurrent Programming with Effect Handlers**  
+   Invited Lecture, Chalmers University of Technology, 2024  
+   [\[slides (pdf)\]]() [\[slides (key)\]]()  
  * **Securing Functional Programs with Hardware Support**  
    [WG 2.8 2024](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), Apr 2024  
    [\[slides (pdf)\]](slides/fides_wg28.pdf) [\[slides (key)\]](slides/fides_wg28.key)  
