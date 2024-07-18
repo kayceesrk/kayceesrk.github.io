@@ -15,7 +15,10 @@ I led the development of [Multicore
 OCaml](https://github.com/ocamllabs/ocaml-multicore), a concurrent and parallel
 extension of the OCaml programming language. Multicore OCaml is now
 [merged](https://github.com/ocaml/ocaml/pull/10831) into OCaml, and is available
-for general use in OCaml 5.0.
+for general use in OCaml 5.0. Effect handlers introduced as part of the
+concurrency story of Multicore OCaml has had influence on the design of [React
+Hooks](https://legacy.reactjs.org/docs/hooks-faq.html#what-is-the-prior-art-for-hooks)
+and [WebAssembly stack switching](https://dl.acm.org/doi/pdf/10.1145/3622814).
 
 I've co-founded several companies 
 
