@@ -7,18 +7,18 @@ excerpt_separator: <!--more-->
 ---
 
 Off-CPU analysis is where the program behavior when it is not running is
-recorded and analysed. See Brendan Gregg's eBPF based off-CPU analysis:
-https://www.brendangregg.com/offcpuanalysis.html. While on-CPU performance
-monitoring tools such as `perf` give you an idea of where the program is
-_actively_ spending its time, they won't tell you where the program is spending
-time _blocked_ waiting for an action. Off-CPU analysis reveals information about
-where the program is spending time _passively_. 
+recorded and analysed. See [Brendan Gregg's eBPF based off-CPU
+analysis](https://www.brendangregg.com/offcpuanalysis.html). While on-CPU
+performance monitoring tools such as `perf` give you an idea of where the
+program is _actively_ spending its time, they won't tell you where the program
+is spending time _blocked_ waiting for an action. Off-CPU analysis reveals
+information about where the program is spending time _passively_. 
 
 <!--more-->
 
 ## Installation
 
-Install the tools from https://github.com/iovisor/bcc/.
+Install the tools from [https://github.com/iovisor/bcc/](https://github.com/iovisor/bcc/).
 
 ## Enabling frame pointers
 
@@ -93,4 +93,4 @@ using `offcputime-bpfcc` and `olly trace`. Something is off.
 
 ## Other links
 
-* https://www.pingcap.com/blog/how-to-trace-linux-system-calls-in-production-with-minimal-impact-on-performance/
+* [https://www.pingcap.com/blog/how-to-trace-linux-system-calls-in-production-with-minimal-impact-on-performance/](https://www.pingcap.com/blog/how-to-trace-linux-system-calls-in-production-with-minimal-impact-on-performance/)
