@@ -58,6 +58,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Activities
 
+* **Associate Editor:** OOPSLA 2025.
 * **Streeing committee member**: ICFP, Member at Large, serving 9/2023 -- 9/2027
 * **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
 * **Organizer** 

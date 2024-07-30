@@ -164,18 +164,17 @@
 
 \begin{tikzpicture}[remember picture,overlay]
   \hypersetup{urlcolor=zest}
-  \node [rectangle, fill=grey, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+  \node [rectangle, fill=grey, anchor=north, minimum width=\paperwidth, minimum
+         height=4cm] (box) at (current page.north){};
   \node [anchor=center] (name) at (box) {%
     \color{white}%
     \begin{tabular*}{7.5in}{@{\extracolsep{\fill}}lr}
       \\
       \textbf{\huge{Curriculum Vitae}} & \today\\*[2ex]
       \textbf{\large{KC Sivaramakrishnan}} & {\url{http://kcsrk.info}}\\[0.5ex]
-      Department of Computer Science and Engineering\\
-			Indian Institute of Technology, Madras\\
-			Chennai, India - 600036 \\
-      \href{mailto:kcsrk@iitm.ac.in}{kcsrk@iitm.ac.in}
-      & \emph{Tel}: \textrm{+91 44225 74350}\\
+      CTO, Tarides \& Adjunct Professor, CSE, IITM\\
+			Chennai, India \\
+      \href{mailto:kc@kcsrk.info}{kc@kcsrk.info} \\
     \end{tabular*}
   };
 \end{tikzpicture}
@@ -218,10 +217,14 @@
 \end{nonumregion}
 
 \begin{nonumregion} {\lbar{orange}Experience}
-  \positionnodesc{Chief Technology Officer, Tarides}{Dec 2022 -- Present}
+  \positionnodesc{Chief Technology Officer, \href{https://tarides.com}{Tarides}}{Dec 2022 -- Present}
   \positionnodesc{Adjunct Professor, Indian Institute of Technology, Madras}{Dec 2022 -- Present}
 	\positionnodesc{Assistant Professor, Indian Institute of Technology, Madras}{Jan 2019 -- Dec 2022}
-  \begin{position}{Senior Research Associate, University of Cambridge}{Nov 2017 -- Dec 2018}{Advisors: Alan Mycroft, Anil Madhavapeddy}{Cambridge, UK}
+  \begin{position}
+    {Senior Research Associate, University of Cambridge}
+    {Nov 2017 -- Dec 2018}
+    {Advisors: Alan Mycroft, Anil Madhavapeddy}
+    {Cambridge, UK}
   \end{position}
   %\begin{position}{Chief Technology Officer, OCaml Labs Consultancy Ltd.}{Aug 2016 -- present}{}{Cambridge, UK}
   %  {Focussed on building the OCaml Platform: infrastructure to build, test, document and deploy OCaml-based software.}
@@ -254,6 +257,7 @@
 
 \begin{itemregion} {\lbar{blue}Awards and Recognitions}
   \service{\href{https://www.sigplan.org/Awards/Software/}{SIGPLAN Programming Languages Software Award}, 2023.}
+  \service{OCaml core maintainer, 2021 -- present.}
 	\service{Invited keynote speaker at ICFP 2022.}
 	\service{Invited keynote speaker at OCaml Workshop 2022.}
 	\service{Distinguished paper at PADL 2021.}
@@ -285,14 +289,22 @@
 \begin{itemregion} {\lbar{blue}Academic Service}
 	\service{\textbf{Organizer}, \href{http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172}{Dagstuhl Seminar on ``Algebraic Effect Handlers go Mainstream''}, Apr 2018.}
 	\service{\textbf{Organizer}, \href{https://shonan.nii.ac.jp/seminars/143/}{Shonan Meeting No.143 on ``Programming Language Support for Data-intensive Applications''}, June 2019.}
+  \service{\textbf{Associate Editor}, OOPSLA 2025.}
 	\service{\textbf{Editor}, Special Issue of the Journal of Functional Programming (JFP) on the Theory and Practice of Algebraic Effects and Handlers, 2019.}
+  \service{\textbf{Steering Committee}: \href{https://www.icfpconference.org/structure.html}{Member-at-large, ICFP}, 2023 -- 2027.}
 	\service{\textbf{Program Committee Chair}: PaPoC 2022, ML Workshop 2019.}
-	\service{\textbf{Program Committee member}: TFP 2024, POPL 2024, PLDI 2023, ML Workshop 2022, OCaml Workshop 2022, PLDI 2022, PEPM 2022, TyDe 2021, GPCE 2021, PADL 2021, PaPoC 2021, ICFP 2020, PAPOC@EuroSys 2020, OCaml Workshop 2019, PMLDC@ECOOP 2017, Off-the-beaten track (OBT) 2017, OCaml Workshop 2016, SPLASH-MARC symposium, 2013.}
-	\service{\textbf{External Review Committee member}: ICFP 2019.}
 	\service{\textbf{Artifact Evaluation Committee Chair}: ESOP 2022.}
+  \service{\textbf{Program Committee member}: OOPSLA 2024, PaPoC 2024, PEPM
+    2024, TFP 2024, POPL 2024, PLDI 2023, ML Workshop 2022, OCaml Workshop 2022,
+    PLDI 2022, PEPM 2022, TyDe 2021, GPCE 2021, PADL 2021, PaPoC 2021, ICFP 2020,
+    PAPOC@EuroSys 2020, OCaml Workshop 2019, PMLDC@ECOOP 2017, Off-the-beaten
+    track (OBT) 2017, OCaml Workshop 2016, SPLASH-MARC symposium, 2013.}
 	\service{\textbf{Artifact Evaluation Committee member}: ICFP 2018, PLDI 2015, PPoPP/CGO 2016.} \vspace{0.5ex}
-	\service{\textbf{Expert Reviewer}: POPL 2023, JFP 2021, PLDI 2020, ESOP 2020, JPDC 2020, LICS 2019, ECOOP 2019, TODS 2019, JFP 2018, POPL 2014, ICFP 2013, ASPLOS 2013, TLDI 2013, Concurrency and Computation:
-  Practice and Experience 2013, Software: Practice and Experience 2012.}
+  \service{\textbf{Expert Reviewer}: POPL 2023, JFP 2021, PLDI 2020, ESOP 2020,
+    JPDC 2020, LICS 2019, ECOOP 2019, TODS 2019, JFP 2018, POPL 2014, ICFP 2013,
+    ASPLOS 2013, TLDI 2013, Concurrency and Computation: Practice and Experience
+    2013, Software: Practice and Experience 2012.}
+	\service{\textbf{External Review Committee member}: ICFP 2019.}
 \end{itemregion}
 
 \begin{itemregion} {\lbar{blue}Institutional Service}
@@ -321,7 +333,13 @@
 
 \end{region}
 
-\begin{region} {\lbar{purple}Journal Publications}{{J}1}{9}
+\begin{region} {\lbar{purple}Journal Publications}{{J}1}{10}
+
+	\begin{publication}{https://kcsrk.info/papers/wasmfx_oopsla23.pdf}
+    {Continuing WebAssembly with Effect Handlers}
+    {Oct 2023}{Luna Phipps-Costin, Andreas Rossberg, Arjun Guha, Daan Leijen, Daniel Hillerström, KC Sivaramakrishnan, Sam Lindley}
+		{Proceedings of the ACM on Programming Languages (PACMPL), issue OOPSLA 2023}
+	\end{publication}
 
 	\begin{publicationNote}{https://kcsrk.info/papers/retro-parallel_icfp_20.pdf}
 		{Retrofitting Parallelism onto OCaml}
@@ -475,7 +493,19 @@
 \end{region}
 
 
-\begin{region} {\lbar{purple}Workshop Publications}{{W}1}{21}
+\begin{region} {\lbar{purple}Workshop Publications}{{W}1}{23}
+
+  \begin{publication}{https://kcsrk.info/papers/eio_ocaml23a.pdf}
+		{Eio 1.0 – Effects-based IO for OCaml 5}
+    {Sep 2023}{Thomas Leonard, Patrick Ferris, Christiano Haesbaert, Lucas Pluvinage, Vesa Karvonen, Sudha Parimala, KC Sivaramakrishnan, Vincent Balat, Anil Madhavapeddy}
+		{OCaml Workshop, 2023}
+	\end{publication}
+
+  \begin{publication}{https://kcsrk.info/papers/kcas_ocaml23b.pdf}
+    {Building a lock-free STM for OCaml}
+    {Sep 2023}{Vesa Karvonen, Bartosz Modelski, Carine Morel, Thomas Leonard, KC Sivaramakrishnan, YSS Narasimha Naidu, Sudha Parimala}
+		{OCaml Workshop, 2023}
+	\end{publication}
 
 	\begin{publication}{https://kcsrk.info/papers/compose_ocaml22.pdf}
 		{Composing Schedulers using Effect Handlers}
@@ -621,12 +651,7 @@
 			\service{Programs and Proofs, IIT Madras, Spring '20, Spring '21.}
 			\service{Paradigms of Programming, IIT Madras, Monsoon '19, Monsoon '20.}
 	\end{itemize}
-  \service{Guest Lectures:}
-  \begin{itemize}
-    \service{Arrows, Advanced Functional Programming, University of Cambridge, Lent '16.}
-    \service{Debugging, Programming in C and C++, University of Cambridge, Michelmas '15.}
-  \end{itemize}
-  \service{Supervisions at University of Cambridge:}
+  \service{\href{https://en.wikipedia.org/wiki/Tutorial_system}{Supervisions} at University of Cambridge:}
   \begin{itemize}
     \service{Databases, Michelmas '18, Lent '17, Michaelmas '17, Lent '16.}
     \service{Concurrent and Distributed Systems, Lent '17, Michaelmas '17, Lent '16, Michaelmas '16, Lent '15.}
