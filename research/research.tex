@@ -1,10 +1,4 @@
-\documentclass{article}
-
-\usepackage{MinionPro}
-\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
-\usepackage{lipsum}
-\usepackage{url}
-\usepackage{hyperref}
+\documentclass[screen,acmsmall,nonacm]{acmart}
 
 \def\FormatName#1{%
 	\def\myname{KC Sivaramakrishnan}%
@@ -20,7 +14,11 @@
 \newcommand{\loud}[1]{\textbf{\textit{#1}}}
 \newcommand{\R}[1]{~\\[-2mm] \noindent \textbf{#1.~~}}
 
+\renewcommand{\shortauthors}{KC Sivaramakrishnan}
+
 \begin{document}
+
+\title{Research Statement}
 
 \noindent \Large \textsc{KC Sivaramakrishnan} \hfill \textsc{Research Statement} \normalsize
 
@@ -246,8 +244,8 @@ post-doctoral research. A symbiotic relationship with Mirage will help rapid
 adoption of Quelea, and greatly impact the way in which cloud services are
 built and deployed.
 
-\bibliographystyle{my_ieeetr}
-\small
+
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{all}
 
 \end{document}

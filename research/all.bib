@@ -964,10 +964,21 @@
 }
 
 @inproceedings{quelea,
-	author = {Sivaramakrishnan, KC and Kaki, Gowtham and Jagannathan, Suresh},
-	title = {{Declarative Programming over Eventually Consistent Data Stores}},
-	booktitle = {PLDI},
-	year={2015}
+  author = {Sivaramakrishnan, KC and Kaki, Gowtham and Jagannathan, Suresh},
+  title = {Declarative programming over eventually consistent data stores},
+  year = {2015},
+  isbn = {9781450334686},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/2737924.2737981},
+  doi = {10.1145/2737924.2737981},
+  abstract = {User-facing online services utilize geo-distributed data stores to minimize latency and tolerate partial failures, with the intention of providing a fast, always-on experience. However, geo-distribution does not come for free; application developers have to contend with weak consistency behaviors, and the lack of abstractions to composably construct high-level replicated data types, necessitating the need for complex application logic and invariably exposing inconsistencies to the user. Some commercial distributed data stores and several academic proposals provide a lattice of consistency levels, with stronger consistency guarantees incurring increased latency and throughput costs. However, correctly assigning the right consistency level for an operation requires subtle reasoning and is often an error-prone task. In this paper, we present QUELEA, a declarative programming model for eventually consistent data stores (ECDS), equipped with a contract language, capable of specifying fine-grained application - level consistency properties. A contract enforcement system analyses contracts, and automatically generates the appropriate consistency protocol for the method protected by the contract. We describe an implementation of QUELEA on top of an off-the-shelf ECDS that provides support for coordination-free transactions. Several benchmarks including two large web applications, illustrate the effectiveness of our approach.},
+  booktitle = {Proceedings of the 36th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+  pages = {413–424},
+  numpages = {12},
+  keywords = {SMT solvers, Quelea, Haskell, Eventual Consistency, Distributed Transactions, Decidable Logic, Contract Classification, Cassandra, CRDTs, Axiomatic Contracts, Availability},
+  location = {Portland, OR, USA},
+  series = {PLDI '15}
 }
 
 @article{Birman:1987:RCP:7351.7478,
