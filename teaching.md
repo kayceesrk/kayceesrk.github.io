@@ -17,6 +17,6 @@ permalink: teaching.html
 * Monsoon 2019: [CS3100 Paradigms of Programming]({{ site.url }}/cs3100_f19)
   + The materials developed for this course were used by others to teach the
     following courses:
-    - [IITM CS3100 Monsoon 2021](https://www.cse.iitm.ac.in/~jayalal/teaching/reference.php?courseid=64)
+    - Several subsequent offerings of CS3100 at IITM
     - [Rutgers CS314 Principles of Programming Languages](https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-314-principles-of-programming-languages)
     - [CU Boulder CSCI7000-11 Spring 2023 Principles of Functional Programming](https://gowthamk.github.io/csci7000_pfp_s23/)
