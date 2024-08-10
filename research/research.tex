@@ -24,226 +24,262 @@
 
 \noindent \hrulefill
 
-In recent years, there has been a widespread adoption of both multicore and
-cloud computing. Multicore processors have become the norm in mobile, desktop
-and enterprise computing, with an increasing number of cores being fitted on a
-chip with every successive generation. Cloud computing has paved the way for
-companies to rent farms of such multicore processors on a pay-per-use basis,
-with the ability to dynamically scale on demand. Indeed, many real-world
-services for communication, governance, commerce, education, entertainment,
-etc., are routinely exposed as a web-service that runs in third-party cloud
-compute platforms such as Windows Azure and Amazon's EC2. These services tend
-to be concurrently accessed by millions of users, increasingly through
-multicore-capable mobile and desktop devices.
+Over the last decade, software engineering has seen significant advancements
+and shifts driven by technological innovation and changing industry demands.
+Emerging applications such as internet-of-things, augmented reality and
+self-driving vehicles have necessitated moving computation closer to the data
+for real-time decision making, while also depending on cloud computing
+platforms for AI models used to make those decisions. In order to support these
+varied applications, the computing platforms have become heterogeneous, with a
+mix of CPUs, GPUs and FPGAs, both on the server and the client sides. The
+increasing complexity and ubiquity of software systems have also led to new
+security and privacy challenges.
 
-As a result, there are a growing proportion of developers who must tackle the
-complexity of programming for a cloud of multicore processors. In particular,
-they must ensure correct application behavior in the face of asynchrony,
-concurrency, and partial failures, all the while providing good scalability as
-well as minimizing the user's perception of latency. Reasoning about concurrent
-programs is inherently a difficult endeavor. For each new concurrent thread of
-control added to a program, there is an exponential growth in the number of
-potential schedules. This greatly increases the chance of subtle concurrency
-bugs evading the programmer during software development and testing, only to
-appear in production environments with devastating consequences. As we head
-into multicore compute platforms with 1000+ cores, the existing ad hoc
-programming models and systems are simply not equipped for safe and scalable
-concurrent programming, where the emerging concerns such as heterogeneity in
-hardware, partial failures of cores, and secure computation with third-party
-code and infrastructure warrant a holistic approach to software development.
+As software continues to eat the
+world\footnote{\url{https://a16z.com/why-software-is-eating-the-world/}}, a
+growing population of software developers are faced with the challenge of
+building correct, secure and scalable software systems that can run on a wide
+range of platforms. They must ensure correct application behaviour the in face
+of asynchrony and partial failures, ensure absence of security and privacy
+issues arising anywhere from programming errors to malicious attacks, all the
+while providing good scalability as well as minimizing the user's perception of
+latency. This remains an uphill task with current programming language
+technology. No wonder then that bugs and exploits evade the programmer during
+software development and testing, only to appear in production environments
+with devastating consequences.
 
-The goal of my current research is to improve the state of the art in
-developing correct and scalable programs for loosely coupled massively scalable
-systems through rigorous and declarative programming language abstractions.
-While I am broadly interested in concurrency and parallelism, I am particularly
-drawn to architecture-induced complexities such as absence of cache coherence
-and eventual consistency, which often lead to programs where the guarantee of
-correctness and concision take a back seat to performance. I aim to address
-several key challenges crosscutting disparate domains, such as (i) developing
-concurrent programming platforms to enable building applications that
-seamlessly scale on heterogeneous compute clouds, (ii) rigorously verifying the
-correctness of parallel and distributed software, to eliminate concurrency and
-security bugs, which are notoriously difficult to detect in large-scale
-deployments, and (iii) incorporating emerging concerns such as security and
-energy into the programming model.
+My research goal is to \loud{develop programming language abstractions and
+tools that empower developers to build secure, scalable and reliable software
+systems}. I believe that mathematically rigorous functional programming is
+particularly suited towards this goal. A distinguishing aspect of my research
+is that I spend significant effort to make these abstractions and tools
+available to practitioners and thereby bridging the gap between research and
+practice.
 
-\section*{Previous Work}
+\section{Previous work}
 
-Towards this goal, as a part of my PhD thesis, I have developed the MultiMLton
-platform, a parallel and distributed extension of MLton Standard ML compiler
-and runtime, which has been part of several successful research
-projects~\cite{mmpar, mmgc, KC_MARC12, Ziarek11, Ziarek_ICFP09, isolates,
-MMJFP}. My work on MultiMLton has been recognized by Purdue University with the
-2014 Maurice H. Halstead award for outstanding research in Software Engineering
-and a best paper award at the 2012 Many-core Architecture Research Community
-(MARC) symposium at RWTH Aachen. The goal of MultiMLton is to allow the
-programmer to declaratively develop concurrent programs, without worrying about
-the issues of architectural nuances and achieving good scalability. There are
-numerous challenges to realizing these goals, some of which I have addressed as
-a part of my PhD research.
+\subsection{Concurrency and Parallelism}
 
-\R{Programming model} The programming model of MultiMLton
-is a mostly functional language combined with lightweight threading, where
-threads primarily interact over first-class message-passing channels. On
-manycore systems, the cost of creating and managing interactive asynchronous
-computations can be substantial due to the scheduler and memory management
-overheads. My work in JFP'14~\cite{MMJFP} and DAMP'10~\cite{mmpar} describes a
-novel \emph{parasitic} threading system for short-lived interactive
-asynchronous computation. The key feature of parasitic threads is that they
-execute only when attached to a host lightweight thread, sharing the stack
-space, and hence amortizing the overheads. In MultiMLton, parasitic threads
-play a key role in the efficient realization of composable asynchronous and
-heterogeneous communication protocols~\cite{Ziarek11}.
+In my research career so far, I have developed concurrent and parallel
+programming abstractions for widely used functional programming language
+compilers including the MLton Standard ML compiler~\cite{mmpar, mmgc,
+KC_MARC12, Ziarek11, Ziarek09, MMJFP}, the Glasgow Haskell
+Compiler~\cite{CompSA} and OCaml~\cite{RetroEffects,RetroParallel}. A notable
+aspect of these works is that they are implemented in industrial-strength
+compilers, and some of them are widely used by practitioners.
 
-\R{Programming next-generation many-core processors} With ever increasing core
-count on a chip, processors are soon to hit a "coherence wall", where the
-performance and design complexity of cache coherence hardware limits multicore
-scalability. Architectures, such as Intel's 48-core Single-chip Cloud Computer
-(SCC), completely shun hardware cache coherence, and instead, provide fast
-hardware message-passing interconnect and the ability to manage coherence in
-software. Although a shared memory system, SCC is typically programmed as a
-cluster of machines on a chip, due to the lack of suitable abstractions to deal
-with absence of cache coherence. The question is whether we can program this
-\emph{cloud} of cores on a chip in the way we program shared-memory multicore
-processors. Such a system will greatly simplify developing programs for the
-massively scalable SCC processor.
+During my PhD studies, I led the MultiMLton project, a parallel extension of
+the MLton Standard ML compiler, targeted at future many core processors. In
+MultiMLton, concurrent programs are organised as a large number of cooperative
+lightweight threads, that communicate by passing messages between each other. I
+developed a novel asynchronous communication abstraction and a
+mostly-concurrent garbage collector~\cite{MMJFP} that allowed MultiMLton to
+scale to the 864-core Azul Vega3 machine. MultiMLton's multicore garbage
+collector (GC) was designed to minimise inter-core communication. The key
+innovation was to trade some of the ample concurrency in the source language to
+offset some of the GC costs~\cite{mmgc}.
 
-My ISMM'12~\cite{mmgc} work describes a novel runtime system for MultiMLton,
-which utilizes a core-local partitioned heap scheme to circumvent the absence
-of cache coherence. This runtime system not only enables shared memory
-programming of non-cache-coherent systems, but by enabling concurrent
-core-local heap collections, exhibits immense scalability benefits even on
-cache-coherent architectures such as 48-core AMD magny-cours and 864-core Azul
-Vega3 architectures. My MARC'12~\cite{KC_MARC12} work describes an extension of
-this design to exploit software support for cache coherence and hardware
-interconnect for inter-thread message passing. Across our benchmarks, we
-measured that this new runtime system design enables more than 99\% of the
-memory access to be potentially cached. This work won the \loud{Best Paper
-Award} at MARC'12.
+MultiMLton was designed not only for traditional cache-coherent multicore
+machines, but also to take advantage of exotic architectures that provided
+fine-grained control over caches. I developed a port of MultiMLton to the
+non-cache-coherent Intel Single-chip Cloud Computer (SCC), which preserved the
+familiar shared memory parallel programming model~\cite{KC_MARC12}. This work
+took advantage of MultiMLton's ability to statically distinguish mutable and
+immutable data to manage them in separate cache coherence domains. This work
+won the \loud{Best Paper Award at the Intel Many-core Architecture Community
+(MARC) Symposium} at RWTH, Aachen, Germany. My work on MultiMLton was
+recognised by Purdue University with the \loud{Maurice H Halstead award for
+outstanding research in software engineering}.
 
-\R{Migrating to the cloud} MultiMLton programming model combines the
-benefit of functional programming with synchronous message passing, and offers
-an attractive model for expressing concurrency. However, in a high-latency
-environment like the cloud, the synchrony is at odds with high latency, whereas
-switching to an explicit asynchronous programming model complicates reasoning.
-The question is whether we can express programs for high-latency environments
-\emph{synchronously}, but speculatively discharge them asynchronously, and
-ensure that the observable behavior mirrors that of the original synchronous
-program. My PADL'14~\cite{RxCML} work identified that the necessary and
-sufficient condition for divergent behavior (mis-speculation) is the presence
-of happens-before cycle in the dependence relation between communication
-actions. Utilizing this idea, I have built an optimistic concurrency control
-mechanism for concurrent ML programs, on top of MultiMLton, capable of running
-in compute clouds. Our extensive experiments on Amazon EC2 validate our thesis
-that this technique is quite useful in practice.
+After my PhD, I joined the University of Cambridge Computer Lab as an 1851
+Royal Commission and Darwin College Research Fellow, where I turned my
+attention to bring native support for concurrency and parallelism to the OCaml
+programming language as part of the Multicore OCaml project. Despite being one
+of the most popular functional programming languages, OCaml lacked support for
+native concurrency and parallelism. For concurrency, we introduced \emph{effect
+handlers} into the language~\cite{RetroEffects}. Effect handlers are a
+mechanism for programming with user-defined effects. Operationally, effect
+handlers provide a mechanism for structured programming over delimited
+continuations. Effect handlers generalise mechanisms such as exceptions,
+generators, async/await and lightweight threads, which are provided as
+primitives by other languages. With the addition of effect handlers, we are now
+able to implement these rich mechanisms as libraries with well-defined
+semantics for their interactions.
 
-Apart from my PhD research, I have the opportunity to explore the questions
-relating to concurrent programming for multicore systems during my internships
-with industrial research labs. At Microsoft Research Cambridge, I have
-developed a new concurrency substrate for Glasgow Haskell Compiler (GHC), that
-allows Haskell programmers to safely and composably describe schedulers for
-Haskell threads in Haskell on scalable multi-core architectures~\cite{CompSA}.
-At Samsung Research, I prototyped the compiler analysis and the runtime system
-for new clean-slate manycore programming language~\cite{SPARTA}. These
-experiences have provided me insights into the issues are faced by developers
-in today's parallel compute systems, and also the necessary expertise to
-realize my ideas in complex, real-world software platforms.
+For parallelism, we have rewritten major parts of the runtime system of OCaml
+to be parallelism safe, and introduced a new mostly concurrent garbage
+collector that can scale to 100s of cores~\cite{RetroParallel}. This is design
+minimises stop-the-world phase where all the cores are stopped running OCaml
+code and the garbage collector runs. This is garbage collector is particularly
+suited for latency-sensitive programs that OCaml is often used for such as
+trading systems, user interfaces, and network-facing micro-services. Programs
+running on multicore processors also exhibit non-trivial behaviours due to
+reordering by modern multi-core hardware and compiler optimisations. We have
+developed a novel \emph{relaxed memory model} for OCaml that offers local
+reasoning about program fragments unlike the global reasoning required by Java
+and C11 memory models~\cite{LDRF}. This memory model has been implemented in
+the OCaml compiler for all the supported multicore architectures including x86,
+ARM, PowerPC and RISC-V.
 
-\section*{Current Work}
+A major challenge with introducing concurrency and parallelism to a widely used
+programming language is the existence millions of lines of legacy code, most of
+which may remain sequential forever. We face the challenge of maintaining
+backwards compatibility--not just in terms of the language features but also
+the performance of single-threaded code. We have succeeded in achieving this
+goal, and Multicore OCaml project has been merged into the mainstream OCaml
+compiler and released as part of OCaml
+5\footnote{\url{https://github.com/ocaml/ocaml/pull/10831}}. This makes OCaml
+the first industrial-strength language to support effect handlers. The work on
+Multicore OCaml has been recognised with the \loud{2023 SIGPLAN Programming
+Languages Software Award} and a \loud{distinguished paper award at ICFP 2020}
+for the paper that describes the GC design~\cite{RetroParallel}. I am one of
+the core maintainers of OCaml, and continue to contribute to the development
+and maintenance of the concurrency and parallelism features.
 
-After finishing my PhD~\cite{thesis} at Purdue University, I joined University
-of Cambridge as a Research Associate under the OCaml Labs initiative where I
-continue to explore the development of concurrent and parallel functional
-programming language systems. I lead the Multicore OCaml project which aims to
-add concurrent and parallel programming support for the industrial strength
-OCaml programming language.
+Multicore OCaml has also had an enormous impact on the wider community. React,
+the most widely used JavaScript UI framework in the world introduced a major
+feature called \emph{React Hooks}, which is directly inspired from Multicore
+OCaml\footnote{\url{https://legacy.reactjs.org/docs/hooks-faq.html\#what-is-the-prior-art-for-hooks}}.
+WebAssembly (Wasm) is a type-safe, efficient language for the web, introduced
+as an alternative to JavaScript. All major browsers now support Wasm. Wasm is
+introducing effect handlers for concurrency based on the OCaml design
+(WasmFX)~\cite{WasmFX}. WasmFX brings the benefit of effect handlers to every
+language that can compile to Wasm. I continue to participate in the Wasm
+community group to advance the WasmFX proposal.
 
-A particularly distinguishing feature of this effort is that instead of baking
-the concurrency support into the compiler and exposing libraries for concurrent
-programming, we extend OCaml with support for lineaer algebraic effects and
-handlers~\cite{effects}. Algebraic effects and handlers provide a modular
-abstraction for expressing effectful computation, allowing the programmer to
-separate the expression of an effectful computation from its implementation. In
-this system, concurrency is just another effect, modularly expressed through
-algebraic effects and their handlers. This design allows the programmer to
-describe thread schedulers and concurrent data structures as OCaml libraries,
-keeping the compiler lean, while providing the flexibility of swapping in
-alternate but equivalent implementations. Given that OCaml has an excellent
-Javascript backend~\cite{js_of_ocaml}, the addition of concurrency support to
-OCaml has the potential to greatly simplify the implementation of
-highly-concurrent real-world web-services.
+\subsection{Distribution}
 
-\section*{Future Work}
+As a natural extension of concurrent and parallel programming, I am fascinated
+with the challenges with distributed programming. Unlike parallel programming,
+in loosely-coupled asynchronous distributed systems (LADS), synchronisation
+leads to unavailability, and hence, is avoided when possible. This makes
+programming LADS challenging. Unfortunately, this has led to centralisation of
+Internet services, where a few large corporations provide services to billions
+of users. The personal data owned by these large corporations is a major
+security and privacy concern. In order to build a resilient and decentralised
+Internet economy, distributed programming needs to be made easier to enable
+building \emph{local-first
+software}\footnote{\url{https://www.inkandswitch.com/local-first/}}.
 
-In my future work, I wish to build on the MultiMLton programming model to
-address the emerging and future challenges in programming manycore and
-large-scale distributed clusters. Nowadays, an increasing number of companies
-deploy their web-services on geo-distributed third-party cloud platforms such
-as Amazon EC2, Windows Azure, Heroku, Google App Engine, etc. These cloud
-platforms are becoming more heterogenous incorporating many-core
-general-purpose processors (potentially with multiple \emph{coherence domains})
-with GPGPUs and FPGAs, providing the ability to offload expensive computation
-to specialized hardware. Traditionally, developers have relied on the
-infrastructure providing strong consistency guarantees such as sequential
-consistency, linearizability and distributed transactions in order to build
-correct applications for scalable platforms. Strong consistency provides a
-semblance of a single consistent view of memory, where the operations appear to
-be performed sequentially in some linear order. Unfortunately, providing such
-strong guarantees in unviable in the face of modern multicore processors and
-geo-distributed massively scalable services.
+My research in this area has been focussed on correctly building software that
+works under weaker consistency guarantees in LADS. To alleviate the burden of
+developing correct programs, I developed Quelea~\cite{quelea}, a programming
+model that associates user program with declarative contracts for their
+consistency expectation. Quelea utilises automated theorem proving tools to
+automatically and correctly insert the necessary coordination to ensure that
+application's consistency expectations are preserved.
 
-Modern multicore processors and concurrent programming languages expose subtle
-relaxed memory behaviors that arise from hardware and compiler optimizations
-to the developer. The state of the art distributed stores also resort to weak
-consistency guarantees, where the different geo-distributed replicas eventually
-converge to a uniform state at some arbitrary point in the future. In
-particular, no assumptions can be made about the global state of the system at
-any particular time. Such weakly consistent systems make a well-known
-trade-off: developers avoid the cost associated with latency, contention and
-availability to achieve strong consistency, in exchange for weaker consistency
-guarantees about the data; the semblance of a uniform consistent view of memory
-is lost. Additionally, since the web applications run on third-party compute
-platforms, the issue of data privacy and security has also become a concern. In
-the cloud, an application typically shares resources such as disk, network and
-processor time with applications from other customers, running on the same
-server. Since critical services such as health-care and banking services are
-increasingly offered online, any vulnerability in the software in such an
-environment could lead to a potentially serious security breach. Existing
-programming models for these platforms are ill-equipped to address these
-consistency and security challenges.
+In order to reason about state changes in LADS, functional programming
+principles of immutability and persistence turn out to be particularly useful.
+Based on this observation, I have developed mergeable replicated data types
+(MRDTs)~\cite{mrdt}. MRDTs are based on the principles of distributed version
+control systems such as Git where the causal execution history is captured
+through branches and merges. A key aspect of MRDTs is that the distribution
+aspects of the data type are separated from their sequential behaviour, leading
+to simpler concurrent reasoning and efficient implementations. The immutability
+and persistence also enables verified, correct-by-construction MRDTs
+(Peepul)~\cite{peepul}. The MRDTs are implemented and verified using F*, a
+proof-oriented programming language. The verified MRDT implementations are
+extracted to OCaml and are compatible with Irmin, a Git-like distributed
+database.
 
-To address these issues, I have developed Quelea~\cite{quelea}, a rigorous
-programming model that elegantly combines shared-memory parallelism with
-datacenter-wide distribution. Quelea programming model is exposed as a
-domain-specific language for describing the semantics of replicated datatypes
-in the same vein as abstract datatypes, along with a novel contract language
-for declaratively expressing the consistency and security obligations. This
-clean separation of consistency and security properties from the datatype
-semantics permits the same program to be compiled for a variety of backends
-including multicore processors and distributed stores.
+\section{Current work}
 
-A key aim of Quelea is to remain portable and agnostic to any particular
-implementation. The developers describe what minimal consistency guarantees are
-required for the application, but not how to achieve them, which is the concern
-of individual backend implementations. The separation of consistency concerns
-and datatype semantics allows Quelea to be realized as a shim layer on top of a
-wide variety of eventually consistent data stores. The stores provide
-availability, durability and distribution guarantees, while our system simply
-upgrades the safety properties. This layered approach is geared towards
-interoperability and broad applicability, providing clearer semantics and
-stronger safety properties for existing software systems.
+Since moving to IIT Madras and then subsequently leading the technology team at
+Tarides\footnote{\url{https://tarides.com}}, I have continued the work towards
+my goal of empowering developers to develop correct, secure and scalable
+software, now with a team of research scholars, colleagues at IIT Madras and
+programming language experts and engineers at Tarides.
 
-The declarative description of safety properties in Quelea lends itself to
-rigorous formal verification of distributed software, eliminating bugs and
-vulnerabilities prior to deployment, preventing privacy and monetary losses
-associated with software bugs in the wild. I intend to build Quelea on top of
-the highly successful Mirage Unikernel, which is part XenServer and Linux
-Foundation, with millions of deployments in the cloud already. Mirage project
-is led from the Cambridge Computer Lab, where I have chosen to pursue my
-post-doctoral research. A symbiotic relationship with Mirage will help rapid
-adoption of Quelea, and greatly impact the way in which cloud services are
-built and deployed.
+\paragraph{\bf Automated verification of MRDTs.} One of the downsides of Peepul
+work on correct-by-construction MRDTs is that developer needs to write down a
+specification for each MRDT along with a simulation relation that connects the
+specification with the implementation. The verification process
+machine-assisted but is a manual one. This is tedious and error-prone. As a
+follow up to the Peepul work, we asked whether we can automate the proof of
+correctness of MRDTs. We have managed to do this by couching the correctness
+argument in \emph{linearizability}, a well-understood concurrent programming
+correctness criterion. Our definition of linearizability ensures both eventual
+consistency and full functional correctness, while also allowing a simple
+specification framework for conflict resolution in MRDTs. We have successfully
+applied our approach on a number of complex MRDT implementations.
 
+\paragraph{\bf Securing the foundations of Unikernels.} It is well-understood
+these days that memory-unsafe languages such as C and C++ lead to majority of
+security vulnerabilities in widely-used
+software\footnote{\url{https://www.cisa.gov/news-events/news/urgent-need-memory-safety-software-products}}.
+This has prompted a major push towards memory-safe languages such as Rust and
+OCaml. However, the large legacy code base in unsafe C and C++ will continue to
+remain even as new code gets written in memory-safe languages. How can we allow
+mixed safe and unsafe language codebases to be secure, especially when unsafe
+languages can violate safe language guarantees when combined together in the
+same application? To this end, we are developing FIDES, a secure extension of
+the Shakti RISC-V processor that prevents security exploits in unsafe code
+through hardware guards while permitting safe code to run as fast as possible.
+FIDES also supports inter-process compartments to enforce isolation between
+different parts of the application. The secure processor is designed to run
+MirageOS, an OCaml-based library operating system for constructing Unikernels.
+The aim is to target critical embedded system applications such as remote
+voting
+machines\footnote{\url{https://pib.gov.in/PressReleasePage.aspx?PRID=1887248}}
+and point-of-sale terminals. In general, I see enormous potential for
+open-source secure hardware such as Shakti processors to complement the
+open-source secure software such as MirageOS to help build trustworthy systems.
+
+\paragraph{\bf Mechanically verified garbage collectors.} In my experience
+building multiple concurrent garbage collectors (GC), debugging rare and
+non-deterministic failures take up significant amount of development time.
+Garbage collectors are written in memory-unsafe languages and bugs in the GCs
+can lead to security vulnerabilities in the safe language code. Can we build
+practical, correct-by-construction, mechanically verified GCs? To this end, we
+have built a correct-by-construction stop-the-world mark-and-sweep GC in the F*
+programming language and extracted that to C using the KaRaMel toolchain. The
+GC includes enough features that it can be used as a replacement for the GC in
+the OCaml programming language and does not compromise on the performance.
+
+All of the research listed above is being conducted in collaboration with IIT
+Madras colleagues and PhD students, and the corresponding papers are under
+submission.
+
+\section{Future work}
+
+In the future, I plan to continue to push towards my goal of empowering
+developers to build correct, scalable and secure software. I see a number of
+recent developments that will accelerate the push towards this goal.
+
+\paragraph{\bf Securing the foundations with OCaml Oxide.} Oxidising OCaml
+project~\cite{oxidising} brings Rust-style ownership and borrowing to OCaml. In
+particular, it brings in the ability to reason about the lifetimes of objects
+statically, which turns out to be a useful building block for a variety of
+features. I plan to use the Oxidising OCaml project bring effect safety to
+effect handlers in OCaml 5, stricter data sharing policies in FIDES
+compartments and build better concurrent data structures that can take
+advantage of static knowledge of object sharing between different threads.
+
+\paragraph{\bf Trustworthy CodeLLMs.} CodeLLMs are specialized language models
+designed and trained to understand, generate, and reason about programming
+code. A major challenge in codeLLMs is to ensure that the generated code
+satisfies the programmer's intent. This is particularly challenging as the
+intent keeps evolving as the functional requirements of the software changes.
+How can we ensure that the generated code is correct? How can we ensure that
+the generated code can be evolved? I believe that lightweight formal method
+techniques such as static type systems, property-based testing and
+example-drive development can be profitably used to capture programmer intent
+and to derive the specifications. Once we have the specifications, codeLLMs can
+themselves be used to generate the correctness proofs to be machine checked in
+a proof assistant such as F* or Coq. Today codeLLMs do quite well on
+high-resource languages such as Python and JavaScript. If the current trend in
+codeLLMs continues, programming languages will cease to be the dominant
+interface for programming. I conjecture that, at this point, mathematically
+rigorous functional programming languages will be preferred target language for
+codeLLMs as they are today the preferred target for proof assistants.
+
+The ideas from functional programming languages are becoming mainstream as they
+are incorporated into mainstream languages. I am fortunate and excited to be at
+the forefront, driving some of these changes, as we empower developers to build
+correct, secure, and scalable software.
+
+\newpage
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{all}

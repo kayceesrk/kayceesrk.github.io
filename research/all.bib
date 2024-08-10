@@ -1,9 +1,135 @@
+@inproceedings{Ziarek11,
+  author = {Ziarek, Lukasz and Sivaramakrishnan, KC and Jagannathan, Suresh},
+  title = {Composable asynchronous events},
+  year = {2011},
+  isbn = {9781450306638},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/1993498.1993572},
+  doi = {10.1145/1993498.1993572},
+  booktitle = {Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation},
+  pages = {628–639},
+  numpages = {12},
+  keywords = {asynchrony, composability, concurrent ml, first-class events, message-passing},
+  location = {San Jose, California, USA},
+  series = {PLDI '11}
+}
+
+@inproceedings{quelea,
+  author = {Sivaramakrishnan, KC and Kaki, Gowtham and Jagannathan, Suresh},
+  title = {Declarative programming over eventually consistent data stores},
+  year = {2015},
+  isbn = {9781450334686},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/2737924.2737981},
+  doi = {10.1145/2737924.2737981},
+  booktitle = {Proceedings of the 36th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+  pages = {413–424},
+  numpages = {12},
+  keywords = {SMT solvers, Quelea, Haskell, Eventual Consistency, Distributed Transactions, Decidable Logic, Contract Classification, Cassandra, CRDTs, Axiomatic Contracts, Availability},
+  location = {Portland, OR, USA},
+  series = {PLDI '15}
+}
+
+@article{CompSA, 
+  title={Composable scheduler activations for Haskell}, 
+  volume={26},
+  DOI={10.1017/S0956796816000071}, 
+  journal={Journal of Functional Programming},
+  author={Sivaramakrishnan, KC and Harris, Tim and Marlow, Simon and Peyton Jones, Simon}, 
+  year={2016}, 
+  pages={e9}} 
+
+@inproceedings{Ziarek09,
+  author = {Ziarek, Lukasz and Sivaramakrishnan, KC and Jagannathan, Suresh},
+  title = {Partial memoization of concurrency and communication},
+  year = {2009},
+  isbn = {9781605583327},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/1596550.1596575},
+  doi = {10.1145/1596550.1596575},
+  booktitle = {Proceedings of the 14th ACM SIGPLAN International Conference on Functional Programming},
+  pages = {161–172},
+  numpages = {12},
+  keywords = {software transactions, partial memoization, multicore systems, concurrent programming, concurrent ml},
+  location = {Edinburgh, Scotland},
+  series = {ICFP '09}
+}
+
 @inproceedings{mmpar,
- author = {KC Sivaramakrishnan and Ziarek, Lukasz and Prasad, Raghavendra and Jagannathan, Suresh},
- title = {{Lightweight Asynchrony using Parasitic Threads}},
- booktitle = {DAMP},
- year = {2010},
- pages = {63--72},
+  author = {Sivaramakrishnan, KC and Ziarek, Lukasz and Prasad, Raghavendra and Jagannathan, Suresh},
+  title = {Lightweight asynchrony using parasitic threads},
+  year = {2010},
+  isbn = {9781605588599},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/1708046.1708059},
+  doi = {10.1145/1708046.1708059},
+  booktitle = {Proceedings of the 5th ACM SIGPLAN Workshop on Declarative Aspects of Multicore Programming},
+  pages = {63–72},
+  numpages = {10},
+  keywords = {asynchronous communication, lightweight threading, message passing, mlton},
+  location = {Madrid, Spain},
+  series = {DAMP '10}
+}
+
+@article{SPARTA,
+	title={Scalable Lightweight Task Management for MIMD Processors},
+	author={Waddington, Daniel G and Tian, Chen and Sivaramakrishnan, KC},
+	journal={EuroSys workshop, Systems for Future Multicore Architectures (SFMA 2011)},
+	pages={1--6},
+	year={2011}
+}
+
+@inproceedings{effects,
+	author = {Dolan, Stephen and White, Leo and Sivaramakrishnan, KC and Yallop, Jeremy and Madhavapeddy, Anil},
+	title = {{Effective Concurrency through Algebraic Effects}},
+	booktitle = {{The OCaml Users and Developers Workshop}},
+	series = {OCaml '15},
+	year = {2015},
+	address = {Vancouver, Canada}
+}
+
+@phdthesis{thesis,
+	author={Sivaramakrishnan, KC},
+	advisor={Jagannathan, Suresh},
+	title = {{Functional Programming Abstractions for Weakly Consistent Systems}},
+	year = {2014},
+	school = {Purdue University},
+	address = {West Lafayette, IN, USA},
+}
+
+@inproceedings{RxCML,
+	author = {Ziarek, Lukasz and KC Sivaramakrishnan and Jagannathan, Suresh},
+	title = {{Rx-CML: A Prescription for Safely Relaxing Synchrony}},
+	booktitle = {PADL},
+	year = {2014},
+}
+
+@article{MMJFP,
+	author = {KC Sivaramakrishnan and Ziarek, Lukasz and Jagannathan, Suresh},
+	title = {{MultiMLton: A Multicore-aware Runtime for Standard ML}},
+	journal = {Journal of Functional Programming},
+	year = {2014}}
+
+
+@inproceedings{mmgc,
+  author = {Sivaramakrishnan, KC and Ziarek, Lukasz and Jagannathan, Suresh},
+  title = {Eliminating read barriers through procrastination and cleanliness},
+  year = {2012},
+  isbn = {9781450313506},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/2258996.2259005},
+  doi = {10.1145/2258996.2259005},
+  booktitle = {Proceedings of the 2012 International Symposium on Memory Management},
+  pages = {49–60},
+  numpages = {12},
+  keywords = {barrier elimination, cleanliness, concurrent programming, functional languages, parallel and concurrent collection, private heaps},
+  location = {Beijing, China},
+  series = {ISMM '12}
 }
 
 @inproceedings{KC_MARC12,
@@ -24,1681 +150,124 @@
 	pages = {161--172},
 }
 
-@inproceedings{isolates,
-	author    = {Lukasz Ziarek and Siddharth Tiwary and Suresh Jagannathan},
-	title     = {{Isolating Determinism in Multi-threaded Programs}},
-	booktitle = {RV},
-	year      = {2011},
-	pages     = {63-77},
-}
 
-@inproceedings{mmgc,
- author = {KC Sivaramakrishnan and Ziarek, Lukasz and Jagannathan, Suresh},
- title = {{Eliminating Read Barriers through Procrastination and Cleanliness}},
- booktitle = {ISMM},
- year = {2012},
- pages = {49--60},
-}
-
-@inproceedings{Doligez93FULL,
- author = {Doligez, Damien and Leroy, Xavier},
- title = {{A Concurrent, Generational Garbage Collector For A Multithreaded
-   Implementation of ML}},
- booktitle = {POPL},
- series = {POPL '93},
- year = {1993},
- isbn = {0-89791-560-7},
- location = {Charleston, South Carolina, United States},
- pages = {113--123},
- numpages = {11},
- url = {http://doi.acm.org/10.1145/158511.158611},
- doi = {http://doi.acm.org/10.1145/158511.158611},
- acmid = {158611},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-@inproceedings{Doligez93,
- author = {Doligez, Damien and Leroy, Xavier},
- title = {{A Concurrent, Generational Garbage Collector for a Multithreaded
-   Implementation of ML}},
- booktitle = {POPL},
- year = {1993},
- pages = {113--123},
-}
-
-@article{Steele75FULL,
- author = {Steele,Jr., Guy L.},
- title = {{Multiprocessing Compactifying Garbage Collection}},
- journal = {Commun. ACM},
- volume = {18},
- issue = {9},
- month = {September},
- year = {1975},
- issn = {0001-0782},
- pages = {495--508},
- numpages = {14},
- url = {http://doi.acm.org/10.1145/361002.361005},
- doi = {http://doi.acm.org/10.1145/361002.361005},
- acmid = {361005},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {LISP, compactification, data structures, free storage, garbage collection, gc processor, list processing, multiprocessing, parallel processing, pointers, reclaimer, relocation, semaphores, storage allocation, storage reclamation, synchronization},
-}
-
-@article{Steele75,
- author = {Steele,Jr., Guy L.},
- title = {{Multiprocessing Compactifying Garbage Collection}},
- journal = {Communcations of the ACM},
- volume = {18},
- issue = {9},
- month = {September},
- year = {1975},
- pages = {495--508},
-}
-
-@inproceedings{Marlow11FULL,
- author = {Marlow, Simon and Peyton Jones, Simon},
- title = {{Multicore Garbage Collection with Local Heaps}},
- booktitle = {ISMM},
- series = {ISMM '11},
- year = {2011},
- isbn = {978-1-4503-0263-0},
- location = {San Jose, California, USA},
- pages = {21--32},
- numpages = {12},
- url = {http://doi.acm.org/10.1145/1993478.1993482},
- doi = {http://doi.acm.org/10.1145/1993478.1993482},
- acmid = {1993482},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {concurrent, garbage collection, generational, haskell, local heap, multicore, parallel},
-}
-
-@inproceedings{Marlow11,
- author = {Marlow, Simon and Peyton Jones, Simon},
- title = {{Multicore Garbage Collection with Local Heaps}},
- pages = {21--32},
- booktitle = {ISMM},
- year = {2011},
-}
-
-@inproceedings{Steensgaard00FULL,
- author = {Steensgaard, Bjarne},
- title = {{Thread-Specific Heaps for Multi-Threaded Programs}},
- booktitle = {ISMM},
- series = {ISMM '00},
- year = {2000},
- isbn = {1-58113-263-8},
- location = {Minneapolis, Minnesota, United States},
- pages = {18--24},
- numpages = {7},
- url = {http://doi.acm.org/10.1145/362422.362432},
- doi = {http://doi.acm.org/10.1145/362422.362432},
- acmid = {362432},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-@inproceedings{Steensgaard00,
- author = {Steensgaard, Bjarne},
- title = {{Thread-Specific Heaps for Multi-Threaded Programs}},
- booktitle = {ISMM},
- year = {2000},
- pages = {18--24},
-}
-
-@inproceedings{Anderson10FULL,
- author = {Anderson, Todd A.},
- title = {{Optimizations in a Private Nursery-based Garbage Collector}},
- booktitle = {ISMM},
- series = {ISMM '10},
- year = {2010},
- isbn = {978-1-4503-0054-4},
- location = {Toronto, Ontario, Canada},
- pages = {21--30},
- numpages = {10},
- url = {http://doi.acm.org/10.1145/1806651.1806655},
- doi = {http://doi.acm.org/10.1145/1806651.1806655},
- acmid = {1806655},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {functional languages, garbage collection},
-}
-
-@inproceedings{Anderson10,
- author = {Anderson, Todd A.},
- title = {{Optimizations in a Private Nursery-based Garbage Collector}},
- booktitle = {ISMM},
- year = {2010},
- pages = {21--30},
-}
-
-@inproceedings{Auhagen11FULL,
- author = {Auhagen, Sven and Bergstrom, Lars and Fluet, Matthew and Reppy, John},
- title = {{Garbage collection for multicore NUMA machines}},
- booktitle = {Proceedings of the 2011 ACM SIGPLAN Workshop on Memory Systems Performance and Correctness},
- series = {MSPC '11},
- year = {2011},
- isbn = {978-1-4503-0794-9},
- location = {San Jose, California},
- pages = {51--57},
- numpages = {7},
- url = {http://doi.acm.org/10.1145/1988915.1988929},
- doi = {http://doi.acm.org/10.1145/1988915.1988929},
- acmid = {1988929},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {NUMA, garbage collection, parallelism},
-}
-
-@inproceedings{Auhagen11,
- author = {Auhagen, Sven and Bergstrom, Lars and Fluet, Matthew and Reppy, John},
- title = {{Garbage Collection for Multicore NUMA Machines}},
- booktitle = {{Workshop on Memory Systems Performance and Correctness}},
- year = {2011},
- pages = {51--57},
-}
-
-@inproceedings{Jones05FULL,
- author = {Jones, Richard and King, Andy C.},
- title = {{A Fast Analysis for Thread-Local Garbage Collection with Dynamic
-   Class Loading}},
- booktitle = {Proceedings of the Fifth IEEE International Workshop on Source Code Analysis and Manipulation},
- year = {2005},
- isbn = {0-7695-2292-0},
- pages = {129--138},
- numpages = {10},
- url = {http://dl.acm.org/citation.cfm?id=1099551.1100801},
- doi = {10.1109/SCAM.2005.1},
- acmid = {1100801},
- publisher = {IEEE Computer Society},
- address = {Washington, DC, USA},
-}
-
-@inproceedings{Jones05,
- author = {Jones, Richard and King, Andy C.},
- title = {{A Fast Analysis for Thread-Local Garbage Collection with Dynamic
-   Class Loading}},
- booktitle = {{International Workshop on Source Code Analysis and Manipulation}},
- year = {2005},
- pages = {129--138},
-}
-
-@inproceedings{Blackburn04FULL,
- author = {Blackburn, Stephen M. and Hosking, Antony L.},
- title = {{Barriers: Friend or Foe?}},
- booktitle = {Proceedings of the 4th international symposium on Memory management},
- series = {ISMM '04},
- year = {2004},
- isbn = {1-58113-945-4},
- location = {Vancouver, BC, Canada},
- pages = {143--151},
- numpages = {9},
- url = {http://doi.acm.org/10.1145/1029873.1029891},
- doi = {http://doi.acm.org/10.1145/1029873.1029891},
- acmid = {1029891},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {garbage collection, java, memory management, write barriers},
-}
-
-@inproceedings{Blackburn04,
- author = {Blackburn, Stephen M. and Hosking, Antony L.},
- title = {{Barriers: Friend or Foe?}},
- booktitle = {ISMM},
- year = {2004},
- pages = {143--151}
-}
-
-@inproceedings{Sansom91,
-  author = {Sansom, Patrick M.},
-  title = {{Dual-Mode Garbage Collection}},
-  booktitle = {Proceedings of the Workshop on the Parallel Implementation of
-    Functional Languages},
-  year = {1991},
-  pages = {283--310}
-}
-
-@misc{SMC,
-	key = {{SMC}},
-	title = {{Software-Managed Cache Coherence for SCC Revision 1.5}},
-	url = {http://marcbug.scc-dc.com/svn/repository/tags/SMC_V1.0/smc/SMC.pdf},
-	year = {2012}
-}
-
-@misc{Riak,
-	key = {{Riak}},
-	title = {{An open-source distributed database}},
-	url = {http://basho.com/riak/},
-	year = {2013}
-}
-
-
-@inproceedings{Peter11,
-  author    = {Simon Peter and
-               Adrian Sch{\"u}pbach and
-               Dominik Menzi and
-               Timothy Roscoe},
-  title     = {Early experience with the Barrelfish OS and the Single-Chip
-               Cloud Computer},
-  booktitle = {MARC Symposium},
-  year      = {2011},
-  pages     = {35-39},
-}
-
-@inproceedings{Darko11,
-  author    = {Darko Petrovi{\'c} and Omid Shahmirzadi and Thomas Ropars and Andr{\'e} Schiper},
-  title     = {Asynchronous Broadcast on the Intel SCC using Interrupts},
-	booktitle = {MARC Symposium},
-  year      = {2012},
-  pages     = {24-29},
-}
-
-
-@inproceedings{Prell12,
-  author    = {Andreas Prell, Thomas Rauber},
-  title     = {{Go’s Concurrency Constructs on the SCC}},
-	booktitle = {MARC Symposium},
-  year      = {2012},
-  pages     = {2-6},
-}
-
-
-@inproceedings{Prescher11,
-	author 		= {{Thomas Prescher, Randolf Rotta and J\"{o}rg Nolte}},
-	title 		= {Flexible Sharing and Replication Mechanisms for Hybrid Memory Architectures},
-	booktitle = {MARC Symposium},
-	year			= {2011},
-}
-
-@inproceedings{Mattson10,
- author = {Mattson, Timothy G. and Riepen, Michael and Lehnig, Thomas and Brett, Paul and Haas, Werner and Kennedy, Patrick and Howard, Jason and Vangal, Sriram and Borkar, Nitin and Ruhl, Greg and Dighe, Saurabh},
- title = {The 48-core SCC Processor: the Programmer's View},
- booktitle = {SC},
- year = {2010},
- pages = {1--11},
-}
-
-
-@article{Appel89FULL,
- author = {Appel, A. W.},
- title = {{Simple Generational Garbage Collection and Fast Allocation}},
- journal = {Softw. Pract. Exper.},
- volume = {19},
- issue = {2},
- month = {February},
- year = {1989},
- issn = {0038-0644},
- pages = {171--183},
- numpages = {13},
- url = {http://dl.acm.org/citation.cfm?id=66382.66387},
- doi = {10.1002/spe.4380190206},
- acmid = {66387},
- publisher = {John Wiley \& Sons, Inc.},
- address = {New York, NY, USA},
-}
-
-@article{Appel89,
- author = {Appel, A. W.},
- title = {{Simple Generational Garbage Collection and Fast Allocation}},
- journal = {Software Practice and Experience},
- volume = {19},
- issue = {2},
- month = {February},
- year = {1989},
- pages = {171--183},
-}
-
-@misc{BDWGC,
-  key = {Boehm},
-  author = {Hans Boehm},
-  title = {{A Garbage Collector for C and C++}},
-  url = {http://www.hpl.hp.com/personal/Hans_Boehm/gc},
-  year = {2012}
-}
-
-@misc{STREAM,
-  key = {Streambench},
-  title = {{The STREAM Benchmark: Computer Memory Bandwidth}},
-  url = {http://http://www.streambench.org/},
-  year = {2012}
-}
-
-@misc{SCCOverview,
-  key = {Intel},
-  title = {{SCC Platform Overview}},
-  url = {http://communities.intel.com/docs/DOC-5512},
-  year = {2012}
-}
-
-@article{PseudoknotFULL,
-  volume = {6},
-  number = {4},
-  title = {{Benchmarking Implementations of Functional Languages with
-    ``Pseudoknot'', a Float-Intensive Benchmark}},
-  author = {P.H. {Hartel} and M. {Feeley} and M. {Alt} and L. {Augustsson}},
-  year = {1996},
-  pages = {621--655},
-  journal = {Journal of functional programming},
-  url = {http://doc.utwente.nl/55704/},
-}
-
-@article{Pseudoknot,
-  volume = {6},
-  number = {4},
-  title = {{Benchmarking Implementations of Functional Languages with
-    ``Pseudoknot'', a Float-Intensive Benchmark}},
-  author = {P.H. {Hartel} and M. {Feeley} and M. {Alt} and L. {Augustsson}},
-  year = {1996},
-  journal = {Journal of Functional Programming},
-  pages = {621--655},
-}
-
-@article{BakerFULL,
- author = {Baker,Jr., Henry G.},
- title = {List processing in real time on a serial computer},
- journal = {Commun. ACM},
- volume = {21},
- issue = {4},
- month = {April},
- year = {1978},
- issn = {0001-0782},
- pages = {280--294},
- numpages = {15},
- url = {http://doi.acm.org/10.1145/359460.359470},
- doi = {http://doi.acm.org/10.1145/359460.359470},
- acmid = {359470},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {CDR-coding, LISP, compacting, file or database management, garbage collection, list processing, real-time, reference counting, storage allocation, storage management, virtual memory},
-}
-
-@article{Baker,
- author = {Baker,Jr., Henry G.},
- title = {{List Processing in Real Time on a Serial Computer}},
- journal = {Communication of the ACM},
- volume = {21},
- issue = {4},
- year = {1978},
- pages = {280--294},
-}
-
-@inproceedings{Bacon03FULL,
- author = {Bacon, David F. and Cheng, Perry and Rajan, V. T.},
- title = {A real-time garbage collector with low overhead and consistent utilization},
- booktitle = {Proceedings of the 30th ACM SIGPLAN-SIGACT symposium on Principles of programming languages},
- series = {POPL '03},
- year = {2003},
- isbn = {1-58113-628-5},
- location = {New Orleans, Louisiana, USA},
- pages = {285--298},
- numpages = {14},
- url = {http://doi.acm.org/10.1145/604131.604155},
- doi = {http://doi.acm.org/10.1145/604131.604155},
- acmid = {604155},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {defragmentation, read barrier, real-time scheduling, utilization},
-}
-
-@inproceedings{Bacon03,
- author = {Bacon, David F. and Cheng, Perry and Rajan, V. T.},
- title = {{A Real-Time Garbage Collector with Low Overhead and Consistent Utilization}},
- booktitle = {POPL},
- year = {2003},
- pages = {285--298}
-}
-
-@inproceedings{Vechev:2004:WBE:1029873.1029876,
-  author = {Vechev, Martin T. and Bacon, David F.},
-  title = {Write barrier elision for concurrent garbage collectors},
-  booktitle = {Proceedings of the 4th international symposium on Memory
-    management},
-  series = {ISMM '04},
-  year = {2004},
-  isbn = {1-58113-945-4},
-  location = {Vancouver, BC, Canada},
-  pages = {13--24},
-  numpages = {12},
-  url = {http://doi.acm.org/10.1145/1029873.1029876},
-  doi = {10.1145/1029873.1029876},
-  acmid = {1029876},
-  publisher = {ACM},
-  address = {New York, NY, USA},
-  keywords = {concurrent garbage collection, write barrier},
-}
-
-@inproceedings{Vechev04,
- author = {Vechev, Martin T. and Bacon, David F.},
- title = {{Write Barrier Elision for Concurrent Garbage Collectors}},
- booktitle = {{ISMM}},
- year = {2004},
- pages = {13--24},
-}
-
-@book{Quiescent,
-	title = {{The Art of Multiprocessor Programming}},
-	author = {Herlihy, Maurice and Shavit, Nir},
-	year = 2012,
-  publisher = {{Morgan Kaufmann}}}
-
-@book{Reppy07FULL,
-  title={Concurrent Programming in ML},
-  author={Reppy, J.H.},
-  isbn={9780521714723},
-  lccn={99020465},
-  url={http://books.google.com/books?id=s309wPE2OoIC},
-  year={2007},
-  publisher={Cambridge University Press}
-}
-
-@inproceedings{Brooks84FULL,
- author = {Brooks, Rodney A.},
- title = {Trading data space for reduced time and code space in real-time garbage collection on stock hardware},
- booktitle = {Proceedings of the 1984 ACM Symposium on LISP and functional programming},
- series = {LFP '84},
- year = {1984},
- isbn = {0-89791-142-3},
- location = {Austin, Texas, United States},
- pages = {256--262},
- numpages = {7},
- url = {http://doi.acm.org/10.1145/800055.802042},
- doi = {http://doi.acm.org/10.1145/800055.802042},
- acmid = {802042},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-@inproceedings{Brooks84,
- author = {Brooks, Rodney A.},
- title = {{Trading Data Space for Reduced Time and Code Space in Real-Time Garbage Collection on Stock Hardware}},
- booktitle = {Lisp and Functional Programming},
- year = {1984},
- pages = {256--262},
-}
-
-@book{SML97,
- author = {Milner, Robin and Tofte, Mads and Macqueen, David},
- title = {The  Definition of Standard ML},
- year = {1997},
- publisher = {MIT Press},
- address = {Cambridge, MA, USA},
-}
-
-@article{Gidra12FULL,
-  author = {Gidra, Lokesh and Thomas, Ga\"{e}l and Sopena, Julien and Shapiro,
-    Marc},
-  title = {Assessing the scalability of garbage collectors on many cores},
-  journal = {SIGOPS Oper. Syst. Rev.},
-  issue_date = {December 2011},
-  volume = {45},
-  number = {3},
-  month = jan,
-  year = {2012},
-  issn = {0163-5980},
-  pages = {15--19},
-  numpages = {5},
-  url = {http://doi.acm.org/10.1145/2094091.2094096},
-  doi = {10.1145/2094091.2094096},
-  acmid = {2094096},
-  publisher = {ACM},
-  address = {New York, NY, USA},
-}
-
-@article{Gidra12,
-  author = {Gidra, Lokesh and Thomas, Ga\"{e}l and Sopena, Julien and Shapiro,
-    Marc},
-  title = {Assessing the scalability of garbage collectors on many cores},
-  journal = {SIGOPS Operating Systems Review},
-  volume = {45},
-  number = {3},
-  year = {2012},
-  pages = {15--19},
-}
-
-@inproceedings{Siebert08FULL,
- author = {Siebert, Fridtjof},
- title = {Limits of parallel marking garbage collection},
- booktitle = {Proceedings of the 7th international symposium on Memory management},
- series = {ISMM '08},
- year = {2008},
- isbn = {978-1-60558-134-7},
- location = {Tucson, AZ, USA},
- pages = {21--29},
- numpages = {9},
- url = {http://doi.acm.org/10.1145/1375634.1375638},
- doi = {10.1145/1375634.1375638},
- acmid = {1375638},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {concurrent, garbage collection, java, multicore, parallel, realtime},
-}
-
-@inproceedings{Siebert08,
- author = {Siebert, Fridtjof},
- title = {Limits of parallel marking garbage collection},
- booktitle = {ISMM},
- year = {2008},
- pages = {21--29},
-}
-
-
-@inproceedings{MolkaNahelem,
-	author = {Molka, Daniel and Hackenberg, Daniel and Schone, Robert and Muller, Matthias S.},
-	title = {Memory Performance and Cache Coherency Effects on an Intel Nehalem Multiprocessor System},
-	booktitle = {PACT},
-	year = {2009},
-	pages = {261--270},
-}
-
-@article{CAP_GL,
-	author = {Gilbert, Seth and Lynch, Nancy},
-	title = {Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services},
-	journal = {SIGACT News},
-	volume = {33},
-	number = {2},
-	month = jun,
-	year = {2002},
-	pages = {51--59},
-}
-
-@inproceedings{BailisSOCC,
-	author = {Bailis, Peter and Fekete, Alan and Ghodsi, Ali and Hellerstein, Joseph M. and Stoica, Ion},
-	title = {The potential dangers of causal consistency and an explicit solution},
-	booktitle = {SoCC},
-	year = {2012},
-	pages = {22:1--22:7},
-}
-
-
-@inproceedings{BurckhardtFLW12,
-	author    = {Sebastian Burckhardt and Manuel F{\"a}hndrich and Daan Leijen and Benjamin P. Wood},
-	title     = {Cloud Types for Eventual Consistency},
-	booktitle = {ECOOP},
-	year      = {2012},
-	pages     = {283-307},
-}
-
-@inproceedings{BurckhardtLFS12,
-  author    = {Sebastian Burckhardt and
-               Daan Leijen and
-               Manuel F{\"a}hndrich and
-               Mooly Sagiv},
-  title     = {Eventually Consistent Transactions},
-  booktitle = {ESOP},
-  year      = {2012},
-  pages     = {67-86},
-}
-
-@inproceedings{Dynamo,
-  author    = {Giuseppe DeCandia and
-               Deniz Hastorun and
-               Madan Jampani and
-               Gunavardhan Kakulapati and
-               Avinash Lakshman and
-               Alex Pilchin and
-               Swaminathan Sivasubramanian and
-               Peter Vosshall and
-               Werner Vogels},
-  title     = {Dynamo: amazon's highly available key-value store},
-  booktitle = {SOSP},
-  year      = {2007},
-  pages     = {205-220},
-}
-
-@inproceedings{RedBlue,
- author = {Li, Cheng and Porto, Daniel and Clement, Allen and Gehrke, Johannes and Pregui\c{c}a, Nuno and Rodrigues, Rodrigo},
- title = {Making Geo-replicated Systems Fast As Possible, Consistent when Necessary},
- booktitle = {Proceedings of the 10th USENIX Conference on Operating Systems Design and Implementation},
- series = {OSDI'12},
- year = {2012},
- isbn = {978-1-931971-96-6},
- location = {Hollywood, CA, USA},
- pages = {265--278},
- numpages = {14},
- url = {http://dl.acm.org/citation.cfm?id=2387880.2387906},
- acmid = {2387906},
- publisher = {USENIX Association},
- address = {Berkeley, CA, USA},
-}
-
-@inproceedings{COPS,
- author = {Lloyd, Wyatt and Freedman, Michael J. and Kaminsky, Michael and Andersen, David G.},
- title = {Don'T Settle for Eventual: Scalable Causal Consistency for Wide-area Storage with COPS},
- booktitle = {Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles},
- series = {SOSP '11},
- year = {2011},
- isbn = {978-1-4503-0977-6},
- location = {Cascais, Portugal},
- pages = {401--416},
- numpages = {16},
- url = {http://doi.acm.org/10.1145/2043556.2043593},
- doi = {10.1145/2043556.2043593},
- acmid = {2043593},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {ALPS systems, causal + consistency, key-value storage, read transactions, scalable wide-area replication},
-}
-
-@inproceedings{TransGeo,
-	author = {Sovran, Yair and Power, Russell and Aguilera, Marcos K. and Li, Jinyang},
-	title = {Transactional Storage for Geo-replicated Systems},
-	booktitle = {Proceedings of the Twenty-Third ACM Symposium on Operating Systems Principles},
-	series = {SOSP '11},
-	year = {2011},
-	isbn = {978-1-4503-0977-6},
-	location = {Cascais, Portugal},
-	pages = {385--400},
-	numpages = {16},
-	url = {http://doi.acm.org/10.1145/2043556.2043592},
-	doi = {10.1145/2043556.2043592},
-	acmid = {2043592},
-	publisher = {ACM},
-	address = {New York, NY, USA},
-	keywords = {asynchronous replication, distributed storage, geo-distributed systems, key-value store, parallel snapshot isolation, transactions},
-}
-
-@techreport{CompSA,
-	author = {KC Sivaramakrishnan and Harris, Tim and Marlow, Simon and Peyton Jones, Simon},
-	title = {{Composable Scheduler Activations for Haskell}},
-	institution = {Microsoft Research},
-	year = {2013}}
-
-@article{MMJFP,
-	author = {KC Sivaramakrishnan and Ziarek, Lukasz and Jagannathan, Suresh},
-	title = {{MultiMLton: A Multicore-aware Runtime for Standard ML}},
-	journal = {Journal of Functional Programming},
-	year = {2014}}
-
-@inproceedings{Li2007,
- author = {Li, Peng and Marlow, Simon and Peyton Jones, Simon and Tolmach, Andrew},
- title = {Lightweight concurrency primitives for GHC},
- booktitle = {Haskell Symposium},
- year = {2007},
- pages = {107--118},
-}
-
-@inproceedings{SergeyPOPL14,
-	author = {Sergey, Ilya and Vytiniotis, Dimitrios and Peyton Jones, Simon},
-	title = {Higher-Order Cardinality Analysis},
-	booktitle = {POPL},
-	year = {2014}}
-
-
-
-@inproceedings{BurckhardtPOPL14,
-	author = {Burckhardt, Sebastian and Gotsman, Alexy and Yang, Hongseok},
-	title = {Replicated Data Types: Specification, Verification, and Optimality},
-	booktitle = {POPL},
-	year = {2014}}
-
-@inproceedings{TerrySOSP2013,
-	author    = {Douglas B. Terry and
-		Vijayan Prabhakaran and
-			Ramakrishna Kotla and
-			Mahesh Balakrishnan and
-			Marcos K. Aguilera and
-			Hussam Abu-Libdeh},
-	title     = {Consistency-based service level agreements for cloud storage},
-	booktitle = {SOSP},
-	year      = {2013},
-	pages     = {309-324},
-}
-
-@inproceedings{Bailis13,
-	author    = {Peter Bailis},
-	title     = {HAT, not CAP: Highly Available Transactions for Everybody},
-	booktitle = {CIDR},
-	year      = {2013},
-}
-
-@inproceedings{RxCML,
-	author = {Ziarek, Lukasz and KC Sivaramakrishnan and Jagannathan, Suresh},
-	title = {{Rx-CML: A Prescription for Safely Relaxing Synchrony}},
-	booktitle = {PADL},
-	year = {2014},
-}
-
-@inproceedings{SSS11,
-	author    = {Marc Shapiro and
-					  	 Nuno M. Pregui\c{c}a and
-				  		Carlos Baquero and
-          		Marek Zawirski},
-	title     = {Conflict-Free Replicated Data Types},
-	booktitle = {SSS},
-	year      = {2011},
-	pages     = {386-400},
-}
-
-@inproceedings{AlvaroCIDR11,
-	author    = {Peter Alvaro and
-		Neil Conway and
-			Joe Hellerstein and
-			William R. Marczak},
-	title     = {Consistency Analysis in Bloom: a CALM and Collected Approach},
-	booktitle = {CIDR},
-	year      = {2011},
-	pages     = {249-260},
-}
-
-@inproceedings{Spanner,
-	author = {Corbett, James C. and Dean, Jeffrey and Epstein, Michael and Fikes, Andrew and Frost, Christopher and Furman, J. J. and Ghemawat, Sanjay and Gubarev, Andrey and Heiser, Christopher and Hochschild, Peter and Hsieh, Wilson and Kanthak, Sebastian and Kogan, Eugene and Li, Hongyi and Lloyd, Alexander and Melnik, Sergey and Mwaura, David and Nagle, David and Quinlan, Sean and Rao, Rajesh and Rolig, Lindsay and Saito, Yasushi and Szymaniak, Michal and Taylor, Christopher and Wang, Ruth and Woodford, Dale},
-	title = {Spanner: Google's Globally-distributed Database},
-	booktitle = {OSDI},
-	year = {2012},
-	pages = {251--264},
-}
-
-@inproceedings{Azure,
-	author = {Calder, Brad and Wang, Ju and Ogus, Aaron and Nilakantan, Niranjan and Skjolsvold, Arild and McKelvie, Sam and Xu, Yikang and Srivastav, Shashwat and Wu, Jiesheng and Simitci, Huseyin and Haridas, Jaidev and Uddaraju, Chakravarthy and Khatri, Hemal and Edwards, Andrew and Bedekar, Vaman and Mainali, Shane and Abbasi, Rafay and Agarwal, Arpit and Haq, Mian Fahim ul and Haq, Muhammad Ikram ul and Bhardwaj, Deepali and Dayanand, Sowmya and Adusumilli, Anitha and McNett, Marvin and Sankaran, Sriram and Manivannan, Kavitha and Rigas, Leonidas},
-	title = {Windows Azure Storage: A Highly Available Cloud Storage Service with Strong Consistency},
-	booktitle = {SOSP},
-	year = {2011},
-	pages = {143--157},
-}
-
-@article{MapReduce,
-	author = {Dean, Jeffrey and Ghemawat, Sanjay},
-	title = {MapReduce: Simplified Data Processing on Large Clusters},
-	journal = {Commun. ACM},
-	issue_date = {January 2008},
-	volume = {51},
-	number = {1},
-	month = jan,
-	year = {2008},
-	issn = {0001-0782},
-	pages = {107--113},
-	numpages = {7},
-	publisher = {ACM},
-	address = {New York, NY, USA},
-}
-
-@inproceedings{Dryad,
-	author = {Isard, Michael and Budiu, Mihai and Yu, Yuan and Birrell, Andrew and Fetterly, Dennis},
-	title = {Dryad: Distributed Data-parallel Programs from Sequential Building Blocks},
-	booktitle = {Eurosys},
-	year = {2007},
-	pages = {59--72},
-}
-
-@article{Schneider90,
-	author = {Schneider, Fred B.},
-	title = {Implementing Fault-tolerant Services Using the State Machine Approach: A Tutorial},
-	journal = {ACM Comput. Surv.},
-	issue_date = {Dec. 1990},
-	volume = {22},
-	number = {4},
-	month = dec,
-	year = {1990},
-	issn = {0360-0300},
-	pages = {299--319},
-	numpages = {21},
-	url = {http://doi.acm.org/10.1145/98163.98167},
-	doi = {10.1145/98163.98167},
-	acmid = {98167},
-	publisher = {ACM},
-	address = {New York, NY, USA},
-}
-
-@article{SA,
-	author = {Anderson, Thomas E. and Bershad, Brian N. and Lazowska, Edward D. and Levy, Henry M.},
-	title = {Scheduler activations: effective kernel support for the user-level management of parallelism},
-	journal = {ACM Trans. Comput. Syst.},
-	volume = {10},
-	number = {1},
-	month = feb,
-	year = {1992},
-	pages = {53--79},
-}
-
-@inproceedings{Gleissenthall,
-	author    = {Klaus von Gleissenthall and Andrey Rybalchenko},
-	title     = {An Epistemic Perspective on Consistency of Concurrent Computations},
-	booktitle = {CONCUR},
-	year      = {2013},
-}
-
-@inproceedings{Rhea,
-	author = {Gkantsidis, Christos and Vytiniotis, Dimitrios and Hodson, Orion and Narayanan, Dushyanth and Dinu, Florin and Rowstron, Antony},
-	title = {Rhea: Automatic Filtering for Unstructured Cloud Storage},
-	booktitle = {NSDI},
-	year = {2013},
-	pages = {343--356},
-}
-
-@inproceedings{abduct,
-	author = {Dillig, Isil and Dillig, Thomas and Li, Boyang and McMillan, Ken},
-	title = {Inductive Invariant Generation via Abductive Inference},
-	booktitle = {OOPSLA},
-	year = {2013},
-}
-
-@misc{CStar,
-	key = {Cassandra},
-	author = {{Cassandra}},
-	year=2014,
-	title = {{An open source distributed database management system}},
-	note = "http://cassandra.apache.org"
-}
-
-@misc{Irminsule,
-	key = {Irminsule},
-	author = {{Irminsule}},
-	year=2014,
-	title = {{A branch-consistent 'git-like' database}},
-	note = "http://nymote.org/software/irminsule/"
-}
-
-@inproceedings{Mirage,
-	author = {Madhavapeddy, Anil and Mortier, Richard and Rotsos, Charalampos and Scott, David and Singh, Balraj and Gazagnaire, Thomas and Smith, Steven and Hand, Steven and Crowcroft, Jon},
-	title = {{Unikernels: Library Operating Systems for the Cloud}},
-	booktitle = {ASPLOS},
-	year = {2013},
-}
-
-@misc{multicoreOCaml,
-	key = {MulticoreOCaml},
-	author = {{Multicore OCaml}},
-	year=2014,
-	title="A Multicore-aware extension of OCaml",
-	note="https://github.com/ocamllabs/compiler-hacking/wiki/Multicore-OCaml"
-}
-
-@article{SPARTA,
-	title={Scalable Lightweight Task Management for MIMD Processors},
-	author={Waddington, Daniel G and Tian, Chen and Sivaramakrishnan, KC},
-	journal={EuroSys workshop, Systems for Future Multicore Architectures (SFMA 2011)},
-	pages={1--6},
-	year={2011}
-}
-
-@book{Reppy07,
-  title={Concurrent Programming in ML},
-  author={Reppy, J.H.},
-  year={2007},
-  publisher={Cambridge University Press}
-}
-
-@misc{MultiMLton,
-  key = {{MultiMLton}},
-  title = {{MLton for Scalable Multicore Architectures}},
-  url = {http://multimlton.cs.purdue.edu},
-  year = {2013}
-}
-
-@misc{MLton,
-  key = {{MLton}},
-  title = {{The MLton Compiler and Runtime System}},
-  url = {http://www.mlton.org},
-  year = {2013}
-}
-
-@misc{zeromq,
-  key = {{ZeroMQ}},
-  title = {{The Intelligent Transport Layer}},
-  url = {http://www.zeromq.org},
-  year = {2013}
-}
-
-@misc{activemq,
-  key = {{ActiveMQ}},
-  title = {{Open source messaging and Integration Patterns server}},
-  url = {http://activemq.apache.org/},
-  year = {2013}
-}
-
-@misc{rabbitmq,
-  key = {{RabbitMQ}},
-  title = {{Messaging that just works}},
-  url = {http://www.rabbitmq.org/},
-  year = {2013}
-}
-
-@inproceedings{Ziarek11,
- author = {Ziarek, Lukasz and Sivaramakrishnan, KC and Jagannathan, Suresh},
- title = {{Composable Asynchronous Events}},
- booktitle = {PLDI},
- year = {2011},
- pages = {628--639},
-}
-
-@inproceedings{quelea,
-  author = {Sivaramakrishnan, KC and Kaki, Gowtham and Jagannathan, Suresh},
-  title = {Declarative programming over eventually consistent data stores},
-  year = {2015},
-  isbn = {9781450334686},
+@inproceedings{RetroEffects,
+  author = {Sivaramakrishnan, KC and Dolan, Stephen and White, Leo and Kelly, Tom and Jaffer, Sadiq and Madhavapeddy, Anil},
+  title = {Retrofitting effect handlers onto OCaml},
+  year = {2021},
+  isbn = {9781450383912},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
-  url = {https://doi.org/10.1145/2737924.2737981},
-  doi = {10.1145/2737924.2737981},
-  abstract = {User-facing online services utilize geo-distributed data stores to minimize latency and tolerate partial failures, with the intention of providing a fast, always-on experience. However, geo-distribution does not come for free; application developers have to contend with weak consistency behaviors, and the lack of abstractions to composably construct high-level replicated data types, necessitating the need for complex application logic and invariably exposing inconsistencies to the user. Some commercial distributed data stores and several academic proposals provide a lattice of consistency levels, with stronger consistency guarantees incurring increased latency and throughput costs. However, correctly assigning the right consistency level for an operation requires subtle reasoning and is often an error-prone task. In this paper, we present QUELEA, a declarative programming model for eventually consistent data stores (ECDS), equipped with a contract language, capable of specifying fine-grained application - level consistency properties. A contract enforcement system analyses contracts, and automatically generates the appropriate consistency protocol for the method protected by the contract. We describe an implementation of QUELEA on top of an off-the-shelf ECDS that provides support for coordination-free transactions. Several benchmarks including two large web applications, illustrate the effectiveness of our approach.},
-  booktitle = {Proceedings of the 36th ACM SIGPLAN Conference on Programming Language Design and Implementation},
-  pages = {413–424},
-  numpages = {12},
-  keywords = {SMT solvers, Quelea, Haskell, Eventual Consistency, Distributed Transactions, Decidable Logic, Contract Classification, Cassandra, CRDTs, Axiomatic Contracts, Availability},
-  location = {Portland, OR, USA},
-  series = {PLDI '15}
-}
-
-@article{Birman:1987:RCP:7351.7478,
- author = {Birman, Kenneth P. and Joseph, Thomas A.},
- title = {{Reliable Communication in the Presence of Failures}},
- journal = {ACM Trans. Comput. Syst.},
- issue_date = {Feb. 1987},
- volume = {5},
- number = {1},
- year = {1987},
- issn = {0734-2071},
- pages = {47--76},
- numpages = {30},
- url = {http://doi.acm.org/10.1145/7351.7478},
- doi = {10.1145/7351.7478},
- acmid = {7478},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-@article{Birman87,
- author = {Birman, Kenneth P. and Joseph, Thomas A.},
- title = {{Reliable Communication in the Presence of Failures}},
- journal = {ACM Trans. Comput. Syst.},
- volume = {5},
- number = {1},
- month = jan,
- year = {1987},
- pages = {47--76},
-}
-
-@inproceedings{Ziarek06,
- author = {Ziarek, Lukasz and Schatz, Philip and Jagannathan, Suresh},
- title = {Stabilizers: a modular checkpointing abstraction for concurrent functional programs},
- booktitle  = {ICFP},
- year = {2006},
- pages = {136--147},
-}
-
-@article{Ziarek10,
- author = {Ziarek, Lukasz and Jagannathan, Suresh},
- title = {{Lightweight Checkpointing for Concurrent ML}},
- journal  = {Journal of Functional Programming},
- year = {2010},
- pages = {137-173},
- volume = 20,
- number = 2
-}
-
-@inproceedings{Ziarek06Full,
- author = {Ziarek, Lukasz and Schatz, Philip and Jagannathan, Suresh},
- title = {Stabilizers: a modular checkpointing abstraction for concurrent functional programs},
- booktitle = {Proceedings of the eleventh ACM SIGPLAN international conference on Functional programming},
- series = {ICFP '06},
- year = {2006},
- isbn = {1-59593-309-3},
- location = {Portland, Oregon, USA},
- pages = {136--147},
- numpages = {12},
- url = {http://doi.acm.org/10.1145/1159803.1159822},
- doi = {10.1145/1159803.1159822},
- acmid = {1159822},
- publisher = {ACM},
- address = {New York, NY, USA},
- keywords = {checkpointing, concurrent ML, concurrent programming, error recovery, exception handling, transactions},
-}
-
-@inproceedings{STAMP,
-    title     = {{STAMP}: Stanford Transactional Applications for Multi-Processing},
-    author    = {Cao Minh, Chi and Chung, JaeWoong and Kozyrakis, Christos and Olukotun, Kunle},
-    booktitle = {IISWC},
-    year      = {2008},
-}
-
-@inproceedings{SuleimanGroup97,
- author = {Suleiman, Maher and Cart, Mich\`{e}le and Ferri{\'e}, Jean},
- title = {{Serialization of Concurrent Operations in a Distributed Collaborative Environment}},
- booktitle = {GROUP},
- year = {1997},
- pages = {435--445},
-}
-
-@inproceedings{Nichols95,
- author = {Nichols, David A. and Curtis, Pavel and Dixon, Michael and Lamping, John},
- title = {{High-latency, Low-bandwidth Windowing in the Jupiter Collaboration System}},
- booktitle = {UIST},
- year = {1995},
- pages = {111--120},
-}
-
-@misc{Wave,
-  key = {{Google Wave}},
-	author = {Wang, David and Mah, Alex and Lassen, Soren},
-  title = {{Operational Transformation}},
-  url = {{http://www.waveprotocol.org/whitepapers/operational-transform}},
-  year = {2010},
-}
-
-
-@inproceedings{MartinAU12,
-  author    = {St{\'e}phane Martin and Mehdi Ahmed-Nacer and Pascal Urso},
-  title     = {{Controlled Conflict Resolution for Replicated Documents}},
-  booktitle = {CollaborateCom},
-  year      = {2012},
-  pages     = {471-480},
-}
-
-@inproceedings{BMM,
- author = {Demange, Delphine and Laporte, Vincent and Zhao, Lei and Jagannathan, Suresh and Pichardie, David and Vitek, Jan},
- title = {{Plan B: A Buffered Memory Model for Java}},
- booktitle = {POPL},
- year = {2013},
- pages = {329--342},
-}
-
-@inproceedings{Sarkar09,
- author = {Sarkar, Susmit and Sewell, Peter and Nardelli, Francesco Zappa and Owens, Scott and Ridge, Tom and Braibant, Thomas and Myreen, Magnus O. and Alglave, Jade},
- title = {{The Semantics of x86-CC Multiprocessor Machine Code}},
- booktitle = {POPL},
- year = {2009},
- pages = {379--391},
-}
-
-@article{Sewell10,
- author = {Sewell, Peter and Sarkar, Susmit and Owens, Scott and Nardelli, Francesco Zappa and Myreen, Magnus O.},
- title = {{x86-TSO: A Rigorous and Usable Programmer's Model for x86 Multiprocessors}},
- journal = {Commun. ACM},
- volume = {53},
- number = {7},
- month = jul,
- year = {2010},
- pages = {89--97},
-}
-
-@inproceedings{Bykov11,
-	author = {Bykov, Sergey and Geller, Alan and Kliot, Gabriel and Larus, James R. and Pandya, Ravi and Thelin, Jorgen},
-	title = {{Orleans: Cloud Computing for Everyone}},
-	booktitle = {SOCC},
-	year = {2011},
-	pages = {1--14},
-}
-
-@inproceedings{Boudol09,
- author = {Boudol, G{\'e}rard and Petri, Gustavo},
- title = {{Relaxed Memory Models: An Operational Approach}},
- booktitle = {POPL},
- year = {2009},
- pages = {392--403},
-}
-
-@inproceedings{Boehm08,
- author = {Boehm, Hans-J. and Adve, Sarita V.},
- title = {{Foundations of the C++ Concurrency Memory Model}},
- booktitle = {PLDI},
- year = {2008},
- pages = {68--78},
-}
-
-@article{Charron-Bost96,
- author = {Charron-Bost, Bernadette and Mattern, Friedemann and Tel, Gerard},
- title = {{Synchronous, Asynchronous, and Causally Ordered Communication}},
- journal = {Distrib. Comput.},
- volume = {9},
- number = {4},
- year = {1996},
- pages = {173--191},
-}
-
-@inproceedings{Ziarek09,
- author = {Ziarek, Lukasz and Sivaramakrishnan, KC and Jagannathan, Suresh},
- title = {Partial memoization of concurrency and communication},
- booktitle = {ICFP},
- year = {2009},
- pages = {161--172},
-}
-
-@inproceedings{Nightingale05,
- author = {Nightingale, Edmund B. and Chen, Peter M. and Flinn, Jason},
- title = {{Speculative Execution in a Distributed File System}},
- booktitle = {SOSP},
- year = {2005},
- pages = {191--205},
-}
-
-@article{Elnozahy02,
- author = {Elnozahy, E. N. (Mootaz) and Alvisi, Lorenzo and Wang, Yi-Min and Johnson, David B.},
- title = {{A Survey of Rollback-Recovery Protocols in Message-Passing Systems}},
- journal = {ACM Comput. Surv.},
- volume = {34},
- number = {3},
- month = sep,
- year = {2002},
- pages = {375--408},
-}
-
-@inproceedings{Cully08,
- author = {Cully, Brendan and Lefebvre, Geoffrey and Meyer, Dutch and Feeley, Mike and Hutchinson, Norm and Warfield, Andrew},
- title = {{Remus: High Availability via Asynchronous Virtual Machine Replication}},
- booktitle = {NSDI},
- year = {2008},
- pages = {161--174},
-}
-
-@inproceedings{Wester09,
-  author    = {Benjamin Wester and James A. Cowling and Edmund B. Nightingale and Peter M. Chen and Jason Flinn and Barbara Liskov},
-  title     = {{Tolerating Latency in Replicated State Machines Through Client Speculation}},
-  booktitle = {NSDI},
-  year      = {2009},
-  pages     = {245-260},
-}
-
-@inproceedings{Li05,
- author = {Li, Tong and Ellis, Carla S. and Lebeck, Alvin R. and Sorin, Daniel J.},
- title = {{Pulse: A Dynamic Deadlock Detection Mechanism Using Speculative Execution}},
- booktitle = {USENIX ATC},
- year = {2005},
- pages = {31–44},
-}
-
-@phdthesis{acar2005self,
-  title={Self-adjusting computation},
-  author={Acar, Umut A},
-  year={2005},
-  school={Princeton University}
-}
-
-
-@inproceedings{Harris05,
-	author = {Harris, Tim and Marlow, Simon and Peyton-Jones, Simon and Herlihy, Maurice},
-	title = {{Composable Memory Transactions}},
-	booktitle = {PPoPP},
-	year = {2005},
-	pages = {48--60},
-}
-
-@inproceedings{Adl06,
- author = {Adl-Tabatabai, Ali-Reza and Lewis, Brian T. and Menon, Vijay and Murphy, Brian R. and Saha, Bratin and Shpeisman, Tatiana},
- title = {Compiler and runtime support for efficient software transactional memory},
- booktitle = {PLDI},
- year = {2006},
- pages = {26--37},
-}
-
-@inproceedings{Donnelly06,
- author = {Donnelly, Kevin and Fluet, Matthew},
- title = {{Transactional Events}},
- booktitle = {ICFP},
- year = {2006},
- pages = {124--135},
-}
-
-@inproceedings{CloudHaskell,
- author = {Epstein, Jeff and Black, Andrew P. and Peyton-Jones, Simon},
- title = {{Towards Haskell in the Cloud}},
- booktitle = {Haskell Symposium},
- year = {2011},
- pages = {118--129},
-}
-
-@inproceedings{DCaml,
- author = {Wakita, Ken and Asano, Takashi and Sassa, Masataka},
- title = {{D'Caml: Native Support for Distributed ML Programming in Heterogeneous Environment}},
- booktitle = {Euro-Par},
- year = {1999},
- pages = {914--924},
-}
-
-@phdthesis{paraML,
-  title={Process-oriented language design for distributed address spaces},
-  author={Bailey, Peter Richard},
-  school={{Australian National University}},
-  year={1997}
-}
-
-@article{Acute,
- author = {Sewell, Peter and Leifer, James J. and Wansbrough, Keith and Nardelli, Francesco Zappa and Allen-Williams, Mair and Habouzit, Pierre and Vafeiadis, Viktor},
- title = {{Acute: High-level Programming Language Design for Distributed Computation}},
- journal = {J. Funct. Program.},
- volume = {17},
- number = {4-5},
- year = {2007},
- pages = {547--612},
-}
-
-@inproceedings{Effinger-Dean08,
-	author = {Effinger-Dean, Laura and Kehrt, Matthew and Grossman, Dan},
-	title = {{Transactional Events for ML}},
-	booktitle = {ICFP},
-	year = {2008},
-	pages = {103--114},
-}
-
-@inproceedings{Lesani11,
- author = {Lesani, Mohsen and Palsberg, Jens},
- title = {{Communicating Memory Transactions}},
- booktitle = {PPoPP},
- year = {2011},
- pages = {157--168},
-}
-
-@article{Lamport78,
-	author = {Lamport, Leslie},
-	title = {{Time, Clocks, and the Ordering of Events in a Distributed System}},
-	journal = {Commun. ACM},
-	volume = {21},
-	number = {7},
-	month = jul,
-	year = {1978},
-	pages = {558--565},
-}
-
-
-@inproceedings{FK+12,
- author = {Foltzer, Adam and Kulkarni, Abhishek and Swords, Rebecca and Sasidharan, Sajith and Jiang, Eric and Newton, Ryan},
- title = {{A Meta-Scheduler for the Par-Monad: Composable Scheduling for the Heterogeneous Cloud}},
- booktitle = {ICFP'12},
- year = {2012},
- pages = {235--246}
-}
-
-@article{RollbackRecovery,
-	author = {Elnozahy, E. N. (Mootaz) and Alvisi, Lorenzo and Wang, Yi-Min and Johnson, David B.},
-	title = {A survey of rollback-recovery protocols in message-passing systems},
-	journal = {ACM Comput. Surv.},
-	volume = {34},
-	number = {3},
-	month = sep,
-	year = {2002},
-	pages = {375--408},
-}
-
-@inproceedings{qlisp,
- author = {Goldman, Ron and Gabriel, Richard P.},
- title = {Qlisp: experience and new directions},
- booktitle = {Proceedings of the ACM/SIGPLAN conference on Parallel programming: experience with applications, languages and systems},
- series = {PPEALS '88},
- year = {1988},
- isbn = {0-89791-276-4},
- location = {New Haven, Connecticut, USA},
- pages = {111--123},
- numpages = {13},
- url = {http://doi.acm.org/10.1145/62115.62127},
- doi = {10.1145/62115.62127},
- acmid = {62127},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-@article{sisal,
- author = {Raymond, D. J.},
- title = {SISAL: A Safe and Efficient Language for Numerical Calculations},
- journal = {Linux J.},
- issue_date = {Nov. 2000},
- volume = {2000},
- number = {80es},
- month = nov,
- year = {2000},
- issn = {1075-3583},
- articleno = {14},
- url = {http://dl.acm.org/citation.cfm?id=364352.364663},
- acmid = {364663},
- publisher = {Belltown Media},
- address = {Houston, TX},
-}
-
-@inproceedings{multilisp,
- author = {McKay, Donald P. and Shapiro, Stuart C.},
- title = {MULTI - a LISP based multiprocessing system},
- booktitle = {Proceedings of the 1980 ACM conference on LISP and functional programming},
- series = {LFP '80},
- year = {1980},
- location = {Stanford University, California, USA},
- pages = {29--37},
- numpages = {9},
- url = {http://doi.acm.org/10.1145/800087.802787},
- doi = {10.1145/800087.802787},
- acmid = {802787},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-
-@inproceedings{adaptive,
- author = {Agrawal, Kunal and He, Yuxiong and Leiserson, Charles E.},
- title = {{Adaptive Work Stealing with Parallelism Feedback}},
- booktitle = {PPoPP},
- year = {2007},
- pages = {112--120},
- }
-
-
-@article{sched,
- author = {Blumofe, Robert D. and Leiserson, Charles E.},
- title = {{Scheduling Multithreaded Computations by Work Stealing}},
- journal = {J. ACM},
- year = {1999},
- pages = {720--748},
- }
-
-
-@inproceedings{load,
- author = {Navarro, Angeles and Asenjo, Rafael and Tabik, Siham and Ca\c{s}caval, C\v{a}lin},
- title = {{Load Balancing Using Work-Stealing for Pipeline Parallelism in Emerging Applications}},
- booktitle = {ICS},
- year = {2009},
- pages = {517--518},
- }
-
-@inproceedings{cilk,
- author = {Frigo, Matteo and Leiserson, Charles E. and Randall, Keith H.},
- title = {{The Implementation of the Cilk-5 Multithreaded Language}},
- booktitle = {PLDI},
- year = {1998},
- pages = {212--223}
- }
-
-
-@book{lucid,
- author = {Wadge, William W. and Ashcroft, Edward A.},
- title = {LUCID, The Dataflow Programming Language},
- year = {1985},
-}
-
-@techreport{val,
- author = {Acherman, W. B. and Dennis, J. B. and Ackerman, William B},
- title = {Val- Value Oriented Algorithmic Language, Preliminary Reference Manual},
- year = {1979},
-}
-
-@article{dataflow,
- author = {Johnston, Wesley M. and Hanna, J. R. Paul and Millar, Richard J.},
- title = {{Advances in Dataflow Programming Languages}},
- journal = {ACM Comput. Surv.},
- year = {2004},
- pages = {1--34},
- }
-
-@inproceedings{kilim,
-  author    = {Sriram Srinivasan and
-               Alan Mycroft},
-  title     = {{Kilim: Isolation-Typed Actors for Java}},
-  booktitle = {ECOOP},
-  year      = {2008},
-  pages     = {104-128},
-}
-
-
-@inproceedings{MPI,
- author = {Li, Guodong and Delisi, Michael and Gopalakrishnan, Ganesh and Kirby, Robert M.},
- title = {{Formal Specification of the MPI-2.0 Standard in TLA+}},
- booktitle = {PPoPP},
- year = {2008},
- pages = {283--284},
-}
-
-
-
-@inproceedings{MPI2,
- author = {Tang, Hong and Yang, Tao},
- title = {{Optimizing Threaded MPI Execution on SMP Clusters}},
- booktitle = {ICS},
- year = {2001},
- pages = {381--392},
-}
-
-
-@inproceedings{RX07,
- author = {John Reppy and Yingqi Xiao},
- title = {{Specialization of CML Message-Passing Primitives}},
- booktitle = {POPL},
- year = {2007},
- pages = {315--326}
-}
-
-@inproceedings{ContMP,
- author = {Wand, Mitchell},
- title = {Continuation-based multiprocessing},
- booktitle = {Proceedings of the 1980 ACM conference on LISP and functional programming},
- series = {LFP '80},
- year = {1980},
- location = {Stanford University, California, USA},
- pages = {19--28},
- numpages = {10},
- url = {http://doi.acm.org/10.1145/800087.802786},
- doi = {10.1145/800087.802786},
- acmid = {802786},
- publisher = {ACM},
- address = {New York, NY, USA},
-}
-
-
-@inproceedings{PML,
-  author = {John Reppy and Yingqi Xiao},
-  title = {{Towards a Parallel Implementation of Concurrent ML}},
-  booktitle = {DAMP},
-  year = 2008,
-  month = jan,
-}
-
-@book(Reppy99,
-  author = {John H. Reppy},
-  title = {Concurrent Programming in ML},
-  year = 1999,
-  publisher = {Cambridge University Press})
-
-
-
-@misc{intel,
-   author = {Intel},
-   note = "http://software.intel.com/en-us/articles/intel-mpi-benchmarks"}
-
-@misc{Csharp,
-	 year = 2013,
-   author = {C\# Language Specification},
-   note = "http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf"}
-
-@book(Fsharp,
-   author = {Don Syme and Adam Granicz and Antonio Cisternino},
-   title = {Expert F\#},
-   publisher = {Apress},
-   year = 2007)
-
-@book{Milner97,
- author = {Robin Milner and Mads Tofte and David Macqueen},
- title = {{The  Definition of Standard ML}},
- year = {1997},
- publisher = {MIT Press},
-}
-
-@misc(ghc,
-   key = {GHC},
-   title = {{Glasgow Haskell Compiler}},
-   note = {{\tt http://www.haskell.org/ghc}})
-
-
-@inproceedings(haskellsm,
-  author = {Tim Harris and Simon Marlow and and Simon Peyton Jones},
-  title = {{Haskell on a Shared-Memory Multiprocessor}},
-  booktitle = {Haskell Workshop},
-  pages = {49-61},
-  year = 2005)
-
-@inproceedings{lazy,
- author = {Mohr, Eric and Kranz, David A. and Halstead,Jr., Robert H.},
- title = {{Lazy Task Creation: A Technique for Increasing the Granularity of Parallel Programs}},
- booktitle = {LFP},
- year = {1990},
- pages = {185--197},
-}
-
-@inproceedings{mpj,
- author = {Baker, Mark and Carpenter, Bryan},
- title = {MPJ: A Proposed Java Message Passing API and Environment for High Performance Computing},
- booktitle = {IPDPS},
- year = {2000},
- pages = {552--559},
-}
-
-@article{actors,
- author = {Agha, Gul},
- title = {{An Overview of Actor Languages}},
- journal = {SIGPLAN Not.},
- year = {1986},
- pages = {58--67},
-}
-
-@book{erlang,
-author = {Joe Armstrong and Robert Virding and Claes Wikstrom and Mike Williams},
-title =  {{Concurrent Programming in Erlang}},
-publisher = {Prentice-Hall, 2nd edition},
-year = 1996}
-
-@book{java-util,
-author = {Doug Lea},
-title = {Concurrent Programming in Java(TM): Design Principles and Pattern},
-publisher = {Prentice-Hall, 2nd edition},
-year = 1999}
-
-@inproceedings{cap,
- author = {Rob von Behren and Jeremy Condit and Feng Zhou and George Necula and Eric Brewer},
- title = {{Capriccio: Scalable Threads for Internet Services}},
- booktitle = {SOSP},
- year = {2003},
- pages = {268--281},
- }
-
-
-@inproceedings{mul-t,
- author = {Kranz, D. A. and Halstead,Jr., R. H. and Mohr, E.},
- title = {{Mul-T: A High-Performance Parallel Lisp}},
- booktitle = {PLDI},
- year = {1989},
- pages = {81--90},
-}
-
-@inproceedings(FF86,
-  title = {{Control operators, the SECD Machine, and the $\lambda$-calculus}},
-  author = {Matthias Felleisen, M. and Dan Friedman},
-  booktitle =  {Formal Description of Programming Concepts III},
-  year = 1986,
-  pages = {193-217})
-
-@book(NiAr,
-  title = {{Implicit Parallel Programming in pH}},
-  author = {Rishiyur Nikhil and Arvind},
-  publisher = {Morgan-Kaufmann},
-  year = 2001)
-
-
-@inproceedings{SparksICFP,
-    author = {Marlow, Simon and Peyton Jones, Simon and Singh, Satnam},
-    title = {Runtime support for multicore Haskell},
-    booktitle = {ICFP},
-    year = {2009},
-}
-
-@inproceedings{ACML,
-    author = {Ziarek, Lukasz and Sivaramakrishnan, KC and Jagannathan, Suresh},
-    title = {Composable Asynchronous Events},
-    booktitle = {PLDI},
-    year = {2011},
-}
-
-@inproceedings{JoinCalculus,
-    author = {Fournet, C\'{e}dric and Gonthier, Georges},
-    title = {The Join Calculus: A Language for Distributed Mobile
-        Programming},
-    booktitle = {APPSEM},
-    year = {2002},
-    pages = {268--332},
-}
-
-@inproceedings{cmllch-C09,
-    author = {Avik Chaudhuri},
-    title = {A Concurrent ML Library in Concurrent Haskell},
-    booktitle = {ICFP},
-    year = {2009},
-}
-
-@inproceedings{PmlICFP,
-    author = {Reppy, John and Russo, Claudio V. and Xiao, Yingqi},
-    title = {Parallel concurrent ML},
-    booktitle = {ICFP},
-    year = {2009},
-}
-
-@inproceedings{ParasitesDAMP,
-    author = {Sivaramakrishnan, KC and Ziarek, Lukasz and Prasad, Raghavendra
-        and Jagannathan, Suresh},
-    title = {Lightweight asynchrony using parasitic threads},
-    booktitle = {DAMP},
-    year = {2010},
-}
-
-@inproceedings{X10,
-    author = {Charles, Philippe and Grothoff, Christian and Saraswat, Vijay and
-        Donawa, Christopher and Kielstra, Allan and Ebcioglu, Kemal and von
-            Praun, Christoph and Sarkar, Vivek},
-    title = {X10: an object-oriented approach to non-uniform cluster
-        computing},
-    booktitle = {OOPSLA},
-    year = {2005},
-}
-
-@book{PThreads,
-    author = {Butenhof, David R.},
-    title = {Programming with POSIX threads},
-    year = {1997},
-    publisher = {Addison-Wesley Longman Publishing Co., Inc.},
-    address = {Boston, MA, USA},
-}
-
-@article{TBB,
-    author = {Pheatt, Chuck},
-    title = {Intel threading building blocks},
-    journal = {J. Comput. Small Coll.},
-    year = {2008},
-}
-
-
-@article{LazyThreads,
-    author = {Goldstein, Seth Copen and Schauser, Klaus Erik and Culler, David
-        E.},
-    title = {Lazy threads: implementing a fast parallel call},
-    journal = {J. Parallel Distrib. Comput.},
-    year = {1996},
-}
-
-@incollection{Charm,
-    author = "Laxmikant Kale",
-    title = "{Charm++}",
-    booktitle = "Encyclopedia of Parallel Computing (to appear)",
-    publisher = "Springer Verlag",
-    year = "2011",
-}
-
-@article{js_of_ocaml,
-	author = {Vouillon, Jérôme and Balat, Vincent},
-	title = {{From Bytecode to JavaScript: The Js\_of\_ocaml Compiler}},
-	journal = {Software: Practice and Experience},
-	volume = {44},
-	number = {8},
-	pages = {951--972},
-	year = {2014},
-}
-
-@inproceedings{effects,
-	author = {Dolan, Stephen and White, Leo and Sivaramakrishnan, KC and Yallop, Jeremy and Madhavapeddy, Anil},
-	title = {{Effective Concurrency through Algebraic Effects}},
-	booktitle = {{The OCaml Users and Developers Workshop}},
-	series = {OCaml '15},
-	year = {2015},
-	address = {Vancouver, Canada}
-}
-
-@phdthesis{thesis,
-	author={Sivaramakrishnan, KC},
-	advisor={Jagannathan, Suresh},
-	title = {{Functional Programming Abstractions for Weakly Consistent Systems}},
-	year = {2014},
-	school = {Purdue University},
-	address = {West Lafayette, IN, USA},
+  url = {https://doi.org/10.1145/3453483.3454039},
+  doi = {10.1145/3453483.3454039},
+  booktitle = {Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+  pages = {206–221},
+  numpages = {16},
+  keywords = {Backtraces, Backwards compatibility, Continuations, Effect handlers, Fibers},
+  location = {Virtual, Canada},
+  series = {PLDI 2021}
+}
+
+@article{oxidising,
+  author = {Lorenzen, Anton and White, Leo and Dolan, Stephen and A. Eisenberg, Richard and Lindley, Sam},
+  title = {Oxidising OCaml with Modal Memory Management},
+  year = {2024},
+  issue_date = {September 2024},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {4},
+  number = {ICFP},
+  url = {https://homepages.inf.ed.ac.uk/slindley/papers/mode-inference-draft-feb2024.pdf},
+  journal = {Proc. ACM Program. Lang.},
+  month = {sep},
+  numpages = {30},
+}
+
+@article{RetroParallel,
+  author = {Sivaramakrishnan, KC and Dolan, Stephen and White, Leo and Jaffer, Sadiq and Kelly, Tom and Sahoo, Anmol and Parimala, Sudha and Dhiman, Atul and Madhavapeddy, Anil},
+  title = {Retrofitting parallelism onto OCaml},
+  year = {2020},
+  issue_date = {August 2020},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {4},
+  number = {ICFP},
+  url = {https://doi.org/10.1145/3408995},
+  doi = {10.1145/3408995},
+  journal = {Proc. ACM Program. Lang.},
+  month = {aug},
+  articleno = {113},
+  numpages = {30},
+  keywords = {concurrent garbage collection, backwards compatibility}
+}
+
+
+@inproceedings{LDRF,
+  author = {Dolan, Stephen and Sivaramakrishnan, KC and Madhavapeddy, Anil},
+  title = {Bounding data races in space and time},
+  year = {2018},
+  isbn = {9781450356985},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3192366.3192421},
+  doi = {10.1145/3192366.3192421},
+  booktitle = {Proceedings of the 39th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+  pages = {242–255},
+  numpages = {14},
+  keywords = {weak memory models, operational semantics},
+  location = {Philadelphia, PA, USA},
+  series = {PLDI 2018}
+}
+
+@article{WasmFX,
+  author = {Phipps-Costin, Luna and Rossberg, Andreas and Guha, Arjun and Leijen, Daan and Hillerstr\"{o}m, Daniel and Sivaramakrishnan, KC and Pretnar, Matija and Lindley, Sam},
+  title = {Continuing WebAssembly with Effect Handlers},
+  year = {2023},
+  issue_date = {October 2023},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {7},
+  number = {OOPSLA2},
+  url = {https://doi.org/10.1145/3622814},
+  doi = {10.1145/3622814},
+  journal = {Proc. ACM Program. Lang.},
+  month = {oct},
+  articleno = {238},
+  numpages = {26},
+  keywords = {WebAssembly, effect handlers, stack switching}
+}
+
+@inproceedings{peepul,
+  author = {Soundarapandian, Vimala and Kamath, Adharsh and Nagar, Kartik and Sivaramakrishnan, KC},
+  title = {Certified mergeable replicated data types},
+  year = {2022},
+  isbn = {9781450392655},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3519939.3523735},
+  doi = {10.1145/3519939.3523735},
+  booktitle = {Proceedings of the 43rd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+  pages = {332–347},
+  numpages = {16},
+  keywords = {Automated verification, Eventual consistency, MRDTs, Replication-aware simulation},
+  location = {San Diego, CA, USA},
+  series = {PLDI 2022}
+}
+
+@article{mrdt,
+  author = {Kaki, Gowtham and Priya, Swarn and Sivaramakrishnan, KC and Jagannathan, Suresh},
+  title = {Mergeable replicated data types},
+  year = {2019},
+  issue_date = {October 2019},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {3},
+  number = {OOPSLA},
+  url = {https://doi.org/10.1145/3360580},
+  doi = {10.1145/3360580},
+  journal = {Proc. ACM Program. Lang.},
+  month = {oct},
+  articleno = {154},
+  numpages = {29},
+  keywords = {CRDTs, Git, Replication, Version Control, Weak Consistency}
 }
