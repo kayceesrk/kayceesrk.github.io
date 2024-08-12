@@ -228,14 +228,18 @@ open-source secure software such as MirageOS to help build trustworthy systems.
 
 \paragraph{\bf Mechanically verified garbage collectors.} In my experience
 building multiple concurrent garbage collectors (GC), debugging rare and
-non-deterministic failures take up significant amount of development time.
-Garbage collectors are written in memory-unsafe languages and bugs in the GCs
-can lead to security vulnerabilities in the safe language code. Can we build
-practical, correct-by-construction, mechanically verified GCs? To this end, we
-have built a correct-by-construction stop-the-world mark-and-sweep GC in the F*
-programming language and extracted that to C using the KaRaMel toolchain. The
-GC includes enough features that it can be used as a replacement for the GC in
-the OCaml programming language and does not compromise on the performance.
+non-deterministic failures took up significant amount of development time.
+Garbage collectors are typically written in memory-unsafe languages where there
+is explicit control over low-level memory management facilities. However, bugs
+in the GCs can lead to security vulnerabilities in the safe language code. Can
+we build practical, correct-by-construction, mechanically verified GCs? To this
+end, we have built a correct-by-construction stop-the-world mark-and-sweep GC
+in the F* programming language and extracted that to C using the KaRaMel
+compiler. The GC includes enough features that it can be used as a replacement
+for the GC in the OCaml programming language and does not compromise on the
+performance. The GC and its proofs of correctness are designed in a modular
+fashion, and we plan to use this modularity to extend the GC to support
+incremental, generational and concurrent garbage collection.
 
 All of the research listed above is being conducted in collaboration with IIT
 Madras colleagues and PhD students, and the corresponding papers are under
