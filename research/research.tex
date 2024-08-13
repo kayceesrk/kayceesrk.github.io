@@ -251,14 +251,24 @@ In the future, I plan to continue to push towards my goal of empowering
 developers to build correct, scalable and secure software. I see a number of
 recent developments that will accelerate the push towards this goal.
 
-\paragraph{\bf Securing the foundations with OCaml Oxide.} Oxidising OCaml
+\paragraph{\bf Securing the foundations.} Oxidising OCaml
 project~\cite{oxidising} brings Rust-style ownership and borrowing to OCaml. In
-particular, it brings in the ability to reason about the lifetimes of objects
+particular, it brings the ability to reason about the lifetimes of objects
 statically, which turns out to be a useful building block for a variety of
-features. I plan to use the Oxidising OCaml project bring effect safety to
-effect handlers in OCaml 5, stricter data sharing policies in FIDES
-compartments and build better concurrent data structures that can take
-advantage of static knowledge of object sharing between different threads.
+features. I plan to explore possibility of using Oxidising OCaml project to
+bring effect safety (the ability to statically detect the absence of a handler
+for an effect) to effect handlers in OCaml 5, stricter data sharing policies in
+FIDES compartments and build better concurrent data structures that can take
+advantage of the static knowledge of object sharing between different threads.
+In addition, commercial processor manufacturers such as Intel, AMD and ARM have
+introduced security-oriented features such as trusted execution environments
+(Intel SGX, ARM TrustZone), memory encryption (AMD SEV), memory tagging (ARM
+PA, ARM MTE) and control-flow integrity (Intel CET, ARM BTI). While these
+extensions have been used for C and C++ code, they have not been used
+extensively for mixed safe and unsafe language systems. I am keen to explore
+how language-oriented security such as using refinement types for
+information-flow control (IFC) can be profitably combined with hardware
+security features to build secure systems.
 
 \paragraph{\bf Trustworthy CodeLLMs.} CodeLLMs are specialized language models
 designed and trained to understand, generate, and reason about programming
