@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Why OCaml?**  
+   Rezilyens, Coimbatore, 2024  
+   [\[slides (pdf)\]](slides/why_ocaml_in_2024.pdf) [\[slides (key)\]](slides/why_ocaml_in_2024.key)  
  * **Concurrent Programming with Effect Handlers**  
    Chalmers University of Technology, 2024  
    [\[slides (pdf)\]](slides/effects_chalmers.pdf) [\[slides (key)\]](slides/effects_chalmers.key)  
