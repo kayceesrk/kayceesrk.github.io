@@ -5,11 +5,14 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Concurrent and Parallel Programming in OCaml 5**  
+   Meta, London, Sep 2024  
+   [\[slides (pdf)\]](slides/OCaml_5_Meta_Sep_24.pdf) [\[slides (key)\]](slides/OCaml_5_Meta_Sep_24.key)  
  * **Why OCaml?**  
-   Rezilyens, Coimbatore, 2024  
+   Rezilyens, Coimbatore, Aug 2024  
    [\[slides (pdf)\]](slides/why_ocaml_in_2024.pdf) [\[slides (key)\]](slides/why_ocaml_in_2024.key)  
  * **Concurrent Programming with Effect Handlers**  
-   Chalmers University of Technology, 2024  
+   Chalmers University of Technology, May 2024  
    [\[slides (pdf)\]](slides/effects_chalmers.pdf) [\[slides (key)\]](slides/effects_chalmers.key)  
  * **Securing Functional Programs with Hardware Support**  
    [WG 2.8 2024](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), Apr 2024  
