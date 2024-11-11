@@ -28,8 +28,9 @@ be compiled with frame pointers for full backtraces.
 ### OCaml
 
 For OCaml, you'll need a compiler variant with frame pointers enabled. If you
-are installing a released compiler using `opam`, look for `+fp` variants in
-`opam switch list-available`.
+are installing a released compiler using `opam`, you can create one the following 
+switch command `opam switch create 5.2.0+fp 5.2.0 ocaml-option-fp`. Change out 
+`5.2.0` for your preferred OCaml version.
 
 Instead, if you are building the OCaml compiler from source, `configure` the
 compiler with `--enable-frame-pointers` option:
