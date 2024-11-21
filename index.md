@@ -94,8 +94,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
  * Email : kcsrk@cse.iitm.ac.in (used for academic work), kc@tarides.com, kc@kcsrk.info
  * IRL : <a href="https://maps.app.goo.gl/jZhP9rRnTLQbctPi9"> Tarides, Chennai </a>
+ * Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a> (aiming to use less of this in favour of ↓)
  * Bluesky : <a href="https://bsky.app/profile/kcsrk.info"> @kcsrk.info </a>
- * Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a>
  * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
  * BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
 
