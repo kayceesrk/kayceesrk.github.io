@@ -5,6 +5,9 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Securing the foundations: Hardware-assisted secure Unikernels**  
+   CAIR, DRDO, Nov 2024  
+   [\[slides (pdf)\]](slides/mirage_fides.pdf) [\[slides (key)\]](slides/mirage_fides.key)  
  * **Concurrent and Parallel Programming in OCaml 5**  
    Meta, London, Sep 2024  
    [\[slides (pdf)\]](slides/OCaml_5_Meta_Sep_24.pdf) [\[slides (key)\]](slides/OCaml_5_Meta_Sep_24.key)  
