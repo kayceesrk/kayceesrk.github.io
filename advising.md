@@ -29,15 +29,28 @@ I have had the pleasure of working with wonderful students over the years.
 ### Alumni
 
 * Atul Dhiman, MTech, IITM (2019-2020). Next: Oracle India.
+  + Domainslib for Multicore OCaml
 
 ## BTech
 
+* Aditya Pravin Palwe (Spring 2025)
+  + Compiling OCaml to MLIR: Middle-end
+* Aditya Srivastava (Spring 2025)
+  + Compiling OCaml to MLIR: Backend
+* Chandaluru Hema Venkata Raadhes (Spring 2025)
+  + MMTK for OCaml
+* Athish Pranav, UGRC, IITM (Monsoon 2024)
+  + Verifiable voting systems
+
 ### Alumni
 
-* Sooraj Srinivasan, UGRC, IITM (2023).
-* Mantra Trambadia, UGRC, IITM (2023).
-* Narasimha YSS, UGRC, IITM (2023).
-* Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021). Next: Rubrick. 
+* Sooraj Srinivasan, UGRC, IITM (2023)
+  + Irmin
+* Mantra Trambadia, UGRC, IITM (2023)
+  + Verified interval trees in F*
+* Narasimha YSS, UGRC, IITM (2023)
+* Anirudh Sunder Raj (Dual Degree Project; 2020 - 2021). Next: Rubrick.
+  + Stack switching support in Wasmtime
 * Arnhav Datar, UGRC, IITM (2021). Next: [MSCS @ CMU](https://www.cs.cmu.edu/).
 
 ## Interns
