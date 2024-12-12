@@ -69,7 +69,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **PC Chair** -- PaPoC'22, ML'19
 * **AEC Chair** -- ESOP'22
 * **PC member**
-  + 2025: ICFP'25
+  + 2025: ICFP'25, PaPoC'25
   + 2024: OOPSLA'24, PaPoC'24, POPL'24, TFP'24, PEPM'24
   + 2023: PLDI'23
   + 2022: OCaml'22, ML'22, PEPM'22, PLDI'22
@@ -84,7 +84,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 * **Invited meetings**
-  + Observer, WG 2.1, Canberra, 2024
+  + [Dagstuhl meeting on "Utilising and Scaling the WebAssembly Semantics"](https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/25241), 2025
+  + Observer, WG 2.1, Canberra, 2024 (Declined due to personal reasons)
   + [Guest, WG 2.8, Utrecht](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), 2024
   + [Dagstuhl meeting on "Foundation of WebAssembly"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/23101), 2023
   + [Dagstuhl meeting on "Scalable handling of effects"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/21292), 2021
