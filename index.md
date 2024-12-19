@@ -53,14 +53,19 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[Apr 24\]** Attending WG2.8 meeting at Utrecht.
- * **\[Apr 24\]** Serving on [OOPSLA 24](https://2024.splashcon.org/track/splash-2024-oopsla) PC. 
+ * **\[Jan 25\]** Teaching [Programs and Proofs](https://kcsrk.info/cs6225_s21_iitm/) again.
+ * **\[Dec 24\]** Serving on the [PaPoC 2025](https://papoc-workshop.github.io/2025/) PC.
+ * **\[Dec 24\]** Serving on the [ICFP 2025](https://icfp25.sigplan.org/track/icfp-2025-papers) PC.
+ * **\[Dec 24\]** Serving as an Associate Editor for [OOPSLA 2025](https://2025.splashcon.org/track/OOPSLA).
 
 # Activities
 
 * **DEI Co-Chair:** ICFP 2025.
 * **Associate Editor:** OOPSLA 2025.
-* **Streeing committee member**: ICFP, Member at Large, serving 9/2023 -- 9/2027
+* **Streeing committee member**: 
+  + ICFP, Member at Large, serving 9/2023 -- 9/2027
+  + [Principles and Practice of Consistency for Distributed Data (PaPoC)](https://papoc-workshop.github.io/2025/committees.html)
+  + [ML workshop](https://www.mlworkshop.org/steering-committee), 2019 -- 2022
 * **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
 * **Organizer** 
   + [First OCaml Retreat at Auroville](https://ocamlretreat.org/), 2024
