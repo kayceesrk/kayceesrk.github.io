@@ -5,9 +5,9 @@ title: About
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 180px; float:
 right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am
-an Assistant Professor in the [Computer Science and Engineering
-department](http://cse.iitm.ac.in/) at [Indian Institute of Technology,
-Madras](https://www.iitm.ac.in/) and the Chief Technology Officer of
+an Assistant Professor in the [Computer Science and
+Engineering](http://cse.iitm.ac.in/) department at [Indian Institute of
+Technology, Madras](https://www.iitm.ac.in/) and the Chief Technology Officer of
 [Tarides](https://tarides.com/). I am interested in building robust, secure and
 scalable systems using programming language technology. 
 
