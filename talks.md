@@ -7,7 +7,7 @@ permalink: talks.html
 # Talks
  * **Towards smaller, safer, bespoke OSes with Unikernels**   
    Daekin Cyber -- IITM Research Workshop, Jan 2025  
-   [\[slides (pdf)\]](slides//mirage_iitm_jan_2025.pdf) [\[slides (key)\]](slides//mirage_iitm_jan_2025.key)  
+   [\[slides (pdf)\]](slides/mirage_iitm_jan_2025.pdf) [\[slides (key)\]](slides/mirage_iitm_jan_2025.key)  
  * **Securing the foundations: Hardware-assisted secure Unikernels**  
    CAIR, DRDO, Nov 2024  
    [\[slides (pdf)\]](slides/mirage_fides.pdf) [\[slides (key)\]](slides/mirage_fides.key)  
