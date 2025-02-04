@@ -31,7 +31,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
      [TallyGuard: Privacy Preserving Tallied-as-cast Guarantee](papers/tallyguard_jan_25.pdf)  
      *Jan 2025*  
   *  <div id=""/> Vimala Soundarapandian, Kartik Nagar, Aseem Rastogi, KC Sivaramakrishnan  
-     [Automatically Verifying Replication-aware Linearizability](papers/mrdtconvergence_jan_25.pdf)  
+     [Automatically Verifying Replication-aware Linearizability](papers/mrdtconverge_jan_25.pdf)  
      *Jan 2025*  
   *  <div id="verifiedgc_draft1224"/> Sheera Shamsu, Dipesh Kafle, Dhruv Maroo, Kartik Nagar, Karthikeyan Bhargavan, KC Sivaramakrishnan  
      [A Mechanically Verified Garbage Collector for OCaml](papers/verifiedgc_nov_24.pdf)  
