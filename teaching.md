@@ -9,7 +9,7 @@ permalink: teaching.html
 ## IIT Madras
 
 * CS6225: Programs and Proofs
-    * [Spring 2025]({{ site.url }}/cs6225_s25_iitm), [Spring 2021]({{ site.url }}/cs6225_s21_iitm), Spring 2020: [CS6225 Programs and Proofs]({{ site.url }}/cs6225_s20_iitm)
+    * [Spring 2025]({{ site.url }}/cs6225_s25_iitm), [Spring 2021]({{ site.url }}/cs6225_s21_iitm), [Spring 2020]({{ site.url }}/cs6225_s20_iitm)
     * [YouTube playlist of the lectures](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb)
 * CS3300: Compiler Design
     * [Monsoon 2022]({{ site.url }}/cs3300_m22)
