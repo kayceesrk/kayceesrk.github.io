@@ -96,8 +96,8 @@ from the [Programming Language Mentoring
 Workshops](https://www.sigplan.org/Conferences/PLMW/). Many of the talks are
 available online on YouTube. Here are the ones that I found to be quite useful:
 
-* Derek Dreyer's series of talks on writing papers and giving talks:
-  + [How to write papers and give talks that people can follow](https://people.mpi-sws.org/~dreyer/talks/talk-plmw22icfp.pdf)
-  + [How To Write Papers So People Can Read Them](https://www.youtube.com/watch?v=XpgJ31GKPWI)
++ [How to write papers and give talks that people can follow](https://people.mpi-sws.org/~dreyer/talks/talk-plmw22icfp.pdf)
++ [How To Write Papers So People Can Read Them](https://www.youtube.com/watch?v=XpgJ31GKPWI)
++ [How To Read a Research Paper: Seven Simple Ideas](https://youtu.be/e1vmUI59yHY?si=yBX9WdFMOFejU8sN)
 
 <br/>
