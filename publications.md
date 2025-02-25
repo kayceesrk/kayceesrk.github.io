@@ -31,7 +31,7 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
      [TallyGuard: Privacy Preserving Tallied-as-cast Guarantee](papers/tallyguard_jan_25.pdf)  
      *Jan 2025*  
   *  <div id="verifiedgc_draft1224"/> Sheera Shamsu, Dipesh Kafle, Dhruv Maroo, Kartik Nagar, Karthikeyan Bhargavan, KC Sivaramakrishnan  
-     [A Mechanically Verified Garbage Collector for OCaml](papers/verifiedgc_nov_24.pdf)  
+     [A Mechanically Verified Garbage Collector for OCaml](papers/verifiedgc_feb_25.pdf)  
      *Dec 2024*  
   *  <div id="picos_draft0723"/> Deepali Ande, Sudha Parimala, KC Sivaramakrishnan  
      [Effectively Composing Concurrency Libraries](papers/composable_concurrency.pdf)  
