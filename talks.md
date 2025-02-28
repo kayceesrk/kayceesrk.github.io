@@ -5,6 +5,12 @@ permalink: talks.html
 ---
 
 # Talks
+ * **Concurrent and Parallel Programming with OCaml 5 (part 1)**  
+   PACE Lab Research Huddle, Feb 2025  
+   [\[slides (pdf)\]](slides/ocaml5_pace.pdf) [\[slides (key)\]](slides/ocaml5_pace.key)  
+ * **Memory Safety & Programming Languages**  
+   Schaeffler Group @ IITM, Feb 2025  
+   [\[slides (pdf)\]](slides/memory_safety.pdf) [\[slides (key)\]](slides/memory_safety.key)  
  * **Towards smaller, safer, bespoke OSes with Unikernels**   
    Daekin Cyber -- IITM Research Workshop, Jan 2025  
    [\[slides (pdf)\]](slides/mirage_iitm_jan_2025.pdf) [\[slides (key)\]](slides/mirage_iitm_jan_2025.key)  
