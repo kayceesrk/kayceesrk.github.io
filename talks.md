@@ -6,6 +6,9 @@ permalink: talks.html
 
 # Talks
  * **Concurrent and Parallel Programming with OCaml 5 (part 1)**  
+   IIT Gandhinagar, Mar 2025  
+   [\[slides (pdf)\]](slides/ocaml5_iitgn.pdf) [\[slides (key)\]](slides/ocaml5_iitgn.key)  
+ * **Concurrent and Parallel Programming with OCaml 5 (part 1)**  
    PACE Lab Research Huddle, Feb 2025  
    [\[slides (pdf)\]](slides/ocaml5_pace.pdf) [\[slides (key)\]](slides/ocaml5_pace.key)  
  * **Memory Safety & Programming Languages**  
