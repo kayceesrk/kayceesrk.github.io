@@ -72,7 +72,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **PC Chair** -- PaPoC'22, ML'19
 * **AEC Chair** -- ESOP'22
 * **PC member**
-  + 2025: [ICFP'25](https://icfp25.sigplan.org/), [PaPoC'25](https://papoc-workshop.github.io/2025/), [APLAS'25](https://conf.researchr.org/home/aplas-2025)
+  + 2025: [FunArch'25](), [ICFP'25](https://icfp25.sigplan.org/), [PaPoC'25](https://papoc-workshop.github.io/2025/), [APLAS'25](https://conf.researchr.org/home/aplas-2025)
   + 2024: OOPSLA'24, PaPoC'24, POPL'24, TFP'24, PEPM'24
   + 2023: PLDI'23
   + 2022: OCaml'22, ML'22, PEPM'22, PLDI'22
