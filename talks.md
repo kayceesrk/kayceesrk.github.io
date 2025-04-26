@@ -5,7 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
- * **Concurrent and Parallel Programming with OCaml 5 (part 1)**  
+ * **Concurrent and Parallel Programming with OCaml 5**  
+   Bloomberg, Mar 2025  
+   [\[slides (pdf)\]](slides/ocaml5_bloomberg.pdf) [\[slides (key)\]](slides/ocaml5_bloomberg.key)  
+ * **Concurrent and Parallel Programming with OCaml 5**  
    IIT Gandhinagar, Mar 2025  
    [\[slides (pdf)\]](slides/ocaml5_iitgn.pdf) [\[slides (key)\]](slides/ocaml5_iitgn.key)  
  * **Concurrent and Parallel Programming with OCaml 5 (part 1)**  

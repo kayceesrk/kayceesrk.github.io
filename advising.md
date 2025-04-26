@@ -15,6 +15,7 @@ I have had the pleasure of working with wonderful students over the years.
   + [Prime Minister's Research Fellow](https://pmrf.in/)
 * Sai Venkata Krishnan (2021-) (co-supervised with [Chester Rebeiro](https://www.cse.iitm.ac.in/~chester/))
   + [Prime Minister's Research Fellow](https://pmrf.in/)
+* Durwasa Chakraborty (2025-)
 
 ## MS Students
 
