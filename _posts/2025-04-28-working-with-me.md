@@ -33,27 +33,29 @@ can make it work.  Please do go through my [web page](https://kcsrk.info) to
 look at what areas I work on. Write to me about what interests you and what your
 goals are.
 
-My group works on systems. And systems requires that you have demonstrable
-systems building experience. Do build projects that go beyond your coursework.
-Make sure that the projects are developed publicly on GitHub or other similar
-platforms so that one can take a quick look at what you've built. The group
-solves systems problems with functional programming. If you have prior
+My group works on systems. To make the internship work well, we require that you
+have demonstrable systems building experience. Do build projects that go beyond
+your coursework.  Make sure that the projects are developed publicly on GitHub
+or other similar platforms so that one can take a look at what you've
+built. Even better is contributions to other open-source projects.
+
+The group solves systems problems with functional programming. If you have prior
 experience with functional programming, such as building small projects with
 OCaml, Haskell, Scala, Scheme or other languages, it is easier for me to assess
 your interest. That said, if you are great at any programming language, having
 built non-trivial projects in any language, then you have the right skills for
-internships. Generally, I expect the interns to have done course work on OS,
-compilers and computer architecture. Projects in any of those areas is a huge
-plus.
+internships in my group. Generally, I expect the interns to have done course
+work on OS, compilers and computer architecture. Significant projects in any of
+those areas is a huge plus.
 
 I should clarify that my recommendation letters for graduate programs will
 reflect my honest assessment of the internship. I will decline writing a
-recommendation letter if I think I may not be able to provide a positive one.
+recommendation letter if I think I may not be able to provide a strong one.
 
 I do not work on projects that are primarily AI/ML or Web Development. If you
 write to me looking for projects in those areas, it is very likely that you
-won't hear from me. Please don't bulk email faculty CCing or BCCing everyone. It
-is likely that no one will read such an email.
+won't hear from me. Please don't bulk email faculty CCing or BCCing everyone in
+the department. It is likely that no one will read such an email.
 
 ## PhD/MS/MTech positions
 
@@ -112,7 +114,14 @@ research associate position.
 
 Another variant is a post-bacc or a pre-doc position aimed at highly motivated
 recent graduates, who are looking to build research experience. The expectation
-here is that we get papers into top venues in PL and Systems.
+here is that we get papers into top venues in PL and Systems. For such students,
+I recommend going through my [CS6225 Programs and Proofs
+course](https://github.com/kayceesrk/cs6225_s25_iitm), watch the [video
+lectures](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb)
+and complete the
+[assignments](https://github.com/kayceesrk/cs6225_s25_iitm/tree/main/assignments).
+The course is not an easy one, but will train you to conduct research in the PL
+area.
 
 Research associate positions are fixed-term positions. In order to make this
 work, the tenure should be at least 18 months to make it work.
