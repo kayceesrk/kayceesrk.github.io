@@ -59,7 +59,7 @@ the department. It is likely that no one will read such an email.
 
 ## PhD/MS/MTech positions
 
-For academic positions, please have a look at https://research.iitm.ac.in/.
+For academic positions, please have a look at <https://research.iitm.ac.in/>.
 There are alternative ways to enter MS and PhD positions by being a reserach
 associate and completing some coursework at IITM. For more information, see
 [here](https://cystar.iitm.ac.in/join-us/#:~:text=Pathways%20to%20IIT%20Madras).
