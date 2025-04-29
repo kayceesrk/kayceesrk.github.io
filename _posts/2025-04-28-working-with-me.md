@@ -120,8 +120,10 @@ course](https://github.com/kayceesrk/cs6225_s25_iitm), watch the [video
 lectures](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb)
 and complete the
 [assignments](https://github.com/kayceesrk/cs6225_s25_iitm/tree/main/assignments).
-The course is not an easy one, but will train you to conduct research in the PL
-area.
+The course is not an easy one, but will expose you to the broad area of PL and
+specifically to deductive program verification. At the very least, you will come
+out with an understanding of what it is to think rigorously about program
+correctness.
 
 Research associate positions are fixed-term positions. In order to make this
 work, the tenure should be at least 18 months to make it work.
