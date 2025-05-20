@@ -7,7 +7,7 @@ permalink: talks.html
 # Talks
  * **Automatically Verifying Replicated Data Types**  
    WG 2.8 2025, May 2025  
-   [\[slides (pdf)\]](slides/Verifying_RA_Linearizability_wg28_2025pdf) [\[slides (key)\]](slides/Verifying_RA_Linearizability_wg28_2025.key)  
+   [\[slides (pdf)\]](slides/Verifying_RA_Linearizability_wg28_2025.pdf) [\[slides (key)\]](slides/Verifying_RA_Linearizability_wg28_2025.key)  
  * **Concurrent and Parallel Programming with OCaml 5**  
    Bloomberg, Mar 2025  
    [\[slides (pdf)\]](slides/ocaml5_bloomberg.pdf) [\[slides (key)\]](slides/ocaml5_bloomberg.key)  
