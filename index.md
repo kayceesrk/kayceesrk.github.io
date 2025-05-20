@@ -87,6 +87,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 * **Invited meetings**
+  + [Guest, WG 2.8, Maine](https://ifip-wg28.github.io/43-maine-2025/minutes.html), 2025
   + [Dagstuhl meeting on "Utilising and Scaling the WebAssembly Semantics"](https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/25241), 2025
   + Observer, WG 2.1, Canberra, 2024 (Declined due to personal reasons)
   + [Guest, WG 2.8, Utrecht](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), 2024
