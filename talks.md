@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+ * **OCaml's Parallel Runtime System**  
+   Guest Lecture, Parallel Functional Programming  
+   Chalmers University of Technology, May 2025  
+   [\[slides (pdf)\]](slides/gc_chalmers_2025.pdf) [\[slides (key)\]](slides/gc_chalmers_2025.key)  
  * **Automatically Verifying Replicated Data Types**  
    WG 2.8 2025, May 2025  
    [\[slides (pdf)\]](slides/Verifying_RA_Linearizability_wg28_2025.pdf) [\[slides (key)\]](slides/Verifying_RA_Linearizability_wg28_2025.key)  

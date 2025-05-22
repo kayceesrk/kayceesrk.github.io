@@ -51,10 +51,9 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[Jan 25\]** Teaching [Programs and Proofs](https://kcsrk.info/cs6225_s21_iitm/) again.
- * **\[Dec 24\]** Serving on the [PaPoC 2025](https://papoc-workshop.github.io/2025/) PC.
- * **\[Dec 24\]** Serving on the [ICFP 2025](https://icfp25.sigplan.org/track/icfp-2025-papers) PC.
- * **\[Dec 24\]** Serving as an Associate Editor for [OOPSLA 2025](https://2025.splashcon.org/track/OOPSLA).
+ * **\[May 25\]** Delivered a lecture on [OCaml 5's parallel runtime](https://kcsrk.info/talks) at Chalmers University of Technology.
+ * **\[May 25\]** "A Mechanically Verified Garbage Collector for OCaml" [published](https://link.springer.com/article/10.1007/s10817-025-09721-0) in JAR.
+ * **\[May 25\]** Attended WG 2.8 as an observer and spoke about [Automatically verifying MRDTs](https://kcsrk.info/talks).
 
 # Activities
 
