@@ -97,7 +97,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 # Contact
 
  * Email : kcsrk@cse.iitm.ac.in (used for academic work), kc@tarides.com, kc@kcsrk.info
- * IRL : <a href="https://maps.app.goo.gl/jZhP9rRnTLQbctPi9"> Tarides, Chennai </a>
+ * IRL : [SSB 413, IIT Madras](https://maps.app.goo.gl/42Wq2Cy5UQLkkDRo6)
  * Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a> (aiming to use less of this in favour of ↓)
  * Bluesky : <a href="https://bsky.app/profile/kcsrk.info"> @kcsrk.info </a>
  * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
