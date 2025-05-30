@@ -283,5 +283,7 @@ While there may be a number of rough edges in the implementation, which keeps
 changing, I'm excited about the possibility of modes improving how we do safe
 systems programming in OCaml.
 
+## Footnotes
+
 [^1]: Unclear whether it is possible to return a pair where one of the
     components is unique, but the other one is not.
