@@ -278,15 +278,20 @@ _advance_ the protocol type state.
 
 ## Where next
 
-Complete code examples are available
+The rest of the examples in the [original
+post](https://kcsrk.info/ocaml/types/2016/06/30/behavioural-types/) should also
+benefit from uniqueness annotations to remove the runtime overheads.
+
+The complete code examples are available
 [here](https://github.com/kayceesrk/code-snippets/tree/master/uniqueness_may_2025).
 You can also play with the code examples [directly in the
 browser](https://tinyurl.com/y7ku8r5h) thanks to [Patrick
 Ferris'](https://patrick.sirref.org/index/index.xml) OCaml with extensions
-[js_of_ocaml top-level](https://patrick.sirref.org/try-oxcaml/index.xml). Since
-the modes features are constantly evolving, there are no stability guarantees
-yet. However, I'm excited about the possibility of modes improving how we do
-safe systems programming in OCaml.
+[js_of_ocaml top-level](https://patrick.sirref.org/try-oxcaml/index.xml). 
+
+Since the modes features are constantly evolving, there are no stability
+guarantees yet. However, I'm excited about the possibility of modes improving
+how we do safe systems programming in OCaml.
 
 ## Footnotes
 
