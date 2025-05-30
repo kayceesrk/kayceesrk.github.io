@@ -254,12 +254,11 @@ end
 
 module Ref : Ref =
 struct
-
   type ('a, 'b) ref = {mutable contents : 'a} constraint 'b = [>]
 
-  let ref : 'a -> ('a, 'b) ref @ unique = fun v -> {contents = v}
+  let ref v = {contents = v}
 
-  let read : _ @ unique -> _ @ unique = fun r ->
+  let read r =
     let c = Modes.Aliased.{aliased = r.contents} in
     c, Obj.magic_at_unique r
 
@@ -279,9 +278,15 @@ _advance_ the protocol type state.
 
 ## Where next
 
-While there may be a number of rough edges in the implementation, which keeps
-changing, I'm excited about the possibility of modes improving how we do safe
-systems programming in OCaml.
+Complete code examples are available
+[here](https://github.com/kayceesrk/code-snippets/tree/master/uniqueness_may_2025).
+You can also play with the code examples [directly in the
+browser](https://tinyurl.com/y7ku8r5h) thanks to [Patrick
+Ferris'](https://patrick.sirref.org/index/index.xml) OCaml with extensions
+[js_of_ocaml top-level](https://patrick.sirref.org/try-oxcaml/index.xml). Since
+the modes features are constantly evolving, there are no stability guarantees
+yet. However, I'm excited about the possibility of modes improving how we do
+safe systems programming in OCaml.
 
 ## Footnotes
 
