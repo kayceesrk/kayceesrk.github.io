@@ -242,3 +242,8 @@ Section 2.1 of [Marshall et al.'s
 paper](https://starsandspira.ls/docs/esop22-draft.pdf) is quite readable and
 explains the distinction between linearity and uniqueness with some historical
 context. I highly recommend it.
+
+## Acknowledgements
+
+Thanks to [Richard Eisenberg](https://richarde.dev/) for the discussions which
+spurred this post.
