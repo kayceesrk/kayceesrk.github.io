@@ -293,6 +293,10 @@ Since the modes features are constantly evolving, there are no stability
 guarantees yet. However, I'm excited about the possibility of modes improving
 how we do safe systems programming in OCaml.
 
+## Addendum 
+
+Looks like there's a [part 2](https://kcsrk.info/ocaml/modes/oxcaml/2025/06/04/linearity_and_uniqueness/) of this post.
+
 ## Footnotes
 
 [^1]: Unclear whether it is possible to return a pair where one of the
