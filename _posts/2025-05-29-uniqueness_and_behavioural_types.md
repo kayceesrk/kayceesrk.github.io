@@ -2,7 +2,7 @@
 layout: post
 title: "Uniqueness for Behavioural Types"
 date: 2025-05-29 17:56
-categories: [OCaml, Modes]
+categories: [OCaml, Modes, OxCaml]
 excerpt_separator: <!--more-->
 ---
 
