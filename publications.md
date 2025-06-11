@@ -27,6 +27,10 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### Working drafts
 
+
+  *  <div id="fides_draft0725"/> Sai Venkata Krishnan, Arjun Menon, Chester Rebeiro, KC Sivaramakrishnan  
+     [Hardware-assisted Compartments for Securing Functional Programs](papers/fides_jul25.pdf)  
+     *July 2025*  
   *  <div id="tallyguard_draft0125"/> Athish Pranav Dharmalingam, Sai Venkata Krishnan, KC Sivaramakrishnan, N.S. Narayanaswamy  
      [TallyGuard: Privacy Preserving Tallied-as-cast Guarantee](papers/tallyguard_jan_25.pdf)  
      *Jan 2025*  
