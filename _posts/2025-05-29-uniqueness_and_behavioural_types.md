@@ -283,7 +283,7 @@ post](https://kcsrk.info/ocaml/types/2016/06/30/behavioural-types/) should also
 benefit from uniqueness annotations to remove the runtime overheads.
 
 The complete code examples are available
-[here](https://github.com/kayceesrk/code-snippets/tree/master/uniqueness_may_2025).
+[here](https://github.com/kayceesrk/code-snippets/tree/master/oxcaml/uniqueness_may_2025).
 You can also play with the code examples [directly in the
 browser](https://tinyurl.com/y7ku8r5h) thanks to [Patrick
 Ferris'](https://patrick.sirref.org/index/index.xml) OCaml with extensions

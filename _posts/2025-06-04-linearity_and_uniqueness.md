@@ -237,7 +237,7 @@ the future. However, there may be other aliases to this value in the past.
 ## Conclusions
 
 The code examples are available
-[here](https://github.com/kayceesrk/code-snippets/tree/master/linearity_june_2025).
+[here](https://github.com/kayceesrk/code-snippets/tree/master/oxcaml/linearity_june_2025).
 Section 2.1 of [Marshall et al.'s
 paper](https://starsandspira.ls/docs/esop22-draft.pdf) is quite readable and
 explains the distinction between linearity and uniqueness with some historical
