@@ -8,6 +8,10 @@ permalink: books.html
 
 ## Currently reading
 
+* [Of men, women and witches](https://www.amazon.in/Witches-Jeyamohan-Translated-Sangheetha-Puthiyedath/dp/9353453437)
+
+### Stalled..
+
 * [Accelerating India's Development: A State-Led Roadmap for Effective Governance](https://amzn.in/d/18u6rFE)
 * [Good Strategy, Bad Strategy](https://amzn.in/d/f5gdNbJ)
 * [Leaders eat last](https://amzn.in/d/iKsKJfO)
