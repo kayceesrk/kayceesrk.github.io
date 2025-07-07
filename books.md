@@ -8,16 +8,25 @@ permalink: books.html
 
 ## Currently reading
 
-* [Of men, women and witches](https://www.amazon.in/Witches-Jeyamohan-Translated-Sangheetha-Puthiyedath/dp/9353453437)
+* [Brave New Worlds: How AI Will Revolutionize Education (and Why That’s a Good Thing)](https://www.amazon.in/Brave-New-Words-Revolutionize-Education-ebook/dp/B0CFPW1PN2)
 
-### Stalled..
+### Stalled
 
 * [Accelerating India's Development: A State-Led Roadmap for Effective Governance](https://amzn.in/d/18u6rFE)
 * [Good Strategy, Bad Strategy](https://amzn.in/d/f5gdNbJ)
 * [Leaders eat last](https://amzn.in/d/iKsKJfO)
 
-## Recently read
+## Read
 
+* [Of men, women and witches](https://www.amazon.in/Witches-Jeyamohan-Translated-Sangheetha-Puthiyedath/dp/9353453437)
+  + ⭐⭐⭐⭐
+  + First time reading a translation of Jeyamohan. Was quite skeptical given the
+    depth and incisiveness of his language. Pleasantly surprised at finding
+    myself hearing the book in Jeyamohan's voice in my head. The first chapter /
+    section of the book is fantastic. The latter is less so in comparison to the
+    first part, but wonderful on their own. This memoir brings together
+    different strings that I've read and listened to in many of Jeyamohan's
+    writings and speeches.
 * Nov 2024, [I have the Streets](https://www.penguin.co.in/book/i-have-the-streets/)
   + ⭐⭐⭐⭐
   + Sweet little book that will connect with anyone who's grown up in TN in the
