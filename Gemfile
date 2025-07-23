@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'jekyll-feed'
 gem 'github-pages'
 gem 'jekyll-paginate'
 gem 'html-proofer'

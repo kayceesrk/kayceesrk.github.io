@@ -30,6 +30,6 @@ author:
 version:             1.0.0
 
 # Plugins
-plugins:             [jekyll-paginate]
+plugins:             [jekyll-paginate, jekyll-feed]
 
 future:              true
