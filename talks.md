@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+ * <div id="ai_tools_jul_2025"> </div>  
+   **Superpowers for the Curious: Using AI tools in your research journey**  
+   IIT Madras, Jult 2025  
+   [\[slides (pdf)\]](slides/ai_tools_2025.pdf) [\[slides (key)\]](slides/ai_tools_2025.key)  
  * <div id="gc_chalmers_2025"> </div>
    **OCaml's Parallel Runtime System**  
    Guest Lecture, Parallel Functional Programming  
