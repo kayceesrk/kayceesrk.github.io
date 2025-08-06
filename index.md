@@ -9,7 +9,7 @@ an Assistant Professor in the [Computer Science and
 Engineering](http://cse.iitm.ac.in/) department at [Indian Institute of
 Technology, Madras](https://www.iitm.ac.in/) and the Chief Technology Officer of
 [Tarides](https://tarides.com/). I am interested in building robust, secure and
-scalable systems using programming language technology. 
+scalable systems using programming language technology.
 
 I led the development of [Multicore
 OCaml](https://github.com/ocamllabs/ocaml-multicore), a concurrent and parallel
@@ -20,7 +20,7 @@ concurrency story of Multicore OCaml has had influence on the design of [React
 Hooks](https://legacy.reactjs.org/docs/hooks-faq.html#what-is-the-prior-art-for-hooks)
 and [WebAssembly stack switching](https://dl.acm.org/doi/pdf/10.1145/3622814).
 
-I've co-founded several companies 
+I've co-founded several companies
 
 * [Tarides - France](https://tarides.com/)
 * [OCaml Labs Consultancy - UK](http://ocamllabs.io/) _(joined Tarides)_
@@ -51,20 +51,19 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
- * **\[May 25\]** Delivered a lecture on [OCaml 5's parallel runtime](https://kcsrk.info/talks) at Chalmers University of Technology.
- * **\[May 25\]** "A Mechanically Verified Garbage Collector for OCaml" [published](https://link.springer.com/article/10.1007/s10817-025-09721-0) in JAR.
- * **\[May 25\]** Attended WG 2.8 as an observer and spoke about [Automatically verifying MRDTs](https://kcsrk.info/talks).
+<a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/kc_srk?ref_src=twsrc%5Etfw">Tweets by kc_srk</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # Activities
 
 * **DEI Co-Chair:** ICFP 2025.
 * **Associate Editor:** [OOPSLA 2025](https://2025.splashcon.org/track/OOPSLA).
-* **Streeing committee member**: 
+* **Streeing committee member**:
   + ICFP, Member at Large, serving 9/2023 -- 9/2027
   + [Principles and Practice of Consistency for Distributed Data (PaPoC)](https://papoc-workshop.github.io/2025/committees.html)
   + [ML workshop](https://www.mlworkshop.org/steering-committee), 2019 -- 2022
 * **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
-* **Organizer** 
+* **Organizer**
   + [First OCaml Retreat at Auroville](https://ocamlretreat.org/), 2024
   + [Shonan meeting on "Programming Language support for Data-intensive Systems"](https://shonan.nii.ac.jp/seminars/143/), 2019
   + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172), 2018
@@ -102,6 +101,5 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
  * Bluesky : <a href="https://bsky.app/profile/kcsrk.info"> @kcsrk.info </a>
  * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
  * BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
-
 
 <br/>
