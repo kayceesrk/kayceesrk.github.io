@@ -19,6 +19,9 @@ I have had the pleasure of working with wonderful students over the years.
 
 ## MS Students
 
+* Vishakh Desai (2025-)
+* Sanjeev Reddy (2025-)
+
 ### Alumni
 
 * Deepali Ande, MS, IITM (2020-2023). Next: Goldman Sachs.
@@ -26,6 +29,9 @@ I have had the pleasure of working with wonderful students over the years.
 * Shashank Shekhar Dubey, MS, IITM (2019-2021). [thesis](papers/shashank_ms_thesis.pdf).
 
 ## MTech
+
+* Surendar M (2025-)
+* Sagar Biswas (2025-)
 
 ### Alumni
 
