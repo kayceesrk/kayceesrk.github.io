@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+ * <div id="neem_NUS_8_2025"> </div>
+   **Automatically Verifying Replicated Data Types**  
+   School of Computing, National University of Singapore, May 2025  
+   [\[slides (pdf)\]](slides/Verifying_RA_Linearizability_nus_2025.pdf) [\[slides (key)\]](slides/Verifying_RA_Linearizability_nus_2025.key)  
  * <div id="ai_tools_jul_2025"> </div>  
    **Superpowers for the Curious: Using AI tools in your research journey**  
    IIT Madras, July 2025  
