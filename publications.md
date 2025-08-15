@@ -40,6 +40,9 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### 2025
 
+  *  <div id="ocaml25"/> Sheera Shamsu, Dipesh Kafle, Dhruv Maroo, Kartik Nagar, Karthikeyan Bhargavan, KC Sivaramakrishnan  
+     [A Mechanically Verified Garbage Collector for OCaml](papers/ocaml_oct25.pdf)  
+     *OCaml Workshop, 2025*  
   *  <div id="verifiedgc_draft1224"/> Sheera Shamsu, Dipesh Kafle, Dhruv Maroo, Kartik Nagar, Karthikeyan Bhargavan, KC Sivaramakrishnan  
      [A Mechanically Verified Garbage Collector for OCaml](papers/verifiedgc_feb_25.pdf)  
      *Journal of Automated Reasoning, 2025*
