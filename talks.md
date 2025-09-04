@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="Evolution_Ashoka_2025"> </div>
+   **Evolving the OCaml Programming Language**  
+   CS Colloquium, Ashoka University, Sep 2025  
+   [\[slides (pdf)\]](slides/Evolution_Ashoka_2025.pdf) [\[slides (key)\]](slides/Evolution_Ashoka_2025.key)  
  * <div id="neem_NUS_8_2025"> </div>
    **Automatically Verifying Replicated Data Types**  
    School of Computing, National University of Singapore, Aug 2025  
