@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+ * <div id="neem_NUS_8_2025"> </div>
+   **Automatically Verifying Replicated Data Types**  
+   WG 2.1, Viana do Castelo, Portugal, Aug 2025  
+   [\[slides (pdf)\]](slides/Verifying_RA_Linearizability_WG2.1.pdf) [\[slides (key)\]](slides/Verifying_RA_Linearizability_WG2.1.key)  
   * <div id="Evolution_Ashoka_2025"> </div>
    **Evolving the OCaml Programming Language**  
    CS Colloquium, Ashoka University, Sep 2025  
@@ -24,7 +28,7 @@ permalink: talks.html
    [\[slides (pdf)\]](slides/gc_chalmers_2025.pdf) [\[slides (key)\]](slides/gc_chalmers_2025.key)  
  * <div id="mrdt_wg2.8_2025"> </div>
    **Automatically Verifying Replicated Data Types**  
-   WG 2.8 2025, May 2025  
+   WG 2.8 2025, York Harbour, Maine, May 2025  
    [\[slides (pdf)\]](slides/Verifying_RA_Linearizability_wg28_2025.pdf) [\[slides (key)\]](slides/Verifying_RA_Linearizability_wg28_2025.key)  
  * <div id="xxx"> </div>
    **Concurrent and Parallel Programming with OCaml 5**  
@@ -64,7 +68,7 @@ permalink: talks.html
    [\[slides (pdf)\]](slides/effects_chalmers.pdf) [\[slides (key)\]](slides/effects_chalmers.key)  
  * <div id="xxx"> </div>
    **Securing Functional Programs with Hardware Support**  
-   [WG 2.8 2024](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), Apr 2024  
+   [WG 2.8 Utrecht 2024](https://ifip-wg28.github.io/42-utrecht-2024/minutes.html), Apr 2024  
    [\[slides (pdf)\]](slides/fides_wg28.pdf) [\[slides (key)\]](slides/fides_wg28.key)  
  * <div id="xxx"> </div>
    **Effective Composition of Concurrency Libraries**   
