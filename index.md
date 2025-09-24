@@ -56,12 +56,13 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 # Activities
 
 * **DEI Co-Chair:** ICFP 2025.
-* **Associate Editor:** [OOPSLA 2025](https://2025.splashcon.org/track/OOPSLA).
+* **[SIGPLAN CARES](https://www.sigplan.org/Cares/) committee member:** 2025 --
 * **Streeing committee member**:
   + ICFP, Member at Large, serving 9/2023 -- 9/2027
   + [Principles and Practice of Consistency for Distributed Data (PaPoC)](https://papoc-workshop.github.io/2025/committees.html)
   + [ML workshop](https://www.mlworkshop.org/steering-committee), 2019 -- 2022
 * **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
+* **Associate Editor:** [OOPSLA 2025](https://2025.splashcon.org/track/OOPSLA).
 * **Organizer**
   + [First OCaml Retreat at Auroville](https://ocamlretreat.org/), 2024
   + [Shonan meeting on "Programming Language support for Data-intensive Systems"](https://shonan.nii.ac.jp/seminars/143/), 2019
@@ -84,6 +85,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **ERC member** -- ICFP'19
 * **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
 * **Invited meetings**
+  + Observer, WG 2.1, Viana do Castelo, Sep 2025
   + [Guest, WG 2.8, Maine](https://ifip-wg28.github.io/43-maine-2025/minutes.html), 2025
   + [Dagstuhl meeting on "Utilising and Scaling the WebAssembly Semantics"](https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/25241), 2025
   + Observer, WG 2.1, Canberra, 2024 (Declined due to personal reasons)
