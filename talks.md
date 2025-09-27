@@ -5,7 +5,15 @@ permalink: talks.html
 ---
 
 # Talks
- * <div id="neem_NUS_8_2025"> </div>
+ * <div id="evolution_indiafoss_09_25"> </div>  
+   **Evolving the OCaml Programming Language**  
+   Invited Talk, Innovations in Compiler Technology, IISc, Bengaluru, Sep 2025  
+   [\[slides (pdf)\]](slides/Evolution_IICT_2025.pdf) [\[slides (key)\]](slides/Evolution_IICT_2025.key)  
+ * <div id="evolution_indiafoss_09_25"> </div>  
+   **Evolving the OCaml Programming Language**  
+   IndiaFOSS, Bengaluru, Sep 2025  
+   [\[slides (pdf)\]](slides/Evolution_IndiaFOSS_2025.pdf) [\[slides (key)\]](slides/Evolution_IndiaFOSS_2025.key)  
+ * <div id="neem_NUS_8_2025"> </div>   
    **Automatically Verifying Replicated Data Types**  
    WG 2.1, Viana do Castelo, Portugal, Aug 2025  
    [\[slides (pdf)\]](slides/Verifying_RA_Linearizability_WG2.1.pdf) [\[slides (key)\]](slides/Verifying_RA_Linearizability_WG2.1.key)  
