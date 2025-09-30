@@ -5,7 +5,7 @@ permalink: talks.html
 ---
 
 # Talks
- * <div id="evolution_indiafoss_09_25"> </div>  
+ * <div id="evolution_iict_09_25"> </div>  
    **Evolving the OCaml Programming Language**  
    Invited Talk, Innovations in Compiler Technology, IISc, Bengaluru, Sep 2025  
    [\[slides (pdf)\]](slides/Evolution_IICT_2025.pdf) [\[slides (key)\]](slides/Evolution_IICT_2025.key)  
