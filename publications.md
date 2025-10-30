@@ -10,6 +10,8 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ## Edited Proceeedings
 
+  * <div id="propl25"/> Anil Madhavapeddy, Dominic Orchard, KC Sivaramakrishnan  
+     [Proceedings of the 2nd ACM SIGPLAN International Workshop on Programming for the Planet](https://dl.acm.org/doi/pdf/10.1145/3759536)  
   * <div id="effects20"/> KC Sivaramakrishnan, Andrej Bauer (Eds.)   
      [JFP Special Issue on the Theory and Practice of Algebraic Effects and Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)   
   * <div id="dagstuhl18"/> KC Sivaramakrishnan, Daan Leijen, Matija Pretnar, Tom Schrijvers  
