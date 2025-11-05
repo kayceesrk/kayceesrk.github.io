@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="evolution_krea_11_25"> </div>  
+   **Evolving the OCaml Programming Language**  
+   CS Colloquium, Krea University, Nov 2025  
+   [\[slides (pdf)\]](slides/Evolution_Krea_2025.pdf) [\[slides (key)\]](slides/Evolution_Krea_2025.key)  
  * <div id="evolution_iict_09_25"> </div>  
    **Evolving the OCaml Programming Language**  
    Invited Talk, Innovations in Compiler Technology, IISc, Bengaluru, Sep 2025  
