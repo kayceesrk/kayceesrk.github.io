@@ -51,7 +51,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 # Latest News
 
-<a class="twitter-timeline" href="https://twitter.com/kc_srk?ref_src=twsrc%5Etfw">Tweets by kc_srk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/kc_srk?ref_src=twsrc%5Etfw">Tweets by kc_srk</a>
 
 # Activities
 

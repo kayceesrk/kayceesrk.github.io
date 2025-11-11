@@ -32,6 +32,11 @@
         var sidebar = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
 
+        // Open sidebar by default on desktop (wider than 48em / 768px)
+        if (window.innerWidth >= 768) {
+          checkbox.checked = true;
+        }
+
         document.addEventListener('click', function(e) {
           var target = e.target;
 
