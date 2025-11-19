@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="iarcs_verication_seminar_series_11_25"> </div>  
+   **A Mechanically Verified GC for OCaml"**  
+   IARCS Verification Seminar Series, Nov 2025  
+   [\[slides (pdf)\]](slides/verified_gc_181125.pdf) [\[slides (key)\]](slides/verified_gc_181125.key)  
   * <div id="evolution_krea_11_25"> </div>  
    **Evolving the OCaml Programming Language**  
    CS Colloquium, Krea University, Nov 2025  
