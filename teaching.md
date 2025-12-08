@@ -14,7 +14,7 @@ permalink: teaching.html
 * CS3300: Compiler Design
     * [Monsoon 2022]({{ site.url }}/cs3300_m22)
 * CS3100: Paradigms of Programming
-    * [Monsoon 2020]({{ site.url }}/cs3100_m20), [Monsoon 2019]({{ site.url }}/cs3100_f19)
+    * [Monsoon 2025]({{ site.url }}/cs3100_m25), [Monsoon 2020]({{ site.url }}/cs3100_m20), [Monsoon 2019]({{ site.url }}/cs3100_f19)
     * [YouTube playlist of the lectures](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkE-NTs87s7QjwYwqeihb-D)
     *  The materials developed for this course were used by others to teach the following courses:
         - Several subsequent offerings of CS3100 at IITM
