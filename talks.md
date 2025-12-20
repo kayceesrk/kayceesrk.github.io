@@ -12,7 +12,7 @@ permalink: talks.html
   * <div id="fsttcs_mentoring_25"> </div>  
    **Runtime Systems Research**  
    FSTTCS Mentoring Workshop, Dec 2025  
-   [\[slides (pdf)\]](slides/runtime_systems_fsttcs_25.pdf) [\[slides (key)\]](slides/runtime_systems_fsttcs_25.key)  
+   [\[slides (pdf)\]](slides/runtime_systems_fsttcs_2025.pdf) [\[slides (key)\]](slides/runtime_systems_fsttcs_2025.key)  
   * <div id="iarcs_verication_seminar_series_11_25"> </div>  
    **A Mechanically Verified GC for OCaml**  
    IARCS Verification Seminar Series, Nov 2025  
