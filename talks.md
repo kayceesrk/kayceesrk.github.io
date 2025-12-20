@@ -5,6 +5,14 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="iitm_blockchain_winter_school_25"> </div>  
+   **Irmin: Immutable, Fast, Distributed Storage**  
+   IITM Blockchain Winter School, Dec 2025  
+   [\[slides (pdf)\]](slides/irmin_blockchain_winter_school_25.pdf) [\[slides (key)\]](slides/irmin_blockchain_winter_school_25.key)  
+  * <div id="fsttcs_mentoring_25"> </div>  
+   **Runtime Systems Research**  
+   FSTTCS Mentoring Workshop, Dec 2025  
+   [\[slides (pdf)\]](slides/runtime_systems_fsttcs_25.pdf) [\[slides (key)\]](slides/runtime_systems_fsttcs_25.key)  
   * <div id="iarcs_verication_seminar_series_11_25"> </div>  
    **A Mechanically Verified GC for OCaml**  
    IARCS Verification Seminar Series, Nov 2025  
