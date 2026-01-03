@@ -48,5 +48,110 @@
         }, false);
       })(document);
     </script>
+
+    <script>
+      (function () {
+        function slugify(text) {
+          return String(text)
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, '-')
+            .replace(/[^a-z0-9\-_]/g, '')
+            .replace(/\-\-+/g, '-')
+            .replace(/^-+|-+$/g, '');
+        }
+
+        function ensureUniqueId(baseId, used) {
+          var candidate = baseId || 'section';
+          var n = 2;
+          while (used.has(candidate) || document.getElementById(candidate)) {
+            candidate = (baseId || 'section') + '-' + n;
+            n++;
+          }
+          used.add(candidate);
+          return candidate;
+        }
+
+        function createAnchorLink(id) {
+          var a = document.createElement('a');
+          a.className = 'anchor-link';
+          a.href = '#' + id;
+          a.setAttribute('aria-label', 'Permalink');
+          a.textContent = '#';
+          return a;
+        }
+
+        function addHeadingPermalinks(root) {
+          var used = new Set();
+          var headings = root.querySelectorAll('h1, h2, h3, h4, h5, h6');
+          for (var i = 0; i < headings.length; i++) {
+            var heading = headings[i];
+            if (heading.querySelector('.anchor-link')) continue;
+            if (!heading.id) {
+              var base = slugify(heading.textContent);
+              heading.id = ensureUniqueId(base, used);
+            }
+            heading.appendChild(createAnchorLink(heading.id));
+          }
+        }
+
+        function addListItemPermalinks(root) {
+          var seen = new Set();
+          var anchors = root.querySelectorAll('div[id]');
+          for (var i = 0; i < anchors.length; i++) {
+            var anchorDiv = anchors[i];
+            // Only convert div[id] that sits inside a list item.
+            var li = anchorDiv.closest && anchorDiv.closest('li');
+            if (!li) continue;
+            var id = anchorDiv.id;
+            if (!id) continue;
+
+            // Keep the first occurrence of an id; uniquify duplicates.
+            var targetId = id;
+            var existing = document.getElementById(id);
+            if (seen.has(id) || (existing && existing !== anchorDiv && existing !== li)) {
+              targetId = ensureUniqueId(id, seen);
+            } else {
+              seen.add(targetId);
+            }
+
+            if (!li.id) li.id = targetId;
+
+            // Unwrap/remove the anchor div so it can't affect layout.
+            // (Publications currently emits <div id="..." /> which browsers may treat as a wrapper.)
+            if (anchorDiv.parentNode) {
+              while (anchorDiv.firstChild) {
+                li.insertBefore(anchorDiv.firstChild, anchorDiv);
+              }
+              li.removeChild(anchorDiv);
+            }
+
+            li.classList.add('linkable-item');
+            if (!li.querySelector('.anchor-link')) {
+              var anchorLink = createAnchorLink(li.id);
+              var p = li.querySelector('p');
+              if (p) {
+                var br = p.querySelector('br');
+                p.insertBefore(anchorLink, br || null);
+              } else {
+                li.insertBefore(anchorLink, li.firstChild);
+              }
+            }
+          }
+        }
+
+        function init() {
+          var root = document.querySelector('.container.content') || document.body;
+          addHeadingPermalinks(root);
+          addListItemPermalinks(root);
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+      })();
+    </script>
   </body>
 </html>

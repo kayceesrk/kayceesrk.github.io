@@ -43,4 +43,46 @@
 
 	<!-- Twitter Widget Script -->
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <style type="text/css">
+    /* Hover permalinks for headings and anchored list entries */
+    .anchor-link {
+      text-decoration: none;
+      margin-left: 0.35em;
+      opacity: 0;
+      transition: opacity 120ms linear;
+      font-weight: normal;
+      color: inherit;
+    }
+    h1:hover .anchor-link,
+    h2:hover .anchor-link,
+    h3:hover .anchor-link,
+    h4:hover .anchor-link,
+    h5:hover .anchor-link,
+    h6:hover .anchor-link,
+    h1:focus-within .anchor-link,
+    h2:focus-within .anchor-link,
+    h3:focus-within .anchor-link,
+    h4:focus-within .anchor-link,
+    h5:focus-within .anchor-link,
+    h6:focus-within .anchor-link {
+      opacity: 0.55;
+    }
+
+    .linkable-item {
+      position: relative;
+    }
+    .linkable-item .anchor-link {
+      opacity: 0;
+    }
+    .linkable-item:hover .anchor-link,
+    .linkable-item:focus-within .anchor-link {
+      opacity: 0.55;
+    }
+
+    /* The publications/talks pages include empty div anchors; don't render them */
+    .linkable-anchor {
+      display: none;
+    }
+  </style>
 </head>
