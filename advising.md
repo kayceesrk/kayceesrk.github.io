@@ -50,7 +50,7 @@ I have had the pleasure of working with wonderful students over the years.
 # Alumni
 
 * Pranav Ramesh (Monsoon 2026)
-  + [Sal: Multi-modal verification of Replicated Data Types](papers/sal_jan_26.pdf)
+  + [Sal: Multi-modal verification of Replicated Data Types](papers/sal_jan26.pdf)
 * Md Isfarul Haque (Monsoon 2026)
   + Native-code backend for [verified GC](papers/verifiedgc_feb_25.pdf)
 * Aditya Pravin Palwe (Spring 2025)
