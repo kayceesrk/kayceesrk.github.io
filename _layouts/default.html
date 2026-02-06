@@ -50,6 +50,13 @@
     </script>
 
     <script>
+      // Enable scroll restoration so browser remembers position when navigating back
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'auto';
+      }
+    </script>
+
+    <script>
       (function () {
         function slugify(text) {
           return String(text)
