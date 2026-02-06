@@ -50,10 +50,24 @@
     </script>
 
     <script>
-      // Enable scroll restoration so browser remembers position when navigating back
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'auto';
-      }
+      // Save scroll position when clicking on links
+      (function() {
+        // Restore scroll position on page load
+        var scrollPos = sessionStorage.getItem('scrollPos');
+        if (scrollPos) {
+          window.scrollTo(0, parseInt(scrollPos));
+          sessionStorage.removeItem('scrollPos');
+        }
+
+        // Save scroll position before navigating away
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          // Check if it's a link that navigates away
+          if (target.tagName === 'A' && target.href && !target.href.startsWith('#')) {
+            sessionStorage.setItem('scrollPos', window.pageYOffset || document.documentElement.scrollTop);
+          }
+        });
+      })();
     </script>
 
     <script>
