@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Publications
-permalink: publications.html
+title: Papers
+permalink: papers.html
 ---
 
-# Publications
+# Papers
 
 See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl=en) for an up to date list.
 
@@ -25,11 +25,13 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
    *Department of Computer Science, Purdue University, Dec 2014*  
    [\[slides (pdf)\]](slides/defense.pdf) [\[slides (pptx)\]](slides/defense.pptx) [\[bib\]](bib/phd.txt)  
   
-## Publications  
+## Papers  
 
 ### Working drafts
 
-
+  *  <div id="sal_draft0126"/> Pranav Ramesh, Vimala Soundarapandian, KC Sivaramakrishnan  
+     [Sal: Multi-modal verification of Replicated Data Types](papers/sal_jan26.pdf)  
+     *Jan 2026*  
   *  <div id="fides_draft0725"/> Sai Venkata Krishnan, Arjun Menon, Chester Rebeiro, KC Sivaramakrishnan  
      [Hardware-assisted Compartments for Securing Functional Programs](papers/fides_jul25.pdf)  
      *July 2025*  

@@ -47,7 +47,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
  * [CV](cv/cv.pdf)
  * [Research Statement](research/research.pdf)
- * [Publications](publications.html)
+ * [Papers](papers.html)
 
 # Latest News
 
@@ -61,14 +61,21 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
   + ICFP, Member at Large, serving 9/2023 -- 9/2027
   + [Principles and Practice of Consistency for Distributed Data (PaPoC)](https://papoc-workshop.github.io/2025/committees.html)
   + [ML workshop](https://www.mlworkshop.org/steering-committee), 2019 -- 2022
-* **Editor** -- [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
-* **Associate Editor:** [OOPSLA 2025](https://2025.splashcon.org/track/OOPSLA).
+* **Editor**
+  + [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
+* **Associate Editor:**
+  + [OOPSLA 2025](https://2025.splashcon.org/track/OOPSLA).
 * **Organizer**
+  + [First FSTTCS Mentoring Workshop](https://aalok-thakkar.github.io/fsttcs-mentoring-workshop-2025.html), 2025
   + [First OCaml Retreat at Auroville](https://ocamlretreat.org/), 2024
   + [Shonan meeting on "Programming Language support for Data-intensive Systems"](https://shonan.nii.ac.jp/seminars/143/), 2019
   + [Dagstuhl meeting on "Effect Handlers go Mainstream!"](https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=18172), 2018
-* **PC Chair** -- [PROPL'25](https://conf.researchr.org/home/icfp-splash-2025/propl-2025), PaPoC'22, ML'19
-* **AEC Chair** -- ESOP'22
+* **PC Chair**
+  + [PROPL'25](https://conf.researchr.org/home/icfp-splash-2025/propl-2025)
+  + PaPoC'22
+  + ML'19
+* **AEC Chair**
+  + ESOP'22
 * **PC member**
   + 2025: [FunArch'25](https://conf.researchr.org/home/icfp-splash-2025/funarch-2025), [ICFP'25](https://icfp25.sigplan.org/), [PaPoC'25](https://papoc-workshop.github.io/2025/), [APLAS'25](https://conf.researchr.org/home/aplas-2025)
   + 2024: OOPSLA'24, PaPoC'24, POPL'24, TFP'24, PEPM'24

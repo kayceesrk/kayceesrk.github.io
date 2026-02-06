@@ -36,17 +36,23 @@ I have had the pleasure of working with wonderful students over the years.
 
 ## BTech Students
 
-* Md. Isfarul Haque, UGRC, (Moonsoon 2025)
-* Pranav Ramesh, UGRC, (Moonsoon 2025)
+* Md. Isfarul Haque, BTP, Spring 2026
+* Pranav Ramesh, BTP, Spring 2026
+* Aadi Srivastava, UGRC, Spring 2026
 
 ## Research Staff
 
 * Alina Banerjee (2025-)
+* Navaneeth Nambiar (2025-)
 
 ## Interns
 
 # Alumni
 
+* Pranav Ramesh (Monsoon 2026)
+  + [Sal: Multi-modal verification of Replicated Data Types](papers/sal_jan_26.pdf)
+* Md Isfarul Haque (Monsoon 2026)
+  + Native-code backend for [verified GC](papers/verifiedgc_feb_25.pdf)
 * Aditya Pravin Palwe (Spring 2025)
   + Compiling OCaml to MLIR: Middle-end
 * Aditya Srivastava (Spring 2025)
