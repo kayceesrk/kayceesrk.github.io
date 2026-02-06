@@ -35,8 +35,7 @@
  */
 
 /* Prevent scroll on narrow devices */
-html,
-body {
+html {
   overflow-x: hidden;
 }
 
