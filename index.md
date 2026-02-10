@@ -8,7 +8,9 @@ right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am
 an Assistant Professor in the [Computer Science and
 Engineering](http://cse.iitm.ac.in/) department at [Indian Institute of
 Technology, Madras](https://www.iitm.ac.in/) and the Chief Technology Officer of
-[Tarides](https://tarides.com/). I am interested in building robust, secure and
+[Tarides](https://tarides.com/). I lead [FP
+Launchpad](https://fplaunchpad.org/), a centre for functional systems research
+and education at IIT Madras.  I am interested in building robust, secure and
 scalable systems using programming language technology.
 
 I led the development of [Multicore
@@ -45,22 +47,23 @@ India](https://www.annauniv.edu/).
 I write about my research in my [blog](http://kcsrk.info/blog/)
 (though not as often as I would like to).
 
- * [CV](cv/cv.pdf)
- * [Research Statement](research/research.pdf)
- * [Papers](papers.html)
+* [CV](cv/cv.pdf)
+* [Research Statement](research/research.pdf)
+* [Papers](papers.html)
 
-# Latest News
+## Latest News
 
-<a class="twitter-timeline" data-height="600" data-theme="light" href="https://twitter.com/kc_srk?ref_src=twsrc%5Etfw">Tweets by kc_srk</a>
+* **Jan 2024:** Launched [FP Launchpad](https://fplaunchpad.org/), a centre for
+  functional systems research and education at IIT Madras.
 
-# Activities
+## Activities
 
 * **DEI Co-Chair:** ICFP 2025.
 * **[SIGPLAN CARES](https://www.sigplan.org/Cares/) committee member:** 2025 --
-* **Streeing committee member**:
-  + ICFP, Member at Large, serving 9/2023 -- 9/2027
-  + [Principles and Practice of Consistency for Distributed Data (PaPoC)](https://papoc-workshop.github.io/2025/committees.html)
-  + [ML workshop](https://www.mlworkshop.org/steering-committee), 2019 -- 2022
+* **Steering committee member**:
+  * ICFP, Member at Large, serving 9/2023 -- 9/2027
+  * [Principles and Practice of Consistency for Distributed Data (PaPoC)](https://papoc-workshop.github.io/2025/committees.html)
+  * [ML workshop](https://www.mlworkshop.org/steering-committee), 2019 -- 2022
 * **Editor**
   + [JFP Special Issue on Effect Handlers](https://www.cambridge.org/core/journals/journal-of-functional-programming/collections/effects-and-handlers)
 * **Associate Editor:**
@@ -89,8 +92,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
   + 2013: Splash-MARC symposium '13.
 * **Expert Reviewer**
   + 2023: POPL'23, PPoPP'23
-* **ERC member** -- ICFP'19
-* **AEC member** -- ICFP'18, PPoPP/CGO'16, PLDI'15
+* **ERC member:** ICFP'19
+* **AEC member:** ICFP'18, PPoPP/CGO'16, PLDI'15
 * **Invited meetings**
   + Observer, WG 2.1, Viana do Castelo, Sep 2025
   + [Guest, WG 2.8, Maine](https://ifip-wg28.github.io/43-maine-2025/minutes.html), 2025
@@ -101,13 +104,13 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
   + [Dagstuhl meeting on "Scalable handling of effects"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/21292), 2021
   + [Dagstuhl meeting on "From Theory to Practice of Algebraic Effects and Handlers"](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/16112), 2016
 
-# Contact
+## Contact
 
- * Email : kcsrk@cse.iitm.ac.in (used for academic work), kc@tarides.com, kc@kcsrk.info
- * IRL : [SSB 413, IIT Madras](https://maps.app.goo.gl/42Wq2Cy5UQLkkDRo6)
- * Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a> (aiming to use less of this in favour of ↓)
- * Bluesky : <a href="https://bsky.app/profile/kcsrk.info"> @kcsrk.info </a>
- * Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
- * BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
+* Email : kcsrk@cse.iitm.ac.in (used for academic work), kc@tarides.com, kc@kcsrk.info
+* IRL : [SSB 413, IIT Madras](https://maps.app.goo.gl/42Wq2Cy5UQLkkDRo6)
+* Twitter : <a href="https://twitter.com/kc_srk"> @kc_srk </a>  
+* Bluesky : <a href="https://bsky.app/profile/kcsrk.info"> @kcsrk.info </a>
+* Github : <a href="https://github.com/kayceesrk"> kayceesrk </a>
+* BitBucket : <a href="https://bitbucket.org/kayceesrk"> kayceesrk </a>
 
 <br/>
