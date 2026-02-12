@@ -53,7 +53,7 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 
 ## Latest News
 
-* **Jan 2024:** Launched [FP Launchpad](https://fplaunchpad.org/), a centre for
+* **Jan 2026:** Launched [FP Launchpad](https://fplaunchpad.org/), a centre for
   functional systems research and education at IIT Madras.
 
 ## Activities
