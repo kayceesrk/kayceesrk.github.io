@@ -32,15 +32,18 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
   *  <div id="sal_draft0126"/> Pranav Ramesh, Vimala Soundarapandian, KC Sivaramakrishnan  
      [Sal: Multi-modal verification of Replicated Data Types](papers/sal_jan26.pdf)  
      *Jan 2026*  
-  *  <div id="fides_draft0725"/> Sai Venkata Krishnan, Arjun Menon, Chester Rebeiro, KC Sivaramakrishnan  
-     [Hardware-assisted Compartments for Securing Functional Programs](papers/fides_jul25.pdf)  
-     *July 2025*  
   *  <div id="tallyguard_draft0125"/> Athish Pranav Dharmalingam, Sai Venkata Krishnan, KC Sivaramakrishnan, N.S. Narayanaswamy  
      [TallyGuard: Privacy Preserving Tallied-as-cast Guarantee](papers/tallyguard_jan_25.pdf)  
      *Jan 2025*  
   *  <div id="picos_draft0723"/> Deepali Ande, Sudha Parimala, KC Sivaramakrishnan  
      [Effectively Composing Concurrency Libraries](papers/composable_concurrency.pdf)  
      *July 2023*  
+
+### 2026
+
+  *  <div id="asiaccs26"/> Sai Venkata Krishnan, Arjun Menon, Chester Rebeiro, KC Sivaramakrishnan  
+     [FIDES: End-to-end Compartments for Mixed-language Systems](papers/fides_asiaccs_2026.pdf)  
+     *ACM Asia Conference on Computer and Communications Security (AsiaCCS), 2026*  
 
 ### 2025
 
