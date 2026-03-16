@@ -29,9 +29,6 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### Working drafts
 
-  *  <div id="sal_draft0126"/> Pranav Ramesh, Vimala Soundarapandian, KC Sivaramakrishnan  
-     [Sal: Multi-modal verification of Replicated Data Types](papers/sal_jan26.pdf)  
-     *Jan 2026*  
   *  <div id="tallyguard_draft0125"/> Athish Pranav Dharmalingam, Sai Venkata Krishnan, KC Sivaramakrishnan, N.S. Narayanaswamy  
      [TallyGuard: Privacy Preserving Tallied-as-cast Guarantee](papers/tallyguard_jan_25.pdf)  
      *Jan 2025*  
@@ -41,9 +38,12 @@ See [Google Scholar](https://scholar.google.co.uk/citations?user=Kc2cHqYAAAAJ&hl
 
 ### 2026
 
+  *  <div id="papoc26"/> Pranav Ramesh, Vimala Soundarapandian, KC Sivaramakrishnan  
+     [Sal: Multi-modal verification of Replicated Data Types](papers/sal_jan26.pdf)  
+     *[Principles and Practice of Consistency for Distributed Data (PaPoC), 2026](https://papoc-workshop.github.io/2026/)*  
   *  <div id="asiaccs26"/> Sai Venkata Krishnan, Arjun Menon, Chester Rebeiro, KC Sivaramakrishnan  
      [FIDES: End-to-end Compartments for Mixed-language Systems](papers/fides_asiaccs_2026.pdf)  
-     *ACM Asia Conference on Computer and Communications Security (AsiaCCS), 2026*  
+     *[ACM Asia Conference on Computer and Communications Security (AsiaCCS), 2026](https://asiaccs2026.cse.iitkgp.ac.in/)*  
 
 ### 2025
 
