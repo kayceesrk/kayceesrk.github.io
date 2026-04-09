@@ -49,7 +49,7 @@ calculus in Prolog, [type inference with polymorphic types falls
 out](http://kcsrk.info/cs3100_f19/lectures/lec25/lec25.pdf). With a tiny bit of
 coaxing, Prolog synthesizes programs for the given type. In the last assignment,
 the students were asked to implement [a Prolog interpreter in
-OCaml](https://github.com/kayceesrk/cs3100_f19/blob/gh-pages/assignments/assignment6.ipynb).
+OCaml](https://github.com/fplaunchpad/cs3100_f19/blob/gh-pages/assignments/assignment6.ipynb).
 There was indeed some value in teaching multiple paradigms in the same course,
 not just for a comparative study of strengths and weaknesses, but to be able to
 teach the students to pick the right tool for the job.
@@ -99,11 +99,11 @@ extensions, Jupyter Kernels for OCaml and Prolog) and correctly was not
 something I wanted the students to go through. I wasn't even sure if this
 software combination works on various Mac, Windows and Linux distributions.
 Hence, everything was packaged as a [Docker
-file](https://github.com/kayceesrk/cs3100_f19/blob/gh-pages/_docker/dockerfile),
+file](https://github.com/fplaunchpad/cs3100_f19/blob/gh-pages/_docker/dockerfile),
 and the latest version of the image uploaded to [docker
 hub](https://hub.docker.com/r/kayceesrk/cs3100_iitm). In order to review the
 course, the students only had to install Docker and Git and run [exactly 4
-commands](https://github.com/kayceesrk/cs3100_f19#running-the-jupyter-notebooks).
+commands](https://github.com/fplaunchpad/cs3100_f19#running-the-jupyter-notebooks).
 
 Docker is generally supported on all major OSes. Packaging up the course content
 as a docker image and pushing it to dockerhub is insurance against the software

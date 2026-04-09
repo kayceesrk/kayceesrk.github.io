@@ -75,7 +75,7 @@ There are several great ways to get involved with the community. Here's what I
 usually recommend.
 
 * Learn the basics.
-  + Go through the OCaml part of my [CS3100 course](https://github.com/kayceesrk/cs3100_m20). The course has a YouTube
+  + Go through the OCaml part of my [CS3100 course](https://github.com/fplaunchpad/cs3100_m20). The course has a YouTube
   playlist and programming assignments. Complete the programming assignments.
   + Read the [Real World OCaml](https://dev.realworldocaml.org/) book.
   + There are lots of other resources at [OCaml.org](https://ocaml.org/), the official website of the OCaml community and the ecosystem.
@@ -116,10 +116,10 @@ Another variant is a post-bacc or a pre-doc position aimed at highly motivated
 recent graduates, who are looking to build research experience. The expectation
 here is that we get papers into top venues in PL and Systems. For such students,
 I recommend going through my [CS6225 Programs and Proofs
-course](https://github.com/kayceesrk/cs6225_s25_iitm), watch the [video
+course](https://github.com/fplaunchpad/cs6225_s25_iitm), watch the [video
 lectures](https://www.youtube.com/playlist?list=PLt0HgEXFOHdkfd7phdKKmTIuwHEvPX0qb)
 and complete the
-[assignments](https://github.com/kayceesrk/cs6225_s25_iitm/tree/main/assignments).
+[assignments](https://github.com/fplaunchpad/cs6225_s25_iitm/tree/main/assignments).
 The course is not an easy one, but will expose you to the broad area of PL and
 specifically to deductive program verification. At the very least, you will come
 out with an understanding of what it is to think rigorously about program
