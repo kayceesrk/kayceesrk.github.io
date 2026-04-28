@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="papoc_2026"> </div>  
+   **From Convergence to Confidence: Push-button verification for Replicated Data Types**  
+   PaPoC 2026, Edinburgh, Apr 2026  
+   [\[slides (pdf)\]](slides/RDT_verification_papoc_2026.pdf) [\[slides (key)\]](slides/RDT_verification_papoc_2026.key)  
   * <div id="evolution_iitm_26"> </div>  
    **Evolving the OCaml Programming Language**  
    CSE Bytes, IITM, Jan 2026  
