@@ -82,7 +82,7 @@ verification conditions (six on `do_`, twelve on `merge`, six on conflict
 resolution) that, if all closed, certify RA-linearizability. That was a
 real upgrade. But it was still in F\*, still SMT-fragile, and there was a
 class of useful RDTs for which closing the 24 VCs left the correctness
-statement itself near-vacuous: what we now call *Tier-C*.
+statement itself near-vacuous.
 
 The pattern that exposes that vacuity is recognisable. When porting an
 op-based CRDT to a state-based one, a common move is to dump every
@@ -97,7 +97,8 @@ a partially ordered graph of events with no further structure, and that
 turned out to be both an awkward medium to write specs in and a brittle
 one to prove against.
 
-The taxonomy we settled on this past month:
+We have started calling these vacuous-convergence cases *Tier-C*
+RDTs, in a three-tier taxonomy that we settled on this past month:
 
 - **Tier A**: state *is* the semantic content. LWW-Register, PN-Counter,
   Bounded-Counter, MAX-Map. The RA-linearizability VCs reduce to lattice
@@ -189,12 +190,13 @@ marks). What makes the paper unusually pleasant to mechanise is the
 care its authors put into specifying intent. §3 walks through eight
 worked examples of intent preservation, each spelled out as a small
 concrete scenario, and appendix §A.2 catalogues them as a single
-table for reference. Alice bolds the entire
-sentence while Bob inserts the word "brown" in the middle; the result
-should be `**The brown fox jumped**`. Alice bolds the first two words,
-Bob bolds the last two; the overlap is bold too. A link span has a
-hard right edge: a concurrent insert at `endId` should *not* expand the
-link. And so on. The paper argues informally that the design handles
+table for reference. In one,
+Alice bolds the entire sentence while Bob inserts the word "brown" in
+the middle, and the result should be **The brown fox jumped**. In
+another, Alice bolds the first two words while Bob bolds the last two,
+and the overlap is bold too. A third concerns link spans: a link has
+a hard right edge, so a concurrent insert at the end of the link
+should not expand it. And so on for the rest of the eight. The paper argues informally that the design handles
 each example correctly, and ships a TypeScript reference plus
 property-based tests, but no machine-checked proofs.
 
