@@ -204,10 +204,11 @@ worked examples of intent preservation, each spelled out as a small
 concrete scenario, and appendix §A.2 catalogues them as a single
 table for reference.
 
-In one, Alice bolds the entire sentence while Bob inserts the word
-"brown" in the middle, and the result should be **The brown fox
-jumped**. In another, Alice bolds the first two words while Bob bolds
-the last two, and the overlap is bold too. A third concerns link
+In one, Alice bolds the entire sentence "The fox jumped" while Bob
+inserts the word "brown" in the middle, and the result should be
+**The brown fox jumped**. In another, working with the same sentence,
+Alice bolds "The fox" while Bob bolds "fox jumped", and the
+overlapping word "fox" ends up bold under both. A third concerns link
 spans: a link has a hard right edge, so a concurrent insert at the
 end of the link should not expand it. And so on for the rest of the
 eight. The paper argues informally that the design handles each
