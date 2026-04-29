@@ -391,7 +391,7 @@ component for increment records and use a snapshot-in-op-payload trick
 `rc := Either` everywhere and lets the RA-linearizability VCs drop out
 without any SMT.
 
-The **Bounded Counter** of Balegas et al. (EuroSys 2015) is a 465-line
+The **Bounded Counter** of Balegas et al. (SRDS 2015) is a 465-line
 CRDT, structurally a PN-Counter plus a transfer matrix. The 24 VCs are
 trivial. The bound itself is *not* part of the verified model: it is
 enforced operationally at the client boundary (a replica refuses to emit
