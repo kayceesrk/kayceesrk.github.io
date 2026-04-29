@@ -16,7 +16,8 @@ sequential specification: the merged state should behave as if the operations
 everyone did had run in some sequential interleaving. RA-linearizability is
 what our verification work has aimed at for the past few years, and for a
 class of useful data types it still falls short: the ones where the state is
-a grow-only bag and the interesting semantics live in the read function. I gave [a talk at PaPoC last
+a grow-only bag and the interesting semantics live in the read function. I
+gave [the keynote at PaPoC 2026 last
 week](/slides/RDT_verification_papoc_2026.pdf) about this, and about the
 multi-modal agentic proof setup we've been using in
 [Sal](https://github.com/fplaunchpad/sal) to chip away at the gap. This post
