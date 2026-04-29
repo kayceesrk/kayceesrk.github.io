@@ -13,11 +13,10 @@ stronger one,
 [replication-aware linearizability](https://dl.acm.org/doi/10.1145/3314221.3314617)
 from Wang et al. (PLDI 2019), is full functional equivalence with a
 sequential specification: the merged state should behave as if the operations
-everyone did had run in some sequential interleaving. RA-linearizability has
-been the property our verification work has aimed at for a few years now. For
-a class of useful data types it still falls short, namely the ones where the
-state is a grow-only bag and the interesting semantics live in the read
-function. I gave [a talk at PaPoC last
+everyone did had run in some sequential interleaving. RA-linearizability is
+what our verification work has aimed at for the past few years, and for a
+class of useful data types it still falls short: the ones where the state is
+a grow-only bag and the interesting semantics live in the read function. I gave [a talk at PaPoC last
 week](/slides/RDT_verification_papoc_2026.pdf) about this, and about the
 multi-modal agentic proof setup we've been using in
 [Sal](https://github.com/fplaunchpad/sal) to chip away at the gap. This post
@@ -27,12 +26,12 @@ is the longer-form version.
 
 ## Convergence is not enough
 
-The canonical example is the OR-Set. Adding an element tags it with a fresh
-id and stores the `(element, id)` pair. Removing an element does not delete
-anything; it adds a tombstone entry for each currently observed `(element,
-id)` pair into a separate tombstone component of the state. Reading filters
-the adds against the tombstones, and merging unions both components
-componentwise. The data type converges, but tombstones accumulate without
+The canonical example is the OR-Set. The state is two sets, an *adds* set
+and a *tombstones* set. Adding an element tags it with a fresh id and
+stores the `(element, id)` pair in *adds*. Removing an element does not
+delete anything; it adds a tombstone entry for each currently observed
+`(element, id)` pair to *tombstones*. Reading filters *adds* against
+*tombstones*, and merging unions both components componentwise. The data type converges, but tombstones accumulate without
 bound. The fix is a bit cleverer than just tagging: each replica tracks
 causality explicitly, by maintaining a context of operations it has
 observed, and the merge uses that context to recognise when an element
@@ -73,7 +72,7 @@ returned yes / no / timeout with no counterexample), and the methodology
 did not really scale past a handful of carefully-chosen examples.
 
 [Neem](/papers/mrdtconverge_jan_25.pdf) (OOPSLA 2025) replaced the axiomatic
-spec with the RA-linearizability framing of Wang et al., with a twist:
+spec with RA-linearizability, with one twist:
 instead of taking a separate sequential specification as input, Neem treats
 the operational definition of `do_` itself as the spec. The merge is
 correct if the resulting state behaves like some sequential interleaving of
@@ -110,10 +109,8 @@ RDTs, in a three-tier taxonomy that we settled on this past month:
   rest of the post comes back to).
 
 Roughly half the Sal suite, and most of the RDTs people actually want to
-use, sit in Tier C. For Tier C, "verified" without read-side theorems is an
-overclaim: the 24 VCs prove union commutativity on a few grow-only maps,
-and say nothing about which characters end up bold or which item sits at
-the head of the priority queue.
+use, sit in Tier C. For Tier C, "verified" without read-side theorems is
+an overclaim.
 
 ## What Sal actually is
 
@@ -126,8 +123,9 @@ and adds a multi-modal proof tactic. The repo is at
 The Lean choice is not original to us. Ilya Sergey is the one who
 convinced me to take Lean seriously, and Sal's multi-modal tactic stack
 is directly inspired by [Loom](https://verse-lab.github.io/), the
-verification framework his group has been building. Loom and Velvet do
-imperative-program verification; Sal does RDTs. The toolchain is shared.
+multi-modal proof-orchestration layer his group has been building.
+Velvet, the Lean library it sits inside, verifies imperative programs;
+Sal verifies RDTs. The toolchain is shared.
 
 When you write `by sal` in front of a verification condition, three things
 happen in sequence. First, `dsimp + grind`: pure rewriting plus Lean's
@@ -168,8 +166,8 @@ verification conditions) the breakdown from the paper was roughly 69%
 closed at stage 1, 28% via Z3, and 3% via AI-completed ITP. That is the
 "push-button" claim, and for Tier A and B it holds up well.
 
-Two practical notes worth flagging here. First, [Aristotle](https://harmonic.fun)
-has been the workhorse at stage 3 in practice: `LWW-Map`, `Shopping-Cart`,
+Two practical notes. First, [Aristotle](https://harmonic.fun)
+has been the workhorse at stage 3: `LWW-Map`, `Shopping-Cart`,
 and `MAX-Map` each had VCs that neither `grind` nor Z3 closed, and
 Aristotle produced kernel-checked intermediate lemmas that did. Second,
 on the brittleness-of-tooling worry, the suite was bumped from Lean
@@ -190,14 +188,16 @@ marks). What makes the paper unusually pleasant to mechanise is the
 care its authors put into specifying intent. §3 walks through eight
 worked examples of intent preservation, each spelled out as a small
 concrete scenario, and appendix §A.2 catalogues them as a single
-table for reference. In one,
-Alice bolds the entire sentence while Bob inserts the word "brown" in
-the middle, and the result should be **The brown fox jumped**. In
-another, Alice bolds the first two words while Bob bolds the last two,
-and the overlap is bold too. A third concerns link spans: a link has
-a hard right edge, so a concurrent insert at the end of the link
-should not expand it. And so on for the rest of the eight. The paper argues informally that the design handles
-each example correctly, and ships a TypeScript reference plus
+table for reference.
+
+In one, Alice bolds the entire sentence while Bob inserts the word
+"brown" in the middle, and the result should be **The brown fox
+jumped**. In another, Alice bolds the first two words while Bob bolds
+the last two, and the overlap is bold too. A third concerns link
+spans: a link has a hard right edge, so a concurrent insert at the
+end of the link should not expand it. And so on for the rest of the
+eight. The paper argues informally that the design handles each
+example correctly, and ships a TypeScript reference plus
 property-based tests, but no machine-checked proofs.
 
 The 24 RA-linearizability VCs are trivial here. Peritext's state is
@@ -223,11 +223,10 @@ example is small enough to write down as a *concrete* state and a
 post](https://risemsr.github.io/blog/2026-04-16-spotting-specs/)
 calling this kind of artifact a *Small Proof-Oriented Test*, or SPOT:
 "a small, concrete, verified test case, proving that the test always
-succeeds." The Peritext authors had effectively done the
-specification-engineering half of that job for us by writing
-§3 with the level of care they did; all that was left was to
-translate each example into Lean and prove it against the
-implementation. So we did.
+succeeds." By writing §3 the way they did, the Peritext authors had
+effectively done the specification-engineering half of that job for
+us; all that was left was to translate each example into Lean and
+prove it against the implementation. So we did.
 
 Take Example 1 from the paper. Alice bolds the entire sentence
 "The fox jumped" while Bob concurrently inserts the word "brown"
@@ -355,10 +354,9 @@ Hannes Hartenstein (KIT) sketches a path to formal verification of
 local-first access control. Same shape: write the intent down
 precisely, then prove an implementation matches.
 
-It is a useful background fact that none of these are RDT-specific.
-Each is a different domain (rich-text, spreadsheets, group
-membership, access control) where the merges are easy and the
-intent is hard. SPOTs, oracles, and the multi-modal Lean stack are
+None of these are RDT-specific. Each is a different domain
+(rich-text, spreadsheets, group membership, access control) where
+the merges are easy and the intent is hard. SPOTs, oracles, and the multi-modal Lean stack are
 all reactions to the same shift in where the difficulty lives.
 
 ## The past three weeks
@@ -398,8 +396,8 @@ CRDT, structurally a PN-Counter plus a transfer matrix. The 24 VCs are
 trivial. The bound itself is *not* part of the verified model: it is
 enforced operationally at the client boundary (a replica refuses to emit
 a `Dec` that would push its quota negative), and that part is currently
-unverified. Worth saying explicitly, since the headline number alone
-might suggest more than is there.
+unverified. The headline number alone might suggest more than is there,
+so worth calling out.
 
 A separate cleanup is worth noting. About 85 Blaster-admits across the
 suite closed via a single pattern, *per-component decomposition*:
