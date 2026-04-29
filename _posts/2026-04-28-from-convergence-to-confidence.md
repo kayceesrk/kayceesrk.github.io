@@ -427,8 +427,8 @@ toggling "show concrete state" exposes the lattice that the
 convergence proofs are about. The MRDT pages render the operation
 history as a git-style commit DAG and let you do three-way merges
 over the lowest common ancestor. None of this is load-bearing for
-the verification story, but it is by some distance the easiest way
-to see what the data types actually do.
+the verification story, but it is a more direct way to see what the
+data types actually do than reading the proofs.
 
 ## Closing
 
@@ -443,8 +443,8 @@ is at <https://github.com/fplaunchpad/sal>, and the question I closed
 the talk with was: *what will you prove next?*
 
 [PaPoC 2026](https://papoc-workshop.github.io/2026/) was co-located
-with EuroSys in Edinburgh, and was by some distance the most fun
-workshop I have been to in a while. Thanks to the program chairs,
-[Lindsey Kuper](https://decomposition.al/) and [José Orlando
-Pereira](https://jopereira.github.io/), for running it. A permanent
-entry for the keynote is on [my talks page](/talks#papoc_2026).
+with EuroSys in Edinburgh, and was a wonderful workshop. Thanks to
+the program chairs, [Lindsey Kuper](https://decomposition.al/) and
+[José Orlando Pereira](https://jopereira.github.io/), for running
+it. A permanent entry for the keynote is on [my talks
+page](/talks#papoc_2026).
