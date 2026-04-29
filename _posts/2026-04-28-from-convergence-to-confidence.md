@@ -440,3 +440,10 @@ workable methodology.
 The slides are [here](/slides/RDT_verification_papoc_2026.pdf), the repo
 is at <https://github.com/fplaunchpad/sal>, and the question I closed
 the talk with was: *what will you prove next?*
+
+[PaPoC 2026](https://papoc-workshop.github.io/2026/) was co-located
+with EuroSys in Edinburgh, and was by some distance the most fun
+workshop I have been to in a while. Thanks to the program chairs,
+[Lindsey Kuper](https://decomposition.al/) and [José Orlando
+Pereira](https://jopereira.github.io/), for running it. A permanent
+entry for the keynote is on [my talks page](/talks#papoc_2026).
