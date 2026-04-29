@@ -26,7 +26,9 @@ is the longer-form version.
 
 ## Convergence is not enough
 
-The canonical example is the OR-Set. The state is two sets, an *adds* set
+The canonical example is the
+[OR-Set](https://inria.hal.science/inria-00555588/document). The
+state is two sets, an *adds* set
 and a *tombstones* set. Adding an element tags it with a fresh id and
 stores the `(element, id)` pair in *adds*. Removing an element does not
 delete anything; it adds a tombstone entry for each currently observed
@@ -124,8 +126,9 @@ The Lean choice is not original to us. Ilya Sergey is the one who
 convinced me to take Lean seriously, and Sal's multi-modal tactic stack
 is directly inspired by [Loom](https://verse-lab.github.io/), the
 multi-modal proof-orchestration layer his group has been building.
-Velvet, the Lean library it sits inside, verifies imperative programs;
-Sal verifies RDTs. The toolchain is shared.
+[Velvet](https://proofsandintuitions.net/2026/01/21/multi-modal-verification-velvet/),
+the Lean library it sits inside, verifies imperative programs; Sal
+verifies RDTs. The toolchain is shared.
 
 When you write `by sal` in front of a verification condition, three things
 happen in sequence. First, `dsimp + grind`: pure rewriting plus Lean's
@@ -382,8 +385,9 @@ examples one-to-one, plus a `wf_afters` acyclicity invariant and a
 `bold_expand_reach` predicate for Example 7. Roughly two days of
 agent-paired work, mostly spent on the spec rather than on the proofs.
 
-The **Add-Wins Priority Queue** of Zhang et al. (Internetware 2023) is a
-391-line CRDT plus a 325-line read-side. The translation is interesting
+The **Add-Wins Priority Queue** of [Zhang et al. (Internetware
+2023)](https://doi.org/10.1145/3609437.3609452) is a 391-line CRDT
+plus a 325-line read-side. The translation is interesting
 in its own right. The paper has a per-record `count` field that ties
 commutativity in knots; in Sal we flatten it into a separate `I`
 component for increment records and use a snapshot-in-op-payload trick
@@ -391,8 +395,11 @@ component for increment records and use a snapshot-in-op-payload trick
 `rc := Either` everywhere and lets the RA-linearizability VCs drop out
 without any SMT.
 
-The **Bounded Counter** of Balegas et al. (SRDS 2015) is a 465-line
-CRDT, structurally a PN-Counter plus a transfer matrix. The 24 VCs are
+The **Bounded Counter** of [Balegas et al. (SRDS
+2015)](https://doi.org/10.1109/SRDS.2015.32), in the [state-based
+formulation](https://www.bartoszsypytkowski.com/state-based-crdts-bounded-counter/)
+that Sypytkowski wrote up in 2019, is a 465-line CRDT structurally a
+PN-Counter plus a transfer matrix. The 24 VCs are
 trivial. The bound itself is *not* part of the verified model: it is
 enforced operationally at the client boundary (a replica refuses to emit
 a `Dec` that would push its quota negative), and that part is currently
@@ -403,8 +410,9 @@ A separate cleanup is worth noting. About 85 Blaster-admits across the
 suite closed via a single pattern, *per-component decomposition*:
 instead of one monolithic SMT call on the full state, split the state
 into components, prove each component independently, then combine. The
-OR-Set MRDT went from 17 of 20 VCs trusting Z3 down to 3. The pattern
-was human-found; the agent applied it consistently across files.
+OR-Set MRDT alone went from 20 VCs trusting Z3 down to 3 (closing 17
+in a single commit). The pattern was human-found; the agent applied it
+consistently across files.
 
 The qualifier from the Peritext section applies to all three of these
 ports as well: the RA-linearizability VCs are easy, and the work that
