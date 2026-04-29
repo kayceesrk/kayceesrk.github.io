@@ -6,12 +6,13 @@ categories: [Verification, RDTs, Lean]
 excerpt_separator: <!--more-->
 ---
 
-What does it mean for a replicated data type to be *correct*? For most of
-the literature, my own prior work included, the answer has been convergence:
-two replicas that have applied the same operations end up in the same
-state. I argued [in my PaPoC 2026
-keynote](/slides/RDT_verification_papoc_2026.pdf) last week that for many
-useful data types convergence is not enough.
+What does it mean for a replicated data type to be *correct*? For most of the
+literature, my own prior work included, the answer has been convergence: two
+replicas that have applied the same operations end up in the same state. I
+argued [in my PaPoC 2026 keynote](/slides/RDT_verification_papoc_2026.pdf) last
+week that for many useful data types convergence is not enough, and agentic
+proof-oriented programming can help close the gap between convergence and
+confidence.
 
 <!--more-->
 
