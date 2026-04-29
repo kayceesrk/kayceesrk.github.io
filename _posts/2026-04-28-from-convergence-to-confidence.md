@@ -25,6 +25,13 @@ is the longer-form version.
 
 <!--more-->
 
+[PaPoC 2026](https://papoc-workshop.github.io/2026/) was co-located
+with EuroSys in Edinburgh, and was a wonderful workshop. Thanks to
+the program chairs, [Lindsey Kuper](https://decomposition.al/) and
+[José Orlando Pereira](https://jopereira.github.io/), for running
+it. A permanent entry for the keynote is on [my talks
+page](/talks#papoc_2026).
+
 ## Convergence is not enough
 
 The canonical example is the
@@ -441,10 +448,3 @@ workable methodology.
 The slides are [here](/slides/RDT_verification_papoc_2026.pdf), the repo
 is at <https://github.com/fplaunchpad/sal>, and the question I closed
 the talk with was: *what will you prove next?*
-
-[PaPoC 2026](https://papoc-workshop.github.io/2026/) was co-located
-with EuroSys in Edinburgh, and was a wonderful workshop. Thanks to
-the program chairs, [Lindsey Kuper](https://decomposition.al/) and
-[José Orlando Pereira](https://jopereira.github.io/), for running
-it. A permanent entry for the keynote is on [my talks
-page](/talks#papoc_2026).
