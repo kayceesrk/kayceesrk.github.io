@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 ---
 
 Last semester at IIT Madras, I taught a revamped core course [CS3100 Paradigms
-of Programming](http://kcsrk.info/cs3100_f19/), which introduces 3rd-year
+of Programming](https://fplaunchpad.github.io/cs3100_f19/), which introduces 3rd-year
 students to functional and logic programming paradigms. While the course had
 been traditionally offered in Lisp and Prolog, I introduced OCaml instead of
 Lisp. All of the lectures were delivered through interactive Jupyter
@@ -42,11 +42,11 @@ Prolog](https://mitpress.mit.edu/books/art-prolog-second-edition) book.
 Teaching functional and logic programming in the same course allowed me to
 develop interesting content that intersected both of the paradigms. In the
 functional programming part of the lecture, I had introduced [simply typed
-lambda calculus](http://kcsrk.info/cs3100_f19/lectures/lec11/lec11.pdf). In the
+lambda calculus](https://fplaunchpad.github.io/cs3100_f19/lectures/lec11/lec11.pdf). In the
 logic part of the course, we developed a type checker for simply typed lambda
 calculus in Prolog. Merely encoding type checking rules for simply typed lambda
 calculus in Prolog, [type inference with polymorphic types falls
-out](http://kcsrk.info/cs3100_f19/lectures/lec25/lec25.pdf). With a tiny bit of
+out](https://fplaunchpad.github.io/cs3100_f19/lectures/lec25/lec25.pdf). With a tiny bit of
 coaxing, Prolog synthesizes programs for the given type. In the last assignment,
 the students were asked to implement [a Prolog interpreter in
 OCaml](https://github.com/fplaunchpad/cs3100_f19/blob/gh-pages/assignments/assignment6.ipynb).
@@ -121,7 +121,7 @@ on the command line.
 facilitates creating and grading assignments in Jupyter notebook. It uses
 language-agnostic logic to identify failing cells, which meant that it was easy
 to set up nbgrader for OCaml and Prolog. The assignments were
-[released](http://kcsrk.info/cs3100_f19/assignments/) as Jupyter notebooks,
+[released](https://fplaunchpad.github.io/cs3100_f19/assignments/) as Jupyter notebooks,
 which the students filled in and submitted. nbgrader has support for unit tests
 which allowed the students to get instant feedback as they were developing the
 solutions.
