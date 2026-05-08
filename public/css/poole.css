@@ -120,6 +120,13 @@ ul, ol, dl {
   margin-bottom: 0rem;
 }
 
+/* List items frequently hold a single <p> with line breaks (e.g. the
+   papers page); don't apply the full paragraph margin between adjacent
+   list items, that visually doubles the gap and reads as too airy. */
+li > p {
+  margin-bottom: .35rem;
+}
+
 dt {
   font-weight: bold;
 }
