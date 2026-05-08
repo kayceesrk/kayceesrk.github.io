@@ -17,21 +17,6 @@ excerpt_separator: <!--more-->
   x-ocaml.hidden { display: none; }
 </style>
 
-<x-ocaml class="hidden">
-module Portable = struct
-  module Atomic : sig
-    type !'a t : value mod contended portable
-    val make : 'a @ portable contended -> 'a t
-    val fetch_and_add : int t @ local -> int -> int
-  end = struct
-    type !'a t : value mod contended portable =
-      'a Basement.Portable_atomic.t
-    let make = Basement.Portable_atomic.make
-    let fetch_and_add = Basement.Portable_atomic.fetch_and_add
-  end
-end
-</x-ocaml>
-
 A while back I [wired up `x-ocaml`]({% post_url 2025-06-20-xocaml %}) so this
 blog could embed live, editable OCaml notebooks. That post used a vanilla
 OCaml 5 toplevel. Today the toplevel running in your browser is built
@@ -287,6 +272,21 @@ parallel API) ask for a stronger guarantee. The post uses only the two
 endpoints of the contention chain — `uncontended` and `contended` — and
 skips `shared`, which permits read-only access across domains and isn't
 needed for the gensym story.
+
+<x-ocaml class="hidden">
+module Portable = struct
+  module Atomic : sig
+    type !'a t : value mod contended portable
+    val make : 'a @ portable contended -> 'a t
+    val fetch_and_add : int t @ local -> int -> int
+  end = struct
+    type !'a t : value mod contended portable =
+      'a Basement.Portable_atomic.t
+    let make = Basement.Portable_atomic.make
+    let fetch_and_add = Basement.Portable_atomic.fetch_and_add
+  end
+end
+</x-ocaml>
 
 ## Back to `gensym`: the fix
 
