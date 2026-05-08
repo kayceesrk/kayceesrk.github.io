@@ -19,34 +19,28 @@ excerpt_separator: <!--more-->
 
 In the
 [previous post]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %}) we
-showed how OxCaml's *contention* and *portability* axes rule out data
-races at compile time, and fixed the racy `gensym` with
-`Portable.Atomic`. That worked because the shared state was a single
-integer with atomic primitives. What about state that needs a hash
-table, or a multi-step update, or any structure where atomics aren't
-enough? OxCaml's answer is the **capsule**: a way to bundle state with
-its lock so the lock discipline becomes a type-checker job rather than
-a programmer convention.
+fixed the racy `gensym` with `Portable.Atomic`. That worked because
+the shared state was a single integer with atomic primitives. What
+about state that needs a hash table, a multi-step update, or any
+structure where atomics aren't enough? OxCaml's answer is the
+**capsule**: a way to bundle state with its lock so the lock
+discipline becomes a type-checker job rather than a programmer
+convention.
 
 <!--more-->
 
-This post adapts the capsule version of `gensym` from my
+The example here is the capsule version of `gensym` from my
 [CS6868](https://github.com/fplaunchpad/cs6868_s26) lecture
 ([handout](https://github.com/fplaunchpad/cs6868_s26/blob/main/lectures/11_oxcaml/handout.md#part-5-capsules--safe-shared-mutable-state)).
-Capsules don't introduce a new mode axis. They're a small library that
-composes the axes we've already met: contention and portability from
-the [previous post]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %}),
+Capsules don't introduce a new mode axis; they're a small library that
+composes the axes we've already met:
+[contention and portability]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %}),
 [uniqueness]({% post_url 2025-05-29-uniqueness_and_behavioural_types %}),
-and [linearity]({% post_url 2025-06-04-linearity_and_uniqueness %}). The
-goal of this post is to read the gensym-with-capsule program through
-those four lenses and see where each one is doing real work.
-
+and [linearity]({% post_url 2025-06-04-linearity_and_uniqueness %}).
 The cells below run in the same in-browser OxCaml toplevel as the
-previous post. We work with `Capsule_expert` and a blocking mutex
-rather than the curated `Capsule.{Isolated, Guard, …}` and
-`Await_capsule.Mutex` the lecture uses; the
-[*Which API?*](#a-note-on-the-api) section at the end explains the
-choice. The shape of what the modes are doing is the same.
+previous post; the [*A note on the API*](#a-note-on-the-api) section
+at the end explains why we use a slightly older flavour of the capsule
+API (it's a bundle-size thing, not pedagogical).
 
 ## Why atomics aren't enough
 
@@ -85,9 +79,8 @@ holding the lock right now." That's exactly what a capsule provides.
 
 ## Gensym in a capsule
 
-The capsule pattern packs the counter inside a brand-locked container.
-The cell below builds a thread-safe integer counter using `Capsule_expert`
-and a blocking mutex, then wraps it in a `gensym` that prefixes ids:
+The capsule pattern packs the counter inside a brand-locked container,
+making the lock the only handle to the state:
 
 <x-ocaml>
 [@@@alert "-deprecated"]
@@ -112,10 +105,10 @@ let gensym prefix = prefix ^ "_" ^ string_of_int (next ())
 let () = Printf.printf "%s %s\n" (gensym "x") (gensym "y")
 </x-ocaml>
 
-Click Run. The cell prints two distinct ids and the toplevel reports
+Run it; you get two distinct ids, and the toplevel binds
 `val next : unit -> int` and `val gensym : string -> string`. No
-pointer to the inner `ref` ever escapes; the only way to reach it is
-through `Mtx.with_lock`. Let's read what each piece is doing.
+handle to the inner `ref` is in scope outside `Mtx.with_lock`. Let's
+read what's making that true.
 
 ### The brand `'k`: an existential tied to a fresh capsule
 
@@ -189,7 +182,7 @@ val with_lock
   -> 'a @ once unique
 ```
 
-Three different mode axes are doing real work in this signature.
+Three different things in this signature are doing real work.
 
 - **Brand `'k`**: the password's brand matches the mutex's brand. A
   password from a *different* mutex (different `$k1`) cannot unwrap
@@ -234,8 +227,8 @@ let abuse () =
   let Cap.Key.P key1 = Cap.create () in
   let Cap.Key.P key2 = Cap.create () in
   let data  = Cap.Data.create (fun () -> ref 0) in
-  let m1 = Cap.(Mtx.create key1) in
-  let m2 = Cap.(Mtx.create key2) in
+  let m1 = Mtx.create key1 in
+  let m2 = Mtx.create key2 in
   (* First unwrap pins data's brand to key1's $k. *)
   let _ = Mtx.with_lock m1 ~f:(fun password ->
             Cap.access ~password ~f:(fun access ->
@@ -267,26 +260,25 @@ property that protects the bare `ref`); brand mismatch closes the
 aliased-mutex case; the one-mutex-two-data case shows the rule isn't
 gratuitously restrictive.
 
-## Five axes, working together
+## What each mode is doing
 
-If you read the previous three OxCaml posts and this one, every piece
-is something we've already met:
+Pulling the threads together, with one line per axis:
 
-- **Contention** says "this value might be touched by another domain
-  right now," and forbids reads and writes of mutable fields. Inside
-  `with_lock` we get an *uncontended* view; outside, the contents are
-  unreachable.
-- **Portability** says the closure can be shipped to another domain.
-  `Cap.Data.t` mode-crosses, so capturing it doesn't make the closure
-  nonportable.
-- **Locality** confines the password (and the access derived from it)
-  to the body of `with_lock`. No way to retain a token past the lock
+- **Contention** ensures shared mutable state can't be read or
+  written from outside a critical section. Inside `with_lock` we get
+  an `@ uncontended` view via `unwrap`; outside, the contents aren't
+  in scope at all.
+- **Portability** lets the closure cross domain boundaries.
+  `Cap.Data.t` mode-crosses, so the closure capturing it stays
+  `@ portable`.
+- **Locality** confines the password (and the access derived from
+  it) to the body of `with_lock`. No way to keep a token past lock
   release.
-- **Linearity (`@ once`)** prevents re-entering the body with the
-  same password, ruling out aliasing of the critical section.
-- **Uniqueness** isn't an annotation here, it's a structural property:
-  the inner `ref` has exactly one path of access, through the capsule.
-  No alias.
+- **Linearity** (`@ once` on the body) makes the critical section
+  single-shot. The body cannot be re-entered with the same password.
+- **Uniqueness** isn't an annotation we wrote; it's the property
+  that the inner `ref` has exactly one path of access, through the
+  capsule. The API shape forces it.
 
 ## A note on the API
 
@@ -320,16 +312,15 @@ is what you want.
 
 ## What's left
 
-This is enough machinery to put a hash table or a more elaborate
+The capsule pattern is enough to put a hash table or a more elaborate
 shared structure under a single mutex with a compile-time guarantee
 that nothing touches it without the lock. To actually run gensym from
-two domains in parallel we need the parallel scheduler: `Parallel.t`,
-`Parallel.fork_join2`, the `@ portable once` story for closures
-crossing the fork boundary. That's the topic of the next post, when I
-get around to it.
+two domains in parallel we need the parallel scheduler:
+`Parallel.fork_join2` and the `@ portable once` story for closures
+crossing the fork boundary. That's the next post.
 
-The point of stopping here: the hard part of getting safe shared
+The point of stopping here is that the hard part of safe shared
 mutable state in OxCaml isn't the parallel primitive, it's the lock
 discipline. And the lock discipline turns out to be a small
-composition of the four mode axes we already had to learn anyway. The
-new library is small. The framework was already in place.
+composition of the mode axes we already had to learn anyway. The new
+library is small; the framework was already in place.
