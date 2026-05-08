@@ -66,15 +66,6 @@ consistency is the real prize. Race freedom is what buys it.
 
 ## Hello, OxCaml
 
-A note on the editor before we start: type-on-hover is broken in this
-OxCaml build of x-ocaml — moving the cursor over an identifier won't
-pop up a type tooltip the way it does in a typical Merlin setup. Each
-cell still echoes the inferred type signature on the line below the
-phrase after you Run it, and that's where you should look to read the
-modes the compiler inferred. The hover regression seems to involve the
-+ox merlin-lib's interaction with the worker bundle and is on the list
-to track down.
-
 A quick sanity check that your browser really is running an OxCaml
 toplevel. The `@ local` annotation is OxCaml-only syntax; on a stock OCaml
 parser it wouldn't even parse.

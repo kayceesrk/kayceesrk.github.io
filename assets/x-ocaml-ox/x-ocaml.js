@@ -36162,10 +36162,14 @@
    function caml_ml_mutex_unlock(t){t.locked = false; return 0;}
    var caml_domain_latest_idx = 1;
    function caml_domain_spawn(f, term_sync){
-    var id = caml_domain_latest_idx++, old = caml_domain_id;
+    var
+     id = caml_domain_latest_idx++,
+     old_id = caml_domain_id,
+     old_dls = caml_domain_dls;
     caml_domain_id = id;
-    var res = caml_callback(f, [0]);
-    caml_domain_id = old;
+    var res;
+    try{res = caml_callback(f, [0]);}
+    finally{caml_domain_id = old_id; caml_domain_dls = old_dls;}
     caml_ml_mutex_unlock(term_sync[2]);
     term_sync[1] = [0, [0, res]];
     return id;
@@ -40679,7 +40683,8 @@
    }
    caml_setup_uncaught_exception_handler();
    globalThis.jsoo_runtime =
-    {caml_domain_tls_get: caml_domain_tls_get,
+    {caml_domain_spawn: caml_domain_spawn,
+     caml_domain_tls_get: caml_domain_tls_get,
      caml_domain_tls_set: caml_domain_tls_set,
      caml_oxcaml_domain_tls_state: caml_oxcaml_domain_tls_state,
      caml_sys_const_arch_arm64: caml_sys_const_arch_arm64,
@@ -40735,7 +40740,6 @@
      caml_atomic_load_field: caml_atomic_load_field,
      caml_ml_domain_cpu_relax: caml_ml_domain_cpu_relax,
      caml_ml_domain_id: caml_ml_domain_id,
-     caml_domain_spawn: caml_domain_spawn,
      caml_domain_id: caml_domain_id,
      caml_recommended_domain_count: caml_recommended_domain_count,
      caml_atomic_make_contended: caml_atomic_make_contended,
