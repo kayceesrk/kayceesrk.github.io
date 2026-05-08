@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 ></script>
 
 <style>
-  x-ocaml { font-size: 0.9em; }
+  x-ocaml { font-size: 0.9em; display: block; margin-bottom: 1.4rem; }
   x-ocaml.hidden { display: none; }
 </style>
 
