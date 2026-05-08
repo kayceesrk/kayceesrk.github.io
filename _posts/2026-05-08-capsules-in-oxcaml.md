@@ -6,6 +6,17 @@ categories: [OCaml, OxCaml, Modes, Blogging]
 excerpt_separator: <!--more-->
 ---
 
+<script async
+  src="{{ '/assets/x-ocaml-ox/x-ocaml.js' | relative_url }}"
+  src-worker="{{ '/assets/x-ocaml-ox/x-ocaml.worker+effects.js' | relative_url }}"
+  src-load="{{ '/assets/x-ocaml-ox/portable.js' | relative_url }}"
+></script>
+
+<style>
+  x-ocaml { font-size: 0.9em; }
+  x-ocaml.hidden { display: none; }
+</style>
+
 In the
 [previous post]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %}) we
 showed how OxCaml's *contention* and *portability* axes rule out data
@@ -29,6 +40,14 @@ the [previous post]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %}),
 and [linearity]({% post_url 2025-06-04-linearity_and_uniqueness %}). The
 goal of this post is to read the gensym-with-capsule program through
 those four lenses and see where each one is doing real work.
+
+The cells below run in the same in-browser OxCaml toplevel as the
+previous post. We use `Capsule_expert` (the lower-level brand-based API)
+and `Capsule_blocking_sync.Mutex` (a blocking mutex that doesn't pull
+in the `Await` fiber library), since those are what the in-browser
+bundle ships. The curated `Capsule.{Data, Isolated, Guard, Shared, Mutex}`
+namespace from the `capsule` opam library has the same shape; the
+mechanics we exercise here are identical.
 
 ## Why atomics aren't enough
 
@@ -67,127 +86,187 @@ holding the lock right now." That's exactly what a capsule provides.
 
 ## Gensym in a capsule
 
-Here's the capsule version straight from the lecture:
+The capsule pattern packs the counter inside a brand-locked container.
+The cell below builds a thread-safe integer counter using `Capsule_expert`
+and a blocking mutex, then wraps it in a `gensym` that prefixes ids:
+
+<x-ocaml>
+[@@@alert "-deprecated"]
+
+module Cap = Capsule_expert
+module Mtx = Capsule_blocking_sync.Mutex
+
+let make_counter () =
+  let Cap.Key.P key = Cap.create () in
+  let counter = Cap.Data.create (fun () -> ref 0) in
+  let mutex   = Mtx.create key in
+  fun () ->
+    Mtx.with_lock mutex ~f:(fun password ->
+      Cap.access ~password ~f:(fun access ->
+        let c = Cap.Data.unwrap ~access counter in
+        incr c;
+        !c))
+
+let next   = make_counter ()
+let gensym prefix = prefix ^ "_" ^ string_of_int (next ())
+
+let () = Printf.printf "%s %s\n" (gensym "x") (gensym "y")
+</x-ocaml>
+
+Click Run. The cell prints two distinct ids and the toplevel reports
+`val next : unit -> int` and `val gensym : string -> string`. No
+pointer to the inner `ref` ever escapes; the only way to reach it is
+through `Mtx.with_lock`. Let's read what each piece is doing.
+
+### The brand `'k`: an existential tied to a fresh capsule
+
+`Cap.create ()` returns a key wrapped in an existential constructor
+`Cap.Key.P`:
 
 ```ocaml
-open Await
-
-let gensym =
-  let (P mutex) = Await_capsule.Mutex.create () in
-  let counter   = Capsule.Data.create (fun () -> ref 0) in
-  let fetch_and_incr (w : Await.t) =
-    Await_capsule.Mutex.with_lock w mutex ~f:(fun access ->
-      let c = Capsule.Data.unwrap ~access counter in
-      incr c;
-      !c)
-  in
-  fun w prefix -> prefix ^ "_" ^ string_of_int (fetch_and_incr w)
-```
-
-Five lines do the work; the rest is glue. Let's unpack the modes that
-make it sound.
-
-(One thing worth flagging up front: unlike the
-[previous post]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %}), this
-post's snippets are plain `.ml`-file code, not interactive toplevel
-cells. In a `.ml` file the whole compilation unit is a module that
-mode inference can mark portable wholesale, so we don't need the
-`module Gen = struct … end` wrapper trick the toplevel forced on us
-last time. The bare `let gensym = …` here is fine.)
-
-### The brand `'k`: an existential tied to the mutex
-
-`Await_capsule.Mutex.create ()` returns a mutex packaged in an
-existential:
-
-```ocaml
-type packed = P : 'k Mutex.t -> packed
+type packed = P : 'k Key.t -> packed [@@unboxed]
 val create : unit -> packed
 ```
 
-When you write `let (P mutex) = ...`, OCaml introduces a fresh type
-variable, call it `$k`, and binds `mutex : $k Mutex.t`. A second
-`let (P m2) = create ()` would introduce `$k2`, distinct and unrelated.
-Every `P` pattern brings a new type into the world.
+The `let Cap.Key.P key = Cap.create ()` pattern unwraps it and
+introduces a fresh type variable, call it `$k`, in the surrounding
+scope. `key` is then bound at type `$k Cap.Key.t`. A second
+`Cap.create ()` would introduce `$k2`, distinct and unrelated. Each
+`P` pattern brings a new type into the world.
 
-That brand is the connection between lock and data. When we then call
-`Capsule.Data.create (fun () -> ref 0)`, the compiler unifies the
-data's type parameter with the brand of the mutex it's first paired
-with, so `counter : (int ref, $k) Capsule.Data.t`. Henceforth this
-data only opens under *this* mutex's lock.
+That brand is the static glue between capsule, data, and mutex. When
+we call `Cap.Data.create (fun () -> ref 0)` next, the compiler unifies
+the data's type parameter with the brand of the key it'll eventually
+be unwrapped under, so `counter : (int ref, $k) Cap.Data.t`. The
+mutex created from `key` (consuming it as `@ unique`) is also branded
+`$k`. Henceforth this data only opens under this mutex's lock.
+
+(Why is the existential pattern wrapped inside `make_counter ()`
+rather than at the top level? OCaml refuses top-level let-bindings
+that introduce existentials, so we hide the unwrap inside a function.
+The closure returned by `make_counter` carries the `$k`-branded
+`mutex` and `counter` in its environment.)
 
 ### The bare `ref` is unreachable from outside the capsule
 
 Look at where the `ref 0` lives:
 
 ```ocaml
-let counter = Capsule.Data.create (fun () -> ref 0)
+let counter = Cap.Data.create (fun () -> ref 0)
 ```
 
-That `ref` has no binding outside the closure. The only handle out is
-the `Capsule.Data.t` value branded `$k`. There is no aliased reference
-to smuggle out: the `ref`'s reachability is single-pathed.
-
-This is exactly the configuration the
+That `ref` has no binding outside the closure handed to `Cap.Data.create`.
+The only handle out is the `Cap.Data.t` value branded `$k`. There is no
+aliased reference to smuggle out: the `ref`'s reachability is
+single-pathed. This is exactly the configuration the
 [uniqueness post]({% post_url 2025-05-29-uniqueness_and_behavioural_types %})
 was about, a unique reference with no aliases to it, but here we get
 it for free from how the API is shaped, without writing `@ unique`
 anywhere ourselves. The capsule API is *exploiting* uniqueness as a
 construction principle.
 
-### `Capsule.Data.t` mode-crosses contention and portability
+### `Cap.Data.t` mode-crosses contention and portability
 
 Just like `Portable.Atomic.t` from the previous post, the type
-`('a, 'k) Capsule.Data.t` carries the kind annotation
+`('a, 'k) Cap.Data.t` carries the kind annotation
 `value mod contended portable`. A closure that captures a capsule
 value stays `@ portable`, and any domain may hold the capsule. So the
-`gensym` closure, which captures both `mutex` and `counter`,
-type-checks at portable mode and is safe to send to another domain.
+closure returned by `make_counter` (which captures both `mutex` and
+`counter`) type-checks at portable mode and is safe to send to another
+domain.
 
 This is the same mode-crossing move we saw with `Portable.Atomic`,
 just applied to a more general container.
 
 ### `with_lock` produces an `access` token, briefly
 
-`with_lock` is the only way to obtain an `access` token. Its signature
-is roughly:
+`Mtx.with_lock` is the only way into the critical section. Its
+signature:
 
 ```ocaml
-val with_lock :
-  Await.t -> 'k Mutex.t ->
-  f:('k Access.t @ local -> 'a) @ local once ->
-  'a
+val with_lock
+  : 'k t
+  -> f:('k Cap.Password.t @ local -> 'a @ once unique) @ local once
+  -> 'a @ once unique
 ```
 
 Three different mode axes are doing real work in this signature.
 
-- **Brand `'k`**: the access token's brand matches the mutex's brand.
-  An access from a *different* mutex (a different `$k1`) cannot unwrap
-  our `counter`. The type checker refuses to unify the two existentials
-  and the program does not compile.
-- **`@ local`**: the access token is local to the body's region. It
+- **Brand `'k`**: the password's brand matches the mutex's brand. A
+  password from a *different* mutex (different `$k1`) cannot unwrap
+  our `counter`. The type checker refuses to unify the two
+  existentials and the program does not compile.
+- **`@ local`**: the password is local to the body's region. It
   cannot escape `f` by being returned, stored in a global, or stuffed
   into a closure that outlives the call. When `with_lock` returns the
-  lock is released, and there's no `access` left in scope to attempt
+  lock is released, and there's no `password` left in scope to attempt
   to touch the data with. (Locality is the [stack-allocation /
   no-escape axis we covered]({% post_url 2025-06-04-linearity_and_uniqueness %});
   same mechanism, different use.)
 - **`@ once`** on the body: `f` can be called at most once. This is
-  the linearity guarantee. There's no way to call back into the body
-  recursively with the same access token, no way for the runtime to
-  re-enter the critical section. Each `with_lock` use is a single
-  shot.
+  the linearity guarantee. The body cannot be re-entered with the
+  same password, and the runtime cannot smuggle it out for later. Each
+  `with_lock` use is a single shot.
 
-Inside the body, `Capsule.Data.unwrap ~access counter` accepts the
-brand-matching `access` and returns the underlying `int ref` at
-**`@ uncontended`**. We hold the lock; no other domain can be touching
-the data. The next two lines, `incr c; !c`, are ordinary
-OCaml mutation; the contention rule is satisfied by construction
-because the unwrap promised uncontended access.
+Inside `f`, `Cap.access ~password ~f:(fun access -> ...)` converts
+the password into a brand-matching `'k Access.t` for the inner body.
+`Cap.Data.unwrap ~access counter` then accepts the access and returns
+the underlying `int ref` at **`@ uncontended`**. We hold the lock; no
+other domain can be touching the data. The next two lines, `incr c;
+!c`, are ordinary OCaml mutation; the contention rule is satisfied by
+construction because `unwrap` promised uncontended access.
 
-Outside the body, no `access` exists, so `unwrap` is unreachable, so
-the inner `ref` is unreachable. There is no path to `incr c` that
+Outside the lock body, neither `password` nor `access` exists in
+scope, so there is no path from the outer program to `incr c` that
 doesn't go through `with_lock`.
+
+## Brand mismatch is a type error
+
+The cell below tries the genuinely unsound case: protecting one
+`Cap.Data.t` with two distinct mutexes. If this compiled, two
+threads holding distinct mutexes could enter critical sections on the
+same data simultaneously. The type checker refuses, and reports the
+two existentials don't match.
+
+<x-ocaml>
+[@@@alert "-deprecated"]
+
+let abuse () =
+  let Cap.Key.P key1 = Cap.create () in
+  let Cap.Key.P key2 = Cap.create () in
+  let data  = Cap.Data.create (fun () -> ref 0) in
+  let m1 = Cap.(Mtx.create key1) in
+  let m2 = Cap.(Mtx.create key2) in
+  (* First unwrap pins data's brand to key1's $k. *)
+  let _ = Mtx.with_lock m1 ~f:(fun password ->
+            Cap.access ~password ~f:(fun access ->
+              !(Cap.Data.unwrap ~access data))) in
+  (* This second unwrap fails: data is branded with the FIRST key's $k,
+     not the second's $k1. *)
+  Mtx.with_lock m2 ~f:(fun password ->
+    Cap.access ~password ~f:(fun access ->
+      !(Cap.Data.unwrap ~access data)))
+</x-ocaml>
+
+The error names the two existentials and points out they cannot
+unify. The handout's `capsule_abuse.ml` walks through two more
+attempted escape hatches:
+
+- **Leak the inner ref through a top-level `Portable.Atomic`.** The
+  store compiles, but anything inside a portable atomic is
+  `@ contended`, and the contention rule from the
+  [previous post]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %})
+  forbids reading or writing a mutable field of a contended value. So
+  you can park an alias, but you can't dereference it.
+- **One mutex protecting two `Cap.Data.t` values.** *Allowed*, and
+  correctly so. Both data values are branded with the same `$k`, and
+  a single critical section can update both. (Equivalent to one mutex
+  guarding two fields of a struct.)
+
+The first closes the obvious leak path (via the same uniqueness-of-paths
+property that protects the bare `ref`); brand mismatch closes the
+aliased-mutex case; the one-mutex-two-data case shows the rule isn't
+gratuitously restrictive.
 
 ## Five axes, working together
 
@@ -199,52 +278,31 @@ is something we've already met:
   `with_lock` we get an *uncontended* view; outside, the contents are
   unreachable.
 - **Portability** says the closure can be shipped to another domain.
-  `Capsule.Data.t` mode-crosses, so capturing it doesn't make the
-  closure nonportable.
-- **Locality** confines the `access` token to the body of `with_lock`.
-  No way to retain a token past the lock release.
-- **Linearity (`@ once`)** prevents re-entering the body with the same
-  token, ruling out aliasing of the critical section.
+  `Cap.Data.t` mode-crosses, so capturing it doesn't make the closure
+  nonportable.
+- **Locality** confines the password (and the access derived from it)
+  to the body of `with_lock`. No way to retain a token past the lock
+  release.
+- **Linearity (`@ once`)** prevents re-entering the body with the
+  same password, ruling out aliasing of the critical section.
 - **Uniqueness** isn't an annotation here, it's a structural property:
   the inner `ref` has exactly one path of access, through the capsule.
   No alias.
 
-The lecture's `capsule_abuse.ml` companion walks through three
-attempts to subvert the discipline. Each fails for a reason that's
-already in the framework:
-
-1. **Leak the inner ref through a top-level `Portable.Atomic`.** The
-   store compiles, but anything inside a portable atomic is
-   `@ contended`, and the contention rule from the
-   [previous post]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %})
-   forbids reading or writing a mutable field of a contended value. So
-   you can park an alias, but you can't dereference it.
-2. **One mutex protecting two `Capsule.Data.t` values.** *Allowed*, and
-   correctly so. Both data values are branded with the same `$k`, and
-   a single critical section can update both. (Equivalent to one mutex
-   guarding two fields of a struct.)
-3. **Two mutexes for one `Capsule.Data.t`.** *Rejected.* The data's
-   type parameter was unified with the first mutex's brand `$k`; the
-   second mutex's brand is a distinct `$k1`. The type checker refuses
-   the second unwrap and reports that the existentials don't match.
-   The genuinely unsound case (two threads with different mutexes
-   concurrently inside critical sections on the same data) is closed.
-
-(1) closes the obvious leak path (via the same uniqueness-of-paths
-property that protects the bare `ref`); (3) closes the aliased-mutex
-case; (2) confirms the rule isn't gratuitously restrictive.
-
 ## A note on the curated API
 
-The example uses `Capsule.Data` and `Await_capsule.Mutex`, the
-intermediate-level capsule API. The `capsule` library also has a
-**curated** layer (`Capsule.Isolated`, `Capsule.Guard`,
-`Capsule.Shared`) that hides most of the brand machinery for common
-patterns, and a `Capsule.Expert` layer for finer-grained primitives
-(raw `Password.t`, brand manipulation, etc.). For most code you reach
-for the curated forms first; the brand and `Data.unwrap` show up
-explicitly when you really do want a named capsule shared across
-several call sites, as in the lecture's gensym.
+The example uses `Capsule_expert` (the brand-based primitives) and
+`Capsule_blocking_sync.Mutex` (a blocking mutex). The full `capsule`
+opam library wraps these with a curated layer (`Capsule.Isolated`,
+`Capsule.Guard`, `Capsule.Shared`, `Capsule.Data`) that hides most of
+the brand machinery for common patterns. For most application code
+you reach for the curated forms first; the `Cap.Key.P key`, `password`,
+and `Cap.access` plumbing show up explicitly when you really do want a
+named capsule shared across several call sites, as in the lecture's
+gensym. We use the lower-level API here mostly because the curated
+wrapper pulls in `base`, `sexplib0`, and friends that would balloon
+the in-browser bundle by ~270 MB; the shape of what the modes are
+doing is the same.
 
 ## What's left
 
