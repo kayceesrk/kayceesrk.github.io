@@ -10,14 +10,14 @@
   </div>
 
   <nav class="sidebar-nav">
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}">About</a>
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}/papers">Papers</a>
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}/teaching">Teaching</a>
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}/advising">Advising</a>
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}/blog">Blog</a>
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}/talks">Talks</a>
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}/calendar">Calendar</a>
-		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.url }}/books">Books</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/' | relative_url }}">About</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/papers' | relative_url }}">Papers</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/teaching' | relative_url }}">Teaching</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/advising' | relative_url }}">Advising</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/blog' | relative_url }}">Blog</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/talks' | relative_url }}">Talks</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/calendar' | relative_url }}">Calendar</a>
+		<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ '/books' | relative_url }}">Books</a>
   </nav>
 
   <div class="sidebar-item">
