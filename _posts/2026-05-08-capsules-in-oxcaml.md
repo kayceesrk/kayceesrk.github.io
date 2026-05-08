@@ -42,28 +42,11 @@ goal of this post is to read the gensym-with-capsule program through
 those four lenses and see where each one is doing real work.
 
 The cells below run in the same in-browser OxCaml toplevel as the
-previous post. A note on which capsule API we're using: the lecture
-reaches for `Await_capsule.Mutex.with_lock`, the recommended (non-
-deprecated) primitive that gives the body an `Access.t` directly.
-Bundling the `await` library into the in-browser toplevel pulls in
-roughly **280 MB** of transitive dependencies (`sexplib`, `stdio`,
-`ppx_*`, `base.shadow_stdlib`, …), so we use the deprecated-but-equivalent
-`Capsule_blocking_sync.Mutex` instead, with the deprecation alert
-silenced. It hands the body a `'k Password.t @ local`, which we
-convert to a `'k Access.t` via `Capsule_expert.access`. One extra line
-of plumbing; same modes are doing the work. If you transcribe the
-example to a real `.ml` file with `await` available, swap
-`Capsule_blocking_sync.Mutex` for `Await_capsule.Mutex` and drop the
-`Capsule_expert.access` step; the lecture's verbatim form in the
-[handout](https://github.com/fplaunchpad/cs6868_s26/blob/main/lectures/11_oxcaml/handout.md#part-5-capsules--safe-shared-mutable-state)
-is what you want.
-
-We also use `Capsule_expert.{Key, Data, Password, Access}` (the lower-
-level brand-based API) directly; the curated
-`Capsule.{Data, Isolated, Guard, Shared}` namespace from the `capsule`
-opam library would be more ergonomic, but pulls in `base` and
-`sexplib0` (~270 MB more), so we stay at the lower layer for this
-post.
+previous post. We work with `Capsule_expert` and a blocking mutex
+rather than the curated `Capsule.{Isolated, Guard, …}` and
+`Await_capsule.Mutex` the lecture uses; the
+[*Which API?*](#a-note-on-the-api) section at the end explains the
+choice. The shape of what the modes are doing is the same.
 
 ## Why atomics aren't enough
 
@@ -305,20 +288,35 @@ is something we've already met:
   the inner `ref` has exactly one path of access, through the capsule.
   No alias.
 
-## A note on the curated API
+## A note on the API
 
-The example uses `Capsule_expert` (the brand-based primitives) and
-`Capsule_blocking_sync.Mutex` (a blocking mutex). The full `capsule`
-opam library wraps these with a curated layer (`Capsule.Isolated`,
-`Capsule.Guard`, `Capsule.Shared`, `Capsule.Data`) that hides most of
-the brand machinery for common patterns. For most application code
-you reach for the curated forms first; the `Cap.Key.P key`, `password`,
-and `Cap.access` plumbing show up explicitly when you really do want a
-named capsule shared across several call sites, as in the lecture's
-gensym. We use the lower-level API here mostly because the curated
+Two API choices in the cells above are worth flagging for anyone
+transcribing this to a real `.ml` file.
+
+**Curated vs expert capsule API.** The full `capsule` opam library
+wraps the brand-based primitives in a curated layer
+(`Capsule.Isolated`, `Capsule.Guard`, `Capsule.Shared`,
+`Capsule.Data`) that hides most of the `Key.P`/`password`/`access`
+plumbing for common patterns. For most application code you reach for
+those first. We use `Capsule_expert` directly here because the curated
 wrapper pulls in `base`, `sexplib0`, and friends that would balloon
-the in-browser bundle by ~270 MB; the shape of what the modes are
-doing is the same.
+the in-browser bundle by ~270 MB. The lecture's `Capsule.Data` calls
+are syntactically identical to ours.
+
+**Mutex flavour.** The lecture uses `Await_capsule.Mutex.with_lock`,
+the recommended (non-deprecated) primitive that hands the body an
+`Access.t` directly. Bundling the `await` library into the in-browser
+toplevel pulls in roughly **280 MB** of transitive deps (`sexplib`,
+`stdio`, `ppx_*`, `base.shadow_stdlib`, …), so we use the
+deprecated-but-equivalent `Capsule_blocking_sync.Mutex` with the
+deprecation alert silenced. It hands the body a `'k Password.t @ local`,
+which we convert to a `'k Access.t` via `Capsule_expert.access`. One
+extra line of plumbing; same modes are doing the work. In a real
+`.ml` file with `await` available, swap `Capsule_blocking_sync.Mutex`
+for `Await_capsule.Mutex` and drop the `Capsule_expert.access` step;
+the lecture's verbatim form in the
+[handout](https://github.com/fplaunchpad/cs6868_s26/blob/main/lectures/11_oxcaml/handout.md#part-5-capsules--safe-shared-mutable-state)
+is what you want.
 
 ## What's left
 
