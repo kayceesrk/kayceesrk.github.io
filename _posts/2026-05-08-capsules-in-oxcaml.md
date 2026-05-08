@@ -42,12 +42,28 @@ goal of this post is to read the gensym-with-capsule program through
 those four lenses and see where each one is doing real work.
 
 The cells below run in the same in-browser OxCaml toplevel as the
-previous post. We use `Capsule_expert` (the lower-level brand-based API)
-and `Capsule_blocking_sync.Mutex` (a blocking mutex that doesn't pull
-in the `Await` fiber library), since those are what the in-browser
-bundle ships. The curated `Capsule.{Data, Isolated, Guard, Shared, Mutex}`
-namespace from the `capsule` opam library has the same shape; the
-mechanics we exercise here are identical.
+previous post. A note on which capsule API we're using: the lecture
+reaches for `Await_capsule.Mutex.with_lock`, the recommended (non-
+deprecated) primitive that gives the body an `Access.t` directly.
+Bundling the `await` library into the in-browser toplevel pulls in
+roughly **280 MB** of transitive dependencies (`sexplib`, `stdio`,
+`ppx_*`, `base.shadow_stdlib`, …), so we use the deprecated-but-equivalent
+`Capsule_blocking_sync.Mutex` instead, with the deprecation alert
+silenced. It hands the body a `'k Password.t @ local`, which we
+convert to a `'k Access.t` via `Capsule_expert.access`. One extra line
+of plumbing; same modes are doing the work. If you transcribe the
+example to a real `.ml` file with `await` available, swap
+`Capsule_blocking_sync.Mutex` for `Await_capsule.Mutex` and drop the
+`Capsule_expert.access` step; the lecture's verbatim form in the
+[handout](https://github.com/fplaunchpad/cs6868_s26/blob/main/lectures/11_oxcaml/handout.md#part-5-capsules--safe-shared-mutable-state)
+is what you want.
+
+We also use `Capsule_expert.{Key, Data, Password, Access}` (the lower-
+level brand-based API) directly; the curated
+`Capsule.{Data, Isolated, Guard, Shared}` namespace from the `capsule`
+opam library would be more ergonomic, but pulls in `base` and
+`sexplib0` (~270 MB more), so we stay at the lower layer for this
+post.
 
 ## Why atomics aren't enough
 
