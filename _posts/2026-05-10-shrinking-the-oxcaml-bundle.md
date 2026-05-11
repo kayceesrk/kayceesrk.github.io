@@ -381,9 +381,11 @@ for the libraries.
 
 ---
 
-_The diff against `ocsigen/js_of_ocaml` and the integration into
-`x-ocaml`'s `--dce` flow were written together with
-[Claude Opus 4.7
-(1M context)](https://www.anthropic.com/news/claude-opus-4-7), and
-are both on
-[GitHub](https://github.com/kayceesrk/js_of_ocaml/tree/kc-toplevel-extend)._
+_Written together with [Claude Opus 4.7 (1M
+context)](https://www.anthropic.com/news/claude-opus-4-7). The
+[`js_of_ocaml`
+diff](https://github.com/ocsigen/js_of_ocaml/compare/c3da0bb58eafe2d9ad3387cbbe9b8faf9ec91fb1...kayceesrk:js_of_ocaml:kc-toplevel-extend)
+against the `+ox` base and the
+[`x-ocaml` integration
+diff](https://github.com/kayceesrk/x-ocaml/compare/d9160c5...oxcaml)
+are both on GitHub._
