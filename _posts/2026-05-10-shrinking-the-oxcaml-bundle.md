@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Shrinking the OxCaml bundle: 285 MB to 4 MB"
+title: "Shrinking the js_of_ocaml bundle: 285 MB to 4 MB"
 date: 2026-05-10 11:00
 categories: [OCaml, OxCaml, Modes, Blogging]
 excerpt_separator: <!--more-->
