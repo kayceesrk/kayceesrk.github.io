@@ -2,7 +2,7 @@
 layout: post
 title: "Data race freedom in OxCaml"
 date: 2026-05-07 10:00
-categories: [OCaml, OxCaml, X-OCaml, Blogging]
+categories: [OCaml, OxCaml, X-OCaml]
 excerpt_separator: <!--more-->
 ---
 
