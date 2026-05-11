@@ -45,43 +45,34 @@ the WebComponent that powers the cells.
 
 ## Why bundle size matters
 
-Before getting into the bundling itself, it is worth saying why I
-care about this at all. I teach two OCaml-heavy courses at IIT
-Madras:
+I teach two OCaml-heavy courses at IIT Madras:
 [CS3100](https://github.com/fplaunchpad/cs3100_m20), the
 undergraduate functional programming course, and
 [CS6868](https://github.com/fplaunchpad/cs6868_s26), the more
 recent graduate course on language abstractions for parallelism.
-The lecture notes, examples and homework for both would be
-considerably more useful as _interactive books_ that a student can
-read, edit and run entirely client-side, with no local
-installation. The same shape would help us when we run hands-on
-OCaml and OxCaml workshops. At any in-person workshop with a few
-dozen attendees, limited time, and the patchy conference WiFi we
-all know too well, a substantial fraction of the first session
-routinely gets spent on the _installation hump_, waiting for
-everyone to get `opam`, the compiler, and the required libraries
-working on their machines before the actual content can begin. The
-shorter the workshop, the more painful that overhead becomes
-relative to the time we actually have for teaching.
+The lecture notes, examples and homework for both would be much
+more useful as _interactive books_ that a student can read, edit
+and run entirely client-side, with no local installation. The same
+shape would help us when we run hands-on OCaml and OxCaml
+workshops, where the first session routinely gets eaten by the
+_installation hump_: getting `opam`, the compiler and the required
+libraries working on every attendee's machine over patchy
+conference WiFi, before the teaching can begin.
 
 The broader effort to make installation painless is the OCaml
 Platform [roadmap](https://ocaml.org/tools/platform-roadmap), which
 we have been working on at Tarides as a "zero to OCaml in one
 click" experience. That roadmap targets a developer who wants a
-real local toolchain on their machine, with the full editor,
-debugger and project-management story; the latency budget is
-generous, since this is a one-time setup the developer will keep
-using. A workshop attendee has a much shorter latency budget and
-a much narrower target: they only need _enough_ of OCaml to
-complete the exercises on the page in front of them, for the
-duration of the workshop. The client-side `x-ocaml` toplevel is a
-natural fit for that narrower target, because everything ships as
-static assets and there is no installation step at all. The
-bundle, in this setting, _is_ the latency budget; a 285 MB
-download makes the in-browser path effectively unshippable, while
-a 4 MB download makes it a realistic alternative to standing up a
-local toolchain for a 90-minute session.
+real local toolchain, with the full editor, debugger and
+project-management story, and a generous latency budget since this
+is a one-time setup. A workshop attendee has a much narrower
+target: just _enough_ OCaml to complete the exercises in front of
+them. The client-side `x-ocaml` toplevel fits that target
+naturally, because everything ships as static assets and there is
+no installation step. The bundle, in this setting, _is_ the latency
+budget: 285 MB makes the in-browser path unshippable, 4 MB makes
+it a realistic alternative to a local toolchain for a 90-minute
+session.
 
 ## Why 285 MB?
 
@@ -111,13 +102,9 @@ roughly 285 MB after the OxCaml compiler's normal optimisations and
 before any of the JavaScript-side cleverness has had a chance to
 run.
 
-Even before we get to the question of whether the reader's browser
-should be asked to load a 285 MB JavaScript file (it should not),
-this size is not deployable to a GitHub Pages site at all: GitHub
-rejects pushes that contain a single file larger than 100 MB. So
-the `await`-based blessed API is unshippable not because the
-bundling tooling is wrong, but because per-cma DCE is the wrong
-granularity for this problem.
+In other words, the `await`-based blessed API is unshippable not
+because the bundling tooling is broken, but because per-cma DCE is
+the wrong granularity for this problem.
 
 ## The other recipe, and why it doesn't compose
 
@@ -195,14 +182,13 @@ survive intact, and its typing environment continues to resolve
 The new modules from the bundle simply show up as new symbols on
 top.
 
-The initial diff is small.
-[`compiler/lib/parse_bytecode.ml`](https://github.com/kayceesrk/js_of_ocaml/commit/6ec194f)
+The initial diff is small:
+[`parse_bytecode.ml`](https://github.com/kayceesrk/js_of_ocaml/commit/6ec194f)
 gates the `caml_js_set` block on the new flag, and
-`compiler/bin-js_of_ocaml/{cmd_arg.ml,compile.ml}` thread it
-through. That alone gets the bundle composable. The bulk of the
-actual debugging showed up afterwards, when we tried to make the
-composed bundle behave the way the host expected, and that is what
-the rest of this post is about.
+`cmd_arg.ml`/`compile.ml` thread it through. That gets the bundle
+composable. The actual debugging is what came afterwards, when we
+tried to make the composed bundle behave the way the host
+expected, and that is what the rest of this post is about.
 
 ## Wiring it through `x-ocaml`
 
@@ -217,9 +203,8 @@ when the build runs.
 
 ## Numbers
 
-For `basement + capsule0.expert + capsule0.blocking_sync + capsule +
-await + portable.kernel`, the full closure for the lecture's
-`gensym`, the per-cma and `--dce` paths come out very differently:
+For the full closure of libraries the lecture's `gensym` example
+uses, the two paths come out very differently:
 
 |                               | Per-cma | `--dce --toplevel-extend` | Ratio |
 |-------------------------------|---------|--------------------------|-------|
@@ -250,12 +235,11 @@ branch; the commit messages have the gory details.
   bundle's re-allocated `Not_found`, `Sys_error` and friends are
   physically distinct from the host's copies, so a
   `try ... with Not_found ->` in stdlib code (the first place we
-  hit this was `Hashtbl.randomized_default`, which reads
-  `OCAMLRUNPARAM` inside a `try`) fails to catch the host's
-  `Not_found` raised by the runtime. The fix is to bind each
-  predef-exn variable in the bundle to a runtime
-  `caml_get_global_data` lookup so the bundle picks up and reuses
-  the host's instances rather than allocating new ones.
+  hit this was `Hashtbl.randomized_default` reading
+  `OCAMLRUNPARAM`) fails to catch the host's `Not_found` raised by
+  the runtime. The fix is to bind each predef-exn variable in the
+  bundle to a runtime `caml_get_global_data` lookup so the bundle
+  reuses the host's instances.
 
 - _The pseudo-filesystem raises on duplicate `.cmi` registrations._
   The bundle wants to re-emit `/static/cmis/stdlib.cmi`, which the
@@ -272,39 +256,36 @@ branch; the commit messages have the gory details.
   known fixes this without changing the behaviour for any name the
   host does not yet have.
 
-- _`Domain.DLS` slot collisions silently broke hover types._ This
-  one took me a while to track down. The bundle re-runs stdlib's
-  module init when it loads, and in particular
+- _`Domain.DLS` slot collisions silently broke hover types._ The
+  bundle re-runs stdlib's module init when it loads, and
   `Stdlib__Domain.DLS`'s `let key_counter = Atomic.make 0`
-  re-allocates the counter and starts it from zero again. The
-  bundle's `Format.stdbuf_key` then ends up with a low DLS index
-  that the host had already assigned to _its_ `Format.stdbuf_key`,
-  and `DLS.set` overwrites the host's entry in the shared
-  `caml_domain_dls` array. The host's `Format.flush_str_formatter`
-  then reads from the bundle's empty buffer, and merlin's
-  type-enclosing printer (which flushes through
-  `Format.str_formatter`) returns `""` for every query, so the
-  hover-on-identifier tooltips come up blank. The fix is at the
-  bundle-load boundary in
+  re-allocates the counter and starts it from zero. The bundle's
+  `Format.stdbuf_key` then ends up at a low DLS index the host had
+  already assigned to _its_ `Format.stdbuf_key`, and `DLS.set`
+  overwrites the host's entry in the shared `caml_domain_dls`
+  array. The host's `Format.flush_str_formatter` then reads from
+  the bundle's empty buffer, merlin's type-enclosing printer
+  (which flushes through `Format.str_formatter`) returns `""` for
+  every query, and hover-on-identifier tooltips come up blank. The
+  fix is at the bundle-load boundary in
   [`build_portable_js_extend.sh`](https://github.com/kayceesrk/x-ocaml/blob/oxcaml/build_portable_js_extend.sh):
   snapshot `caml_domain_dls_get ()` before the bundle's IIFE runs,
   and restore the host-owned slots afterwards. The bundle's _new_
-  high-index slots are left alone; only the slots the host had
-  previously populated get restored. (I spent a while convinced
-  this was a Format DCE bug before noticing the slot collision in
-  the OCaml 5+ `Domain.DLS` init code path.)
+  high-index slots are left alone; only the host's previously
+  populated slots get restored. I spent a while convinced this was
+  a Format DCE bug before tracing through the OCaml 5+
+  `Domain.DLS` init path.
 
 - _Bundle build:_ the curated `capsule` and `await.capsule` APIs
-  both use `open! Base` at the top of their files, so their
-  interface files mention `Base.unit` rather than `Stdlib.unit`. To
-  elaborate the bundle's signatures the host toplevel therefore
-  needs a small chain of `base` and `sexplib0` `.cmi` files at
-  `/static/cmis/`. We ship the three `base` cmis (`base.cmi`,
-  `base__.cmi`, `base__Unit.cmi`) and two `sexplib0` cmis via
-  `js_of_ocaml`'s `--file=<src>:/static/cmis/` flag, which bypasses
-  the export filter and embeds the file directly into the bundle,
-  rather than putting `base` on the bytecode-link line (which would
-  drag the whole 268 MB of `base` back into the bytecode).
+  both `open! Base` at the top of their files, so their interfaces
+  mention `Base.unit` rather than `Stdlib.unit`. To elaborate those
+  signatures the host toplevel needs a small chain of `base` and
+  `sexplib0` `.cmi` files at `/static/cmis/`. We ship three `base`
+  cmis (`base.cmi`, `base__.cmi`, `base__Unit.cmi`) and two
+  `sexplib0` cmis via `js_of_ocaml`'s `--file=<src>:/static/cmis/`
+  flag, which embeds the file directly without putting `base` on
+  the bytecode-link line (which would drag the whole of `base`
+  back in).
 
 ## The cell
 
@@ -335,22 +316,19 @@ let () = Printf.printf "%s %s\n" (gensym w "x") (gensym w "y")
 
 We cannot actually demonstrate parallelism in the browser worker
 (it is single-domain), so we hand the body the trivial blocker
-`Await_blocking.await Terminator.never`. The mode-checking, however,
-is exactly what the lecture covers: the `'k` brand on `mutex`,
-`counter` and `access` keeps the `int ref` reachable only from
-inside the `with_lock` body, the `@ local` on `access` keeps the
-token from escaping the critical section, and the `@ once`
-annotation on `f` makes the section single-shot.
+`Await_blocking.await Terminator.never`. The mode-checking is the
+[same brand/local/once dance](
+{% post_url 2026-05-08-capsules-in-oxcaml %}#with_lock-produces-an-access-token-briefly)
+as in the capsules post; what is new is that the same dance now
+type-checks against the blessed `Await_capsule` API directly,
+without the `Capsule_blocking_sync` shim.
 
 ## What next?
 
-The fork is small enough that the `--toplevel-extend` flag is
-plausibly upstreamable into `ocsigen/js_of_ocaml`. I would like to
-clean up the DLS-snapshot dance into a proper runtime primitive
-rather than a wrapper around the bundle's IIFE, and the
-predef-exception fix is the kind of change that benefits from a few
-more eyes on it before it goes in. If anyone reading is interested,
-the
+The fork is small enough that `--toplevel-extend` is plausibly
+upstreamable into `ocsigen/js_of_ocaml`. The DLS-snapshot dance
+would also be cleaner as a proper runtime primitive than as a
+wrapper around the bundle's IIFE. The
 [branch](https://github.com/kayceesrk/js_of_ocaml/tree/kc-toplevel-extend)
 is open for review.
 
@@ -360,17 +338,12 @@ of extension bundles. The current `portable.js` covers
 enough for the capsule and parallelism material in
 [CS6868](https://github.com/fplaunchpad/cs6868_s26); the
 [CS3100](https://github.com/fplaunchpad/cs3100_m20) material would
-want a different slice (more of `containers`, a JS-friendly slice
-of standard library extensions), and an `async`/`Eio`-flavoured
-bundle would let the same cells host an Eio-style concurrency
-example. Once a small library of these bundles exists, turning a
-lecture set or a workshop tutorial into an interactive book becomes
-mostly a matter of picking the right bundle, which is the
-workshop-scale "zero to OxCaml" story I want to get to. The
-`--file` trick for shipping `.cmi` files without the corresponding
-code may also be the right mechanism for an "interface-only" mode
-for documentation pages that only need to typecheck against a
-library.
+want a different slice, and an `async`/`Eio`-flavoured bundle
+would let the same cells host concurrency examples. Once a small
+library of these bundles exists, turning a lecture set or a
+workshop tutorial into an interactive book becomes mostly a matter
+of picking the right bundle, which is the workshop-scale "zero to
+OxCaml" story I want to get to.
 
 `x-ocaml` is one of [Arthur Wendling's](https://github.com/art-w)
 hacking expeditions, and it remains a pleasure to build on. Thanks
