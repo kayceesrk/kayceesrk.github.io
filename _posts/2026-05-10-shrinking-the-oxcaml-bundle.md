@@ -208,10 +208,9 @@ the rest of this post is about.
 
 On the `x-ocaml` side, the
 [`--dce` flag](https://github.com/kayceesrk/x-ocaml/blob/oxcaml/bin/x_ocaml.ml#L139)
-drives the single-bytecode + `--export` build. It invokes
-`js_of_ocaml --toplevel-extend --export units.txt` and is the
-mechanism behind `build_portable_js_extend.sh`, which is the
-build-side worked example for this post. The
+drives the single-bytecode + `--export` build, invoking
+`js_of_ocaml --toplevel-extend --export units.txt` for the bundles
+we ship. The
 [oxcaml branch of my `x-ocaml` fork](https://github.com/kayceesrk/x-ocaml/tree/oxcaml)
 carries the change; the patched `js_of_ocaml` needs to be on `PATH`
 when the build runs.
