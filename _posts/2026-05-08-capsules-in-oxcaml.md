@@ -2,7 +2,7 @@
 layout: post
 title: "Capsules: compile-time lock discipline in OxCaml"
 date: 2026-05-08 10:00
-categories: [OCaml, OxCaml, Modes]
+categories: [OCaml, OxCaml, Modes, Blogging]
 excerpt_separator: <!--more-->
 ---
 
