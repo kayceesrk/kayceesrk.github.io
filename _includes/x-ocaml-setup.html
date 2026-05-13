@@ -1,0 +1,12 @@
+{% if page.x_ocaml %}
+<script async
+  src="{{ page.x_ocaml.src | relative_url }}"
+  src-worker="{{ page.x_ocaml.worker | relative_url }}"
+  src-load="{{ page.x_ocaml.load | relative_url }}"
+></script>
+
+<style>
+  x-ocaml { font-size: 0.8em; display: block; margin-bottom: 1.4rem; }
+  x-ocaml.hidden { display: none; }
+</style>
+{% endif %}

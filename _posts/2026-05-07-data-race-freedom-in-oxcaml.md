@@ -4,18 +4,11 @@ title: "Data race freedom in OxCaml"
 date: 2026-05-07 10:00
 categories: [OCaml, OxCaml, X-OCaml, Blogging]
 excerpt_separator: <!--more-->
+x_ocaml:
+  src: /assets/x-ocaml-ox/x-ocaml.js
+  worker: /assets/x-ocaml-ox/x-ocaml.worker+effects.js
+  load: /assets/x-ocaml-ox/portable.js
 ---
-
-<script async
-  src="{{ '/assets/x-ocaml-ox/x-ocaml.js' | relative_url }}"
-  src-worker="{{ '/assets/x-ocaml-ox/x-ocaml.worker+effects.js' | relative_url }}"
-  src-load="{{ '/assets/x-ocaml-ox/portable.js' | relative_url }}"
-></script>
-
-<style>
-  x-ocaml { font-size: 0.8em; display: block; margin-bottom: 1.4rem; }
-  x-ocaml.hidden { display: none; }
-</style>
 
 A while back I [wired up `x-ocaml`]({% post_url 2025-06-20-xocaml %}) so this
 blog could embed live, editable OCaml notebooks. That post used a vanilla

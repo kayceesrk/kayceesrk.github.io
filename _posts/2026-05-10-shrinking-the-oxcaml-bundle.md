@@ -4,18 +4,11 @@ title: "Shrinking the OxCaml js_of_ocaml bundle: 285 MB to 4 MB"
 date: 2026-05-10 11:00
 categories: [OCaml, OxCaml, Modes]
 excerpt_separator: <!--more-->
+x_ocaml:
+  src: /assets/x-ocaml-ox/x-ocaml.js
+  worker: /assets/x-ocaml-ox/x-ocaml.worker+effects.js
+  load: /assets/x-ocaml-ox/portable.js
 ---
-
-<script async
-  src="{{ '/assets/x-ocaml-ox/x-ocaml.js' | relative_url }}"
-  src-worker="{{ '/assets/x-ocaml-ox/x-ocaml.worker+effects.js' | relative_url }}"
-  src-load="{{ '/assets/x-ocaml-ox/portable.js' | relative_url }}"
-></script>
-
-<style>
-  x-ocaml { font-size: 0.8em; display: block; margin-bottom: 1.4rem; }
-  x-ocaml.hidden { display: none; }
-</style>
 
 In the
 [previous post]({% post_url 2026-05-08-capsules-in-oxcaml %}) on
