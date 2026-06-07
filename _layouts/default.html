@@ -26,6 +26,33 @@
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
+    <button type="button" class="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode"></button>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var button = document.querySelector('.theme-toggle');
+
+        button.addEventListener('click', function () {
+          var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+
+        // Track OS preference changes, but only while the visitor hasn't
+        // made an explicit choice.
+        var media = window.matchMedia('(prefers-color-scheme: dark)');
+        var onChange = function (e) {
+          var stored;
+          try { stored = localStorage.getItem('theme'); } catch (err) {}
+          if (stored !== 'light' && stored !== 'dark') {
+            root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+          }
+        };
+        if (media.addEventListener) media.addEventListener('change', onChange);
+      })();
+    </script>
+
     <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');

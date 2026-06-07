@@ -6,6 +6,20 @@
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+  <!-- Set the theme before first paint to avoid a flash of the wrong one.
+       Follows the OS preference unless the visitor picked one explicitly
+       with the toggle (stored in localStorage). -->
+  <script>
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
   <title>
     {% if page.title == "About" %}
       {{ site.title }} &middot; {{ site.tagline }}
@@ -19,6 +33,7 @@
   <link rel="stylesheet" href="{{ '/public/css/poole.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/public/css/syntax.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/public/css/dark.css' | relative_url }}">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->

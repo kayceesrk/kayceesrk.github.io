@@ -1,0 +1,299 @@
+/*
+ * Dark mode for kcsrk.info
+ *
+ * The active theme is set as `data-theme="light|dark"` on <html> by an
+ * inline script in _includes/head.html (before first paint, to avoid a
+ * flash of the wrong theme). The script follows the OS preference unless
+ * the visitor has made an explicit choice with the toggle button, which
+ * is persisted in localStorage.
+ *
+ * Contents
+ *
+ * Theme toggle button
+ * Global dark overrides
+ * Masthead and sidebar chrome
+ * Posts, pages, pagination
+ * Code and syntax highlighting (Pygments/Rouge)
+ * Timeline (d3 gantt chart)
+ */
+
+
+/*
+ * Theme toggle button
+ *
+ * Mirrors the Lanyon sidebar hamburger: same size and styling, pinned to
+ * the opposite (right) corner.
+ */
+
+.theme-toggle {
+  position: absolute;
+  top:  1rem;
+  right: 1rem;
+  display: block;
+  width: 2.2rem;
+  padding: .4rem .65rem;
+  font-size: 1rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #505050;
+  background-color: #fff;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.theme-toggle:before {
+  content: "\263E"; /* moon: click for dark */
+}
+.theme-base-08 .theme-toggle {
+  color: #ac4142;
+}
+@media (min-width: 30.1em) {
+  .theme-toggle {
+    position: fixed;
+    width: 2.25rem;
+  }
+}
+
+html[data-theme="dark"] .theme-toggle:before {
+  content: "\2600"; /* sun: click for light */
+}
+
+
+/*
+ * Global dark overrides
+ */
+
+html {
+  color-scheme: light;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+  color: #c8c8c8;
+  background-color: #181a1b;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: #dadada;
+}
+
+html[data-theme="dark"] strong {
+  color: #e2e2e2;
+}
+
+/* Accent links (theme-base-08 red, lightened for contrast on dark) */
+html[data-theme="dark"] .theme-base-08 .container a,
+html[data-theme="dark"] .theme-base-08 .related-posts li a:hover {
+  color: #d07a7b;
+}
+
+html[data-theme="dark"] hr {
+  border-top-color: #303334;
+  border-bottom-color: transparent;
+}
+
+html[data-theme="dark"] abbr {
+  color: #9a9a9a;
+}
+html[data-theme="dark"] abbr[title] {
+  border-bottom-color: #3a3d3f;
+}
+
+html[data-theme="dark"] blockquote {
+  color: #9a9a9a;
+  border-left-color: #3a3d3f;
+}
+
+html[data-theme="dark"] table,
+html[data-theme="dark"] td,
+html[data-theme="dark"] th {
+  border-color: #3a3d3f;
+}
+html[data-theme="dark"] tbody tr:nth-child(odd) td,
+html[data-theme="dark"] tbody tr:nth-child(odd) th {
+  background-color: #212425;
+}
+
+html[data-theme="dark"] .message {
+  color: #a8a8a8;
+  background-color: #212425;
+}
+
+/* Tone down bright images a touch on dark backgrounds */
+html[data-theme="dark"] img {
+  filter: brightness(.88);
+}
+
+/* x-ocaml notebook cells render in a shadow DOM with a light CodeMirror
+   theme; keep them readable as light islands rather than inheriting the
+   dark page colors. */
+html[data-theme="dark"] x-ocaml {
+  color: #3a3a3a;
+  background-color: #fff;
+  color-scheme: light;
+  border-radius: 4px;
+}
+
+
+/*
+ * Masthead and sidebar chrome
+ */
+
+html[data-theme="dark"] .masthead {
+  border-bottom-color: #303334;
+}
+html[data-theme="dark"] .masthead-title,
+html[data-theme="dark"] .masthead-title a {
+  color: #b5b5b5;
+}
+html[data-theme="dark"] .masthead-title small {
+  color: #6a6a6a;
+}
+
+/* The sidebar keeps its theme color; only the toggles need adjusting. */
+html[data-theme="dark"] .sidebar-toggle,
+html[data-theme="dark"] .theme-toggle {
+  color: #d07a7b;
+  background-color: #242729;
+}
+html[data-theme="dark"] .sidebar-toggle:active,
+html[data-theme="dark"] #sidebar-checkbox:checked ~ .sidebar-toggle {
+  color: #fff;
+  background-color: #ac4142;
+}
+html[data-theme="dark"] .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+  box-shadow: 0 0 0 .25rem #181a1b;
+}
+
+
+/*
+ * Posts, pages, pagination
+ */
+
+html[data-theme="dark"] .page-title,
+html[data-theme="dark"] .post-title,
+html[data-theme="dark"] .post-title a {
+  color: #dadada;
+}
+
+html[data-theme="dark"] .related {
+  border-top-color: #303334;
+}
+html[data-theme="dark"] .related-posts li small {
+  color: #7a7a7a;
+}
+
+html[data-theme="dark"] .pagination {
+  color: #5a5a5a;
+}
+html[data-theme="dark"] .pagination-item {
+  border-color: #303334;
+}
+html[data-theme="dark"] a.pagination-item:hover {
+  background-color: #212425;
+}
+
+
+/*
+ * Code and syntax highlighting
+ *
+ * Dark palette for the Pygments/Rouge classes in syntax.css, roughly the
+ * same hue assignments as the light palette, lightened for dark
+ * backgrounds.
+ */
+
+html[data-theme="dark"] code {
+  color: #d0848a;
+  background-color: #212425;
+}
+html[data-theme="dark"] pre {
+  background-color: #212425;
+}
+
+html[data-theme="dark"] .highlight .hll { background-color: #3b3a23; }
+html[data-theme="dark"] .highlight .c  { color: #7f8b7f; } /* Comment */
+html[data-theme="dark"] .highlight .err { color: #e8807f; background-color: transparent; } /* Error */
+html[data-theme="dark"] .highlight .k  { color: #6fb3d2; } /* Keyword */
+html[data-theme="dark"] .highlight .o  { color: #b0b0b0; } /* Operator */
+html[data-theme="dark"] .highlight .cm { color: #7f8b7f; font-style: italic; } /* Comment.Multiline */
+html[data-theme="dark"] .highlight .cp { color: #66b3b3; } /* Comment.Preproc */
+html[data-theme="dark"] .highlight .c1 { color: #7f8b7f; } /* Comment.Single */
+html[data-theme="dark"] .highlight .cs { color: #7f8b7f; } /* Comment.Special */
+html[data-theme="dark"] .highlight .gd { background-color: #4b2525; border: 1px solid #803333; } /* Generic.Deleted */
+html[data-theme="dark"] .highlight .ge { font-style: italic; } /* Generic.Emph */
+html[data-theme="dark"] .highlight .gr { color: #e8807f; } /* Generic.Error */
+html[data-theme="dark"] .highlight .gh { color: #a3be8c; } /* Generic.Heading */
+html[data-theme="dark"] .highlight .gi { background-color: #25452a; border: 1px solid #338033; } /* Generic.Inserted */
+html[data-theme="dark"] .highlight .go { color: #8a8a8a; } /* Generic.Output */
+html[data-theme="dark"] .highlight .gp { color: #9aa5ce; } /* Generic.Prompt */
+html[data-theme="dark"] .highlight .gu { color: #a3be8c; } /* Generic.Subheading */
+html[data-theme="dark"] .highlight .gt { color: #99cc66; } /* Generic.Traceback */
+html[data-theme="dark"] .highlight .kc { color: #6fb3d2; } /* Keyword.Constant */
+html[data-theme="dark"] .highlight .kd { color: #6fb3d2; } /* Keyword.Declaration */
+html[data-theme="dark"] .highlight .kn { color: #6fb3d2; } /* Keyword.Namespace */
+html[data-theme="dark"] .highlight .kp { color: #6fb3d2; } /* Keyword.Pseudo */
+html[data-theme="dark"] .highlight .kr { color: #6fb3d2; } /* Keyword.Reserved */
+html[data-theme="dark"] .highlight .kt { color: #66c2cd; } /* Keyword.Type */
+html[data-theme="dark"] .highlight .m  { color: #f99157; } /* Literal.Number */
+html[data-theme="dark"] .highlight .s  { color: #e09a96; } /* Literal.String */
+html[data-theme="dark"] .highlight .na { color: #8fc7e8; } /* Name.Attribute */
+html[data-theme="dark"] .highlight .nb { color: #8fb3a3; } /* Name.Builtin */
+html[data-theme="dark"] .highlight .nc { color: #5fd7c0; } /* Name.Class */
+html[data-theme="dark"] .highlight .no { color: #a3be8c; } /* Name.Constant */
+html[data-theme="dark"] .highlight .nd { color: #b8aef0; } /* Name.Decorator */
+html[data-theme="dark"] .highlight .ni { color: #9a9a9a; } /* Name.Entity */
+html[data-theme="dark"] .highlight .ne { color: #e8807f; } /* Name.Exception */
+html[data-theme="dark"] .highlight .nf { color: #d2a8f0; } /* Name.Function */
+html[data-theme="dark"] .highlight .nl { color: #b8aef0; } /* Name.Label */
+html[data-theme="dark"] .highlight .nn { color: #7fd4f0; } /* Name.Namespace */
+html[data-theme="dark"] .highlight .nt { color: #7faedf; } /* Name.Tag */
+html[data-theme="dark"] .highlight .nv { color: #8fbcbb; } /* Name.Variable */
+html[data-theme="dark"] .highlight .ow { color: #d8d8d8; } /* Operator.Word */
+html[data-theme="dark"] .highlight .w  { color: #555; } /* Text.Whitespace */
+html[data-theme="dark"] .highlight .mf { color: #f99157; } /* Literal.Number.Float */
+html[data-theme="dark"] .highlight .mh { color: #f99157; } /* Literal.Number.Hex */
+html[data-theme="dark"] .highlight .mi { color: #f99157; } /* Literal.Number.Integer */
+html[data-theme="dark"] .highlight .mo { color: #f99157; } /* Literal.Number.Oct */
+html[data-theme="dark"] .highlight .sb { color: #e09a96; } /* Literal.String.Backtick */
+html[data-theme="dark"] .highlight .sc { color: #e09a96; } /* Literal.String.Char */
+html[data-theme="dark"] .highlight .sd { color: #e09a96; font-style: italic; } /* Literal.String.Doc */
+html[data-theme="dark"] .highlight .s2 { color: #e09a96; } /* Literal.String.Double */
+html[data-theme="dark"] .highlight .se { color: #e09a96; } /* Literal.String.Escape */
+html[data-theme="dark"] .highlight .sh { color: #e09a96; } /* Literal.String.Heredoc */
+html[data-theme="dark"] .highlight .si { color: #e8807f; } /* Literal.String.Interpol */
+html[data-theme="dark"] .highlight .sx { color: #e09a96; } /* Literal.String.Other */
+html[data-theme="dark"] .highlight .sr { color: #6fc7c7; } /* Literal.String.Regex */
+html[data-theme="dark"] .highlight .s1 { color: #e09a96; } /* Literal.String.Single */
+html[data-theme="dark"] .highlight .ss { color: #f2c45f; } /* Literal.String.Symbol */
+html[data-theme="dark"] .highlight .bp { color: #8fb3a3; } /* Name.Builtin.Pseudo */
+html[data-theme="dark"] .highlight .vc { color: #8fbcbb; } /* Name.Variable.Class */
+html[data-theme="dark"] .highlight .vg { color: #8fbcbb; } /* Name.Variable.Global */
+html[data-theme="dark"] .highlight .vi { color: #8fbcbb; } /* Name.Variable.Instance */
+html[data-theme="dark"] .highlight .il { color: #f99157; } /* Literal.Number.Integer.Long */
+
+html[data-theme="dark"] .css .o,
+html[data-theme="dark"] .css .o + .nt,
+html[data-theme="dark"] .css .nt + .nt { color: #9a9a9a; }
+
+
+/*
+ * Timeline (d3 gantt chart in styles/gantt.css)
+ *
+ * The axis strokes and labels are black by default and would vanish on a
+ * dark background. The bar fills are saturated enough to keep as-is.
+ */
+
+html[data-theme="dark"] .axis path,
+html[data-theme="dark"] .axis line {
+  stroke: #c8c8c8;
+}
+html[data-theme="dark"] .chart text {
+  fill: #c8c8c8;
+}
