@@ -12,7 +12,7 @@ x_ocaml:
 
 I am building a course, "Functional Programming with OCaml", for the
 [NPTEL](https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_cs90)
-MOOC platform: twelve modules, recorded lectures, the works. The
+MOOC platform: twelve modules, recorded lectures. The
 [course book](https://fplaunchpad.org/ocaml_nptel) is not a PDF and
 not a website with code listings you copy elsewhere. It is a website
 where the code runs, in your browser, with nothing installed and no
@@ -21,8 +21,8 @@ OCaml; the last few modules cross into OxCaml. An O(x)Caml book, and
 one that runs.
 
 This post is about why I built it that way, how I wrote it (with a
-lot of help from an LLM, under careful review), and the pieces I
-think are genuinely new.
+lot of help from an LLM, under careful review), and the parts I think
+are new.
 
 <!--more-->
 
@@ -100,7 +100,7 @@ same anything, so the interactive part drifts out of sync with the
 prose. I wanted the opposite: a book that assumes you are playing
 with it, because the playground is built into the page.
 
-Where this course lives makes that assumption load-bearing. NPTEL is
+Where this course lives makes that matter even more. NPTEL is
 a MOOC; I never meet the students and there are no dedicated labs. A
 student might be on a laptop shared with a parent, on Windows 11, on
 a tablet with an external keyboard, or on some machine you would not
@@ -124,13 +124,12 @@ has been possible for years: the official
 [TryOCaml](https://try.ocamlpro.com/), [sketch.sh](https://sketch.sh/),
 and `x-ocaml` itself, which this book is built on. Emulating a whole
 CPU in the browser is not new either, and the quiz idea comes
-straight from the Brown group. What I think is new is the assembly:
-one course where the prose, the slides, the runnable cells, and a
-real Linux machine are a single artifact, kept correct and
-on-pedagogy by its own tooling. The rest of this post is about that
-assembly.
+straight from the Brown group. What I think is new is putting them
+together: one course where the prose, the slides, the runnable cells,
+and a Linux machine are the same thing, with tooling that keeps them
+correct and consistent. The rest of this post is about how.
 
-## The book is the slides is the notebook
+## One source: page, slides, cells
 
 There is a second reason the page matters as much as the video. When
 I teach CS3100, the executable notebook *is* the slide deck, thanks
@@ -202,13 +201,12 @@ on demand from a CDN; nothing is installed on your computer.
 
 That a student can compile and run real C, or boot a unikernel, on a
 shared Windows laptop with nothing but a browser tab still feels a
-little unreasonable to me, in the best way.
+little unreasonable to me.
 
 The two tiers trade off very differently, and not only on size. The
 light cell is OCaml compiled straight to JavaScript, so once the
 one-time bundle has loaded (about 17 MB gzipped, then cached by the
-browser) it runs at JavaScript speed: type, Run, done. The VM is the
-opposite. You are running OCaml bytecode inside a Linux guest inside
+browser) it runs at JavaScript speed. The VM is the opposite. You are running OCaml bytecode inside a Linux guest inside
 an x86 machine emulated in WebAssembly, several layers of emulation
 deep, so it boots in a few seconds and then runs noticeably slower
 than a real machine would. That is why the light tier carries most of
@@ -217,8 +215,6 @@ needs it. In both cases "zero install" means nothing is left on your
 machine, not that nothing is downloaded.
 
 ## How I wrote the course: teaching the model how to teach
-
-Here is the honest version of how the chapters got written.
 
 I have recorded video lectures for CS3100, my "Paradigms of
 Programming" course at IIT Madras (the
@@ -242,8 +238,7 @@ idea a few paragraphs before introducing it, or state a new concept
 flat instead of setting up the question it answers. The order was the
 order the slides happened to be in, not an order designed to teach.
 The effect was a chapter that was technically correct and
-pedagogically flat: everything present, nothing sequenced to actually
-carry a reader from not-knowing to knowing.
+pedagogically flat: everything present, nothing sequenced to teach.
 
 So the real work became encoding *how to teach* in a form the model
 could apply consistently. That turned into a growing set of feedback
@@ -334,7 +329,7 @@ bundles small enough to ship was its own adventure, which I wrote up
 in
 [shrinking the OxCaml js_of_ocaml bundle from 285 MB to 4 MB]({% post_url 2026-05-10-shrinking-the-oxcaml-bundle %}).
 
-One more small thing I am quietly proud of: each page is stamped with
+One more detail: each page is stamped with
 the commit SHA of the source it was built from, and quizzes carry
 stable ids, so the anonymous feedback (next section) correlates to an
 exact version of the book and reordering questions never silently
@@ -345,7 +340,7 @@ All of this is in the open. The
 public: the lecture content is under CC BY-NC-SA, and the build
 toolchain (the markdown-to-site compiler and the quiz backend) is
 ISC. If you teach OCaml and want the pipeline, the fenced-div system,
-or the in-browser VM tooling, take it.
+or the in-browser VM tooling, it is yours to reuse.
 
 ## Learning from the learners
 
@@ -406,9 +401,8 @@ programming course at IITM, and covers locality and stack allocation,
 uniqueness,
 linearity, contention, and portability: the mode system that gives
 data-race freedom and allocation control. It
-is very new and very likely to keep changing, which is exactly the
-point. What is the fun in only teaching things that have already
-ossified? If you want the deeper version of this material, I have
+is very new and very likely to keep changing. What is the fun in only
+teaching things that have already ossified? If you want the deeper version of this material, I have
 written about
 [data-race freedom in OxCaml]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %})
 and [capsules]({% post_url 2026-05-08-capsules-in-oxcaml %})
@@ -417,8 +411,8 @@ separately.
 The **[MirageOS](https://mirage.io/) module** at the end builds a
 unikernel from OCaml: a
 library operating system, virtualisation for isolation, and language
-safety, brought together into a single specialised VM. I will be
-honest that this module is less hands-on than the rest. A 32-bit VM
+safety, brought together into a single specialised VM. This module is
+less hands-on than the rest. A 32-bit VM
 under wasm cannot build a unikernel quickly, and full qemu emulation
 in the browser would be painfully slow, so the interactive surface is
 thinner here. The thing I would love to reach is booting a *compiled*
@@ -426,7 +420,7 @@ unikernel directly in wasm via [WASI](https://wasi.dev/), with no
 Linux host underneath at
 all. That would make the last module as live as the rest.
 
-## LLM use, with the receipts
+## LLM use, in numbers
 
 I wrote this book with an LLM, mostly
 [Claude Code](https://www.anthropic.com/claude-code), and reviewed
@@ -454,7 +448,7 @@ around 2,800 to 3,000 US dollars over the lifetime of the repo,
 split roughly evenly between Opus 4.7 and 4.8 with Fable adding about
 ten percent.
 
-What actually helped, beyond drafting? Two things.
+Beyond drafting, two things helped.
 
 The first is fearless, though not perfect, refactoring. "Move this
 example to that other module, and rewrite everything downstream so it
@@ -472,8 +466,8 @@ stack machine. The shape of the development is visible if you plot it:
 
 392 commits over about 25 days. Most of the lecture text lands in the
 first three days; after that the line count is almost flat while the
-commits keep coming. That flat-but-busy stretch is the point: most of
-the effort after the first draft is rewriting in place, not adding,
+commits keep coming. In that stretch, most of the effort after the
+first draft is rewriting in place, not adding,
 and about a quarter of the commits are explicit review, audit, or
 sweep passes. The handful of enormous diffs are regenerated
 `js_of_ocaml` and Wasm bundles, not prose; the plotted count is
