@@ -471,25 +471,19 @@ stack machine. The shape of the development is visible if you plot it:
 </p>
 
 392 commits over about 25 days. Most of the lecture text lands in the
-first three days; after that the cumulative line count is almost
-flat, while the commits keep coming. That flat-but-busy stretch is
-the point: the bulk of the effort after the initial draft is
-rewriting in place, not adding, and about a quarter of all commits
-are explicit review, audit, or sweep passes. (A caveat on honesty:
-some individual diffs look enormous, hundreds of thousands of lines,
-but those are regenerated `js_of_ocaml` and Wasm bundles committed to
-the repo, not prose. The line count above is lecture markdown only.)
+first three days; after that the line count is almost flat while the
+commits keep coming. That flat-but-busy stretch is the point: most of
+the effort after the first draft is rewriting in place, not adding,
+and about a quarter of the commits are explicit review, audit, or
+sweep passes. The handful of enormous diffs are regenerated
+`js_of_ocaml` and Wasm bundles, not prose; the plotted count is
+lecture markdown only.
 
 The second is review. I have the LLM read chapters back against the
 pedagogy notes to catch content that came out of turn: an idea used
 before it was introduced, an exercise that duplicates the chapter, a
-slide that overflows. This is the same agentic-review pattern I used
-for proofs in
-[from convergence to confidence]({% post_url 2026-04-28-from-convergence-to-confidence %}),
-pointed at prose instead of [Rocq](https://rocq-prover.org/).
-
-There are surely still bugs in the book. For those I take
-responsibility; the review was mine to do.
+slide that overflows. Even so, there are surely still bugs in the
+book, and for those I take responsibility; the review was mine to do.
 
 ## Where this is going: a book that evolves with the reader
 
