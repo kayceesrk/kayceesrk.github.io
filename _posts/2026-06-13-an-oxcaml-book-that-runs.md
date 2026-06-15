@@ -12,7 +12,7 @@ x_ocaml:
 
 I am building a course, "Functional Programming with OCaml", for the
 [NPTEL](https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_cs90)
-MOOC platform: twelve modules, recorded lectures. The
+MOOC platform: twelve modules of recorded lectures. The
 [course book](https://fplaunchpad.org/ocaml_nptel) is not a PDF and
 not a website with code listings you copy elsewhere. It is a website
 where the code runs, in your browser, with nothing installed and no
@@ -20,16 +20,21 @@ server behind it. The first half is
 OCaml; the last few modules cross into OxCaml. An O(x)Caml book, and
 one that runs.
 
-This post is about why I built it that way, how I wrote it (with a
-lot of help from an LLM, under careful review), and the parts I think
-are new.
+This post is about why I built it that way, how I wrote it (with a lot of help
+from an LLM, under careful review).
 
 <!--more-->
 
+It is also a call for feedback: if you have ideas for how to make the course
+better, or if you find any bugs in the material, please let me know. The course
+is still evolving, and I want to make it as good as I can for the students who
+will be learning from it.
+
+
 ## Zero to OCaml in zero steps
 
-The single biggest obstacle a beginner hits with any language is not
-a concept. It is the install.
+The single biggest obstacle a beginner hits with any language is not the
+conceptual understanding. It is the install.
 
 OCaml has gotten much better here over the years. The
 [OCaml Platform extension](https://github.com/ocamllabs/vscode-ocaml-platform)
@@ -122,12 +127,11 @@ None of the individual pieces are new. Running OCaml in the browser
 has been possible for years: the official
 [playground at ocaml.org](https://ocaml.org/play),
 [TryOCaml](https://try.ocamlpro.com/), [sketch.sh](https://sketch.sh/),
-and `x-ocaml` itself, which this book is built on. Emulating a whole
-CPU in the browser is not new either, and the quiz idea comes
-straight from the Brown group. What I think is new is putting them
-together: one course where the prose, the slides, the runnable cells,
-and a Linux machine are the same thing, with tooling that keeps them
-correct and consistent. The rest of this post is about how.
+and `x-ocaml` itself, which this book is built on. What I think is
+new is putting the pieces together: one course where the prose, the
+slides, the runnable cells, and a full Linux machine are the same
+thing, with tooling that keeps them correct and consistent. The rest
+of this post is about how.
 
 ## One source: page, slides, cells
 
@@ -154,8 +158,9 @@ drift away from it. More on that machinery below.
 Under the hood there are two tiers of execution.
 
 The **light tier** is the cell you ran above. It is the
-[`x-ocaml`](https://github.com/art-w/x-ocaml) WebComponent (Arthur
-Wendling's work), an OCaml 5.4 toplevel compiled to JavaScript with
+[`x-ocaml`](https://github.com/art-w/x-ocaml) WebComponent
+([Arthur Wendling](https://github.com/art-w)'s work), an OCaml 5.4
+toplevel compiled to JavaScript with
 [`js_of_ocaml`](https://github.com/ocsigen/js_of_ocaml). What makes
 it feel like a real editor rather than a
 text box is that [Merlin](https://github.com/ocaml/merlin) runs
@@ -199,9 +204,8 @@ on demand from a CDN; nothing is installed on your computer.
 <div class="vm-terminal" data-dir="/root/hello"></div>
 <script defer src="/assets/vm/vm-terminal.js"></script>
 
-That a student can compile and run real C, or boot a unikernel, on a
-shared Windows laptop with nothing but a browser tab still feels a
-little unreasonable to me.
+A student can compile and run real C, or boot a unikernel, on a
+shared Windows laptop with nothing but a browser tab.
 
 The two tiers trade off very differently, and not only on size. The
 light cell is OCaml compiled straight to JavaScript, so once the
@@ -233,12 +237,21 @@ words, what I said about it. That is a good starting point for a
 chapter: the model can see the slide and read the explanation.
 
 The first drafts were rougher than I expected. The *content* was all
-there; what was missing was the pedagogy. A draft would lean on an
-idea a few paragraphs before introducing it, or state a new concept
-flat instead of setting up the question it answers. The order was the
-order the slides happened to be in, not an order designed to teach.
-The effect was a chapter that was technically correct and
-pedagogically flat: everything present, nothing sequenced to teach.
+there; what was missing was the pedagogy. The bigger problem was that
+the model found it hard to introduce only as much as a module needed
+and nothing more. It kept jumping to concepts that are either
+unfamiliar to the typical student or that belong to the latter part
+of the course: leaning on an idea a few paragraphs before introducing
+it, or stating a new concept flat instead of setting up the question
+it answers. The order was the order the slides happened to be in, not
+an order designed to teach. The oracle knew everything and was keen
+to show it; I needed not an oracle but a teacher. There is a name for
+that gap:
+[pedagogical content knowledge](https://www.wcu.edu/webfiles/pdfs/shulman.pdf),
+the knowing-how-to-teach a subject that is separate from knowing the
+subject itself. An LLM may be the purest case of the
+[curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge):
+it has no built-in sense of what any given reader does not yet know.
 
 So the real work became encoding *how to teach* in a form the model
 could apply consistently. That turned into a growing set of feedback
@@ -291,7 +304,7 @@ page also run green in CI. The code in the book cannot bit-rot.
 **One markdown source, three outputs.** I write lectures with
 [Pandoc](https://pandoc.org/)-style fenced divs:
 
-```
+````markdown
 :::slide
 ## Pattern matching
 - Match deconstructs and branches in one step
@@ -303,7 +316,7 @@ Write `bmi : float -> float -> float`.
 let bmi mass height = failwith "not implemented"
 ```
 :::
-```
+````
 
 The build (a small OCaml program) turns those into the webpage, the
 reveal.js deck, and the runnable or checkable cells, all from one
@@ -328,12 +341,6 @@ Merlin's types-on-hover keeps working in the same page. Getting these
 bundles small enough to ship was its own adventure, which I wrote up
 in
 [shrinking the OxCaml js_of_ocaml bundle from 285 MB to 4 MB]({% post_url 2026-05-10-shrinking-the-oxcaml-bundle %}).
-
-One more detail: each page is stamped with
-the commit SHA of the source it was built from, and quizzes carry
-stable ids, so the anonymous feedback (next section) correlates to an
-exact version of the book and reordering questions never silently
-re-attaches old answers to a new question.
 
 All of this is in the open. The
 [course repository](https://github.com/fplaunchpad/ocaml_nptel) is
@@ -372,6 +379,12 @@ them. The privacy page has a per-device opt-out and a delete-my-data
 button. I would much rather find out where readers actually get stuck
 than guess.
 
+For that signal to be trustworthy, two things have to line up. Each
+page is stamped with the commit SHA of the source it was built from,
+and every quiz carries a stable id, so a response correlates to an
+exact version of the book, and reordering questions never silently
+re-attaches old answers to a new question.
+
 ## What is in the book
 
 Nine of the twelve modules are recorded; I expect to finish the last
@@ -382,43 +395,37 @@ functors, and effects) followed by four on building real systems:
 testing, memory safety, OxCaml, and unikernels. A few highlights of
 the content itself.
 
-The **memory-safety module** is the one I find hardest to believe
-works. It is the full Linux VM, in the page, and students compile and
-run real C while watching buffer overflows, use-after-free, and
-undefined behaviour happen live. No install, no separate sandbox, on
-whatever machine they happen to have.
+The **memory-safety module** leans hardest on the VM. It runs the
+full Linux machine in the page, and students compile and run real C
+while watching buffer overflows, use-after-free, and undefined
+behaviour happen live. No install, no separate sandbox, on whatever
+machine they happen to have.
 
-The **testing module** has come together really nicely: unit testing
-with OUnit2, property-based testing with QCheck, and model-based
-testing, all runnable in the browser. Testing is a natural on-ramp to
+The **testing module** covers unit testing with OUnit2,
+property-based testing with QCheck, and model-based testing, all
+runnable in the browser. Testing is a natural on-ramp to
 thinking about correctness, and being able to actually run a shrinking
 counterexample in the page makes the ideas land.
 
-The **OxCaml module** is the most fun and the most volatile. It grows
-out of the OxCaml lecture in
-[CS6868](https://fplaunchpad.org/cs6868_s26/), my concurrent
+The **OxCaml module** is the most volatile. It grows out of the
+OxCaml lecture in [CS6868](https://fplaunchpad.org/cs6868_s26/), my concurrent
 programming course at IITM, and covers locality and stack allocation,
-uniqueness,
-linearity, contention, and portability: the mode system that gives
-data-race freedom and allocation control. It
-is very new and very likely to keep changing. What is the fun in only
-teaching things that have already ossified? If you want the deeper version of this material, I have
-written about
-[data-race freedom in OxCaml]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %})
-and [capsules]({% post_url 2026-05-08-capsules-in-oxcaml %})
-separately.
+uniqueness, linearity, contention, and portability: the mode system that gives
+data-race freedom and allocation control. It is very new and very likely to keep
+changing. What is the fun in only teaching things that have already ossified? If
+you want the deeper version of this material, I have written about [data-race
+freedom in OxCaml]({% post_url 2026-05-07-data-race-freedom-in-oxcaml %}) and
+[capsules]({% post_url 2026-05-08-capsules-in-oxcaml %}) separately.
 
-The **[MirageOS](https://mirage.io/) module** at the end builds a
-unikernel from OCaml: a
-library operating system, virtualisation for isolation, and language
-safety, brought together into a single specialised VM. This module is
-less hands-on than the rest. A 32-bit VM
-under wasm cannot build a unikernel quickly, and full qemu emulation
-in the browser would be painfully slow, so the interactive surface is
-thinner here. The thing I would love to reach is booting a *compiled*
-unikernel directly in wasm via [WASI](https://wasi.dev/), with no
-Linux host underneath at
-all. That would make the last module as live as the rest.
+The **[MirageOS](https://mirage.io/) module** at the end builds a unikernel from
+OCaml: a library operating system, virtualisation for isolation, and language
+safety, brought together into a single specialised VM. This module is less
+hands-on than the rest. A 32-bit VM under wasm cannot build a unikernel quickly,
+and full qemu emulation in the browser would be painfully slow, so the
+interactive surface is thinner here. The thing I would love to reach is booting
+a *compiled* unikernel directly in wasm via [WASI](https://wasi.dev/), with no
+Linux host underneath at all. That would make the last module as live as the
+rest.
 
 ## LLM use, in numbers
 
@@ -436,7 +443,9 @@ all of it myself. Here is the lifetime token usage for the repo:
 
 By model: Opus 4.7 about 5.1B total (14.3M output), Opus 4.8 about
 5.1B total (17.4M output), and Fable 5 about 1.1B total (4.4M
-output).
+output). The two Opus figures cover the whole month; the Fable 5
+figure is roughly a single day, the time it had been available when
+I pulled these numbers.
 
 How to read this. The headline 11.3B is dominated (98%) by cache
 reads, which are billed at roughly a tenth of the input rate and are
@@ -476,8 +485,10 @@ lecture markdown only.
 The second is review. I have the LLM read chapters back against the
 pedagogy notes to catch content that came out of turn: an idea used
 before it was introduced, an exercise that duplicates the chapter, a
-slide that overflows. Even so, there are surely still bugs in the
-book, and for those I take responsibility; the review was mine to do.
+slide that overflows. Fable 5's single day above went mostly on this
+pass, and it flagged a large batch of such issues in one sweep. Even
+so, there are surely still bugs in the book, and for those I take
+responsibility; the review was mine to do.
 
 ## Where this is going: a book that evolves with the reader
 
@@ -498,8 +509,8 @@ is a correctness oracle the tutor can lean on, and the entire
 compile-and-test loop already runs client side here, the light tier
 for cells and the full VM for real projects, so the tutor needs no
 server either. The anonymous feedback signal is the seed of this
-loop, and the LLM-authoring pipeline is the existence proof that the
-rewriting half is feasible. The best way to learn is still to poke at
+loop, and the LLM-authoring pipeline already shows the rewriting half
+is feasible. The best way to learn is still to poke at
 something and see how it reacts; a book that pokes back, and adjusts,
 is where I would like this to go.
 
