@@ -351,10 +351,14 @@ or the in-browser VM tooling, it is yours to reuse.
 
 ## Learning from the learners
 
-I am borrowing an idea from the
-[Brown PLT group's quiz study](https://rust-book.cs.brown.edu/) for
-the Rust book. The lectures carry inline quizzes that come, as the
-intro puts it,
+I am borrowing an idea from the Brown PLT group's
+[quiz study](https://rust-book.cs.brown.edu/) for the Rust book. In
+[*Profiling Programming Language Learning*](https://dl.acm.org/doi/epdf/10.1145/3649812)
+(OOPSLA 2024), Will Crichton and Shriram Krishnamurthi added
+inline quizzes to the Rust book and analysed the responses to find
+where readers stumble, which questions discriminate well, and how
+targeted edits move the numbers. The lectures carry inline quizzes
+that come, as the intro puts it,
 
 > in two flavours: multiple-choice questions with explanations, and
 > code-completion challenges where you fill in a function and click
@@ -374,10 +378,11 @@ tests against your answer.
 The quizzes matter to me because of the feedback loop. The site
 records anonymous responses: a random per-browser id, no account, no
 IP address, no personal data, not even a copy of the code you type. I
-get to see which questions trip people up and fix the material around
-them. The privacy page has a per-device opt-out and a delete-my-data
-button. I would much rather find out where readers actually get stuck
-than guess.
+get to see which questions trip people up, on a
+[live dashboard](https://fplaunchpad.org/ocaml_nptel/dashboard.html),
+and fix the material around them. The privacy page has a per-device
+opt-out and a delete-my-data button. I would much rather find out
+where readers actually get stuck than guess.
 
 For that signal to be trustworthy, two things have to line up. Each
 page is stamped with the commit SHA of the source it was built from,
