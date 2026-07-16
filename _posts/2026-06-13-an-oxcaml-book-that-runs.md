@@ -41,7 +41,7 @@ OCaml has gotten much better here over the years. The
 for VS Code will install a compiler toolchain for you, and the
 [`dune`](https://dune.build/) build system and the
 [`opam`](https://opam.ocaml.org/) package manager have all
-worked seamlessly together for years now. But that is the experience
+worked well together for years now. But that is the experience
 for someone who already knows they want VS Code, knows what a switch
 is, and knows what to do when a step does not go as the happy path
 describes. For a beginner, the path from "I have a laptop" to "I ran
@@ -77,9 +77,9 @@ fine. On conference wifi, for a two-hour tutorial, downloading a
 devcontainer or a Docker image takes all the fun out of programming
 before any programming has happened.
 
-What I wanted was zero to OCaml in zero steps. No install. And, just
-as importantly, no servers for me to administer. But still a seamless
-experience where a learner can change code and execute it.
+What I wanted was zero to OCaml in zero steps. No install. And no
+servers for me to administer. But still one where a learner can
+change code and execute it.
 
 You are reading the book right now, in a sense. Here is a live cell.
 If you are in a browser, there is a Run button near the top right.
@@ -155,7 +155,7 @@ drift away from it. More on that machinery below.
 
 ## How it is built: two tiers
 
-Under the hood there are two tiers of execution.
+There are two tiers of execution.
 
 The **light tier** is the cell you ran above. It is the
 [`x-ocaml`](https://github.com/art-w/x-ocaml) WebComponent
@@ -186,7 +186,7 @@ later modules embed a *full 32-bit
 the browser tab, using the [v86](https://github.com/copy/v86)
 x86-to-wasm emulator. It resumes from a compressed snapshot rather
 than cold-booting, serves its filesystem lazily over 9p (you download
-only the chunks your commands actually touch), and ships with OCaml
+only the chunks your commands touch), and ships with OCaml
 5.4 bytecode, `dune`, and [`gcc`](https://gcc.gnu.org/) preinstalled. It is about 12 MB to an
 interactive shell. The promise, quoting the course intro, is the same
 as the cells:
@@ -207,14 +207,14 @@ on demand from a CDN; nothing is installed on your computer.
 A student can compile and run real C, or boot a unikernel, on a
 shared Windows laptop with nothing but a browser tab.
 
-The two tiers trade off very differently, and not only on size. The
+The two tiers trade off differently, and not only on size. The
 light cell is OCaml compiled straight to JavaScript, so once the
 one-time bundle has loaded (about 17 MB gzipped, then cached by the
 browser) it runs at JavaScript speed. The VM is the opposite. You are running OCaml bytecode inside a Linux guest inside
 an x86 machine emulated in WebAssembly, several layers of emulation
 deep, so it boots in a few seconds and then runs noticeably slower
 than a real machine would. That is why the light tier carries most of
-the course and the VM comes out only where a real build genuinely
+the course and the VM comes out only where a real build
 needs it. In both cases "zero install" means nothing is left on your
 machine, not that nothing is downloaded.
 
