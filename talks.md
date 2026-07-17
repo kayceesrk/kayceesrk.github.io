@@ -5,6 +5,14 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="seri_iiith_2026"> </div>  
+   **Convergence is Not Enough: Automatically Verifying Replicated Data Types**  
+   Invited Talk, SERI 2026, IIIT Hyderabad, Jul 2026  
+   [\[slides (pdf)\]](slides/RDT_verification_SERI_IIITH.pdf) [\[slides (key)\]](slides/RDT_verification_SERI_IIITH.key)  
+  * <div id="lean_iisc_2026"> </div>  
+   **Convergence is Not Enough: Verifying Replicated Data Types in Lean**  
+   Lean Language Summer School, IISc, Bengaluru, Jul 2026  
+   [\[slides (pdf)\]](slides/RDT_verification_Lean_IISc.pdf) [\[slides (key)\]](slides/RDT_verification_Lean_IISc.key)  
   * <div id="papoc_2026"> </div>  
    **From Convergence to Confidence: Push-button verification for Replicated Data Types**  
    PaPoC 2026, Edinburgh, Apr 2026  
