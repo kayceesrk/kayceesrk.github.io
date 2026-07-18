@@ -80,7 +80,8 @@ I write about my research in my [blog](http://kcsrk.info/blog/)
 * **AEC Chair**
   + ESOP'22
 * **PC member**
-  + 2026: [SSS'26](https://sss2026.conf.lip6.fr/index.html), [Haskell'26]()
+  + 2027: [ISEC 2027](https://conf.researchr.org/home/isec-2027)
+  + 2026: [SSS'26](https://sss2026.conf.lip6.fr/index.html), [Haskell'26](https://icfp26.sigplan.org/home/haskellsymp-2026), [IICT 2026](https://compilertech.org/)
   + 2025: [FunArch'25](https://conf.researchr.org/home/icfp-splash-2025/funarch-2025), [ICFP'25](https://icfp25.sigplan.org/), [PaPoC'25](https://papoc-workshop.github.io/2025/), [APLAS'25](https://conf.researchr.org/home/aplas-2025)
   + 2024: OOPSLA'24, PaPoC'24, POPL'24, TFP'24, PEPM'24
   + 2023: PLDI'23
