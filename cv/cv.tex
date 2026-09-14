@@ -10,6 +10,7 @@
 \usepackage{pifont}
 \pagestyle{empty}
 \usepackage{mdwlist}
+\usepackage{needspace}
 
 \usepackage[left=.5cm,top=2cm,right=.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 
@@ -141,6 +142,7 @@
 \vspace*{1ex}}
 
 \newenvironment{region}[3]{%
+  \Needspace{7\baselineskip}
   \vspace*{0.5ex}
   {\scalebox{1.4}{\textbf{#1}}}
   \begin{benumerate}{#3}{\color{RoyalBlue}#2}}
@@ -151,6 +153,7 @@
 {\end{region}}
 
 \newenvironment{itemregion}[1]{
+  \Needspace{5\baselineskip}
   \vspace*{0.5ex}
   {\scalebox{1.4}{\textbf{#1}}}
   \begin{itemize}\itemsep1pt}
@@ -257,12 +260,14 @@
 \end{nonumregion}
 
 \begin{itemregion} {\lbar{blue}Awards and Recognitions}
-  \service{\href{https://www.sigplan.org/Awards/Software/}{SIGPLAN Programming Languages Software Award}, 2023.}
+  \service{\href{https://www.sigplan.org/Awards/Software/}{SIGPLAN Programming Languages Software Award} for OCaml, 2023.}
   \service{OCaml core maintainer, 2021 -- present.}
+	\service{Invited keynote speaker at PaPoC 2026.}
+	\service{Invited keynote speaker at SERI 2026.}
 	\service{Invited keynote speaker at ICFP 2022.}
 	\service{Invited keynote speaker at OCaml Workshop 2022.}
-	\service{Distinguished paper at PADL 2021.}
-	\service{Distinguished paper award at ICFP 2020.}
+	\service{Distinguished Paper Award at PADL 2021.}
+	\service{Distinguished Paper Award at ICFP 2020.}
 	\service{Class of 1991 Award for Young Faculty in Computer Science and Engineering, IIT Madras, 2019.}
   \service{Research Fellowship, Royal Commission for the Exhibition of 1851, 2015--2018.}
   \service{Research Fellowship, Darwin College, Cambridge, 2015--2018.}
@@ -283,10 +288,12 @@
 	\service{Dagstuhl Seminar 16112: ``From Theory to Practice of Algebraic Effects and Handlers'', May 2016}
 \end{itemregion}
 
+% IIT Madras project dates, amounts and roles follow the academic profile,
+% sections/07-projects.tex (Tula records retrieved 21 July 2026).
 \begin{itemregion} {\lbar{blue}Grants}
-  \service{PI, FP Launchpad: A Centre for Functional Systems Research and Education at IIT Madras, Jane Street, 2026 -- 2030, INR 23.42 Cr.}
-  \service{Co-I, Cybersecurity Centre of Excellence, IIT Madras, 2023 -- 2026, INR 5,00,000.}
-	\service{PI, Multicore Support for Tezos blockchain, Tezos Foundation, 2019 -- 2023, \pounds194,000.}
+  \service{PI, FP Launchpad: Centre for Functional Programming Research and Education at IIT Madras, Jane Street, 2025 -- 2029, INR 23.42 Cr.}
+  \service{Co-I, Cybersecurity Centre of Excellence, IIT Madras, 2023 -- 2026, INR 5 Cr.}
+  \service{PI / Co-PI, Multicore Support for Tezos Blockchain, Tezos Foundation, 2019 -- 2027, approximately INR 2.51 Cr.}
 	\service{PI, Qilin: Scalable Concurrent Unikernels with Effect Handlers, IIT Madras, 2019 -- 2021, INR 500,000.}
 	\service{Co-I, Feasibility of an Operating System for Interspatial Networking in a Built Environment, Centre for Digital Built Britain (CDBB), 2018, \pounds24,000.}
   \service{PI, Quelea: Safe Declarative Programming over Heterogeneous Parallel Systems, Royal Commission for the Exhibition of 1851, 2015--2018, \pounds102,000.}
@@ -320,6 +327,7 @@
 \end{itemregion}
 
 \begin{itemregion} {\lbar{blue}Institutional Service}
+  \service{Founder and Head, FP Launchpad, Centre for Functional Programming Research and Education, IIT Madras, Jan 2026 -- present.}
 	\service{Technical Committee Member, Department of School Education, Government of Tamil Nadu, 2020 -- 2022.}
 	\service{Board Member, Industrial Consultancy and Sponsored Research (ICSR), IIT Madras, 2021 -- 2023.}
 	\service{Department Vision Committee, Computer Science and Engineering, IIT Madras, 2021.}
@@ -700,11 +708,12 @@
 
 \begin{itemregion}{\lbar{red}Teaching}
   \service{Lecturer:}
-	\begin{itemize}
-			\service{Concurrent Programming, IIT Madras, Spring '26.}
-			\service{Compiler Design, IIT Madras, Monsoon '22}
-			\service{Programs and Proofs, IIT Madras, Spring '25, Spring '20, Spring '21.}
-			\service{Paradigms of Programming, IIT Madras, Monsoon '19, Monsoon '20, Monsoon '25.}
+  \begin{itemize}
+    \service{\href{https://onlinecourses.nptel.ac.in/e-learning/preview/noc26_cs90}{Functional Programming with OCaml}, NPTEL MOOC, 2026. Twelve modules of recorded lectures with an interactive course book.}
+			\service{CS6868 Concurrent Programming, IIT Madras, Spring '26.}
+			\service{CS3300 Compiler Design, IIT Madras, Monsoon '22, Monsoon '26.}
+			\service{CS6225 Programs and Proofs, IIT Madras, Spring '20, Spring '21, Spring '25. Introduced the course in the department.}
+			\service{CS3100 Paradigms of Programming, IIT Madras, Monsoon '19, Monsoon '20, Monsoon '25.}
 	\end{itemize}
   \service{\href{https://en.wikipedia.org/wiki/Tutorial_system}{Supervisions} at University of Cambridge:}
   \begin{itemize}
@@ -724,22 +733,22 @@
 
 	\service{PhD Students}
 	\begin{itemize}
-      \service{Nitish Yadav, 2025 -- present}
-      \service{Durwasa Chakraborty, 2025 -- present}
-			\service{Sai Venkata Krishnan, 2021 -- present}
-			\service{Vimala Soundarapandian, 2020 -- present}
-			\service{Sheera Shamsu, 2019 -- present}
+      \service{Nitish Yadav, 2025 -- present. Model checking of replicated data types. Co-guide with Kartik Nagar, IIT Madras.}
+      \service{Durwasa Chakraborty, 2025 -- present. Verifiable lock-free software transactional memory. Primary guide.}
+			\service{Sai Venkata Krishnan, 2021 -- present. Secure hardware-software co-design. Co-guide with Chester Rebeiro, IIT Madras.}
+			\service{Sheera Shamsu, 2019 -- 2026 (completed). Thesis: \emph{A Mechanically Verified Garbage Collector for OCaml}. Primary guide; co-guide Kartik Nagar, IIT Madras.}
+    \service{Vimala Soundarapandian, 2020 -- 2026 (completed). Thesis: \emph{Pragmatic Verification of Replicated Data Types}. Co-guide with Kartik Nagar, IIT Madras.}
 	\end{itemize}
 
 	\service{Master's Students}
 	\begin{itemize}
-			\service{Vishakh Desai, MS, 2025 -- present}
-			\service{Sanjeev Reddy, MS, 2025 -- present}
+			\service{Vishakh Desai, MS, 2025 -- present. Election security. Primary guide; co-guide Aishwarya Thiruvengadam, IIT Madras.}
+			\service{B Sanjeev Reddy, MS, 2025 -- present. MMTk-based memory management for OCaml. Guide.}
 			\service{Surendar M, MTech, 2025 -- present}
 			\service{Sagar Biswas, MTech, 2025 -- present}
-			\service{Deepali Ande, MS, 2020 -- 2023}
-			\service{Sumit Padhiyar, MS, 2019 -- 2021}
-			\service{Shashank Shekhar Dubey, MS, 2019 -- 2021}
+			\service{Deepali Ande, MS, 2020 -- 2023. Thesis: \emph{Composing Schedulers using Effect Handlers}. Guide.}
+			\service{Sumit Padhiyar, MS, 2019 -- 2021. Thesis: \emph{Coverage-guided Property Fuzzing for Event-driven and Parallel Programs}. Guide.}
+			\service{Shashank Shekhar Dubey, MS, 2019 -- 2021. Thesis: \emph{Banyan: Coordination-free Distributed Transactions over Mergeable Types}. Guide.}
 			\service{Atul Dhiman, MTech, 2019 -- 2020}
 	\end{itemize}
 
