@@ -34,10 +34,6 @@ I want to tell you the story of the book I wrote for my NPTEL course,
 runs in the browser: students can change the examples and execute them
 right in the page, with nothing to install.
 
-Building it also taught me something about working with coding agents.
-The agent did well at building the platform. Writing material that a
-student could learn from took much more work.
-
 </div>
 </div>
 
@@ -211,10 +207,11 @@ and run an example. Change it and run it again. Hover over an
 expression to see its type. The lecture can also be presented as
 slides, with the code still runnable.
 
-The same approach extends to OxCaml, a performance-oriented extension
-of OCaml. For the systems material, there is a Linux VM in the page.
-Students can compile C programs and explore buffer overflows,
-use-after-free, and double-free errors in that environment.
+The same approach extends to [OxCaml](https://oxcaml.org/), a
+performance-oriented extension of OCaml. For the systems material,
+there is a [Linux VM](https://fplaunchpad.org/ocaml_nptel/M01-L01-course-intro.html#a-full-machine-for-the-second-half)
+in the page. Students can compile C programs and explore buffer
+overflows, use-after-free, and double-free errors in that environment.
 
 And programs can interact with the page itself. In the OCaml workshop
 we ran at IndiaFOSS,
