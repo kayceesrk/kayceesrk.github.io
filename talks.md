@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="indiafoss_2026"> </div>  
+   **Textbooks that run: Interactive 0-install CS education in the browser**  
+   IndiaFOSS 6.0, Bengaluru, 26 Sep 2026  
+   [\[slides (pdf)\]](slides/OCaml_NPTEL_IndiaFOSS_2026.pdf) [\[slides (key)\]](slides/OCaml_NPTEL_IndiaFOSS_2026.key)  
   * <div id="seri_iiith_2026"> </div>  
    **Convergence is Not Enough: Automatically Verifying Replicated Data Types**  
    Invited Talk, SERI 2026, IIIT Hyderabad, Jul 2026  
