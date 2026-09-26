@@ -455,9 +455,8 @@ learners find difficult. Knowing the subject is only part of the job.
 
 <div class="talk-text" markdown="1">
 
-I ended up developing an agent skill: a reusable set of instructions
-for writing and reviewing chapters. I refined it through reviewing
-the material.
+I developed these instructions while reviewing the material. They
+should become an agent skill for writing and reviewing chapters.
 
 **Use what is in the reader's toolbox.** An explanation can use only
 concepts the reader has already encountered. A fact being true does
@@ -490,7 +489,7 @@ assumptions an explanation made about its reader.
 </div>
 </div>
 
-## After the first run
+## What next?
 
 <div class="talk-segment" markdown="1">
 
@@ -503,9 +502,7 @@ assumptions an explanation made about its reader.
 <div class="talk-text" markdown="1">
 
 AI helped me build the platform and turn existing lectures into a
-book that students can use on their own. It also made the gaps in the
-teaching process very visible. Closing those gaps required decisions
-about examples, prerequisites, and what a student should do next.
+book that students can use on their own.
 
 Someone asked about AI support within the book. As I wrote in
 [An O(x)Caml book that runs]({% post_url 2026-06-13-an-oxcaml-book-that-runs %}#where-this-is-going-a-book-that-evolves-with-the-reader),
