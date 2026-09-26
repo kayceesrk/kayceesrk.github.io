@@ -34,6 +34,9 @@
   <link rel="stylesheet" href="{{ '/public/css/syntax.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/public/css/dark.css' | relative_url }}">
+  {% if page.talk_columns %}
+  <link rel="stylesheet" href="{{ '/public/css/talk.css' | relative_url }}">
+  {% endif %}
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->

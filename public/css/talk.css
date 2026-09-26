@@ -1,0 +1,81 @@
+/* Opt-in layout for illustrated talk posts. */
+.talk-columns .container {
+  width: 100%;
+  max-width: 90rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.talk-columns .post > p,
+.talk-columns .related {
+  max-width: 42rem;
+}
+
+.talk-columns .masthead .container {
+  padding-left: 4rem;
+}
+
+.talk-columns .talk-segment {
+  display: grid;
+  grid-template-columns: minmax(0, 58fr) minmax(0, 42fr);
+  gap: 2rem;
+  align-items: start;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.talk-columns .talk-slide {
+  margin: 0;
+}
+
+.talk-columns .talk-slide a,
+.talk-columns .talk-slide img {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.talk-columns .talk-slide img {
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 4px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.talk-columns .talk-text {
+  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.talk-columns .talk-text > :last-child {
+  margin-bottom: 0;
+}
+
+.talk-columns .post > h2 {
+  margin-top: 3rem;
+}
+
+.talk-columns .post > h1,
+.talk-columns .post > h2 {
+  scroll-margin-top: 4rem;
+}
+
+@media (min-width: 48em) {
+  .talk-columns #sidebar-checkbox:checked ~ .wrap {
+    width: calc(100% - 14rem);
+    margin-left: 14rem;
+  }
+}
+
+@media (max-width: 67.99em) {
+  .talk-columns .talk-segment {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .talk-columns .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
