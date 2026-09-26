@@ -37,8 +37,6 @@ right in the page, with nothing to install.
 </div>
 </div>
 
-## A course for learners I will never meet
-
 <div class="talk-segment" markdown="1">
 
 <figure class="talk-slide">
@@ -104,8 +102,6 @@ provide individual setup help to everyone.
 </div>
 </div>
 
-## Who do we not hear from?
-
 <div class="talk-segment" markdown="1">
 
 <figure class="talk-slide">
@@ -157,8 +153,6 @@ read as a standalone book.
 
 </div>
 </div>
-
-## Zero to OCaml in zero steps
 
 <div class="talk-segment" markdown="1">
 
@@ -221,8 +215,6 @@ let you change a program and see its effect on a picture.
 </div>
 </div>
 
-## The tools that make it possible
-
 <div class="talk-segment" markdown="1">
 
 <figure class="talk-slide">
@@ -273,8 +265,6 @@ VM executes locally, with no server running the student's programs.
 </div>
 </div>
 
-## Feedback in both directions
-
 <div class="talk-segment" markdown="1">
 
 <figure class="talk-slide">
@@ -306,8 +296,6 @@ My course is still in its first run.
 
 </div>
 </div>
-
-## Writing the book and the slides together
 
 <div class="talk-segment" markdown="1">
 
@@ -365,8 +353,6 @@ the first time?
 </div>
 </div>
 
-## Teaching the agent what I had taught
-
 <div class="talk-segment" markdown="1">
 
 <figure class="talk-slide">
@@ -400,8 +386,6 @@ teaching material went.
 
 </div>
 </div>
-
-## A great oracle, a bad teacher
 
 <div class="talk-segment" markdown="1">
 
@@ -442,8 +426,6 @@ learners find difficult. Knowing the subject is only part of the job.
 
 </div>
 </div>
-
-## A skill for writing chapters
 
 <div class="talk-segment" markdown="1">
 
@@ -488,8 +470,6 @@ assumptions an explanation made about its reader.
 
 </div>
 </div>
-
-## What next?
 
 <div class="talk-segment" markdown="1">
 
