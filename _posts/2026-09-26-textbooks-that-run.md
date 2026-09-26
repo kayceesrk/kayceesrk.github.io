@@ -124,7 +124,7 @@ made progress on installation, but there are still gaps.
 In the hands-on OCaml workshops I have helped run, we have often spent
 about a third of the session getting the environment working on
 people's machines. In a room, I can walk over and help. A remote
-learner who gets stuck at the first step may simply leave. I may
+learner who gets stuck at the first step may leave. I may
 never hear from them.
 
 I had tried to address this in earlier courses.
@@ -174,6 +174,12 @@ For NPTEL, I wanted students to start immediately. Open a page and
 run some OCaml. I also wanted a way to use the material offline,
 so that a learning session would not depend on a reliable connection.
 
+The [offline build script](https://github.com/fplaunchpad/ocaml_nptel/blob/main/tools/build-offline.py)
+packages the book and its runtimes into an archive. Extract it and
+open `index.html` in a browser: the chapters, runnable cells, quizzes,
+and Linux terminal work without a server or internet connection.
+Online videos and the analytics dashboard still need internet.
+
 The editor should help them as they work: show types, report errors,
 and offer completions. Quizzes should give immediate feedback, in
 the same page as the explanation.
@@ -206,10 +212,10 @@ of OCaml. For the systems material, there is a Linux VM in the page.
 Students can compile C programs and explore buffer overflows,
 use-after-free, and double-free errors in that environment.
 
-And programs can interact with the page itself. The
-[Joy examples from our IndiaFOSS workshop](https://fplaunchpad.org/indiafoss-2026-ocaml-workshop/06-joy.html#higher-order-transformations)
-show another use for this: change a program and see its effect on a
-picture.
+And programs can interact with the page itself. In the OCaml workshop
+we ran at IndiaFOSS,
+[examples using the Joy graphics library](https://fplaunchpad.org/indiafoss-2026-ocaml-workshop/06-joy.html#higher-order-transformations)
+let you change a program and see its effect on a picture.
 
 </div>
 </div>
@@ -291,10 +297,11 @@ about where my explanations may need work. I plan to use those results
 to revise the book.
 
 This follows Will Crichton and Shriram Krishnamurthi's work on the
-[Rust book](https://rust-book.cs.brown.edu/), where embedded quizzes
-helped identify misconceptions and guide changes to the material.
-Their study was at a much larger scale. My course is still in its
-first run.
+[Rust book](https://rust-book.cs.brown.edu/), described in
+[*Profiling Programming Language Learning*](https://dl.acm.org/doi/10.1145/3649812)
+(OOPSLA 2024). Embedded quizzes helped identify misconceptions and
+guide changes to the material. Their study was at a much larger scale.
+My course is still in its first run.
 
 </div>
 </div>
@@ -419,15 +426,14 @@ The agent assumed too much about what the learner already knew. It
 used concepts before introducing them, jumped between ideas, and
 presented definitions without first explaining why someone would
 want them. It could answer my OCaml questions, but that did not make
-its explanations suitable for a beginner. It was a great oracle and
-a bad teacher.
+its explanations suitable for a beginner.
 
 This felt familiar. When I first moved from researching a specialised
 topic to teaching undergraduates, I had to learn to notice all the
 background knowledge I was assuming. The agent kept making similar
 mistakes.
 
-The distinction is familiar in education too. Lee Shulman's account
+Education research has a name for this. Lee Shulman's account
 of [pedagogical content knowledge](https://www.wcu.edu/webfiles/pdfs/shulman.pdf)
 describes the knowledge involved in making a subject understandable
 to others, including useful examples and an understanding of what
@@ -448,8 +454,9 @@ learners find difficult. Knowing the subject is only part of the job.
 
 <div class="talk-text" markdown="1">
 
-I ended up writing down a set of instructions for the agent, refined
-through reviewing the chapters.
+I ended up developing an agent skill: a reusable set of instructions
+for writing and reviewing chapters. I refined it through reviewing
+the material.
 
 **Use what is in the reader's toolbox.** An explanation can use only
 concepts the reader has already encountered. A fact being true does
@@ -496,8 +503,17 @@ assumptions an explanation made about its reader.
 
 AI helped me build the platform and turn existing lectures into a
 book that students can use on their own. It also made the gaps in the
-teaching process very visible. Closing those gaps required decisions about examples,
-prerequisites, and what a student should do next.
+teaching process very visible. Closing those gaps required decisions
+about examples, prerequisites, and what a student should do next.
+
+Someone asked about AI support within the book. As I wrote in
+[An O(x)Caml book that runs]({% post_url 2026-06-13-an-oxcaml-book-that-runs %}#where-this-is-going-a-book-that-evolves-with-the-reader),
+we would like to build agentic books that evolve with the reader and
+become personalised to them. A tutor could use the reader's questions
+and attempts at exercises to adapt explanations, revisit prerequisites,
+and set new exercises at an appropriate difficulty. For programming
+exercises, it could compile and test its examples before presenting
+them. This is a direction we would like to explore.
 
 The course seems to be going well so far. The examinations are due
 in October, and I plan to write a retrospective after the first run.
@@ -507,9 +523,9 @@ the [source is on GitHub](https://github.com/fplaunchpad/ocaml_nptel).
 If you teach, you are welcome to adapt it under those terms.
 
 I also closed the talk with a call for applicants to
-[FP Launchpad](https://fplaunchpad.org/). We have announced the second
-cohort of our post-baccalaureate fellowship. If functional programming
-and formal verification interest you, take a look.
+[FP Launchpad](https://fplaunchpad.org/). Applications are open for the
+second cohort of our post-baccalaureate fellowship. If functional
+programming and formal verification interest you, take a look.
 
 </div>
 </div>
