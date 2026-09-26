@@ -5,14 +5,12 @@ title: "Textbooks that run"
 date: 2026-09-26 14:30
 categories: [OCaml, Teaching, NPTEL, LLM]
 excerpt: >-
-  Installing a programming language can stop a beginner before they
-  write their first line of code. For my NPTEL course on functional
-  programming with OCaml, I built a book where students can edit and
-  run examples, answer quizzes, and use a Linux terminal in the browser,
-  with nothing to install. A single Markdown source produces the book,
-  slides, and exercises. This IndiaFOSS talk tells the story of building
-  it with coding agents: what worked, where the agents struggled to
-  teach, and why the material still needed an educator's review.
+  I gave a talk at IndiaFOSS 2026 about the interactive textbook
+  “Functional Programming with OCaml”. The book runs in the browser,
+  with code execution, editor support, and embedded quizzes, alongside
+  analytics that help identify where learners struggle. The book and
+  its infrastructure were written primarily with coding agents. This
+  post pairs the slides with a narrative reflecting on that process.
 ---
 
 This is a written version of my talk at IndiaFOSS 6.0 in Bengaluru
