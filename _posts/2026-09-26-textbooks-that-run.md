@@ -105,6 +105,23 @@ provide individual setup help to everyone.
 <div class="talk-segment" markdown="1">
 
 <figure class="talk-slide">
+  <a href="/assets/indiafoss-2026/installation-roadmap.jpg" aria-label="View slide at full size">
+    <img src="/assets/indiafoss-2026/installation-roadmap.jpg" alt="The OCaml Platform roadmap identifies installation as a barrier to learning and adoption." width="1440" height="810" loading="lazy" decoding="async">
+  </a>
+</figure>
+
+<div class="talk-text" markdown="1">
+
+Getting OCaml set up is a challenge for learning and adoption. We
+identified this in the OCaml Platform roadmap a few years ago. There
+has been progress on installation, but there are still gaps.
+
+</div>
+</div>
+
+<div class="talk-segment" markdown="1">
+
+<figure class="talk-slide">
   <a href="/assets/indiafoss-2026/installation.jpg" aria-label="View slide at full size">
     <img src="/assets/indiafoss-2026/installation.jpg" alt="Installation challenges: unfamiliar terminals, time spent setting up workshops, and learners who disengage before asking for help." width="1440" height="810" loading="lazy" decoding="async">
   </a>
@@ -114,8 +131,7 @@ provide individual setup help to everyone.
 
 Even at IIT Madras, students arrive in my third-year course without
 much experience using a terminal. Installing OCaml asks them to use
-tools they are still learning how to operate. The OCaml Platform has
-made progress on installation, but there are still gaps.
+tools they are still learning how to operate.
 
 In the hands-on OCaml workshops I have helped run, we have often spent
 about a third of the session getting the environment working on
