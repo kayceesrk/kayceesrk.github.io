@@ -5,7 +5,7 @@ title: About
 
 <img src="assets/profile.jpeg" alt="ProfileImage" style="width: 180px; float:
 right; padding-right: 0.5rem; padding-left: 0.5rem; padding-top: 0.4rem;"/> I am
-an Assistant Professor in the [Computer Science and
+an Associate Professor in the [Computer Science and
 Engineering](http://cse.iitm.ac.in/) department at [Indian Institute of
 Technology, Madras](https://www.iitm.ac.in/) and the Chief Technology Officer of
 [Tarides](https://tarides.com/). I lead [FP
