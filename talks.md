@@ -5,6 +5,10 @@ permalink: talks.html
 ---
 
 # Talks
+  * <div id="mbs_2026"> </div>  
+   **Will machines dream of λ calculus? Functional Programming for the Age of AI**  
+   MBS Seminar, CSE, IIT Madras, 1 Oct 2026  
+   [\[slides (pdf)\]](slides/kc_mbs_2026.pdf) [\[slides (key)\]](slides/kc_mbs_2026.key)  
   * <div id="indiafoss_2026"> </div>  
    **Textbooks that run: Interactive 0-install CS education in the browser**  
    IndiaFOSS 6.0, Bengaluru, 26 Sep 2026  
